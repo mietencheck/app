@@ -1,0 +1,8 @@
+adressen-*.json
+pnpm-lock.yaml
+*.fm.ts
+*.fm.json
+
+public/locales/*.json
+src/pdf/fields/20*.ts
+src/pdf/fields/20*.json

@@ -1,0 +1,4 @@
+pnpm update-locales
+pnpm update-pdf-fields
+pnpm type-check
+pnpx lint-staged

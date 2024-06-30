@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Suisse Intl";
+    font-weight: 400;
+    src: url(/fonts/SuisseIntl-Regular-WebM.woff2) format("woff2");
+    display: swap;
+  }
+
+  @font-face {
+    font-family: "Suisse Intl";
+    font-weight: 450;
+    src: url(/fonts/SuisseIntl-Book-WebM.woff2) format("woff2");
+    display: swap;
+  }
+
+  @font-face {
+    font-family: "Suisse Intl";
+    font-weight: 500;
+    src: url(/fonts/SuisseIntl-Medium-WebM.woff2) format("woff2");
+    display: swap;
+  }
+
+  @font-face {
+    font-family: "Suisse Intl";
+    font-weight: 600;
+    src: url(/fonts/SuisseIntl-SemiBold-WebM.woff2) format("woff2");
+    display: swap;
+  }
+
+  :root {
+    /* Base Colors */
+    --color-white: #ffffff;
+
+    --color-gray-1: #f7f7f7;
+    --color-gray-2: #f2f2f2;
+    --color-gray-3: #ededed;
+    --color-gray-4: #e8e8e8;
+    --color-gray-5: #e3e3e3;
+    --color-gray-6: #e2e2e2;
+    --color-gray-7: #c7c7c7;
+    --color-gray-8: #b2b2b2;
+    --color-gray-9: #8f8f8f;
+    --color-gray-10: #858585;
+    --color-gray-11: #6f6f6f;
+    --color-gray-12: #171717;
+
+    --color-purple-1: #FFFCFD;
+    --color-purple-2: #FFF7F9;
+    --color-purple-3: #FFE8F2;
+    --color-purple-4: #FFDAEB;
+    --color-purple-5: #FBCBE0;
+    --color-purple-6: #F4BDD2;
+    --color-purple-7: #EBAAC6;
+    --color-purple-8: #E194B4;
+    --color-purple-9: #811C63;
+    --color-purple-10: #6E0253;
+    --color-purple-11: #811C63;
+    --color-purple-12: #6A004F;
+
+    --color-yellow-9: #FDD817;
+    --color-yellow-10: #F0CC0F;
+    --color-yellow-11: #FDD817;
+
+    /* DWE Colors */
+    --dwe-yellow: #fdd816;
+    --dwe-purple: #811c62;
+    --dwe-black: #333;
+    --dwe-red: #e24343;
+    --dwe-green: #69dd57;
+    --dwe-verylightgrey: #efefef;
+
+    /* Text Colors */
+    --text-neutral: var(--color-gray-12);
+    --text-neutral-faded: var(--color-gray-11);
+    --text-primary: var(--color-purple-11);
+    --text-on-neutral: var(--color-white);
+    --text-on-primary: var(--color-white);
+
+    /* Background Colors */
+    --bg-page: var(--color-white);
+    --bg-page-faded: var(--color-gray-1);
+
+    --bg-neutral: var(--color-gray-3);
+    --bg-neutral-hover: var(--color-gray-4);
+    --bg-neutral-active: var(--color-gray-5);
+    --bg-neutral-solid: var(--color-gray-9);
+    --bg-neutral-solid-hover: var(--color-gray-10);
+    --bg-neutral-solid-active: var(--color-gray-11);
+
+    --bg-primary: var(--color-purple-3);
+    --bg-primary-hover: var(--color-purple-4);
+    --bg-primary-active: var(--color-purple-5);
+    --bg-primary-solid: var(--color-purple-9);
+    --bg-primary-solid-hover: var(--color-purple-10);
+    --bg-primary-solid-active: var(--color-purple-11);
+
+    /* Border Colors */
+    --border-neutral-subtle: var(--color-gray-6);
+    --border-neutral: var(--color-gray-7);
+    --border-neutral-hover: var(--color-gray-8);
+    --border-neutral-solid: var(--color-gray-9);
+    --border-neutral-solid-hover: var(--color-gray-10);
+
+    --border-primary-subtle: #var(--color-purple-6);
+    --border-primary: var(--color-purple-7);
+    --border-primary-hover: var(--color-purple-8);
+    --border-primary-solid: var(--color-purple-9);
+    --border-primary-solid-hover: var(--color-purple-10);
+
+    /* Ring Colors */
+    --ring-primary: var(--color-purple-5);
+  }
+
+  :root[data-theme="old"] {
+    --color-gray-1: #f7f7f7;
+    --color-gray-2: #f2f2f2;
+    --color-gray-3: #ededed;
+    --color-gray-4: #e8e8e8;
+    --color-gray-5: #e3e3e3;
+    --color-gray-6: #e2e2e2;
+    --color-gray-7: #c7c7c7;
+    --color-gray-8: #b2b2b2;
+    --color-gray-9: #8f8f8f;
+    --color-gray-10: #858585;
+    --color-gray-11: #6f6f6f;
+    --color-gray-12: #171717;
+
+    --color-purple-1: #fefcfe;
+    --color-purple-2: #fdfaff;
+    --color-purple-3: #f9f1fe;
+    --color-purple-4: #f3e7fc;
+    --color-purple-5: #eddbf9;
+    --color-purple-6: #e3ccf4;
+    --color-purple-7: #c094e5;
+    --color-purple-8: #ac74dc;
+    --color-purple-9: #8e4ec6;
+    --color-purple-10: #8445bc;
+    --color-purple-11: #793aaf;
+    --color-purple-12: #2b0e44;
+  }
+}
+
+* {
+  @apply box-border;
+}
+
+body {
+  @apply font-body font-400 text-gray-12 antialiased;
+}
+
+@layer components {
+  .text-sm {
+    @apply text-sm/[20px] font-400;
+  }
+
+  .text-sm-book {
+    @apply text-sm/[20px] font-450;
+  }
+
+  .text-sm-medium {
+    @apply text-sm/[20px] font-500;
+  }
+
+  .text-base {
+    @apply text-base/[24px] font-400;
+  }
+
+  .text-base-book {
+    @apply text-base/[24px] font-450;
+  }
+
+  .text-base-medium {
+    @apply text-base/[24px] font-500;
+  }
+
+  .text-lg {
+    @apply text-lg/[27px] font-400;
+  }
+
+  .text-lg-book {
+    @apply text-lg/[27px] font-450;
+  }
+
+  .text-lg-medium {
+    @apply text-lg/[27px] font-500;
+  }
+
+  .text-xl {
+    @apply text-xl/[30px] font-400;
+  }
+
+  .text-xl-book {
+    @apply text-xl/[30px] font-450;
+  }
+
+  .text-xl-medium {
+    @apply text-xl/[30px] font-500;
+  }
+
+  .heading-16 {
+    @apply text-base/[22px] font-500;
+  }
+
+  .heading-18 {
+    @apply text-lg/[24px] font-500;
+  }
+
+  .heading-20 {
+    @apply text-xl/[28px] font-500;
+  }
+
+  .heading-22 {
+    @apply text-[22px]/[30px] font-500;
+  }
+
+  .heading-24 {
+    @apply text-2xl/[32px] font-500;
+  }
+
+  .heading-28 {
+    @apply text-3xl/[34px] font-500;
+  }
+
+  .title-16 {
+    @apply text-base/[132%] font-600;
+  }
+
+  .title-18 {
+    @apply text-lg/[132%] font-600;
+  }
+
+  .title-20 {
+    @apply text-xl/[132%] font-600;
+  }
+
+  .title-24 {
+    @apply text-2xl/[132%] font-600;
+  }
+
+  .title-28 {
+    @apply text-3xl/[132%] font-600;
+  }
+
+  .title-32 {
+    @apply text-4xl/[120%] font-600;
+  }
+
+  .title-36 {
+    @apply text-5xl/[120%] font-600;
+  }
+
+  .title-40 {
+    @apply text-6xl/[120%] font-600;
+  }
+
+  .title-44 {
+    @apply text-7xl/[120%] font-600;
+  }
+
+  .title-48 {
+    @apply text-8xl/[120%] font-600;
+  }
+
+  .title-52 {
+    @apply text-9xl/[110%] font-600;
+  }
+
+  .title-56 {
+    @apply text-10xl/[110%] font-600;
+  }
+
+  .title-60 {
+    @apply text-11xl/[110%] font-600;
+  }
+
+  .title-64 {
+    @apply text-12xl/[110%] font-600;
+  }
+
+  .title-68 {
+    @apply text-13xl/[110%] font-600;
+  }
+
+  .title-72 {
+    @apply text-14xl/[110%] font-600;
+  }
+
+  .bg-gradient-dashed {
+    background: repeating-linear-gradient(to right,
+        theme("colors.gray.9") 0,
+        theme("colors.gray.9") 3px,
+        rgba(255, 255, 255, 0) 3px,
+        rgba(255, 255, 255, 0) 6px);
+  }
+}

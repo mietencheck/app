@@ -1,0 +1,98 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../../../tailwind.config.ts'
+
+export const fullConfig = resolveConfig(tailwindConfig)
+export const colors = fullConfig.theme.accentColor
+export const textColors = fullConfig.theme.textColor
+export const backgroundColors = fullConfig.theme.backgroundColor
+
+<Meta title="Colors" />
+
+## Background Colors
+<ColorPalette>
+  <ColorItem
+    title="Neutral"
+    colors={{
+      'bg-neutral': backgroundColors["neutral"],
+      'bg-neutral-hover': backgroundColors["neutral-hover"],
+      'bg-neutral-active': backgroundColors["neutral-active"],
+      'bg-neutral-solid': backgroundColors["neutral-solid"],
+      'bg-neutral-solid-hover': backgroundColors["neutral-solid-hover"],
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    colors={{
+      'bg-primary': backgroundColors["primary"],
+      'bg-primary-hover': backgroundColors["primary-hover"],
+      'bg-primary-active': backgroundColors["primary-active"],
+      'bg-primary-solid': backgroundColors["primary-solid"],
+      'bg-primary-solid-hover': backgroundColors["primary-solid-hover"],
+    }}
+  />
+</ColorPalette>
+
+## Text Colors
+<ColorPalette>
+  <ColorItem
+    title="Neutral"
+    colors={{
+      'text-neutral': textColors["neutral"],
+      'text-neutral-faded': textColors["neutral-faded"],
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    colors={{
+      'text-primary': textColors["primary"],
+    }}
+  />
+  <ColorItem
+    title="On"
+    colors={{
+      'text-on-neutral': textColors["on-neutral"],
+      'text-on-primary': textColors["on-primary"],
+    }}
+  />
+</ColorPalette>
+
+## Base
+
+<ColorPalette>
+<ColorItem
+    title="Gray"
+    colors={{
+      'gray-1': colors.gray[1],
+      'gray-2': colors.gray[2],
+      'gray-3': colors.gray[3],
+      'gray-4': colors.gray[4],
+      'gray-5': colors.gray[5],
+      'gray-6': colors.gray[6],
+      'gray-7': colors.gray[7],
+      'gray-8': colors.gray[8],
+      'gray-9': colors.gray[9],
+      'gray-10': colors.gray[10],
+      'gray-11': colors.gray[11],
+      'gray-12': colors.gray[12],
+    }}
+  />
+  <ColorItem
+    title="Purple"
+    colors={{
+      'purple-1': colors.purple[1],
+      'purple-2': colors.purple[2],
+      'purple-3': colors.purple[3],
+      'purple-4': colors.purple[4],
+      'purple-5': colors.purple[5],
+      'purple-6': colors.purple[6],
+      'purple-7': colors.purple[7],
+      'purple-8': colors.purple[8],
+      'purple-9': colors.purple[9],
+      'purple-10': colors.purple[10],
+      'purple-11': colors.purple[11],
+      'purple-12': colors.purple[12],
+    }}
+  />
+</ColorPalette>
