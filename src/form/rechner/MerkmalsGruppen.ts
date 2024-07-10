@@ -103,7 +103,7 @@ export const merkmaleByGruppe = {
       },
       Fußbodenheizung: { "Wohnung hat Fußbodenheizung": "Ja" },
       "Heizungsrohre nicht sichtbar": {
-        "Wohnung hat sichtbare Heizungsrohe": "Ja",
+        "Wohnung hat sichtbare Heizungsrohe": "Nein",
       },
       "hochwertiger Boden": {
         "Wohnung hat hochwertigen Bodenbelag": "Ja",
