@@ -77,7 +77,7 @@ export const merkmaleByGruppe = {
     con: {
       kochlos: [
         { "Küche hat Kochmöglichkeit": "Nein" },
-        { "Küche hat Gas/Elektroherd ohne Backofen": "Ja" },
+        { "Küche hat Gas/Elektroherd ohne Backofen": "Nein" },
       ],
       "keine Spüle": { "Küche hat Spüle": "Nein" },
       kaumwarm: { "Küche hat Warmwasser": "Nein" },

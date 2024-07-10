@@ -4901,7 +4901,7 @@
                                         }
                                       ]
                                     },
-                                    "note": "Merkmal:\nKeine Kochmöglichkeit oder Gas-/ Elektroherd ohne Backofen [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    "note": "Merkmal:\nKeine Kochmöglichkeit oder Gas-/ Elektroherd ohne Backofen [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                                   }
                                 ]
                               }
