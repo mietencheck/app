@@ -208,10 +208,7 @@ export function MerkmaleTable() {
         "[Gebäude-] EVK>235":
           "Energieverbrauchskennwert größer als 235 kWh/(m²a)",
         "[Gebäude-] kein Aufzug":
-          jahr == "2015"
-            ? "Nur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen"
-            : "Personenaufzug bei weniger als fünf Obergeschossen",
-
+          "Wohnung ab fünftem Obergeschoss ohne Personenaufzug",
         "[Gebäude+] geschlossener Fahrradraum":
           jahr == "2015"
             ? "Abschließbarer Fahrradabstellraum innerhalb oder außerhalb des Gebäudes"
@@ -229,7 +226,9 @@ export function MerkmaleTable() {
         "[Gebäude+] Gegensprechanlage":
           "Gegen-/Wechselsprechanlage mit Videokontakt und elektrischem Türöffner",
         "[Gebäude+] Aufzug":
-          "Wohnung ab fünftem Obergeschoss ohne Personenaufzug",
+          jahr == "2015"
+            ? "Nur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen"
+            : "Personenaufzug bei weniger als fünf Obergeschossen",
         "[Gebäude+] Wärmedämmung":
           jahr == "2015"
             ? "Wärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt)"
