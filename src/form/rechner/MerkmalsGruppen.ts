@@ -152,7 +152,6 @@ export const merkmaleByGruppe = {
       },
       "gut Instand": { "Gebäude ist in gutem Zustand": "Ja" },
       Aufzug: {
-        "Gebäude hat Fahrstuhl": "Ja",
         "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
       },
       "geschlossener Fahrradraum": [
@@ -196,7 +195,6 @@ export const merkmaleByGruppe = {
         "Gebäude ist in schlechtem Zustand": "Ja",
       },
       "kein Aufzug": {
-        "Gebäude hat Fahrstuhl": "Nein",
         "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
       },
       "keine Fahrradabstellmöglichkeit": {
