@@ -19,7 +19,7 @@
         "id": "khlf2",
         "type": "Question",
         "alias": "Ost",
-        "text": "Liegt die Wohnung im Osten??",
+        "text": "Liegt die Wohnung im Osten?",
         "info": null,
         "answer": {
           "type": "BooleanAnswer"
