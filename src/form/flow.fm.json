@@ -57,7 +57,7 @@
         "id": "8ah5gi",
         "type": "Question",
         "alias": "Unterschrieben",
-        "text": "Hast du den Mietvertrag für die Wohnung bereits unterschrieben??",
+        "text": "Hast du den Mietvertrag für die Wohnung bereits unterschrieben?",
         "info": null,
         "answer": {
           "type": "ChoiceAnswer",
