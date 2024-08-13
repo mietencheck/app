@@ -9,7 +9,7 @@
         "id": "inf5s",
         "type": "Question",
         "alias": "Adresse",
-        "text": "Wie lautet die Adresse der Wohnung?",
+        "text": "Wie lautet die Adresse der Wohnung??",
         "info": null,
         "answer": {
           "type": "TextAnswer"
