@@ -4,7 +4,13 @@ import {
   FlowMachine,
   Steps,
 } from "flow-machine";
-import React, { useCallback, useContext, useMemo } from "react";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import { useLocalStorage } from "usehooks-ts";
 
 import { parseAdresse } from "~/utils";
@@ -54,6 +60,34 @@ const noop = () => {};
 
 export const flowMachine = new FlowMachine<StepInfoByAlias>(flow);
 
+export function useFlowMachine() {
+  const [previewFlow, setPreviewFlow] = useState<typeof flowMachine | null>(
+    null,
+  );
+
+  const isFramed = window.parent !== window;
+
+  useEffect(() => {
+    if (isFramed) {
+      window.parent.postMessage({ type: "FlowRequest" }, "*");
+    }
+  }, [isFramed]);
+
+  useEffect(() => {
+    if (isFramed) {
+      const handleMessage = ({ data }: MessageEvent) => {
+        if (data.type == "Flow") {
+          setPreviewFlow(new FlowMachine<StepInfoByAlias>(data.value));
+        }
+      };
+      window.addEventListener("message", handleMessage);
+      return () => window.removeEventListener("message", handleMessage);
+    }
+  }, [isFramed]);
+
+  return previewFlow ?? flowMachine;
+}
+
 type AnswerMachine = ReturnType<typeof flowMachine.answers>;
 
 function getLageInfo(answers: AnswerMachine) {
@@ -85,9 +119,11 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
     [setStoredAnswers],
   );
 
+  const flowMachine = useFlowMachine();
+
   const bareAnswers = useMemo(
     () => flowMachine.answers(storedAnswers, noop),
-    [storedAnswers],
+    [flowMachine, storedAnswers],
   );
 
   const answersValue = useMemo(() => {
@@ -100,7 +136,7 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
       },
       setKV,
     );
-  }, [bareAnswers, setKV, storedAnswers]);
+  }, [bareAnswers, flowMachine, setKV, storedAnswers]);
   return (
     <AnswersContext.Provider value={answersValue}>
       {children}
@@ -115,7 +151,11 @@ export function useAnswers() {
 const StepsContext = React.createContext<Steps>([]);
 export function StepsProvider({ children }: { children: React.ReactNode }) {
   const answers = useAnswers();
-  const steps = useMemo(() => flowMachine.run(answers.state), [answers.state]);
+  const flowMachine = useFlowMachine();
+  const steps = useMemo(
+    () => flowMachine.run(answers.state),
+    [answers.state, flowMachine],
+  );
   return (
     <StepsContext.Provider value={steps}>{children}</StepsContext.Provider>
   );
