@@ -9,7 +9,7 @@
         "id": "inf5s",
         "type": "Question",
         "alias": "Adresse",
-        "text": "Was geht?",
+        "text": "Was geht? Taugt mir gut!",
         "info": null,
         "answer": {
           "type": "TextAnswer"
