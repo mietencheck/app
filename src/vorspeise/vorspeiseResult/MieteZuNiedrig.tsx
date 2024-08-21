@@ -12,7 +12,7 @@ export function MieteZuNiedrig() {
   return (
     <>
       <h2 className="heading-24 mb-6">
-        {l("Leider ist deine Miete ist im Rahmen des Mietspiegels.")}
+        {l("Leider ist deine Miete im Rahmen des Mietspiegels.")}
       </h2>
       <div className="text-neutral-faded space-y-2 mb-6">
         <p className="text-neutral-faded">
