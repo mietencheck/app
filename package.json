@@ -58,7 +58,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "fetch-retry": "^6.0.0",
     "flexsearch": "^0.7.43",
-    "flow-machine": "^0.5.1",
+    "flow-machine": "^0.6.3",
     "html2pdf.js": "^0.10.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
