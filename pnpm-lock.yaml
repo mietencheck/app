@@ -120,8 +120,8 @@ dependencies:
     specifier: ^0.7.43
     version: 0.7.43
   flow-machine:
-    specifier: ^0.5.1
-    version: 0.5.1
+    specifier: ^0.6.2
+    version: 0.6.2
   html2pdf.js:
     specifier: ^0.10.1
     version: 0.10.1
@@ -2531,8 +2531,8 @@ packages:
     resolution: {integrity: sha512-J4yDIIthosAsRZ5CPYP/jQvUAQtlZTTD/4suA08/FEnlxqW3sKS9iAhgsa9VYLZ6vDHn/ixJgIqRQPotoBjxIw==}
     dev: false
 
-  /@flow-machine/schema@0.4.0:
-    resolution: {integrity: sha512-oWFU97W/8ljb90a5gWGb0zaM6gfOOx5nth9jx8/UM/khVMlVzfZK25OB1E9eB69eDx8lcsqsbQSNffxWdNOnPg==}
+  /@flow-machine/schema@0.5.1:
+    resolution: {integrity: sha512-WhRzPukKkF/CIEciYahhvlo/BGUsOqYRXdZVgVg0YgbyFJTBEQ3pB8/8SHUY6Oz0+b7F6ajajFMF37i/Z07CCA==}
     dependencies:
       zod: 3.22.4
     dev: false
@@ -7810,10 +7810,10 @@ packages:
     resolution: {integrity: sha512-c5o/+Um8aqCSOXGcZoqZOm+NqtVwNsvVpWv6lfmSclU954O3wvQKxxK8zj74fPaSJbXpSLTs4PRhh+wnoCXnKg==}
     dev: false
 
-  /flow-machine@0.5.1:
-    resolution: {integrity: sha512-cC558uJJcXsXY/9L+jcwJJKrXQQuxzREPwwOCrHOGRaRczRexkWcLAu5UsUz6GI1qAtIipse92i9izpJlAacUg==}
+  /flow-machine@0.6.2:
+    resolution: {integrity: sha512-xGjSayyJjgdr1GCom/hIOuAixC72c0DPLvMepdHqHIB07v/Sns1O6TWuJz2a2SwKVDTRMjXFxwljGjmk//NYAw==}
     dependencies:
-      '@flow-machine/schema': 0.4.0
+      '@flow-machine/schema': 0.5.1
     dev: false
 
   /flow-parser@0.233.0:

@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-import { Flow, default as fm } from "flow-machine";
+import { FlowRoot, traverse } from "flow-machine";
 
 import { hash } from "~/l10n";
 
@@ -11,7 +11,7 @@ import flow from "../src/form/flow.fm.json";
 export async function updateLocales() {
   const stringByHash = new Map<string, string>();
   const addString = (text: string) => stringByHash.set(hash(text), text);
-  fm.traverse(flow as Flow, (node) => {
+  traverse(flow as FlowRoot, (node) => {
     switch (node.type) {
       case "Group":
       case "Info":
