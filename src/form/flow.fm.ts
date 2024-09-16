@@ -13,7 +13,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -256,7 +256,7 @@ export type StepInfoByAlias = {
         };
     };
     Baujahr: {
-        answer: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+        answer: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
         state: {
             Adresse?: string;
             Ost?: boolean;
@@ -268,7 +268,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -286,7 +286,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
         };
     };
     "Mietspiegeltabelle Leer": {
@@ -302,7 +302,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
         };
     };
     "Wohnung hat Sammelheizung": {
@@ -318,7 +318,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
         };
     };
     "Badezimmer in Wohnung": {
@@ -334,7 +334,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -351,7 +351,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -369,7 +369,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -388,7 +388,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -407,7 +407,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -426,7 +426,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -445,7 +445,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -464,7 +464,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -604,7 +604,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -744,7 +744,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -884,7 +884,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -906,7 +906,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -925,7 +925,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -945,7 +945,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -966,7 +966,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -989,7 +989,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1129,7 +1129,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1152,7 +1152,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1176,7 +1176,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1201,7 +1201,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1227,7 +1227,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1254,7 +1254,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1281,7 +1281,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1308,7 +1308,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1448,7 +1448,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1588,7 +1588,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1728,7 +1728,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1755,7 +1755,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1783,7 +1783,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1812,7 +1812,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1952,7 +1952,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -1982,7 +1982,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2122,7 +2122,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2153,7 +2153,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2185,7 +2185,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2218,7 +2218,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2358,7 +2358,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2393,7 +2393,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2428,7 +2428,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2568,7 +2568,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2604,7 +2604,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2642,7 +2642,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2680,7 +2680,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2719,7 +2719,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2859,7 +2859,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2899,7 +2899,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2940,7 +2940,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -2982,7 +2982,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3122,7 +3122,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3165,7 +3165,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3209,7 +3209,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3255,7 +3255,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3395,7 +3395,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3441,7 +3441,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3473,6 +3473,7 @@ export type StepInfoByAlias = {
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Bad mit moderner Entlüftung": {
@@ -3488,7 +3489,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3536,7 +3537,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3676,7 +3677,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3725,7 +3726,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3775,7 +3776,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3827,7 +3828,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -3879,7 +3880,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4019,7 +4020,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4073,7 +4074,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4129,7 +4130,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4185,7 +4186,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4325,7 +4326,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4381,7 +4382,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4438,7 +4439,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4496,7 +4497,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4555,7 +4556,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4615,7 +4616,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4676,7 +4677,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4816,7 +4817,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4878,7 +4879,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -4941,7 +4942,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5005,7 +5006,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5070,7 +5071,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5210,7 +5211,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5276,7 +5277,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5343,7 +5344,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5411,7 +5412,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5551,7 +5552,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5620,7 +5621,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5690,7 +5691,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5761,7 +5762,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5833,7 +5834,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -5973,7 +5974,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -6046,7 +6047,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -6186,7 +6187,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -6326,7 +6327,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -6400,7 +6401,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -6475,7 +6476,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -6551,7 +6552,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -6691,7 +6692,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -6768,7 +6769,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -6846,7 +6847,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -6925,7 +6926,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -7065,7 +7066,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -7145,7 +7146,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -7228,7 +7229,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -7310,7 +7311,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -7393,7 +7394,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -7533,7 +7534,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -7617,7 +7618,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -7703,7 +7704,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -7843,7 +7844,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -7929,7 +7930,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -8016,7 +8017,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -8104,7 +8105,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -8193,7 +8194,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -8333,7 +8334,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -8423,7 +8424,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -8516,7 +8517,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -8608,7 +8609,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -8748,7 +8749,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -8841,7 +8842,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -8935,7 +8936,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -9075,7 +9076,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -9170,7 +9171,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -9266,7 +9267,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -9365,7 +9366,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -9463,7 +9464,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -9562,7 +9563,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -9702,7 +9703,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -9842,7 +9843,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -9942,7 +9943,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -10043,7 +10044,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -10145,7 +10146,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -10248,7 +10249,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -10388,7 +10389,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -10492,7 +10493,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -10597,7 +10598,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -10703,7 +10704,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -10810,7 +10811,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -10950,7 +10951,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -11060,7 +11061,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -11170,7 +11171,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -11280,7 +11281,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -11420,7 +11421,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -11531,7 +11532,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -11645,7 +11646,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -11758,7 +11759,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -11898,7 +11899,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -12012,7 +12013,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -12127,7 +12128,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -12243,7 +12244,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -12360,7 +12361,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -12478,7 +12479,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -12618,7 +12619,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -12758,7 +12759,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -12877,7 +12878,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -12998,7 +12999,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -13120,7 +13121,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -13260,7 +13261,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -13384,7 +13385,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -13508,7 +13509,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -13632,7 +13633,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -13757,7 +13758,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -13897,7 +13898,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -14037,7 +14038,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -14163,7 +14164,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -14290,7 +14291,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -14418,7 +14419,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -14547,7 +14548,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -14687,7 +14688,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -14818,7 +14819,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -14949,7 +14950,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -15081,7 +15082,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -15214,7 +15215,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -15348,7 +15349,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -15483,7 +15484,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -15623,7 +15624,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -15759,7 +15760,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -15896,7 +15897,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -16034,7 +16035,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
@@ -16173,7 +16174,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1990" | "1991-2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";

@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -434,7 +435,7 @@
                               {
                                 "id": "3vr25",
                                 "alias": "-1918",
-                                "text": "Vor 1918"
+                                "text": "Bis 1918"
                               },
                               {
                                 "id": "22sow",
@@ -453,13 +454,23 @@
                               },
                               {
                                 "id": "z9re4",
-                                "alias": "1973-1990",
-                                "text": "1973 - 1990"
+                                "alias": "1973-1985",
+                                "text": "1973 - 1985"
+                              },
+                              {
+                                "id": "kcnxl",
+                                "text": "1986 - 1990",
+                                "alias": "1986-1990"
                               },
                               {
                                 "id": "6rekg",
-                                "alias": "1991-2002",
-                                "text": "1991 - 2002"
+                                "alias": "1991-2001",
+                                "text": "1991 - 2001"
+                              },
+                              {
+                                "id": "xsmaug",
+                                "text": "2002",
+                                "alias": "2002"
                               },
                               {
                                 "id": "u2107h",
@@ -514,13 +525,23 @@
                           },
                           {
                             "id": "z9re4",
-                            "alias": "1973-1990",
-                            "text": "1973 - 1990"
+                            "alias": "1973-1985",
+                            "text": "1973 - 1985"
+                          },
+                          {
+                            "id": "kcnxl",
+                            "text": "1986 - 1990",
+                            "alias": "1986-1990"
                           },
                           {
                             "id": "6rekg",
-                            "alias": "1991-2002",
-                            "text": "1991 - 2002"
+                            "alias": "1991-2001",
+                            "text": "1991 - 2001"
+                          },
+                          {
+                            "id": "xsmaug",
+                            "text": "2002",
+                            "alias": "2002"
                           },
                           {
                             "id": "u2107h",
@@ -577,13 +598,23 @@
                   },
                   {
                     "id": "z9re4",
-                    "alias": "1973-1990",
-                    "text": "1973 - 1990"
+                    "alias": "1973-1985",
+                    "text": "1973 - 1985"
+                  },
+                  {
+                    "id": "kcnxl",
+                    "text": "1986 - 1990",
+                    "alias": "1986-1990"
                   },
                   {
                     "id": "6rekg",
-                    "alias": "1991-2002",
-                    "text": "1991 - 2002"
+                    "alias": "1991-2001",
+                    "text": "1991 - 2001"
+                  },
+                  {
+                    "id": "xsmaug",
+                    "text": "2002",
+                    "alias": "2002"
                   },
                   {
                     "id": "u2107h",
@@ -640,10 +671,19 @@
         {
           "id": "vpt6a",
           "type": "If",
+          "alternate": [],
           "cases": [
             {
               "id": "oc03p",
               "type": "IfCase",
+              "block": [
+                {
+                  "id": "ggygqg",
+                  "alias": "Mietspiegeltabelle Leer",
+                  "text": "",
+                  "type": "Exit"
+                }
+              ],
               "test": {
                 "id": "gz3lt",
                 "type": "LogicalOperation",
@@ -698,7 +738,8 @@
                         "operator": "is",
                         "comparands": [
                           "6rekg",
-                          "u2107h"
+                          "u2107h",
+                          "eg5u6"
                         ]
                       }
                     ]
@@ -769,19 +810,19 @@
                     ]
                   }
                 ]
-              },
-              "block": [
-                {
-                  "id": "ggygqg",
-                  "alias": "Mietspiegeltabelle Leer",
-                  "text": "",
-                  "type": "Exit"
-                }
-              ]
+              }
             },
             {
               "id": "988d",
               "type": "IfCase",
+              "block": [
+                {
+                  "id": "er044",
+                  "alias": "Mietspiegeltabelle Leer",
+                  "text": "",
+                  "type": "Exit"
+                }
+              ],
               "test": {
                 "id": "15vw",
                 "type": "LogicalOperation",
@@ -833,7 +874,8 @@
                         "type": "AnswerOptionComparison",
                         "operator": "is",
                         "comparands": [
-                          "6rekg"
+                          "6rekg",
+                          "eg5u6"
                         ]
                       }
                     ]
@@ -902,19 +944,19 @@
                     ]
                   }
                 ]
-              },
-              "block": [
-                {
-                  "id": "er044",
-                  "alias": "Mietspiegeltabelle Leer",
-                  "text": "",
-                  "type": "Exit"
-                }
-              ]
+              }
             },
             {
               "id": "6mpzo",
               "type": "IfCase",
+              "block": [
+                {
+                  "id": "lar9z",
+                  "alias": "Mietspiegeltabelle Leer",
+                  "text": "",
+                  "type": "Exit"
+                }
+              ],
               "test": {
                 "id": "3q21i",
                 "type": "LogicalOperation",
@@ -966,7 +1008,8 @@
                         "type": "AnswerOptionComparison",
                         "operator": "is",
                         "comparands": [
-                          "z9re4"
+                          "z9re4",
+                          "egwi3"
                         ]
                       },
                       {
@@ -1027,7 +1070,8 @@
                         "type": "AnswerOptionComparison",
                         "operator": "is",
                         "comparands": [
-                          "6rekg"
+                          "6rekg",
+                          "eg5u6"
                         ]
                       },
                       {
@@ -1176,18 +1220,9 @@
                     ]
                   }
                 ]
-              },
-              "block": [
-                {
-                  "id": "lar9z",
-                  "alias": "Mietspiegeltabelle Leer",
-                  "text": "",
-                  "type": "Exit"
-                }
-              ]
+              }
             }
-          ],
-          "alternate": []
+          ]
         },
         {
           "id": "yzup4",
@@ -1246,6 +1281,7 @@
         {
           "id": "sadq2",
           "type": "If",
+          "alternate": [],
           "cases": [
             {
               "id": "fsk7j",
@@ -1339,7 +1375,7 @@
                               {
                                 "id": "3vr25",
                                 "alias": "-1918",
-                                "text": "Vor 1918"
+                                "text": "Bis 1918"
                               },
                               {
                                 "id": "22sow",
@@ -1358,13 +1394,23 @@
                               },
                               {
                                 "id": "z9re4",
-                                "alias": "1973-1990",
-                                "text": "1973 - 1990"
+                                "alias": "1973-1985",
+                                "text": "1973 - 1985"
+                              },
+                              {
+                                "id": "kcnxl",
+                                "text": "1986 - 1990",
+                                "alias": "1986-1990"
                               },
                               {
                                 "id": "6rekg",
-                                "alias": "1991-2002",
-                                "text": "1991 - 2002"
+                                "alias": "1991-2001",
+                                "text": "1991 - 2001"
+                              },
+                              {
+                                "id": "xsmaug",
+                                "text": "2002",
+                                "alias": "2002"
                               },
                               {
                                 "id": "u2107h",
@@ -1419,13 +1465,23 @@
                           },
                           {
                             "id": "z9re4",
-                            "alias": "1973-1990",
-                            "text": "1973 - 1990"
+                            "alias": "1973-1985",
+                            "text": "1973 - 1985"
+                          },
+                          {
+                            "id": "egwi3",
+                            "text": "1986 - 1990",
+                            "alias": "1986-1990"
                           },
                           {
                             "id": "6rekg",
-                            "alias": "1991-2002",
-                            "text": "1991 - 2002"
+                            "alias": "1991-2001",
+                            "text": "1991 - 2001"
+                          },
+                          {
+                            "id": "eg5u6",
+                            "text": "2002",
+                            "alias": "2002"
                           },
                           {
                             "id": "u2107h",
@@ -1449,8 +1505,7 @@
                 }
               ]
             }
-          ],
-          "alternate": []
+          ]
         },
         {
           "id": "dkg1y",
@@ -2204,6 +2259,7 @@
             {
               "id": "wb48s",
               "type": "If",
+              "alternate": [],
               "cases": [
                 {
                   "id": "2mtvk",
@@ -2258,44 +2314,11 @@
                             {
                               "id": "qmgjz",
                               "type": "If",
+                              "alternate": [],
                               "cases": [
                                 {
                                   "id": "bcted",
                                   "type": "IfCase",
-                                  "test": {
-                                    "id": "t4ral",
-                                    "type": "LogicalOperation",
-                                    "operator": "or",
-                                    "negated": false,
-                                    "conditions": [
-                                      {
-                                        "id": "aqvvf",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Baujahr"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerOptionComparison",
-                                        "operator": "is",
-                                        "comparands": [
-                                          "6rekg"
-                                        ]
-                                      },
-                                      {
-                                        "id": "aqvvf",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Baujahr"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerOptionComparison",
-                                        "operator": "is",
-                                        "comparands": [
-                                          "kie55"
-                                        ]
-                                      }
-                                    ]
-                                  },
                                   "block": [
                                     {
                                       "id": "beiwa",
@@ -2324,10 +2347,44 @@
                                         ]
                                       }
                                     }
-                                  ]
+                                  ],
+                                  "test": {
+                                    "id": "t4ral",
+                                    "type": "LogicalOperation",
+                                    "operator": "or",
+                                    "negated": false,
+                                    "conditions": [
+                                      {
+                                        "id": "aqvvf",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "6rekg",
+                                          "eg5u6"
+                                        ]
+                                      },
+                                      {
+                                        "id": "aqvvf",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "kie55"
+                                        ]
+                                      }
+                                    ]
+                                  }
                                 }
-                              ],
-                              "alternate": []
+                              ]
                             },
                             {
                               "id": "4suun",
@@ -2406,10 +2463,40 @@
                             {
                               "id": "hdcdy",
                               "type": "If",
+                              "alternate": [],
                               "cases": [
                                 {
                                   "id": "m4ck",
                                   "type": "IfCase",
+                                  "block": [
+                                    {
+                                      "id": "frmz3",
+                                      "type": "Question",
+                                      "alias": "Sondermerkmal Modernes Bad",
+                                      "text": "Sind die Badezimmer modern ausgestattet?",
+                                      "info": "Ein Badezimmer gilt als modern ausgestattet, wenn die Wände neben Waschbecken, Badewanne und Dusche gefliest sind. Bodenfliesen, Einhebelmischbatterie, Strukturheizkörper als Handtuchwärmer und Badewanne oder Dusche vorhanden sind.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ],
                                   "test": {
                                     "id": "fl951",
                                     "type": "LogicalOperation",
@@ -2448,7 +2535,8 @@
                                             "type": "AnswerOptionComparison",
                                             "operator": "is",
                                             "comparands": [
-                                              "z9re4"
+                                              "z9re4",
+                                              "egwi3"
                                             ]
                                           },
                                           {
@@ -2478,118 +2566,20 @@
                                         ]
                                       }
                                     ]
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "frmz3",
-                                      "type": "Question",
-                                      "alias": "Sondermerkmal Modernes Bad",
-                                      "text": "Sind die Badezimmer modern ausgestattet?",
-                                      "info": "Ein Badezimmer gilt als modern ausgestattet, wenn die Wände neben Waschbecken, Badewanne und Dusche gefliest sind. Bodenfliesen, Einhebelmischbatterie, Strukturheizkörper als Handtuchwärmer und Badewanne oder Dusche vorhanden sind.",
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "uiajj",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "qzhja",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "8i22j",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  ]
+                                  }
                                 }
-                              ],
-                              "alternate": []
+                              ]
                             }
                           ]
                         },
                         {
                           "id": "91438",
                           "type": "If",
+                          "alternate": [],
                           "cases": [
                             {
                               "id": "1nz38",
                               "type": "IfCase",
-                              "test": {
-                                "id": "qd71r",
-                                "type": "LogicalOperation",
-                                "operator": "or",
-                                "negated": false,
-                                "conditions": [
-                                  {
-                                    "id": "u7inpl",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Baujahr"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "3vr25",
-                                      "jbcy7",
-                                      "46etdg",
-                                      "6rekg"
-                                    ]
-                                  },
-                                  {
-                                    "id": "8ghgd",
-                                    "type": "LogicalOperation",
-                                    "operator": "and",
-                                    "negated": false,
-                                    "conditions": [
-                                      {
-                                        "id": "u7inpl",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Baujahr"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerOptionComparison",
-                                        "operator": "is",
-                                        "comparands": [
-                                          "z9re4"
-                                        ]
-                                      },
-                                      {
-                                        "id": "u7inpl",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Ost"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerBooleanComparison",
-                                        "operator": "is",
-                                        "value": false
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "id": "u7inpl",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Baujahr"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "kie55"
-                                    ]
-                                  }
-                                ]
-                              },
                               "block": [
                                 {
                                   "id": "r7e8b",
@@ -2626,10 +2616,80 @@
                                     }
                                   ]
                                 }
-                              ]
+                              ],
+                              "test": {
+                                "id": "qd71r",
+                                "type": "LogicalOperation",
+                                "operator": "or",
+                                "negated": false,
+                                "conditions": [
+                                  {
+                                    "id": "u7inpl",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "3vr25",
+                                      "jbcy7",
+                                      "46etdg",
+                                      "6rekg",
+                                      "eg5u6"
+                                    ]
+                                  },
+                                  {
+                                    "id": "8ghgd",
+                                    "type": "LogicalOperation",
+                                    "operator": "and",
+                                    "negated": false,
+                                    "conditions": [
+                                      {
+                                        "id": "u7inpl",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "z9re4",
+                                          "egwi3"
+                                        ]
+                                      },
+                                      {
+                                        "id": "u7inpl",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Ost"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerBooleanComparison",
+                                        "operator": "is",
+                                        "value": false
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "u7inpl",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "kie55"
+                                    ]
+                                  }
+                                ]
+                              }
                             }
-                          ],
-                          "alternate": []
+                          ]
                         },
                         {
                           "id": "ns86c",
@@ -2765,10 +2825,40 @@
                                 {
                                   "id": "83d6t",
                                   "type": "If",
+                                  "alternate": [],
                                   "cases": [
                                     {
                                       "id": "w3wxt",
                                       "type": "IfCase",
+                                      "block": [
+                                        {
+                                          "id": "2d8pc",
+                                          "type": "Question",
+                                          "alias": "Sondermerkmal Bodenbelag",
+                                          "text": "Ist in der Mehrheit der Wohnräume einen hochwertiger Bodenbelag verlegt?",
+                                          "info": "Hierzu zählt z.B. hochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ],
                                       "test": {
                                         "id": "oe75t",
                                         "type": "LogicalOperation",
@@ -2788,7 +2878,8 @@
                                               "3vr25",
                                               "22sow",
                                               "jbcy7",
-                                              "6rekg"
+                                              "6rekg",
+                                              "eg5u6"
                                             ]
                                           },
                                           {
@@ -2807,7 +2898,8 @@
                                                 "type": "AnswerOptionComparison",
                                                 "operator": "is",
                                                 "comparands": [
-                                                  "z9re4"
+                                                  "z9re4",
+                                                  "egwi3"
                                                 ]
                                               },
                                               {
@@ -2837,39 +2929,9 @@
                                             ]
                                           }
                                         ]
-                                      },
-                                      "block": [
-                                        {
-                                          "id": "2d8pc",
-                                          "type": "Question",
-                                          "alias": "Sondermerkmal Bodenbelag",
-                                          "text": "Ist in der Mehrheit der Wohnräume einen hochwertiger Bodenbelag verlegt?",
-                                          "info": "Hierzu zählt z.B. hochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
-                                          "answer": {
-                                            "type": "ChoiceAnswer",
-                                            "options": [
-                                              {
-                                                "id": "uiajj",
-                                                "alias": "Ja",
-                                                "text": "Ja"
-                                              },
-                                              {
-                                                "id": "qzhja",
-                                                "alias": "Nein",
-                                                "text": "Nein"
-                                              },
-                                              {
-                                                "id": "8i22j",
-                                                "alias": "Nicht sicher",
-                                                "text": "Ich bin mir nicht sicher"
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ]
+                                      }
                                     }
-                                  ],
-                                  "alternate": []
+                                  ]
                                 }
                               ]
                             }
@@ -2879,8 +2941,7 @@
                     }
                   ]
                 }
-              ],
-              "alternate": []
+              ]
             },
             {
               "id": "kp858",
@@ -2891,6 +2952,7 @@
                 {
                   "id": "nrsqz",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "tqfuq",
@@ -2940,26 +3002,6 @@
                                       "id": "5hoc7",
                                       "type": "If",
                                       "note": "Die Frage \"Badezimmer klein\" soll nur gestellt werden, wenn das Sondermerkmal \"Kleines Bad\" nicht erfüllt ist. \n\nDas Sondermerkmal \"Kleines Bad\" ist nur für das Baujahr \"1991-2002\" relevant.\n\nDa Sondermerkmal und Frage exakt gleich sind, muss die Frage hier nicht wiederholt werden, wenn sie schonmal gefragt wurde:\n- Wenn das Sondermerkmal erfüllt ist, fällt diese Frage raus\n- Wenn das Sondermerkmal nicht erfüllt ist, dann wäre die Antwort auf diese Frage sowieso ebenfalls \"Nein\"\n",
-                                      "cases": [
-                                        {
-                                          "id": "kjzm8l",
-                                          "type": "IfCase",
-                                          "test": {
-                                            "id": "0wbce",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Baujahr"
-                                            },
-                                            "negated": false,
-                                            "type": "AnswerOptionComparison",
-                                            "operator": "is",
-                                            "comparands": [
-                                              "6rekg"
-                                            ]
-                                          },
-                                          "block": []
-                                        }
-                                      ],
                                       "alternate": [
                                         {
                                           "id": "uyizu",
@@ -2989,6 +3031,27 @@
                                           },
                                           "note": "Merkmal 2015:\nNur wenn Sondermerkmal „kleines Bad (kleiner als 4 m2)“ nicht zutrifft: Kleines Bad (kleiner als 4 m2) [--]\n\nMerkmal >=2017:\nKleines Bad (kleiner als 4 m2); gilt nicht in der Baualtersklasse 1973 bis 1990 Ost [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher\n"
                                         }
+                                      ],
+                                      "cases": [
+                                        {
+                                          "id": "kjzm8l",
+                                          "type": "IfCase",
+                                          "block": [],
+                                          "test": {
+                                            "id": "0wbce",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "6rekg",
+                                              "eg5u6"
+                                            ]
+                                          }
+                                        }
                                       ]
                                     }
                                   ]
@@ -2998,45 +3061,6 @@
                                 {
                                   "id": "oszle",
                                   "type": "If",
-                                  "cases": [
-                                    {
-                                      "id": "hl46h",
-                                      "type": "IfCase",
-                                      "test": {
-                                        "id": "lkvw0g",
-                                        "type": "LogicalOperation",
-                                        "operator": "and",
-                                        "negated": false,
-                                        "conditions": [
-                                          {
-                                            "id": "1tanj",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Baujahr"
-                                            },
-                                            "negated": false,
-                                            "type": "AnswerOptionComparison",
-                                            "operator": "is",
-                                            "comparands": [
-                                              "z9re4"
-                                            ]
-                                          },
-                                          {
-                                            "id": "1tanj",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Ost"
-                                            },
-                                            "negated": false,
-                                            "type": "AnswerBooleanComparison",
-                                            "operator": "is",
-                                            "value": true
-                                          }
-                                        ]
-                                      },
-                                      "block": []
-                                    }
-                                  ],
                                   "alternate": [
                                     {
                                       "id": "jxswc",
@@ -3065,6 +3089,46 @@
                                         ]
                                       },
                                       "note": "Merkmal 2015:\nNur wenn Sondermerkmal „kleines Bad (kleiner als 4 m2)“ nicht zutrifft: Kleines Bad (kleiner als 4 m2) [--]\n\nMerkmal >=2017:\nKleines Bad (kleiner als 4 m2); gilt nicht in der Baualtersklasse 1973 bis 1990 Ost [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher\n"
+                                    }
+                                  ],
+                                  "cases": [
+                                    {
+                                      "id": "hl46h",
+                                      "type": "IfCase",
+                                      "block": [],
+                                      "test": {
+                                        "id": "lkvw0g",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "1tanj",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "z9re4",
+                                              "egwi3"
+                                            ]
+                                          },
+                                          {
+                                            "id": "1tanj",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Ost"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerBooleanComparison",
+                                            "operator": "is",
+                                            "value": true
+                                          }
+                                        ]
+                                      }
                                     }
                                   ]
                                 }
@@ -3159,7 +3223,7 @@
                                   }
                                 ]
                               },
-                              "note": "Merkmal:\nKeine Duschmöglichkeit [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal >=2025:\nKeine Duschmöglichkeit (z. B. kein Spritzwasserschutz, keine Duschkopfhalterung, sehr kleine Standfläche) [--]\n\nMerkmal <=2023:\nKeine Duschmöglichkeit [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                             },
                             {
                               "id": "r02tok",
@@ -3409,8 +3473,7 @@
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 },
                 {
                   "id": "wn0p",
@@ -3774,49 +3837,11 @@
                         {
                           "id": "a8ffw",
                           "type": "If",
+                          "alternate": [],
                           "cases": [
                             {
                               "id": "ss1f1i",
                               "type": "IfCase",
-                              "test": {
-                                "id": "hrn7p",
-                                "type": "LogicalOperation",
-                                "operator": "or",
-                                "negated": false,
-                                "conditions": [
-                                  {
-                                    "id": "ghai4",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Baujahr"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "22sow",
-                                      "3vr25",
-                                      "jbcy7",
-                                      "46etdg",
-                                      "z9re4",
-                                      "6rekg"
-                                    ]
-                                  },
-                                  {
-                                    "id": "ghai4",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Baujahr"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "kie55"
-                                    ]
-                                  }
-                                ]
-                              },
                               "block": [
                                 {
                                   "id": "0evldj",
@@ -3846,10 +3871,50 @@
                                   },
                                   "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2017:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal >=2019:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
-                              ]
+                              ],
+                              "test": {
+                                "id": "hrn7p",
+                                "type": "LogicalOperation",
+                                "operator": "or",
+                                "negated": false,
+                                "conditions": [
+                                  {
+                                    "id": "ghai4",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "22sow",
+                                      "3vr25",
+                                      "jbcy7",
+                                      "46etdg",
+                                      "z9re4",
+                                      "6rekg",
+                                      "eg5u6",
+                                      "egwi3"
+                                    ]
+                                  },
+                                  {
+                                    "id": "ghai4",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "kie55"
+                                    ]
+                                  }
+                                ]
+                              }
                             }
-                          ],
-                          "alternate": []
+                          ]
                         }
                       ]
                     }
@@ -3892,6 +3957,7 @@
                     {
                       "id": "vu6qw",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "rweyg",
@@ -3911,32 +3977,141 @@
                           },
                           "block": [
                             {
-                              "id": "bosaz",
-                              "type": "Question",
-                              "alias": "Bad mit WC ohne Fenster",
-                              "text": "Gibt es ein Badezimmer mit einer Toilette, welches kein Fenster hat?",
-                              "info": null,
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
-                                  },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
+                              "type": "If",
+                              "id": "bdljul",
+                              "cases": [
+                                {
+                                  "type": "IfCase",
+                                  "id": "gpjga",
+                                  "block": [
+                                    {
+                                      "id": "h0j1f",
+                                      "type": "Question",
+                                      "alias": "Bad mit WC ohne Fenster",
+                                      "text": "Gibt es ein Badezimmer mit einer Toilette, welches kein Fenster hat?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "note": "Merkmal <=2023:\nBad mit WC ohne Fenster [--]\n\nMerkmal >=2025: Bad mit WC ohne Fenster; gilt nicht für die Baualtersklasse 1973 bis 1990 Ost\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ],
+                                  "test": {
+                                    "id": "j4igy",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "operator": "is",
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "comparands": [
+                                      "08tnb",
+                                      "wejo0k",
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
+                                    ]
                                   }
-                                ]
-                              },
-                              "note": "Merkmal:\nBad mit WC ohne Fenster [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "type": "If",
+                                  "id": "ndkp3",
+                                  "alternate": [
+                                    {
+                                      "id": "bosaz",
+                                      "type": "Question",
+                                      "alias": "Bad mit WC ohne Fenster",
+                                      "text": "Gibt es ein Badezimmer mit einer Toilette, welches kein Fenster hat?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "note": "Merkmal <=2023:\nBad mit WC ohne Fenster [--]\n\nMerkmal >=2025: Bad mit WC ohne Fenster; gilt nicht für die Baualtersklasse 1973 bis 1990 Ost\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ],
+                                  "cases": [
+                                    {
+                                      "type": "IfCase",
+                                      "id": "a4zj3",
+                                      "block": [],
+                                      "test": {
+                                        "type": "LogicalOperation",
+                                        "id": "9yzij",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "5k04q",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "operator": "is",
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "comparands": [
+                                              "z9re4",
+                                              "egwi3"
+                                            ]
+                                          },
+                                          {
+                                            "id": "5k04q",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Ost"
+                                            },
+                                            "operator": "is",
+                                            "negated": false,
+                                            "type": "AnswerBooleanComparison",
+                                            "comparands": [
+                                              "z9re4"
+                                            ],
+                                            "value": true
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
                             },
                             {
                               "id": "e7czfk",
@@ -3968,8 +4143,7 @@
                             }
                           ]
                         }
-                      ],
-                      "alternate": []
+                      ]
                     }
                   ]
                 },
@@ -5658,6 +5832,7 @@
                       "id": "wvdjy",
                       "type": "If",
                       "note": "Wenn die Wohnung überwiegend einfach verglaste Fenster hat, ist die Frage zu Schall- und Wärmeschutzfenster nicht mehr notwenig.",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "6pkpb",
@@ -5681,6 +5856,68 @@
                               "id": "kp48i",
                               "type": "If",
                               "note": "",
+                              "alternate": [
+                                {
+                                  "id": "bmn2kf",
+                                  "type": "If",
+                                  "alternate": [],
+                                  "cases": [
+                                    {
+                                      "id": "b2zbfj",
+                                      "type": "IfCase",
+                                      "block": [
+                                        {
+                                          "id": "opdsj",
+                                          "type": "Question",
+                                          "alias": "Wohnung hat Schallschutzfenster",
+                                          "text": "Sind in der Wohnung überwiegend Fenster mit Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster verbaut?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "tcod4",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "43bd3",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "36h0m",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      "test": {
+                                        "id": "xsbby",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "3vr25",
+                                          "22sow",
+                                          "jbcy7",
+                                          "46etdg",
+                                          "z9re4",
+                                          "6rekg",
+                                          "eg5u6",
+                                          "egwi3"
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
                               "cases": [
                                 {
                                   "id": "22yywl",
@@ -5775,27 +6012,40 @@
                                     {
                                       "id": "mjpxu",
                                       "type": "If",
+                                      "alternate": [
+                                        {
+                                          "id": "klx35",
+                                          "type": "Question",
+                                          "alias": "Wohnung hat Schallschutzfenster",
+                                          "text": "Sind in der Wohnung überwiegend Fenster mit Wärmeschutzverglasung verbaut?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "tcod4",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "43bd3",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "36h0m",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal >=2019:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ],
                                       "cases": [
                                         {
                                           "id": "jiueu",
                                           "type": "IfCase",
-                                          "test": {
-                                            "id": "dgby8g",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Baujahr"
-                                            },
-                                            "negated": false,
-                                            "type": "AnswerOptionComparison",
-                                            "operator": "is",
-                                            "comparands": [
-                                              "z9re4",
-                                              "46etdg",
-                                              "jbcy7",
-                                              "22sow",
-                                              "3vr25"
-                                            ]
-                                          },
                                           "block": [
                                             {
                                               "id": "p7l6ch",
@@ -5825,13 +6075,9 @@
                                               },
                                               "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal >=2019:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                             }
-                                          ]
-                                        },
-                                        {
-                                          "id": "7yryt",
-                                          "type": "IfCase",
+                                          ],
                                           "test": {
-                                            "id": "i8gyk",
+                                            "id": "dgby8g",
                                             "questionRef": {
                                               "type": "AliasRef",
                                               "value": "Baujahr"
@@ -5840,9 +6086,18 @@
                                             "type": "AnswerOptionComparison",
                                             "operator": "is",
                                             "comparands": [
-                                              "6rekg"
+                                              "z9re4",
+                                              "46etdg",
+                                              "jbcy7",
+                                              "22sow",
+                                              "3vr25",
+                                              "egwi3"
                                             ]
-                                          },
+                                          }
+                                        },
+                                        {
+                                          "id": "7yryt",
+                                          "type": "IfCase",
                                           "block": [
                                             {
                                               "id": "2rdhn",
@@ -5954,108 +6209,31 @@
                                                 }
                                               ]
                                             }
-                                          ]
-                                        }
-                                      ],
-                                      "alternate": [
-                                        {
-                                          "id": "klx35",
-                                          "type": "Question",
-                                          "alias": "Wohnung hat Schallschutzfenster",
-                                          "text": "Sind in der Wohnung überwiegend Fenster mit Wärmeschutzverglasung verbaut?",
-                                          "info": null,
-                                          "answer": {
-                                            "type": "ChoiceAnswer",
-                                            "options": [
-                                              {
-                                                "id": "tcod4",
-                                                "alias": "Ja",
-                                                "text": "Ja"
-                                              },
-                                              {
-                                                "id": "43bd3",
-                                                "alias": "Nein",
-                                                "text": "Nein"
-                                              },
-                                              {
-                                                "id": "36h0m",
-                                                "alias": "Nicht sicher",
-                                                "text": "Ich bin mir nicht sicher"
-                                              }
-                                            ]
-                                          },
-                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal >=2019:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ],
-                              "alternate": [
-                                {
-                                  "id": "bmn2kf",
-                                  "type": "If",
-                                  "cases": [
-                                    {
-                                      "id": "b2zbfj",
-                                      "type": "IfCase",
-                                      "test": {
-                                        "id": "xsbby",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Baujahr"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerOptionComparison",
-                                        "operator": "is",
-                                        "comparands": [
-                                          "3vr25",
-                                          "22sow",
-                                          "jbcy7",
-                                          "46etdg",
-                                          "z9re4",
-                                          "6rekg"
-                                        ]
-                                      },
-                                      "block": [
-                                        {
-                                          "id": "opdsj",
-                                          "type": "Question",
-                                          "alias": "Wohnung hat Schallschutzfenster",
-                                          "text": "Sind in der Wohnung überwiegend Fenster mit Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster verbaut?",
-                                          "info": null,
-                                          "answer": {
-                                            "type": "ChoiceAnswer",
-                                            "options": [
-                                              {
-                                                "id": "tcod4",
-                                                "alias": "Ja",
-                                                "text": "Ja"
-                                              },
-                                              {
-                                                "id": "43bd3",
-                                                "alias": "Nein",
-                                                "text": "Nein"
-                                              },
-                                              {
-                                                "id": "36h0m",
-                                                "alias": "Nicht sicher",
-                                                "text": "Ich bin mir nicht sicher"
-                                              }
+                                          ],
+                                          "test": {
+                                            "id": "i8gyk",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "6rekg",
+                                              "eg5u6"
                                             ]
                                           }
                                         }
                                       ]
                                     }
-                                  ],
-                                  "alternate": []
+                                  ]
                                 }
                               ]
                             }
                           ]
                         }
-                      ],
-                      "alternate": []
+                      ]
                     },
                     {
                       "id": "5ympj",
@@ -6124,6 +6302,36 @@
                     {
                       "id": "g6u3t",
                       "type": "If",
+                      "alternate": [
+                        {
+                          "id": "qim56",
+                          "type": "Question",
+                          "alias": "Wohnung hat hochwertigen Bodenbelag",
+                          "text": "Gibt es in der überwiegenden Anzahl der Wohnräume einen hochwertigen Bodenbelag?",
+                          "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "uiajj",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "qzhja",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "8i22j",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
+                          },
+                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Hochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume“ nicht zutrifft Hochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume [++]\n\nMerkmal >=2017:\nHochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwie- genden Zahl der Wohnräume [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher\n\n"
+                        }
+                      ],
                       "cases": [
                         {
                           "id": "9y4kai",
@@ -6145,10 +6353,41 @@
                             {
                               "id": "zep1v",
                               "type": "If",
+                              "alternate": [
+                                {
+                                  "id": "2j5cv",
+                                  "type": "Question",
+                                  "alias": "Wohnung hat hochwertigen Bodenbelag",
+                                  "text": "Gibt es in der überwiegenden Anzahl der Wohnräume einen hochwertigen Bodenbelag?",
+                                  "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Hochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume“ nicht zutrifft Hochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume [++]\n\nMerkmal >=2017:\nHochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwie- genden Zahl der Wohnräume [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ],
                               "cases": [
                                 {
                                   "id": "qqqtd",
                                   "type": "IfCase",
+                                  "block": [],
                                   "test": {
                                     "id": "dwqqy",
                                     "type": "LogicalOperation",
@@ -6168,7 +6407,8 @@
                                           "3vr25",
                                           "jbcy7",
                                           "22sow",
-                                          "6rekg"
+                                          "6rekg",
+                                          "eg5u6"
                                         ]
                                       },
                                       {
@@ -6204,72 +6444,11 @@
                                         ]
                                       }
                                     ]
-                                  },
-                                  "block": []
-                                }
-                              ],
-                              "alternate": [
-                                {
-                                  "id": "2j5cv",
-                                  "type": "Question",
-                                  "alias": "Wohnung hat hochwertigen Bodenbelag",
-                                  "text": "Gibt es in der überwiegenden Anzahl der Wohnräume einen hochwertigen Bodenbelag?",
-                                  "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "uiajj",
-                                        "alias": "Ja",
-                                        "text": "Ja"
-                                      },
-                                      {
-                                        "id": "qzhja",
-                                        "alias": "Nein",
-                                        "text": "Nein"
-                                      },
-                                      {
-                                        "id": "8i22j",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
-                                      }
-                                    ]
-                                  },
-                                  "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Hochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume“ nicht zutrifft Hochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume [++]\n\nMerkmal >=2017:\nHochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwie- genden Zahl der Wohnräume [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  }
                                 }
                               ]
                             }
                           ]
-                        }
-                      ],
-                      "alternate": [
-                        {
-                          "id": "qim56",
-                          "type": "Question",
-                          "alias": "Wohnung hat hochwertigen Bodenbelag",
-                          "text": "Gibt es in der überwiegenden Anzahl der Wohnräume einen hochwertigen Bodenbelag?",
-                          "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "uiajj",
-                                "alias": "Ja",
-                                "text": "Ja"
-                              },
-                              {
-                                "id": "qzhja",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              },
-                              {
-                                "id": "8i22j",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
-                              }
-                            ]
-                          },
-                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Hochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume“ nicht zutrifft Hochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume [++]\n\nMerkmal >=2017:\nHochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwie- genden Zahl der Wohnräume [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher\n\n"
                         }
                       ]
                     }
@@ -6723,6 +6902,65 @@
                     {
                       "id": "st50e",
                       "type": "If",
+                      "alternate": [
+                        {
+                          "id": "on961",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "zddhe",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "tpg7qi",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Baujahr"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "3vr25",
+                                  "22sow",
+                                  "jbcy7",
+                                  "46etdg",
+                                  "z9re4"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "qncu1",
+                                  "type": "Question",
+                                  "alias": "Wohnung hat Kaltwasserzähler",
+                                  "text": "Hat die Wohnung einen wohnungsbezogenen Kaltwasserzähler?",
+                                  "info": "Ein wohnungbezogener Kaltwasserzähler ermöglicht den Wasserverbrauch jeder Wohnung einzeln zu messen und somit auch die Wasserkosten für jede Wohnung einzeln abzurechnen.",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": []
+                        }
+                      ],
                       "cases": [
                         {
                           "id": "q7ioqk",
@@ -6791,6 +7029,7 @@
                             {
                               "id": "djk2yi",
                               "type": "If",
+                              "alternate": [],
                               "cases": [
                                 {
                                   "id": "cj48n",
@@ -6845,19 +7084,6 @@
                                 {
                                   "id": "ymuwu",
                                   "type": "IfCase",
-                                  "test": {
-                                    "id": "xlzx4",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Baujahr"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "6rekg"
-                                    ]
-                                  },
                                   "block": [
                                     {
                                       "id": "m24ou",
@@ -6940,71 +7166,25 @@
                                       ],
                                       "alternate": []
                                     }
-                                  ]
-                                }
-                              ],
-                              "alternate": []
-                            }
-                          ]
-                        }
-                      ],
-                      "alternate": [
-                        {
-                          "id": "on961",
-                          "type": "If",
-                          "cases": [
-                            {
-                              "id": "zddhe",
-                              "type": "IfCase",
-                              "test": {
-                                "id": "tpg7qi",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "3vr25",
-                                  "22sow",
-                                  "jbcy7",
-                                  "46etdg",
-                                  "z9re4"
-                                ]
-                              },
-                              "block": [
-                                {
-                                  "id": "qncu1",
-                                  "type": "Question",
-                                  "alias": "Wohnung hat Kaltwasserzähler",
-                                  "text": "Hat die Wohnung einen wohnungsbezogenen Kaltwasserzähler?",
-                                  "info": "Ein wohnungbezogener Kaltwasserzähler ermöglicht den Wasserverbrauch jeder Wohnung einzeln zu messen und somit auch die Wasserkosten für jede Wohnung einzeln abzurechnen.",
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "uiajj",
-                                        "alias": "Ja",
-                                        "text": "Ja"
-                                      },
-                                      {
-                                        "id": "qzhja",
-                                        "alias": "Nein",
-                                        "text": "Nein"
-                                      },
-                                      {
-                                        "id": "8i22j",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
-                                      }
+                                  ],
+                                  "test": {
+                                    "id": "xlzx4",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "6rekg",
+                                      "eg5u6"
                                     ]
                                   }
                                 }
                               ]
                             }
-                          ],
-                          "alternate": []
+                          ]
                         }
                       ]
                     },
@@ -7688,7 +7868,7 @@
                                       }
                                     ]
                                   },
-                                  "note": "Merkmal >=2017:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  "note": "Merkmal >=2017:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                                 }
                               ]
                             }
@@ -8549,6 +8729,7 @@
                 {
                   "id": "8zr9m",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "y0mpq",
@@ -8625,10 +8806,41 @@
                                     {
                                       "id": "q4e3w",
                                       "type": "If",
+                                      "alternate": [],
                                       "cases": [
                                         {
                                           "id": "dikkq",
                                           "type": "IfCase",
+                                          "block": [
+                                            {
+                                              "id": "cwosy",
+                                              "type": "Question",
+                                              "alias": "Gebäude hat moderne Heizanlage",
+                                              "text": "Wurde die Heizanlage der Wohnung nach dem 1.7.1994 erneuert?",
+                                              "info": null,
+                                              "answer": {
+                                                "type": "ChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "uiajj",
+                                                    "alias": "Ja",
+                                                    "text": "Ja"
+                                                  },
+                                                  {
+                                                    "id": "qzhja",
+                                                    "alias": "Nein",
+                                                    "text": "Nein"
+                                                  },
+                                                  {
+                                                    "id": "8i22j",
+                                                    "alias": "Nicht sicher",
+                                                    "text": "Ich bin mir nicht sicher"
+                                                  }
+                                                ]
+                                              },
+                                              "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal >=2017:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                            }
+                                          ],
                                           "test": {
                                             "id": "iv1ii",
                                             "type": "LogicalOperation",
@@ -8664,44 +8876,15 @@
                                                   "jbcy7",
                                                   "46etdg",
                                                   "z9re4",
-                                                  "6rekg"
+                                                  "6rekg",
+                                                  "eg5u6",
+                                                  "egwi3"
                                                 ]
                                               }
                                             ]
-                                          },
-                                          "block": [
-                                            {
-                                              "id": "cwosy",
-                                              "type": "Question",
-                                              "alias": "Gebäude hat moderne Heizanlage",
-                                              "text": "Wurde die Heizanlage der Wohnung nach dem 1.7.1994 erneuert?",
-                                              "info": null,
-                                              "answer": {
-                                                "type": "ChoiceAnswer",
-                                                "options": [
-                                                  {
-                                                    "id": "uiajj",
-                                                    "alias": "Ja",
-                                                    "text": "Ja"
-                                                  },
-                                                  {
-                                                    "id": "qzhja",
-                                                    "alias": "Nein",
-                                                    "text": "Nein"
-                                                  },
-                                                  {
-                                                    "id": "8i22j",
-                                                    "alias": "Nicht sicher",
-                                                    "text": "Ich bin mir nicht sicher"
-                                                  }
-                                                ]
-                                              },
-                                              "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal >=2017:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                            }
-                                          ]
+                                          }
                                         }
-                                      ],
-                                      "alternate": []
+                                      ]
                                     }
                                   ]
                                 }
@@ -8738,10 +8921,41 @@
                                 {
                                   "id": "3thr8",
                                   "type": "If",
+                                  "alternate": [],
                                   "cases": [
                                     {
                                       "id": "2pizn",
                                       "type": "IfCase",
+                                      "block": [
+                                        {
+                                          "id": "lrsyb",
+                                          "type": "Question",
+                                          "alias": "Gebäude hat moderne Heizanlage",
+                                          "text": "Wurde die Heizanlage der Wohnung nach dem 1.1.2003 erneuert?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal >=2017:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ],
                                       "test": {
                                         "id": "zggu",
                                         "type": "LogicalOperation",
@@ -8777,44 +8991,15 @@
                                               "jbcy7",
                                               "46etdg",
                                               "z9re4",
-                                              "6rekg"
+                                              "6rekg",
+                                              "eg5u6",
+                                              "egwi3"
                                             ]
                                           }
                                         ]
-                                      },
-                                      "block": [
-                                        {
-                                          "id": "lrsyb",
-                                          "type": "Question",
-                                          "alias": "Gebäude hat moderne Heizanlage",
-                                          "text": "Wurde die Heizanlage der Wohnung nach dem 1.1.2003 erneuert?",
-                                          "info": null,
-                                          "answer": {
-                                            "type": "ChoiceAnswer",
-                                            "options": [
-                                              {
-                                                "id": "uiajj",
-                                                "alias": "Ja",
-                                                "text": "Ja"
-                                              },
-                                              {
-                                                "id": "qzhja",
-                                                "alias": "Nein",
-                                                "text": "Nein"
-                                              },
-                                              {
-                                                "id": "8i22j",
-                                                "alias": "Nicht sicher",
-                                                "text": "Ich bin mir nicht sicher"
-                                              }
-                                            ]
-                                          },
-                                          "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal >=2017:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                        }
-                                      ]
+                                      }
                                     }
-                                  ],
-                                  "alternate": []
+                                  ]
                                 }
                               ]
                             }
@@ -8960,8 +9145,7 @@
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 }
               ]
             },
@@ -9207,28 +9391,40 @@
                         {
                           "id": "71qoy",
                           "type": "If",
+                          "alternate": [
+                            {
+                              "id": "ff22o",
+                              "type": "Question",
+                              "alias": "Wohnumfeld ist aufwendig gestaltet",
+                              "text": "Ist das Grundstück des Hauses aufwendig gestaltetet?",
+                              "info": "Hierzu zählt z.B. Sitzbänke, Ruhezonen, oder gute Gehwegbefestigung mit Grünflächen und Beleuchtung",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal >=2017:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ],
                           "cases": [
                             {
                               "id": "7h71y",
                               "type": "IfCase",
-                              "test": {
-                                "id": "ruuru",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "3vr25",
-                                  "22sow",
-                                  "jbcy7",
-                                  "46etdg",
-                                  "z9re4",
-                                  "6rekg"
-                                ]
-                              },
                               "block": [
                                 {
                                   "id": "l6xrn",
@@ -9258,37 +9454,27 @@
                                   },
                                   "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal >=2017:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
-                              ]
-                            }
-                          ],
-                          "alternate": [
-                            {
-                              "id": "ff22o",
-                              "type": "Question",
-                              "alias": "Wohnumfeld ist aufwendig gestaltet",
-                              "text": "Ist das Grundstück des Hauses aufwendig gestaltetet?",
-                              "info": "Hierzu zählt z.B. Sitzbänke, Ruhezonen, oder gute Gehwegbefestigung mit Grünflächen und Beleuchtung",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
-                                  },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
+                              ],
+                              "test": {
+                                "id": "ruuru",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Baujahr"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "3vr25",
+                                  "22sow",
+                                  "jbcy7",
+                                  "46etdg",
+                                  "z9re4",
+                                  "6rekg",
+                                  "eg5u6",
+                                  "egwi3"
                                 ]
-                              },
-                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal >=2017:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                              }
                             }
                           ]
                         }
@@ -9702,6 +9888,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }
