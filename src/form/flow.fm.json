@@ -7688,7 +7688,7 @@
                                       }
                                     ]
                                   },
-                                  "note": "Merkmal >=2017:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                  "note": "Merkmal >=2017:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
                               ]
                             }

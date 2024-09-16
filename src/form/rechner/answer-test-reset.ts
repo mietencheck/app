@@ -40,7 +40,8 @@ export const MERKMAL_RESET_ANSWERS = {
 
   // Küche-
   "Küche hat Kochmöglichkeit": "Ja",
-  "Küche hat Gas/Elektroherd ohne Backofen": "Nein",
+  "Küche hat Gas/Elektroherd": "Ja",
+  "Küche hat Gas/Elektroherd ohne Backofen": "Ja",
   "Küche hat Spüle": "Ja",
   "Küche hat Warmwasser": "Ja",
   "Küche hat Heizung": "Ja",
@@ -57,7 +58,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Wohnung hat verstärkte Tür": "Nein",
   "Wohnung hat Kaltwasserzähler": "Nein",
   "Wohnung hat Fußbodenheizung": "Nein",
-  "Wohnung hat sichtbare Heizungsrohe": "Nein",
+  "Wohnung hat sichtbare Heizungsrohe": "Ja",
   "Wohnung hat hochwertigen Bodenbelag": "Nein",
   "Wohnung hat Internetanschluss": "Nein",
   "Wohnung hat aufwendige Wand- und Deckenverkleidung": "Nein",
@@ -93,7 +94,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Gebäude hat Gegensprechanlage": "Ja",
   "Gebäude hat Treppenhaus in schlechtem Zustand": "Nein",
   "Gebäude ist in schlechtem Zustand": "Nein",
-  "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
+  "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nein",
   "Gebäude hat Fahrradabstellmöglichkeit": "Ja",
   "Gebäude hat privaten Abstellraum": "Ja",
   "Gebäude hat privaten Keller": "Ja",
