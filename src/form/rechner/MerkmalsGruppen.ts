@@ -77,7 +77,7 @@ export const merkmaleByGruppe = {
     con: {
       kochlos: [
         { "Küche hat Kochmöglichkeit": "Nein" },
-        { "Küche hat Gas/Elektroherd ohne Backofen": "Ja" },
+        { "Küche hat Gas/Elektroherd ohne Backofen": "Nein" },
       ],
       "keine Spüle": { "Küche hat Spüle": "Nein" },
       kaumwarm: { "Küche hat Warmwasser": "Nein" },
@@ -103,7 +103,7 @@ export const merkmaleByGruppe = {
       },
       Fußbodenheizung: { "Wohnung hat Fußbodenheizung": "Ja" },
       "Heizungsrohre nicht sichtbar": {
-        "Wohnung hat sichtbare Heizungsrohe": "Ja",
+        "Wohnung hat sichtbare Heizungsrohe": "Nein",
       },
       "hochwertiger Boden": {
         "Wohnung hat hochwertigen Bodenbelag": "Ja",
@@ -151,7 +151,9 @@ export const merkmaleByGruppe = {
         "Gebäude hat Treppenhaus in gutem Zustand": "Ja",
       },
       "gut Instand": { "Gebäude ist in gutem Zustand": "Ja" },
-      Aufzug: { "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja" },
+      Aufzug: {
+        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
+      },
       "geschlossener Fahrradraum": [
         { "Gebäude hat Fahrradstellplätze mit Anschließmöglichkeit": "Ja" },
         { "Gebäude hat Fahrradabstellraum": "Ja" },
@@ -193,7 +195,7 @@ export const merkmaleByGruppe = {
         "Gebäude ist in schlechtem Zustand": "Ja",
       },
       "kein Aufzug": {
-        "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nein",
+        "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
       },
       "keine Fahrradabstellmöglichkeit": {
         "Gebäude hat Fahrradabstellmöglichkeit": "Nein",
