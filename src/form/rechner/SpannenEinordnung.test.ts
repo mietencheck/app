@@ -63,8 +63,10 @@ test.each([
       { Baujahr: "1919-1949", spannen: [[6.47, 5.48, 8.28]] },
       { Baujahr: "1950-1964", spannen: [[6.07, 5.44, 8.09]] },
       { Baujahr: "1965-1972", spannen: [[5.94, 5.11, 7.09]] },
-      { Baujahr: "1973-1990", spannen: [[7.54, 6.27, 8.75]] },
-      { Baujahr: "1991-2002", spannen: [[8.45, 7.79, 10.31]] },
+      { Baujahr: "1973-1985", spannen: [[7.54, 6.27, 8.75]] },
+      { Baujahr: "1986-1990", spannen: [[7.54, 6.27, 8.75]] },
+      { Baujahr: "1991-2001", spannen: [[8.45, 7.79, 10.31]] },
+      { Baujahr: "2002", spannen: [[8.45, 7.79, 10.31]] },
       { Baujahr: "2003-2014", spannen: [[11.74, 9.81, 15.28]] },
       {
         Baujahr: "Nicht sicher",

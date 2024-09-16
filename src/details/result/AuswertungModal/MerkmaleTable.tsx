@@ -49,8 +49,22 @@ export function MerkmaleTable() {
           jahr == "2015"
             ? "Wände nicht überwiegend gefliest"
             : "Wände nicht ausreichend im Spritzwasserbereich von Waschbecken, Badewanne und/oder Dusche gefliest",
-        "[Bad-] fensterlos": "Bad mit WC ohne Fenster",
-        "[Bad-] duschlos": "Keine Duschmöglichkeit",
+        "[Bad-] fensterlos":
+          jahr == "2015" ||
+          jahr == "2017" ||
+          jahr == "2019" ||
+          jahr == "2021" ||
+          jahr == "2023"
+            ? "Bad mit WC ohne Fenster"
+            : "Bad mit WC ohne Fenster; gilt nicht für die Baualtersklasse 1973 bis 1990 Ost",
+        "[Bad-] duschlos":
+          jahr == "2015" ||
+          jahr == "2017" ||
+          jahr == "2019" ||
+          jahr == "2021" ||
+          jahr == "2023"
+            ? "Keine Duschmöglichkeit"
+            : "Keine Duschmöglichkeit (z. B. kein Spritzwasserschutz, keine Duschkopfhalterung, sehr kleine Standfläche)",
         "[Bad-] kleines Bad":
           jahr == "2015"
             ? "Nur wenn Sondermerkmal „kleines Bad (kleiner als 4 m2)“ nicht zutrifft: Kleines Bad (kleiner als 4 m2)"
@@ -66,7 +80,12 @@ export function MerkmaleTable() {
         "[Bad+] Edelboden":
           jahr == "2015"
             ? "Hochwertige Boden- oder Wandfliesen"
-            : "Wandbekleidung und Bodenbelag hochwertig",
+            : jahr == "2017" ||
+                jahr == "2019" ||
+                jahr == "2021" ||
+                jahr == "2023"
+              ? "Wandbekleidung und Bodenbelag hochwertig"
+              : "Wandbekleidung und Bodenbelag hochwertig; gilt nicht für die Baualtersklasse 2016 bis 2022",
         "[Bad+] Edelausstattung":
           "Besondere und hochwertige Ausstattung (z.B. hochwertige Sanitärausstattung, hochwertige Badmöbel, Eckwanne, Rundwanne)",
         "[Bad+] Wand-WC":

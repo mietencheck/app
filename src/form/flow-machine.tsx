@@ -30,8 +30,14 @@ export function getOstWestBaujahr(
     case undefined:
     case "Nicht sicher":
       return null;
-    case "1973-1990":
+    case "1973-1985":
       return ost ? "O:1973-1990" : "W:1973-1990";
+    case "1986-1990":
+      return ost ? "O:1973-1990" : "W:1973-1990";
+    case "1991-2001":
+      return "1991-2002";
+    case "2002":
+      return "1991-2002";
     case "2003-2014":
     case ">2014":
       return "2003-2017";
