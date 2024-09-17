@@ -36,6 +36,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -44,6 +45,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -487,6 +489,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -495,6 +498,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -627,6 +631,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -635,6 +640,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -767,6 +773,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -775,6 +782,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1012,6 +1020,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1020,6 +1029,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1331,6 +1341,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1339,6 +1350,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1471,6 +1483,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1479,6 +1492,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1611,6 +1625,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1619,6 +1634,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1835,6 +1851,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1843,6 +1860,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2005,6 +2023,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2013,6 +2032,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2241,6 +2261,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2249,6 +2270,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2451,6 +2473,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2459,6 +2482,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2629,6 +2653,44 @@ export type StepInfoByAlias = {
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
+    "Bad hat bodengleiche Dusche": {
+        answer: "Ja" | "Nein" | "Nicht sicher";
+        state: {
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            Vormiete?: number;
+            "Vermieter hat über umfassende Sanierung informiert"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Renovierungskosten mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Renovierungskosten schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Renovierungskosten ein Drittel des Neubaupreises"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Badezimmer Klein"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Dusche Und Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Modernes Bad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Moderne Küche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Schallschutzfenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Aufzug"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad ist klein"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+        };
+    };
     "Duschen nur in freistehender Badewanne": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
@@ -2665,6 +2727,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad": {
@@ -2703,6 +2766,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -2742,6 +2806,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2750,6 +2815,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2882,6 +2948,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -2922,6 +2989,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2963,6 +3031,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3005,6 +3074,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3013,6 +3083,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3145,6 +3216,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3188,6 +3260,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3232,6 +3305,54 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad nur kleines Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad großes Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
+            "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+        };
+    };
+    "Bad hat hochwertiges Stand-WC": {
+        answer: "Ja" | "Nein" | "Nicht sicher";
+        state: {
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002" | "2003-2014" | ">2014" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            Vormiete?: number;
+            "Vermieter hat über umfassende Sanierung informiert"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Renovierungskosten mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Renovierungskosten schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Renovierungskosten ein Drittel des Neubaupreises"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Badezimmer Klein"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Dusche Und Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Modernes Bad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Moderne Küche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Schallschutzfenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Aufzug"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad ist klein"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3278,6 +3399,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3286,6 +3408,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3418,6 +3541,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3426,6 +3550,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Bad mit WC ohne Fenster": {
@@ -3464,6 +3589,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3472,6 +3598,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -3512,6 +3639,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3520,6 +3648,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -3560,6 +3689,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3568,6 +3698,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3700,6 +3831,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3708,6 +3840,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3749,6 +3882,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3757,6 +3891,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3799,6 +3934,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3807,6 +3943,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3851,6 +3988,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3859,6 +3997,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3903,6 +4042,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3911,6 +4051,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4043,6 +4184,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4051,6 +4193,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4097,6 +4240,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4105,6 +4249,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4153,6 +4298,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4161,6 +4307,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4209,6 +4356,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4217,6 +4365,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4349,6 +4498,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4357,6 +4507,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4405,6 +4556,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4413,6 +4565,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4462,6 +4615,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4470,6 +4624,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4520,6 +4675,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4528,6 +4684,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4579,6 +4736,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4587,6 +4745,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4639,6 +4798,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4647,6 +4807,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4700,6 +4861,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4708,6 +4870,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4840,6 +5003,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4848,6 +5012,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4902,6 +5067,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4910,6 +5076,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4965,6 +5132,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4973,6 +5141,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5029,6 +5198,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5037,6 +5207,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5094,6 +5265,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5102,6 +5274,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5234,6 +5407,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5242,6 +5416,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5300,6 +5475,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5308,6 +5484,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5367,6 +5544,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5375,6 +5553,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5435,6 +5614,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5443,6 +5623,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5575,6 +5756,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5583,6 +5765,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5644,6 +5827,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5652,6 +5836,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5714,6 +5899,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5722,6 +5908,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5785,6 +5972,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5793,6 +5981,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5857,6 +6046,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5865,6 +6055,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5997,6 +6188,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6005,6 +6197,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6070,6 +6263,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6078,6 +6272,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6210,6 +6405,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6218,6 +6414,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6350,6 +6547,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6358,6 +6556,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6424,6 +6623,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6432,6 +6632,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6499,6 +6700,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6507,6 +6709,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6575,6 +6778,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6583,6 +6787,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6715,6 +6920,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6723,6 +6929,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6792,6 +6999,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6800,6 +7008,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6870,6 +7079,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6878,6 +7088,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6949,6 +7160,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6957,6 +7169,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7089,6 +7302,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7097,6 +7311,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7169,6 +7384,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7177,6 +7393,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7252,6 +7469,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7260,6 +7478,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7334,6 +7553,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7342,6 +7562,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7417,6 +7638,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7425,6 +7647,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7557,6 +7780,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7565,6 +7789,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7641,6 +7866,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7649,6 +7875,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7727,6 +7954,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7735,6 +7963,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7867,6 +8096,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7875,6 +8105,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7953,6 +8184,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7961,6 +8193,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8040,6 +8273,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8048,6 +8282,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8128,6 +8363,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8136,6 +8372,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8217,6 +8454,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8225,6 +8463,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8357,6 +8596,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8365,6 +8605,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8447,6 +8688,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8455,6 +8697,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8540,6 +8783,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8548,6 +8792,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8632,6 +8877,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8640,6 +8886,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8772,6 +9019,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8780,6 +9028,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8865,6 +9114,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8873,6 +9123,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8959,6 +9210,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8967,6 +9219,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9099,6 +9352,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9107,6 +9361,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9194,6 +9449,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9202,6 +9458,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9290,6 +9547,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9298,6 +9556,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9389,6 +9648,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9397,6 +9657,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9487,6 +9748,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9495,6 +9757,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9586,6 +9849,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9594,6 +9858,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9726,6 +9991,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9734,6 +10000,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9866,6 +10133,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9874,6 +10142,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9966,6 +10235,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9974,6 +10244,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10067,6 +10338,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10075,6 +10347,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10169,6 +10442,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10177,6 +10451,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10272,6 +10547,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10280,6 +10556,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10412,6 +10689,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10420,6 +10698,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10516,6 +10795,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10524,6 +10804,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10621,6 +10902,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10629,6 +10911,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10727,6 +11010,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10735,6 +11019,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10834,6 +11119,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10842,6 +11128,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10974,6 +11261,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10982,6 +11270,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11084,6 +11373,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11092,6 +11382,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11194,6 +11485,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11202,6 +11494,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11304,6 +11597,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11312,6 +11606,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11444,6 +11739,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11452,6 +11748,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11555,6 +11852,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11563,6 +11861,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11669,6 +11968,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11677,6 +11977,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11782,6 +12083,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11790,6 +12092,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11922,6 +12225,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11930,6 +12234,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12036,6 +12341,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12044,6 +12350,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12151,6 +12458,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12159,6 +12467,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12267,6 +12576,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12275,6 +12585,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12384,6 +12695,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12392,6 +12704,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12502,6 +12815,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12510,6 +12824,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12642,6 +12957,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12650,6 +12966,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12782,6 +13099,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12790,6 +13108,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12901,6 +13220,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12909,6 +13229,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13022,6 +13343,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13030,6 +13352,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13144,6 +13467,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13152,6 +13476,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13284,6 +13609,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13292,6 +13618,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13408,6 +13735,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13416,6 +13744,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13532,6 +13861,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13540,6 +13870,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13656,6 +13987,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13664,6 +13996,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13781,6 +14114,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13789,6 +14123,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13921,6 +14256,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13929,6 +14265,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14061,6 +14398,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14069,6 +14407,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14187,6 +14526,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14195,6 +14535,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14314,6 +14655,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14322,6 +14664,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14442,6 +14785,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14450,6 +14794,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14571,6 +14916,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14579,6 +14925,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14711,6 +15058,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14719,6 +15067,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14842,6 +15191,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14850,6 +15200,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14973,6 +15324,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14981,6 +15333,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15105,6 +15458,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15113,6 +15467,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15238,6 +15593,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15246,6 +15602,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15372,6 +15729,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15380,6 +15738,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15507,6 +15866,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15515,6 +15875,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15647,6 +16008,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15655,6 +16017,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15783,6 +16146,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15791,6 +16155,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15920,6 +16285,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15928,6 +16294,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16058,6 +16425,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16066,6 +16434,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16197,6 +16566,7 @@ export type StepInfoByAlias = {
             "Bad ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16205,6 +16575,7 @@ export type StepInfoByAlias = {
             "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
