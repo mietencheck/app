@@ -14,6 +14,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Bad Boden und Wand hochwertig": "Nein",
   "Bad mit hochwertiger Ausstattung": "Nein",
   "Bad hat Einhebelmischbatterie": "Nein",
+  "Bad hat bodengleiche Dusche": "Nein",
 
   // Bad-
   "Bad ist klein": "Ja",
