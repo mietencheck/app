@@ -3232,26 +3232,56 @@
                                 {
                                   "id": "e51xr",
                                   "type": "IfCase",
+                                  "block": [],
                                   "test": {
                                     "id": "x8e",
                                     "questionRef": {
                                       "type": "AliasRef",
                                       "value": "Bad hat Duschmöglichkeit"
                                     },
-                                    "negated": false,
+                                    "negated": true,
                                     "type": "AnswerOptionComparison",
                                     "operator": "is",
                                     "comparands": [
-                                      "y3v95"
+                                      "vove8"
                                     ]
-                                  },
-                                  "block": []
+                                  }
                                 }
                               ],
                               "alternate": [
                                 {
                                   "id": "rj5pk",
                                   "type": "If",
+                                  "alternate": [
+                                    {
+                                      "id": "3hedjh",
+                                      "type": "Question",
+                                      "alias": "Bad hat Dusche und Wanne",
+                                      "text": "Gibt es in der Wohnung sowohl eine Dusche als auch eine separate Badewanne?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "kewsy",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "wcek6",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "wx0n",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche [++]\n\nMerkmal >= 2017:\nVon der Badewanne getrennte zusätzliche Duschtasse oder -kabine [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ],
                                   "cases": [
                                     {
                                       "id": "qhmpfj",
@@ -3326,35 +3356,58 @@
                                         }
                                       ]
                                     }
-                                  ],
-                                  "alternate": [
+                                  ]
+                                },
+                                {
+                                  "type": "If",
+                                  "id": "ithdtj",
+                                  "alternate": [],
+                                  "cases": [
                                     {
-                                      "id": "3hedjh",
-                                      "type": "Question",
-                                      "alias": "Bad hat Dusche und Wanne",
-                                      "text": "Gibt es in der Wohnung sowohl eine Dusche als auch eine separate Badewanne?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "kewsy",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "wcek6",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "wx0n",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
+                                      "type": "IfCase",
+                                      "id": "myvbfj",
+                                      "test": {
+                                        "id": "0g5s7i",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Vertragsdatum"
+                                        },
+                                        "operator": "is",
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "comparands": [
+                                          "ve0tek"
                                         ]
                                       },
-                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche [++]\n\nMerkmal >= 2017:\nVon der Badewanne getrennte zusätzliche Duschtasse oder -kabine [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                      "block": [
+                                        {
+                                          "type": "Question",
+                                          "id": "6w6r6",
+                                          "text": "Falls die Wohnung eine Dusche hat, ist diese ebenerdig zum Badezimmer oder maximal 3cm tief?",
+                                          "alias": "Bad hat bodengleiche Dusche",
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "note": "Bodengleiche Dusche (auch flache Duschtasse mit\neiner Tiefe von bis zu 3 cm)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ]
                                     }
                                   ]
                                 },
@@ -3779,7 +3832,7 @@
                                       }
                                     ]
                                   },
-                                  "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2017:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal >=2019:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2017:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2019-2023:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003 [++]\n\nMerkmal >=2025:\nWandhängendes WC mit in der Wand eingelassenem\nSpülkasten (gilt nicht für die Baualtersklassen ab 2002)\noder hochwertiges Stand-WC [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
                               ]
                             }
@@ -3828,23 +3881,146 @@
                                   }
                                 ]
                               },
-                              "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2017:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal >=2019:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2017:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2019-2023:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003 [++]\n\nMerkmal >=2025:\nWandhängendes WC mit in der Wand eingelassenem\nSpülkasten (gilt nicht für die Baualtersklassen ab 2002)\noder hochwertiges Stand-WC [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "IfCase",
+                          "id": "c59au",
+                          "test": {
+                            "id": "5vvsi",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "operator": "is",
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "comparands": [
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "a8ffw",
+                              "type": "If",
+                              "alternate": [],
+                              "cases": [
+                                {
+                                  "id": "ss1f1i",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "hrn7p",
+                                    "type": "LogicalOperation",
+                                    "operator": "or",
+                                    "negated": false,
+                                    "conditions": [
+                                      {
+                                        "id": "ghai4",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "22sow",
+                                          "3vr25",
+                                          "jbcy7",
+                                          "46etdg",
+                                          "z9re4",
+                                          "6rekg",
+                                          "eg5u6",
+                                          "egwi3"
+                                        ]
+                                      },
+                                      {
+                                        "id": "ghai4",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "kie55"
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "0evldj",
+                                      "type": "Question",
+                                      "alias": "Bad hat wandhängendes WC",
+                                      "text": "Sind alle Toiletten wandhängend mit Spülkasten in der Wand (wie z.B. auf diesem Bild)?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2017:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2019-2023:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003 [++]\n\nMerkmal >=2025:\nWandhängendes WC mit in der Wand eingelassenem\nSpülkasten (gilt nicht für die Baualtersklassen ab 2002)\noder hochwertiges Stand-WC [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
                       ],
                       "alternate": [
                         {
-                          "id": "a8ffw",
                           "type": "If",
+                          "id": "tsoy6",
                           "alternate": [],
                           "cases": [
                             {
-                              "id": "ss1f1i",
                               "type": "IfCase",
+                              "id": "5myqp",
+                              "test": {
+                                "id": "yriuz",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Baujahr"
+                                },
+                                "operator": "is",
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "comparands": [
+                                  "3vr25",
+                                  "22sow",
+                                  "jbcy7",
+                                  "46etdg",
+                                  "z9re4",
+                                  "egwi3",
+                                  "6rekg",
+                                  "eg5u6"
+                                ]
+                              },
                               "block": [
                                 {
-                                  "id": "0evldj",
+                                  "id": "xihum",
                                   "type": "Question",
                                   "alias": "Bad hat wandhängendes WC",
                                   "text": "Sind alle Toiletten wandhängend mit Spülkasten in der Wand (wie z.B. auf diesem Bild)?",
@@ -3869,50 +4045,63 @@
                                       }
                                     ]
                                   },
-                                  "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2017:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal >=2019:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2017:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2019-2023:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003 [++]\n\nMerkmal >=2025:\nWandhängendes WC mit in der Wand eingelassenem\nSpülkasten (gilt nicht für die Baualtersklassen ab 2002)\noder hochwertiges Stand-WC [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
-                              ],
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "If",
+                          "id": "k0ong",
+                          "cases": [
+                            {
+                              "type": "IfCase",
+                              "id": "3vg5u",
+                              "block": [],
                               "test": {
-                                "id": "hrn7p",
-                                "type": "LogicalOperation",
-                                "operator": "or",
+                                "id": "jwq98",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Bad hat wandhängendes WC"
+                                },
+                                "operator": "is",
                                 "negated": false,
-                                "conditions": [
-                                  {
-                                    "id": "ghai4",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Baujahr"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "22sow",
-                                      "3vr25",
-                                      "jbcy7",
-                                      "46etdg",
-                                      "z9re4",
-                                      "6rekg",
-                                      "eg5u6",
-                                      "egwi3"
-                                    ]
-                                  },
-                                  {
-                                    "id": "ghai4",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Baujahr"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "kie55"
-                                    ]
-                                  }
+                                "type": "AnswerOptionComparison",
+                                "comparands": [
+                                  "uiajj"
                                 ]
                               }
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "type": "Question",
+                              "id": "vy8d5",
+                              "text": "Sind alle Toiletten hochwertige Stand-WCs?",
+                              "alias": "Bad hat hochwertiges Stand-WC",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2017:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2019-2023:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003 [++]\n\nMerkmal >=2025:\nWandhängendes WC mit in der Wand eingelassenem\nSpülkasten (gilt nicht für die Baualtersklassen ab 2002)\noder hochwertiges Stand-WC [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher",
+                              "info": null
                             }
                           ]
                         }
@@ -4150,6 +4339,7 @@
                 {
                   "id": "x19izk",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "jxcsq",
@@ -4327,41 +4517,152 @@
                                               }
                                             ]
                                           },
-                                          "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Strukturheizkörper als Handtuchwärmer [++]\n\nMerkmal >= 2017:\nStrukturheizkörper als Handtuchwärmer [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                          "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Strukturheizkörper als Handtuchwärmer [++]\n\nMerkmal 2017-2023:\nStrukturheizkörper als Handtuchwärmer [++]\n\nMerkmal 2025:\nStrukturheizkörper als Handtuchwärmer im Bad\n(gilt für die Baualtersklassen bis einschließlich 2001);\nfalls elektrisch betreibbar: alle Baujahre [++}\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                         }
                                       ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "IfCase",
+                                  "id": "y5am1",
+                                  "test": {
+                                    "id": "udulw",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "operator": "is",
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "comparands": [
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "zlcgm",
+                                      "type": "Question",
+                                      "alias": "Bad mit Strukturheizkörper",
+                                      "text": "Gibt es ein Badezimmer mit einem Strukturheizkörper als Handtuchwärmer (wie z.B. auf diesem Bild)?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Strukturheizkörper als Handtuchwärmer [++]\n\nMerkmal 2017-2023:\nStrukturheizkörper als Handtuchwärmer [++]\n\nMerkmal 2025:\nStrukturheizkörper als Handtuchwärmer im Bad\n(gilt für die Baualtersklassen bis einschließlich 2001);\nfalls elektrisch betreibbar: alle Baujahre [++}\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     }
                                   ]
                                 }
                               ],
                               "alternate": [
                                 {
-                                  "id": "zlcgm",
-                                  "type": "Question",
-                                  "alias": "Bad mit Strukturheizkörper",
-                                  "text": "Gibt es ein Badezimmer mit einem Strukturheizkörper als Handtuchwärmer (wie z.B. auf diesem Bild)?",
-                                  "info": null,
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "uiajj",
-                                        "alias": "Ja",
-                                        "text": "Ja"
-                                      },
-                                      {
-                                        "id": "qzhja",
-                                        "alias": "Nein",
-                                        "text": "Nein"
-                                      },
-                                      {
-                                        "id": "8i22j",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
+                                  "type": "If",
+                                  "id": "5z9gv",
+                                  "cases": [
+                                    {
+                                      "type": "IfCase",
+                                      "id": "km0tyl",
+                                      "block": [
+                                        {
+                                          "id": "9er1t",
+                                          "type": "Question",
+                                          "alias": "Bad mit Strukturheizkörper",
+                                          "text": "Gibt es ein Badezimmer mit einem Strukturheizkörper als Handtuchwärmer (wie z.B. auf diesem Bild)?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Strukturheizkörper als Handtuchwärmer [++]\n\nMerkmal 2017-2023:\nStrukturheizkörper als Handtuchwärmer [++]\n\nMerkmal 2025:\nStrukturheizkörper als Handtuchwärmer im Bad\n(gilt für die Baualtersklassen bis einschließlich 2001);\nfalls elektrisch betreibbar: alle Baujahre [++}\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ],
+                                      "test": {
+                                        "id": "unch7i",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr"
+                                        },
+                                        "operator": "is",
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "comparands": [
+                                          "3vr25",
+                                          "22sow",
+                                          "jbcy7",
+                                          "z9re4",
+                                          "46etdg",
+                                          "egwi3",
+                                          "6rekg"
+                                        ]
                                       }
-                                    ]
-                                  },
-                                  "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Strukturheizkörper als Handtuchwärmer [++]\n\n\nMerkmal >= 2017:\nStrukturheizkörper als Handtuchwärmer [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ],
+                                  "alternate": [
+                                    {
+                                      "id": "kl1j3",
+                                      "type": "Question",
+                                      "alias": "Bad mit Strukturheizkörper",
+                                      "text": "Gibt es ein Badezimmer mit einen elektrischen Strukturheizkörper als Handtuchwärmer (wie z.B. auf diesem Bild)?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Strukturheizkörper als Handtuchwärmer [++]\n\nMerkmal 2017-2023:\nStrukturheizkörper als Handtuchwärmer [++]\n\nMerkmal 2025:\nStrukturheizkörper als Handtuchwärmer im Bad\n(gilt für die Baualtersklassen bis einschließlich 2001);\nfalls elektrisch betreibbar: alle Baujahre [++}\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -4746,8 +5047,7 @@
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 }
               ]
             },
