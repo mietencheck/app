@@ -93,7 +93,9 @@ export function MerkmaleTable() {
             ? "nur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten"
             : jahr == "2017"
               ? "Wandhängendes WC mit in der Wand eingelassenem Spülkasten"
-              : "Wandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003",
+              : jahr == "2019" || jahr == "2021" || jahr == "2023"
+                ? "Wandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003"
+                : "Wandhängendes WC mit in der Wand eingelassenem Spülkasten (gilt nicht für die Baualtersklassen ab 2002) oder hochwertiges Stand-WC",
         "[Bad+] Handtuchwärmer":
           jahr == "2015"
             ? "nur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Strukturheizkörper als Handtuchwärmer"
@@ -103,7 +105,14 @@ export function MerkmaleTable() {
           jahr == "2015"
             ? "Nur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche "
             : "Von der Badewanne getrennte zusätzliche Duschtasse oder -kabine",
-
+        "[Bad+] Bodenlose Dusche":
+          jahr == "2015" ||
+          jahr == "2017" ||
+          jahr == "2019" ||
+          jahr == "2021" ||
+          jahr == "2023"
+            ? ""
+            : "Bodengleiche Dusche (auch flache Duschtasse mit einer Tiefe von bis zu 3 cm)",
         "[Küche-] fensterlos":
           "Küche ohne Fenster und ohne ausreichende Entlüftung",
         "[Küche-] kochlos":
