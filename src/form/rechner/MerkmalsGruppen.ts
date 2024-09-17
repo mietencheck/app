@@ -26,7 +26,7 @@ export const merkmaleByGruppe = {
     pro: {
       Großbad: { "Bad ist groß": "Ja" },
       "Separate Badewanne": { "Bad hat Dusche und Wanne": "Ja" },
-      "Bodenlose Dusche": { "Bad hat bodengleiche Dusche": "Ja" },
+      "Bodengleiche Dusche": { "Bad hat bodengleiche Dusche": "Ja" },
       "großes Waschbecken": { "Bad großes Waschbecken": "Ja" },
       "2tes WC": [{ "Mehrere WCs": "Ja" }, { "Getrenntes WC": "Ja" }],
       "Wand-WC": [
