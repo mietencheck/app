@@ -186,7 +186,7 @@ export type Fields2025 = {
   "[Bad+] Separate Badewanne": {
       type: "checkBox";
   };
-  "[Bad+] Bodenlose Dusche": {
+  "[Bad+] Bodengleiche Dusche": {
       type: "checkBox";
   };
   "[Küche-] kochlos": {

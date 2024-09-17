@@ -105,7 +105,7 @@ export function MerkmaleTable() {
           jahr == "2015"
             ? "Nur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche "
             : "Von der Badewanne getrennte zusätzliche Duschtasse oder -kabine",
-        "[Bad+] Bodenlose Dusche":
+        "[Bad+] Bodengleiche Dusche":
           jahr == "2015" ||
           jahr == "2017" ||
           jahr == "2019" ||
