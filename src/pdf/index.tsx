@@ -89,7 +89,7 @@ function fillPDF({
     }
   }
   try {
-    for (const [key, getValue] of entries.strict(answerMappingsByYear[year])) {
+    for (const [key, getValue] of entries(answerMappingsByYear[year])) {
       try {
         const value = getValue(state);
         if (typeof value === "boolean") {

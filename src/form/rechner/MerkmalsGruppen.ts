@@ -388,7 +388,10 @@ export const getMerkmalGruppeSpannen = (
     );
     const checkSum = checkedPros - checkedCons;
 
-    return [checkSum + maybePros, checkSum - maybeCons];
+    return [checkSum + maybePros, checkSum - maybeCons] satisfies [
+      number,
+      number,
+    ];
   });
 
 export function getWorstBestMerkmalsGruppenInProzent(

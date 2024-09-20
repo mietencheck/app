@@ -106,16 +106,14 @@ test.each([
       ...MERKMAL_RESET_ANSWERS,
       ...answers,
     } satisfies FinalAnswers;
-    const merkis = entries
-      .strict(sondermerkmalZuschläge2015)
-      .map(([key, tuple]) => ({
-        key,
-        ...getWorstBestSondermerkmalZuschlag(
-          tuple,
-          allAnswers,
-          getVisibleQuestionAliases(allAnswers),
-        ),
-      }));
+    const merkis = entries(sondermerkmalZuschläge2015).map(([key, tuple]) => ({
+      key,
+      ...getWorstBestSondermerkmalZuschlag(
+        tuple,
+        allAnswers,
+        getVisibleQuestionAliases(allAnswers),
+      ),
+    }));
 
     expect(
       fromEntries(

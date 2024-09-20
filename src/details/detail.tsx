@@ -1,7 +1,11 @@
 import { Group, Step } from "flow-machine";
 import { useMemo } from "react";
 
-import { useAnswers, useMainSteps } from "~/form/flow-machine";
+import {
+  postMessageToFloma,
+  useAnswers,
+  useMainSteps,
+} from "~/form/flow-machine";
 import { useLocalizeString } from "~/l10n";
 
 import { AnswerField } from "./AnswerField";
@@ -19,6 +23,7 @@ function NodeView({ step }: { step: Step }) {
           value={answers.getById(step.id) as string}
           onChange={(value) => {
             answers.setById(step.id, value);
+            postMessageToFloma("ActiveStepId", { value: step.id });
           }}
         />
       );

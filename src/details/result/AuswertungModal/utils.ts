@@ -15,7 +15,7 @@ export function getWorstBestSondermerkmalZuschläge(
   aliasedAnswers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ) {
-  return entries.strict(sondermerkmalZuschläge2015).map(([key, tuple]) => {
+  return entries(sondermerkmalZuschläge2015).map(([key, tuple]) => {
     const { state, worst, best } = getWorstBestSondermerkmalZuschlag(
       tuple,
       aliasedAnswers,
