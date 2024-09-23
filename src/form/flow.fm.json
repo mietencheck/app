@@ -5117,32 +5117,85 @@
                                   ],
                                   "alternate": [
                                     {
-                                      "id": "tdjgf",
-                                      "type": "Question",
-                                      "alias": "Bad Boden und Wand hochwertig",
-                                      "text": "Ist der Bodenbelag und die Wandbekleidung in allen Badezimmern hochwertig? ",
-                                      "info": "Dies gilt, wenn die Fliesen nicht einheitlich sind, sondern durch Akzente und Verzierungen aufgewertet wurden (z.B. Mosaikfliesen). Dazu gelten Natursteine wie Marmor, Schiefer oder Granit ebenfalls als hochwertig.",
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "uiajj",
-                                            "alias": "Ja",
-                                            "text": "Ja"
+                                      "type": "If",
+                                      "id": "mq7kv",
+                                      "alternate": [
+                                        {
+                                          "id": "tdjgf",
+                                          "type": "Question",
+                                          "alias": "Bad Boden und Wand hochwertig",
+                                          "text": "Ist der Bodenbelag und die Wandbekleidung in allen Badezimmern hochwertig? ",
+                                          "info": "Dies gilt, wenn die Fliesen nicht einheitlich sind, sondern durch Akzente und Verzierungen aufgewertet wurden (z.B. Mosaikfliesen). Dazu gelten Natursteine wie Marmor, Schiefer oder Granit ebenfalls als hochwertig.",
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
                                           },
-                                          {
-                                            "id": "qzhja",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "8i22j",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
+                                          "note": "Merkma 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig; gilt nicht für die Baualtersklasse 2016 bis 2022 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ],
+                                      "cases": [
+                                        {
+                                          "type": "IfCase",
+                                          "id": "pnw38",
+                                          "block": [],
+                                          "test": {
+                                            "type": "LogicalOperation",
+                                            "id": "cncv6",
+                                            "operator": "and",
+                                            "negated": false,
+                                            "conditions": [
+                                              {
+                                                "id": "r7h0z",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Baujahr NEU"
+                                                },
+                                                "operator": "gte",
+                                                "negated": false,
+                                                "type": "AnswerNumberComparison",
+                                                "comparands": [
+                                                  {
+                                                    "type": "NumberLiteral",
+                                                    "value": 2016
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "id": "r7h0z",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Baujahr NEU"
+                                                },
+                                                "operator": "lte",
+                                                "negated": false,
+                                                "type": "AnswerNumberComparison",
+                                                "comparands": [
+                                                  {
+                                                    "type": "NumberLiteral",
+                                                    "value": 2022
+                                                  }
+                                                ]
+                                              }
+                                            ]
                                           }
-                                        ]
-                                      },
-                                      "note": "Merkma 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig; gilt nicht für die Baualtersklasse 2016 bis 2022 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
