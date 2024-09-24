@@ -764,15 +764,9 @@
                                   "type": "AliasRef",
                                   "value": "Ost"
                                 },
-                                "operator": "lte",
                                 "negated": false,
                                 "type": "AnswerBooleanComparison",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 1990
-                                  }
-                                ],
+                                "operator": "is",
                                 "value": false
                               },
                               {
@@ -789,8 +783,7 @@
                                     "type": "NumberLiteral",
                                     "value": 40
                                   }
-                                ],
-                                "value": false
+                                ]
                               }
                             ]
                           },
@@ -1317,7 +1310,7 @@
                                   "type": "AliasRef",
                                   "value": "Wohnlage"
                                 },
-                                "operator": "gte",
+                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
                                 "comparands": [
@@ -2423,13 +2416,7 @@
                                             },
                                             "negated": false,
                                             "type": "AnswerBooleanComparison",
-                                            "operator": "lte",
-                                            "comparands": [
-                                              {
-                                                "type": "NumberLiteral",
-                                                "value": 1990
-                                              }
-                                            ],
+                                            "operator": "is",
                                             "value": true
                                           }
                                         ]
@@ -2594,13 +2581,7 @@
                                         },
                                         "negated": false,
                                         "type": "AnswerBooleanComparison",
-                                        "operator": "lte",
-                                        "comparands": [
-                                          {
-                                            "type": "NumberLiteral",
-                                            "value": 1990
-                                          }
-                                        ],
+                                        "operator": "is",
                                         "value": false
                                       }
                                     ]
@@ -2895,13 +2876,7 @@
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerBooleanComparison",
-                                                "operator": "lte",
-                                                "comparands": [
-                                                  {
-                                                    "type": "NumberLiteral",
-                                                    "value": 1990
-                                                  }
-                                                ],
+                                                "operator": "is",
                                                 "value": false
                                               }
                                             ]
@@ -3219,7 +3194,6 @@
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
                                             "operator": "gte",
-                                            "value": true,
                                             "comparands": [
                                               {
                                                 "type": "NumberLiteral",
@@ -3236,7 +3210,6 @@
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
                                             "operator": "lte",
-                                            "value": true,
                                             "comparands": [
                                               {
                                                 "type": "NumberLiteral",
@@ -4443,7 +4416,6 @@
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
                                             "operator": "lte",
-                                            "value": true,
                                             "comparands": [
                                               {
                                                 "type": "NumberLiteral",
@@ -6844,7 +6816,6 @@
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
                                         "operator": "lte",
-                                        "value": false,
                                         "comparands": [
                                           {
                                             "type": "NumberLiteral",
@@ -6867,7 +6838,6 @@
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
                                             "operator": "gte",
-                                            "value": false,
                                             "comparands": [
                                               {
                                                 "type": "NumberLiteral",
@@ -6884,7 +6854,6 @@
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
                                             "operator": "lte",
-                                            "value": false,
                                             "comparands": [
                                               {
                                                 "type": "NumberLiteral",
@@ -6900,14 +6869,8 @@
                                             },
                                             "negated": false,
                                             "type": "AnswerBooleanComparison",
-                                            "operator": "lte",
-                                            "value": false,
-                                            "comparands": [
-                                              {
-                                                "type": "NumberLiteral",
-                                                "value": 1990
-                                              }
-                                            ]
+                                            "operator": "is",
+                                            "value": false
                                           }
                                         ]
                                       },
@@ -6926,7 +6889,6 @@
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
                                             "operator": "gte",
-                                            "value": false,
                                             "comparands": [
                                               {
                                                 "type": "NumberLiteral",
@@ -6943,7 +6905,6 @@
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
                                             "operator": "lte",
-                                            "value": false,
                                             "comparands": [
                                               {
                                                 "type": "NumberLiteral",
