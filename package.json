@@ -92,7 +92,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240919.0",
     "dts-dom": "^3.7.0",
-    "wrangler": "^3.78.7"
+    "wrangler": "^3.80.0"
   },
   "lint-staged": {
     "*.(ts|tsx|js|json)": "prettier --write"
