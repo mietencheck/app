@@ -26,9 +26,13 @@ export const merkmaleByGruppe = {
     pro: {
       Großbad: { "Bad ist groß": "Ja" },
       "Separate Badewanne": { "Bad hat Dusche und Wanne": "Ja" },
+      "Bodengleiche Dusche": { "Bad hat bodengleiche Dusche": "Ja" },
       "großes Waschbecken": { "Bad großes Waschbecken": "Ja" },
       "2tes WC": [{ "Mehrere WCs": "Ja" }, { "Getrenntes WC": "Ja" }],
-      "Wand-WC": { "Bad hat wandhängendes WC": "Ja" },
+      "Wand-WC": [
+        { "Bad hat wandhängendes WC": "Ja" },
+        { "Bad hat hochwertiges Stand-WC": "Ja" },
+      ],
       "moderne Entlüftung": { "Bad mit moderner Entlüftung": "Ja" },
       Handtuchwärmer: { "Bad mit Strukturheizkörper": "Ja" },
       Fußbodenheizung: { "Bad mit Fußbodenheizung": "Ja" },

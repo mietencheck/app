@@ -27,7 +27,10 @@ function getWohnlagenByBaujahr(
   mietspiegel: Mietspiegel,
   ost?: boolean,
 ): QmWohnlage[] {
-  if (baujahr == "1973-1990" && typeof ost == "undefined") {
+  if (
+    (baujahr == "1973-1985" || baujahr == "1986-1990") &&
+    typeof ost == "undefined"
+  ) {
     return [mietspiegel["O:1973-1990"], mietspiegel["W:1973-1990"]];
   }
 

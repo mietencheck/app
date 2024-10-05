@@ -8,6 +8,8 @@ import { Fields2021 } from "./2021";
 import FieldKeys2021 from "./2021.json";
 import { Fields2023 } from "./2023";
 import FieldKeys2023 from "./2023.json";
+import { Fields2025 } from "./2025";
+import FieldKeys2025 from "./2025.json";
 
 export const fieldKeysByYear = {
   "2015": new Set(FieldKeys2015),
@@ -15,9 +17,11 @@ export const fieldKeysByYear = {
   "2019": new Set(FieldKeys2019),
   "2021": new Set(FieldKeys2021),
   "2023": new Set(FieldKeys2023),
+  "2025": new Set(FieldKeys2025),
 };
 
 export type FieldsByYear = {
+  "2025": Fields2025;
   "2023": Fields2023;
   "2021": Fields2021;
   "2019": Fields2019;
