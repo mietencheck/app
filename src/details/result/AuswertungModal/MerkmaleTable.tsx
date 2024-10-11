@@ -49,8 +49,22 @@ export function MerkmaleTable() {
           jahr == "2015"
             ? "Wände nicht überwiegend gefliest"
             : "Wände nicht ausreichend im Spritzwasserbereich von Waschbecken, Badewanne und/oder Dusche gefliest",
-        "[Bad-] fensterlos": "Bad mit WC ohne Fenster",
-        "[Bad-] duschlos": "Keine Duschmöglichkeit",
+        "[Bad-] fensterlos":
+          jahr == "2015" ||
+          jahr == "2017" ||
+          jahr == "2019" ||
+          jahr == "2021" ||
+          jahr == "2023"
+            ? "Bad mit WC ohne Fenster"
+            : "Bad mit WC ohne Fenster; gilt nicht für die Baualtersklasse 1973 bis 1990 Ost",
+        "[Bad-] duschlos":
+          jahr == "2015" ||
+          jahr == "2017" ||
+          jahr == "2019" ||
+          jahr == "2021" ||
+          jahr == "2023"
+            ? "Keine Duschmöglichkeit"
+            : "Keine Duschmöglichkeit (z. B. kein Spritzwasserschutz, keine Duschkopfhalterung, sehr kleine Standfläche)",
         "[Bad-] kleines Bad":
           jahr == "2015"
             ? "Nur wenn Sondermerkmal „kleines Bad (kleiner als 4 m2)“ nicht zutrifft: Kleines Bad (kleiner als 4 m2)"
@@ -66,7 +80,12 @@ export function MerkmaleTable() {
         "[Bad+] Edelboden":
           jahr == "2015"
             ? "Hochwertige Boden- oder Wandfliesen"
-            : "Wandbekleidung und Bodenbelag hochwertig",
+            : jahr == "2017" ||
+                jahr == "2019" ||
+                jahr == "2021" ||
+                jahr == "2023"
+              ? "Wandbekleidung und Bodenbelag hochwertig"
+              : "Wandbekleidung und Bodenbelag hochwertig; gilt nicht für die Baualtersklasse 2016 bis 2022",
         "[Bad+] Edelausstattung":
           "Besondere und hochwertige Ausstattung (z.B. hochwertige Sanitärausstattung, hochwertige Badmöbel, Eckwanne, Rundwanne)",
         "[Bad+] Wand-WC":
@@ -74,7 +93,9 @@ export function MerkmaleTable() {
             ? "nur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten"
             : jahr == "2017"
               ? "Wandhängendes WC mit in der Wand eingelassenem Spülkasten"
-              : "Wandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003",
+              : jahr == "2019" || jahr == "2021" || jahr == "2023"
+                ? "Wandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003"
+                : "Wandhängendes WC mit in der Wand eingelassenem Spülkasten (gilt nicht für die Baualtersklassen ab 2002) oder hochwertiges Stand-WC",
         "[Bad+] Handtuchwärmer":
           jahr == "2015"
             ? "nur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Strukturheizkörper als Handtuchwärmer"
@@ -84,7 +105,14 @@ export function MerkmaleTable() {
           jahr == "2015"
             ? "Nur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche "
             : "Von der Badewanne getrennte zusätzliche Duschtasse oder -kabine",
-
+        "[Bad+] Bodengleiche Dusche":
+          jahr == "2015" ||
+          jahr == "2017" ||
+          jahr == "2019" ||
+          jahr == "2021" ||
+          jahr == "2023"
+            ? ""
+            : "Bodengleiche Dusche (auch flache Duschtasse mit einer Tiefe von bis zu 3 cm)",
         "[Küche-] fensterlos":
           "Küche ohne Fenster und ohne ausreichende Entlüftung",
         "[Küche-] kochlos":
