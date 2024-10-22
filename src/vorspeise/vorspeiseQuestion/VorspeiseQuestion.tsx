@@ -3,7 +3,7 @@ import { DetailsRouter } from "~/details/router";
 import { useMieteDiff } from "~/details/utils";
 import { AdresseForm } from "~/form/adresse/AdresseForm";
 import { AnswerControl, GlossyText } from "~/form/AnswerControl";
-import { useAnswers } from "~/form/flow-machine";
+import { postMessageToFloma, useAnswers } from "~/form/flow-machine";
 import { useLocalizeField, useLocalizeString } from "~/l10n";
 
 import { StepperType } from "..";
@@ -63,6 +63,7 @@ export function VorspeiseQuestion({
               value={JSON.parse((answers.get("Adresse") as string) || "null")}
               onChange={(value) => {
                 answers.setById(step.id, JSON.stringify(value));
+                postMessageToFloma("ActiveStepId", { value: step.id });
               }}
             />
           ) : (
@@ -74,6 +75,7 @@ export function VorspeiseQuestion({
               hiddenOptionAliases={step.id == "4vsma" ? ["Nicht sicher"] : []}
               onChange={(value) => {
                 answers.setById(step.id, value);
+                postMessageToFloma("ActiveStepId", { value: step.id });
               }}
             />
           )}

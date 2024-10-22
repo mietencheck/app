@@ -66,32 +66,48 @@ const noop = () => {};
 
 export const flowMachine = new FlowMachine<StepInfoByAlias>(flow);
 
-export function useFlowMachine() {
+const IS_FRAMED = typeof window !== "undefined" && window.parent !== window;
+
+export const postMessageToFloma = (type: string, rest: object = {}) => {
+  if (!IS_FRAMED) return;
+  const message = { type: type, ...rest };
+  try {
+    window.parent.postMessage(message, "https://floma.io");
+  } catch {
+    //
+  }
+  try {
+    window.parent.postMessage(message, "http://localhost:3264");
+  } catch {
+    //
+  }
+};
+
+function usePreviewFlowMachine() {
   const [previewFlow, setPreviewFlow] = useState<typeof flowMachine | null>(
     null,
   );
 
-  const isFramed = window.parent !== window;
+  useEffect(() => postMessageToFloma("FlowRequest"), []);
 
   useEffect(() => {
-    if (isFramed) {
-      window.parent.postMessage({ type: "FlowRequest" }, "*");
-    }
-  }, [isFramed]);
-
-  useEffect(() => {
-    if (isFramed) {
+    if (IS_FRAMED) {
       const handleMessage = ({ data }: MessageEvent) => {
-        if (data.type == "Flow") {
+        if (data.type == "FlowRoot") {
           setPreviewFlow(new FlowMachine<StepInfoByAlias>(data.value));
         }
       };
       window.addEventListener("message", handleMessage);
       return () => window.removeEventListener("message", handleMessage);
     }
-  }, [isFramed]);
+  }, []);
 
-  return previewFlow ?? flowMachine;
+  return previewFlow;
+}
+
+export function useFlowMachine() {
+  const previewFM = usePreviewFlowMachine();
+  return previewFM ?? flowMachine;
 }
 
 type AnswerMachine = ReturnType<typeof flowMachine.answers>;
@@ -134,14 +150,13 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
 
   const answersValue = useMemo(() => {
     const lageInfo = getLageInfo(bareAnswers);
-    return flowMachine.answers(
-      {
-        ...storedAnswers,
-        Ost: lageInfo?.ost ?? null,
-        Wohnlage: lageInfo?.wohnlage ?? null,
-      },
-      setKV,
-    );
+    const value = {
+      ...storedAnswers,
+      Ost: lageInfo?.ost ?? null,
+      Wohnlage: lageInfo?.wohnlage ?? null,
+    };
+    postMessageToFloma("Answers", { value });
+    return flowMachine.answers(value, setKV);
   }, [bareAnswers, flowMachine, setKV, storedAnswers]);
   return (
     <AnswersContext.Provider value={answersValue}>

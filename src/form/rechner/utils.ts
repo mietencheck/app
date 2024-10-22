@@ -16,29 +16,25 @@ export function checkMerkmalState(
   fieldAnswers: FieldAnswers | FieldAnswers[],
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
-) {
+): MerkmalState {
   fieldAnswers = Array.isArray(fieldAnswers) ? fieldAnswers : [fieldAnswers];
 
   if (
     fieldAnswers.some((a) =>
-      entries
-        .strict(a)
-        .every(
-          ([alias, v]) =>
-            visibleQuestionAliases.has(alias) && answers[alias] == v,
-        ),
+      entries(a).every(
+        ([alias, v]) =>
+          visibleQuestionAliases.has(alias) && answers[alias] == v,
+      ),
     )
   )
     return "checked";
   if (
     fieldAnswers.some((a) =>
-      keys
-        .strict(a)
-        .some(
-          (alias) =>
-            visibleQuestionAliases.has(alias) &&
-            (answers[alias] == "Nicht sicher" || answers[alias] == undefined),
-        ),
+      keys(a).some(
+        (alias) =>
+          visibleQuestionAliases.has(alias) &&
+          (answers[alias] == "Nicht sicher" || answers[alias] == undefined),
+      ),
     )
   ) {
     return "maybe";

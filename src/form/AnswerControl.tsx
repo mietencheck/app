@@ -57,11 +57,14 @@ export const GlossyText = React.memo(function GlossyText({
           </WithTooltip>
         )),
         alias && isKeyOfObject(alias, questionTextLinks)
-          ? mapValues(mapKeys(questionTextLinks[alias], l), (href, text) => (
-              <a key={text} href={href} target="_blank" className="underline">
-                {text}
-              </a>
-            ))
+          ? mapValues(
+              mapKeys(questionTextLinks[alias]!, l as any),
+              (href, text) => (
+                <a key={text} href={href} target="_blank" className="underline">
+                  {text}
+                </a>
+              ),
+            )
           : {},
       )}
     </>

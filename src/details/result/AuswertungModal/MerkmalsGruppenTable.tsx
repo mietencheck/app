@@ -33,13 +33,13 @@ export function MerkmalsGruppenTable() {
   );
   const l = useLocalizeField();
 
-  const rows = entries
-    .strict(spannen)
-    .map(([name, [worstMerkmale, bestMerkmale]]) => ({
+  const rows = entries(spannen).map(
+    ([name, [worstMerkmale, bestMerkmale]]) => ({
       name,
       worstMerkmale,
       bestMerkmale,
-    }));
+    }),
+  );
 
   const { worst: worstPercTotal, best: bestPercTotal } =
     getWorstBestMerkmalsGruppenInProzent(aliasedAnswers, visibleQuestionAlises);

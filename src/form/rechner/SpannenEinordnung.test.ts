@@ -293,50 +293,48 @@ test.each([
     ],
   },
 
-  ...entries
-    .strict({
-      "S&B": [[7.21, 5.15, 10.66]],
-      "?S&B": [
-        [5.7, 3.64, 9.15],
-        [7.21, 5.15, 10.66],
-      ],
-      "!S&B": [[5.7, 3.64, 9.15]],
-      "S&?B": [
-        [5.7, 3.64, 9.15],
-        [7.21, 5.15, 10.66],
-      ],
-      "?S&?B": [
-        [4.87, 2.81, 8.32],
-        [7.21, 5.15, 10.66],
-      ],
-      "!S&?B": [
-        [4.87, 2.81, 8.32],
-        [5.7, 3.64, 9.15],
-      ],
-      "S&!B": [[5.7, 3.64, 9.15]],
-      "?S&!B": [
-        [4.87, 2.81, 8.32],
-        [5.7, 3.64, 9.15],
-      ],
-      "!S&!B": [[4.87, 2.81, 8.32]],
-    } satisfies Record<AusstattungKey, SpanneFlat[]>)
-    .map(
-      ([key, spannen]) =>
-        ({
-          lage: buildSameLageInfo({
-            laut: true,
-            ost: false,
-            wohnlage: "mittel",
-          }),
-          answers: {
-            Vertragsdatum: "2022-2024",
-            Baujahr: "-1918",
-            Qm: 60,
-            ...getAusstattungsAnswers(key),
-          },
-          spannen,
-        }) satisfies SpannenTestInput,
-    ),
+  ...entries({
+    "S&B": [[7.21, 5.15, 10.66]],
+    "?S&B": [
+      [5.7, 3.64, 9.15],
+      [7.21, 5.15, 10.66],
+    ],
+    "!S&B": [[5.7, 3.64, 9.15]],
+    "S&?B": [
+      [5.7, 3.64, 9.15],
+      [7.21, 5.15, 10.66],
+    ],
+    "?S&?B": [
+      [4.87, 2.81, 8.32],
+      [7.21, 5.15, 10.66],
+    ],
+    "!S&?B": [
+      [4.87, 2.81, 8.32],
+      [5.7, 3.64, 9.15],
+    ],
+    "S&!B": [[5.7, 3.64, 9.15]],
+    "?S&!B": [
+      [4.87, 2.81, 8.32],
+      [5.7, 3.64, 9.15],
+    ],
+    "!S&!B": [[4.87, 2.81, 8.32]],
+  } satisfies Record<AusstattungKey, SpanneFlat[]>).map(
+    ([key, spannen]) =>
+      ({
+        lage: buildSameLageInfo({
+          laut: true,
+          ost: false,
+          wohnlage: "mittel",
+        }),
+        answers: {
+          Vertragsdatum: "2022-2024",
+          Baujahr: "-1918",
+          Qm: 60,
+          ...getAusstattungsAnswers(key),
+        },
+        spannen,
+      }) satisfies SpannenTestInput,
+  ),
 ] satisfies SpannenTestInput[])(
   "getSpannenEinordnung(%o)",
   async ({ lage, answers, spannen }) => {
@@ -425,8 +423,8 @@ const austattungCasesByBaujahr = {
 >;
 
 test.each(
-  entries.strict(austattungCasesByBaujahr).flatMap(([Baujahr, cases]) =>
-    entries.strict(cases).map(
+  entries(austattungCasesByBaujahr).flatMap(([Baujahr, cases]) =>
+    entries(cases).map(
       ([key, [worst, best]]) =>
         [
           {

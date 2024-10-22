@@ -61,7 +61,7 @@
     "FAQ 11 Frage": "Why are you doing this?",
     "FAQ 11 Antwort": "We want as many tenants as possible to use the rent cap. Because we want affordable housing for all Berliners.",
     "FAQ 12 Frage": "What happens to my data?",
-    "FAQ 12 Antwort": "The answers to the individual features of the rent check or rent index are stored on our servers. However, no personal data is stored in this process. stored, in particular the storage takes place without the specified address data of the users. Users' address data is only stored on our servers if the users have a link sent to them for later answering the rent check - possibly on another device - and have explicitly consented to the storage of their address data for this purpose.",
+    "FAQ 12 Antwort": "The answers to the individual features of the rent check or rent index are stored on our servers. However, no personal data is stored in this process; in particular the storage takes place without the specified address data of the users. Users' address data is only stored on our servers if the users have a link sent to them for later answering the rent check - possibly on another device - and have explicitly consented to the storage of their address data for this purpose.",
     "FAQ 13 Frage": "Can I support you?",
     "FAQ 13 Antwort": "Yes! Here you can find all the options for getting involved: https://dwenteignen.de/mitmachen",
     "next_question": "Next",

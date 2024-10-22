@@ -28,7 +28,7 @@ const fieldtypeGetters = {
 function buildFieldProperty(field: PDFField): ts.PropertyDeclaration {
   const form = field.doc.getForm();
   const fieldName = field.getName();
-  const fieldTypeName = keys.strict(fieldtypeGetters).find((key) => {
+  const fieldTypeName = keys(fieldtypeGetters).find((key) => {
     try {
       fieldtypeGetters[key](form, fieldName);
       return true;

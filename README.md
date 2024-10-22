@@ -13,4 +13,4 @@ Then, to start the development server:
 pnpm dev
 ```
 
-To edit the flow, open `src/form` at [floma.vercel.app](https://floma.vercel.app)
+To edit the flow, open `src/form` at [floma.io/app](https://floma.io/app)
