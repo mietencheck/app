@@ -8036,8 +8036,8 @@
                       "id": "j33tt",
                       "type": "Question",
                       "alias": "Gebäude ist abschließbar",
-                      "text": "Ist die Eingangstür zum Haus abschließbar?",
-                      "info": "Beachte: Wenn die Wohnung z.B. im Hinterhaus liegt, reicht es aus, wenn die Eingangstür zum Vorderhaus abschließbar ist.",
+                      "text": "Ist es jederzeit möglich ohne Schlüssel bis zu deiner Wohnungstür zu kommen?",
+                      "info": "Dies ist etwa der Fall wenn das Treppenhaus keine Eingangstür hat. Es reicht nicht aus, dass der Gebäude-Eingang kurzzeitig kaputt ist.\nWenn du im Hinterhaus wohnst, reicht es wenn man das Vorderhaus abschließen kannst.",
                       "answer": {
                         "type": "ChoiceAnswer",
                         "options": [
@@ -8058,7 +8058,7 @@
                           }
                         ]
                       },
-                      "note": "Merkmal:\nHauseingangstür nicht abschließbar [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                      "note": "Merkmal 2015-2023:\nHauseingangstür nicht abschließbar [--]\n\nMerkmal 2024:\nJederzeit von außen frei zugänglicher Hauseingang [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                     },
                     {
                       "id": "h19i5g",
@@ -8290,6 +8290,42 @@
                   ]
                 },
                 {
+                  "id": "h4hrn",
+                  "type": "Group",
+                  "category": null,
+                  "alias": "Barrierearm",
+                  "block": [
+                    {
+                      "id": "ft3tfh",
+                      "type": "Question",
+                      "alias": "Schwellenarmer Zugang zur Wohnung",
+                      "text": "Ist der Zugang zur Wohnung Schwellenarm möglich?",
+                      "info": "Beachte: Dies ist der Fall wenn der Zutritt zum Gebäude maximal eine Stufe hat und der Zugang zur Wohnung danach über maximal eine weitere Stufe möglich ist. Es kommt nicht darauf an, dass du auf den schwellenarmen Zugang angewiesen bist.",
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "msxpi",
+                            "alias": "Ja",
+                            "text": "Ja"
+                          },
+                          {
+                            "id": "w5whii",
+                            "alias": "Nein",
+                            "text": "Nein"
+                          },
+                          {
+                            "id": "pbcku",
+                            "alias": "Nicht sicher",
+                            "text": "Ich bin mir nicht sicher"
+                          }
+                        ]
+                      },
+                      "note": "Merkmal 2024:\nSchwellenarmer Zugang zum Gebäude (max. eine Stufe)\nund zur Wohnung einschließlich Treppenhaus (max. eine\nStufe) [++]"
+                    }
+                  ]
+                },
+                {
                   "id": "5sfu2",
                   "type": "Group",
                   "category": "Section",
@@ -8346,32 +8382,82 @@
                           },
                           "block": [
                             {
-                              "id": "wdsgk",
-                              "type": "Question",
-                              "alias": "Gebäude ist in gutem Zustand",
-                              "text": "Ist das Gebäude, in dem sich die Wohnung befindet, in einem sehr guten Zustand?",
-                              "info": "Insgesamt sollte der Eindruck eines frisch renovierten Hauses entstehen. Das ist dann anzunehmen, wenn sowohl Fassade als auch Dach den Eindruck machen frisch renoviert zu sein.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
+                              "id": "yrxyz",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "dxj8d",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "91gxq",
+                                    "type": "LogicalOperation",
+                                    "operator": "and",
+                                    "negated": false,
+                                    "conditions": [
+                                      {
+                                        "id": "vyojh",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Vertragsdatum"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "ve0tek"
+                                        ]
+                                      },
+                                      {
+                                        "id": "vyojh",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr NEU"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerNumberComparison",
+                                        "operator": "lte",
+                                        "comparands": [
+                                          {
+                                            "type": "NumberLiteral",
+                                            "value": 2015
+                                          }
+                                        ]
+                                      }
+                                    ]
                                   },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
+                                  "block": []
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "wdsgk",
+                                  "type": "Question",
+                                  "alias": "Gebäude ist in gutem Zustand",
+                                  "text": "Ist das Gebäude, in dem sich die Wohnung befindet, in einem sehr guten Zustand?",
+                                  "info": "Insgesamt sollte der Eindruck eines frisch renovierten Hauses entstehen. Das ist dann anzunehmen, wenn sowohl Fassade als auch Dach den Eindruck machen frisch renoviert zu sein.",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
                                   },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "note": "Merkmal:\nÜberdurchschnittlich guter Instandhaltungszustand des Gebäude(-teil)s, indem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher \n"
+                                  "note": "Merkmal:\nÜberdurchschnittlich guter Instandhaltungszustand des Gebäude(-teil)s, indem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher \n"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -8458,7 +8544,7 @@
                                           }
                                         ]
                                       },
-                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\n1. Personenaufzug bei weniger als fünf Obergeschossen [++]\n2.  Wohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal 2017-2023:\n1. Personenaufzug bei weniger als fünf Obergeschossen [++]\n2.  Wohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nMerkmal 2024:\n\"Wohnung ab fünftem Obergeschoss ohne Personen-\naufzug (gilt nicht für die Baualtersklassen bis 1949)\"\n\n\nNicht sicher -> Nicht sicher"
                                     },
                                     {
                                       "id": "x7m57",
@@ -8573,32 +8659,82 @@
                               },
                               "block": [
                                 {
-                                  "id": "9qjzw",
-                                  "type": "Question",
-                                  "alias": "Gebäude hat <5 Stockwerke und Fahrstuhl",
-                                  "text": "Liegt in die Wohnung im vierten Stockwerk oder niedriger?",
-                                  "info": "Beachte: Das Erdgeschoss zählt nicht als Stockwerk.",
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "uiajj",
-                                        "alias": "Ja",
-                                        "text": "Ja"
+                                  "id": "n7s17",
+                                  "type": "If",
+                                  "cases": [
+                                    {
+                                      "id": "i18pw",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "vogm",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "yr0b4",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Vertragsdatum"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "ve0tek"
+                                            ]
+                                          },
+                                          {
+                                            "id": "yr0b4",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr NEU"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "gt",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2010
+                                              }
+                                            ]
+                                          }
+                                        ]
                                       },
-                                      {
-                                        "id": "qzhja",
-                                        "alias": "Nein",
-                                        "text": "Nein"
+                                      "block": []
+                                    }
+                                  ],
+                                  "alternate": [
+                                    {
+                                      "id": "9qjzw",
+                                      "type": "Question",
+                                      "alias": "Gebäude hat <5 Stockwerke und Fahrstuhl",
+                                      "text": "Liegt in die Wohnung im vierten Stockwerk oder niedriger?",
+                                      "info": "Beachte: Das Erdgeschoss zählt nicht als Stockwerk.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
                                       },
-                                      {
-                                        "id": "8i22j",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
-                                      }
-                                    ]
-                                  },
-                                  "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -8620,32 +8756,82 @@
                               },
                               "block": [
                                 {
-                                  "id": "8kwzjk",
-                                  "type": "Question",
-                                  "alias": "Gebäude hat >=5 Stockwerke und kein Fahrstuhl",
-                                  "text": "Liegt in die Wohnung im fünften Stockwerk oder höher?",
-                                  "info": "Beachte: Das Erdgeschoss zählt nicht als Stockwerk.",
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "uiajj",
-                                        "alias": "Ja",
-                                        "text": "Ja"
+                                  "id": "47gk4",
+                                  "type": "If",
+                                  "cases": [
+                                    {
+                                      "id": "qzvk1",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "vyctj",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "qeib1",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Vertragsdatum"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "ve0tek"
+                                            ]
+                                          },
+                                          {
+                                            "id": "qeib1",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr NEU"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lt",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 1949
+                                              }
+                                            ]
+                                          }
+                                        ]
                                       },
-                                      {
-                                        "id": "qzhja",
-                                        "alias": "Nein",
-                                        "text": "Nein"
+                                      "block": []
+                                    }
+                                  ],
+                                  "alternate": [
+                                    {
+                                      "id": "8kwzjk",
+                                      "type": "Question",
+                                      "alias": "Gebäude hat >=5 Stockwerke und kein Fahrstuhl",
+                                      "text": "Liegt in die Wohnung im fünften Stockwerk oder höher?",
+                                      "info": "Beachte: Das Erdgeschoss zählt nicht als Stockwerk.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
                                       },
-                                      {
-                                        "id": "8i22j",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
-                                      }
-                                    ]
-                                  },
-                                  "note": "Merkmal >=2017:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal >=2017:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -9011,7 +9197,54 @@
                                   }
                                 ]
                               },
-                              "note": "Merkmal 2015:\nKein nur dem Mieter zugänglicher, bestimmungsgemäß nutzbarer Abstellraum im Gebäude außerhalb der Wohnung vorhanden [--]\n\nMerkmal >=2017:\nKein Mieterkeller oder Kellerersatzraum zur alleinigen Nutzung des Mieters vorhanden\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nKein nur dem Mieter zugänglicher, bestimmungsgemäß nutzbarer Abstellraum im Gebäude außerhalb der Wohnung vorhanden [--]\n\nMerkmal 2017-2023:\nKein Mieterkeller oder Kellerersatzraum zur alleinigen Nutzung des Mieters vorhanden\n\nMerkmal 2024:\nKein Abstellraum außerhalb der Wohnung zur\nalleinigen Nutzung ohne Zusatzkosten [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "oek8a",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "ooogi",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "ve0tek"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "nv9h1",
+                              "type": "Question",
+                              "alias": "Gebäude hat privaten Keller",
+                              "text": "Hast du einen eigenen Abstellraum außerhalb deiner Wohnung (Keller, Dachboden, Garage, etc.)?",
+                              "info": "Ein solcher Raum zählt nicht, wenn du für diesen eine gesonderte Miete zahlst.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "note": "Merkmal 2015:\nKein nur dem Mieter zugänglicher, bestimmungsgemäß nutzbarer Abstellraum im Gebäude außerhalb der Wohnung vorhanden [--]\n\nMerkmal 2017-2023:\nKein Mieterkeller oder Kellerersatzraum zur alleinigen Nutzung des Mieters vorhanden\n\nMerkmal 2024:\nKein Abstellraum außerhalb der Wohnung zur\nalleinigen Nutzung ohne Zusatzkosten [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         }
@@ -9043,7 +9276,7 @@
                               }
                             ]
                           },
-                          "note": "Merkmal 2015:\nKein nur dem Mieter zugänglicher, bestimmungsgemäß nutzbarer Abstellraum im Gebäude außerhalb der Wohnung vorhanden [--]\n\nMerkmal >=2017:\nKein Mieterkeller oder Kellerersatzraum zur alleinigen Nutzung des Mieters vorhanden\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                          "note": "Merkmal 2015:\nKein nur dem Mieter zugänglicher, bestimmungsgemäß nutzbarer Abstellraum im Gebäude außerhalb der Wohnung vorhanden [--]\n\nMerkmal 2017-2023:\nKein Mieterkeller oder Kellerersatzraum zur alleinigen Nutzung des Mieters vorhanden\n\nMerkmal 2024:\nKein Abstellraum außerhalb der Wohnung zur\nalleinigen Nutzung ohne Zusatzkosten [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                         }
                       ]
                     },
@@ -9301,6 +9534,73 @@
                                       "note": "Energieverbauchskennwert"
                                     }
                                   ]
+                                },
+                                {
+                                  "id": "tbm2v",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "23vns",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "ve0tek"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "rt275",
+                                      "type": "Question",
+                                      "alias": "Energieverbrauchskennwert",
+                                      "text": "Wie hoch ist der Energieverbrauchskennwert der Wohnung?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "---",
+                                            "text": "Größer als 235 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "--",
+                                            "text": "Zwischen 196 und 235 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "-",
+                                            "text": "Zwischen 156 und 195 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "mr7pg",
+                                            "alias": "0",
+                                            "text": "Zwischen 120 und 155 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "3g6th",
+                                            "alias": "+",
+                                            "text": "Zwischen 100 und 119 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "46zdu",
+                                            "alias": "++",
+                                            "text": "Zwischen 80 und 99 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "h46t8",
+                                            "alias": "+++",
+                                            "text": "Kleiner als 80 kWH/(m2*a)"
+                                          }
+                                        ]
+                                      },
+                                      "note": "Energieverbrauchskennwert"
+                                    }
+                                  ]
                                 }
                               ],
                               "alternate": [
@@ -9443,6 +9743,72 @@
                                       "note": "Energieverbauchskennwert"
                                     }
                                   ]
+                                },
+                                {
+                                  "id": "bndd4",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "ai04s",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "ve0tek"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "u9pj1i",
+                                      "type": "Question",
+                                      "alias": "Energiebedarfskennwert",
+                                      "text": "Wie hoch ist dein Energiebedarfskennwert?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "zqjx6j",
+                                            "alias": "---",
+                                            "text": "Größer als 282 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "mcjdh",
+                                            "alias": "--",
+                                            "text": "Zwischen 235 und 282 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "42xcz",
+                                            "alias": "-",
+                                            "text": "Zwischen 176 und 234 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "baalbg",
+                                            "alias": "0",
+                                            "text": "Zwischen 144 und 175 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "4w17nh",
+                                            "alias": "+",
+                                            "text": "Zwischen 120 und 143 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "tygpg",
+                                            "alias": "++",
+                                            "text": "Zwischen 96 und 119 kWH/(m2*a)"
+                                          },
+                                          {
+                                            "id": "z4xhx",
+                                            "alias": "+++",
+                                            "text": "Kleiner als 96 kWH/(m2*a)"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 }
                               ],
                               "alternate": [
@@ -9577,7 +9943,7 @@
                                           }
                                         ]
                                       },
-                                      "note": "Merkmal 2015: Unzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1984) [--]\n\nMerkmal >=2017:\nUnzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1988) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal 2015: Unzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1984) [--]\n\nMerkmal 2017-2023:\nUnzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1988) [--]\n\nMerkmal 2024:\nUnzureichende Wärmedämmung oder Heizanlage mit\nungünstigem Wirkungsgrad (Einbau/Installation der\nHeizanlage vor 1995) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     },
                                     {
                                       "id": "q4e3w",
@@ -9651,7 +10017,133 @@
                                                   }
                                                 ]
                                               },
-                                              "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal >=2017:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                              "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "alternate": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "k0hjf",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "5vmzv",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "ve0tek"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "c5gpt",
+                                      "type": "Question",
+                                      "alias": "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad",
+                                      "text": "Wurde die Heizanlage der Wohnung vor 1995 eingebaut?",
+                                      "info": "Beachte: Unter der Heizanlage versteht man nur das Gerät, welches die Wärme produziert, wie z.B. Gasheizungen, Ölheizungen oder Wärmepumpen. Die Heizkörper selber gehören nicht zur Heizanlage.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "note": "Merkmal 2015: Unzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1984) [--]\n\nMerkmal 2017-2023:\nUnzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1988) [--]\n\nMerkmal 2024:\nUnzureichende Wärmedämmung oder Heizanlage mit\nungünstigem Wirkungsgrad (Einbau/Installation der\nHeizanlage vor 1995) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    },
+                                    {
+                                      "id": "l4ygx",
+                                      "type": "If",
+                                      "cases": [
+                                        {
+                                          "id": "1aaq6h",
+                                          "type": "IfCase",
+                                          "test": {
+                                            "id": "zeqiv",
+                                            "type": "LogicalOperation",
+                                            "operator": "and",
+                                            "negated": false,
+                                            "conditions": [
+                                              {
+                                                "id": "1jjtu",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"
+                                                },
+                                                "negated": false,
+                                                "type": "AnswerOptionComparison",
+                                                "operator": "is",
+                                                "comparands": [
+                                                  "8i22j",
+                                                  "qzhja"
+                                                ]
+                                              },
+                                              {
+                                                "id": "1jjtu",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Baujahr NEU"
+                                                },
+                                                "negated": false,
+                                                "type": "AnswerNumberComparison",
+                                                "operator": "lt",
+                                                "comparands": [
+                                                  {
+                                                    "type": "NumberLiteral",
+                                                    "value": 2009
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          "block": [
+                                            {
+                                              "id": "lae8ri",
+                                              "type": "Question",
+                                              "alias": "Gebäude hat moderne Heizanlage",
+                                              "text": "Wurde die Heizanlage der Wohnung nach dem 01.01.2009 eingebaut?",
+                                              "info": null,
+                                              "answer": {
+                                                "type": "ChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "uiajj",
+                                                    "alias": "Ja",
+                                                    "text": "Ja"
+                                                  },
+                                                  {
+                                                    "id": "qzhja",
+                                                    "alias": "Nein",
+                                                    "text": "Nein"
+                                                  },
+                                                  {
+                                                    "id": "8i22j",
+                                                    "alias": "Nicht sicher",
+                                                    "text": "Ich bin mir nicht sicher"
+                                                  }
+                                                ]
+                                              },
+                                              "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                             }
                                           ]
                                         }
@@ -9688,7 +10180,7 @@
                                       }
                                     ]
                                   },
-                                  "note": "Merkmal 2015: Unzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1984) [--]\n\nMerkmal >=2017:\nUnzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1988) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  "note": "Merkmal 2015: Unzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1984) [--]\n\nMerkmal 2017-2023:\nUnzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1988) [--]\n\nMerkmal 2024:\nUnzureichende Wärmedämmung oder Heizanlage mit\nungünstigem Wirkungsgrad (Einbau/Installation der\nHeizanlage vor 1995) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 },
                                 {
                                   "id": "3thr8",
@@ -9762,7 +10254,7 @@
                                               }
                                             ]
                                           },
-                                          "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal >=2017:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                          "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                         }
                                       ]
                                     }
@@ -9806,7 +10298,7 @@
                                       "type": "Question",
                                       "alias": "Gebäude hat schlechte Wärmedämmung",
                                       "text": "Ist die Wärmedämmung der Wohnung sehr schlecht?",
-                                      "info": null,
+                                      "info": "Hinweise hierfür können etwa sein, dass es in der Wohnung zieht oder dass es sehr schnell wieder kalt wird, nachdem man im Winter die Heizung ausschaltet.",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -9827,7 +10319,7 @@
                                           }
                                         ]
                                       },
-                                      "note": "Merkmal 2015: Unzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1984) [--]\n\nMerkmal >=2017:\nUnzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1988) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal 2015: Unzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1984) [--]\n\nMerkmal 2017-2023:\nUnzureichende Wärmedämmung oder Heizanlage mit ungünstigem Wirkungsgrad (Einbau/Installation vor 1988) [--]\n\nMerkmal 2024:\nUnzureichende Wärmedämmung oder Heizanlage mit\nungünstigem Wirkungsgrad (Einbau/Installation der\nHeizanlage vor 1995) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     }
                                   ]
                                 }
@@ -9902,7 +10394,7 @@
                                           }
                                         ]
                                       },
-                                      "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal >=2017:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     }
                                   ]
                                 }
@@ -9935,7 +10427,7 @@
                       "type": "Question",
                       "alias": "Wohnumfeld ist besonders leise",
                       "text": "Liegt die Wohnung in einer besonders ruhigen Lage?",
-                      "info": "Beachte: eine einfache, ruhige Wohnstraße etwa in einer 30er-Zone reicht nicht aus. Nur die Lage an einem ruhigen Park oder in einer Straße mit besonderen Maßnahmen zur Verkehrsberuhigung kommen in Frage. Die Straße muss aber auch tatsächlich ruhig sein und nicht etwa durch Gastronomie-Lärm belastet sein.",
+                      "info": "Beachte: eine einfache, ruhige Wohnstraße etwa in einer 30er-Zone reicht nicht aus. Nur die Lage an einem ruhigen Park oder in einer Straße mit besonderen (baulichen) Maßnahmen zur Verkehrsberuhigung kommen in Frage. Es darf neben dem Straßenverkehr auch keine anderen Lärmquellen geben, wie etwa Gastronomie.",
                       "answer": {
                         "type": "ChoiceAnswer",
                         "options": [
@@ -9985,7 +10477,7 @@
                               "type": "Question",
                               "alias": "Wohnumfeld ist besonders laut",
                               "text": "Liegt die Wohnung in einer besonders lauten Lage?",
-                              "info": "Dies gilt wenn die Wohnung z.B. an einer viel befahrenen Hauptstraße, einer Schienenstrecke, oder in einer Einflugschneise liegt.",
+                              "info": "Dies gilt wenn die Wohnung z.B. an einer Hauptverkehrsstraße, einer lauten Bahnstrecke oder in Flughafennähe in einer Einflugschneise liegt. Zudem kommen auch Lärm erheblicher Lärm durch Industrie und Gastronomie oder Musik in Frage. Diese dürfen aber nicht nur vorübergehend auftreten (etwa Baustellen/Straßenfeste), sondern müssen langfristig und regelmäßig auftreten.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
@@ -10006,7 +10498,7 @@
                                   }
                                 ]
                               },
-                              "note": "Merkmal 2015:\nLage der Wohnung an einer Straße oder Schienenstrecke mit hoher Verkehrslärmbelastung oder Belastung durch Flugverkehr nach Maßgabe der Erläuterungen zur Verkehrslärmbelastung unter Nr. 12 dieses Mietspiegels [--]\n\nMerkmal >=2017:\nBesonders lärmbelastete Lage (ein Indiz hierfür kann die Ausweisung einer hohen Verkehrslärmbelastung gemäß Erläuterungen unter Nr. 12\ndes Mietspiegelheftes sein) [--]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nLage der Wohnung an einer Straße oder Schienenstrecke mit hoher Verkehrslärmbelastung oder Belastung durch Flugverkehr nach Maßgabe der Erläuterungen zur Verkehrslärmbelastung unter Nr. 12 dieses Mietspiegels [--]\n\nMerkmal 2017-2023:\nBesonders lärmbelastete Lage (ein Indiz hierfür kann die Ausweisung einer hohen Verkehrslärmbelastung gemäß Erläuterungen unter Nr. 12\ndes Mietspiegelheftes sein) [--]\n\nMerkmal 2024:\nBesonders lärmbelastete Lage der Wohnung\n(Die Wohnung liegt beispielsweise an einer Haupt-\nverkehrsstraße oder im unmittelbaren Umfeld eines\nFlughafens und erfährt dadurch unangenehme Lärm-\nund Staubemissionen. Daneben können auch große\nFabrik- und Industrieanlagen, aber auch Gewerbe-,\nRestaurant- und Partylärm Ursache für eine besonders\nlärmbelastete Lage sein.)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         }
@@ -10129,8 +10621,8 @@
                               "id": "581yth",
                               "type": "Question",
                               "alias": "Wohnumfeld ist aufwendig gestaltet",
-                              "text": "Ist das Grundstück des Hauses aufwendig gestaltetet?",
-                              "info": "Hier zählt z.B. Sitzbänke, Ruhezonen, oder neu angelegte Wegebefestigung mit Grünflächen",
+                              "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
+                              "info": "Das ist etwa der Fall, wenn es Grünflächen mit angelegten Wegen gibt oder Sitzbänke und Ruhezonen. Diese dürfen zudem nicht in einem verwahrlosten Zustand sein.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
@@ -10151,7 +10643,112 @@
                                   }
                                 ]
                               },
-                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal >=2017:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "6nlam",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "vfxa1",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "ve0tek"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "0hf2m",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "o1sdn",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "ivx6ci",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr NEU"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerNumberComparison",
+                                    "operator": "lt",
+                                    "comparands": [
+                                      {
+                                        "type": "NumberLiteral",
+                                        "value": 2002
+                                      }
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "y2o57l",
+                                      "type": "Question",
+                                      "alias": "Wohnumfeld ist aufwendig gestaltet",
+                                      "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
+                                      "info": "Das ist etwa der Fall, wenn es Grünflächen mit angelegten Wegen gibt, einen Kinderspielplatz oder Sitzbänke und Ruhezonen. Diese dürfen zudem nicht in einem verwahrlosten Zustand sein.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "wzi2l",
+                                  "type": "Question",
+                                  "alias": "Wohnumfeld ist aufwendig gestaltet",
+                                  "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
+                                  "info": "Das ist etwa der Fall, wenn es Grünflächen mit angelegten Wegen gibt oder Sitzbänke und Ruhezonen. Diese dürfen zudem nicht in einem verwahrlosten Zustand sein.",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -10185,8 +10782,8 @@
                                   "id": "l6xrn",
                                   "type": "Question",
                                   "alias": "Wohnumfeld ist aufwendig gestaltet",
-                                  "text": "Ist das Grundstück des Hauses aufwendig gestaltetet?",
-                                  "info": "Hierzu zählt z.B. Sitzbänke, Ruhezonen, Kinderspielplatz, oder gute Gehwegbefestigung mit Grünflächen und Beleuchtung",
+                                  "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
+                                  "info": "Das ist etwa der Fall, wenn es Grünflächen mit angelegten Wegen gibt, einen Kinderspielplatz oder Sitzbänke und Ruhezonen. Diese dürfen zudem nicht in einem verwahrlosten Zustand sein.",
                                   "answer": {
                                     "type": "ChoiceAnswer",
                                     "options": [
@@ -10207,7 +10804,7 @@
                                       }
                                     ]
                                   },
-                                  "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal >=2017:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
                               ]
                             }
@@ -10217,8 +10814,8 @@
                               "id": "ff22o",
                               "type": "Question",
                               "alias": "Wohnumfeld ist aufwendig gestaltet",
-                              "text": "Ist das Grundstück des Hauses aufwendig gestaltetet?",
-                              "info": "Hierzu zählt z.B. Sitzbänke, Ruhezonen, oder gute Gehwegbefestigung mit Grünflächen und Beleuchtung",
+                              "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
+                              "info": "Das ist etwa der Fall, wenn es Grünflächen mit angelegten Wegen gibt oder Sitzbänke und Ruhezonen. Diese dürfen zudem nicht in einem verwahrlosten Zustand sein.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
@@ -10239,7 +10836,7 @@
                                   }
                                 ]
                               },
-                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal >=2017:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         }
