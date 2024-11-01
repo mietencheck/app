@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -305,7 +306,7 @@
           "id": "9e585",
           "type": "Question",
           "alias": "Dachgeschoss",
-          "text": "Liegt die Wohnung im Dachgeschoss?",
+          "text": "Liegt deine Wohnung im Dachgeschoss?",
           "info": null,
           "answer": {
             "type": "ChoiceAnswer",
@@ -331,108 +332,13 @@
         {
           "id": "5igw6",
           "type": "If",
-          "cases": [
-            {
-              "id": "yoj0w",
-              "type": "IfCase",
-              "test": {
-                "id": "9nxzr",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Dachgeschoss"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "uiajj"
-                ]
-              },
-              "block": [
-                {
-                  "id": "shep8",
-                  "type": "Question",
-                  "alias": "Dachgeschoss Ausgebaut",
-                  "text": "Wurde das Dachgeschoss nachträglich ausgebaut?",
-                  "info": null,
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "45g3h",
-                        "alias": "Ja",
-                        "text": "Ja"
-                      },
-                      {
-                        "id": "d5u3d",
-                        "alias": "Nein",
-                        "text": "Nein"
-                      },
-                      {
-                        "id": "e7e5e",
-                        "alias": "Nicht sicher",
-                        "text": "Ich bin mir nicht sicher"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "id": "93ib8",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "b1qeo",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "x25th",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Dachgeschoss Ausgebaut"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "45g3h"
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "hipf6j",
-                          "type": "Question",
-                          "alias": "Baujahr NEU",
-                          "text": "In welchem Jahr wurde die ausgebaute Dachgeschosswohnung bezugsfertig?",
-                          "info": null,
-                          "answer": {
-                            "type": "NumberAnswer"
-                          }
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": [
-                    {
-                      "id": "9he45",
-                      "type": "Question",
-                      "alias": "Baujahr NEU",
-                      "text": "Wann wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
-                      "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-                      "answer": {
-                        "type": "NumberAnswer"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "alternate": [
             {
               "id": "15zdr",
               "type": "Question",
               "alias": "Baujahr",
-              "text": "Wann wurde Haus, in dem sich die Wohnung befindet, erbaut?",
-              "info": null,
+              "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, erbaut?",
+              "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
               "answer": {
                 "type": "ChoiceAnswer",
                 "options": [
@@ -488,10 +394,23 @@
             {
               "id": "gh2txh",
               "type": "If",
+              "alternate": [],
               "cases": [
                 {
                   "id": "dqtn8",
                   "type": "IfCase",
+                  "block": [
+                    {
+                      "id": "glqwp",
+                      "type": "Question",
+                      "alias": "Baujahr ab 2002",
+                      "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
+                      "info": null,
+                      "answer": {
+                        "type": "NumberAnswer"
+                      }
+                    }
+                  ],
                   "test": {
                     "id": "iex2v",
                     "questionRef": {
@@ -504,22 +423,9 @@
                     "comparands": [
                       "ig2go"
                     ]
-                  },
-                  "block": [
-                    {
-                      "id": "glqwp",
-                      "type": "Question",
-                      "alias": "Baujahr ab 2002",
-                      "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
-                      "info": null,
-                      "answer": {
-                        "type": "NumberAnswer"
-                      }
-                    }
-                  ]
+                  }
                 }
-              ],
-              "alternate": []
+              ]
             },
             {
               "id": "ljdjg",
@@ -530,6 +436,287 @@
               "answer": {
                 "type": "NumberAnswer"
               }
+            }
+          ],
+          "cases": [
+            {
+              "id": "yoj0w",
+              "type": "IfCase",
+              "test": {
+                "id": "9nxzr",
+                "questionRef": {
+                  "type": "AliasRef",
+                  "value": "Dachgeschoss"
+                },
+                "negated": false,
+                "type": "AnswerOptionComparison",
+                "operator": "is",
+                "comparands": [
+                  "uiajj"
+                ]
+              },
+              "block": [
+                {
+                  "id": "shep8",
+                  "type": "Question",
+                  "alias": "Dachgeschoss Ausgebaut",
+                  "text": "Wurde das Dachgeschoss nachträglich ausgebaut?",
+                  "info": null,
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "45g3h",
+                        "alias": "Ja",
+                        "text": "Ja"
+                      },
+                      {
+                        "id": "d5u3d",
+                        "alias": "Nein",
+                        "text": "Nein"
+                      },
+                      {
+                        "id": "e7e5e",
+                        "alias": "Nicht sicher",
+                        "text": "Ich bin mir nicht sicher"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "93ib8",
+                  "type": "If",
+                  "alternate": [
+                    {
+                      "type": "Question",
+                      "id": "ki2wb",
+                      "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, gebaut",
+                      "alias": "Baujahr",
+                      "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "var1rl",
+                            "alias": "-1918",
+                            "text": "Bis einschließlich 1918"
+                          },
+                          {
+                            "id": "ameym",
+                            "alias": "1919-1949",
+                            "text": "1919-1949"
+                          },
+                          {
+                            "id": "bsegni",
+                            "alias": "1950-1964",
+                            "text": "1950-1964"
+                          },
+                          {
+                            "id": "gyz0y",
+                            "alias": "1965-1972",
+                            "text": "1965-1972"
+                          },
+                          {
+                            "id": "adc2e",
+                            "alias": "1973-1985",
+                            "text": "1973-1985"
+                          },
+                          {
+                            "id": "cjm4t",
+                            "alias": "1986-1990",
+                            "text": "1986-1990"
+                          },
+                          {
+                            "id": "ie4ym",
+                            "alias": "1991-2001",
+                            "text": "1991-2001"
+                          },
+                          {
+                            "id": "ig2go",
+                            "alias": "2002-",
+                            "text": "Ab einschließlich 2002"
+                          },
+                          {
+                            "id": "d5oto",
+                            "alias": "Nicht sicher",
+                            "text": "Nicht sicher"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "If",
+                      "id": "w5s01",
+                      "alternate": [],
+                      "cases": [
+                        {
+                          "type": "IfCase",
+                          "id": "1gulzh",
+                          "block": [
+                            {
+                              "type": "Question",
+                              "id": "zfjdx",
+                              "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, gebaut?",
+                              "alias": "Baujahr ab 2002",
+                              "info": null,
+                              "answer": {
+                                "type": "NumberAnswer"
+                              }
+                            }
+                          ],
+                          "test": {
+                            "id": "d2gvm",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Baujahr"
+                            },
+                            "operator": "is",
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "comparands": [
+                              "ig2go"
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "9he45",
+                      "type": "Question",
+                      "alias": "Baujahr NEU",
+                      "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
+                      "info": null,
+                      "answer": {
+                        "type": "NumberAnswer"
+                      }
+                    }
+                  ],
+                  "cases": [
+                    {
+                      "id": "b1qeo",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "x25th",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Dachgeschoss Ausgebaut"
+                        },
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "45g3h"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "type": "Question",
+                          "id": "licgah",
+                          "text": "Wann wurde das Dachgeschoss ausgebaut? ",
+                          "alias": "Baujahr Dachgeschoss",
+                          "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "var1rl",
+                                "alias": "-1918",
+                                "text": "Bis einschließlich 1918"
+                              },
+                              {
+                                "id": "ameym",
+                                "alias": "1919-1949",
+                                "text": "1919-1949"
+                              },
+                              {
+                                "id": "bsegni",
+                                "alias": "1950-1964",
+                                "text": "1950-1964"
+                              },
+                              {
+                                "id": "gyz0y",
+                                "alias": "1965-1972",
+                                "text": "1965-1972"
+                              },
+                              {
+                                "id": "adc2e",
+                                "alias": "1973-1985",
+                                "text": "1973-1985"
+                              },
+                              {
+                                "id": "cjm4t",
+                                "alias": "1986-1990",
+                                "text": "1986-1990"
+                              },
+                              {
+                                "id": "ie4ym",
+                                "alias": "1991-2001",
+                                "text": "1991-2001"
+                              },
+                              {
+                                "id": "ig2go",
+                                "alias": "2002-",
+                                "text": "Ab einschließlich 2002"
+                              },
+                              {
+                                "id": "d5oto",
+                                "alias": "Nicht sicher",
+                                "text": "Nicht sicher"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "If",
+                          "id": "u1twq",
+                          "alternate": [],
+                          "cases": [
+                            {
+                              "type": "IfCase",
+                              "id": "4swtk",
+                              "test": {
+                                "id": "ggh8x",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Baujahr Dachgeschoss"
+                                },
+                                "operator": "is",
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "comparands": [
+                                  "ig2go"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "type": "Question",
+                                  "id": "3e721",
+                                  "text": "In welchem Jahr wurde das Dachgeschoss ausgebaut.",
+                                  "alias": "Baujahr ab 2002",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "NumberAnswer"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "hipf6j",
+                          "type": "Question",
+                          "alias": "Baujahr NEU",
+                          "text": "In welchem Jahr wurde die ausgebaute Dachgeschosswohnung bezugsfertig?",
+                          "info": null,
+                          "answer": {
+                            "type": "NumberAnswer"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -11250,6 +11437,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }
