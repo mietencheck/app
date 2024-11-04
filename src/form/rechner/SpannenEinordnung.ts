@@ -54,25 +54,50 @@ const getQmString = (qm: number) => {
   }
 };
 
+// helper function to map number onto ausstattungsAbzuegeByJahr
+function getBaujahrZeitFenster(baujahr: number) {
+  if (typeof baujahr === 'undefined' || !baujahr)
+    return "-1918"
+  else if (baujahr < 1919)
+    return "-1918"
+  else if (baujahr >= 1919 && baujahr <= 1949)
+    return "1919-1949"
+  else if (baujahr >= 1950 && baujahr <= 1964)
+    return "1950-1964"
+  // else if (baujahr >= 1965 && baujahr <= 1972)
+  //   return "1965-1972"
+  // else if (baujahr >= 1973 && baujahr <= 1985)
+  //   return "1973-1985"
+  // else if (baujahr >= 1986 && baujahr <= 1990)
+  //   return "1986-1990"
+  // else if (baujahr >= 1991 && baujahr <= 2001)
+  //   return "1991-2001"
+  // else if (baujahr >= 2002)
+  //   return "2002-"
+  else 
+    return "-1918"
+}
+
 export function getWorstBestAusstattungsabzüge(answers: FinalAnswers): {
   worst: number;
   best: number;
 } {
   const jahr = getMietspiegelJahr(answers.Vertragsdatum);
   const abzügeByJahr = jahr && ausstattungsAbzuegeByJahr[jahr];
+
   if (
     !answers["Baujahr NEU"] ||
     !abzügeByJahr ||
     (!isKeyOfObject(answers["Baujahr NEU"], abzügeByJahr) &&
-      !answers["Baujahr NEU"])
+      answers["Baujahr NEU"])
   ) {
     return { worst: 0, best: 0 };
   }
 
   const abzügeRaw =
-    answers["Baujahr NEU"] == "Nicht sicher"
+  !answers["Baujahr NEU"]
       ? values(abzügeByJahr)
-      : [abzügeByJahr[answers["Baujahr NEU"]]];
+      : [abzügeByJahr[getBaujahrZeitFenster(answers["Baujahr NEU"])]];
   const abzüge = abzügeRaw.map((a) =>
     Array.isArray(a) ? { und: a[0], oder: a[1] } : { und: a, oder: a },
   );
@@ -108,7 +133,7 @@ export function getWorstBestAusstattungsabzüge(answers: FinalAnswers): {
         ? Math.min(...abzüge.map(({ oder }) => oder))
         : 0;
 
-  return { worst: answers["Baujahr NEU"] == "Nicht sicher" ? 0 : worst, best };
+  return { worst: !answers["Baujahr NEU"] ? 0 : worst, best };
 }
 
 export type SpannenEinordnung = { center: number; min: number; max: number };

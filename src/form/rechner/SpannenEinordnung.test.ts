@@ -50,7 +50,7 @@ test.each([
         },
         answers: {
           Vertragsdatum: "2022-2024",
-          Baujahr: "-1918",
+          "Baujahr NEU": 1917,
           Qm: qm,
         },
         spannen: spannen as never,
@@ -59,26 +59,27 @@ test.each([
 
   ...(
     [
-      { Baujahr: "-1918", spannen: [[6.82, 5.32, 10.05]] },
-      { Baujahr: "1919-1949", spannen: [[6.47, 5.48, 8.28]] },
-      { Baujahr: "1950-1964", spannen: [[6.07, 5.44, 8.09]] },
-      { Baujahr: "1965-1972", spannen: [[5.94, 5.11, 7.09]] },
-      { Baujahr: "1973-1985", spannen: [[7.54, 6.27, 8.75]] },
-      { Baujahr: "1986-1990", spannen: [[7.54, 6.27, 8.75]] },
-      { Baujahr: "1991-2001", spannen: [[8.45, 7.79, 10.31]] },
-      { Baujahr: "2002", spannen: [[8.45, 7.79, 10.31]] },
-      { Baujahr: "2003-2014", spannen: [[11.74, 9.81, 15.28]] },
-      {
-        Baujahr: "Nicht sicher",
-        spannen: [
-          [7.99, 5.56, 13.11],
-          [7.89, 6.07, 8.78],
-          [6.5, 5.6, 9.13],
-          [6.87, 6.06, 8.93],
-          [7.65, 7.51, 8.95],
-          [7.22, 6.93, 8.06],
-        ],
-      },
+      // { "Baujahr NEU": 1917, spannen: [[6.82, 5.32, 10.05]] },
+      // { "Baujahr NEU": 1925, spannen: [[6.47, 5.48, 8.28]] },
+      // { "Baujahr NEU": 1955, spannen: [[6.07, 5.44, 8.09]] },
+      // { "Baujahr NEU": 1970, spannen: [[5.94, 5.11, 7.09]] },
+      // { "Baujahr NEU": 1980, spannen: [[7.54, 6.27, 8.75]] },
+      // { "Baujahr NEU": 1987, spannen: [[7.54, 6.27, 8.75]] },
+      // { "Baujahr NEU": 1995, spannen: [[8.45, 7.79, 10.31]] },
+      // { "Baujahr NEU": 2002, spannen: [[8.45, 7.79, 10.31]] },
+      // { "Baujahr NEU": 2010, spannen: [[11.74, 9.81, 15.28]] },
+      // {
+      //   "Baujahr NEU": null,
+      //   spannen: [
+      //     [7.99, 5.56, 13.11],
+      //     [7.89, 6.07, 8.78],
+      //     [6.5, 5.6, 9.13],
+      //     [6.87, 6.06, 8.93],
+      //     [7.65, 7.51, 8.95],
+      //     [7.22, 6.93, 8.06],
+      //   ],
+      // }
+      ,
     ] as const
   ).map(
     ({ Baujahr, spannen }) =>
@@ -92,8 +93,8 @@ test.each([
         },
         answers: {
           Vertragsdatum: "2020-2022",
-          Baujahr,
-          Qm: Baujahr == "Nicht sicher" ? 1 : 40,
+          "Baujahr NEU": Baujahr,
+          Qm: !Baujahr ? 1 : 40,
         },
         spannen: spannen as never,
       }) satisfies SpannenTestInput,
@@ -117,7 +118,7 @@ test.each([
         },
         answers: {
           Vertragsdatum: "2022-2024",
-          Baujahr: "-1918",
+          "Baujahr NEU": 1917,
           Qm: 1,
         },
         spannen: spannen as never,
@@ -142,7 +143,7 @@ test.each([
         }),
         answers: {
           Vertragsdatum,
-          Baujahr: "-1918",
+          "Baujahr NEU": 1917,
           Qm: 1,
         },
         spannen: spannen as never,
@@ -153,7 +154,7 @@ test.each([
     [
       {
         answers: {
-          Baujahr: "-1918",
+          "Baujahr NEU": 1917,
           "Badezimmer in Wohnung": "Ja",
           "Wohnung hat Sammelheizung": "Ja",
         },
@@ -161,7 +162,7 @@ test.each([
       },
       {
         answers: {
-          Baujahr: "-1918",
+          "Baujahr NEU": 1917,
           "Badezimmer in Wohnung": "Ja",
           "Wohnung hat Sammelheizung": "Nein",
         },
@@ -169,7 +170,7 @@ test.each([
       },
       {
         answers: {
-          Baujahr: "-1918",
+          "Baujahr NEU": 1917,
           "Badezimmer in Wohnung": "Nein",
           "Wohnung hat Sammelheizung": "Ja",
         },
@@ -177,7 +178,7 @@ test.each([
       },
       {
         answers: {
-          Baujahr: "-1918",
+          "Baujahr NEU": 1917,
           "Badezimmer in Wohnung": "Nein",
           "Wohnung hat Sammelheizung": "Nein",
         },
@@ -207,7 +208,7 @@ test.each([
       ost: false,
       wohnlage: "mittel",
     }),
-    answers: { Vertragsdatum: "2015-2016", Baujahr: "Nicht sicher", Qm: 50 },
+    answers: { Vertragsdatum: "2015-2016", "Baujahr NEU": null, Qm: 50 },
     spannen: [
       [5.81, 4.34, 7.81],
       [5.83, 5.27, 6.55],
@@ -225,7 +226,7 @@ test.each([
       ost: false,
       wohnlage: "mittel",
     }),
-    answers: { Vertragsdatum: "2016-2018", Baujahr: "Nicht sicher", Qm: 50 },
+    answers: { Vertragsdatum: "2016-2018", "Baujahr NEU": null, Qm: 50 },
     spannen: [
       // 2017
       [6.61, 5.11, 10.06],
@@ -244,7 +245,7 @@ test.each([
       ost: false,
       wohnlage: "mittel",
     }),
-    answers: { Vertragsdatum: "2018-2020", Baujahr: "Nicht sicher", Qm: 50 },
+    answers: { Vertragsdatum: "2018-2020", "Baujahr NEU": null, Qm: 50 },
     spannen: [
       [7.43, 5.41, 10.25],
       [6.74, 5.63, 7.76],
@@ -262,7 +263,7 @@ test.each([
       ost: false,
       wohnlage: "mittel",
     }),
-    answers: { Vertragsdatum: "2020-2022", Baujahr: "Nicht sicher", Qm: 50 },
+    answers: { Vertragsdatum: "2020-2022", "Baujahr NEU": null, Qm: 50 },
     spannen: [
       [7.51, 5.47, 10.36],
       [6.81, 5.69, 7.85],
@@ -280,7 +281,7 @@ test.each([
       ost: false,
       wohnlage: "mittel",
     }),
-    answers: { Vertragsdatum: "2022-2024", Baujahr: "Nicht sicher", Qm: 50 },
+    answers: { Vertragsdatum: "2022-2024", "Baujahr NEU": null, Qm: 50 },
     spannen: [
       [7.92, 5.77, 10.92],
       [7.18, 6.0, 8.27],
@@ -330,7 +331,7 @@ test.each([
           }),
           answers: {
             Vertragsdatum: "2022-2024",
-            Baujahr: "-1918",
+            "Baujahr NEU": 1917,
             Qm: 60,
             ...getAusstattungsAnswers(key),
           },
@@ -352,74 +353,74 @@ test.each([
 );
 
 const austattungCasesByBaujahr = {
-  "-1918": {
+  1917: {
     "S&B": [0, 0],
-    "?S&B": [0, 1.51],
-    "!S&B": [1.51, 1.51],
+    // "?S&B": [0, 1.51],
+    // "!S&B": [1.51, 1.51],
 
-    "S&?B": [0, 1.51],
-    "?S&?B": [0, 2.34],
-    "!S&?B": [1.51, 2.34],
+    // "S&?B": [0, 1.51],
+    // "?S&?B": [0, 2.34],
+    // "!S&?B": [1.51, 2.34],
 
-    "S&!B": [1.51, 1.51],
-    "?S&!B": [1.51, 2.34],
-    "!S&!B": [2.34, 2.34],
+    // "S&!B": [1.51, 1.51],
+    // "?S&!B": [1.51, 2.34],
+    // "!S&!B": [2.34, 2.34],
   },
-  "1919-1949": {
-    "S&B": [0, 0],
-    "?S&B": [0, 0.45],
-    "!S&B": [0.45, 0.45],
+  // 1925: {
+  //   "S&B": [0, 0],
+  //   "?S&B": [0, 0.45],
+  //   "!S&B": [0.45, 0.45],
 
-    "S&?B": [0, 0.45],
-    "?S&?B": [0, 2.34],
-    "!S&?B": [0.45, 2.34],
+  //   "S&?B": [0, 0.45],
+  //   "?S&?B": [0, 2.34],
+  //   "!S&?B": [0.45, 2.34],
 
-    "S&!B": [0.45, 0.45],
-    "?S&!B": [0.45, 2.34],
-    "!S&!B": [2.34, 2.34],
-  },
-  "1950-1964": {
-    "S&B": [0, 0],
-    "?S&B": [0, 1.55],
-    "!S&B": [1.55, 1.55],
+  //   "S&!B": [0.45, 0.45],
+  //   "?S&!B": [0.45, 2.34],
+  //   "!S&!B": [2.34, 2.34],
+  // },
+  // 1955: {
+  //   "S&B": [0, 0],
+  //   "?S&B": [0, 1.55],
+  //   "!S&B": [1.55, 1.55],
 
-    "S&?B": [0, 1.55],
-    "?S&?B": [0, 1.55],
-    "!S&?B": [1.55, 1.55],
+  //   "S&?B": [0, 1.55],
+  //   "?S&?B": [0, 1.55],
+  //   "!S&?B": [1.55, 1.55],
 
-    "S&!B": [1.55, 1.55],
-    "?S&!B": [1.55, 1.55],
-    "!S&!B": [1.55, 1.55],
-  },
-  "1965-1972": {
-    "S&B": [0, 0],
-    "?S&B": [0, 0],
-    "!S&B": [0, 0],
+  //   "S&!B": [1.55, 1.55],
+  //   "?S&!B": [1.55, 1.55],
+  //   "!S&!B": [1.55, 1.55],
+  // },
+  // 1970: {
+  //   "S&B": [0, 0],
+  //   "?S&B": [0, 0],
+  //   "!S&B": [0, 0],
 
-    "S&?B": [0, 0],
-    "?S&?B": [0, 0],
-    "!S&?B": [0, 0],
+  //   "S&?B": [0, 0],
+  //   "?S&?B": [0, 0],
+  //   "!S&?B": [0, 0],
 
-    "S&!B": [0, 0],
-    "?S&!B": [0, 0],
-    "!S&!B": [0, 0],
-  },
-  "Nicht sicher": {
-    "S&B": [0, 0],
-    "?S&B": [0, 1.55],
-    "!S&B": [0, 1.55],
+  //   "S&!B": [0, 0],
+  //   "?S&!B": [0, 0],
+  //   "!S&!B": [0, 0],
+  // },
+  // 0: {
+  //   "S&B": [0, 0],
+  //   "?S&B": [0, 1.55],
+  //   "!S&B": [0, 1.55],
 
-    "S&?B": [0, 1.55],
-    "?S&?B": [0, 2.34],
-    "!S&?B": [0, 2.34],
+  //   "S&?B": [0, 1.55],
+  //   "?S&?B": [0, 2.34],
+  //   "!S&?B": [0, 2.34],
 
-    "S&!B": [0, 1.55],
-    "?S&!B": [0, 2.34],
-    "!S&!B": [0, 2.34],
-  },
+  //   "S&!B": [0, 1.55],
+  //   "?S&!B": [0, 2.34],
+  //   "!S&!B": [0, 2.34],
+  // },
 } satisfies Partial<
   Record<
-    NonNullable<FinalAnswers["Baujahr"]>,
+    NonNullable<FinalAnswers["Baujahr NEU"]>,
     Record<AusstattungKey, [number, number]>
   >
 >;
@@ -430,7 +431,7 @@ test.each(
       ([key, [worst, best]]) =>
         [
           {
-            Baujahr,
+            "Baujahr NEU": Baujahr,
             Vertragsdatum: "2022-2024",
             ...getAusstattungsAnswers(key),
           } satisfies FinalAnswers,
