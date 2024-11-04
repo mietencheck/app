@@ -23,12 +23,12 @@ const filterMietspiegels = (jahr: string | null) =>
   ).filter(([j]) => !jahr || j == jahr);
 
 function getWohnlagenByBaujahr(
-  baujahr: EstimateAnswers["Baujahr"],
+  baujahr: EstimateAnswers["Baujahr NEU"],
   mietspiegel: Mietspiegel,
   ost?: boolean,
 ): QmWohnlage[] {
   if (
-    (baujahr == "1973-1985" || baujahr == "1986-1990") &&
+    baujahr != undefined && baujahr >= 1973 && baujahr <= 1990 &&
     typeof ost == "undefined"
   ) {
     return [mietspiegel["O:1973-1990"], mietspiegel["W:1973-1990"]];
@@ -61,18 +61,18 @@ export function getWorstBestAusstattungsabzüge(answers: FinalAnswers): {
   const jahr = getMietspiegelJahr(answers.Vertragsdatum);
   const abzügeByJahr = jahr && ausstattungsAbzuegeByJahr[jahr];
   if (
-    !answers.Baujahr ||
+    !answers["Baujahr NEU"] ||
     !abzügeByJahr ||
-    (!isKeyOfObject(answers.Baujahr, abzügeByJahr) &&
-      answers.Baujahr != "Nicht sicher")
+    (!isKeyOfObject(answers["Baujahr NEU"], abzügeByJahr) &&
+      !answers["Baujahr NEU"])
   ) {
     return { worst: 0, best: 0 };
   }
 
   const abzügeRaw =
-    answers.Baujahr == "Nicht sicher"
+    answers["Baujahr NEU"] == "Nicht sicher"
       ? values(abzügeByJahr)
-      : [abzügeByJahr[answers.Baujahr]];
+      : [abzügeByJahr[answers["Baujahr NEU"]]];
   const abzüge = abzügeRaw.map((a) =>
     Array.isArray(a) ? { und: a[0], oder: a[1] } : { und: a, oder: a },
   );
@@ -108,7 +108,7 @@ export function getWorstBestAusstattungsabzüge(answers: FinalAnswers): {
         ? Math.min(...abzüge.map(({ oder }) => oder))
         : 0;
 
-  return { worst: answers.Baujahr == "Nicht sicher" ? 0 : worst, best };
+  return { worst: answers["Baujahr NEU"] == "Nicht sicher" ? 0 : worst, best };
 }
 
 export type SpannenEinordnung = { center: number; min: number; max: number };
@@ -118,7 +118,7 @@ export function getSpannenEinordnung(v: FinalAnswers): SpannenEinordnung[] {
     const { wohnlage, ost } =
       (jahr && v.Adresse && parseAdresse(v.Adresse)?.lage?.[jahr]) || {};
 
-    const wohnlageByQm = getWohnlagenByBaujahr(v.Baujahr, mietspiegel, ost);
+    const wohnlageByQm = getWohnlagenByBaujahr(v["Baujahr NEU"], mietspiegel, ost);
 
     const qm = Number(v.Qm);
     const qmMieteByWohnlage = wohnlageByQm.map((w) => w[getQmString(qm)]);

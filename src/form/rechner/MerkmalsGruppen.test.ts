@@ -147,7 +147,7 @@ test.each([
         wohnlage: "gut",
       }),
     }),
-    Baujahr: "1965-1972",
+    "Baujahr NEU": 1970,
     ...MERKMAL_RESET_ANSWERS,
     ...answers,
   } satisfies FinalAnswers;
