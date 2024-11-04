@@ -23,27 +23,27 @@ export type EstimateAnswers = StepInfoByAlias["Einschätzung"]["state"];
 export type FinalAnswers = StepInfoByAlias["Auswertung"]["state"];
 
 export function getOstWestBaujahr(
-  baujahr: EstimateAnswers["Baujahr"],
+  baujahr: EstimateAnswers["Baujahr NEU"],
   ost: boolean,
 ): OstWestBaujahr | null {
-  switch (baujahr) {
-    case undefined:
-    case "Nicht sicher":
-      return null;
-    case "1973-1985":
-      return ost ? "O:1973-1990" : "W:1973-1990";
-    case "1986-1990":
-      return ost ? "O:1973-1990" : "W:1973-1990";
-    case "1991-2001":
+  if (typeof baujahr === 'undefined')
+    return null;
+  else if (baujahr < 1919)
+    return "-1918";
+  else if (baujahr >= 1919 && baujahr <= 1949)
+    return "1919-1949";
+  else if (baujahr >= 1950 && baujahr <= 1964)
+    return "1950-1964"
+  else if (baujahr >= 1965 && baujahr <= 1973)
+    return "1965-1972"
+  else if (baujahr >= 1973 && baujahr <= 1990)
+    return ost ? "O:1973-1990" : "W:1973-1990";
+  else if (baujahr >= 1991 && baujahr <= 2002)
       return "1991-2002";
-    case "2002":
-      return "1991-2002";
-    case "2003-2014":
-    case ">2014":
+  else if (baujahr >= 2003 && baujahr <= 2017)
       return "2003-2017";
-    default:
-      return baujahr;
-  }
+  else
+      return null;
 }
 
 export const vertragsDatumToMietspiegelJahr = {

@@ -16,7 +16,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -284,7 +284,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
         };
     };
     "Baujahr NEU": {
@@ -303,7 +303,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
         };
     };
     Baujahr: {
@@ -322,7 +322,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
         };
     };
     "Zu neu": {
@@ -341,7 +341,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -361,7 +361,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -381,7 +381,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -401,7 +401,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -421,7 +421,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -442,7 +442,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -464,7 +464,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -487,7 +487,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -510,7 +510,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -533,7 +533,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -556,7 +556,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -579,7 +579,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -727,7 +727,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -875,7 +875,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1023,7 +1023,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1049,7 +1049,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1072,7 +1072,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1096,7 +1096,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1121,7 +1121,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1148,7 +1148,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1296,7 +1296,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1323,7 +1323,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1351,7 +1351,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1380,7 +1380,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1410,7 +1410,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1441,7 +1441,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1472,7 +1472,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1503,7 +1503,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1651,7 +1651,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1799,7 +1799,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1947,7 +1947,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1978,7 +1978,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2010,7 +2010,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2043,7 +2043,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2191,7 +2191,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2225,7 +2225,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2373,7 +2373,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2408,7 +2408,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2444,7 +2444,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2481,7 +2481,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2629,7 +2629,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2668,7 +2668,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2707,7 +2707,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2855,7 +2855,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2896,7 +2896,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2938,7 +2938,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2980,7 +2980,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3023,7 +3023,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3067,7 +3067,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3215,7 +3215,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3260,7 +3260,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3306,7 +3306,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3353,7 +3353,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3501,7 +3501,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3549,7 +3549,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3598,7 +3598,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3649,7 +3649,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3700,7 +3700,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3848,7 +3848,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3900,7 +3900,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3954,7 +3954,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4008,7 +4008,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4156,7 +4156,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4211,7 +4211,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4267,7 +4267,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4325,7 +4325,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4383,7 +4383,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4531,7 +4531,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4591,7 +4591,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4653,7 +4653,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4715,7 +4715,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4863,7 +4863,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4925,7 +4925,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4988,7 +4988,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5052,7 +5052,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5117,7 +5117,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5183,7 +5183,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5250,7 +5250,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5318,7 +5318,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5466,7 +5466,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5535,7 +5535,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5605,7 +5605,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5676,7 +5676,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5748,7 +5748,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5896,7 +5896,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5969,7 +5969,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6043,7 +6043,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6191,7 +6191,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6266,7 +6266,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6342,7 +6342,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6419,7 +6419,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6567,7 +6567,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6646,7 +6646,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6725,7 +6725,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6805,7 +6805,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6886,7 +6886,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7034,7 +7034,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7116,7 +7116,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7264,7 +7264,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7412,7 +7412,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7495,7 +7495,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7579,7 +7579,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7664,7 +7664,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7812,7 +7812,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7898,7 +7898,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7985,7 +7985,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8073,7 +8073,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8221,7 +8221,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8310,7 +8310,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8401,7 +8401,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8492,7 +8492,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8640,7 +8640,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8732,7 +8732,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8826,7 +8826,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8974,7 +8974,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9068,7 +9068,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9163,7 +9163,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9259,7 +9259,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9356,7 +9356,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9504,7 +9504,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9602,7 +9602,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9703,7 +9703,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9803,7 +9803,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9951,7 +9951,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10052,7 +10052,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10154,7 +10154,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10302,7 +10302,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10405,7 +10405,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10509,7 +10509,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10615,7 +10615,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10721,7 +10721,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10869,7 +10869,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11017,7 +11017,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11124,7 +11124,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11232,7 +11232,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11341,7 +11341,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11451,7 +11451,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11599,7 +11599,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11710,7 +11710,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11822,7 +11822,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11970,7 +11970,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12083,7 +12083,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12197,7 +12197,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12312,7 +12312,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12460,7 +12460,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12578,7 +12578,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12696,7 +12696,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12814,7 +12814,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12962,7 +12962,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13081,7 +13081,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13203,7 +13203,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13324,7 +13324,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13472,7 +13472,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13594,7 +13594,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13718,7 +13718,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13842,7 +13842,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13967,7 +13967,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14093,7 +14093,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14241,7 +14241,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14389,7 +14389,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14516,7 +14516,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14645,7 +14645,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14775,7 +14775,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14923,7 +14923,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15055,7 +15055,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15187,7 +15187,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15319,7 +15319,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15452,7 +15452,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15600,7 +15600,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15748,7 +15748,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15882,7 +15882,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16017,7 +16017,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16153,7 +16153,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16290,7 +16290,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16438,7 +16438,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16577,7 +16577,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16716,7 +16716,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16856,7 +16856,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16997,7 +16997,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17139,7 +17139,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17282,7 +17282,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17430,7 +17430,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17574,7 +17574,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17719,7 +17719,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17865,7 +17865,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18012,7 +18012,7 @@ export type StepInfoByAlias = {
             "Baujahr Dachgeschoss"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
             "Baujahr ab 2002"?: number;
             "Baujahr NEU"?: number;
-            Baujahr?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "Nicht sicher";
+            
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
