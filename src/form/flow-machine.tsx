@@ -124,6 +124,21 @@ function getLageInfo(answers: AnswerMachine) {
   return (jahr && lage?.[jahr]) ?? null;
 }
 
+// Jonas: For 2024
+function buildConstructionYear(answers: AnswerMachine) {
+  const constructionYearRange = answers.getWithOptionAlias("Baujahr vor 2002");
+  const constructionYear = answers.getWithOptionAlias("Baujahr ab 2002");
+
+  if (constructionYearRange == "2002-") {
+    return constructionYear;
+  } else {
+    const constructionYearBoundaries = constructionYearRange?.split("-");
+    return constructionYearBoundaries?.[0] !== ""
+      ? constructionYearBoundaries?.[0]
+      : constructionYearBoundaries[1];
+  }
+}
+
 const AnswersContext = React.createContext<AnswerMachine>(
   flowMachine.answers({}),
 );
@@ -150,10 +165,12 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
 
   const answersValue = useMemo(() => {
     const lageInfo = getLageInfo(bareAnswers);
+    const constructionYear = buildConstructionYear(bareAnswers); // Jonas
     const value = {
       ...storedAnswers,
       Ost: lageInfo?.ost ?? null,
       Wohnlage: lageInfo?.wohnlage ?? null,
+      Baujahr: constructionYear || null, // Jonas
     };
     postMessageToFloma("Answers", { value });
     return flowMachine.answers(value, setKV);

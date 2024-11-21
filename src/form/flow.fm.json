@@ -332,112 +332,6 @@
         {
           "id": "5igw6",
           "type": "If",
-          "alternate": [
-            {
-              "id": "15zdr",
-              "type": "Question",
-              "alias": "Baujahr",
-              "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, erbaut?",
-              "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-              "answer": {
-                "type": "ChoiceAnswer",
-                "options": [
-                  {
-                    "id": "var1rl",
-                    "alias": "-1918",
-                    "text": "Bis einschließlich 1918"
-                  },
-                  {
-                    "id": "ameym",
-                    "alias": "1919-1949",
-                    "text": "1919-1949"
-                  },
-                  {
-                    "id": "bsegni",
-                    "alias": "1950-1964",
-                    "text": "1950-1964"
-                  },
-                  {
-                    "id": "gyz0y",
-                    "alias": "1965-1972",
-                    "text": "1965-1972"
-                  },
-                  {
-                    "id": "adc2e",
-                    "alias": "1973-1985",
-                    "text": "1973-1985"
-                  },
-                  {
-                    "id": "cjm4t",
-                    "alias": "1986-1990",
-                    "text": "1986-1990"
-                  },
-                  {
-                    "id": "ie4ym",
-                    "alias": "1991-2001",
-                    "text": "1991-2001"
-                  },
-                  {
-                    "id": "ig2go",
-                    "alias": "2002-",
-                    "text": "Ab einschließlich 2002"
-                  },
-                  {
-                    "id": "d5oto",
-                    "alias": "Nicht sicher",
-                    "text": "Nicht sicher"
-                  }
-                ]
-              },
-              "note": ""
-            },
-            {
-              "id": "gh2txh",
-              "type": "If",
-              "alternate": [],
-              "cases": [
-                {
-                  "id": "dqtn8",
-                  "type": "IfCase",
-                  "block": [
-                    {
-                      "id": "glqwp",
-                      "type": "Question",
-                      "alias": "Baujahr ab 2002",
-                      "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
-                      "info": null,
-                      "answer": {
-                        "type": "NumberAnswer"
-                      }
-                    }
-                  ],
-                  "test": {
-                    "id": "iex2v",
-                    "questionRef": {
-                      "type": "AliasRef",
-                      "value": "Baujahr"
-                    },
-                    "negated": false,
-                    "type": "AnswerOptionComparison",
-                    "operator": "is",
-                    "comparands": [
-                      "ig2go"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "id": "ljdjg",
-              "type": "Question",
-              "alias": "Baujahr NEU",
-              "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
-              "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-              "answer": {
-                "type": "NumberAnswer"
-              }
-            }
-          ],
           "cases": [
             {
               "id": "yoj0w",
@@ -486,111 +380,6 @@
                 {
                   "id": "93ib8",
                   "type": "If",
-                  "alternate": [
-                    {
-                      "type": "Question",
-                      "id": "ki2wb",
-                      "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, gebaut",
-                      "alias": "Baujahr",
-                      "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "var1rl",
-                            "alias": "-1918",
-                            "text": "Bis einschließlich 1918"
-                          },
-                          {
-                            "id": "ameym",
-                            "alias": "1919-1949",
-                            "text": "1919-1949"
-                          },
-                          {
-                            "id": "bsegni",
-                            "alias": "1950-1964",
-                            "text": "1950-1964"
-                          },
-                          {
-                            "id": "gyz0y",
-                            "alias": "1965-1972",
-                            "text": "1965-1972"
-                          },
-                          {
-                            "id": "adc2e",
-                            "alias": "1973-1985",
-                            "text": "1973-1985"
-                          },
-                          {
-                            "id": "cjm4t",
-                            "alias": "1986-1990",
-                            "text": "1986-1990"
-                          },
-                          {
-                            "id": "ie4ym",
-                            "alias": "1991-2001",
-                            "text": "1991-2001"
-                          },
-                          {
-                            "id": "ig2go",
-                            "alias": "2002-",
-                            "text": "Ab einschließlich 2002"
-                          },
-                          {
-                            "id": "d5oto",
-                            "alias": "Nicht sicher",
-                            "text": "Nicht sicher"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "type": "If",
-                      "id": "w5s01",
-                      "alternate": [],
-                      "cases": [
-                        {
-                          "type": "IfCase",
-                          "id": "1gulzh",
-                          "block": [
-                            {
-                              "type": "Question",
-                              "id": "zfjdx",
-                              "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, gebaut?",
-                              "alias": "Baujahr ab 2002",
-                              "info": null,
-                              "answer": {
-                                "type": "NumberAnswer"
-                              }
-                            }
-                          ],
-                          "test": {
-                            "id": "d2gvm",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Baujahr"
-                            },
-                            "operator": "is",
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "comparands": [
-                              "ig2go"
-                            ]
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "id": "9he45",
-                      "type": "Question",
-                      "alias": "Baujahr NEU",
-                      "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
-                      "info": null,
-                      "answer": {
-                        "type": "NumberAnswer"
-                      }
-                    }
-                  ],
                   "cases": [
                     {
                       "id": "b1qeo",
@@ -610,10 +399,10 @@
                       },
                       "block": [
                         {
-                          "type": "Question",
                           "id": "licgah",
+                          "type": "Question",
+                          "alias": "Baujahr vor 2002",
                           "text": "Wann wurde das Dachgeschoss ausgebaut? ",
-                          "alias": "Baujahr Dachgeschoss",
                           "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
                           "answer": {
                             "type": "ChoiceAnswer",
@@ -657,42 +446,36 @@
                                 "id": "ig2go",
                                 "alias": "2002-",
                                 "text": "Ab einschließlich 2002"
-                              },
-                              {
-                                "id": "d5oto",
-                                "alias": "Nicht sicher",
-                                "text": "Nicht sicher"
                               }
                             ]
                           }
                         },
                         {
-                          "type": "If",
                           "id": "u1twq",
-                          "alternate": [],
+                          "type": "If",
                           "cases": [
                             {
-                              "type": "IfCase",
                               "id": "4swtk",
+                              "type": "IfCase",
                               "test": {
                                 "id": "ggh8x",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr Dachgeschoss"
+                                  "value": "Baujahr vor 2002"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "ig2go"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Question",
                                   "id": "3e721",
-                                  "text": "In welchem Jahr wurde das Dachgeschoss ausgebaut.",
+                                  "type": "Question",
                                   "alias": "Baujahr ab 2002",
+                                  "text": "In welchem Jahr wurde das Dachgeschoss ausgebaut.",
                                   "info": null,
                                   "answer": {
                                     "type": "NumberAnswer"
@@ -700,23 +483,206 @@
                                 }
                               ]
                             }
-                          ]
-                        },
-                        {
-                          "id": "hipf6j",
-                          "type": "Question",
-                          "alias": "Baujahr NEU",
-                          "text": "In welchem Jahr wurde die ausgebaute Dachgeschosswohnung bezugsfertig?",
-                          "info": null,
-                          "answer": {
-                            "type": "NumberAnswer"
-                          }
+                          ],
+                          "alternate": []
                         }
                       ]
                     }
+                  ],
+                  "alternate": [
+                    {
+                      "id": "ki2wb",
+                      "type": "Question",
+                      "alias": "Baujahr vor 2002",
+                      "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, gebaut",
+                      "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "var1rl",
+                            "alias": "-1918",
+                            "text": "Bis einschließlich 1918"
+                          },
+                          {
+                            "id": "ameym",
+                            "alias": "1919-1949",
+                            "text": "1919-1949"
+                          },
+                          {
+                            "id": "bsegni",
+                            "alias": "1950-1964",
+                            "text": "1950-1964"
+                          },
+                          {
+                            "id": "gyz0y",
+                            "alias": "1965-1972",
+                            "text": "1965-1972"
+                          },
+                          {
+                            "id": "adc2e",
+                            "alias": "1973-1985",
+                            "text": "1973-1985"
+                          },
+                          {
+                            "id": "cjm4t",
+                            "alias": "1986-1990",
+                            "text": "1986-1990"
+                          },
+                          {
+                            "id": "ie4ym",
+                            "alias": "1991-2001",
+                            "text": "1991-2001"
+                          },
+                          {
+                            "id": "ig2go",
+                            "alias": "2002-",
+                            "text": "Ab einschließlich 2002"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "w5s01",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "1gulzh",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "d2gvm",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Baujahr vor 2002"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "ig2go"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "zfjdx",
+                              "type": "Question",
+                              "alias": "Baujahr ab 2002",
+                              "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, gebaut?",
+                              "info": null,
+                              "answer": {
+                                "type": "NumberAnswer"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
+                    }
                   ]
+                },
+                {
+                  "id": "hipf6j",
+                  "type": "Question",
+                  "alias": "Baujahr",
+                  "text": "",
+                  "info": null,
+                  "answer": {
+                    "type": "NumberAnswer"
+                  },
+                  "note": "Diese Frage wird nicht angezeigt"
                 }
               ]
+            }
+          ],
+          "alternate": [
+            {
+              "id": "15zdr",
+              "type": "Question",
+              "alias": "Baujahr vor 2002",
+              "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, erbaut?",
+              "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
+              "answer": {
+                "type": "ChoiceAnswer",
+                "options": [
+                  {
+                    "id": "var1rl",
+                    "alias": "-1918",
+                    "text": "Bis einschließlich 1918"
+                  },
+                  {
+                    "id": "ameym",
+                    "alias": "1919-1949",
+                    "text": "1919-1949"
+                  },
+                  {
+                    "id": "bsegni",
+                    "alias": "1950-1964",
+                    "text": "1950-1964"
+                  },
+                  {
+                    "id": "gyz0y",
+                    "alias": "1965-1972",
+                    "text": "1965-1972"
+                  },
+                  {
+                    "id": "adc2e",
+                    "alias": "1973-1985",
+                    "text": "1973-1985"
+                  },
+                  {
+                    "id": "cjm4t",
+                    "alias": "1986-1990",
+                    "text": "1986-1990"
+                  },
+                  {
+                    "id": "ie4ym",
+                    "alias": "1991-2001",
+                    "text": "1991-2001"
+                  },
+                  {
+                    "id": "ig2go",
+                    "alias": "2002-",
+                    "text": "Ab einschließlich 2002"
+                  }
+                ]
+              },
+              "note": ""
+            },
+            {
+              "id": "gh2txh",
+              "type": "If",
+              "cases": [
+                {
+                  "id": "dqtn8",
+                  "type": "IfCase",
+                  "test": {
+                    "id": "iex2v",
+                    "questionRef": {
+                      "type": "AliasRef",
+                      "value": "Baujahr vor 2002"
+                    },
+                    "negated": false,
+                    "type": "AnswerOptionComparison",
+                    "operator": "is",
+                    "comparands": [
+                      "ig2go"
+                    ]
+                  },
+                  "block": [
+                    {
+                      "id": "glqwp",
+                      "type": "Question",
+                      "alias": "Baujahr ab 2002",
+                      "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
+                      "info": null,
+                      "answer": {
+                        "type": "NumberAnswer"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "alternate": []
             }
           ]
         },
@@ -731,7 +697,7 @@
                 "id": "sfabh",
                 "questionRef": {
                   "type": "AliasRef",
-                  "value": "Baujahr NEU"
+                  "value": "Baujahr"
                 },
                 "negated": false,
                 "type": "AnswerNumberComparison",
@@ -759,7 +725,7 @@
                 "id": "pewzwj",
                 "questionRef": {
                   "type": "AliasRef",
-                  "value": "Baujahr NEU"
+                  "value": "Baujahr"
                 },
                 "negated": false,
                 "type": "AnswerNumberComparison",
@@ -934,7 +900,7 @@
                                 "id": "jmy3uj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -950,7 +916,7 @@
                                 "id": "jmy3uj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1001,7 +967,7 @@
                                 "id": "jmy3uj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1017,7 +983,7 @@
                                 "id": "jmy3uj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1071,7 +1037,7 @@
                                 "id": "jmy3uj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1087,7 +1053,7 @@
                                 "id": "jmy3uj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1127,7 +1093,7 @@
                                 "id": "jmy3uj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1143,7 +1109,7 @@
                                 "id": "jmy3uj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1258,7 +1224,7 @@
                                 "id": "mg77s",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1274,7 +1240,7 @@
                                 "id": "mg77s",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1314,7 +1280,7 @@
                                 "id": "mg77s",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1330,7 +1296,7 @@
                                 "id": "mg77s",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1431,7 +1397,7 @@
                                 "id": "c9csaj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1447,7 +1413,7 @@
                                 "id": "c9csaj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1487,7 +1453,7 @@
                                 "id": "c9csaj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -1503,7 +1469,7 @@
                                 "id": "c9csaj",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -2398,7 +2364,7 @@
                         "id": "orac9i",
                         "questionRef": {
                           "type": "AliasRef",
-                          "value": "Baujahr NEU"
+                          "value": "Baujahr"
                         },
                         "negated": false,
                         "type": "AnswerNumberComparison",
@@ -2442,7 +2408,7 @@
                                         "id": "aqvvf",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -2458,7 +2424,7 @@
                                         "id": "aqvvf",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -2516,7 +2482,7 @@
                                     "id": "9kp8u",
                                     "questionRef": {
                                       "type": "AliasRef",
-                                      "value": "Baujahr NEU"
+                                      "value": "Baujahr"
                                     },
                                     "negated": false,
                                     "type": "AnswerNumberComparison",
@@ -2578,7 +2544,7 @@
                                         "id": "n4oe7h",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -2600,7 +2566,7 @@
                                             "id": "n4oe7h",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -2616,7 +2582,7 @@
                                             "id": "n4oe7h",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -2695,7 +2661,7 @@
                                     "id": "u7inpl",
                                     "questionRef": {
                                       "type": "AliasRef",
-                                      "value": "Baujahr NEU"
+                                      "value": "Baujahr"
                                     },
                                     "negated": false,
                                     "type": "AnswerNumberComparison",
@@ -2717,7 +2683,7 @@
                                         "id": "u7inpl",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -2733,7 +2699,7 @@
                                         "id": "u7inpl",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -2757,7 +2723,7 @@
                                         "id": "u7inpl",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -2773,7 +2739,7 @@
                                         "id": "u7inpl",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -2808,7 +2774,7 @@
                                         "id": "u7inpl",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -2824,7 +2790,7 @@
                                         "id": "u7inpl",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -2898,7 +2864,7 @@
                                     "id": "hq2w7",
                                     "questionRef": {
                                       "type": "AliasRef",
-                                      "value": "Baujahr NEU"
+                                      "value": "Baujahr"
                                     },
                                     "negated": false,
                                     "type": "AnswerNumberComparison",
@@ -2914,7 +2880,7 @@
                                     "id": "hq2w7",
                                     "questionRef": {
                                       "type": "AliasRef",
-                                      "value": "Baujahr NEU"
+                                      "value": "Baujahr"
                                     },
                                     "negated": false,
                                     "type": "AnswerNumberComparison",
@@ -2949,7 +2915,7 @@
                                         "id": "29seb",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -3038,7 +3004,7 @@
                                             "id": "v36o1",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -3060,7 +3026,7 @@
                                                 "id": "v36o1",
                                                 "questionRef": {
                                                   "type": "AliasRef",
-                                                  "value": "Baujahr NEU"
+                                                  "value": "Baujahr"
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerNumberComparison",
@@ -3076,7 +3042,7 @@
                                                 "id": "v36o1",
                                                 "questionRef": {
                                                   "type": "AliasRef",
-                                                  "value": "Baujahr NEU"
+                                                  "value": "Baujahr"
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerNumberComparison",
@@ -3111,7 +3077,7 @@
                                                 "id": "v36o1",
                                                 "questionRef": {
                                                   "type": "AliasRef",
-                                                  "value": "Baujahr NEU"
+                                                  "value": "Baujahr"
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerNumberComparison",
@@ -3127,7 +3093,7 @@
                                                 "id": "v36o1",
                                                 "questionRef": {
                                                   "type": "AliasRef",
-                                                  "value": "Baujahr NEU"
+                                                  "value": "Baujahr"
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerNumberComparison",
@@ -3259,7 +3225,7 @@
                                                 "id": "0wbce",
                                                 "questionRef": {
                                                   "type": "AliasRef",
-                                                  "value": "Baujahr NEU"
+                                                  "value": "Baujahr"
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerNumberComparison",
@@ -3275,7 +3241,7 @@
                                                 "id": "0wbce",
                                                 "questionRef": {
                                                   "type": "AliasRef",
-                                                  "value": "Baujahr NEU"
+                                                  "value": "Baujahr"
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerNumberComparison",
@@ -3355,7 +3321,7 @@
                                             "id": "1tanj",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -3371,7 +3337,7 @@
                                             "id": "1tanj",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -3627,7 +3593,7 @@
                                                 "id": "b0smz",
                                                 "questionRef": {
                                                   "type": "AliasRef",
-                                                  "value": "Baujahr NEU"
+                                                  "value": "Baujahr"
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerNumberComparison",
@@ -4266,7 +4232,7 @@
                                     "id": "ghai4",
                                     "questionRef": {
                                       "type": "AliasRef",
-                                      "value": "Baujahr NEU"
+                                      "value": "Baujahr"
                                     },
                                     "negated": false,
                                     "type": "AnswerNumberComparison",
@@ -4327,7 +4293,7 @@
                                 "id": "yriuz",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -4561,7 +4527,7 @@
                                             "id": "5k04q",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -4577,7 +4543,7 @@
                                             "id": "5k04q",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -4922,7 +4888,7 @@
                                         "id": "unch7i",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -5302,7 +5268,7 @@
                                                 "id": "r7h0z",
                                                 "questionRef": {
                                                   "type": "AliasRef",
-                                                  "value": "Baujahr NEU"
+                                                  "value": "Baujahr"
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerNumberComparison",
@@ -5318,7 +5284,7 @@
                                                 "id": "r7h0z",
                                                 "questionRef": {
                                                   "type": "AliasRef",
-                                                  "value": "Baujahr NEU"
+                                                  "value": "Baujahr"
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerNumberComparison",
@@ -5987,7 +5953,7 @@
                                             "id": "5g5cq",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -6578,7 +6544,7 @@
                                 "id": "tewks",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -7028,7 +6994,7 @@
                                             "id": "dgby8g",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -7118,7 +7084,7 @@
                                         "id": "xsbby",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -7273,7 +7239,7 @@
                                         "id": "snuyi",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -7295,7 +7261,7 @@
                                             "id": "snuyi",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -7311,7 +7277,7 @@
                                             "id": "snuyi",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -7346,7 +7312,7 @@
                                             "id": "snuyi",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -7362,7 +7328,7 @@
                                             "id": "snuyi",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -7512,7 +7478,7 @@
                                 "id": "gr18z",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -8022,7 +7988,7 @@
                                     "id": "xlzx4",
                                     "questionRef": {
                                       "type": "AliasRef",
-                                      "value": "Baujahr NEU"
+                                      "value": "Baujahr"
                                     },
                                     "negated": false,
                                     "type": "AnswerNumberComparison",
@@ -8101,7 +8067,7 @@
                                 "id": "tpg7qi",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
@@ -8598,7 +8564,7 @@
                                         "id": "vyojh",
                                         "questionRef": {
                                           "type": "AliasRef",
-                                          "value": "Baujahr NEU"
+                                          "value": "Baujahr"
                                         },
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
@@ -8692,7 +8658,7 @@
                                     "id": "fs5ns",
                                     "questionRef": {
                                       "type": "AliasRef",
-                                      "value": "Baujahr NEU"
+                                      "value": "Baujahr"
                                     },
                                     "negated": false,
                                     "type": "AnswerNumberComparison",
@@ -8875,7 +8841,7 @@
                                             "id": "yr0b4",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -8972,7 +8938,7 @@
                                             "id": "qeib1",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -10163,7 +10129,7 @@
                                                 "id": "icq4b",
                                                 "questionRef": {
                                                   "type": "AliasRef",
-                                                  "value": "Baujahr NEU"
+                                                  "value": "Baujahr"
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerNumberComparison",
@@ -10289,7 +10255,7 @@
                                                 "id": "1jjtu",
                                                 "questionRef": {
                                                   "type": "AliasRef",
-                                                  "value": "Baujahr NEU"
+                                                  "value": "Baujahr"
                                                 },
                                                 "negated": false,
                                                 "type": "AnswerNumberComparison",
@@ -10400,7 +10366,7 @@
                                             "id": "kn2ixf",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Baujahr NEU"
+                                              "value": "Baujahr"
                                             },
                                             "negated": false,
                                             "type": "AnswerNumberComparison",
@@ -10862,7 +10828,7 @@
                                     "id": "ivx6ci",
                                     "questionRef": {
                                       "type": "AliasRef",
-                                      "value": "Baujahr NEU"
+                                      "value": "Baujahr"
                                     },
                                     "negated": false,
                                     "type": "AnswerNumberComparison",
@@ -10952,7 +10918,7 @@
                                 "id": "ruuru",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Baujahr NEU"
+                                  "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",

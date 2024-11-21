@@ -2,6 +2,7 @@ import * as Sentry from "@sentry/react";
 import React, { Suspense, useCallback, useEffect, useMemo } from "react";
 import { Dialog } from "react-aria-components";
 
+import { Page2024 } from "./2024"; // Jonas: Temporary 2024 Fix
 import LandingPage from "./landing";
 import { DatenschutzPage } from "./landing/datenschutz";
 import { ImpressumPage } from "./landing/impressum";
@@ -50,6 +51,7 @@ function Router() {
     "Details",
     "PDFs",
     "Error",
+    "2024", // Jonas: Temporary 2024 Fix
   ]);
 
   if (!route) return null;
@@ -68,6 +70,8 @@ function Router() {
       return <DatenschutzPage />;
     case "Impressum":
       return <ImpressumPage />;
+    case "2024":
+      return <Page2024 />; // Jonas: Temporary 2024 Fix
     case "Error":
       throw new Error("in der Hose");
     default:
