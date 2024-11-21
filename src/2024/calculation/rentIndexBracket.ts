@@ -5,7 +5,7 @@ import {
   getResidentialArea,
   getSizeOfLivingSpaceRange,
 } from "~/2024/calculation/utils";
-import { facilityDiscounts, rentIndex } from "~/2024/rentIndex";
+import { facilityDiscounts, RentBracket, rentIndex } from "~/2024/rentIndex";
 import { FinalAnswers } from "~/form/flow-machine";
 
 /**
@@ -67,24 +67,15 @@ export function getLowestHighestFacilityDiscount(
   };
 }
 
-type PriceAverage = number;
-type PriceLowerThreshold = number;
-type PriceUpperThreshold = number;
-export type PriceRange = [
-  PriceAverage,
-  PriceLowerThreshold,
-  PriceUpperThreshold,
-];
-
 /**
- *  Calculates the lowest and highest price range based on the provided answers.
+ *  Calculates the lowest and highest applicable bracket from rent index based on the provided answers.
  *
  * @param {FinalAnswers} answers - The answers object containing user input data.
- * @returns {{ lowest: PriceRange; highest: PriceRange  } | undefined} - The the highest and lowest price ranges, each represented as a tuple of three numbers (average value, lower threshold, upper threshold), or undefined if the calculation.
+ * @returns {{ lowest: RentBracket; highest: RentBracket  } | undefined} - The the highest and lowest rent bracket, each represented as a tuple of three numbers (average value, lower threshold, upper threshold), or undefined if the calculation.
  */
-export function getLowestHighestPriceRange(
+export function getLowestHighestRentIndexBracket(
   answers: FinalAnswers,
-): { lowest: PriceRange; highest: PriceRange } | undefined {
+): { lowest: RentBracket; highest: RentBracket } | undefined {
   const rentIndexYear = getRentIndexYear(answers);
   const constructionYearRange = getConstructionYearRange(answers);
   const sizeOfLivingSpaceRange = getSizeOfLivingSpaceRange(answers);
@@ -114,22 +105,22 @@ export function getLowestHighestPriceRange(
       sizeOfLivingSpaceRange as keyof typeof residentialAreaValues
     ];
 
-  const priceRange = sizeOfLivingSpaceRangeValues;
-  if (!priceRange) {
+  const rentIndexBracket = sizeOfLivingSpaceRangeValues;
+  if (!rentIndexBracket) {
     return undefined;
   }
 
   const { highestDiscount, lowestDiscount } = highestLowestfacilityDiscounts;
   return {
     lowest: [
-      Math.round((priceRange[0] - highestDiscount) * 100) / 100,
-      Math.round((priceRange[1] - highestDiscount) * 100) / 100,
-      Math.round((priceRange[2] - highestDiscount) * 100) / 100,
+      Math.round((rentIndexBracket[0] - highestDiscount) * 100) / 100,
+      Math.round((rentIndexBracket[1] - highestDiscount) * 100) / 100,
+      Math.round((rentIndexBracket[2] - highestDiscount) * 100) / 100,
     ],
     highest: [
-      Math.round((priceRange[0] - lowestDiscount) * 100) / 100,
-      Math.round((priceRange[1] - lowestDiscount) * 100) / 100,
-      Math.round((priceRange[2] - lowestDiscount) * 100) / 100,
+      Math.round((rentIndexBracket[0] - lowestDiscount) * 100) / 100,
+      Math.round((rentIndexBracket[1] - lowestDiscount) * 100) / 100,
+      Math.round((rentIndexBracket[2] - lowestDiscount) * 100) / 100,
     ],
   };
 }
