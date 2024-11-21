@@ -1,4 +1,4 @@
-export type Fields2025 = {
+export type Fields2024 = {
   "Weitere Bemerkungen": {
       type: "textField";
   };
