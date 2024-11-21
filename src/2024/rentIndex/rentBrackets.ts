@@ -86,7 +86,7 @@ export const constructionYearRangeByRentIndexYear = {
   ],
 } satisfies Record<RentIndexYear, ConstructionYearRange[]>;
 
-export type LivingSpace =
+export type SizeOfLivingSpace =
   | "-35"
   | "-40"
   | "-45"
@@ -151,6 +151,103 @@ export type LivingSpace =
   | "120"
   | "130-";
 
+export type FacilityDiscounts = Record<
+  RentIndexYear,
+  Partial<
+    Record<
+      ConstructionYearRange,
+      Record<"!CH && !BATH" | "!CH || !BATH", number> // CH == Central Heating ('Sammelheizung'), BATH == Bathroom ('Badezimmer')
+    >
+  >
+>;
+
+export const facilityDiscounts = {
+  "2015": {
+    "-1918": {
+      "!CH && !BATH": 2.65,
+      "!CH || !BATH": 1.94,
+    },
+    "1919-1949": {
+      "!CH && !BATH": 2.65,
+      "!CH || !BATH": 1.67,
+    },
+    "1950-1964": {
+      "!CH && !BATH": 1.03,
+      "!CH || !BATH": 1.03,
+    },
+  },
+  "2017": {
+    "-1918": {
+      "!CH && !BATH": 1.34,
+      "!CH || !BATH": 0.87,
+    },
+    "1919-1949": {
+      "!CH && !BATH": 0.87,
+      "!CH || !BATH": 0.35,
+    },
+    "1950-1964": {
+      "!CH && !BATH": 0.81,
+      "!CH || !BATH": 0.81,
+    },
+  },
+  "2019": {
+    "-1918": {
+      "!CH && !BATH": 2.2,
+      "!CH || !BATH": 1.41,
+    },
+    "1919-1949": {
+      "!CH && !BATH": 2.2,
+      "!CH || !BATH": 0.43,
+    },
+    "1950-1964": {
+      "!CH && !BATH": 1.45,
+      "!CH || !BATH": 1.45,
+    },
+  },
+  "2021": {
+    "-1918": {
+      "!CH && !BATH": 2.22,
+      "!CH || !BATH": 1.43,
+    },
+    "1919-1949": {
+      "!CH && !BATH": 2.22,
+      "!CH || !BATH": 0.43,
+    },
+    "1950-1964": {
+      "!CH && !BATH": 1.47,
+      "!CH || !BATH": 1.47,
+    },
+  },
+  "2023": {
+    "-1918": {
+      "!CH && !BATH": 2.34,
+      "!CH || !BATH": 1.51,
+    },
+    "1919-1949": {
+      "!CH && !BATH": 2.34,
+      "!CH || !BATH": 0.45,
+    },
+    "1950-1964": {
+      "!CH && !BATH": 1.55,
+      "!CH || !BATH": 1.55,
+    },
+  },
+  "2024": {
+    "-1918": {
+      "!CH && !BATH": 0.45,
+      "!CH || !BATH": 0.45,
+    },
+    "1919-1949": {
+      "!CH && !BATH": 0.45,
+      "!CH || !BATH": 0.45,
+    },
+    "1950-1964": {
+      "!CH && !BATH": 0.45,
+      "!CH || !BATH": 0.45,
+    },
+  },
+} satisfies FacilityDiscounts;
+
 type RentBracketAverage = number;
 type RentBracketLowerThreshold = number;
 type RentBracketUpperThreshold = number;
@@ -167,13 +264,13 @@ export type RentIndex = Record<
       ConstructionYearRange,
       Record<
         ResidentialArea,
-        RentBracket | Partial<Record<LivingSpace, RentBracket>>
+        RentBracket | Partial<Record<SizeOfLivingSpace, RentBracket>>
       >
     >
   >
 >;
 
-export const rentIndex = {
+export const rentBrackets = {
   "2015": {
     "-1918": {
       einfach: {
@@ -1236,100 +1333,3 @@ export const rentIndex = {
     },
   },
 } satisfies RentIndex;
-
-export type FacilityDiscounts = Record<
-  RentIndexYear,
-  Partial<
-    Record<
-      ConstructionYearRange,
-      Record<"!CH && !BATH" | "!CH || !BATH", number> // CH == Central Heating ('Sammelheizung'), BATH == Bathroom ('Badezimmer')
-    >
-  >
->;
-
-export const facilityDiscounts = {
-  "2015": {
-    "-1918": {
-      "!CH && !BATH": 2.65,
-      "!CH || !BATH": 1.94,
-    },
-    "1919-1949": {
-      "!CH && !BATH": 2.65,
-      "!CH || !BATH": 1.67,
-    },
-    "1950-1964": {
-      "!CH && !BATH": 1.03,
-      "!CH || !BATH": 1.03,
-    },
-  },
-  "2017": {
-    "-1918": {
-      "!CH && !BATH": 1.34,
-      "!CH || !BATH": 0.87,
-    },
-    "1919-1949": {
-      "!CH && !BATH": 0.87,
-      "!CH || !BATH": 0.35,
-    },
-    "1950-1964": {
-      "!CH && !BATH": 0.81,
-      "!CH || !BATH": 0.81,
-    },
-  },
-  "2019": {
-    "-1918": {
-      "!CH && !BATH": 2.2,
-      "!CH || !BATH": 1.41,
-    },
-    "1919-1949": {
-      "!CH && !BATH": 2.2,
-      "!CH || !BATH": 0.43,
-    },
-    "1950-1964": {
-      "!CH && !BATH": 1.45,
-      "!CH || !BATH": 1.45,
-    },
-  },
-  "2021": {
-    "-1918": {
-      "!CH && !BATH": 2.22,
-      "!CH || !BATH": 1.43,
-    },
-    "1919-1949": {
-      "!CH && !BATH": 2.22,
-      "!CH || !BATH": 0.43,
-    },
-    "1950-1964": {
-      "!CH && !BATH": 1.47,
-      "!CH || !BATH": 1.47,
-    },
-  },
-  "2023": {
-    "-1918": {
-      "!CH && !BATH": 2.34,
-      "!CH || !BATH": 1.51,
-    },
-    "1919-1949": {
-      "!CH && !BATH": 2.34,
-      "!CH || !BATH": 0.45,
-    },
-    "1950-1964": {
-      "!CH && !BATH": 1.55,
-      "!CH || !BATH": 1.55,
-    },
-  },
-  "2024": {
-    "-1918": {
-      "!CH && !BATH": 0.45,
-      "!CH || !BATH": 0.45,
-    },
-    "1919-1949": {
-      "!CH && !BATH": 0.45,
-      "!CH || !BATH": 0.45,
-    },
-    "1950-1964": {
-      "!CH && !BATH": 0.45,
-      "!CH || !BATH": 0.45,
-    },
-  },
-} satisfies FacilityDiscounts;

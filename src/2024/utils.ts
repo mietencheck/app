@@ -1,8 +1,10 @@
 import { useMemo } from "react";
 
-import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
-
-import { getLowestHighestMaximumPermissibleRent as getHighestLowestMaximumPermissibleRent } from "./calculation/maximumPermissibleRent";
+import { getLowestHighestMaximumPermissibleRent as getHighestLowestMaximumPermissibleRent } from "~/2024/calculation/maximumPermissibleRent";
+import {
+  useAnswers,
+  useVisibleQuestionAliases,
+} from "~/2024/form/flow-machine";
 
 export function useHighestLowestMaximumPermissibleRent() {
   const answers = useAnswers();

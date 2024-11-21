@@ -4,8 +4,12 @@ import {
   getRentIndexYear,
   getResidentialArea,
   getSizeOfLivingSpaceRange,
-} from "~/2024/calculation/utils";
-import { facilityDiscounts, RentBracket, rentIndex } from "~/2024/rentIndex";
+} from "~/2024/form/api";
+import {
+  facilityDiscounts,
+  RentBracket,
+  rentBrackets,
+} from "~/2024/rentIndex/rentBrackets";
 import { FinalAnswers } from "~/form/flow-machine";
 
 /**
@@ -73,7 +77,7 @@ export function getLowestHighestFacilityDiscount(
  * @param {FinalAnswers} answers - The answers object containing user input data.
  * @returns {{ lowest: RentBracket; highest: RentBracket  } | undefined} - The the highest and lowest rent bracket, each represented as a tuple of three numbers (average value, lower threshold, upper threshold), or undefined if the calculation.
  */
-export function getLowestHighestRentIndexBracket(
+export function getLowestHighestRentBracket(
   answers: FinalAnswers,
 ): { lowest: RentBracket; highest: RentBracket } | undefined {
   const rentIndexYear = getRentIndexYear(answers);
@@ -94,10 +98,11 @@ export function getLowestHighestRentIndexBracket(
   }
 
   // No idea if there's a better way to do this, TS is a mystery to me
-  const rentIndexValues = rentIndex[rentIndexYear as keyof typeof rentIndex];
+  const rentIndexValues =
+    rentBrackets[rentIndexYear as keyof typeof rentBrackets];
   const constructionYearRangeValues =
     rentIndexValues[
-      constructionYearRange as keyof (typeof rentIndex)[typeof rentIndexYear]
+      constructionYearRange as keyof (typeof rentBrackets)[typeof rentIndexYear]
     ];
   const residentialAreaValues = constructionYearRangeValues[residentialArea];
   const sizeOfLivingSpaceRangeValues =

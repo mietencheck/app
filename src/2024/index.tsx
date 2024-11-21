@@ -1,6 +1,6 @@
-import { useAnswers } from "~/form/flow-machine";
+import { useAnswers } from "~/2024/form/flow-machine";
 
-import { getLowestHighestRentIndexBracket } from "./calculation/rentIndexBracket";
+import { getLowestHighestRentBracket } from "./calculation/rentBracket";
 import {
   getAddress,
   getConstructionYear,
@@ -11,7 +11,7 @@ import {
   getResidentialArea,
   getSizeOfLivingSpace,
   getSizeOfLivingSpaceRange,
-} from "./calculation/utils";
+} from "./form/api";
 import { useHighestLowestMaximumPermissibleRent } from "./utils";
 
 export function Page2024() {
@@ -35,7 +35,7 @@ export function Page2024() {
     residentialArea: JSON.stringify(getResidentialArea(answers), null, 2),
     sizeOfLivingSpaceRange: getSizeOfLivingSpaceRange(answers),
     highestLowestRentIndexBracket: JSON.stringify(
-      getLowestHighestRentIndexBracket(answers),
+      getLowestHighestRentBracket(answers),
       null,
       2,
     ),
