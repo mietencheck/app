@@ -1,26 +1,13 @@
+import { FinalAnswers } from "~/2024/form/flow-machine";
+import { featureKeysByYear } from "~/2024/rentIndex/features";
 import {
   constructionYearRangeByRentIndexYear,
-  rentIndex,
+  rentBrackets,
   RentIndexYear,
-} from "~/2024/rentIndex";
-import { StepInfoByAlias } from "~/form/flow.fm";
+} from "~/2024/rentIndex/rentBrackets";
 import { parseAdresse } from "~/utils";
 
-export type EstimateAnswers = StepInfoByAlias["Einschätzung"]["state"];
-export type FinalAnswers = StepInfoByAlias["Auswertung"]["state"];
-
-export const contractDateToRentIndexYear = {
-  "<2015": undefined,
-  "2015-2016": "2015",
-  "2016-2018": "2017",
-  "2018-2020": "2019",
-  "2020-2022": "2021",
-  "2022-2024": "2023",
-  ">2024": "2024",
-} satisfies Record<
-  NonNullable<EstimateAnswers["Vertragsdatum"]>,
-  RentIndexYear | undefined
->;
+import { contractDateToRentIndexYear } from "./mappings/contractDate";
 
 export const getRentIndexYear = (
   answers?: FinalAnswers,
@@ -34,12 +21,8 @@ export const getAddress = (
 ): ReturnType<typeof parseAdresse> | undefined =>
   answers ? parseAdresse(answers["Adresse"] as string) : undefined;
 
-export const getResidentialArea = (answers?: FinalAnswers) => {
-  const rentIndexYear = getRentIndexYear(answers);
-  return rentIndexYear && answers?.["Adresse"]
-    ? getAddress(answers)?.lage?.[rentIndexYear]?.wohnlage
-    : undefined;
-};
+export const getResidentialArea = (answers?: FinalAnswers) =>
+  answers ? answers["Wohnlage"] : undefined;
 
 export const getSizeOfLivingSpace = (answers?: FinalAnswers) =>
   answers ? Number(answers["Qm"]) : undefined;
@@ -57,8 +40,8 @@ export const getSizeOfLivingSpaceRange = (answers?: FinalAnswers) => {
     sizeOfLivingSpace
   ) {
     const livingSpaceRanges = Object.keys(
-      rentIndex[rentIndexYear as keyof typeof rentIndex][
-        constructionYearRange as keyof (typeof rentIndex)[typeof rentIndexYear]
+      rentBrackets[rentIndexYear as keyof typeof rentBrackets][
+        constructionYearRange as keyof (typeof rentBrackets)[typeof rentIndexYear]
       ][residentialArea],
     );
 
@@ -116,20 +99,11 @@ export const getFacilities = (answers?: FinalAnswers) => {
   };
 };
 
-/*
-export const getRentIndexYearFoo = (
-  contractDate?: EstimateAnswers["Vertragsdatum"],
-) => (contractDate ? contractDateToRentIndexYear[contractDate] : undefined);
+export const getFeatureGroups = (answers?: FinalAnswers) => {
+  const rentIndexYear = getRentIndexYear(answers);
 
-export const getResidentialArea = (
-  rentIndexYear?: RentIndexYear,
-  address?: EstimateAnswers["Adresse"],
-) => {
-  if (rentIndexYear && address) {
-    return parseAdresse(address)?.lage?.[rentIndexYear];
-  } else {
-    return {};
+  if (rentIndexYear) {
+    console.log(featureKeysByYear[rentIndexYear]);
   }
+  return undefined;
 };
-
-*/
