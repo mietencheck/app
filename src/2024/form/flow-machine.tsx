@@ -16,7 +16,6 @@ import { useLocalStorage } from "usehooks-ts";
 import { MietspiegelJahr } from "~/form/mietspiegel";
 import { parseAdresse } from "~/utils";
 
-import { getRentIndexYear } from "./api";
 import { StepInfoByAlias } from "./flow.fm";
 import flow from "./flow.fm.json";
 

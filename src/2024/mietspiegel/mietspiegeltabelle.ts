@@ -1,8 +1,14 @@
-export type RentIndexYear = "2015" | "2017" | "2019" | "2021" | "2023" | "2024";
+export type MietspiegelJahr =
+  | "2015"
+  | "2017"
+  | "2019"
+  | "2021"
+  | "2023"
+  | "2024";
 
-export type ResidentialArea = "einfach" | "mittel" | "gut";
+export type Wohnlage = "einfach" | "mittel" | "gut";
 
-export type ConstructionYearRange =
+export type Baujahr =
   | "-1918"
   | "1919-1949"
   | "1950-1964"
@@ -84,9 +90,9 @@ export const constructionYearRangeByRentIndexYear = {
     "2010-2015",
     "2016-2022",
   ],
-} satisfies Record<RentIndexYear, ConstructionYearRange[]>;
+} satisfies Record<MietspiegelJahr, Baujahr[]>;
 
-export type SizeOfLivingSpace =
+export type Wohnflaeche =
   | "-35"
   | "-40"
   | "-45"
@@ -151,126 +157,119 @@ export type SizeOfLivingSpace =
   | "120"
   | "130-";
 
-export type FacilityDiscounts = Record<
-  RentIndexYear,
+export type AusstattungsAbzuege = Record<
+  MietspiegelJahr,
   Partial<
     Record<
-      ConstructionYearRange,
-      Record<"!CH && !BATH" | "!CH || !BATH", number> // CH == Central Heating ('Sammelheizung'), BATH == Bathroom ('Badezimmer')
+      Baujahr,
+      Record<"!SH && !Bad" | "!SH || !Bad", number> // SH == Central Heating ('Sammelheizung'), Bad == Bathroom ('Badezimmer')
     >
   >
 >;
 
-export const facilityDiscounts = {
+export const ausstattungsAbzuegeByYear = {
   "2015": {
     "-1918": {
-      "!CH && !BATH": 2.65,
-      "!CH || !BATH": 1.94,
+      "!SH && !Bad": 2.65,
+      "!SH || !Bad": 1.94,
     },
     "1919-1949": {
-      "!CH && !BATH": 2.65,
-      "!CH || !BATH": 1.67,
+      "!SH && !Bad": 2.65,
+      "!SH || !Bad": 1.67,
     },
     "1950-1964": {
-      "!CH && !BATH": 1.03,
-      "!CH || !BATH": 1.03,
+      "!SH && !Bad": 1.03,
+      "!SH || !Bad": 1.03,
     },
   },
   "2017": {
     "-1918": {
-      "!CH && !BATH": 1.34,
-      "!CH || !BATH": 0.87,
+      "!SH && !Bad": 1.34,
+      "!SH || !Bad": 0.87,
     },
     "1919-1949": {
-      "!CH && !BATH": 0.87,
-      "!CH || !BATH": 0.35,
+      "!SH && !Bad": 0.87,
+      "!SH || !Bad": 0.35,
     },
     "1950-1964": {
-      "!CH && !BATH": 0.81,
-      "!CH || !BATH": 0.81,
+      "!SH && !Bad": 0.81,
+      "!SH || !Bad": 0.81,
     },
   },
   "2019": {
     "-1918": {
-      "!CH && !BATH": 2.2,
-      "!CH || !BATH": 1.41,
+      "!SH && !Bad": 2.2,
+      "!SH || !Bad": 1.41,
     },
     "1919-1949": {
-      "!CH && !BATH": 2.2,
-      "!CH || !BATH": 0.43,
+      "!SH && !Bad": 2.2,
+      "!SH || !Bad": 0.43,
     },
     "1950-1964": {
-      "!CH && !BATH": 1.45,
-      "!CH || !BATH": 1.45,
+      "!SH && !Bad": 1.45,
+      "!SH || !Bad": 1.45,
     },
   },
   "2021": {
     "-1918": {
-      "!CH && !BATH": 2.22,
-      "!CH || !BATH": 1.43,
+      "!SH && !Bad": 2.22,
+      "!SH || !Bad": 1.43,
     },
     "1919-1949": {
-      "!CH && !BATH": 2.22,
-      "!CH || !BATH": 0.43,
+      "!SH && !Bad": 2.22,
+      "!SH || !Bad": 0.43,
     },
     "1950-1964": {
-      "!CH && !BATH": 1.47,
-      "!CH || !BATH": 1.47,
+      "!SH && !Bad": 1.47,
+      "!SH || !Bad": 1.47,
     },
   },
   "2023": {
     "-1918": {
-      "!CH && !BATH": 2.34,
-      "!CH || !BATH": 1.51,
+      "!SH && !Bad": 2.34,
+      "!SH || !Bad": 1.51,
     },
     "1919-1949": {
-      "!CH && !BATH": 2.34,
-      "!CH || !BATH": 0.45,
+      "!SH && !Bad": 2.34,
+      "!SH || !Bad": 0.45,
     },
     "1950-1964": {
-      "!CH && !BATH": 1.55,
-      "!CH || !BATH": 1.55,
+      "!SH && !Bad": 1.55,
+      "!SH || !Bad": 1.55,
     },
   },
   "2024": {
     "-1918": {
-      "!CH && !BATH": 0.45,
-      "!CH || !BATH": 0.45,
+      "!SH && !Bad": 0.45,
+      "!SH || !Bad": 0.45,
     },
     "1919-1949": {
-      "!CH && !BATH": 0.45,
-      "!CH || !BATH": 0.45,
+      "!SH && !Bad": 0.45,
+      "!SH || !Bad": 0.45,
     },
     "1950-1964": {
-      "!CH && !BATH": 0.45,
-      "!CH || !BATH": 0.45,
+      "!SH && !Bad": 0.45,
+      "!SH || !Bad": 0.45,
     },
   },
-} satisfies FacilityDiscounts;
+} satisfies AusstattungsAbzuege;
 
-type RentBracketAverage = number;
-type RentBracketLowerThreshold = number;
-type RentBracketUpperThreshold = number;
-export type RentBracket = [
-  RentBracketAverage,
-  RentBracketLowerThreshold,
-  RentBracketUpperThreshold,
-];
+type Mittelwert = number;
+type Unterwert = number;
+type Oberwert = number;
+export type Preisspanne = [Mittelwert, Unterwert, Oberwert];
 
-export type RentIndex = Record<
-  RentIndexYear,
+export type Mietspiegeltabelle = Record<
+  MietspiegelJahr,
   Partial<
     Record<
-      ConstructionYearRange,
-      Record<
-        ResidentialArea,
-        RentBracket | Partial<Record<SizeOfLivingSpace, RentBracket>>
-      >
+      Baujahr,
+      Record<Wohnlage, Preisspanne | Partial<Record<Wohnflaeche, Preisspanne>>>
     >
   >
 >;
 
-export const rentBrackets = {
+export const mietspiegeltabelleByJahr = {
   "2015": {
     "-1918": {
       einfach: {
@@ -1332,4 +1331,4 @@ export const rentBrackets = {
       },
     },
   },
-} satisfies RentIndex;
+} satisfies Mietspiegeltabelle;

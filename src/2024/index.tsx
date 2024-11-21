@@ -1,44 +1,40 @@
 import { useAnswers } from "~/2024/form/flow-machine";
 
-import { getLowestHighestRentBracket } from "./calculation/rentBracket";
+import { getLowestHighestPreisspanne } from "./calculation/preisspanne";
 import {
-  getAddress,
-  getConstructionYear,
-  getConstructionYearRange,
-  getFacilities,
-  getNetColdRent,
-  getRentIndexYear,
-  getResidentialArea,
-  getSizeOfLivingSpace,
-  getSizeOfLivingSpaceRange,
+  getAdresse,
+  getAusstattung,
+  getBaujahr,
+  getBaujahrSpanne,
+  getMietspiegelJahr,
+  getNettokaltmiete,
+  getWohnflaeche,
+  getWohnflaecheSpanne,
+  getWohnlage,
 } from "./form/api";
-import { useHighestLowestMaximumPermissibleRent } from "./utils";
+import { useLowestHighestZulaessigeHoechstmiete } from "./utils";
 
 export function Page2024() {
   const answers = useAnswers().getAliasedState();
-  useHighestLowestMaximumPermissibleRent();
+  useLowestHighestZulaessigeHoechstmiete();
 
-  const address = getAddress(answers);
+  const address = getAdresse(answers);
   const values = {
-    address: address
+    Adresse: address
       ? `${address.strasse} ${address.nummer}, ${address.plz} Berlin`
       : undefined,
-    constructionYear: getConstructionYear(answers),
-    sizeOfLivingSpace: getSizeOfLivingSpace(answers),
-    netColdRent: getNetColdRent(answers),
-    facilities: JSON.stringify(getFacilities(answers), null, 2),
+    Baujahr: getBaujahr(answers),
+    Wohnfläche: getWohnflaeche(answers),
+    Nettokaltmiete: getNettokaltmiete(answers),
+    Ausstattung: JSON.stringify(getAusstattung(answers), null, 2),
   };
 
-  const rentIndexTable = {
-    rentIndexYear: getRentIndexYear(answers),
-    constructionYearRange: getConstructionYearRange(answers),
-    residentialArea: JSON.stringify(getResidentialArea(answers), null, 2),
-    sizeOfLivingSpaceRange: getSizeOfLivingSpaceRange(answers),
-    highestLowestRentIndexBracket: JSON.stringify(
-      getLowestHighestRentBracket(answers),
-      null,
-      2,
-    ),
+  const mietspiegeltabelle = {
+    "Mietspiegel Jahr": getMietspiegelJahr(answers),
+    "Baujahr Spanne": getBaujahrSpanne(answers),
+    Wohnlage: JSON.stringify(getWohnlage(answers), null, 2),
+    "Wohnfläche Spanne": getWohnflaecheSpanne(answers),
+    Preisspanne: JSON.stringify(getLowestHighestPreisspanne(answers), null, 2),
   };
 
   const featureGroups = {};
@@ -81,12 +77,12 @@ export function Page2024() {
       <hr />
 
       <div className="flex flex-col gap-6">
-        <h2 className="title-20">Rent Index Bracket</h2>
-        {Object.keys(rentIndexTable).map((key) => (
+        <h2 className="title-20">Mietspiegeltabelle</h2>
+        {Object.keys(mietspiegeltabelle).map((key) => (
           <div className="" key={key}>
             <label className="block text-base-book mb-2">{key}</label>
             <div className="px-3 py-2 border border-neutral bg-gray-1 shadow-sm text-sm rounded">
-              {rentIndexTable[key as keyof typeof rentIndexTable] ||
+              {mietspiegeltabelle[key as keyof typeof mietspiegeltabelle] ||
                 "undefined"}
             </div>
           </div>
@@ -96,7 +92,7 @@ export function Page2024() {
       <hr />
 
       <div className="flex flex-col gap-6">
-        <h2 className="title-20">Feature Groups</h2>
+        <h2 className="title-20">Merkmalsgruppen</h2>
         {Object.keys(featureGroups).map((key) => (
           <div className="" key={key}>
             <label className="block text-base-book mb-2">{key}</label>

@@ -1,37 +1,36 @@
 import { FinalAnswers } from "~/2024/form/flow-machine";
-import { featureKeysByYear } from "~/2024/rentIndex/features";
+import { vertragsdatumToMietspiegelJahr } from "~/2024/form/mappings/vertragsdatum";
+import { featureKeysByYear } from "~/2024/mietspiegel/merkmale";
 import {
   constructionYearRangeByRentIndexYear,
-  rentBrackets,
-  RentIndexYear,
-} from "~/2024/rentIndex/rentBrackets";
+  MietspiegelJahr,
+  mietspiegeltabelleByJahr,
+} from "~/2024/mietspiegel/mietspiegeltabelle";
 import { parseAdresse } from "~/utils";
 
-import { contractDateToRentIndexYear } from "./mappings/contractDate";
-
-export const getRentIndexYear = (
+export const getMietspiegelJahr = (
   answers?: FinalAnswers,
-): RentIndexYear | undefined =>
+): MietspiegelJahr | undefined =>
   answers?.["Vertragsdatum"]
-    ? contractDateToRentIndexYear[answers["Vertragsdatum"]]
+    ? vertragsdatumToMietspiegelJahr[answers["Vertragsdatum"]]
     : undefined;
 
-export const getAddress = (
+export const getAdresse = (
   answers?: FinalAnswers,
 ): ReturnType<typeof parseAdresse> | undefined =>
   answers ? parseAdresse(answers["Adresse"] as string) : undefined;
 
-export const getResidentialArea = (answers?: FinalAnswers) =>
+export const getWohnlage = (answers?: FinalAnswers) =>
   answers ? answers["Wohnlage"] : undefined;
 
-export const getSizeOfLivingSpace = (answers?: FinalAnswers) =>
+export const getWohnflaeche = (answers?: FinalAnswers) =>
   answers ? Number(answers["Qm"]) : undefined;
 
-export const getSizeOfLivingSpaceRange = (answers?: FinalAnswers) => {
-  const rentIndexYear = getRentIndexYear(answers);
-  const constructionYearRange = getConstructionYearRange(answers);
-  const residentialArea = getResidentialArea(answers);
-  const sizeOfLivingSpace = getSizeOfLivingSpace(answers);
+export const getWohnflaecheSpanne = (answers?: FinalAnswers) => {
+  const rentIndexYear = getMietspiegelJahr(answers);
+  const constructionYearRange = getBaujahrSpanne(answers);
+  const residentialArea = getWohnlage(answers);
+  const sizeOfLivingSpace = getWohnflaeche(answers);
 
   if (
     rentIndexYear &&
@@ -40,8 +39,10 @@ export const getSizeOfLivingSpaceRange = (answers?: FinalAnswers) => {
     sizeOfLivingSpace
   ) {
     const livingSpaceRanges = Object.keys(
-      rentBrackets[rentIndexYear as keyof typeof rentBrackets][
-        constructionYearRange as keyof (typeof rentBrackets)[typeof rentIndexYear]
+      mietspiegeltabelleByJahr[
+        rentIndexYear as keyof typeof mietspiegeltabelleByJahr
+      ][
+        constructionYearRange as keyof (typeof mietspiegeltabelleByJahr)[typeof rentIndexYear]
       ][residentialArea],
     );
 
@@ -57,16 +58,16 @@ export const getSizeOfLivingSpaceRange = (answers?: FinalAnswers) => {
   return undefined;
 };
 
-export const getConstructionYear = (answers?: FinalAnswers) =>
+export const getBaujahr = (answers?: FinalAnswers) =>
   answers ? Number(answers["Baujahr"]) : undefined;
 
-export const getConstructionYearRange = (answers?: FinalAnswers) => {
-  const constructionYear = getConstructionYear(answers);
-  const rentIndexYear = getRentIndexYear(answers);
+export const getBaujahrSpanne = (answers?: FinalAnswers) => {
+  const constructionYear = getBaujahr(answers);
+  const rentIndexYear = getMietspiegelJahr(answers);
 
   if (constructionYear && rentIndexYear) {
     return constructionYearRangeByRentIndexYear[
-      rentIndexYear as RentIndexYear
+      rentIndexYear as MietspiegelJahr
     ].find((constructionYearRange) => {
       const constructionYearLimits = constructionYearRange
         .replace(/^(W:|O:)/, "")
@@ -89,18 +90,19 @@ export const getConstructionYearRange = (answers?: FinalAnswers) => {
   return undefined;
 };
 
-export const getNetColdRent = (answers?: FinalAnswers): number | undefined =>
-  answers ? Number(answers["Kaltmiete"]) : undefined;
+export const getNettokaltmiete = (
+  answers?: FinalAnswers,
+): number | undefined => (answers ? Number(answers["Kaltmiete"]) : undefined);
 
-export const getFacilities = (answers?: FinalAnswers) => {
+export const getAusstattung = (answers?: FinalAnswers) => {
   return {
-    centralHeating: answers?.["Wohnung hat Sammelheizung"],
-    bathroom: answers?.["Badezimmer in Wohnung"],
+    sammelheizung: answers?.["Wohnung hat Sammelheizung"],
+    bad: answers?.["Badezimmer in Wohnung"],
   };
 };
 
-export const getFeatureGroups = (answers?: FinalAnswers) => {
-  const rentIndexYear = getRentIndexYear(answers);
+export const getMerkmalsgruppen = (answers?: FinalAnswers) => {
+  const rentIndexYear = getMietspiegelJahr(answers);
 
   if (rentIndexYear) {
     console.log(featureKeysByYear[rentIndexYear]);
