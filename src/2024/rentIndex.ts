@@ -151,12 +151,24 @@ export type LivingSpace =
   | "120"
   | "130-";
 
+type RentBracketAverage = number;
+type RentBracketLowerThreshold = number;
+type RentBracketUpperThreshold = number;
+export type RentBracket = [
+  RentBracketAverage,
+  RentBracketLowerThreshold,
+  RentBracketUpperThreshold,
+];
+
 export type RentIndex = Record<
   RentIndexYear,
   Partial<
     Record<
       ConstructionYearRange,
-      Record<ResidentialArea, number[] | Partial<Record<LivingSpace, number[]>>>
+      Record<
+        ResidentialArea,
+        RentBracket | Partial<Record<LivingSpace, RentBracket>>
+      >
     >
   >
 >;

@@ -1,6 +1,6 @@
 import { useAnswers } from "~/form/flow-machine";
 
-import { getLowestHighestPriceRange } from "./calculation/priceRange";
+import { getLowestHighestRentIndexBracket } from "./calculation/rentIndexBracket";
 import {
   getAddress,
   getConstructionYear,
@@ -34,16 +34,14 @@ export function Page2024() {
     constructionYearRange: getConstructionYearRange(answers),
     residentialArea: JSON.stringify(getResidentialArea(answers), null, 2),
     sizeOfLivingSpaceRange: getSizeOfLivingSpaceRange(answers),
-    highestLowestPriceRange: JSON.stringify(
-      getLowestHighestPriceRange(answers),
+    highestLowestRentIndexBracket: JSON.stringify(
+      getLowestHighestRentIndexBracket(answers),
       null,
       2,
     ),
   };
 
-  const featureGroups = {
-    foo: "bar",
-  };
+  const featureGroups = {};
 
   return (
     <main className="container my-8 flex flex-col gap-12">
@@ -83,7 +81,7 @@ export function Page2024() {
       <hr />
 
       <div className="flex flex-col gap-6">
-        <h2 className="title-20">Rent Index Table Lookup</h2>
+        <h2 className="title-20">Rent Index Bracket</h2>
         {Object.keys(rentIndexTable).map((key) => (
           <div className="" key={key}>
             <label className="block text-base-book mb-2">{key}</label>
