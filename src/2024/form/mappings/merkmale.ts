@@ -1,6 +1,4 @@
-type FeatureGroup = "Bad" | "Küche" | "Wohnung" | "Gebäude" | "Umfeld";
-
-export const featureGroupAnswerMapping = {
+export const merkmale = {
   Bad: {
     pro: {
       Großbad: { "Bad ist groß": "Ja" },
@@ -273,9 +271,4 @@ export const featureGroupAnswerMapping = {
       },
     },
   },
-} satisfies {
-  [Key in FeatureGroup]: {
-    pro: MerkmalAnswers<Key, "+">;
-    con: MerkmalAnswers<Key, "-">;
-  };
 };
