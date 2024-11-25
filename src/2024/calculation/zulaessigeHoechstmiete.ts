@@ -1,16 +1,23 @@
-import { getLowestHighestPreisspanne } from "~/2024/calculation/preisspanne";
 import { FinalAnswers } from "~/form/flow-machine";
 
-import { getLowestHighestSpanneneinordnung } from "./spanneneinordnung";
+import { getLowestHighestOrtsueblicheVergleichsmiete } from "./ortsueblicheVergleichsmiete";
 
 export function getLowestHighestZulaessigeHoechstmiete(
   answers: FinalAnswers,
-): { lowest: number; highest: number } | null {
-  const lowestHighestPreisspanne = getLowestHighestPreisspanne(answers);
-  const lowestHighestSpanneneinordnung = getLowestHighestSpanneneinordnung();
+  visibleQuestionAliases: Set<string>,
+): { lowest: number; highest: number } | undefined {
+  const ortsueblicheVergleichsmiete =
+    getLowestHighestOrtsueblicheVergleichsmiete(
+      answers,
+      visibleQuestionAliases,
+    );
+
+  if (!ortsueblicheVergleichsmiete) {
+    return undefined;
+  }
 
   return {
-    lowest: 0,
-    highest: 0,
+    lowest: Math.round(ortsueblicheVergleichsmiete.lowest * 1.1 * 100) / 100,
+    highest: Math.round(ortsueblicheVergleichsmiete.highest * 1.1 * 100) / 100,
   };
 }

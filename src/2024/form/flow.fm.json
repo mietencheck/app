@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -22,7 +23,7 @@
           "id": "khlf2",
           "type": "Question",
           "alias": "Ost",
-          "text": "Liegt die Wohnung im Osten?",
+          "text": "",
           "info": null,
           "answer": {
             "type": "BooleanAnswer"
@@ -33,7 +34,7 @@
           "id": "be0en",
           "type": "Question",
           "alias": "Wohnlage",
-          "text": "Wie ist die Wohnlage?",
+          "text": "",
           "info": null,
           "answer": {
             "type": "ChoiceAnswer",
@@ -54,7 +55,8 @@
                 "text": "gut"
               }
             ]
-          }
+          },
+          "note": "Diese Frage wird nicht angezeigt"
         },
         {
           "id": "8ah5gi",
@@ -578,17 +580,6 @@
                       "alternate": []
                     }
                   ]
-                },
-                {
-                  "id": "hipf6j",
-                  "type": "Question",
-                  "alias": "Baujahr",
-                  "text": "",
-                  "info": null,
-                  "answer": {
-                    "type": "NumberAnswer"
-                  },
-                  "note": "Diese Frage wird nicht angezeigt"
                 }
               ]
             }
@@ -684,6 +675,17 @@
               "alternate": []
             }
           ]
+        },
+        {
+          "id": "hipf6j",
+          "type": "Question",
+          "alias": "Baujahr",
+          "text": "",
+          "info": null,
+          "answer": {
+            "type": "NumberAnswer"
+          },
+          "note": "Diese Frage wird nicht angezeigt"
         },
         {
           "id": "k3jgpi",
@@ -3161,6 +3163,7 @@
                 {
                   "id": "nrsqz",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "tqfuq",
@@ -3261,7 +3264,7 @@
                                         {
                                           "id": "uyizu",
                                           "type": "Question",
-                                          "alias": "Bad ist klein",
+                                          "alias": "Bad größer als 4qm",
                                           "text": "Gibt es ein Badezimmer, das größer als 4 qm ist?",
                                           "info": null,
                                           "answer": {
@@ -3357,7 +3360,7 @@
                                     {
                                       "id": "jxswc",
                                       "type": "Question",
-                                      "alias": "Bad ist klein",
+                                      "alias": "Bad größer als 4qm",
                                       "text": "Gibt es ein Badezimmer, das größer als 4 qm ist?",
                                       "info": null,
                                       "answer": {
@@ -3389,6 +3392,7 @@
                             {
                               "id": "bzsmu",
                               "type": "If",
+                              "alternate": [],
                               "cases": [
                                 {
                                   "id": "yc1a3",
@@ -3397,7 +3401,7 @@
                                     "id": "oxt1s",
                                     "questionRef": {
                                       "type": "AliasRef",
-                                      "value": "Bad ist klein"
+                                      "value": "Bad größer als 4qm"
                                     },
                                     "negated": false,
                                     "type": "AnswerOptionComparison",
@@ -3411,7 +3415,7 @@
                                     {
                                       "id": "vv7dk",
                                       "type": "Question",
-                                      "alias": "Bad ist groß",
+                                      "alias": "Bad größer als 8qm",
                                       "text": "Gibt es ein Badezimmer, das größer als 8qm ist?",
                                       "info": null,
                                       "answer": {
@@ -3438,8 +3442,7 @@
                                     }
                                   ]
                                 }
-                              ],
-                              "alternate": []
+                              ]
                             }
                           ]
                         },
@@ -3841,8 +3844,7 @@
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 },
                 {
                   "id": "wn0p",
@@ -5505,23 +5507,11 @@
                     {
                       "id": "g8u82",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "p3hax",
                           "type": "IfCase",
-                          "test": {
-                            "id": "mjvz1",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Küche ist groß"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "uiajj"
-                            ]
-                          },
                           "block": [
                             {
                               "id": "jaherg",
@@ -5551,10 +5541,23 @@
                               },
                               "note": "Merkmal:\nWohnküche (separater Raum mit mind. 14 m2 Grundfläche) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
-                          ]
+                          ],
+                          "test": {
+                            "id": "mjvz1",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Küche ist groß"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "uiajj",
+                              "8i22j"
+                            ]
+                          }
                         }
-                      ],
-                      "alternate": []
+                      ]
                     },
                     {
                       "id": "ckfyf",
@@ -10024,6 +10027,7 @@
                 {
                   "id": "8zr9m",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "y0mpq",
@@ -10181,25 +10185,12 @@
                                 {
                                   "id": "k0hjf",
                                   "type": "IfCase",
-                                  "test": {
-                                    "id": "5vmzv",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Vertragsdatum"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "ve0tek"
-                                    ]
-                                  },
                                   "block": [
                                     {
                                       "id": "c5gpt",
                                       "type": "Question",
                                       "alias": "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad",
-                                      "text": "Wurde die Heizanlage der Wohnung vor 1995 eingebaut?",
+                                      "text": "Wurde die Heizanlage der Wohnung vor 1988 eingebaut?",
                                       "info": "Beachte: Unter der Heizanlage versteht man nur das Gerät, welches die Wärme produziert, wie z.B. Gasheizungen, Ölheizungen oder Wärmepumpen. Die Heizkörper selber gehören nicht zur Heizanlage.",
                                       "answer": {
                                         "type": "ChoiceAnswer",
@@ -10226,10 +10217,41 @@
                                     {
                                       "id": "l4ygx",
                                       "type": "If",
+                                      "alternate": [],
                                       "cases": [
                                         {
                                           "id": "1aaq6h",
                                           "type": "IfCase",
+                                          "block": [
+                                            {
+                                              "id": "lae8ri",
+                                              "type": "Question",
+                                              "alias": "Gebäude hat moderne Heizanlage",
+                                              "text": "Wurde die Heizanlage der Wohnung nach dem 1.1.2003 eingebaut?",
+                                              "info": null,
+                                              "answer": {
+                                                "type": "ChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "uiajj",
+                                                    "alias": "Ja",
+                                                    "text": "Ja"
+                                                  },
+                                                  {
+                                                    "id": "qzhja",
+                                                    "alias": "Nein",
+                                                    "text": "Nein"
+                                                  },
+                                                  {
+                                                    "id": "8i22j",
+                                                    "alias": "Nicht sicher",
+                                                    "text": "Ich bin mir nicht sicher"
+                                                  }
+                                                ]
+                                              },
+                                              "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                            }
+                                          ],
                                           "test": {
                                             "id": "zeqiv",
                                             "type": "LogicalOperation",
@@ -10262,47 +10284,32 @@
                                                 "comparands": [
                                                   {
                                                     "type": "NumberLiteral",
-                                                    "value": 2009
+                                                    "value": 2003
                                                   }
                                                 ]
                                               }
                                             ]
-                                          },
-                                          "block": [
-                                            {
-                                              "id": "lae8ri",
-                                              "type": "Question",
-                                              "alias": "Gebäude hat moderne Heizanlage",
-                                              "text": "Wurde die Heizanlage der Wohnung nach dem 01.01.2009 eingebaut?",
-                                              "info": null,
-                                              "answer": {
-                                                "type": "ChoiceAnswer",
-                                                "options": [
-                                                  {
-                                                    "id": "uiajj",
-                                                    "alias": "Ja",
-                                                    "text": "Ja"
-                                                  },
-                                                  {
-                                                    "id": "qzhja",
-                                                    "alias": "Nein",
-                                                    "text": "Nein"
-                                                  },
-                                                  {
-                                                    "id": "8i22j",
-                                                    "alias": "Nicht sicher",
-                                                    "text": "Ich bin mir nicht sicher"
-                                                  }
-                                                ]
-                                              },
-                                              "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                            }
-                                          ]
+                                          }
                                         }
-                                      ],
-                                      "alternate": []
+                                      ]
                                     }
-                                  ]
+                                  ],
+                                  "test": {
+                                    "id": "5vmzv",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
+                                    ]
+                                  }
                                 }
                               ],
                               "alternate": [
@@ -10310,7 +10317,7 @@
                                   "id": "kgwau",
                                   "type": "Question",
                                   "alias": "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad",
-                                  "text": "Wurde die Heizanlage der Wohnung vor 1988 eingebaut?",
+                                  "text": "Wurde die Heizanlage der Wohnung vor 1995 eingebaut?",
                                   "info": "Beachte: Unter der Heizanlage versteht man nur das Gerät, welches die Wärme produziert, wie z.B. Gasheizungen, Ölheizungen oder Wärmepumpen. Die Heizkörper selber gehören nicht zur Heizanlage.",
                                   "answer": {
                                     "type": "ChoiceAnswer",
@@ -10337,10 +10344,41 @@
                                 {
                                   "id": "3thr8",
                                   "type": "If",
+                                  "alternate": [],
                                   "cases": [
                                     {
                                       "id": "2pizn",
                                       "type": "IfCase",
+                                      "block": [
+                                        {
+                                          "id": "lrsyb",
+                                          "type": "Question",
+                                          "alias": "Gebäude hat moderne Heizanlage",
+                                          "text": "Wurde die Heizanlage der Wohnung nach dem 1.1.2009 erneuert?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ],
                                       "test": {
                                         "id": "zggu",
                                         "type": "LogicalOperation",
@@ -10373,45 +10411,14 @@
                                             "comparands": [
                                               {
                                                 "type": "NumberLiteral",
-                                                "value": 2003
+                                                "value": 2009
                                               }
                                             ]
                                           }
                                         ]
-                                      },
-                                      "block": [
-                                        {
-                                          "id": "lrsyb",
-                                          "type": "Question",
-                                          "alias": "Gebäude hat moderne Heizanlage",
-                                          "text": "Wurde die Heizanlage der Wohnung nach dem 1.1.2003 erneuert?",
-                                          "info": null,
-                                          "answer": {
-                                            "type": "ChoiceAnswer",
-                                            "options": [
-                                              {
-                                                "id": "uiajj",
-                                                "alias": "Ja",
-                                                "text": "Ja"
-                                              },
-                                              {
-                                                "id": "qzhja",
-                                                "alias": "Nein",
-                                                "text": "Nein"
-                                              },
-                                              {
-                                                "id": "8i22j",
-                                                "alias": "Nicht sicher",
-                                                "text": "Ich bin mir nicht sicher"
-                                              }
-                                            ]
-                                          },
-                                          "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                        }
-                                      ]
+                                      }
                                     }
-                                  ],
-                                  "alternate": []
+                                  ]
                                 }
                               ]
                             }
@@ -10557,8 +10564,7 @@
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 }
               ]
             },
@@ -11402,6 +11408,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }

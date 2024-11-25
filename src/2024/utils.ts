@@ -12,7 +12,10 @@ export function useLowestHighestZulaessigeHoechstmiete() {
 
   return useMemo(
     () =>
-      getLowestHighestZulaessigeHoechstmiete(answers.getAliasedState()) ?? {
+      getLowestHighestZulaessigeHoechstmiete(
+        answers.getAliasedState(),
+        visibleQuestionAlises,
+      ) ?? {
         highest: 0,
         lowest: 0,
       },

@@ -1,29 +1,29 @@
 import {
   getAusstattung,
   getBaujahrSpanne,
-  getMietspiegelJahr,
+  getMietspiegeljahr,
   getWohnflaecheSpanne,
   getWohnlage,
 } from "~/2024/form/api";
-import {
-  ausstattungsAbzuegeByYear,
-  mietspiegeltabelleByJahr,
-  Preisspanne,
-} from "~/2024/mietspiegel/mietspiegeltabelle";
 import { FinalAnswers } from "~/form/flow-machine";
 
+import { ausstattungsAbzuegeByYear } from "../mietspiegel/ausstattungsAbzuege";
+import { preisspannenByMietspiegeljahr } from "../mietspiegel/preisspannen";
+import { Preisspanne } from "../mietspiegel/types";
+
 /**
- * Calculates the lowest and highest possible facility discounts ('Ausstattungsabzug').
+ * Calculates the lowest and highest possible Ausstattungsabzug ('facility discount') based on the provided answers.
  *
  * @param {FinalAnswers} answers - The answers object containing user input data.
  * @returns  {{ highestDiscount: number; lowestDiscount: number } | undefined} - The lowest and highest discounts in Euro, or undefined if the calculation cannot be performed.
  */
 export function getLowestHighestAusstattungsAbzug(
   answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
 ): { highestDiscount: number; lowestDiscount: number } | undefined {
-  const mietspiegelJahr = getMietspiegelJahr(answers);
-  const baujahrSpanne = getBaujahrSpanne(answers);
-  const ausstattung = getAusstattung(answers);
+  const mietspiegelJahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
+  const ausstattung = getAusstattung(answers, visibleQuestionAliases);
 
   if (
     !mietspiegelJahr ||
@@ -48,9 +48,9 @@ export function getLowestHighestAusstattungsAbzug(
     };
   }
 
-  const isChecked = (m: "Ja" | "Nein" | "Nicht sicher") => m == "Ja";
+  const isChecked = (m: "Ja" | "Nein" | "Nicht sicher") => m == "Nein";
   const isMaybeOrChecked = (m: "Ja" | "Nein" | "Nicht sicher") =>
-    m == "Ja" || m == "Nicht sicher";
+    m == "Nein" || m == "Nicht sicher";
 
   const highestDiscount =
     isMaybeOrChecked(ausstattung.sammelheizung) &&
@@ -74,23 +74,29 @@ export function getLowestHighestAusstattungsAbzug(
 }
 
 /**
- *  Calculates the lowest and highest applicable bracket from rent index based on the provided answers.
+ *  Calculates the lowest and highest applicable Preisspanne ('rent bracket') based on the provided answers.
  *
  * @param {FinalAnswers} answers - The answers object containing user input data.
- * @returns {{ lowest: Mietspiegeltabelle; highest: Mietspiegeltabelle  } | undefined} - The the highest and lowest rent bracket, each represented as a tuple of three numbers (average value, lower threshold, upper threshold), or undefined if the calculation.
+ * @returns {{ lowest: Preisspanne; highest: Preisspanne  } | undefined} - The the highest and lowest Preisspanne, each represented as a tuple of three numbers (average value, lower threshold, upper threshold), or undefined if the calculation.
  */
 export function getLowestHighestPreisspanne(
   answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
 ): { lowest: Preisspanne; highest: Preisspanne } | undefined {
-  const mietspiegelJahr = getMietspiegelJahr(answers);
-  const baujahrSpanne = getBaujahrSpanne(answers);
-  const wohnflaecheSpanne = getWohnflaecheSpanne(answers);
-  const wohnlage = getWohnlage(answers);
-  const highestLowestAusstattungsAbzug =
-    getLowestHighestAusstattungsAbzug(answers);
+  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
+  const wohnflaecheSpanne = getWohnflaecheSpanne(
+    answers,
+    visibleQuestionAliases,
+  );
+  const wohnlage = getWohnlage(answers, visibleQuestionAliases);
+  const highestLowestAusstattungsAbzug = getLowestHighestAusstattungsAbzug(
+    answers,
+    visibleQuestionAliases,
+  );
 
   if (
-    !mietspiegelJahr ||
+    !mietspiegeljahr ||
     !baujahrSpanne ||
     !wohnlage ||
     !wohnflaecheSpanne ||
@@ -100,37 +106,37 @@ export function getLowestHighestPreisspanne(
   }
 
   // No idea if there's a better way to do this, TS is a mystery to me
-  const mietspiegeltabelle =
-    mietspiegeltabelleByJahr[
-      mietspiegelJahr as keyof typeof mietspiegeltabelleByJahr
+  const preisspannen =
+    preisspannenByMietspiegeljahr[
+      mietspiegeljahr as keyof typeof preisspannenByMietspiegeljahr
     ];
-  const mietspiegeltabelleForBaujahrSpanne =
-    mietspiegeltabelle[
-      baujahrSpanne as keyof (typeof mietspiegeltabelleByJahr)[typeof mietspiegelJahr]
+  const preisspannenForBaujahrSpanne =
+    preisspannen[
+      baujahrSpanne as keyof (typeof preisspannenByMietspiegeljahr)[typeof mietspiegeljahr]
     ];
-  const mietspiegeltabelleForWohnlage =
-    mietspiegeltabelleForBaujahrSpanne[wohnlage];
-  const mietspiegeltabelleForWohnflaeche =
-    mietspiegeltabelleForWohnlage[
-      wohnflaecheSpanne as keyof typeof mietspiegeltabelleForWohnlage
+  const preisspannenForWohnlage = preisspannenForBaujahrSpanne[wohnlage];
+  const preisspannenForWohnflaeche =
+    preisspannenForWohnlage[
+      wohnflaecheSpanne as keyof typeof preisspannenForWohnlage
     ];
 
-  const preisspanne = mietspiegeltabelleForWohnflaeche;
+  const preisspanne = preisspannenForWohnflaeche;
   if (!preisspanne) {
     return undefined;
   }
 
   const { highestDiscount, lowestDiscount } = highestLowestAusstattungsAbzug;
+
   return {
     lowest: [
-      Math.round((preisspanne[0] - highestDiscount) * 100) / 100,
-      Math.round((preisspanne[1] - highestDiscount) * 100) / 100,
-      Math.round((preisspanne[2] - highestDiscount) * 100) / 100,
+      Number((preisspanne[0] - highestDiscount).toFixed(2)),
+      Number((preisspanne[1] - highestDiscount).toFixed(2)),
+      Number((preisspanne[2] - highestDiscount).toFixed(2)),
     ],
     highest: [
-      Math.round((preisspanne[0] - lowestDiscount) * 100) / 100,
-      Math.round((preisspanne[1] - lowestDiscount) * 100) / 100,
-      Math.round((preisspanne[2] - lowestDiscount) * 100) / 100,
+      Number((preisspanne[0] - lowestDiscount).toFixed(2)),
+      Number((preisspanne[1] - lowestDiscount).toFixed(2)),
+      Number((preisspanne[2] - lowestDiscount).toFixed(2)),
     ],
   };
 }
