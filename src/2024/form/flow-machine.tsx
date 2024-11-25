@@ -13,27 +13,14 @@ import React, {
 } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
-import { MietspiegelJahr } from "~/form/mietspiegel";
 import { parseAdresse } from "~/utils";
 
 import { StepInfoByAlias } from "./flow.fm";
 import flow from "./flow.fm.json";
+import { vertragsdatumToMietspiegelJahrMapping } from "./mappings/vertragsdatum";
 
 export type EstimateAnswers = StepInfoByAlias["Einschätzung"]["state"];
 export type FinalAnswers = StepInfoByAlias["Auswertung"]["state"];
-
-export const vertragsDatumToMietspiegelJahr = {
-  "<2015": null,
-  "2015-2016": "2015",
-  "2016-2018": "2017",
-  "2018-2020": "2019",
-  "2020-2022": "2021",
-  "2022-2024": "2023",
-  ">2024": null,
-} satisfies Record<
-  NonNullable<EstimateAnswers["Vertragsdatum"]>,
-  MietspiegelJahr | null
->;
 
 const noop = () => {};
 
@@ -69,27 +56,27 @@ export function useFlowMachine() {
 
 type AnswerMachine = ReturnType<typeof flowMachine.answers>;
 
-function getLageInfo(answers: AnswerMachine) {
-  const datum = answers.getWithOptionAlias("Vertragsdatum");
-  const jahr = (datum && vertragsDatumToMietspiegelJahr[datum]) || null;
+function buildLageInfo(answers: AnswerMachine) {
+  const vertragsdatum = answers.getWithOptionAlias("Vertragsdatum");
+  const mietspieglJahr =
+    (vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum]) ||
+    undefined;
 
-  const adressValue = answers.get("Adresse");
+  const addresse = answers.get("Adresse");
   const lage =
-    (adressValue &&
-      typeof adressValue == "string" &&
-      parseAdresse(adressValue).lage) ||
+    (addresse && typeof addresse == "string" && parseAdresse(addresse).lage) ||
     null;
-  return (jahr && lage?.[jahr]) ?? null;
+  return (mietspieglJahr && lage?.[mietspieglJahr]) ?? null;
 }
 
-function buildConstructionYear(answers: AnswerMachine) {
-  const constructionYearRange = answers.getWithOptionAlias("Baujahr vor 2002");
-  const constructionYear = answers.getWithOptionAlias("Baujahr ab 2002");
+function buildBaujahr(answers: AnswerMachine) {
+  const baujahrSpanne = answers.getWithOptionAlias("Baujahr vor 2002");
+  const baujahr = answers.getWithOptionAlias("Baujahr ab 2002");
 
-  if (constructionYearRange == "2002-") {
-    return constructionYear;
+  if (baujahrSpanne == "2002-") {
+    return baujahr;
   } else {
-    const constructionYearBoundaries = constructionYearRange?.split("-");
+    const constructionYearBoundaries = baujahrSpanne?.split("-");
     return constructionYearBoundaries?.[0] !== ""
       ? constructionYearBoundaries?.[0]
       : constructionYearBoundaries[1];
@@ -121,8 +108,8 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
   );
 
   const answersValue = useMemo(() => {
-    const lageInfo = getLageInfo(bareAnswers);
-    const constructionYear = buildConstructionYear(bareAnswers); // Jonas
+    const lageInfo = buildLageInfo(bareAnswers);
+    const constructionYear = buildBaujahr(bareAnswers); // Jonas
     return flowMachine.answers(
       {
         ...storedAnswers,

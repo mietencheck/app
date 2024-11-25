@@ -1,7 +1,7 @@
 import { FinalAnswers } from "~/2024/form/flow-machine";
-import { MietspiegelJahr } from "~/2024/mietspiegel/mietspiegeltabelle";
+import { Mietspiegeljahr } from "~/2024/mietspiegel/types";
 
-export const vertragsdatumToMietspiegelJahr = {
+export const vertragsdatumToMietspiegelJahrMapping = {
   "<2015": undefined,
   "2015-2016": "2015",
   "2016-2018": "2017",
@@ -11,5 +11,5 @@ export const vertragsdatumToMietspiegelJahr = {
   ">2024": "2024",
 } satisfies Record<
   NonNullable<FinalAnswers["Vertragsdatum"]>,
-  MietspiegelJahr | undefined
+  Mietspiegeljahr | undefined
 >;

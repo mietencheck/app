@@ -1,56 +1,86 @@
+import { entries, fromEntries } from "remeda";
+
 import { FinalAnswers } from "~/2024/form/flow-machine";
-import { vertragsdatumToMietspiegelJahr } from "~/2024/form/mappings/vertragsdatum";
-import { featureKeysByYear } from "~/2024/mietspiegel/merkmale";
-import {
-  constructionYearRangeByRentIndexYear,
-  MietspiegelJahr,
-  mietspiegeltabelleByJahr,
-} from "~/2024/mietspiegel/mietspiegeltabelle";
+import { merkmaleByYear } from "~/2024/mietspiegel/merkmale";
 import { parseAdresse } from "~/utils";
 
-export const getMietspiegelJahr = (
-  answers?: FinalAnswers,
-): MietspiegelJahr | undefined =>
-  answers?.["Vertragsdatum"]
-    ? vertragsdatumToMietspiegelJahr[answers["Vertragsdatum"]]
+import { baujahrSpannenByMietspiegeljahr } from "../mietspiegel/baujahrSpannen";
+import { preisspannenByMietspiegeljahr } from "../mietspiegel/preisspannen";
+import { Mietspiegeljahr } from "../mietspiegel/types";
+import { answersToMerkmalStateMapping } from "./mappings/merkmale";
+import { answersToSondermerkmalStateMapping } from "./mappings/sondermerkmale";
+import { vertragsdatumToMietspiegelJahrMapping } from "./mappings/vertragsdatum";
+import { mapAnswerToMerkmalState } from "./utils/mapAnswerToMerkmalState";
+import {
+  mapMerkmalStateToMerkmalGruppen,
+  MerkmalGruppenStateList,
+  MerkmalStateList,
+  SondermerkmalStateList,
+} from "./utils/mapMerkmalStateToMerkmalGruppen";
+
+export const getMietspiegeljahr = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+): Mietspiegeljahr | undefined => {
+  const alias = "Vertragsdatum";
+  return answers[alias] && visibleQuestionAliases.has(alias)
+    ? vertragsdatumToMietspiegelJahrMapping[answers[alias]]
     : undefined;
+};
 
 export const getAdresse = (
-  answers?: FinalAnswers,
-): ReturnType<typeof parseAdresse> | undefined =>
-  answers ? parseAdresse(answers["Adresse"] as string) : undefined;
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+): ReturnType<typeof parseAdresse> | undefined => {
+  const alias = "Adresse";
+  return answers[alias] && visibleQuestionAliases.has(alias)
+    ? parseAdresse(answers[alias] as string)
+    : undefined;
+};
 
-export const getWohnlage = (answers?: FinalAnswers) =>
-  answers ? answers["Wohnlage"] : undefined;
+export const getWohnlage = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+) => {
+  const alias = "Wohnlage";
+  return answers[alias] && visibleQuestionAliases.has(alias)
+    ? answers[alias]
+    : undefined;
+};
 
-export const getWohnflaeche = (answers?: FinalAnswers) =>
-  answers ? Number(answers["Qm"]) : undefined;
+export const getWohnflaeche = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+) => {
+  const alias = "Qm";
+  return answers && visibleQuestionAliases?.has(alias)
+    ? Number(answers[alias])
+    : undefined;
+};
 
-export const getWohnflaecheSpanne = (answers?: FinalAnswers) => {
-  const rentIndexYear = getMietspiegelJahr(answers);
-  const constructionYearRange = getBaujahrSpanne(answers);
-  const residentialArea = getWohnlage(answers);
-  const sizeOfLivingSpace = getWohnflaeche(answers);
+export const getWohnflaecheSpanne = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+) => {
+  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
+  const wohnlage = getWohnlage(answers, visibleQuestionAliases);
+  const wohnflaeche = getWohnflaeche(answers, visibleQuestionAliases);
 
-  if (
-    rentIndexYear &&
-    constructionYearRange &&
-    residentialArea &&
-    sizeOfLivingSpace
-  ) {
+  if (mietspiegeljahr && baujahrSpanne && wohnlage && wohnflaeche) {
     const livingSpaceRanges = Object.keys(
-      mietspiegeltabelleByJahr[
-        rentIndexYear as keyof typeof mietspiegeltabelleByJahr
+      preisspannenByMietspiegeljahr[
+        mietspiegeljahr as keyof typeof preisspannenByMietspiegeljahr
       ][
-        constructionYearRange as keyof (typeof mietspiegeltabelleByJahr)[typeof rentIndexYear]
-      ][residentialArea],
+        baujahrSpanne as keyof (typeof preisspannenByMietspiegeljahr)[typeof mietspiegeljahr]
+      ][wohnlage],
     );
 
     return livingSpaceRanges.find((livingSpaceRange) => {
       const livingSpaceLimits = livingSpaceRange.split("-");
       return (
-        sizeOfLivingSpace >= Number(livingSpaceLimits[0]) &&
-        (sizeOfLivingSpace < Number(livingSpaceLimits[1]) ||
+        wohnflaeche >= Number(livingSpaceLimits[0]) &&
+        (wohnflaeche < Number(livingSpaceLimits[1]) ||
           livingSpaceLimits[1] === "")
       );
     });
@@ -58,23 +88,33 @@ export const getWohnflaecheSpanne = (answers?: FinalAnswers) => {
   return undefined;
 };
 
-export const getBaujahr = (answers?: FinalAnswers) =>
-  answers ? Number(answers["Baujahr"]) : undefined;
+export const getBaujahr = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+) => {
+  const alias = "Baujahr";
+  return answers && visibleQuestionAliases?.has(alias)
+    ? Number(answers[alias])
+    : undefined;
+};
 
-export const getBaujahrSpanne = (answers?: FinalAnswers) => {
-  const constructionYear = getBaujahr(answers);
-  const rentIndexYear = getMietspiegelJahr(answers);
+export const getBaujahrSpanne = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+) => {
+  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const baujahr = getBaujahr(answers, visibleQuestionAliases);
 
-  if (constructionYear && rentIndexYear) {
-    return constructionYearRangeByRentIndexYear[
-      rentIndexYear as MietspiegelJahr
-    ].find((constructionYearRange) => {
-      const constructionYearLimits = constructionYearRange
+  if (baujahr && mietspiegeljahr) {
+    return baujahrSpannenByMietspiegeljahr[
+      mietspiegeljahr as Mietspiegeljahr
+    ].find((baujahrSpanne) => {
+      const constructionYearLimits = baujahrSpanne
         .replace(/^(W:|O:)/, "")
         .split("-");
       return (
-        constructionYear >= Number(constructionYearLimits[0]) &&
-        constructionYear <= Number(constructionYearLimits[1])
+        baujahr >= Number(constructionYearLimits[0]) &&
+        baujahr <= Number(constructionYearLimits[1])
       );
       /*
         TODO: Does not(?) work as expected if constructionYear is higher than
@@ -91,21 +131,91 @@ export const getBaujahrSpanne = (answers?: FinalAnswers) => {
 };
 
 export const getNettokaltmiete = (
-  answers?: FinalAnswers,
-): number | undefined => (answers ? Number(answers["Kaltmiete"]) : undefined);
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+): number | undefined => {
+  const alias = "Kaltmiete";
+  return answers[alias] && visibleQuestionAliases?.has(alias)
+    ? Number(answers[alias])
+    : undefined;
+};
 
-export const getAusstattung = (answers?: FinalAnswers) => {
+export const getAusstattung = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+) => {
+  const alias_sh = "Wohnung hat Sammelheizung";
+  const alias_bad = "Badezimmer in Wohnung";
+
   return {
-    sammelheizung: answers?.["Wohnung hat Sammelheizung"],
-    bad: answers?.["Badezimmer in Wohnung"],
+    sammelheizung:
+      answers[alias_sh] && visibleQuestionAliases?.has(alias_sh)
+        ? answers[alias_sh]
+        : undefined,
+    bad:
+      answers[alias_bad] && visibleQuestionAliases?.has(alias_bad)
+        ? answers[alias_bad]
+        : undefined,
   };
 };
 
-export const getMerkmalsgruppen = (answers?: FinalAnswers) => {
-  const rentIndexYear = getMietspiegelJahr(answers);
+export const getMerkmalGruppenStates = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+): MerkmalGruppenStateList => {
+  const merkmale = getMerkmalStates(answers, visibleQuestionAliases);
+  return mapMerkmalStateToMerkmalGruppen(merkmale);
+};
 
-  if (rentIndexYear) {
-    console.log(featureKeysByYear[rentIndexYear]);
+export const getMerkmalStates = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+): MerkmalStateList => {
+  const mietspiegelJahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+
+  if (mietspiegelJahr) {
+    const merkmale = merkmaleByYear[mietspiegelJahr];
+
+    return fromEntries(
+      entries(answersToMerkmalStateMapping)
+        .filter(([merkmal]) => merkmale.has(merkmal))
+        .map(([key, answerMerkmalMapping]: [string, any]) => {
+          return [
+            key,
+            mapAnswerToMerkmalState(
+              answerMerkmalMapping,
+              answers,
+              visibleQuestionAliases,
+            ),
+          ];
+        }),
+    );
   }
-  return undefined;
+  return {};
+};
+
+export const getSondermerkmalStates = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+): SondermerkmalStateList | {} => {
+  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+
+  if (mietspiegeljahr == "2015") {
+    return fromEntries(
+      entries(answersToSondermerkmalStateMapping).map(
+        ([key, answerMerkmalMapping]: [string, any]) => {
+          return [
+            key,
+            mapAnswerToMerkmalState(
+              answerMerkmalMapping,
+              answers,
+              visibleQuestionAliases,
+            ),
+          ];
+        },
+      ),
+    );
+  }
+
+  return {};
 };
