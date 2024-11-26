@@ -1,4 +1,4 @@
-import { Baujahr, Mietspiegeljahr } from "./types";
+import { o_Baujahr, o_Mietspiegeljahr as Mietspiegeljahr } from "./types";
 
 export const baujahrSpannenByMietspiegeljahr = {
   "2015": [
@@ -64,4 +64,4 @@ export const baujahrSpannenByMietspiegeljahr = {
     "2010-2015",
     "2016-2022",
   ],
-} satisfies { [key in Mietspiegeljahr]: Baujahr[] };
+} satisfies { [key in Mietspiegeljahr]: o_Baujahr[] };

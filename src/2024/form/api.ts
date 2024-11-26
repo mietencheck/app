@@ -6,7 +6,7 @@ import { parseAdresse } from "~/utils";
 
 import { baujahrSpannenByMietspiegeljahr } from "../mietspiegel/baujahrSpannen";
 import { preisspannenByMietspiegeljahr } from "../mietspiegel/preisspannen";
-import { Mietspiegeljahr } from "../mietspiegel/types";
+import { o_Mietspiegeljahr as Mietspiegeljahr } from "../mietspiegel/types";
 import { answersToMerkmalStateMapping } from "./mappings/merkmale";
 import { answersToSondermerkmalStateMapping } from "./mappings/sondermerkmale";
 import { vertragsdatumToMietspiegelJahrMapping } from "./mappings/vertragsdatum";

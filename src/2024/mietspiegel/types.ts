@@ -12,7 +12,7 @@ type Unterwert = number;
 type Oberwert = number;
 export type Preisspanne = [Mittelwert, Unterwert, Oberwert];
 
-export type Mietspiegeljahr =
+export type o_Mietspiegeljahr =
   | "2015"
   | "2017"
   | "2019"
@@ -20,9 +20,42 @@ export type Mietspiegeljahr =
   | "2023"
   | "2024";
 
+export const enum Mietspiegeljahr {
+  _2015 = "2015",
+  _2017 = "2017",
+  _2019 = "2019",
+  _2021 = "2021",
+  _2023 = "2023",
+  _2024 = "2024",
+}
+
+export type AusstattungsAbzuege = Partial<Record<Baujahr, {
+  "!SH || !Bad": number;
+  "!SH && !Bad": number;
+}>>
+
 export type Wohnlage = "einfach" | "mittel" | "gut";
 
-export type Baujahr =
+export const enum Baujahr {
+  Pre_1918 = "-1918",
+  Range_1919_1949 = "1919-1949",
+  Range_1950_1964 = "1950-1964",
+  Range_1965_1972 = "1965-1972",
+  Range_1973_1985 = "W:1973-1985",
+  Range_West_1973_1990 = "W:1973-1990",
+  Range_West_1986_1990 = "W:1986-1990",
+  Range_Ost_1973_1990 = "O:1973-1990",
+  Range_1991_2001 = "1991-2001",
+  Range_1991_2002 = "1991-2002",
+  Range_2002_2009 = "2002-2009",
+  Range_2003_2013 = "2003-2013",
+  Range_2003_2015 = "2003-2015",
+  Range_2003_2017 = "2003-2017",
+  Range_2010_2015 = "2010-2015",
+  Range_2016_2022 = "2016-2022",
+}
+
+export type o_Baujahr =
   | "-1918"
   | "1919-1949"
   | "1950-1964"
@@ -44,7 +77,7 @@ export type BaujahrSpanne =
   (typeof baujahrSpannenByMietspiegeljahr)[keyof typeof baujahrSpannenByMietspiegeljahr][number];
 
 export type BaujahrSpanneInMietspiegeljahr = {
-  [Jahr in Mietspiegeljahr]: (typeof baujahrSpannenByMietspiegeljahr)[Jahr][number];
+  [Jahr in o_Mietspiegeljahr]: (typeof baujahrSpannenByMietspiegeljahr)[Jahr][number];
 };
 
 export type Wohnflaeche =

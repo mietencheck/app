@@ -1,6 +1,6 @@
 import {
   BaujahrSpanneInMietspiegeljahr,
-  Mietspiegeljahr,
+  o_Mietspiegeljahr as Mietspiegeljahr,
   Preisspanne,
   Wohnflaeche,
   Wohnlage,

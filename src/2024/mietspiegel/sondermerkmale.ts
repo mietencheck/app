@@ -1,6 +1,6 @@
 import {
   BaujahrSpanneInMietspiegeljahr,
-  Mietspiegeljahr,
+  o_Mietspiegeljahr as Mietspiegeljahr,
   Sondermerkmal,
 } from "./types";
 

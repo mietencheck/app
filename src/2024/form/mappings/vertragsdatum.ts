@@ -1,5 +1,5 @@
 import { FinalAnswers } from "~/2024/form/flow-machine";
-import { Mietspiegeljahr } from "~/2024/mietspiegel/types";
+import { o_Mietspiegeljahr as Mietspiegeljahr } from "~/2024/mietspiegel/types";
 
 export const vertragsdatumToMietspiegelJahrMapping = {
   "<2015": undefined,
