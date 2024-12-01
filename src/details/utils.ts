@@ -4,13 +4,14 @@ import { useCallback, useEffect, useMemo } from "react";
 import { mapValues } from "remeda";
 import { useLocalStorage, useSessionStorage } from "usehooks-ts";
 
+import { getLowestHighestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
+import { getNettokaltmiete } from "~/form/api";
 import {
   useAnswers,
   useMainSteps,
   useSteps,
   useVisibleQuestionAliases,
 } from "~/form/flow-machine";
-import { getWorstBestZulässigeHöchstmiete } from "~/form/rechner/Miete";
 
 import { NavItemData } from "./navigation";
 
@@ -78,7 +79,7 @@ const eqSet = (xs: Set<unknown>, ys: Set<unknown>) =>
 
 export const MISSING_OPTION_ALIAS = "Nicht sicher";
 
-const REQUIRED_QUESTION_ALIASES = ["Vertragsdatum", "Baujahr"] as const;
+const REQUIRED_QUESTION_ALIASES = [] as const;
 type RequiredQuestionAlias = (typeof REQUIRED_QUESTION_ALIASES)[number];
 
 export function useHasMissingAnswers() {
@@ -116,25 +117,35 @@ export function useMissingAnswersInSession(): Set<RequiredQuestionAlias> {
   return missing;
 }
 
-export function useWorstBestMiete() {
+export function useLowestHighestZulaessigeHoechstmiete(): {
+  lowest: number;
+  highest: number;
+} {
   const answers = useAnswers();
   const visibleQuestionAlises = useVisibleQuestionAliases();
   return useMemo(
     () =>
-      getWorstBestZulässigeHöchstmiete(
+      getLowestHighestZulaessigeHoechstmiete(
         answers.getAliasedState(),
         visibleQuestionAlises,
       ) ?? {
-        worst: 0,
-        best: 0,
+        lowest: 0,
+        highest: 0,
       },
     [answers, visibleQuestionAlises],
   );
 }
 
-export function useMieteDiff() {
-  const answers = useAnswers();
-  const miete = answers.get("Kaltmiete");
-  const worstBestMiete = useWorstBestMiete();
-  return mapValues(worstBestMiete, (n) => Number(miete) - n);
+export function useNettokaltmieteZulaessigeHoechstmieteDiff() {
+  const answers = useAnswers().getAliasedState();
+  const visibleQuestionAlises = useVisibleQuestionAliases();
+
+  const nettokaltmiete = getNettokaltmiete(answers, visibleQuestionAlises);
+  const lowestHighestZulaessigeHoechstmiete =
+    useLowestHighestZulaessigeHoechstmiete();
+
+  return mapValues(
+    lowestHighestZulaessigeHoechstmiete,
+    (n) => n - Number(nettokaltmiete),
+  );
 }

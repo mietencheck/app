@@ -1,6 +1,6 @@
 import { Button, Label, LinkButton } from "~/components";
 import { DetailsRouter } from "~/details/router";
-import { useMieteDiff } from "~/details/utils";
+import { useNettokaltmieteZulaessigeHoechstmieteDiff } from "~/details/utils";
 import { AdresseForm } from "~/form/adresse/AdresseForm";
 import { AnswerControl, GlossyText } from "~/form/AnswerControl";
 import { postMessageToFloma, useAnswers } from "~/form/flow-machine";
@@ -39,8 +39,8 @@ export function VorspeiseQuestion({
   const lString = useLocalizeString();
 
   const seenEstimator = useEstimatorSeen();
-  const { best: bestDiff } = useMieteDiff();
-  const showDetailsLinks = seenEstimator && bestDiff > 0;
+  const { lowest: lowestDiff } = useNettokaltmieteZulaessigeHoechstmieteDiff();
+  const showDetailsLinks = seenEstimator && lowestDiff > 0;
 
   return (
     <>

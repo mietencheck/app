@@ -1,6 +1,9 @@
 import React from "react";
-import { firstBy } from "remeda";
 
+import {
+  getLowestHighestMerkmalStateByGrupppeInPercent,
+  getLowestHighestSpanneneinordnung,
+} from "~/calculation/spanneneinordnung";
 import {
   Table,
   TableBody,
@@ -10,59 +13,63 @@ import {
   TableRow,
 } from "~/components/ui";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
-import { getWorstBestSpannenResults } from "~/form/rechner/MerkmalsGruppen";
 import { useLocalizeField } from "~/l10n";
-import { formatEuro } from "~/utils";
+import { MerkmalGruppe } from "~/mietspiegel/types";
 
-export function SpanneneinordnungTable() {
-  const answers = useAnswers();
-  const visibleQuestionAliases = useVisibleQuestionAliases();
+export const Percent = ({ value }: { value: number }) => (
+  <span>
+    {value > 0 && "+"}
+    {value * 100}%
+  </span>
+);
+
+export function SpanneneinordungTable() {
   const l = useLocalizeField();
-  const spannenResults = getWorstBestSpannenResults(
-    answers.getAliasedState(),
-    visibleQuestionAliases,
-  );
+  const answers = useAnswers().getAliasedState();
+  const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  // @Gregor das hier ist nicht richtig
-  const worstSpanne = firstBy(spannenResults, [(s) => s.worstResult, "desc"]);
-  const bestSpanne = firstBy(spannenResults, (s) => s.bestResult);
+  const { lowest: lowestSpanneneinordung, highest: highestSpanneneinordung } =
+    getLowestHighestSpanneneinordnung(answers, visibleQuestionAliases);
 
-  const rows = [
-    {
-      label: l("Unterwert"),
-      worst: `${formatEuro(worstSpanne?.min ?? 0)} ${l("pro")} m²`,
-      best: `${formatEuro(bestSpanne?.min ?? 0)} ${l("pro")} m²`,
-    },
-    {
-      label: l("Mittelwert"),
-      worst: `${formatEuro(worstSpanne?.center ?? 0)} ${l("pro")} m²`,
-      best: `${formatEuro(bestSpanne?.center ?? 0)} ${l("pro")} m²`,
-    },
-    {
-      label: l("Oberwert"),
-      worst: `${formatEuro(worstSpanne?.max ?? 0)} ${l("pro")} m²`,
-      best: `${formatEuro(bestSpanne?.max ?? 0)} ${l("pro")} m²`,
-    },
-  ];
+  const lowestHighestMerkmalStateByGrupppeInPercent =
+    getLowestHighestMerkmalStateByGrupppeInPercent(
+      answers,
+      visibleQuestionAliases,
+    );
 
-  if (worstSpanne == bestSpanne) {
+  if (lowestSpanneneinordung == highestSpanneneinordung) {
     return (
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>{l("Spanne")}</TableHead>
+            <TableHead>{l("Merkmalsgruppe")}</TableHead>
             <TableHead className="w-40 text-right">{l("Wert")}</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {rows.map(({ label, best }) => (
-            <React.Fragment key={label}>
-              <TableRow>
-                <TableCell>{label}</TableCell>
-                <TableCell className="w-40 text-right">{best}</TableCell>
-              </TableRow>
-            </React.Fragment>
-          ))}
+          {Object.entries(lowestHighestMerkmalStateByGrupppeInPercent).map(
+            ([merkmaleGruppe, percent]) => {
+              return (
+                <TableRow key={merkmaleGruppe}>
+                  <TableCell>{l(merkmaleGruppe as MerkmalGruppe)}</TableCell>
+                  <TableCell className="w-40 text-right">
+                    <Percent value={percent.highest} />{" "}
+                    {location.hash == "#debug" && (
+                      <span className="text-neutral-faded">
+                        {percent.highest}
+                      </span>
+                    )}
+                  </TableCell>
+                </TableRow>
+              );
+            },
+          )}
+          <TableRow>
+            <TableCell className="text-sm-medium">{l("Gesamt")}</TableCell>
+            <TableCell className="w-40 text-right">
+              <Percent value={highestSpanneneinordung} />
+            </TableCell>
+          </TableRow>
         </TableBody>
       </Table>
     );
@@ -72,45 +79,83 @@ export function SpanneneinordnungTable() {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>{l("Spanne")}</TableHead>
-          <TableHead className="hidden sm:table-cell w-40 text-right">
-            {l("Bester Fall")}
+          <TableHead>{l("Merkmalsgruppe")}</TableHead>
+          <TableHead className="w-40 hidden sm:table-cell text-right">
+            {l("Niedrigste Miete")}
           </TableHead>
-          <TableHead className="hidden sm:table-cell w-40 text-right">
-            {l("Schlechtester Fall")}
-          </TableHead>
-          <TableHead className="sm:hidden w-40 text-right">
-            ${l("Wert")}
+          <TableHead className="w-40 hidden sm:table-cell text-right">
+            {l("Höchste Miete")}
           </TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
-        {rows.map(({ label, worst, best }) => (
-          <React.Fragment key={label}>
-            <TableRow className="hidden sm:table-row">
-              <TableCell>{label}</TableCell>
-              <TableCell className="w-40 text-right">{best}</TableCell>
-              <TableCell className="w-40 text-right">{worst}</TableCell>
-            </TableRow>
-            <TableRow className="sm:hidden border-b-0">
-              <TableCell colSpan={2} className="text-sm-medium pb-0">
-                {label}
-              </TableCell>
-            </TableRow>
-            <TableRow className="sm:hidden border-b-0">
-              <TableCell className="text-neutral-faded pb-0">
-                {l("Bester Fall")}
-              </TableCell>
-              <TableCell className="w-40 text-right pb-0">{best}</TableCell>
-            </TableRow>
-            <TableRow className="sm:hidden">
-              <TableCell className="text-neutral-faded">
-                {l("Schlechtester Fall")}
-              </TableCell>
-              <TableCell className="w-40 text-right">{worst}</TableCell>
-            </TableRow>
-          </React.Fragment>
-        ))}
+        {Object.entries(lowestHighestMerkmalStateByGrupppeInPercent).map(
+          ([merkmaleGruppe, percent]) => (
+            <React.Fragment key={merkmaleGruppe}>
+              <TableRow className="hidden sm:table-row">
+                <TableCell>{l(merkmaleGruppe as MerkmalGruppe)}</TableCell>
+                <TableCell className="w-40 text-right">
+                  <Percent value={percent.lowest} />
+                </TableCell>
+                <TableCell className="w-40 text-right">
+                  <Percent value={percent.highest} />
+                </TableCell>
+              </TableRow>
+              <TableRow className="sm:hidden border-b-0">
+                <TableCell colSpan={2} className="text-sm-medium pb-0">
+                  {l(merkmaleGruppe as MerkmalGruppe)}
+                </TableCell>
+              </TableRow>
+              <TableRow className="sm:hidden border-b-0">
+                <TableCell className="text-neutral-faded pb-0">
+                  {l("Niedrigste Miete")}
+                </TableCell>
+                <TableCell className="w-40 text-right pb-0">
+                  <Percent value={percent.lowest} />
+                </TableCell>
+              </TableRow>
+              <TableRow className="sm:hidden">
+                <TableCell className="text-neutral-faded">
+                  {l("Höchste Miete")}
+                </TableCell>
+                <TableCell className="w-40 text-right">
+                  <Percent value={percent.highest} />
+                </TableCell>
+              </TableRow>
+            </React.Fragment>
+          ),
+        )}
+
+        <TableRow className="hidden sm:table-row">
+          <TableCell className="text-sm-medium">{l("Gesamt")}</TableCell>
+          <TableCell className="w-40 text-right">
+            <Percent value={lowestSpanneneinordung} />
+          </TableCell>
+          <TableCell className="w-40 text-right">
+            <Percent value={highestSpanneneinordung} />
+          </TableCell>
+        </TableRow>
+        <TableRow className="sm:hidden border-b-0">
+          <TableCell colSpan={2} className="text-sm-medium pb-0">
+            {l("Gesamt")}
+          </TableCell>
+        </TableRow>
+        <TableRow className="sm:hidden border-b-0">
+          <TableCell className="text-neutral-faded pb-0">
+            {l("Niedrigste Miete")}
+          </TableCell>
+          <TableCell className="w-40 text-right pb-0">
+            <Percent value={lowestSpanneneinordung} />
+          </TableCell>
+        </TableRow>
+        <TableRow className="sm:hidden">
+          <TableCell className="text-neutral-faded">
+            {l("Höchste Miete")}
+          </TableCell>
+          <TableCell className="w-40 text-right">
+            <Percent value={highestSpanneneinordung} />
+          </TableCell>
+        </TableRow>
       </TableBody>
     </Table>
   );

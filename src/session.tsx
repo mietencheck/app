@@ -7,8 +7,8 @@ import useSWR from "swr";
 import { useDebounceCallback, useLocalStorage } from "usehooks-ts";
 
 import { Button, TextInput } from "~/components/ui";
+import { useStoredAnswers } from "~/form/flow-machine";
 
-import { useStoredAnswers } from "./form/flow-machine";
 import { useLocalizeField, useLocalizeString } from "./l10n";
 import { parseAdresse } from "./utils";
 

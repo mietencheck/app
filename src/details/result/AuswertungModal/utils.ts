@@ -1,10 +1,6 @@
 import { entries } from "remeda";
 
 import { FinalAnswers } from "~/form/flow-machine";
-import {
-  getWorstBestSondermerkmalZuschlag,
-  sondermerkmalZuschläge2015,
-} from "~/form/rechner/Sondermerkmale";
 import type { DE } from "~/l10n";
 
 function makeKey<NS extends string, N extends string>(namespace: NS, name: N) {

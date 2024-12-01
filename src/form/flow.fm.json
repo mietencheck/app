@@ -23,7 +23,7 @@
           "id": "khlf2",
           "type": "Question",
           "alias": "Ost",
-          "text": "Liegt die Wohnung im Osten?",
+          "text": "",
           "info": null,
           "answer": {
             "type": "BooleanAnswer"
@@ -34,7 +34,7 @@
           "id": "be0en",
           "type": "Question",
           "alias": "Wohnlage",
-          "text": "Wie ist die Wohnlage?",
+          "text": "",
           "info": null,
           "answer": {
             "type": "ChoiceAnswer",
@@ -55,7 +55,8 @@
                 "text": "gut"
               }
             ]
-          }
+          },
+          "note": "Diese Frage wird nicht angezeigt"
         },
         {
           "id": "8ah5gi",
@@ -579,17 +580,6 @@
                       "alternate": []
                     }
                   ]
-                },
-                {
-                  "id": "hipf6j",
-                  "type": "Question",
-                  "alias": "Baujahr",
-                  "text": "",
-                  "info": null,
-                  "answer": {
-                    "type": "NumberAnswer"
-                  },
-                  "note": "Diese Frage wird nicht angezeigt"
                 }
               ]
             }
@@ -685,6 +675,17 @@
               "alternate": []
             }
           ]
+        },
+        {
+          "id": "hipf6j",
+          "type": "Question",
+          "alias": "Baujahr",
+          "text": "",
+          "info": null,
+          "answer": {
+            "type": "NumberAnswer"
+          },
+          "note": "Diese Frage wird nicht angezeigt"
         },
         {
           "id": "k3jgpi",
@@ -3262,7 +3263,7 @@
                                         {
                                           "id": "uyizu",
                                           "type": "Question",
-                                          "alias": "Bad ist klein",
+                                          "alias": "Bad größer als 4qm",
                                           "text": "Gibt es ein Badezimmer, das größer als 4 qm ist?",
                                           "info": null,
                                           "answer": {
@@ -3358,7 +3359,7 @@
                                     {
                                       "id": "jxswc",
                                       "type": "Question",
-                                      "alias": "Bad ist klein",
+                                      "alias": "Bad größer als 4qm",
                                       "text": "Gibt es ein Badezimmer, das größer als 4 qm ist?",
                                       "info": null,
                                       "answer": {
@@ -3398,7 +3399,7 @@
                                     "id": "oxt1s",
                                     "questionRef": {
                                       "type": "AliasRef",
-                                      "value": "Bad ist klein"
+                                      "value": "Bad größer als 4qm"
                                     },
                                     "negated": false,
                                     "type": "AnswerOptionComparison",
@@ -3412,7 +3413,7 @@
                                     {
                                       "id": "vv7dk",
                                       "type": "Question",
-                                      "alias": "Bad ist groß",
+                                      "alias": "Bad größer als 8qm",
                                       "text": "Gibt es ein Badezimmer, das größer als 8qm ist?",
                                       "info": null,
                                       "answer": {
@@ -5520,7 +5521,8 @@
                             "type": "AnswerOptionComparison",
                             "operator": "is",
                             "comparands": [
-                              "uiajj"
+                              "uiajj",
+                              "8i22j"
                             ]
                           },
                           "block": [
@@ -5695,58 +5697,32 @@
                   "alias": "Kochen",
                   "block": [
                     {
-                      "id": "ik6nig",
-                      "type": "If",
-                      "cases": [
-                        {
-                          "id": "wupdn",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "w3s95h",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Küche hat Einbauküche"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "tcod4"
-                            ]
+                      "id": "1fj01",
+                      "type": "Question",
+                      "alias": "Küche hat Kochmöglichkeit",
+                      "text": "Ist die Küche von der Vermieterin mit einem Herd ausgestattet worden?",
+                      "info": null,
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "uiajj",
+                            "alias": "Ja",
+                            "text": "Ja"
                           },
-                          "block": []
-                        }
-                      ],
-                      "alternate": [
-                        {
-                          "id": "1fj01",
-                          "type": "Question",
-                          "alias": "Küche hat Kochmöglichkeit",
-                          "text": "Ist die Küche von der Vermieterin mit einem Herd ausgestattet worden?",
-                          "info": null,
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "uiajj",
-                                "alias": "Ja",
-                                "text": "Ja"
-                              },
-                              {
-                                "id": "qzhja",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              },
-                              {
-                                "id": "8i22j",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
-                              }
-                            ]
+                          {
+                            "id": "qzhja",
+                            "alias": "Nein",
+                            "text": "Nein"
                           },
-                          "note": "Merkmal:\nKeine Kochmöglichkeit oder Gas-/ Elektroherd ohne Backofen [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
-                        }
-                      ]
+                          {
+                            "id": "8i22j",
+                            "alias": "Nicht sicher",
+                            "text": "Ich bin mir nicht sicher"
+                          }
+                        ]
+                      },
+                      "note": "Merkmal:\nKeine Kochmöglichkeit oder Gas-/ Elektroherd ohne Backofen [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                     },
                     {
                       "id": "u1p0u",
@@ -6267,16 +6243,20 @@
                             "type": "AnswerOptionComparison",
                             "operator": "is",
                             "comparands": [
-                              "ve0tek"
+                              "wejo0k",
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
                             ]
                           },
                           "block": [
                             {
-                              "id": "tte6r",
+                              "id": "qmoiq",
                               "type": "Question",
                               "alias": "Küche hat Kühlschrank",
-                              "text": "Ist die Küche von deiner Vermieterin mit mindestens einem der folgenden Geräte ausgestattet: Kühlschrank, Tiefkühlschrank, Geschirrspüler.",
-                              "info": "Diese Geräte zählen nur wenn sie bei der Überlassung in einem annähernd neuwertigen Zustand waren und der Vermieter keine extra Miete für sie verlangt.",
+                              "text": "Ist die Küche von der Vermieterin mit einem Kühlschrank ausgestattet worden?",
+                              "info": "Der Kühlschrank zählt nur wenn er bei der Überlassung in einem annähernd neuwertigen Zustand war und der Vermieter keine extra Miete für diesen verlangt.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
@@ -6297,18 +6277,18 @@
                                   }
                                 ]
                               },
-                              "note": "Merkmal MS 2024: Kühlschrank, Tiefkühlschrank/-truhe oder Geschirrspüler [++] \n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Moderne Küchenausstattung“ nicht zutrifft: Kühlschrank [++]\n\nMerkmal 2017-2023:\nKühlschrank [++]\n\nMerkmal >=2024: Kühlschrank, Tiefkühlschrank/-truhe oder Geschirrspüler [++] \n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         }
                       ],
                       "alternate": [
                         {
-                          "id": "qmoiq",
+                          "id": "tte6r",
                           "type": "Question",
                           "alias": "Küche hat Kühlschrank",
-                          "text": "Ist die Küche von der Vermieterin mit einem Kühlschrank ausgestattet worden?",
-                          "info": "Der Kühlschrank zählt nur wenn er bei der Überlassung in einem annähernd neuwertigen Zustand war und der Vermieter keine extra Miete für diesen verlangt.",
+                          "text": "Ist die Küche von deiner Vermieterin mit mindestens einem der folgenden Geräte ausgestattet: Kühlschrank, Tiefkühlschrank, Geschirrspüler.",
+                          "info": "Diese Geräte zählen nur wenn sie bei der Überlassung in einem annähernd neuwertigen Zustand waren und der Vermieter keine extra Miete für sie verlangt.",
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -6329,7 +6309,7 @@
                               }
                             ]
                           },
-                          "note": "Merkmal:\nKühlschrank [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Moderne Küchenausstattung“ nicht zutrifft: Kühlschrank [++]\n\nMerkmal 2017-2023:\nKühlschrank [++]\n\nMerkmal >=2024: Kühlschrank, Tiefkühlschrank/-truhe oder Geschirrspüler [++] \n\nJa -> Check\nNicht sicher -> Nicht sicher"
                         }
                       ]
                     }
@@ -6863,7 +6843,7 @@
                           }
                         ]
                       },
-                      "note": "Merkmal:\nÜberwiegend Einfachverglasung [--]\n\nJa -> Check\nNicht sicher -> Check"
+                      "note": "Merkmal 2015-2023:\nÜberwiegend Einfachverglasung [--]\n\nMerkmal >=2024:\nÜberwiegend Fenster mit Einfachverglasung (Doppel-Kastenfenster sind nicht gemeint) [--]\n\nJa -> Check\nNicht sicher -> Check"
                     },
                     {
                       "id": "wvdjy",
@@ -7912,6 +7892,7 @@
                     {
                       "id": "st50e",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "q7ioqk",
@@ -8049,75 +8030,77 @@
                             "type": "AnswerOptionComparison",
                             "operator": "is",
                             "comparands": [
-                              "ve0tek"
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
                             ]
                           },
-                          "block": []
-                        }
-                      ],
-                      "alternate": [
-                        {
-                          "id": "on961",
-                          "type": "If",
-                          "cases": [
+                          "block": [
                             {
-                              "id": "zddhe",
-                              "type": "IfCase",
-                              "test": {
-                                "id": "tpg7qi",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lt",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 1991
-                                  }
-                                ]
-                              },
-                              "block": [
+                              "type": "If",
+                              "id": "do9fh",
+                              "alternate": [],
+                              "cases": [
                                 {
-                                  "id": "qncu1",
-                                  "type": "Question",
-                                  "alias": "Wohnung hat Kaltwasserzähler",
-                                  "text": "Hat die Wohnung einen wohnungsbezogenen Kaltwasserzähler?",
-                                  "info": "Ein wohnungbezogener Kaltwasserzähler ermöglicht den Wasserverbrauch jeder Wohnung einzeln zu messen und somit auch die Wasserkosten für jede Wohnung einzeln abzurechnen.",
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "uiajj",
-                                        "alias": "Ja",
-                                        "text": "Ja"
+                                  "type": "IfCase",
+                                  "id": "mpdsn",
+                                  "block": [
+                                    {
+                                      "id": "qncu1",
+                                      "type": "Question",
+                                      "alias": "Wohnung hat Kaltwasserzähler",
+                                      "text": "Hat die Wohnung einen wohnungsbezogenen Kaltwasserzähler?",
+                                      "info": "Ein wohnungbezogener Kaltwasserzähler ermöglicht den Wasserverbrauch jeder Wohnung einzeln zu messen und somit auch die Wasserkosten für jede Wohnung einzeln abzurechnen.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
                                       },
+                                      "note": ""
+                                    }
+                                  ],
+                                  "test": {
+                                    "id": "v539b",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr"
+                                    },
+                                    "operator": "lt",
+                                    "negated": false,
+                                    "type": "AnswerNumberComparison",
+                                    "comparands": [
                                       {
-                                        "id": "qzhja",
-                                        "alias": "Nein",
-                                        "text": "Nein"
-                                      },
-                                      {
-                                        "id": "8i22j",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
+                                        "type": "NumberLiteral",
+                                        "value": 1991
                                       }
                                     ]
-                                  },
-                                  "note": ""
+                                  }
                                 }
                               ]
                             }
-                          ],
-                          "alternate": []
+                          ]
                         }
                       ]
                     },
                     {
                       "id": "i0xm5",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "bd8vr",
@@ -8162,12 +8145,11 @@
                                   }
                                 ]
                               },
-                              "note": "Merkmal 2015:\nWohnungsbezogener Kaltwasserzähler, wenn der Mieter nicht die Kosten für Miete oder Leasing im Rahmen der Betriebskosten trägt [++]\n\nMerkmal 2017:\nWohnungsbezogener Kaltwasserzähler in vor 1998 bezugsfertigen Gebäuden/ Wohnungen, wenn der Mieter nicht die Kosten für Miete oder Leasing im Rahmen der Betriebskosten trägt [++]\n\nMerkmal >=2019:\nWohnungsbezogener Kaltwasserzähler in vor 1991 bezugsfertigen Gebäuden/ Wohnungen, wenn der Mieter nicht die Kosten für Miete oder Leasing im Rahmen der Betriebskosten trägt [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nWohnungsbezogener Kaltwasserzähler, wenn der Mieter nicht die Kosten für Miete oder Leasing im Rahmen der Betriebskosten trägt [++]\n\nMerkmal 2017:\nWohnungsbezogener Kaltwasserzähler in vor 1998 bezugsfertigen Gebäuden/ Wohnungen, wenn der Mieter nicht die Kosten für Miete oder Leasing im Rahmen der Betriebskosten trägt [++]\n\nMerkmal 2019-2023:\nWohnungsbezogener Kaltwasserzähler in vor 1991 bezugsfertigen Gebäuden/ Wohnungen, wenn der Mieter nicht die Kosten für Miete oder Leasing im Rahmen der Betriebskosten trägt [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         }
-                      ],
-                      "alternate": []
+                      ]
                     }
                   ]
                 }
@@ -9599,6 +9581,7 @@
                       "id": "k8yvcl",
                       "type": "If",
                       "note": "Die Energieverbrauchskennwerte beziehen sich auf Energie für Heizung und Warmwasser. Für die Einordnung eines Endenergiebedarfskennwertes sind die oben angegebenen Verbrauchsenergiekennwert-Grenzen um 20 Prozent zu erhöhen. Für dezentrale Warmwasserversorgung sind vor der Eingruppierung 20 kWh/(m²a) auf den ausgewiesenen Energiekennwert aufzuschlagen.",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "1g99h",
@@ -9620,6 +9603,56 @@
                             {
                               "id": "jxtn1",
                               "type": "If",
+                              "alternate": [
+                                {
+                                  "id": "jpf6h",
+                                  "type": "Question",
+                                  "alias": "Energieverbrauchskennwert",
+                                  "text": "Wie hoch ist der Energieverbrauchskennwert der Wohnung?",
+                                  "info": null,
+                                  "note": "Energieverbauchskennwert",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "---",
+                                        "text": "Größer als 235 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "--",
+                                        "text": "Zwischen 196 und 235 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "-",
+                                        "text": "Zwischen 146 und 195 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "mr7pg",
+                                        "alias": "0",
+                                        "text": "Zwischen 120 und 145 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "3g6th",
+                                        "alias": "+",
+                                        "text": "Zwischen 100 und 119 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "46zdu",
+                                        "alias": "++",
+                                        "text": "Zwischen 80 und 99 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "h46t8",
+                                        "alias": "+++",
+                                        "text": "Kleiner als 80 kWH/(m2*a)"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ],
                               "cases": [
                                 {
                                   "id": "3jnor",
@@ -9701,7 +9734,10 @@
                                     "type": "AnswerOptionComparison",
                                     "operator": "is",
                                     "comparands": [
-                                      "ve0tek"
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
                                     ]
                                   },
                                   "block": [
@@ -9711,6 +9747,7 @@
                                       "alias": "Energieverbrauchskennwert",
                                       "text": "Wie hoch ist der Energieverbrauchskennwert der Wohnung?",
                                       "info": null,
+                                      "note": "Energieverbrauchskennwert",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -9750,60 +9787,9 @@
                                             "text": "Kleiner als 80 kWH/(m2*a)"
                                           }
                                         ]
-                                      },
-                                      "note": "Energieverbrauchskennwert"
+                                      }
                                     }
                                   ]
-                                }
-                              ],
-                              "alternate": [
-                                {
-                                  "id": "jpf6h",
-                                  "type": "Question",
-                                  "alias": "Energieverbrauchskennwert",
-                                  "text": "Wie hoch ist der Energieverbrauchskennwert der Wohnung?",
-                                  "info": null,
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "uiajj",
-                                        "alias": "---",
-                                        "text": "Größer als 235 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "qzhja",
-                                        "alias": "--",
-                                        "text": "Zwischen 196 und 235 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "8i22j",
-                                        "alias": "-",
-                                        "text": "Zwischen 156 und 195 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "mr7pg",
-                                        "alias": "0",
-                                        "text": "Zwischen 120 und 155 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "3g6th",
-                                        "alias": "+",
-                                        "text": "Zwischen 100 und 119 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "46zdu",
-                                        "alias": "++",
-                                        "text": "Zwischen 80 und 99 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "h46t8",
-                                        "alias": "+++",
-                                        "text": "Kleiner als 80 kWH/(m2*a)"
-                                      }
-                                    ]
-                                  },
-                                  "note": "Energieverbauchskennwert"
                                 }
                               ]
                             }
@@ -9829,6 +9815,55 @@
                             {
                               "id": "irlq3",
                               "type": "If",
+                              "alternate": [
+                                {
+                                  "id": "u9pj1i",
+                                  "type": "Question",
+                                  "alias": "Energiebedarfskennwert",
+                                  "text": "Wie hoch ist dein Energiebedarfskennwert?",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "zqjx6j",
+                                        "alias": "---",
+                                        "text": "Größer als 282 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "mcjdh",
+                                        "alias": "--",
+                                        "text": "Zwischen 235 und 282 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "42xcz",
+                                        "alias": "-",
+                                        "text": "Zwischen 176 und 234 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "baalbg",
+                                        "alias": "0",
+                                        "text": "Zwischen 144 und 175 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "4w17nh",
+                                        "alias": "+",
+                                        "text": "Zwischen 120 und 143 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "tygpg",
+                                        "alias": "++",
+                                        "text": "Zwischen 96 und 119 kWH/(m2*a)"
+                                      },
+                                      {
+                                        "id": "z4xhx",
+                                        "alias": "+++",
+                                        "text": "Kleiner als 96 kWH/(m2*a)"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ],
                               "cases": [
                                 {
                                   "id": "3lsrh",
@@ -9853,6 +9888,7 @@
                                       "alias": "Energiebedarfskennwert",
                                       "text": "Wie hoch ist der Energiebedarfskennwert der Wohnung?",
                                       "info": null,
+                                      "note": "Energieverbauchskennwert",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -9864,7 +9900,7 @@
                                           {
                                             "id": "mcjdh",
                                             "alias": "--",
-                                            "text": "Zwischen 253 und 300 kWH/(m2*a)"
+                                            "text": "Zwischen 253 und 299 kWH/(m2*a)"
                                           },
                                           {
                                             "id": "42xcz",
@@ -9892,8 +9928,7 @@
                                             "text": "Kleiner als 96 kWH/(m2*a)"
                                           }
                                         ]
-                                      },
-                                      "note": "Energieverbauchskennwert"
+                                      }
                                     }
                                   ]
                                 },
@@ -9910,16 +9945,20 @@
                                     "type": "AnswerOptionComparison",
                                     "operator": "is",
                                     "comparands": [
-                                      "ve0tek"
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
                                     ]
                                   },
                                   "block": [
                                     {
-                                      "id": "u9pj1i",
+                                      "id": "8je8w",
                                       "type": "Question",
                                       "alias": "Energiebedarfskennwert",
-                                      "text": "Wie hoch ist dein Energiebedarfskennwert?",
+                                      "text": "Wie hoch ist der Energiebedarfskennwert der Wohnung?",
                                       "info": null,
+                                      "note": "Energieverbauchskennwert",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -9936,12 +9975,12 @@
                                           {
                                             "id": "42xcz",
                                             "alias": "-",
-                                            "text": "Zwischen 176 und 234 kWH/(m2*a)"
+                                            "text": "Zwischen 187 und 234 kWH/(m2*a)"
                                           },
                                           {
                                             "id": "baalbg",
                                             "alias": "0",
-                                            "text": "Zwischen 144 und 175 kWH/(m2*a)"
+                                            "text": "Zwischen 144 und 186 kWH/(m2*a)"
                                           },
                                           {
                                             "id": "4w17nh",
@@ -9963,68 +10002,18 @@
                                     }
                                   ]
                                 }
-                              ],
-                              "alternate": [
-                                {
-                                  "id": "8je8w",
-                                  "type": "Question",
-                                  "alias": "Energiebedarfskennwert",
-                                  "text": "Wie hoch ist der Energiebedarfskennwert der Wohnung?",
-                                  "info": null,
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "zqjx6j",
-                                        "alias": "---",
-                                        "text": "Größer als 282 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "mcjdh",
-                                        "alias": "--",
-                                        "text": "Zwischen 235 und 282 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "42xcz",
-                                        "alias": "-",
-                                        "text": "Zwischen 187 und 234 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "baalbg",
-                                        "alias": "0",
-                                        "text": "Zwischen 144 und 186 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "4w17nh",
-                                        "alias": "+",
-                                        "text": "Zwischen 120 und 143 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "tygpg",
-                                        "alias": "++",
-                                        "text": "Zwischen 96 und 119 kWH/(m2*a)"
-                                      },
-                                      {
-                                        "id": "z4xhx",
-                                        "alias": "+++",
-                                        "text": "Kleiner als 96 kWH/(m2*a)"
-                                      }
-                                    ]
-                                  },
-                                  "note": "Energieverbauchskennwert"
-                                }
                               ]
                             }
                           ]
                         }
-                      ],
-                      "alternate": []
+                      ]
                     }
                   ]
                 },
                 {
                   "id": "8zr9m",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "y0mpq",
@@ -10192,7 +10181,10 @@
                                     "type": "AnswerOptionComparison",
                                     "operator": "is",
                                     "comparands": [
-                                      "ve0tek"
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
                                     ]
                                   },
                                   "block": [
@@ -10200,7 +10192,7 @@
                                       "id": "c5gpt",
                                       "type": "Question",
                                       "alias": "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad",
-                                      "text": "Wurde die Heizanlage der Wohnung vor 1995 eingebaut?",
+                                      "text": "Wurde die Heizanlage der Wohnung vor 1988 eingebaut?",
                                       "info": "Beachte: Unter der Heizanlage versteht man nur das Gerät, welches die Wärme produziert, wie z.B. Gasheizungen, Ölheizungen oder Wärmepumpen. Die Heizkörper selber gehören nicht zur Heizanlage.",
                                       "answer": {
                                         "type": "ChoiceAnswer",
@@ -10263,7 +10255,7 @@
                                                 "comparands": [
                                                   {
                                                     "type": "NumberLiteral",
-                                                    "value": 2009
+                                                    "value": 2003
                                                   }
                                                 ]
                                               }
@@ -10274,7 +10266,7 @@
                                               "id": "lae8ri",
                                               "type": "Question",
                                               "alias": "Gebäude hat moderne Heizanlage",
-                                              "text": "Wurde die Heizanlage der Wohnung nach dem 01.01.2009 eingebaut?",
+                                              "text": "Wurde die Heizanlage der Wohnung nach dem 1.1.2003 eingebaut?",
                                               "info": null,
                                               "answer": {
                                                 "type": "ChoiceAnswer",
@@ -10311,7 +10303,7 @@
                                   "id": "kgwau",
                                   "type": "Question",
                                   "alias": "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad",
-                                  "text": "Wurde die Heizanlage der Wohnung vor 1988 eingebaut?",
+                                  "text": "Wurde die Heizanlage der Wohnung vor 1995 eingebaut?",
                                   "info": "Beachte: Unter der Heizanlage versteht man nur das Gerät, welches die Wärme produziert, wie z.B. Gasheizungen, Ölheizungen oder Wärmepumpen. Die Heizkörper selber gehören nicht zur Heizanlage.",
                                   "answer": {
                                     "type": "ChoiceAnswer",
@@ -10374,7 +10366,7 @@
                                             "comparands": [
                                               {
                                                 "type": "NumberLiteral",
-                                                "value": 2003
+                                                "value": 2009
                                               }
                                             ]
                                           }
@@ -10385,7 +10377,7 @@
                                           "id": "lrsyb",
                                           "type": "Question",
                                           "alias": "Gebäude hat moderne Heizanlage",
-                                          "text": "Wurde die Heizanlage der Wohnung nach dem 1.1.2003 erneuert?",
+                                          "text": "Wurde die Heizanlage der Wohnung nach dem 1.1.2009 erneuert?",
                                           "info": null,
                                           "answer": {
                                             "type": "ChoiceAnswer",
@@ -10482,6 +10474,7 @@
                             {
                               "id": "hrhxxi",
                               "type": "If",
+                              "alternate": [],
                               "cases": [
                                 {
                                   "id": "a4vq4",
@@ -10522,44 +10515,234 @@
                                   },
                                   "block": [
                                     {
-                                      "id": "2rns5",
-                                      "type": "Question",
-                                      "alias": "Gebäude hat gute Wärmedämmung",
-                                      "text": "Gibt es eine Wärmedämmung zusätzlich zur vorhandenen Bausubstanz?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "uiajj",
-                                            "alias": "Ja",
-                                            "text": "Ja"
+                                      "type": "If",
+                                      "id": "m0tm5",
+                                      "cases": [
+                                        {
+                                          "type": "IfCase",
+                                          "id": "7xhco",
+                                          "test": {
+                                            "id": "zo1t3",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Vertragsdatum"
+                                            },
+                                            "operator": "is",
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "comparands": [
+                                              "wejo0k"
+                                            ]
                                           },
-                                          {
-                                            "id": "qzhja",
-                                            "alias": "Nein",
-                                            "text": "Nein"
+                                          "block": [
+                                            {
+                                              "type": "If",
+                                              "id": "6ozop",
+                                              "alternate": [],
+                                              "cases": [
+                                                {
+                                                  "type": "IfCase",
+                                                  "id": "93u96",
+                                                  "block": [
+                                                    {
+                                                      "id": "2rns5",
+                                                      "type": "Question",
+                                                      "alias": "Gebäude hat gute Wärmedämmung",
+                                                      "text": "Gibt es eine Wärmedämmung zusätzlich zur vorhandenen Bausubstanz?",
+                                                      "info": null,
+                                                      "answer": {
+                                                        "type": "ChoiceAnswer",
+                                                        "options": [
+                                                          {
+                                                            "id": "uiajj",
+                                                            "alias": "Ja",
+                                                            "text": "Ja"
+                                                          },
+                                                          {
+                                                            "id": "qzhja",
+                                                            "alias": "Nein",
+                                                            "text": "Nein"
+                                                          },
+                                                          {
+                                                            "id": "8i22j",
+                                                            "alias": "Nicht sicher",
+                                                            "text": "Ich bin mir nicht sicher"
+                                                          }
+                                                        ]
+                                                      },
+                                                      "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                                    }
+                                                  ],
+                                                  "test": {
+                                                    "id": "i63j9",
+                                                    "questionRef": {
+                                                      "type": "AliasRef",
+                                                      "value": "Baujahr"
+                                                    },
+                                                    "operator": "lt",
+                                                    "negated": false,
+                                                    "type": "AnswerNumberComparison",
+                                                    "comparands": [
+                                                      {
+                                                        "type": "NumberLiteral",
+                                                        "value": 1994
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "IfCase",
+                                          "id": "eatvs",
+                                          "test": {
+                                            "id": "9o2deg",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Vertragsdatum"
+                                            },
+                                            "operator": "is",
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "comparands": [
+                                              "7np1",
+                                              "m2jo",
+                                              "4obam",
+                                              "oqyrs"
+                                            ]
                                           },
-                                          {
-                                            "id": "8i22j",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
-                                        ]
-                                      },
-                                      "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                          "block": [
+                                            {
+                                              "type": "If",
+                                              "id": "8fr",
+                                              "alternate": [],
+                                              "cases": [
+                                                {
+                                                  "type": "IfCase",
+                                                  "id": "39q4x",
+                                                  "block": [
+                                                    {
+                                                      "id": "mrid8",
+                                                      "type": "Question",
+                                                      "alias": "Gebäude hat gute Wärmedämmung",
+                                                      "text": "Gibt es eine Wärmedämmung zusätzlich zur vorhandenen Bausubstanz?",
+                                                      "info": null,
+                                                      "answer": {
+                                                        "type": "ChoiceAnswer",
+                                                        "options": [
+                                                          {
+                                                            "id": "uiajj",
+                                                            "alias": "Ja",
+                                                            "text": "Ja"
+                                                          },
+                                                          {
+                                                            "id": "qzhja",
+                                                            "alias": "Nein",
+                                                            "text": "Nein"
+                                                          },
+                                                          {
+                                                            "id": "8i22j",
+                                                            "alias": "Nicht sicher",
+                                                            "text": "Ich bin mir nicht sicher"
+                                                          }
+                                                        ]
+                                                      },
+                                                      "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                                    }
+                                                  ],
+                                                  "test": {
+                                                    "id": "f5eez",
+                                                    "questionRef": {
+                                                      "type": "AliasRef",
+                                                      "value": "Baujahr"
+                                                    },
+                                                    "operator": "lt",
+                                                    "negated": false,
+                                                    "type": "AnswerNumberComparison",
+                                                    "comparands": [
+                                                      {
+                                                        "type": "NumberLiteral",
+                                                        "value": 2003
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "alternate": [
+                                        {
+                                          "type": "If",
+                                          "id": "o4de3",
+                                          "alternate": [],
+                                          "cases": [
+                                            {
+                                              "type": "IfCase",
+                                              "id": "ga4km",
+                                              "block": [
+                                                {
+                                                  "id": "rtu76j",
+                                                  "type": "Question",
+                                                  "alias": "Gebäude hat gute Wärmedämmung",
+                                                  "text": "Gibt es eine Wärmedämmung zusätzlich zur vorhandenen Bausubstanz?",
+                                                  "info": null,
+                                                  "answer": {
+                                                    "type": "ChoiceAnswer",
+                                                    "options": [
+                                                      {
+                                                        "id": "uiajj",
+                                                        "alias": "Ja",
+                                                        "text": "Ja"
+                                                      },
+                                                      {
+                                                        "id": "qzhja",
+                                                        "alias": "Nein",
+                                                        "text": "Nein"
+                                                      },
+                                                      {
+                                                        "id": "8i22j",
+                                                        "alias": "Nicht sicher",
+                                                        "text": "Ich bin mir nicht sicher"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                                }
+                                              ],
+                                              "test": {
+                                                "id": "nxtxs",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Baujahr"
+                                                },
+                                                "operator": "lt",
+                                                "negated": false,
+                                                "type": "AnswerNumberComparison",
+                                                "comparands": [
+                                                  {
+                                                    "type": "NumberLiteral",
+                                                    "value": 2009
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
-                              ],
-                              "alternate": []
+                              ]
                             }
                           ]
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 }
               ]
             },
@@ -10813,65 +10996,16 @@
                             "type": "AnswerOptionComparison",
                             "operator": "is",
                             "comparands": [
-                              "ve0tek"
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
                             ]
                           },
                           "block": [
                             {
                               "id": "0hf2m",
                               "type": "If",
-                              "cases": [
-                                {
-                                  "id": "o1sdn",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "ivx6ci",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Baujahr"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerNumberComparison",
-                                    "operator": "lt",
-                                    "comparands": [
-                                      {
-                                        "type": "NumberLiteral",
-                                        "value": 2002
-                                      }
-                                    ]
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "y2o57l",
-                                      "type": "Question",
-                                      "alias": "Wohnumfeld ist aufwendig gestaltet",
-                                      "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
-                                      "info": "Das ist etwa der Fall, wenn es Grünflächen mit angelegten Wegen gibt, einen Kinderspielplatz oder Sitzbänke und Ruhezonen. Diese dürfen zudem nicht in einem verwahrlosten Zustand sein.",
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "uiajj",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "qzhja",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "8i22j",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
-                                        ]
-                                      },
-                                      "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                    }
-                                  ]
-                                }
-                              ],
                               "alternate": [
                                 {
                                   "id": "wzi2l",
@@ -10901,6 +11035,58 @@
                                   },
                                   "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
+                              ],
+                              "cases": [
+                                {
+                                  "id": "o1sdn",
+                                  "type": "IfCase",
+                                  "block": [
+                                    {
+                                      "id": "y2o57l",
+                                      "type": "Question",
+                                      "alias": "Wohnumfeld ist aufwendig gestaltet",
+                                      "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
+                                      "info": "Das ist etwa der Fall, wenn es Grünflächen mit angelegten Wegen gibt, einen Kinderspielplatz oder Sitzbänke und Ruhezonen. Diese dürfen zudem nicht in einem verwahrlosten Zustand sein.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ],
+                                  "test": {
+                                    "id": "ivx6ci",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerNumberComparison",
+                                    "operator": "lt",
+                                    "comparands": [
+                                      {
+                                        "type": "NumberLiteral",
+                                        "value": 2003
+                                      }
+                                    ]
+                                  }
+                                }
                               ]
                             }
                           ]
@@ -10910,26 +11096,40 @@
                         {
                           "id": "71qoy",
                           "type": "If",
+                          "alternate": [
+                            {
+                              "id": "ff22o",
+                              "type": "Question",
+                              "alias": "Wohnumfeld ist aufwendig gestaltet",
+                              "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
+                              "info": "Das ist etwa der Fall, wenn es Grünflächen mit angelegten Wegen gibt oder Sitzbänke und Ruhezonen. Diese dürfen zudem nicht in einem verwahrlosten Zustand sein.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ],
                           "cases": [
                             {
                               "id": "7h71y",
                               "type": "IfCase",
-                              "test": {
-                                "id": "ruuru",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lt",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2003
-                                  }
-                                ]
-                              },
                               "block": [
                                 {
                                   "id": "l6xrn",
@@ -10959,37 +11159,23 @@
                                   },
                                   "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
-                              ]
-                            }
-                          ],
-                          "alternate": [
-                            {
-                              "id": "ff22o",
-                              "type": "Question",
-                              "alias": "Wohnumfeld ist aufwendig gestaltet",
-                              "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
-                              "info": "Das ist etwa der Fall, wenn es Grünflächen mit angelegten Wegen gibt oder Sitzbänke und Ruhezonen. Diese dürfen zudem nicht in einem verwahrlosten Zustand sein.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
+                              ],
+                              "test": {
+                                "id": "ruuru",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Baujahr"
+                                },
+                                "negated": false,
+                                "type": "AnswerNumberComparison",
+                                "operator": "lt",
+                                "comparands": [
                                   {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
-                                  },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
+                                    "type": "NumberLiteral",
+                                    "value": 2002
                                   }
                                 ]
-                              },
-                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                              }
                             }
                           ]
                         }
@@ -11253,7 +11439,7 @@
                       "id": "87ope",
                       "type": "Question",
                       "alias": "Wohnumfeld ist stark vernachlässigt",
-                      "text": "Liegt die Wohnung in einer eher ungepflegten Gegend in einem der folgenden sogenannten kriminalitätsbelsteten Ort?",
+                      "text": "Liegt die Wohnung in einer eher ungepflegten Gegend oder in einem der folgenden sogenannten kriminalitätsbelsteten Ort?",
                       "info": "Laut Polizei, zählen die folgenden Orte als kriminalitätsbelastet: Wrangelkiez im Umfeld des Görlitzer Parks, Kottbusser Tor, Hermannstraße in direkter Nähe vom S-Bahnhof Neukölln, Donaukiez im Umfeld des Hermannplatzes.",
                       "answer": {
                         "type": "ChoiceAnswer",
