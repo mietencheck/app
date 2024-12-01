@@ -1,6 +1,9 @@
 import React from "react";
-import { firstBy } from "remeda";
 
+import { getLowestHighestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
+import { getLowestHighestPreisspanne } from "~/calculation/preisspanne";
+import { getLowestHighestSondermerkmalAbzug } from "~/calculation/sondermerkmale";
+import { getLowestHighestSpanneneinordnung } from "~/calculation/spanneneinordnung";
 import {
   Table,
   TableBody,
@@ -9,94 +12,97 @@ import {
   TableHeader,
   TableRow,
 } from "~/components";
-import {
-  getMietspiegelJahr,
-  useAnswers,
-  useVisibleQuestionAliases,
-} from "~/form/flow-machine";
-import {
-  getWorstBestMerkmalsgruppen,
-  getWorstBestMerkmalsGruppenInProzent,
-  getWorstBestSpannenResults,
-} from "~/form/rechner/MerkmalsGruppen";
-import { getWorstBestOrtsüblicheVergleichsmiete } from "~/form/rechner/Miete";
-import { getWorstBestSondermerkmale } from "~/form/rechner/Sondermerkmale";
+import { getMietspiegeljahr } from "~/form/api";
+import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import { formatEuro } from "~/utils";
-
-import { getWorstBestSondermerkmalZuschläge } from "./utils";
 
 const formatEuroWithSign = (value: number) =>
   (value > 0 ? "+" : "") + formatEuro(value);
 
 export function OrtsüblicheVergleichsmieteTable() {
   const l = useLocalizeField();
-  const answers = useAnswers();
-  const aliasedAnswers = answers.getAliasedState();
+  const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  const spannenResults = getWorstBestSpannenResults(
-    answers.getAliasedState(),
+  const preisspanne = getLowestHighestPreisspanne(
+    answers,
+    visibleQuestionAliases,
+  ) || {
+    lowest: [0, 0, 0],
+    highest: [0, 0, 0],
+  };
+
+  const spanneneinordung = getLowestHighestSpanneneinordnung(
+    answers,
     visibleQuestionAliases,
   );
-  const worstSpanne = firstBy(spannenResults, [(s) => s.worstResult, "desc"]);
-  const bestSpanne = firstBy(spannenResults, (s) => s.bestResult);
-  const { worst: merkmalProzentWorst, best: merkmalProzentBest } =
-    getWorstBestMerkmalsGruppenInProzent(
-      aliasedAnswers,
+
+  const sondermerkmalAbzug = getLowestHighestSondermerkmalAbzug(
+    answers,
+    visibleQuestionAliases,
+  );
+
+  const ortsueblicheVergleichsmiete =
+    getLowestHighestOrtsueblicheVergleichsmiete(
+      answers,
       visibleQuestionAliases,
-    );
-  const { worst: merkmalWorst, best: merkmalBest } =
-    getWorstBestMerkmalsgruppen(aliasedAnswers, visibleQuestionAliases) ?? {
-      worst: 0,
-      best: 0,
+    ) || {
+      lowest: 0,
+      highest: 0,
     };
-  const sondermerkmale = getWorstBestSondermerkmalZuschläge(
-    aliasedAnswers,
-    visibleQuestionAliases,
-  );
-  const sondermerkmaleTotal = getWorstBestSondermerkmale(sondermerkmale);
 
-  const vergleichsmiete = getWorstBestOrtsüblicheVergleichsmiete(
-    aliasedAnswers,
-    visibleQuestionAliases,
-  ) ?? { worst: 0, best: 0 };
-
-  const jahr = getMietspiegelJahr(answers.getWithOptionAlias("Vertragsdatum"));
+  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
 
   const rows = [
     {
       name: l("Mittelwert"),
-      worst: l("pro-qm", { VALUE: formatEuro(worstSpanne?.center ?? 0) }),
-      best: l("pro-qm", { VALUE: formatEuro(bestSpanne?.center ?? 0) }),
+      highest: l("pro-qm", {
+        VALUE: formatEuro(preisspanne.highest[0]),
+      }),
+      lowest: l("pro-qm", { VALUE: formatEuro(preisspanne.lowest[0]) }),
     },
     {
       name: l("Merkmalsgruppen (in Prozent)"),
-      worst: `${merkmalProzentWorst > 0 ? "+" : ""}${Math.round(merkmalProzentWorst * 100)}%`,
-      best: `${merkmalProzentBest > 0 ? "+" : ""}${Math.round(merkmalProzentBest * 100)}%`,
+      highest: `${spanneneinordung.highest * 100}%`,
+      lowest: `${spanneneinordung.lowest * 100}%`,
     },
     {
       name: l("Merkmalsgruppen (pro m²)"),
-      worst: l("pro-qm", { VALUE: formatEuroWithSign(merkmalWorst) }),
-      best: l("pro-qm", { VALUE: formatEuroWithSign(merkmalBest) }),
+      highest: l("pro-qm", {
+        VALUE: formatEuroWithSign(
+          ortsueblicheVergleichsmiete.highest - preisspanne.highest[0],
+        ),
+      }),
+      lowest: l("pro-qm", {
+        VALUE: formatEuroWithSign(
+          ortsueblicheVergleichsmiete.lowest - preisspanne.lowest[0],
+        ),
+      }),
     },
-    ...(jahr == "2015"
+    ...(mietspiegeljahr == "2015"
       ? [
           {
             name: l("Sondermerkmale"),
-            worst: `${formatEuro(sondermerkmaleTotal.worst)}`,
-            best: `${formatEuro(sondermerkmaleTotal.best)}`,
+            highest: `${formatEuro(sondermerkmalAbzug.lowest)}`,
+            lowest: `${formatEuro(sondermerkmalAbzug.highest)}`,
           },
         ]
       : []),
     {
       name: l("Ergebnis"),
-      worst: l("pro-qm", { VALUE: formatEuro(vergleichsmiete.worst) }),
-      best: l("pro-qm", { VALUE: formatEuro(vergleichsmiete.best) }),
+      highest: l("pro-qm", {
+        VALUE: formatEuro(ortsueblicheVergleichsmiete.highest),
+      }),
+      lowest: l("pro-qm", {
+        VALUE: formatEuro(ortsueblicheVergleichsmiete.lowest),
+      }),
     },
   ];
 
-  if (formatEuro(vergleichsmiete.worst) == formatEuro(vergleichsmiete.best)) {
+  if (
+    ortsueblicheVergleichsmiete.lowest == ortsueblicheVergleichsmiete.highest
+  ) {
     return (
       <Table>
         <TableHeader>
@@ -106,10 +112,10 @@ export function OrtsüblicheVergleichsmieteTable() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {rows.map(({ name, best }) => (
+          {rows.map(({ name, highest }) => (
             <TableRow key={name}>
               <TableCell>{name}</TableCell>
-              <TableCell className="w-40 text-right">{best}</TableCell>
+              <TableCell className="w-40 text-right">{highest}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -123,10 +129,10 @@ export function OrtsüblicheVergleichsmieteTable() {
         <TableRow>
           <TableHead>{l("Spanne")}</TableHead>
           <TableHead className="hidden sm:table-cell w-40 text-right">
-            {l("Bester Fall")}
+            {l("Niedrigste Miete")}
           </TableHead>
           <TableHead className="hidden sm:table-cell w-40 text-right">
-            {l("Schlechtester Fall")}
+            {l("Höchste Miete")}
           </TableHead>
           <TableHead className="sm:hidden w-40 text-right">
             {l("Wert")}
@@ -134,12 +140,12 @@ export function OrtsüblicheVergleichsmieteTable() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {rows.map(({ name, worst, best }) => (
+        {rows.map(({ name, highest, lowest }) => (
           <React.Fragment key={name}>
             <TableRow className="hidden sm:table-row">
               <TableCell>{name}</TableCell>
-              <TableCell className="w-40 text-right">{best}</TableCell>
-              <TableCell className="w-40 text-right">{worst}</TableCell>
+              <TableCell className="w-40 text-right">{lowest}</TableCell>
+              <TableCell className="w-40 text-right">{highest}</TableCell>
             </TableRow>
             <TableRow className="sm:hidden border-b-0">
               <TableCell colSpan={2} className="text-sm-medium pb-0">
@@ -148,15 +154,15 @@ export function OrtsüblicheVergleichsmieteTable() {
             </TableRow>
             <TableRow className="sm:hidden border-b-0">
               <TableCell className="text-neutral-faded pb-0">
-                {l("Bester Fall")}
+                {l("Niedrigste Miete")}
               </TableCell>
-              <TableCell className="w-40 text-right pb-0">{best}</TableCell>
+              <TableCell className="w-40 text-right pb-0">{lowest}</TableCell>
             </TableRow>
             <TableRow className="sm:hidden">
               <TableCell className="text-neutral-faded">
-                {l("Schlechtester Fall")}
+                {l("Höchste Miete")}
               </TableCell>
-              <TableCell className="w-40 text-right">{worst}</TableCell>
+              <TableCell className="w-40 text-right">{highest}</TableCell>
             </TableRow>
           </React.Fragment>
         ))}

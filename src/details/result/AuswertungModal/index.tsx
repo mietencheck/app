@@ -1,23 +1,25 @@
 import { IconButton, Tab, TabList, TabPanel, Tabs } from "~/components/ui";
 import { CloseIcon } from "~/components/ui/Icons/Close";
-import { getMietspiegelJahr, useAnswers } from "~/form/flow-machine";
+import { getMietspiegeljahr } from "~/form/api";
+import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
 import { DeineDatenTable } from "./DeineDatenTable";
-import { HöchstmieteTable } from "./HöchstmieteTable";
 import { MerkmaleTable } from "./MerkmaleTable";
-import { MerkmalsGruppenTable } from "./MerkmalsGruppenTable";
 import { OrtsüblicheVergleichsmieteTable } from "./OrtsüblicheVergleichsmieteTable";
-import { SondermerkmaleTable } from "./SondermerkmaleTable";
-import { SpanneneinordnungTable } from "./SpanneneinordnungTable";
+import { PreisspannenTable } from "./PreisspannenTable";
+import { SpanneneinordungTable } from "./SpanneneinordnungTable";
+import { ZulaessigeHoechstmieteTable } from "./ZulaessigeHoechstmieteTable";
 
 export function MerkmalTabPanel() {
   return <MerkmaleTable />;
 }
 
 export function AuswertungTabPanel() {
-  const answers = useAnswers();
-  const jahr = getMietspiegelJahr(answers.getWithOptionAlias("Vertragsdatum"));
+  const answers = useAnswers().getAliasedState();
+  const visibleQuestionAliases = useVisibleQuestionAliases();
+
+  const mietspiegljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
   const l = useLocalizeField();
 
   return (
@@ -33,13 +35,13 @@ export function AuswertungTabPanel() {
           <p>{l("Bester/Schlechtester Fall Erklärung Text 1")}</p>
           <p>
             <span className="text-sm-book text-gray-12">
-              {l("Bester Fall")}:
+              {l("Niedrigste Miete")}:
             </span>{" "}
             {l("Bester/Schlechtester Fall Erklärung Text 2")}
           </p>
           <p>
             <span className="text-sm-book text-gray-12">
-              {l("Schlechtester Fall")}
+              {l("Höchste Miete")}
             </span>{" "}
             {l("Bester/Schlechtester Fall Erklärung Text 3")}
           </p>
@@ -47,23 +49,23 @@ export function AuswertungTabPanel() {
       </div>
 
       <div className="mb-12">
-        <h2 className="heading-20 mb-6">{l("Spanneneinordnung")}</h2>
+        <h2 className="heading-20 mb-6">{l("Preisspanne")}</h2>
 
-        <SpanneneinordnungTable />
+        <PreisspannenTable />
       </div>
 
-      {jahr == "2015" && (
+      {mietspiegljahr == "2015" && (
         <div className="mb-12">
           <h2 className="heading-20 mb-6">{l("Sondermerkmale")}</h2>
 
-          <SondermerkmaleTable />
+          {/* <SondermerkmaleTable /> TODO: Jonas temporary fix */}
         </div>
       )}
 
       <div className="mb-12">
         <h2 className="heading-20 mb-6">{l("Merkmalsgruppen")}</h2>
 
-        <MerkmalsGruppenTable />
+        <SpanneneinordungTable />
       </div>
 
       <div className="mb-12">
@@ -75,7 +77,7 @@ export function AuswertungTabPanel() {
       <div className="mb-12">
         <h2 className="heading-20 mb-6">{l("Zulässige Höchstmiete")}</h2>
 
-        <HöchstmieteTable />
+        <ZulaessigeHoechstmieteTable />
       </div>
     </>
   );

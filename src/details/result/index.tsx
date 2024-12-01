@@ -13,7 +13,11 @@ import { useLocaleState, useLocalizeField } from "~/l10n";
 import { SaveSessionModal } from "~/session";
 import { formatEuro } from "~/utils";
 
-import { useIsCompleted, useMieteDiff, useWorstBestMiete } from "../utils";
+import {
+  useIsCompleted,
+  useLowestHighestZulaessigeHoechstmiete,
+  useNettokaltmieteZulaessigeHoechstmieteDiff,
+} from "../utils";
 import {
   AuswertungsModal,
   AuswertungTabPanel,
@@ -21,8 +25,12 @@ import {
 } from "./AuswertungModal";
 
 export function ResultPage() {
-  const { worst: worstMiete, best: bestMiete } = useWorstBestMiete();
-  const { worst: worstDiff, best: bestDiff } = useMieteDiff();
+  const {
+    highest: highestZulaessigeHoechstmiete,
+    lowest: lowestZulaessigeHoechstmiete,
+  } = useLowestHighestZulaessigeHoechstmiete();
+  const { highest: highestDiff, lowest: lowestDiff } =
+    useNettokaltmieteZulaessigeHoechstmieteDiff();
 
   const [showDetails, setShowDetails] = useState(false);
   const [showSessionModal, setShowSessionModal] = useState(false);
@@ -54,28 +62,28 @@ export function ResultPage() {
       <div id="print" className="w-[768px] hidden print:block p-4">
         <div className="mb-12">
           <h2 className="heading-24 mb-4">
-            {bestDiff <= 0
+            {lowestDiff <= 0
               ? l("Leider ist deine Miete im Rahmen des Mietspiegels.")
-              : worstDiff == bestDiff
+              : highestDiff == lowestDiff
                 ? l("Du zahlst X zu viel", {
-                    DIFF: formatEuro(Math.max(bestDiff, 0)),
+                    DIFF: formatEuro(Math.max(lowestDiff, 0)),
                   })
                 : l("Du zahlst zwischen X und Y zu viel", {
-                    WORSTDIFF: formatEuro(Math.max(worstDiff, 0)),
-                    BESTDIFF: formatEuro(Math.max(bestDiff, 0)),
+                    LOWESTDIFF: formatEuro(Math.max(highestDiff, 0)),
+                    HIGHESTDIFF: formatEuro(Math.max(lowestDiff, 0)),
                   })}
           </h2>
 
           <p className="text-base text-neutral-faded">
-            {worstDiff == bestDiff
+            {highestDiff == lowestDiff
               ? l("Ergebnis zulässige Höchstmiete", {
-                  MIETE: formatEuro(bestMiete),
+                  MIETE: formatEuro(lowestZulaessigeHoechstmiete),
                 })
               : l("Ergebnis zulässige Höchstmiete zwischen X und Y", {
-                  BESTMIETE: formatEuro(bestMiete),
-                  WORSTMIETE: formatEuro(worstMiete),
+                  BESTMIETE: formatEuro(lowestZulaessigeHoechstmiete),
+                  WORSTMIETE: formatEuro(highestZulaessigeHoechstmiete),
                 })}{" "}
-            {bestDiff <= 0
+            {lowestDiff <= 0
               ? l("Ergebnis Mietpreisbremse nicht möglich")
               : l("Ergebnis Mietpreisbremse möglich")}
           </p>
@@ -89,15 +97,15 @@ export function ResultPage() {
       </div>
 
       <h2 className="heading-24 mb-4">
-        {bestDiff <= 0
+        {lowestDiff <= 0
           ? l("Leider ist deine Miete im Rahmen des Mietspiegels.")
-          : worstDiff == bestDiff
+          : highestDiff == lowestDiff
             ? l("Du zahlst X zu viel", {
-                DIFF: formatEuro(Math.max(bestDiff, 0)),
+                DIFF: formatEuro(Math.max(lowestDiff, 0)),
               })
             : l("Du zahlst zwischen X und Y zu viel", {
-                WORSTDIFF: formatEuro(Math.max(worstDiff, 0)),
-                BESTDIFF: formatEuro(Math.max(bestDiff, 0)),
+                LOWESTDIFF: formatEuro(Math.max(highestDiff, 0)),
+                HIGHESTDIFF: formatEuro(Math.max(lowestDiff, 0)),
               })}
       </h2>
 
@@ -105,15 +113,15 @@ export function ResultPage() {
         <div className="flex flex-col gap-2">
           <h3 className="text-base-book">{l("Was bedeutet das?")}</h3>
           <p className="text-base text-neutral-faded">
-            {worstDiff == bestDiff
+            {highestDiff == lowestDiff
               ? l("Ergebnis zulässige Höchstmiete", {
-                  MIETE: formatEuro(bestMiete),
+                  MIETE: formatEuro(lowestZulaessigeHoechstmiete),
                 })
               : l("Ergebnis zulässige Höchstmiete zwischen X und Y", {
-                  BESTMIETE: formatEuro(bestMiete),
-                  WORSTMIETE: formatEuro(worstMiete),
+                  BESTMIETE: formatEuro(lowestZulaessigeHoechstmiete),
+                  WORSTMIETE: formatEuro(highestZulaessigeHoechstmiete),
                 })}{" "}
-            {bestDiff <= 0
+            {lowestDiff <= 0
               ? l("Ergebnis Mietpreisbremse nicht möglich")
               : l("Ergebnis Mietpreisbremse möglich")}
           </p>
@@ -177,7 +185,7 @@ export function ResultPage() {
       </div>
 
       <hr className="my-8" />
-      {bestDiff > 0 && (
+      {lowestDiff > 0 && (
         <>
           <div>
             <h2 className="heading-20 mb-4">{l("Was kann ich jetzt tun?")}</h2>

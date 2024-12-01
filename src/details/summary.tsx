@@ -51,7 +51,10 @@ export function SummaryPage() {
         {steps
           .filter(
             (s): s is Question =>
-              s.type == "Question" && s.alias != "Ost" && s.alias != "Wohnlage",
+              s.type == "Question" &&
+              s.alias != "Ost" &&
+              s.alias != "Wohnlage" &&
+              s.alias != "Baujahr",
           )
           .map((q) => (
             <div

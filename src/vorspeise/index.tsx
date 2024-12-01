@@ -40,7 +40,7 @@ export function VorspeisePage() {
         (s) =>
           !(
             s.type == "Question" &&
-            (s.alias == "Ost" || s.alias == "Wohnlage")
+            (s.alias == "Ost" || s.alias == "Wohnlage" || s.alias == "Baujahr")
           ),
       ),
     [steps],

@@ -9,7 +9,6 @@ import {
   TableRow,
 } from "~/components";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
-import { getWorstBestSondermerkmale } from "~/form/rechner/Sondermerkmale";
 import { useLocalizeField, useLocalizeString } from "~/l10n";
 import { formatEuro } from "~/utils";
 
