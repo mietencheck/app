@@ -65,11 +65,7 @@ test.each([
 }[])("getWorstBestOrtsüblicheVergleichsmiete(%o)", ({ answers, miete }) => {
   const allAnswers = {
     Adresse: JSON.stringify({
-      lage: buildSameLageInfo({
-        laut: false,
-        ost: false,
-        wohnlage: "mittel",
-      }),
+      lage: buildSameLageInfo({ ost: false, wohnlage: "mittel" }),
     }),
     Unterschrieben: "Ja",
     ...MERKMAL_RESET_ANSWERS,

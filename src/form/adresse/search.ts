@@ -49,12 +49,11 @@ export const fetchStrasseData = memoize(0)(async (
         nummer,
         plz,
         lage: Object.fromEntries(
-          Object.entries(byJahr).map(([jahr, [wohnlage, laut, ost]]) => [
+          Object.entries(byJahr).map(([jahr, [wohnlage, ost]]) => [
             Number(jahr) + 2015,
             {
               wohnlage:
                 (["einfach", "mittel", "gut"] as const)[wohnlage] ?? "gut",
-              laut: Boolean(laut),
               ost: Boolean(ost),
             } satisfies LageInfo,
           ]),

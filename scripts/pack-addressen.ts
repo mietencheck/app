@@ -12,29 +12,30 @@ function setPath(object: any, path: Array<any>, value: any) {
   return object;
 }
 
-const input = await Deno.readTextFile("addressen-db-export.json");
+const input = await Deno.readTextFile(Deno.args[0]);
 const addressen = JSON.parse(input);
 
 const grouped = {};
-const lautSet = new Set();
 const ostSet = new Set();
-for (const { wohnlage, laut, ost, ...a } of addressen) {
+for (const { wohnlage, ost, ...a } of addressen) {
   const wohnlageNumber = { einfach: 0, mittel: 1, gut: 2, ohne: 3 }[wohnlage];
   setPath(
     grouped,
     [a.strasse, a.plz, String(a.nummer), String(a.jahr - 2015)],
-    [wohnlageNumber, +laut, +ost],
+    [wohnlageNumber, +ost],
   );
-  lautSet.add(+laut);
   ostSet.add(+ost);
 }
 
 const streets = Object.keys(grouped);
-await Deno.writeTextFile("out/strassen.json", JSON.stringify(streets));
+await Deno.writeTextFile(
+  "../public/strassenverzeichnis/strassen.json",
+  JSON.stringify(streets),
+);
 
 for (const [strasse, value] of Object.entries(grouped)) {
   await Deno.writeTextFile(
-    "out/" + sanitize(strasse + ".json"),
+    "../public/strassenverzeichnis/" + sanitize(strasse + ".json"),
     JSON.stringify(value),
   );
 }

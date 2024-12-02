@@ -2,10 +2,7 @@ export type StrassenDataRaw = Record<
   string /* plz */,
   Record<
     string /* nummer */,
-    Record<
-      string /* jahr */,
-      [number /* wohnlage */, number /* laut */, number /* ost */]
-    >
+    Record<string /* jahr */, [number /* wohnlage */, number /* ost */]>
   >
 >;
 
@@ -18,7 +15,6 @@ export type Adresse = {
 type Wohnlage = "einfach" | "mittel" | "gut";
 
 export type LageInfo = {
-  laut: boolean;
   wohnlage: Wohnlage;
   ost: boolean;
 };
