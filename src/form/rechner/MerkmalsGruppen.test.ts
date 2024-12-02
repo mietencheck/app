@@ -141,11 +141,7 @@ test.each([
   const allAnswers = {
     Qm: 60,
     Adresse: JSON.stringify({
-      lage: buildSameLageInfo({
-        laut: true,
-        ost: false,
-        wohnlage: "gut",
-      }),
+      lage: buildSameLageInfo({ ost: false, wohnlage: "gut" }),
     }),
     Baujahr: "1965-1972",
     ...MERKMAL_RESET_ANSWERS,
