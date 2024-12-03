@@ -16,7 +16,7 @@ import { formatEuro } from "~/utils";
 import {
   useIsCompleted,
   useLowestHighestZulaessigeHoechstmiete,
-  useNettokaltmieteZulaessigeHoechstmieteDiff,
+  useLowestHighestZulaessigeHoechstmieteDiff,
 } from "../utils";
 import {
   AuswertungsModal,
@@ -30,7 +30,7 @@ export function ResultPage() {
     lowest: lowestZulaessigeHoechstmiete,
   } = useLowestHighestZulaessigeHoechstmiete();
   const { highest: highestDiff, lowest: lowestDiff } =
-    useNettokaltmieteZulaessigeHoechstmieteDiff();
+    useLowestHighestZulaessigeHoechstmieteDiff();
 
   const [showDetails, setShowDetails] = useState(false);
   const [showSessionModal, setShowSessionModal] = useState(false);
@@ -62,15 +62,15 @@ export function ResultPage() {
       <div id="print" className="w-[768px] hidden print:block p-4">
         <div className="mb-12">
           <h2 className="heading-24 mb-4">
-            {lowestDiff <= 0
+            {highestDiff <= 0
               ? l("Leider ist deine Miete im Rahmen des Mietspiegels.")
-              : highestDiff == lowestDiff
+              : highestDiff == lowestDiff || lowestDiff < 0
                 ? l("Du zahlst X zu viel", {
-                    DIFF: formatEuro(Math.max(lowestDiff, 0)),
+                    DIFF: formatEuro(Math.max(highestDiff, 0)),
                   })
                 : l("Du zahlst zwischen X und Y zu viel", {
-                    LOWESTDIFF: formatEuro(Math.max(highestDiff, 0)),
-                    HIGHESTDIFF: formatEuro(Math.max(lowestDiff, 0)),
+                    LOWESTDIFF: formatEuro(Math.max(lowestDiff, 0)),
+                    HIGHESTDIFF: formatEuro(Math.max(highestDiff, 0)),
                   })}
           </h2>
 
@@ -80,8 +80,8 @@ export function ResultPage() {
                   MIETE: formatEuro(lowestZulaessigeHoechstmiete),
                 })
               : l("Ergebnis zulässige Höchstmiete zwischen X und Y", {
-                  BESTMIETE: formatEuro(lowestZulaessigeHoechstmiete),
-                  WORSTMIETE: formatEuro(highestZulaessigeHoechstmiete),
+                  LOWESTMIETE: formatEuro(lowestZulaessigeHoechstmiete),
+                  HIGHESTMIETE: formatEuro(highestZulaessigeHoechstmiete),
                 })}{" "}
             {lowestDiff <= 0
               ? l("Ergebnis Mietpreisbremse nicht möglich")
@@ -97,15 +97,15 @@ export function ResultPage() {
       </div>
 
       <h2 className="heading-24 mb-4">
-        {lowestDiff <= 0
+        {highestDiff <= 0
           ? l("Leider ist deine Miete im Rahmen des Mietspiegels.")
-          : highestDiff == lowestDiff
+          : highestDiff == lowestDiff || lowestDiff < 0
             ? l("Du zahlst X zu viel", {
-                DIFF: formatEuro(Math.max(lowestDiff, 0)),
+                DIFF: formatEuro(Math.max(highestDiff, 0)),
               })
             : l("Du zahlst zwischen X und Y zu viel", {
-                LOWESTDIFF: formatEuro(Math.max(highestDiff, 0)),
-                HIGHESTDIFF: formatEuro(Math.max(lowestDiff, 0)),
+                LOWESTDIFF: formatEuro(Math.max(lowestDiff, 0)),
+                HIGHESTDIFF: formatEuro(Math.max(highestDiff, 0)),
               })}
       </h2>
 
@@ -118,8 +118,8 @@ export function ResultPage() {
                   MIETE: formatEuro(lowestZulaessigeHoechstmiete),
                 })
               : l("Ergebnis zulässige Höchstmiete zwischen X und Y", {
-                  BESTMIETE: formatEuro(lowestZulaessigeHoechstmiete),
-                  WORSTMIETE: formatEuro(highestZulaessigeHoechstmiete),
+                  LOWESTMIETE: formatEuro(lowestZulaessigeHoechstmiete),
+                  HIGHESTMIETE: formatEuro(highestZulaessigeHoechstmiete),
                 })}{" "}
             {lowestDiff <= 0
               ? l("Ergebnis Mietpreisbremse nicht möglich")
@@ -185,7 +185,7 @@ export function ResultPage() {
       </div>
 
       <hr className="my-8" />
-      {lowestDiff > 0 && (
+      {highestDiff > 0 && (
         <>
           <div>
             <h2 className="heading-20 mb-4">{l("Was kann ich jetzt tun?")}</h2>

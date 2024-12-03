@@ -1,6 +1,10 @@
 import React from "react";
 
 import {
+  getLowestHighestSondermerkmalAbzuege,
+  getLowestHighestSondermerkmalAbzugTotal,
+} from "~/calculation/sondermerkmale";
+import {
   Table,
   TableBody,
   TableCell,
@@ -8,158 +12,200 @@ import {
   TableHeader,
   TableRow,
 } from "~/components";
+import { getSondermerkmalStates } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField, useLocalizeString } from "~/l10n";
+import { sondermerkmale } from "~/mietspiegel/sondermerkmale";
+import { Sondermerkmal } from "~/mietspiegel/types";
 import { formatEuro } from "~/utils";
 
-import { getWorstBestSondermerkmalZuschläge } from "./utils";
-
 export function SondermerkmaleTable() {
-  const answers = useAnswers();
-  const aliasedAnswers = answers.getAliasedState();
+  const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
+
   const lField = useLocalizeField();
   const lString = useLocalizeString();
 
-  const merkmale = getWorstBestSondermerkmalZuschläge(
-    aliasedAnswers,
+  const sondermerkmalAbzuege = getLowestHighestSondermerkmalAbzuege(
+    answers,
     visibleQuestionAliases,
   );
-  const total = getWorstBestSondermerkmale(merkmale);
+  const sondermerkmalAbzugTotal = getLowestHighestSondermerkmalAbzugTotal(
+    answers,
+    visibleQuestionAliases,
+  );
+  const sondermerkmalState = getSondermerkmalStates(
+    answers,
+    visibleQuestionAliases,
+  );
 
-  if (total.worst == total.best) {
+  if (!sondermerkmalAbzuege) {
+    return;
+  }
+
+  if (sondermerkmalAbzugTotal.highest == sondermerkmalAbzugTotal.lowest) {
     return (
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>{lField("Spanne")}</TableHead>
-            <TableHead className="w-32 text-right">
-              {lField("Antwort")}
-            </TableHead>
-            <TableHead className="w-40 text-right">{lField("Wert")}</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {merkmale.map(({ labelKey, answer, best }) => (
-            <React.Fragment key={labelKey}>
-              <TableRow>
-                <TableCell>{lField(labelKey)}</TableCell>
-                <TableCell className="w-32 text-right">
-                  {answer == "Vielleicht"
-                    ? lField("Vielleicht")
-                    : lString(answer)}
-                </TableCell>
-                <TableCell className="w-40 text-right">
-                  {formatEuro(best)}
-                </TableCell>
-              </TableRow>
-            </React.Fragment>
-          ))}
-          <TableRow className="hidden sm:table-row print:table-row">
-            <TableCell colSpan={2} className="text-sm-book">
-              {lField("Ergebnis")}
-            </TableCell>
-            <TableCell className="w-32 text-right text-sm-book">
-              {formatEuro(total.best)}
-            </TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
+      <div className="flex flex-col">
+        <h2 className="heading-20 mb-6">{lString("Sondermerkmale")}</h2>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>{lField("Spanne")}</TableHead>
+              <TableHead className="w-32 text-right">
+                {lField("Antwort")}
+              </TableHead>
+              <TableHead className="w-40 text-right">
+                {lField("Wert")}
+              </TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {Object.entries(sondermerkmalAbzuege).map(
+              ([sondermerkmal, abzug]) => {
+                const answer =
+                  sondermerkmalState?.[sondermerkmal as Sondermerkmal] ?? "";
+
+                return (
+                  <React.Fragment key={sondermerkmal}>
+                    <TableRow>
+                      <TableCell>
+                        {sondermerkmale[sondermerkmal as Sondermerkmal]}
+                      </TableCell>
+                      <TableCell className="w-32 text-right">
+                        {answer == "checked"
+                          ? lString("Ja")
+                          : answer == "unchecked"
+                            ? lString("Nein")
+                            : lString("Vielleicht")}
+                      </TableCell>
+                      <TableCell className="w-40 text-right">
+                        {formatEuro(abzug.highest)}
+                      </TableCell>
+                    </TableRow>
+                  </React.Fragment>
+                );
+              },
+            )}
+            <TableRow className="hidden sm:table-row print:table-row">
+              <TableCell colSpan={2} className="text-sm-book">
+                {lField("Ergebnis")}
+              </TableCell>
+              <TableCell className="w-32 text-right text-sm-book">
+                {formatEuro(sondermerkmalAbzugTotal.highest)}
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </div>
     );
   }
 
   return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>{lField("Spanne")}</TableHead>
-          <TableHead className="hidden sm:table-cell print:table-cell w-32 text-right">
-            {lField("Antwort")}
-          </TableHead>
-          <TableHead className="hidden sm:table-cell print:table-cell w-32 text-right">
-            {lField("Bester Fall")}
-          </TableHead>
-          <TableHead className="hidden sm:table-cell print:table-cell w-40 text-right">
-            {lField("Schlechtester Fall")}
-          </TableHead>
-          <TableHead className="sm:hidden print:hidden w-40 text-right">
-            {lField("Wert")}
-          </TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {merkmale.map(({ labelKey, answer, worst, best }) => (
-          <React.Fragment key={labelKey}>
-            <TableRow className="hidden sm:table-row print:table-row">
-              <TableCell>{lField(labelKey)}</TableCell>
-              <TableCell className="w-32 text-right">
-                {answer == "Vielleicht"
-                  ? lField("Vielleicht")
-                  : lString(answer)}
-              </TableCell>
-              <TableCell className="w-32 text-right">
-                {formatEuro(best)}
-              </TableCell>
-              <TableCell className="w-40 text-right">
-                {formatEuro(worst)}
-              </TableCell>
-            </TableRow>
-            <TableRow className="sm:hidden print:hidden border-b-0">
-              <TableCell colSpan={2} className="text-sm-medium pb-0">
-                {lField(labelKey)}
-              </TableCell>
-            </TableRow>
-            <TableRow className="sm:hidden print:hidden border-b-0">
-              <TableCell className="text-neutral-faded pb-0">
-                {lField("Bester Fall")}
-              </TableCell>
-              <TableCell className="w-40 text-right pb-0">
-                {formatEuro(best)}
-              </TableCell>
-            </TableRow>
-            <TableRow className="sm:hidden print:hidden">
-              <TableCell className="text-neutral-faded">
-                {lField("Schlechtester Fall")}
-              </TableCell>
-              <TableCell className="w-40 text-right">
-                {formatEuro(worst)}
-              </TableCell>
-            </TableRow>
-          </React.Fragment>
-        ))}
-        <TableRow className="hidden sm:table-row print:table-row">
-          <TableCell colSpan={2} className="text-sm-book">
-            {lField("Ergebnis")}
-          </TableCell>
-          <TableCell className="w-32 text-right text-sm-book">
-            {formatEuro(total.best)}
-          </TableCell>
-          <TableCell className="w-40 text-right text-sm-book">
-            {formatEuro(total.worst)}
-          </TableCell>
-        </TableRow>
-        <TableRow className="sm:hidden print:hidden border-b-0">
-          <TableCell colSpan={2} className="text-sm-medium pb-0">
-            {lField("Ergebnis")}
-          </TableCell>
-        </TableRow>
-        <TableRow className="sm:hidden print:hidden border-b-0">
-          <TableCell className="text-neutral-faded pb-0">
-            {lField("Bester Fall")}
-          </TableCell>
-          <TableCell className="w-40 text-right pb-0 text-sm-book">
-            {formatEuro(total.best)}
-          </TableCell>
-        </TableRow>
-        <TableRow className="sm:hidden print:hidden">
-          <TableCell className="text-neutral-faded">
-            {lField("Schlechtester Fall")}
-          </TableCell>
-          <TableCell className="w-40 text-right text-sm-book">
-            {formatEuro(total.worst)}
-          </TableCell>
-        </TableRow>
-      </TableBody>
-    </Table>
+    <div className="flex flex-col">
+      <h2 className="heading-20 mb-6">{lString("Sondermerkmale")}</h2>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>{lField("Spanne")}</TableHead>
+            <TableHead className="hidden sm:table-cell print:table-cell w-24 text-right">
+              {lField("Antwort")}
+            </TableHead>
+            <TableHead className="hidden sm:table-cell print:table-cell w-32 text-right">
+              {lField("Höchster Abzug")}
+            </TableHead>
+            <TableHead className="hidden sm:table-cell print:table-cell w-36 text-right">
+              {lField("Niedrigster Abzug")}
+            </TableHead>
+            <TableHead className="sm:hidden print:hidden w-40 text-right">
+              {lField("Wert")}
+            </TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {Object.entries(sondermerkmalAbzuege).map(
+            ([sondermerkmal, abzug]) => {
+              const answer =
+                sondermerkmalState?.[sondermerkmal as Sondermerkmal] ?? "";
+
+              return (
+                <React.Fragment key={sondermerkmal}>
+                  <TableRow className="hidden sm:table-row print:table-row">
+                    <TableCell>
+                      {sondermerkmale[sondermerkmal as Sondermerkmal]}
+                    </TableCell>
+                    <TableCell className="w-32 text-right">
+                      {answer == "checked"
+                        ? lString("Ja")
+                        : answer == "unchecked"
+                          ? lString("Nein")
+                          : lString("Vielleicht")}
+                    </TableCell>
+                    <TableCell className="w-40 text-right">
+                      {formatEuro(abzug.highest)}
+                    </TableCell>
+                    <TableCell className="w-32 text-right">
+                      {formatEuro(abzug.lowest)}
+                    </TableCell>
+                  </TableRow>
+                  <TableRow className="sm:hidden print:hidden border-b-0">
+                    <TableCell colSpan={2} className="text-sm-medium pb-0">
+                      {sondermerkmal}
+                    </TableCell>
+                  </TableRow>
+                  <TableRow className="sm:hidden print:hidden">
+                    <TableCell className="text-neutral-faded">
+                      {lField("Höchster Abzug")}
+                    </TableCell>
+                    <TableCell className="w-40 text-right">
+                      {formatEuro(abzug.lowest)}
+                    </TableCell>
+                  </TableRow>
+                  <TableRow className="sm:hidden print:hidden border-b-0">
+                    <TableCell className="text-neutral-faded pb-0">
+                      {lField("Niedrigster Abzug")}
+                    </TableCell>
+                    <TableCell className="w-40 text-right pb-0">
+                      {formatEuro(abzug.highest)}
+                    </TableCell>
+                  </TableRow>
+                </React.Fragment>
+              );
+            },
+          )}
+          <TableRow className="hidden sm:table-row print:table-row">
+            <TableCell colSpan={2} className="text-sm-book">
+              {lField("Ergebnis")}
+            </TableCell>
+            <TableCell className="w-40 text-right text-sm-book">
+              {formatEuro(sondermerkmalAbzugTotal.highest)}
+            </TableCell>
+            <TableCell className="w-32 text-right text-sm-book">
+              {formatEuro(sondermerkmalAbzugTotal.lowest)}
+            </TableCell>
+          </TableRow>
+          <TableRow className="sm:hidden print:hidden border-b-0">
+            <TableCell colSpan={2} className="text-sm-medium pb-0">
+              {lField("Ergebnis")}
+            </TableCell>
+          </TableRow>
+          <TableRow className="sm:hidden print:hidden">
+            <TableCell className="text-neutral-faded">
+              {lField("Höchster Abzug")}
+            </TableCell>
+            <TableCell className="w-40 text-right text-sm-book">
+              {formatEuro(sondermerkmalAbzugTotal.highest)}
+            </TableCell>
+          </TableRow>
+          <TableRow className="sm:hidden print:hidden border-b-0">
+            <TableCell className="text-neutral-faded pb-0">
+              {lField("Niedrigster Abzug")}
+            </TableCell>
+            <TableCell className="w-40 text-right pb-0 text-sm-book">
+              {formatEuro(sondermerkmalAbzugTotal.lowest)}
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </div>
   );
 }
