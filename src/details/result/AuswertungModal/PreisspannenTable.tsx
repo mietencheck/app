@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getLowestHighestPreisspanne } from "~/calculation/preisspanne";
+import { getWorstBestPreisspanne } from "~/calculation/preisspanne";
 import {
   Table,
   TableBody,
@@ -17,10 +17,10 @@ export function PreisspannenTable() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
   const l = useLocalizeField();
-  const { lowest: lowestPreisspanne, highest: highestPreisspanne } =
-    getLowestHighestPreisspanne(answers, visibleQuestionAliases) || {
-      lowest: [0, 0, 0],
-      highest: [0, 0, 0],
+  const { best: lowestPreisspanne, worst: highestPreisspanne } =
+    getWorstBestPreisspanne(answers, visibleQuestionAliases) || {
+      best: [0, 0, 0],
+      worst: [0, 0, 0],
     };
 
   const rows = [

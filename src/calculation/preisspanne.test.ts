@@ -3,7 +3,7 @@ import { expect, test } from "vitest";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import { Preisspanne } from "~/mietspiegel/types";
 
-import { getLowestHighestPreisspanne } from "./preisspanne";
+import { getWorstBestPreisspanne } from "./preisspanne";
 
 // Vertragsdatum
 test.each([
@@ -29,7 +29,7 @@ test.each([
   })),
 ])("getLowestHighestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
-    getLowestHighestPreisspanne(answers, getVisibleQuestionAliases(answers)),
+    getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
   ).toEqual({
     lowest: preisspanne,
     highest: preisspanne,
@@ -61,7 +61,7 @@ test.each([
   })),
 ])("getLowestHighestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
-    getLowestHighestPreisspanne(answers, getVisibleQuestionAliases(answers)),
+    getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
   ).toEqual({
     lowest: preisspanne,
     highest: preisspanne,
@@ -92,7 +92,7 @@ test.each([
   })),
 ])("getLowestHighestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
-    getLowestHighestPreisspanne(answers, getVisibleQuestionAliases(answers)),
+    getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
   ).toEqual({
     lowest: preisspanne,
     highest: preisspanne,
@@ -120,7 +120,7 @@ test.each([
   })),
 ])("getLowestHighestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
-    getLowestHighestPreisspanne(answers, getVisibleQuestionAliases(answers)),
+    getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
   ).toEqual({
     lowest: preisspanne,
     highest: preisspanne,
@@ -217,6 +217,6 @@ test.each([
   })),
 ])("getLowestHighestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
-    getLowestHighestPreisspanne(answers, getVisibleQuestionAliases(answers)),
+    getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
   ).toEqual(preisspanne);
 });

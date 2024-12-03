@@ -1,8 +1,8 @@
 import React from "react";
 
 import { getLowestHighestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
-import { getLowestHighestPreisspanne } from "~/calculation/preisspanne";
-import { getLowestHighestSondermerkmalAbzugTotal } from "~/calculation/sondermerkmale";
+import { getWorstBestPreisspanne } from "~/calculation/preisspanne";
+import { getWorstBestSondermerkmalAbzugTotal } from "~/calculation/sondermerkmale";
 import { getWorstBestSpanneneinordnungInPercent } from "~/calculation/spanneneinordnung";
 import {
   Table,
@@ -25,12 +25,12 @@ export function OrtsüblicheVergleichsmieteTable() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  const preisspanne = getLowestHighestPreisspanne(
+  const preisspanne = getWorstBestPreisspanne(
     answers,
     visibleQuestionAliases,
   ) || {
-    lowest: [0, 0, 0],
-    highest: [0, 0, 0],
+    best: [0, 0, 0],
+    worst: [0, 0, 0],
   };
 
   const spanneneinordung = getWorstBestSpanneneinordnungInPercent(
@@ -38,7 +38,7 @@ export function OrtsüblicheVergleichsmieteTable() {
     visibleQuestionAliases,
   );
 
-  const sondermerkmalAbzug = getLowestHighestSondermerkmalAbzugTotal(
+  const sondermerkmalAbzug = getWorstBestSondermerkmalAbzugTotal(
     answers,
     visibleQuestionAliases,
   );
@@ -57,30 +57,30 @@ export function OrtsüblicheVergleichsmieteTable() {
   const rows = [
     {
       name: l("Mittelwert"),
-      highest: l("pro-qm", {
-        VALUE: formatEuro(preisspanne.highest[0]),
+      worst: l("pro-qm", {
+        VALUE: formatEuro(preisspanne.worst[0]),
       }),
-      lowest: l("pro-qm", { VALUE: formatEuro(preisspanne.lowest[0]) }),
+      best: l("pro-qm", { VALUE: formatEuro(preisspanne.best[0]) }),
     },
     {
       name: l("Merkmalsgruppen (in Prozent)"),
-      highest: `${spanneneinordung.best * 100}%`,
-      lowest: `${spanneneinordung.worst * 100}%`,
+      worst: `${spanneneinordung.worst * 100}%`,
+      best: `${spanneneinordung.best * 100}%`,
     },
     {
       name: l("Merkmalsgruppen (pro m²)"),
-      highest: l("pro-qm", {
+      worst: l("pro-qm", {
         VALUE: formatEuroWithSign(
           ortsueblicheVergleichsmiete.highest -
-            preisspanne.highest[0] +
-            sondermerkmalAbzug.lowest,
+            preisspanne.worst[0] +
+            sondermerkmalAbzug.worst,
         ),
       }),
-      lowest: l("pro-qm", {
+      best: l("pro-qm", {
         VALUE: formatEuroWithSign(
           ortsueblicheVergleichsmiete.lowest -
-            preisspanne.lowest[0] +
-            sondermerkmalAbzug.highest,
+            preisspanne.best[0] +
+            sondermerkmalAbzug.best,
         ),
       }),
     },
@@ -88,23 +88,23 @@ export function OrtsüblicheVergleichsmieteTable() {
       ? [
           {
             name: l("Sondermerkmalabzug"),
-            highest:
-              sondermerkmalAbzug.lowest == 0
+            worst:
+              sondermerkmalAbzug.best == 0
                 ? formatEuro(0)
-                : `-${formatEuro(sondermerkmalAbzug.lowest)}`,
-            lowest:
-              sondermerkmalAbzug.highest == 0
+                : `-${formatEuro(sondermerkmalAbzug.best)}`,
+            best:
+              sondermerkmalAbzug.worst == 0
                 ? formatEuro(0)
-                : `-${formatEuro(sondermerkmalAbzug.highest)}`,
+                : `-${formatEuro(sondermerkmalAbzug.worst)}`,
           },
         ]
       : []),
     {
       name: l("Ergebnis"),
-      highest: l("pro-qm", {
+      worst: l("pro-qm", {
         VALUE: formatEuro(ortsueblicheVergleichsmiete.highest),
       }),
-      lowest: l("pro-qm", {
+      best: l("pro-qm", {
         VALUE: formatEuro(ortsueblicheVergleichsmiete.lowest),
       }),
     },
@@ -122,10 +122,10 @@ export function OrtsüblicheVergleichsmieteTable() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {rows.map(({ name, highest }) => (
+          {rows.map(({ name, best }) => (
             <TableRow key={name}>
               <TableCell>{name}</TableCell>
-              <TableCell className="w-40 text-right">{highest}</TableCell>
+              <TableCell className="w-40 text-right">{best}</TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -150,12 +150,12 @@ export function OrtsüblicheVergleichsmieteTable() {
         </TableRow>
       </TableHeader>
       <TableBody>
-        {rows.map(({ name, highest, lowest }) => (
+        {rows.map(({ name, worst, best }) => (
           <React.Fragment key={name}>
             <TableRow className="hidden sm:table-row">
               <TableCell>{name}</TableCell>
-              <TableCell className="w-40 text-right">{lowest}</TableCell>
-              <TableCell className="w-40 text-right">{highest}</TableCell>
+              <TableCell className="w-40 text-right">{best}</TableCell>
+              <TableCell className="w-40 text-right">{worst}</TableCell>
             </TableRow>
             <TableRow className="sm:hidden border-b-0">
               <TableCell colSpan={2} className="text-sm-medium pb-0">
@@ -166,13 +166,13 @@ export function OrtsüblicheVergleichsmieteTable() {
               <TableCell className="text-neutral-faded pb-0">
                 {l("Niedrigste Miete")}
               </TableCell>
-              <TableCell className="w-40 text-right pb-0">{lowest}</TableCell>
+              <TableCell className="w-40 text-right pb-0">{best}</TableCell>
             </TableRow>
             <TableRow className="sm:hidden">
               <TableCell className="text-neutral-faded">
                 {l("Höchste Miete")}
               </TableCell>
-              <TableCell className="w-40 text-right">{highest}</TableCell>
+              <TableCell className="w-40 text-right">{worst}</TableCell>
             </TableRow>
           </React.Fragment>
         ))}

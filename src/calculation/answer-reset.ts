@@ -1,5 +1,15 @@
 import { FinalAnswers } from "~/form/flow-machine";
 
+export const SONDERMERKMAL_RESET_ANSWERS = {
+  "Sondermerkmal Bodenbelag": "Nein",
+  "Sondermerkmal Moderne Küche": "Nein",
+  "Sondermerkmal Dusche Und Badewanne": "Nein",
+  "Sondermerkmal Badezimmer Klein": "Ja",
+  "Sondermerkmal Modernes Bad": "Nein",
+  "Sondermerkmal Schallschutzfenster": "Nein",
+  "Sondermerkmal Aufzug": "Nein",
+} satisfies FinalAnswers;
+
 export const MERKMAL_RESET_ANSWERS = {
   // Bad+
   "Bad größer als 8qm": "Nein",

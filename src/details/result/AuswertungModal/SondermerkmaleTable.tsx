@@ -1,8 +1,8 @@
 import React from "react";
 
 import {
-  getLowestHighestSondermerkmalAbzuege,
-  getLowestHighestSondermerkmalAbzugTotal,
+  getWorstBestSondermerkmalAbzuege,
+  getWorstBestSondermerkmalAbzugTotal,
 } from "~/calculation/sondermerkmale";
 import {
   Table,
@@ -26,11 +26,11 @@ export function SondermerkmaleTable() {
   const lField = useLocalizeField();
   const lString = useLocalizeString();
 
-  const sondermerkmalAbzuege = getLowestHighestSondermerkmalAbzuege(
+  const sondermerkmalAbzuege = getWorstBestSondermerkmalAbzuege(
     answers,
     visibleQuestionAliases,
   );
-  const sondermerkmalAbzugTotal = getLowestHighestSondermerkmalAbzugTotal(
+  const sondermerkmalAbzugTotal = getWorstBestSondermerkmalAbzugTotal(
     answers,
     visibleQuestionAliases,
   );
@@ -43,7 +43,7 @@ export function SondermerkmaleTable() {
     return;
   }
 
-  if (sondermerkmalAbzugTotal.highest == sondermerkmalAbzugTotal.lowest) {
+  if (sondermerkmalAbzugTotal.best == sondermerkmalAbzugTotal.worst) {
     return (
       <div className="flex flex-col">
         <h2 className="heading-20 mb-6">{lString("Sondermerkmale")}</h2>
@@ -79,7 +79,7 @@ export function SondermerkmaleTable() {
                             : lString("Vielleicht")}
                       </TableCell>
                       <TableCell className="w-40 text-right">
-                        {formatEuro(abzug.highest)}
+                        {formatEuro(abzug.best)}
                       </TableCell>
                     </TableRow>
                   </React.Fragment>
@@ -91,7 +91,7 @@ export function SondermerkmaleTable() {
                 {lField("Ergebnis")}
               </TableCell>
               <TableCell className="w-32 text-right text-sm-book">
-                {formatEuro(sondermerkmalAbzugTotal.highest)}
+                {formatEuro(sondermerkmalAbzugTotal.best)}
               </TableCell>
             </TableRow>
           </TableBody>
@@ -141,10 +141,10 @@ export function SondermerkmaleTable() {
                           : lString("Vielleicht")}
                     </TableCell>
                     <TableCell className="w-40 text-right">
-                      {formatEuro(abzug.highest)}
+                      {formatEuro(abzug.worst)}
                     </TableCell>
                     <TableCell className="w-32 text-right">
-                      {formatEuro(abzug.lowest)}
+                      {formatEuro(abzug.best)}
                     </TableCell>
                   </TableRow>
                   <TableRow className="sm:hidden print:hidden border-b-0">
@@ -157,7 +157,7 @@ export function SondermerkmaleTable() {
                       {lField("Höchster Abzug")}
                     </TableCell>
                     <TableCell className="w-40 text-right">
-                      {formatEuro(abzug.lowest)}
+                      {formatEuro(abzug.best)}
                     </TableCell>
                   </TableRow>
                   <TableRow className="sm:hidden print:hidden border-b-0">
@@ -165,7 +165,7 @@ export function SondermerkmaleTable() {
                       {lField("Niedrigster Abzug")}
                     </TableCell>
                     <TableCell className="w-40 text-right pb-0">
-                      {formatEuro(abzug.highest)}
+                      {formatEuro(abzug.worst)}
                     </TableCell>
                   </TableRow>
                 </React.Fragment>
@@ -177,10 +177,10 @@ export function SondermerkmaleTable() {
               {lField("Ergebnis")}
             </TableCell>
             <TableCell className="w-40 text-right text-sm-book">
-              {formatEuro(sondermerkmalAbzugTotal.highest)}
+              {formatEuro(sondermerkmalAbzugTotal.worst)}
             </TableCell>
             <TableCell className="w-32 text-right text-sm-book">
-              {formatEuro(sondermerkmalAbzugTotal.lowest)}
+              {formatEuro(sondermerkmalAbzugTotal.best)}
             </TableCell>
           </TableRow>
           <TableRow className="sm:hidden print:hidden border-b-0">
@@ -193,7 +193,7 @@ export function SondermerkmaleTable() {
               {lField("Höchster Abzug")}
             </TableCell>
             <TableCell className="w-40 text-right text-sm-book">
-              {formatEuro(sondermerkmalAbzugTotal.highest)}
+              {formatEuro(sondermerkmalAbzugTotal.worst)}
             </TableCell>
           </TableRow>
           <TableRow className="sm:hidden print:hidden border-b-0">
@@ -201,7 +201,7 @@ export function SondermerkmaleTable() {
               {lField("Niedrigster Abzug")}
             </TableCell>
             <TableCell className="w-40 text-right pb-0 text-sm-book">
-              {formatEuro(sondermerkmalAbzugTotal.lowest)}
+              {formatEuro(sondermerkmalAbzugTotal.best)}
             </TableCell>
           </TableRow>
         </TableBody>

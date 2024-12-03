@@ -1,13 +1,44 @@
 import { expect, test } from "vitest";
 
-import { getMerkmalStatesByGruppe } from "~/form/api";
+import { getMerkmalStatesByGruppe, getSondermerkmalStates } from "~/form/api";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
+import { SondermerkmalStateList } from "~/form/utils/mapMerkmalStateToMerkmalGruppen";
 
-import { MERKMAL_RESET_ANSWERS } from "./answer-reset";
+import {
+  MERKMAL_RESET_ANSWERS,
+  SONDERMERKMAL_RESET_ANSWERS,
+} from "./answer-reset";
+
+test.each([
+  {
+    description: "Case where all Sondermerkmale should be 'unchecked'",
+    answers: {
+      ...SONDERMERKMAL_RESET_ANSWERS,
+      Unterschrieben: "Ja",
+      Vertragsdatum: "2015-2016",
+      Baujahr: 1918,
+    } as FinalAnswers,
+    result: {
+      "[Sondermerkmal] Hochwertiger Bodenbelag": "unchecked",
+      "[Sondermerkmal] Moderne Küchenausstattung": "unchecked",
+      "[Sondermerkmal] Von der Badewanne getrennte Dusche": "unchecked",
+      "[Sondermerkmal] Kleines Bad": "unchecked",
+      "[Sondermerkmal] Modernes Bad": "unchecked",
+      "[Sondermerkmal] Isolierverglasung/Schallschutzfenster": "unchecked",
+      "[Sondermerkmal] Aufzug im Haus": "unchecked",
+    } as SondermerkmalStateList,
+  },
+])("getSondermerkmalStates(%o)", ({ answers, result }) => {
+  expect(
+    getSondermerkmalStates(answers, getVisibleQuestionAliases(answers)),
+  ).toEqual(result);
+});
 
 test.each([
   ...[
     {
+      description:
+        "Case where all Merkmale in Mietspiegel 2015 should be 'unchecked'",
       answers: {
         ...MERKMAL_RESET_ANSWERS,
         Vertragsdatum: "2015-2016",
@@ -137,6 +168,8 @@ test.each([
     },
     // TODO: Add tests for 2017-2023
     {
+      description:
+        "Case where all Merkmale in Mietspiegel 2023 should be 'unchecked'",
       answers: {
         ...MERKMAL_RESET_ANSWERS,
         Vertragsdatum: "2022-2024",
