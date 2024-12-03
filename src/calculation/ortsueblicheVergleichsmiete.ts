@@ -1,18 +1,23 @@
 import { getLowestHighestPreisspanne } from "~/calculation/preisspanne";
 import { FinalAnswers } from "~/form/flow-machine";
 
-import { getLowestHighestSondermerkmalAbzug } from "./sondermerkmale";
+import { getLowestHighestSondermerkmalAbzugTotal } from "./sondermerkmale";
 import { getLowestHighestSpanneneinordnung } from "./spanneneinordnung";
 
 const calcOrtsueblicheVergleichsmiete = (
   preisspanne: [number, number, number],
   spanneneinordnung: number,
+  sondermerkmalAbzug: number,
 ): number => {
   const [avg, lower, upper] = preisspanne;
   if (spanneneinordnung >= 0) {
-    return Math.round((avg + (upper - avg) * spanneneinordnung) * 100) / 100;
+    return Number(
+      (avg - sondermerkmalAbzug + (upper - avg) * spanneneinordnung).toFixed(2),
+    );
   } else {
-    return Math.round((avg + (avg - lower) * spanneneinordnung) * 100) / 100;
+    return Number(
+      (avg - sondermerkmalAbzug + (avg - lower) * spanneneinordnung).toFixed(2),
+    );
   }
 };
 
@@ -28,7 +33,7 @@ export function getLowestHighestOrtsueblicheVergleichsmiete(
     answers,
     visibleQuestionAliases,
   );
-  const sondermerkmalAbzug = getLowestHighestSondermerkmalAbzug(
+  const sondermerkmalAbzug = getLowestHighestSondermerkmalAbzugTotal(
     answers,
     visibleQuestionAliases,
   );
@@ -41,10 +46,12 @@ export function getLowestHighestOrtsueblicheVergleichsmiete(
     lowest: calcOrtsueblicheVergleichsmiete(
       preisspanne.lowest,
       spanneneinordnung.lowest,
+      sondermerkmalAbzug.highest,
     ),
     highest: calcOrtsueblicheVergleichsmiete(
       preisspanne.highest,
       spanneneinordnung.highest,
+      sondermerkmalAbzug.lowest,
     ),
   };
 }

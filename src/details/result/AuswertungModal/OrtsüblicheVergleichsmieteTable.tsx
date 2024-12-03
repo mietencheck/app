@@ -2,7 +2,7 @@ import React from "react";
 
 import { getLowestHighestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
 import { getLowestHighestPreisspanne } from "~/calculation/preisspanne";
-import { getLowestHighestSondermerkmalAbzug } from "~/calculation/sondermerkmale";
+import { getLowestHighestSondermerkmalAbzugTotal } from "~/calculation/sondermerkmale";
 import { getLowestHighestSpanneneinordnung } from "~/calculation/spanneneinordnung";
 import {
   Table,
@@ -38,7 +38,7 @@ export function OrtsüblicheVergleichsmieteTable() {
     visibleQuestionAliases,
   );
 
-  const sondermerkmalAbzug = getLowestHighestSondermerkmalAbzug(
+  const sondermerkmalAbzug = getLowestHighestSondermerkmalAbzugTotal(
     answers,
     visibleQuestionAliases,
   );
@@ -71,21 +71,31 @@ export function OrtsüblicheVergleichsmieteTable() {
       name: l("Merkmalsgruppen (pro m²)"),
       highest: l("pro-qm", {
         VALUE: formatEuroWithSign(
-          ortsueblicheVergleichsmiete.highest - preisspanne.highest[0],
+          ortsueblicheVergleichsmiete.highest -
+            preisspanne.highest[0] +
+            sondermerkmalAbzug.lowest,
         ),
       }),
       lowest: l("pro-qm", {
         VALUE: formatEuroWithSign(
-          ortsueblicheVergleichsmiete.lowest - preisspanne.lowest[0],
+          ortsueblicheVergleichsmiete.lowest -
+            preisspanne.lowest[0] +
+            sondermerkmalAbzug.highest,
         ),
       }),
     },
     ...(mietspiegeljahr == "2015"
       ? [
           {
-            name: l("Sondermerkmale"),
-            highest: `${formatEuro(sondermerkmalAbzug.lowest)}`,
-            lowest: `${formatEuro(sondermerkmalAbzug.highest)}`,
+            name: l("Sondermerkmalabzug"),
+            highest:
+              sondermerkmalAbzug.lowest == 0
+                ? formatEuro(0)
+                : `-${formatEuro(sondermerkmalAbzug.lowest)}`,
+            lowest:
+              sondermerkmalAbzug.highest == 0
+                ? formatEuro(0)
+                : `-${formatEuro(sondermerkmalAbzug.highest)}`,
           },
         ]
       : []),

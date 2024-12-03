@@ -1,6 +1,6 @@
 import {
   useLowestHighestZulaessigeHoechstmiete,
-  useNettokaltmieteZulaessigeHoechstmieteDiff,
+  useLowestHighestZulaessigeHoechstmieteDiff,
 } from "~/details/utils";
 import { useLocalizeField } from "~/l10n";
 import { formatEuro } from "~/utils";
@@ -11,7 +11,7 @@ export function MieteZuHoch() {
     lowest: lowestZulaessigeHoechstmiete,
   } = useLowestHighestZulaessigeHoechstmiete();
   const { lowest: lowestDiff, highest: highestDiff } =
-    useNettokaltmieteZulaessigeHoechstmieteDiff();
+    useLowestHighestZulaessigeHoechstmieteDiff();
   const l = useLocalizeField();
 
   return (
@@ -34,8 +34,8 @@ export function MieteZuHoch() {
                 MIETE: formatEuro(lowestZulaessigeHoechstmiete),
               })
             : l("Ergebnis zulässige Höchstmiete zwischen X und Y", {
-                BESTMIETE: formatEuro(lowestZulaessigeHoechstmiete),
-                WORSTMIETE: formatEuro(highestZulaessigeHoechstmiete),
+                LOWESTMIETE: formatEuro(lowestZulaessigeHoechstmiete),
+                HIGHESTMIETE: formatEuro(highestZulaessigeHoechstmiete),
               })}{" "}
           {lowestDiff <= 0
             ? l("Ergebnis Mietpreisbremse nicht möglich")

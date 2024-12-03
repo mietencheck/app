@@ -5,7 +5,7 @@ export type Merkmal = string;
 export type MerkmalGruppe = "Bad" | "Küche" | "Wohnung" | "Gebäude" | "Umfeld";
 export type MerkmalTyp = "Wohnwerterhoehend" | "Wohnwertmindernd";
 
-export type Sondermerkmal = (typeof sondermerkmale)[number];
+export type Sondermerkmal = keyof typeof sondermerkmale;
 
 type Mittelwert = number;
 type Unterwert = number;

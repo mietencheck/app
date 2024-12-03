@@ -1,6 +1,6 @@
 import { Button, LinkButton } from "~/components/ui";
 import { DetailsRouter } from "~/details/router";
-import { useNettokaltmieteZulaessigeHoechstmieteDiff } from "~/details/utils";
+import { useLowestHighestZulaessigeHoechstmieteDiff } from "~/details/utils";
 import { useLocalizeField } from "~/l10n";
 
 import { StepperType } from "..";
@@ -10,8 +10,7 @@ import { MieteZuNiedrig } from "./MieteZuNiedrig";
 
 export function VorspeiseResult({ stepper }: { stepper: StepperType }) {
   const l = useLocalizeField();
-  const { highest: highestDiff } =
-    useNettokaltmieteZulaessigeHoechstmieteDiff();
+  const { highest: highestDiff } = useLowestHighestZulaessigeHoechstmieteDiff();
 
   useMarkEstimatorSeen();
 

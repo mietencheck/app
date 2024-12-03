@@ -207,7 +207,7 @@ export const getMerkmalStates = (
 export const getSondermerkmalStates = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
-): SondermerkmalStateList | {} => {
+): SondermerkmalStateList | undefined => {
   const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
 
   if (mietspiegeljahr == "2015") {
@@ -224,8 +224,8 @@ export const getSondermerkmalStates = (
           ];
         },
       ),
-    );
+    ) as SondermerkmalStateList;
   }
 
-  return {};
+  return undefined;
 };

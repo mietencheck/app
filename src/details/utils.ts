@@ -1,7 +1,6 @@
 import { useLocation } from "@swan-io/chicane";
 import { Group, Question, ungroup } from "flow-machine";
 import { useCallback, useEffect, useMemo } from "react";
-import { mapValues } from "remeda";
 import { useLocalStorage, useSessionStorage } from "usehooks-ts";
 
 import { getLowestHighestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
@@ -136,7 +135,10 @@ export function useLowestHighestZulaessigeHoechstmiete(): {
   );
 }
 
-export function useNettokaltmieteZulaessigeHoechstmieteDiff() {
+export function useLowestHighestZulaessigeHoechstmieteDiff(): {
+  lowest: number;
+  highest: number;
+} {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAlises = useVisibleQuestionAliases();
 
@@ -144,8 +146,10 @@ export function useNettokaltmieteZulaessigeHoechstmieteDiff() {
   const lowestHighestZulaessigeHoechstmiete =
     useLowestHighestZulaessigeHoechstmiete();
 
-  return mapValues(
-    lowestHighestZulaessigeHoechstmiete,
-    (n) => n - Number(nettokaltmiete),
-  );
+  return {
+    lowest:
+      Number(nettokaltmiete) - lowestHighestZulaessigeHoechstmiete.highest,
+    highest:
+      Number(nettokaltmiete) - lowestHighestZulaessigeHoechstmiete.lowest,
+  };
 }

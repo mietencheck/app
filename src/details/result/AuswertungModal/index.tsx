@@ -8,18 +8,18 @@ import { DeineDatenTable } from "./DeineDatenTable";
 import { MerkmaleTable } from "./MerkmaleTable";
 import { OrtsüblicheVergleichsmieteTable } from "./OrtsüblicheVergleichsmieteTable";
 import { PreisspannenTable } from "./PreisspannenTable";
+import { SondermerkmaleTable } from "./SondermerkmaleTable";
 import { SpanneneinordungTable } from "./SpanneneinordnungTable";
 import { ZulaessigeHoechstmieteTable } from "./ZulaessigeHoechstmieteTable";
 
+export function SondermerkmalTabPanel() {
+  return <SondermerkmaleTable />;
+}
 export function MerkmalTabPanel() {
   return <MerkmaleTable />;
 }
 
 export function AuswertungTabPanel() {
-  const answers = useAnswers().getAliasedState();
-  const visibleQuestionAliases = useVisibleQuestionAliases();
-
-  const mietspiegljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
   const l = useLocalizeField();
 
   return (
@@ -54,14 +54,6 @@ export function AuswertungTabPanel() {
         <PreisspannenTable />
       </div>
 
-      {mietspiegljahr == "2015" && (
-        <div className="mb-12">
-          <h2 className="heading-20 mb-6">{l("Sondermerkmale")}</h2>
-
-          {/* <SondermerkmaleTable /> TODO: Jonas temporary fix */}
-        </div>
-      )}
-
       <div className="mb-12">
         <h2 className="heading-20 mb-6">{l("Merkmalsgruppen")}</h2>
 
@@ -85,6 +77,11 @@ export function AuswertungTabPanel() {
 
 export function AuswertungsModal({ onClose }: { onClose: () => void }) {
   const l = useLocalizeField();
+  const answers = useAnswers().getAliasedState();
+  const visibleQuestionAliases = useVisibleQuestionAliases();
+
+  const mietspiegljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+
   return (
     <>
       <header className="sticky top-0 px-4 sm:px-6 py-3 flex flex-row justify-between items-center bg-white border-b z-10 print:hidden">
@@ -95,15 +92,23 @@ export function AuswertungsModal({ onClose }: { onClose: () => void }) {
       </header>
       <Tabs>
         <TabList className="px-4 sm:px-6 border-b border-neutral-subtle -mb-[1px] print:hidden">
-          <Tab id="evaluation">{l("Details")}</Tab>
-          <Tab id="details">{l("Merkmale")}</Tab>
+          <Tab id="auswertung">{l("Details")}</Tab>
+          <Tab id="merkmale">{l("Merkmale")}</Tab>
+          {mietspiegljahr == "2015" && (
+            <Tab id="sondermerkmale">{l("Sondermerkmale")}</Tab>
+          )}
         </TabList>
-        <TabPanel id="evaluation" className="p-4 sm:p-6">
+        <TabPanel id="auswertung" className="p-4 sm:p-6">
           <AuswertungTabPanel />
         </TabPanel>
-        <TabPanel id="details" className="p-4 sm:p-6">
+        <TabPanel id="merkmale" className="p-4 sm:p-6">
           <MerkmalTabPanel />
         </TabPanel>
+        {mietspiegljahr == "2015" && (
+          <TabPanel id="sondermerkmale" className="p-4 sm:p-6">
+            <SondermerkmalTabPanel />
+          </TabPanel>
+        )}
       </Tabs>
     </>
   );
