@@ -16,10 +16,10 @@ import { Preisspanne } from "~/mietspiegel/types";
  * @param {FinalAnswers} answers - The answers object containing user input data.
  * @returns  {{ highestDiscount: number; lowestDiscount: number } | undefined} - The lowest and highest discounts in Euro, or undefined if the calculation cannot be performed.
  */
-export function getLowestHighestAusstattungsAbzug(
+export function getWorstBestAusstattungsAbzug(
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
-): { highestDiscount: number; lowestDiscount: number } | undefined {
+): { worst: number; best: number } | undefined {
   const mietspiegelJahr = getMietspiegeljahr(answers, visibleQuestionAliases);
   const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
   const ausstattung = getAusstattung(answers, visibleQuestionAliases);
@@ -42,8 +42,8 @@ export function getLowestHighestAusstattungsAbzug(
 
   if (!ausstattungsAbzuege) {
     return {
-      highestDiscount: 0,
-      lowestDiscount: 0,
+      best: 0,
+      worst: 0,
     };
   }
 
@@ -51,7 +51,7 @@ export function getLowestHighestAusstattungsAbzug(
   const isMaybeOrChecked = (m: "Ja" | "Nein" | "Nicht sicher") =>
     m == "Nein" || m == "Nicht sicher";
 
-  const highestDiscount =
+  const best =
     isMaybeOrChecked(ausstattung.sammelheizung) &&
     isMaybeOrChecked(ausstattung.bad)
       ? ausstattungsAbzuege["!SH && !Bad"]
@@ -59,7 +59,7 @@ export function getLowestHighestAusstattungsAbzug(
           isMaybeOrChecked(ausstattung.bad)
         ? ausstattungsAbzuege["!SH || !Bad"]
         : 0;
-  const lowestDiscount =
+  const worst =
     isChecked(ausstattung.sammelheizung) && isChecked(ausstattung.bad)
       ? ausstattungsAbzuege["!SH && !Bad"]
       : isChecked(ausstattung.sammelheizung) || isChecked(ausstattung.bad)
@@ -67,8 +67,8 @@ export function getLowestHighestAusstattungsAbzug(
         : 0;
 
   return {
-    highestDiscount: highestDiscount,
-    lowestDiscount: lowestDiscount,
+    best: best,
+    worst: worst,
   };
 }
 
@@ -78,10 +78,10 @@ export function getLowestHighestAusstattungsAbzug(
  * @param {FinalAnswers} answers - The answers object containing user input data.
  * @returns {{ lowest: Preisspanne; highest: Preisspanne  } | undefined} - The the highest and lowest Preisspanne, each represented as a tuple of three numbers (average value, lower threshold, upper threshold), or undefined if the calculation.
  */
-export function getLowestHighestPreisspanne(
+export function getWorstBestPreisspanne(
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
-): { lowest: Preisspanne; highest: Preisspanne } | undefined {
+): { worst: Preisspanne; best: Preisspanne } | undefined {
   const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
   const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
   const wohnflaecheSpanne = getWohnflaecheSpanne(
@@ -89,7 +89,7 @@ export function getLowestHighestPreisspanne(
     visibleQuestionAliases,
   );
   const wohnlage = getWohnlage(answers, visibleQuestionAliases);
-  const highestLowestAusstattungsAbzug = getLowestHighestAusstattungsAbzug(
+  const highestLowestAusstattungsAbzug = getWorstBestAusstattungsAbzug(
     answers,
     visibleQuestionAliases,
   );
@@ -124,18 +124,19 @@ export function getLowestHighestPreisspanne(
     return undefined;
   }
 
-  const { highestDiscount, lowestDiscount } = highestLowestAusstattungsAbzug;
+  const { best: bestAusstattungsAbzug, worst: worstAusstattungsAbzug } =
+    highestLowestAusstattungsAbzug;
 
   return {
-    lowest: [
-      Number((preisspanne[0] - highestDiscount).toFixed(2)),
-      Number((preisspanne[1] - highestDiscount).toFixed(2)),
-      Number((preisspanne[2] - highestDiscount).toFixed(2)),
+    best: [
+      Number((preisspanne[0] - bestAusstattungsAbzug).toFixed(2)),
+      Number((preisspanne[1] - bestAusstattungsAbzug).toFixed(2)),
+      Number((preisspanne[2] - bestAusstattungsAbzug).toFixed(2)),
     ],
-    highest: [
-      Number((preisspanne[0] - lowestDiscount).toFixed(2)),
-      Number((preisspanne[1] - lowestDiscount).toFixed(2)),
-      Number((preisspanne[2] - lowestDiscount).toFixed(2)),
+    worst: [
+      Number((preisspanne[0] - worstAusstattungsAbzug).toFixed(2)),
+      Number((preisspanne[1] - worstAusstattungsAbzug).toFixed(2)),
+      Number((preisspanne[2] - worstAusstattungsAbzug).toFixed(2)),
     ],
   };
 }

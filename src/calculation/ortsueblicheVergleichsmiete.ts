@@ -1,7 +1,7 @@
-import { getLowestHighestPreisspanne } from "~/calculation/preisspanne";
+import { getWorstBestPreisspanne } from "~/calculation/preisspanne";
 import { FinalAnswers } from "~/form/flow-machine";
 
-import { getLowestHighestSondermerkmalAbzugTotal } from "./sondermerkmale";
+import { getWorstBestSondermerkmalAbzugTotal } from "./sondermerkmale";
 import { getWorstBestSpanneneinordnungInPercent } from "./spanneneinordnung";
 
 const calcOrtsueblicheVergleichsmiete = (
@@ -25,15 +25,12 @@ export function getLowestHighestOrtsueblicheVergleichsmiete(
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): { lowest: number; highest: number } | undefined {
-  const preisspanne = getLowestHighestPreisspanne(
-    answers,
-    visibleQuestionAliases,
-  );
+  const preisspanne = getWorstBestPreisspanne(answers, visibleQuestionAliases);
   const spanneneinordnung = getWorstBestSpanneneinordnungInPercent(
     answers,
     visibleQuestionAliases,
   );
-  const sondermerkmalAbzug = getLowestHighestSondermerkmalAbzugTotal(
+  const sondermerkmalAbzug = getWorstBestSondermerkmalAbzugTotal(
     answers,
     visibleQuestionAliases,
   );
@@ -44,14 +41,14 @@ export function getLowestHighestOrtsueblicheVergleichsmiete(
 
   return {
     lowest: calcOrtsueblicheVergleichsmiete(
-      preisspanne.lowest,
+      preisspanne.best,
       spanneneinordnung.worst,
-      sondermerkmalAbzug.highest,
+      sondermerkmalAbzug.worst,
     ),
     highest: calcOrtsueblicheVergleichsmiete(
-      preisspanne.highest,
+      preisspanne.worst,
       spanneneinordnung.best,
-      sondermerkmalAbzug.lowest,
+      sondermerkmalAbzug.best,
     ),
   };
 }

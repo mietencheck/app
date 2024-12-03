@@ -38,6 +38,16 @@ export const getAdresse = (
     : undefined;
 };
 
+export const getOst = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+): boolean => {
+  const alias = "Ost";
+  return answers[alias] && visibleQuestionAliases.has(alias)
+    ? answers[alias]
+    : false;
+};
+
 export const getWohnlage = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
@@ -114,26 +124,26 @@ export const getBaujahrSpanne = (
 ) => {
   const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
   const baujahr = getBaujahr(answers, visibleQuestionAliases);
+  const ost = getOst(answers, visibleQuestionAliases);
 
   if (baujahr && mietspiegeljahr) {
-    return baujahrSpannenByMietspiegeljahr[
-      mietspiegeljahr as Mietspiegeljahr
-    ].find((baujahrSpanne) => {
-      const constructionYearLimits = baujahrSpanne
+    const baujahrSpannen =
+      baujahrSpannenByMietspiegeljahr[mietspiegeljahr as Mietspiegeljahr];
+
+    return baujahrSpannen.find((baujahrSpanne) => {
+      const [start, end] = baujahrSpanne
         .replace(/^(W:|O:)/, "")
-        .split("-");
-      return (
-        baujahr >= Number(constructionYearLimits[0]) &&
-        baujahr <= Number(constructionYearLimits[1])
-      );
-      /*
-        TODO: Does not(?) work as expected if constructionYear is higher than
-        the largest constructionYearLimits. For instance, the rent index of
-        2023 only defines values building built until 2017. If the user
-        enters an abritray high value for the construction year (e.g. 4000),
-        this function returns undefined. Not sure if we should deal with this
-        issue at the input level or somewhere else.
-      */
+        .split("-")
+        .map(Number);
+      const isOst = baujahrSpanne.includes("O:");
+      const isWest = baujahrSpanne.includes("W:");
+
+      const matchesOstWest =
+        (!isOst && !isWest) || // No specific region
+        (isOst && ost === true) || // Matches East
+        (isWest && ost === false); // Matches West
+
+      return baujahr >= start && baujahr <= end && matchesOstWest;
     });
   }
 

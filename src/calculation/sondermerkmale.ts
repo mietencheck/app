@@ -11,7 +11,7 @@ import {
   Sondermerkmal,
 } from "~/mietspiegel/types";
 
-const getSondermerkmalAbzug = (
+const calcSondermerkmalAbzug = (
   mietspiegeljahr: Mietspiegeljahr | undefined,
   sondermerkmal: Sondermerkmal,
   baujahrSpanne: BaujahrSpanneInMietspiegeljahr[2015],
@@ -32,19 +32,21 @@ const getSondermerkmalAbzug = (
   return abzuege[baujahrSpanne] ?? 0;
 };
 
-export const getLowestHighestSondermerkmalAbzuege = (
+export const getWorstBestSondermerkmalAbzuege = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ):
   | {
       [key in Sondermerkmal]: {
-        lowest: number;
-        highest: number;
+        worst: number;
+        best: number;
       };
     }
   | undefined => {
   const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
   const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
+
+  console.log("baujahrSpanne", baujahrSpanne);
 
   const sondermerkmalStates = getSondermerkmalStates(
     answers,
@@ -57,48 +59,50 @@ export const getLowestHighestSondermerkmalAbzuege = (
 
   return Object.entries(sondermerkmalStates).reduce(
     (result, [sondermerkmal, state]) => {
-      const abzug = getSondermerkmalAbzug(
+      const abzug = calcSondermerkmalAbzug(
         mietspiegeljahr,
         sondermerkmal as Sondermerkmal,
         baujahrSpanne as BaujahrSpanneInMietspiegeljahr[2015],
       );
       result[sondermerkmal as Sondermerkmal] = {
-        lowest: state == "checked" ? abzug : 0,
-        highest: state == "checked" || state == "maybe" ? abzug : 0,
+        worst: state == "checked" || state == "maybe" ? abzug : 0,
+        best: state == "checked" ? abzug : 0,
       };
       return result;
     },
     {} as {
       [key in Sondermerkmal]: {
-        lowest: number;
-        highest: number;
+        worst: number;
+        best: number;
       };
     },
   );
 };
 
-export function getLowestHighestSondermerkmalAbzugTotal(
+export function getWorstBestSondermerkmalAbzugTotal(
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): {
-  lowest: number;
-  highest: number;
+  worst: number;
+  best: number;
 } {
-  const lowestHighestSondermerkmalAbzuege =
-    getLowestHighestSondermerkmalAbzuege(answers, visibleQuestionAliases);
+  const sondermerkmalAbzuege = getWorstBestSondermerkmalAbzuege(
+    answers,
+    visibleQuestionAliases,
+  );
 
-  if (!lowestHighestSondermerkmalAbzuege) {
+  if (!sondermerkmalAbzuege) {
     return {
-      lowest: 0,
-      highest: 0,
+      worst: 0,
+      best: 0,
     };
   }
-  return Object.entries(lowestHighestSondermerkmalAbzuege).reduce(
+  return Object.entries(sondermerkmalAbzuege).reduce(
     (result, sondermerkmal) => {
-      result.lowest = result.lowest + sondermerkmal[1].lowest;
-      result.highest = result.highest + sondermerkmal[1].highest;
+      result.worst = result.worst + sondermerkmal[1].worst;
+      result.best = result.best + sondermerkmal[1].best;
       return result;
     },
-    { lowest: 0, highest: 0 },
+    { worst: 0, best: 0 },
   );
 }
