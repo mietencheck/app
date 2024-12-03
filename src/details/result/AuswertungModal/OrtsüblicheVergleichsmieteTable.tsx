@@ -3,7 +3,7 @@ import React from "react";
 import { getLowestHighestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
 import { getLowestHighestPreisspanne } from "~/calculation/preisspanne";
 import { getLowestHighestSondermerkmalAbzugTotal } from "~/calculation/sondermerkmale";
-import { getLowestHighestSpanneneinordnung } from "~/calculation/spanneneinordnung";
+import { getWorstBestSpanneneinordnungInPercent } from "~/calculation/spanneneinordnung";
 import {
   Table,
   TableBody,
@@ -33,7 +33,7 @@ export function OrtsüblicheVergleichsmieteTable() {
     highest: [0, 0, 0],
   };
 
-  const spanneneinordung = getLowestHighestSpanneneinordnung(
+  const spanneneinordung = getWorstBestSpanneneinordnungInPercent(
     answers,
     visibleQuestionAliases,
   );
@@ -64,8 +64,8 @@ export function OrtsüblicheVergleichsmieteTable() {
     },
     {
       name: l("Merkmalsgruppen (in Prozent)"),
-      highest: `${spanneneinordung.highest * 100}%`,
-      lowest: `${spanneneinordung.lowest * 100}%`,
+      highest: `${spanneneinordung.best * 100}%`,
+      lowest: `${spanneneinordung.worst * 100}%`,
     },
     {
       name: l("Merkmalsgruppen (pro m²)"),

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getLowestHighestMerkmalStateTotalByGruppe } from "~/calculation/spanneneinordnung";
+import { getWorstBestMerkmalStateByMerkmalGruppe } from "~/calculation/spanneneinordnung";
 import {
   Table,
   TableBody,
@@ -23,7 +23,7 @@ export function MerkmaleTable() {
     answers,
     visibleQuestionAliases,
   );
-  const merkmalStateTotalByGruppe = getLowestHighestMerkmalStateTotalByGruppe(
+  const merkmalStateTotalByGruppe = getWorstBestMerkmalStateByMerkmalGruppe(
     answers,
     visibleQuestionAliases,
   );
@@ -136,14 +136,14 @@ export function MerkmaleTable() {
                       {
                         merkmalStateTotalByGruppe[
                           merkmalGruppe as MerkmalGruppe
-                        ].lowest
+                        ].worst
                       }
                     </TableCell>
                     <TableCell className="w-36 text-right">
                       {
                         merkmalStateTotalByGruppe[
                           merkmalGruppe as MerkmalGruppe
-                        ].highest
+                        ].best
                       }
                     </TableCell>
                   </TableRow>
@@ -160,7 +160,7 @@ export function MerkmaleTable() {
                       {
                         merkmalStateTotalByGruppe[
                           merkmalGruppe as MerkmalGruppe
-                        ].lowest
+                        ].worst
                       }
                     </TableCell>
                   </TableRow>
@@ -172,7 +172,7 @@ export function MerkmaleTable() {
                       {
                         merkmalStateTotalByGruppe[
                           merkmalGruppe as MerkmalGruppe
-                        ].highest
+                        ].best
                       }
                     </TableCell>
                   </TableRow>

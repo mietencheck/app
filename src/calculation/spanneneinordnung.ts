@@ -7,37 +7,13 @@ const countMerkmaleWithValues = (obj: MerkmalStateList, values: string[]) =>
   Object.values(obj).filter((value) => (value ? values.includes(value) : false))
     .length;
 
-export const getLowestHighestMerkmalStateByGrupppeInPercent = (
+export const getWorstBestMerkmalStateByMerkmalGruppe = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): {
   [key in MerkmalGruppe]: {
-    lowest: number;
-    highest: number;
-  };
-} => {
-  const lowestHighestMerkmalStateTotalByGruppe =
-    getLowestHighestMerkmalStateTotalByGruppe(answers, visibleQuestionAliases);
-
-  return Object.entries(lowestHighestMerkmalStateTotalByGruppe).reduce(
-    (result, [merkmalGruppe, total]) => {
-      result[merkmalGruppe as MerkmalGruppe] = {
-        lowest: total.lowest > 0 ? 0.2 : total.lowest < 0 ? -0.2 : 0,
-        highest: total.highest > 0 ? 0.2 : total.highest < 0 ? -0.2 : 0,
-      };
-      return result;
-    },
-    {} as { [key in MerkmalGruppe]: any },
-  );
-};
-
-export const getLowestHighestMerkmalStateTotalByGruppe = (
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
-): {
-  [key in MerkmalGruppe]: {
-    lowest: number;
-    highest: number;
+    worst: number;
+    best: number;
   };
 } => {
   const merkmalStatesByGruppe = getMerkmalStatesByGruppe(
@@ -48,17 +24,17 @@ export const getLowestHighestMerkmalStateTotalByGruppe = (
   return Object.entries(merkmalStatesByGruppe).reduce(
     (result, [merkmalGruppe, merkmale]) => {
       result[merkmalGruppe as MerkmalGruppe] = {
-        lowest:
+        worst:
+          countMerkmaleWithValues(merkmale.Wohnwerterhoehend, [
+            "checked",
+            "maybe",
+          ]) - countMerkmaleWithValues(merkmale.Wohnwertmindernd, ["checked"]),
+        best:
           countMerkmaleWithValues(merkmale.Wohnwerterhoehend, ["checked"]) -
           countMerkmaleWithValues(merkmale.Wohnwertmindernd, [
             "checked",
             "maybe",
           ]),
-        highest:
-          countMerkmaleWithValues(merkmale.Wohnwerterhoehend, [
-            "checked",
-            "maybe",
-          ]) - countMerkmaleWithValues(merkmale.Wohnwertmindernd, ["checked"]),
       };
       return result;
     },
@@ -66,17 +42,39 @@ export const getLowestHighestMerkmalStateTotalByGruppe = (
   );
 };
 
-export const getLowestHighestSpanneneinordnung = (
+export const getWorstBestMerkmalStateByMerkmalGrupppeInPercent = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): {
-  lowest: number;
-  highest: number;
+  [key in MerkmalGruppe]: {
+    worst: number;
+    best: number;
+  };
 } => {
-  const merkmalStateTotalByGruppe = getLowestHighestMerkmalStateTotalByGruppe(
-    answers,
-    visibleQuestionAliases,
+  const worstBestMerkmalStateByMerkmalGruppe =
+    getWorstBestMerkmalStateByMerkmalGruppe(answers, visibleQuestionAliases);
+
+  return Object.entries(worstBestMerkmalStateByMerkmalGruppe).reduce(
+    (result, [merkmalGruppe, total]) => {
+      result[merkmalGruppe as MerkmalGruppe] = {
+        worst: total.worst > 0 ? 0.2 : total.worst < 0 ? -0.2 : 0,
+        best: total.best > 0 ? 0.2 : total.best < 0 ? -0.2 : 0,
+      };
+      return result;
+    },
+    {} as { [key in MerkmalGruppe]: any },
   );
+};
+
+export const getWorstBestSpanneneinordnungInPercent = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+): {
+  worst: number;
+  best: number;
+} => {
+  const worstBestMerkmalStateByMerkmalGruppe =
+    getWorstBestMerkmalStateByMerkmalGruppe(answers, visibleQuestionAliases);
 
   const calcSpanneneinordnung = (
     result: number,
@@ -87,21 +85,18 @@ export const getLowestHighestSpanneneinordnung = (
     return result;
   };
 
-  return Object.values(merkmalStateTotalByGruppe).reduce(
+  return Object.values(worstBestMerkmalStateByMerkmalGruppe).reduce(
     (
       result,
-      { lowest: lowestMerkmalStateTotal, highest: highestMerkmalStateTotal },
+      { worst: worstMerkmalStateTotal, best: bestMerkmalStateTotal },
     ) => {
-      result.lowest = calcSpanneneinordnung(
-        result.lowest,
-        lowestMerkmalStateTotal,
+      result.worst = calcSpanneneinordnung(
+        result.worst,
+        worstMerkmalStateTotal,
       );
-      result.highest = calcSpanneneinordnung(
-        result.highest,
-        highestMerkmalStateTotal,
-      );
+      result.best = calcSpanneneinordnung(result.best, bestMerkmalStateTotal);
       return result;
     },
-    { lowest: 0, highest: 0 },
+    { worst: 0, best: 0 },
   );
 };
