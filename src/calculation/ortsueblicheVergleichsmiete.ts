@@ -2,7 +2,7 @@ import { getLowestHighestPreisspanne } from "~/calculation/preisspanne";
 import { FinalAnswers } from "~/form/flow-machine";
 
 import { getLowestHighestSondermerkmalAbzugTotal } from "./sondermerkmale";
-import { getLowestHighestSpanneneinordnung } from "./spanneneinordnung";
+import { getWorstBestSpanneneinordnungInPercent } from "./spanneneinordnung";
 
 const calcOrtsueblicheVergleichsmiete = (
   preisspanne: [number, number, number],
@@ -29,7 +29,7 @@ export function getLowestHighestOrtsueblicheVergleichsmiete(
     answers,
     visibleQuestionAliases,
   );
-  const spanneneinordnung = getLowestHighestSpanneneinordnung(
+  const spanneneinordnung = getWorstBestSpanneneinordnungInPercent(
     answers,
     visibleQuestionAliases,
   );
@@ -45,12 +45,12 @@ export function getLowestHighestOrtsueblicheVergleichsmiete(
   return {
     lowest: calcOrtsueblicheVergleichsmiete(
       preisspanne.lowest,
-      spanneneinordnung.lowest,
+      spanneneinordnung.worst,
       sondermerkmalAbzug.highest,
     ),
     highest: calcOrtsueblicheVergleichsmiete(
       preisspanne.highest,
-      spanneneinordnung.highest,
+      spanneneinordnung.best,
       sondermerkmalAbzug.lowest,
     ),
   };
