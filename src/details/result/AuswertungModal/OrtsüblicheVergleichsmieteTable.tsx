@@ -17,9 +17,6 @@ import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import { formatEuro } from "~/utils";
 
-const formatEuroWithSign = (value: number) =>
-  (value > 0 ? "+" : "") + formatEuro(value);
-
 export function OrtsüblicheVergleichsmieteTable() {
   const l = useLocalizeField();
   const answers = useAnswers().getAliasedState();
@@ -61,32 +58,10 @@ export function OrtsüblicheVergleichsmieteTable() {
       }),
       best: l("pro-qm", { VALUE: formatEuro(preisspanne.best[0]) }),
     },
-    {
-      name: l("Merkmalsgruppen (in Prozent)"),
-      worst: `${spanneneinordung.worst * 100}%`,
-      best: `${spanneneinordung.best * 100}%`,
-    },
-    {
-      name: l("Merkmalsgruppen (pro m²)"),
-      worst: l("pro-qm", {
-        VALUE: formatEuroWithSign(
-          ortsueblicheVergleichsmiete.worst -
-            preisspanne.worst[0] +
-            sondermerkmalAufschlag.worst,
-        ),
-      }),
-      best: l("pro-qm", {
-        VALUE: formatEuroWithSign(
-          ortsueblicheVergleichsmiete.best -
-            preisspanne.best[0] +
-            sondermerkmalAufschlag.best,
-        ),
-      }),
-    },
     ...(mietspiegeljahr == "2015"
       ? [
           {
-            name: l("SondermerkmalAufschlag"),
+            name: l("Sondermerkmal Aufschlag"),
             worst:
               sondermerkmalAufschlag.best == 0
                 ? formatEuro(0)
@@ -98,6 +73,20 @@ export function OrtsüblicheVergleichsmieteTable() {
           },
         ]
       : []),
+    {
+      name: l("Merkmalsgruppen (in Prozent)"),
+      worst: `${spanneneinordung.worst * 100}%`,
+      best: `${spanneneinordung.best * 100}%`,
+    },
+    {
+      name: l("Merkmalsgruppen (pro m²)"),
+      worst: l("pro-qm", {
+        VALUE: "TODO",
+      }),
+      best: l("pro-qm", {
+        VALUE: "TODO",
+      }),
+    },
     {
       name: l("Ergebnis"),
       worst: l("pro-qm", {
