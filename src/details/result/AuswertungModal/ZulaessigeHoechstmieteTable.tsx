@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getLowestHighestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
+import { getWorstBestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
 import { getLowestHighestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
 import {
   Table,
@@ -21,14 +21,14 @@ export function ZulaessigeHoechstmieteTable() {
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
   const {
-    highest: highestVergleichsmietePerQm,
-    lowest: lowestVergleichsmietePerQm,
-  } = getLowestHighestOrtsueblicheVergleichsmiete(
+    worst: highestVergleichsmietePerQm,
+    best: lowestVergleichsmietePerQm,
+  } = getWorstBestOrtsueblicheVergleichsmiete(
     answers,
     visibleQuestionAliases,
   ) ?? {
-    highest: 0,
-    lowest: 0,
+    worst: 0,
+    best: 0,
   };
 
   const { highest: highestHöchstmiete, lowest: lowestHöchstmiete } =

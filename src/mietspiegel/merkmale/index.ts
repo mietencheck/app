@@ -1,4 +1,3 @@
-import { Mietspiegeljahr } from "../types";
 import merkmale2015 from "./2015.json";
 import merkmale2017 from "./2017.json";
 import merkmale2019 from "./2019.json";

@@ -17,6 +17,7 @@ export function PreisspannenTable() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
   const l = useLocalizeField();
+
   const { best: lowestPreisspanne, worst: highestPreisspanne } =
     getWorstBestPreisspanne(answers, visibleQuestionAliases) || {
       best: [0, 0, 0],

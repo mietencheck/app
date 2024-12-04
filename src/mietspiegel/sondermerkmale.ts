@@ -19,7 +19,7 @@ export const sondermerkmale = {
   "[Sondermerkmal] Aufzug im Haus": "Aufzug im Haus",
 };
 
-export const sondermerkmaleAbzuegeByMietspiegeljahr = {
+export const sondermerkmaleAufschlaegeByMietspiegeljahr = {
   2015: {
     "[Sondermerkmal] Hochwertiger Bodenbelag": {
       "-1918": 0.56,

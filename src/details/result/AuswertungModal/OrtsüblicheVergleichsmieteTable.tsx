@@ -1,8 +1,8 @@
 import React from "react";
 
-import { getLowestHighestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
+import { getWorstBestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
 import { getWorstBestPreisspanne } from "~/calculation/preisspanne";
-import { getWorstBestSondermerkmalAbzugTotal } from "~/calculation/sondermerkmale";
+import { getWorstBestSondermerkmalAufschlag } from "~/calculation/sondermerkmale";
 import { getWorstBestSpanneneinordnungInPercent } from "~/calculation/spanneneinordnung";
 import {
   Table,
@@ -38,19 +38,18 @@ export function OrtsüblicheVergleichsmieteTable() {
     visibleQuestionAliases,
   );
 
-  const sondermerkmalAbzug = getWorstBestSondermerkmalAbzugTotal(
+  const sondermerkmalAufschlag = getWorstBestSondermerkmalAufschlag(
     answers,
     visibleQuestionAliases,
   );
 
-  const ortsueblicheVergleichsmiete =
-    getLowestHighestOrtsueblicheVergleichsmiete(
-      answers,
-      visibleQuestionAliases,
-    ) || {
-      lowest: 0,
-      highest: 0,
-    };
+  const ortsueblicheVergleichsmiete = getWorstBestOrtsueblicheVergleichsmiete(
+    answers,
+    visibleQuestionAliases,
+  ) || {
+    best: 0,
+    worst: 0,
+  };
 
   const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
 
@@ -71,48 +70,46 @@ export function OrtsüblicheVergleichsmieteTable() {
       name: l("Merkmalsgruppen (pro m²)"),
       worst: l("pro-qm", {
         VALUE: formatEuroWithSign(
-          ortsueblicheVergleichsmiete.highest -
+          ortsueblicheVergleichsmiete.worst -
             preisspanne.worst[0] +
-            sondermerkmalAbzug.worst,
+            sondermerkmalAufschlag.worst,
         ),
       }),
       best: l("pro-qm", {
         VALUE: formatEuroWithSign(
-          ortsueblicheVergleichsmiete.lowest -
+          ortsueblicheVergleichsmiete.best -
             preisspanne.best[0] +
-            sondermerkmalAbzug.best,
+            sondermerkmalAufschlag.best,
         ),
       }),
     },
     ...(mietspiegeljahr == "2015"
       ? [
           {
-            name: l("Sondermerkmalabzug"),
+            name: l("SondermerkmalAufschlag"),
             worst:
-              sondermerkmalAbzug.best == 0
+              sondermerkmalAufschlag.best == 0
                 ? formatEuro(0)
-                : `-${formatEuro(sondermerkmalAbzug.best)}`,
+                : `-${formatEuro(sondermerkmalAufschlag.best)}`,
             best:
-              sondermerkmalAbzug.worst == 0
+              sondermerkmalAufschlag.worst == 0
                 ? formatEuro(0)
-                : `-${formatEuro(sondermerkmalAbzug.worst)}`,
+                : `-${formatEuro(sondermerkmalAufschlag.worst)}`,
           },
         ]
       : []),
     {
       name: l("Ergebnis"),
       worst: l("pro-qm", {
-        VALUE: formatEuro(ortsueblicheVergleichsmiete.highest),
+        VALUE: formatEuro(ortsueblicheVergleichsmiete.worst),
       }),
       best: l("pro-qm", {
-        VALUE: formatEuro(ortsueblicheVergleichsmiete.lowest),
+        VALUE: formatEuro(ortsueblicheVergleichsmiete.best),
       }),
     },
   ];
 
-  if (
-    ortsueblicheVergleichsmiete.lowest == ortsueblicheVergleichsmiete.highest
-  ) {
+  if (ortsueblicheVergleichsmiete.best == ortsueblicheVergleichsmiete.worst) {
     return (
       <Table>
         <TableHeader>
