@@ -1,9 +1,11 @@
+import { getWorstBestAusstattungsAbzug } from "~/calculation/preisspanne";
 import { IconButton, Tab, TabList, TabPanel, Tabs } from "~/components/ui";
 import { CloseIcon } from "~/components/ui/Icons/Close";
 import { getMietspiegeljahr } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
+import { AusstattungsAbzugTable } from "./AusstattungsAbzug";
 import { DeineDatenTable } from "./DeineDatenTable";
 import { MerkmaleTable } from "./MerkmaleTable";
 import { OrtsüblicheVergleichsmieteTable } from "./OrtsüblicheVergleichsmieteTable";
@@ -21,6 +23,13 @@ export function MerkmalTabPanel() {
 
 export function AuswertungTabPanel() {
   const l = useLocalizeField();
+  const answers = useAnswers().getAliasedState();
+  const visibleQuestionAliases = useVisibleQuestionAliases();
+
+  const ausstattungsAbzug = getWorstBestAusstattungsAbzug(
+    answers,
+    visibleQuestionAliases,
+  );
 
   return (
     <>
@@ -47,6 +56,15 @@ export function AuswertungTabPanel() {
           </p>
         </div>
       </div>
+
+      {ausstattungsAbzug &&
+        ausstattungsAbzug.worst != ausstattungsAbzug.best && (
+          <div className="mb-12">
+            <h2 className="heading-20 mb-6">{l("Ausstattungsabzug")}</h2>
+
+            <AusstattungsAbzugTable />
+          </div>
+        )}
 
       <div className="mb-12">
         <h2 className="heading-20 mb-6">{l("Preisspanne")}</h2>

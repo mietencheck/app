@@ -1,8 +1,8 @@
 import React from "react";
 
 import {
-  getWorstBestSondermerkmalAbzuege,
-  getWorstBestSondermerkmalAbzugTotal,
+  getWorstBestSondermerkmalAufschlag,
+  getWorstBestSondermerkmalAufschlagBySondermerkmal,
 } from "~/calculation/sondermerkmale";
 import {
   Table,
@@ -26,11 +26,12 @@ export function SondermerkmaleTable() {
   const lField = useLocalizeField();
   const lString = useLocalizeString();
 
-  const sondermerkmalAbzuege = getWorstBestSondermerkmalAbzuege(
-    answers,
-    visibleQuestionAliases,
-  );
-  const sondermerkmalAbzugTotal = getWorstBestSondermerkmalAbzugTotal(
+  const aufschlagBySondermerkmal =
+    getWorstBestSondermerkmalAufschlagBySondermerkmal(
+      answers,
+      visibleQuestionAliases,
+    );
+  const sondermerkmalAufschlag = getWorstBestSondermerkmalAufschlag(
     answers,
     visibleQuestionAliases,
   );
@@ -39,11 +40,11 @@ export function SondermerkmaleTable() {
     visibleQuestionAliases,
   );
 
-  if (!sondermerkmalAbzuege) {
+  if (!aufschlagBySondermerkmal) {
     return;
   }
 
-  if (sondermerkmalAbzugTotal.best == sondermerkmalAbzugTotal.worst) {
+  if (sondermerkmalAufschlag.best == sondermerkmalAufschlag.worst) {
     return (
       <div className="flex flex-col">
         <h2 className="heading-20 mb-6">{lString("Sondermerkmale")}</h2>
@@ -60,7 +61,7 @@ export function SondermerkmaleTable() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {Object.entries(sondermerkmalAbzuege).map(
+            {Object.entries(aufschlagBySondermerkmal).map(
               ([sondermerkmal, abzug]) => {
                 const answer =
                   sondermerkmalState?.[sondermerkmal as Sondermerkmal] ?? "";
@@ -91,7 +92,7 @@ export function SondermerkmaleTable() {
                 {lField("Ergebnis")}
               </TableCell>
               <TableCell className="w-32 text-right text-sm-book">
-                {formatEuro(sondermerkmalAbzugTotal.best)}
+                {formatEuro(sondermerkmalAufschlag.best)}
               </TableCell>
             </TableRow>
           </TableBody>
@@ -111,10 +112,10 @@ export function SondermerkmaleTable() {
               {lField("Antwort")}
             </TableHead>
             <TableHead className="hidden sm:table-cell print:table-cell w-32 text-right">
-              {lField("Höchster Abzug")}
+              {lField("Niedrigste Miete")}
             </TableHead>
             <TableHead className="hidden sm:table-cell print:table-cell w-36 text-right">
-              {lField("Niedrigster Abzug")}
+              {lField("Höchste Miete")}
             </TableHead>
             <TableHead className="sm:hidden print:hidden w-40 text-right">
               {lField("Wert")}
@@ -122,7 +123,7 @@ export function SondermerkmaleTable() {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {Object.entries(sondermerkmalAbzuege).map(
+          {Object.entries(aufschlagBySondermerkmal).map(
             ([sondermerkmal, abzug]) => {
               const answer =
                 sondermerkmalState?.[sondermerkmal as Sondermerkmal] ?? "";
@@ -141,10 +142,10 @@ export function SondermerkmaleTable() {
                           : lString("Vielleicht")}
                     </TableCell>
                     <TableCell className="w-40 text-right">
-                      {formatEuro(abzug.worst)}
+                      {formatEuro(abzug.best)}
                     </TableCell>
                     <TableCell className="w-32 text-right">
-                      {formatEuro(abzug.best)}
+                      {formatEuro(abzug.worst)}
                     </TableCell>
                   </TableRow>
                   <TableRow className="sm:hidden print:hidden border-b-0">
@@ -152,19 +153,19 @@ export function SondermerkmaleTable() {
                       {sondermerkmal}
                     </TableCell>
                   </TableRow>
-                  <TableRow className="sm:hidden print:hidden">
-                    <TableCell className="text-neutral-faded">
-                      {lField("Höchster Abzug")}
+                  <TableRow className="sm:hidden print:hidden border-b-0">
+                    <TableCell className="text-neutral-faded pb-0">
+                      {lField("Niedrigste Miete")}
                     </TableCell>
-                    <TableCell className="w-40 text-right">
+                    <TableCell className="w-40 text-right pb-0">
                       {formatEuro(abzug.best)}
                     </TableCell>
                   </TableRow>
-                  <TableRow className="sm:hidden print:hidden border-b-0">
-                    <TableCell className="text-neutral-faded pb-0">
-                      {lField("Niedrigster Abzug")}
+                  <TableRow className="sm:hidden print:hidden">
+                    <TableCell className="text-neutral-faded ">
+                      {lField("Höchste Miete")}
                     </TableCell>
-                    <TableCell className="w-40 text-right pb-0">
+                    <TableCell className="w-40 text-right">
                       {formatEuro(abzug.worst)}
                     </TableCell>
                   </TableRow>
@@ -177,10 +178,10 @@ export function SondermerkmaleTable() {
               {lField("Ergebnis")}
             </TableCell>
             <TableCell className="w-40 text-right text-sm-book">
-              {formatEuro(sondermerkmalAbzugTotal.worst)}
+              {formatEuro(sondermerkmalAufschlag.best)}
             </TableCell>
             <TableCell className="w-32 text-right text-sm-book">
-              {formatEuro(sondermerkmalAbzugTotal.best)}
+              {formatEuro(sondermerkmalAufschlag.worst)}
             </TableCell>
           </TableRow>
           <TableRow className="sm:hidden print:hidden border-b-0">
@@ -190,18 +191,18 @@ export function SondermerkmaleTable() {
           </TableRow>
           <TableRow className="sm:hidden print:hidden">
             <TableCell className="text-neutral-faded">
-              {lField("Höchster Abzug")}
+              {lField("Niedrigste Miete")}
             </TableCell>
             <TableCell className="w-40 text-right text-sm-book">
-              {formatEuro(sondermerkmalAbzugTotal.worst)}
+              {formatEuro(sondermerkmalAufschlag.best)}
             </TableCell>
           </TableRow>
           <TableRow className="sm:hidden print:hidden border-b-0">
             <TableCell className="text-neutral-faded pb-0">
-              {lField("Niedrigster Abzug")}
+              {lField("Höchste Miete")}
             </TableCell>
             <TableCell className="w-40 text-right pb-0 text-sm-book">
-              {formatEuro(sondermerkmalAbzugTotal.best)}
+              {formatEuro(sondermerkmalAufschlag.worst)}
             </TableCell>
           </TableRow>
         </TableBody>

@@ -4,14 +4,14 @@ import {
   getSondermerkmalStates,
 } from "~/form/api";
 import { FinalAnswers } from "~/form/flow-machine";
-import { sondermerkmaleAbzuegeByMietspiegeljahr } from "~/mietspiegel/sondermerkmale";
+import { sondermerkmaleAufschlaegeByMietspiegeljahr } from "~/mietspiegel/sondermerkmale";
 import {
   BaujahrSpanneInMietspiegeljahr,
   Mietspiegeljahr,
   Sondermerkmal,
 } from "~/mietspiegel/types";
 
-const calcSondermerkmalAbzug = (
+const calcSondermerkmalAufschlag = (
   mietspiegeljahr: Mietspiegeljahr | undefined,
   sondermerkmal: Sondermerkmal,
   baujahrSpanne: BaujahrSpanneInMietspiegeljahr[2015],
@@ -25,14 +25,14 @@ const calcSondermerkmalAbzug = (
     return 0;
   }
 
-  const abzuege = sondermerkmaleAbzuegeByMietspiegeljahr["2015"][
+  const abzuege = sondermerkmaleAufschlaegeByMietspiegeljahr["2015"][
     sondermerkmal
   ] as Record<BaujahrSpanneInMietspiegeljahr[2015], number>;
 
   return abzuege[baujahrSpanne] ?? 0;
 };
 
-export const getWorstBestSondermerkmalAbzuege = (
+export const getWorstBestSondermerkmalAufschlagBySondermerkmal = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ):
@@ -46,8 +46,6 @@ export const getWorstBestSondermerkmalAbzuege = (
   const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
   const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
 
-  console.log("baujahrSpanne", baujahrSpanne);
-
   const sondermerkmalStates = getSondermerkmalStates(
     answers,
     visibleQuestionAliases,
@@ -59,7 +57,7 @@ export const getWorstBestSondermerkmalAbzuege = (
 
   return Object.entries(sondermerkmalStates).reduce(
     (result, [sondermerkmal, state]) => {
-      const abzug = calcSondermerkmalAbzug(
+      const abzug = calcSondermerkmalAufschlag(
         mietspiegeljahr,
         sondermerkmal as Sondermerkmal,
         baujahrSpanne as BaujahrSpanneInMietspiegeljahr[2015],
@@ -79,28 +77,30 @@ export const getWorstBestSondermerkmalAbzuege = (
   );
 };
 
-export function getWorstBestSondermerkmalAbzugTotal(
+export function getWorstBestSondermerkmalAufschlag(
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): {
   worst: number;
   best: number;
 } {
-  const sondermerkmalAbzuege = getWorstBestSondermerkmalAbzuege(
-    answers,
-    visibleQuestionAliases,
-  );
+  const aufschlagBySondermerkmal =
+    getWorstBestSondermerkmalAufschlagBySondermerkmal(
+      answers,
+      visibleQuestionAliases,
+    );
 
-  if (!sondermerkmalAbzuege) {
+  if (!aufschlagBySondermerkmal) {
     return {
       worst: 0,
       best: 0,
     };
   }
-  return Object.entries(sondermerkmalAbzuege).reduce(
-    (result, sondermerkmal) => {
-      result.worst = result.worst + sondermerkmal[1].worst;
-      result.best = result.best + sondermerkmal[1].best;
+
+  return Object.entries(aufschlagBySondermerkmal).reduce(
+    (result, [_, aufschlag]) => {
+      result.worst = result.worst + aufschlag.worst;
+      result.best = result.best + aufschlag.best;
       return result;
     },
     { worst: 0, best: 0 },

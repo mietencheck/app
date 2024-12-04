@@ -5,34 +5,63 @@ import { Preisspanne } from "~/mietspiegel/types";
 
 import { getWorstBestPreisspanne } from "./preisspanne";
 
-// Vertragsdatum
+/**
+ * Test `getWorstBestPreisspanne` based on Vertragsdatum (contract date).
+ */
 test.each([
   ...[
-    { Vertragsdatum: "2015-2016", preisspanne: [6.48, 4.81, 8.55] },
-    { Vertragsdatum: "2016-2018", preisspanne: [7.45, 5.44, 10] },
-    { Vertragsdatum: "2018-2020", preisspanne: [7.9, 5.5, 12.97] },
-    { Vertragsdatum: "2020-2022", preisspanne: [7.99, 5.56, 13.11] },
-    { Vertragsdatum: "2022-2024", preisspanne: [8.42, 5.86, 13.82] },
-    { Vertragsdatum: ">2024", preisspanne: [7.19, 9.87, 14.19] },
-  ].map(({ Vertragsdatum, preisspanne }) => ({
+    {
+      description: "Case where contract was signed between 2015 and 2016",
+      answers: {
+        Vertragsdatum: "2015-2016",
+      },
+      preisspanne: [6.48, 4.81, 8.55],
+    },
+    {
+      description: "Case where contract was signed between 2016 and 2018",
+      answers: { Vertragsdatum: "2016-2018" },
+      preisspanne: [7.45, 5.44, 10],
+    },
+    {
+      description: "Case where contract was signed between 2018 and 2020",
+      answers: { Vertragsdatum: "2018-2020" },
+      preisspanne: [7.9, 5.5, 12.97],
+    },
+    {
+      description: "Case where contract was signed between 2020 and 2022",
+      answers: { Vertragsdatum: "2020-2022" },
+      preisspanne: [7.99, 5.56, 13.11],
+    },
+    {
+      description: "Case where contract was signed between 2022 and 2024",
+      answers: { Vertragsdatum: "2022-2024" },
+      preisspanne: [8.42, 5.86, 13.82],
+    },
+    {
+      description: "Case where contract was signed after 2024",
+      answers: { Vertragsdatum: ">2024" },
+      preisspanne: [7.19, 9.87, 14.19],
+    },
+  ].map(({ description, answers, preisspanne }) => ({
+    description: description,
     answers: {
       Ost: false,
       Wohnlage: "einfach",
       Unterschrieben: "Ja",
-      Vertragsdatum: Vertragsdatum,
       Baujahr: 1918,
       Qm: 1,
       "Wohnung hat Sammelheizung": "Ja",
       "Badezimmer in Wohnung": "Ja",
+      ...answers,
     } as FinalAnswers,
     preisspanne: preisspanne as Preisspanne,
   })),
-])("getLowestHighestPreisspanne(%o)", ({ answers, preisspanne }) => {
+])("getWorstBestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
     getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
   ).toEqual({
-    lowest: preisspanne,
-    highest: preisspanne,
+    worst: preisspanne,
+    best: preisspanne,
   });
 });
 
@@ -59,12 +88,12 @@ test.each([
     } as FinalAnswers,
     preisspanne: preisspanne as Preisspanne,
   })),
-])("getLowestHighestPreisspanne(%o)", ({ answers, preisspanne }) => {
+])("getWorstBestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
     getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
   ).toEqual({
-    lowest: preisspanne,
-    highest: preisspanne,
+    best: preisspanne,
+    worst: preisspanne,
   });
 });
 
@@ -90,12 +119,12 @@ test.each([
     } as FinalAnswers,
     preisspanne: preisspanne as Preisspanne,
   })),
-])("getLowestHighestPreisspanne(%o)", ({ answers, preisspanne }) => {
+])("getWorstBestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
     getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
   ).toEqual({
-    lowest: preisspanne,
-    highest: preisspanne,
+    best: preisspanne,
+    worst: preisspanne,
   });
 });
 
@@ -118,88 +147,88 @@ test.each([
     } as FinalAnswers,
     preisspanne: preisspanne as Preisspanne,
   })),
-])("getLowestHighestPreisspanne(%o)", ({ answers, preisspanne }) => {
+])("getWorstBestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
     getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
   ).toEqual({
-    lowest: preisspanne,
-    highest: preisspanne,
+    best: preisspanne,
+    worst: preisspanne,
   });
 });
 
-// Ausstattung
+// Ausstattungsabzuege
 test.each([
   ...[
     {
       sammelheizung: "Ja",
       bad: "Ja",
       preisspanne: {
-        lowest: [8.42, 5.86, 13.82],
-        highest: [8.42, 5.86, 13.82],
+        best: [8.42, 5.86, 13.82],
+        worst: [8.42, 5.86, 13.82],
       },
     },
     {
       sammelheizung: "Ja",
       bad: "Nicht sicher",
       preisspanne: {
-        lowest: [6.91, 4.35, 12.31],
-        highest: [8.42, 5.86, 13.82],
+        best: [6.91, 4.35, 12.31],
+        worst: [8.42, 5.86, 13.82],
       },
     },
     {
       sammelheizung: "Ja",
       bad: "Nein",
       preisspanne: {
-        lowest: [6.91, 4.35, 12.31],
-        highest: [6.91, 4.35, 12.31],
+        best: [6.91, 4.35, 12.31],
+        worst: [6.91, 4.35, 12.31],
       },
     },
     {
       sammelheizung: "Nicht sicher",
       bad: "Ja",
       preisspanne: {
-        lowest: [6.91, 4.35, 12.31],
-        highest: [8.42, 5.86, 13.82],
+        best: [6.91, 4.35, 12.31],
+        worst: [8.42, 5.86, 13.82],
       },
     },
     {
       sammelheizung: "Nicht sicher",
       bad: "Nicht sicher",
       preisspanne: {
-        lowest: [6.08, 3.52, 11.48],
-        highest: [8.42, 5.86, 13.82],
+        best: [6.08, 3.52, 11.48],
+        worst: [8.42, 5.86, 13.82],
       },
     },
     {
       sammelheizung: "Nicht sicher",
       bad: "Nein",
       preisspanne: {
-        lowest: [6.08, 3.52, 11.48],
-        highest: [6.91, 4.35, 12.31],
+        best: [6.08, 3.52, 11.48],
+        worst: [6.91, 4.35, 12.31],
       },
     },
     {
       sammelheizung: "Nein",
       bad: "Ja",
       preisspanne: {
-        lowest: [6.91, 4.35, 12.31],
-        highest: [6.91, 4.35, 12.31],
+        best: [6.91, 4.35, 12.31],
+        worst: [6.91, 4.35, 12.31],
       },
     },
     {
       sammelheizung: "Nein",
       bad: "Nicht sicher",
       preisspanne: {
-        lowest: [6.08, 3.52, 11.48],
-        highest: [6.91, 4.35, 12.31],
+        best: [6.08, 3.52, 11.48],
+        worst: [6.91, 4.35, 12.31],
       },
     },
     {
       sammelheizung: "Nein",
       bad: "Nein",
       preisspanne: {
-        lowest: [6.08, 3.52, 11.48],
-        highest: [6.08, 3.52, 11.48],
+        best: [6.08, 3.52, 11.48],
+        worst: [6.08, 3.52, 11.48],
       },
     },
   ].map(({ sammelheizung, bad, preisspanne }) => ({
@@ -213,9 +242,9 @@ test.each([
       "Wohnung hat Sammelheizung": sammelheizung,
       "Badezimmer in Wohnung": bad,
     } as FinalAnswers,
-    preisspanne: preisspanne as { lowest: Preisspanne; highest: Preisspanne },
+    preisspanne: preisspanne as { best: Preisspanne; worst: Preisspanne },
   })),
-])("getLowestHighestPreisspanne(%o)", ({ answers, preisspanne }) => {
+])("getWorstBestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
     getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
   ).toEqual(preisspanne);

@@ -4,7 +4,7 @@ import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import { Sondermerkmal } from "~/mietspiegel/types";
 
 import { SONDERMERKMAL_RESET_ANSWERS } from "./answer-reset";
-import { getWorstBestSondermerkmalAbzuege } from "./sondermerkmale";
+import { getWorstBestSondermerkmalAufschlagBySondermerkmal } from "./sondermerkmale";
 
 test.each([
   ...[
@@ -21,8 +21,8 @@ test.each([
       },
       result: {
         "[Sondermerkmal] Hochwertiger Bodenbelag": {
-          worst: 0.56,
           best: 0.56,
+          worst: 0.56,
         },
       },
     },
@@ -34,8 +34,8 @@ test.each([
       },
       result: {
         "[Sondermerkmal] Hochwertiger Bodenbelag": {
-          worst: 0.56,
           best: 0,
+          worst: 0.56,
         },
       },
     },
@@ -49,8 +49,8 @@ test.each([
       },
       result: {
         "[Sondermerkmal] Hochwertiger Bodenbelag": {
-          worst: 0,
           best: 0,
+          worst: 0,
         },
       },
     },
@@ -64,8 +64,8 @@ test.each([
       },
       result: {
         "[Sondermerkmal] Modernes Bad": {
-          worst: 0.16,
           best: 0.16,
+          worst: 0.16,
         },
       },
     },
@@ -84,46 +84,46 @@ test.each([
       result: {
         ...{
           "[Sondermerkmal] Hochwertiger Bodenbelag": {
-            worst: 0,
             best: 0,
+            worst: 0,
           },
           "[Sondermerkmal] Moderne Küchenausstattung": {
-            worst: 0,
             best: 0,
+            worst: 0,
           },
           "[Sondermerkmal] Von der Badewanne getrennte Dusche": {
-            worst: 0,
             best: 0,
+            worst: 0,
           },
           "[Sondermerkmal] Kleines Bad": {
-            worst: 0,
             best: 0,
+            worst: 0,
           },
           "[Sondermerkmal] Modernes Bad": {
-            worst: 0,
             best: 0,
+            worst: 0,
           },
           "[Sondermerkmal] Isolierverglasung/Schallschutzfenster": {
-            worst: 0,
             best: 0,
+            worst: 0,
           },
           "[Sondermerkmal] Aufzug im Haus": {
-            worst: 0,
             best: 0,
+            worst: 0,
           },
         },
         ...result,
       } as {
         [key in Sondermerkmal]: {
-          worst: number;
           best: number;
+          worst: number;
         };
       },
     };
   }),
 ])("getWorstBestSondermerkmalAbzuege(%o)", ({ answers, result }) => {
   expect(
-    getWorstBestSondermerkmalAbzuege(
+    getWorstBestSondermerkmalAufschlagBySondermerkmal(
       answers,
       getVisibleQuestionAliases(answers),
     ),

@@ -224,7 +224,6 @@ export function AdresseForm({
         a.strasse == adresse?.strasse?.trim() &&
         a.nummer == adresse?.nummer?.trim(),
     )?.lage;
-    console.log(adresse, lage);
     onChange({ ...adresse, lage });
   };
 

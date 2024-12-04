@@ -11439,7 +11439,7 @@
                       "id": "87ope",
                       "type": "Question",
                       "alias": "Wohnumfeld ist stark vernachlässigt",
-                      "text": "Liegt die Wohnung in einer eher ungepflegten Gegend oder in einem der folgenden sogenannten kriminalitätsbelsteten Ort?",
+                      "text": "Liegt die Wohnung in einer eher ungepflegten Gegend oder in einem der folgenden sogenannten kriminalitätsbelasteten Ort?",
                       "info": "Laut Polizei, zählen die folgenden Orte als kriminalitätsbelastet: Wrangelkiez im Umfeld des Görlitzer Parks, Kottbusser Tor, Hermannstraße in direkter Nähe vom S-Bahnhof Neukölln, Donaukiez im Umfeld des Hermannplatzes.",
                       "answer": {
                         "type": "ChoiceAnswer",
