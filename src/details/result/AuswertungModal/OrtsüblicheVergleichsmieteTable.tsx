@@ -1,6 +1,9 @@
 import React from "react";
 
-import { getWorstBestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
+import {
+  calcMerkmalsgruppenValueInEuro,
+  getWorstBestOrtsueblicheVergleichsmiete,
+} from "~/calculation/ortsueblicheVergleichsmiete";
 import { getWorstBestPreisspanne } from "~/calculation/preisspanne";
 import { getWorstBestSondermerkmalAufschlag } from "~/calculation/sondermerkmale";
 import { getWorstBestSpanneneinordnungInPercent } from "~/calculation/spanneneinordnung";
@@ -40,6 +43,19 @@ export function OrtsüblicheVergleichsmieteTable() {
     visibleQuestionAliases,
   );
 
+  const merkmalsgruppenInEuro = {
+    worst: calcMerkmalsgruppenValueInEuro(
+      preisspanne.worst,
+      spanneneinordung.worst,
+      sondermerkmalAufschlag.worst,
+    ),
+    best: calcMerkmalsgruppenValueInEuro(
+      preisspanne.best,
+      spanneneinordung.best,
+      sondermerkmalAufschlag.best,
+    ),
+  };
+
   const ortsueblicheVergleichsmiete = getWorstBestOrtsueblicheVergleichsmiete(
     answers,
     visibleQuestionAliases,
@@ -47,6 +63,11 @@ export function OrtsüblicheVergleichsmieteTable() {
     best: 0,
     worst: 0,
   };
+
+  const [avg, _, upper] = preisspanne.worst;
+  const merkmalsgruppenValueIsLimited =
+    ortsueblicheVergleichsmiete.worst >= upper &&
+    merkmalsgruppenInEuro.worst !== upper - avg;
 
   const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
 
@@ -65,11 +86,11 @@ export function OrtsüblicheVergleichsmieteTable() {
             worst:
               sondermerkmalAufschlag.best == 0
                 ? formatEuro(0)
-                : `-${formatEuro(sondermerkmalAufschlag.best)}`,
+                : formatEuro(sondermerkmalAufschlag.worst),
             best:
               sondermerkmalAufschlag.worst == 0
                 ? formatEuro(0)
-                : `-${formatEuro(sondermerkmalAufschlag.worst)}`,
+                : formatEuro(sondermerkmalAufschlag.best),
           },
         ]
       : []),
@@ -81,10 +102,10 @@ export function OrtsüblicheVergleichsmieteTable() {
     {
       name: l("Merkmalsgruppen (pro m²)"),
       worst: l("pro-qm", {
-        VALUE: "TODO",
+        VALUE: `${formatEuro(merkmalsgruppenInEuro.worst)} ${merkmalsgruppenValueIsLimited && "*"}`,
       }),
       best: l("pro-qm", {
-        VALUE: "TODO",
+        VALUE: formatEuro(merkmalsgruppenInEuro.best),
       }),
     },
     {
@@ -120,49 +141,59 @@ export function OrtsüblicheVergleichsmieteTable() {
   }
 
   return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>{l("Spanne")}</TableHead>
-          <TableHead className="hidden sm:table-cell w-40 text-right">
-            {l("Niedrigste Miete")}
-          </TableHead>
-          <TableHead className="hidden sm:table-cell w-40 text-right">
-            {l("Höchste Miete")}
-          </TableHead>
-          <TableHead className="sm:hidden w-40 text-right">
-            {l("Wert")}
-          </TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {rows.map(({ name, worst, best }) => (
-          <React.Fragment key={name}>
-            <TableRow className="hidden sm:table-row">
-              <TableCell>{name}</TableCell>
-              <TableCell className="w-40 text-right">{best}</TableCell>
-              <TableCell className="w-40 text-right">{worst}</TableCell>
-            </TableRow>
-            <TableRow className="sm:hidden border-b-0">
-              <TableCell colSpan={2} className="text-sm-medium pb-0">
-                {name}
-              </TableCell>
-            </TableRow>
-            <TableRow className="sm:hidden border-b-0">
-              <TableCell className="text-neutral-faded pb-0">
-                {l("Niedrigste Miete")}
-              </TableCell>
-              <TableCell className="w-40 text-right pb-0">{best}</TableCell>
-            </TableRow>
-            <TableRow className="sm:hidden">
-              <TableCell className="text-neutral-faded">
-                {l("Höchste Miete")}
-              </TableCell>
-              <TableCell className="w-40 text-right">{worst}</TableCell>
-            </TableRow>
-          </React.Fragment>
-        ))}
-      </TableBody>
-    </Table>
+    <>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>{l("Spanne")}</TableHead>
+            <TableHead className="hidden sm:table-cell w-40 text-right">
+              {l("Niedrigste Miete")}
+            </TableHead>
+            <TableHead className="hidden sm:table-cell w-40 text-right">
+              {l("Höchste Miete")}
+            </TableHead>
+            <TableHead className="sm:hidden w-40 text-right">
+              {l("Wert")}
+            </TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {rows.map(({ name, worst, best }) => (
+            <React.Fragment key={name}>
+              <TableRow className="hidden sm:table-row">
+                <TableCell>{name}</TableCell>
+                <TableCell className="w-40 text-right">{best}</TableCell>
+                <TableCell className="w-40 text-right">{worst}</TableCell>
+              </TableRow>
+              <TableRow className="sm:hidden border-b-0">
+                <TableCell colSpan={2} className="text-sm-medium pb-0">
+                  {name}
+                </TableCell>
+              </TableRow>
+              <TableRow className="sm:hidden border-b-0">
+                <TableCell className="text-neutral-faded pb-0">
+                  {l("Niedrigste Miete")}
+                </TableCell>
+                <TableCell className="w-40 text-right pb-0">{best}</TableCell>
+              </TableRow>
+              <TableRow className="sm:hidden">
+                <TableCell className="text-neutral-faded">
+                  {l("Höchste Miete")}
+                </TableCell>
+                <TableCell className="w-40 text-right">{worst}</TableCell>
+              </TableRow>
+            </React.Fragment>
+          ))}
+        </TableBody>
+      </Table>
+      {merkmalsgruppenValueIsLimited && (
+        <div className="mt-4">
+          <p className="text-sm text-gray-11">
+            * Der Aufschlag der Merkmalsgruppen darf in diesem Fall nicht
+            komplett angerechnet werden.
+          </p>
+        </div>
+      )}
+    </>
   );
 }

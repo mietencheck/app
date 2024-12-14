@@ -4,45 +4,51 @@ import { FinalAnswers } from "~/form/flow-machine";
 import { getWorstBestSondermerkmalAufschlag } from "./sondermerkmale";
 import { getWorstBestSpanneneinordnungInPercent } from "./spanneneinordnung";
 
+export const calcMerkmalsgruppenValueInEuro = (
+  preisspanne: [number, number, number],
+  spanneneinordnung: number,
+  sondermerkmalAufschlag: number,
+): number => {
+  const [average, lowerLimit, upperLimit] = preisspanne;
+  if (spanneneinordnung >= 0) {
+    // sondermerkmalAufschlag exceeds the upper limit of the Preisspanne, merkmalgruppeAufschlag must be ignored.
+    if (average + sondermerkmalAufschlag > upperLimit) {
+      return 0;
+    }
+
+    const spanneneinordnungAufschlag =
+      (upperLimit - average) * spanneneinordnung;
+    const maxAllowedSpanneneinordnungAufschlag =
+      upperLimit - average - sondermerkmalAufschlag;
+
+    return Math.min(
+      spanneneinordnungAufschlag,
+      maxAllowedSpanneneinordnungAufschlag,
+    );
+  } else {
+    return (average - lowerLimit) * spanneneinordnung;
+  }
+};
+
 /**
  * Calculates the Vergleichsmiete for a given Preisspanne, Spanneneinordnung and
  * Sondermerkmal Abzug.
- *
- * ### Rules
- * - If `spanneneinordnung` is > 0, the Spanneneinordnung is wohnwerterhöhend.
- * - If `sondermerkmalAufschlag` is > 0, the value must be deducted from the average
- *   in the Preisspanne. The new average is allowed to exceed the lower and upper
- *   threshold of the original preisspanne. [TODO]
  */
 const calcOrtsueblicheVergleichsmiete = (
   preisspanne: [number, number, number],
   spanneneinordnung: number,
   sondermerkmalAufschlag: number,
 ): number => {
-  const [avg, lower, upper] = preisspanne;
+  const [average, _] = preisspanne;
+  const merkmalsgruppenValue = calcMerkmalsgruppenValueInEuro(
+    preisspanne,
+    spanneneinordnung,
+    sondermerkmalAufschlag,
+  );
 
-  if (spanneneinordnung >= 0) {
-    const spanneneinordnungAufschlag = (upper - avg) * spanneneinordnung;
-
-    if (avg + sondermerkmalAufschlag > upper) {
-      return Number((avg + sondermerkmalAufschlag).toFixed(2));
-    } else if (
-      avg + sondermerkmalAufschlag + spanneneinordnungAufschlag >
-      upper
-    ) {
-      return Number(upper.toFixed(2));
-    } else {
-      return Number(
-        (avg + sondermerkmalAufschlag + spanneneinordnungAufschlag).toFixed(2),
-      );
-    }
-  } else {
-    const spanneneinordnungAbzug = (avg - lower) * spanneneinordnung;
-
-    return Number(
-      (avg + sondermerkmalAufschlag + spanneneinordnungAbzug).toFixed(2),
-    );
-  }
+  return Number(
+    (average + merkmalsgruppenValue + sondermerkmalAufschlag).toFixed(2),
+  );
 };
 
 export function getWorstBestOrtsueblicheVergleichsmiete(
