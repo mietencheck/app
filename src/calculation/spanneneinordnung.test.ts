@@ -140,7 +140,7 @@ const cases = [
 });
 
 test.each(cases)(
-  "getbestHighestMerkmalStateByMerkmalGruppe(%o)",
+  "getWorstBestMerkmalStateByMerkmalGruppe(%o)",
   ({ answers, result }) => {
     expect(
       getWorstBestMerkmalStateByMerkmalGruppe(

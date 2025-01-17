@@ -3,10 +3,10 @@ import { FinalAnswers } from "~/form/flow-machine";
 
 import { getWorstBestOrtsueblicheVergleichsmiete } from "./ortsueblicheVergleichsmiete";
 
-export function getLowestHighestZulaessigeHoechstmiete(
+export function getWorstBestZulaessigeHoechstmiete(
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
-): { lowest: number; highest: number } | undefined {
+): { worst: number; best: number } | undefined {
   const wohnflaeche = getWohnflaeche(answers, visibleQuestionAliases);
   const ortsueblicheVergleichsmiete = getWorstBestOrtsueblicheVergleichsmiete(
     answers,
@@ -18,11 +18,11 @@ export function getLowestHighestZulaessigeHoechstmiete(
   }
 
   return {
-    lowest: Number(
-      (ortsueblicheVergleichsmiete.best * wohnflaeche * 1.1).toFixed(2),
-    ),
-    highest: Number(
+    worst: Number(
       (ortsueblicheVergleichsmiete.worst * wohnflaeche * 1.1).toFixed(2),
+    ),
+    best: Number(
+      (ortsueblicheVergleichsmiete.best * wohnflaeche * 1.1).toFixed(2),
     ),
   };
 }

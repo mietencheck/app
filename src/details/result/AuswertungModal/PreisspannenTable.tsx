@@ -18,7 +18,7 @@ export function PreisspannenTable() {
   const visibleQuestionAliases = useVisibleQuestionAliases();
   const l = useLocalizeField();
 
-  const { best: lowestPreisspanne, worst: highestPreisspanne } =
+  const { best: bestPreisspanne, worst: worstPreisspanne } =
     getWorstBestPreisspanne(answers, visibleQuestionAliases) || {
       best: [0, 0, 0],
       worst: [0, 0, 0],
@@ -27,25 +27,25 @@ export function PreisspannenTable() {
   const rows = [
     {
       label: l("Unterwert"),
-      worst: `${formatEuro(highestPreisspanne[1])} ${l("pro")} m²`,
-      best: `${formatEuro(lowestPreisspanne[1])} ${l("pro")} m²`,
+      worst: `${formatEuro(worstPreisspanne[1])} ${l("pro")} m²`,
+      best: `${formatEuro(bestPreisspanne[1])} ${l("pro")} m²`,
     },
     {
       label: l("Mittelwert"),
-      worst: `${formatEuro(highestPreisspanne[0])} ${l("pro")} m²`,
-      best: `${formatEuro(lowestPreisspanne[0])} ${l("pro")} m²`,
+      worst: `${formatEuro(worstPreisspanne[0])} ${l("pro")} m²`,
+      best: `${formatEuro(bestPreisspanne[0])} ${l("pro")} m²`,
     },
     {
       label: l("Oberwert"),
-      worst: `${formatEuro(highestPreisspanne[2] ?? 0)} ${l("pro")} m²`,
-      best: `${formatEuro(lowestPreisspanne[2])} ${l("pro")} m²`,
+      worst: `${formatEuro(worstPreisspanne[2] ?? 0)} ${l("pro")} m²`,
+      best: `${formatEuro(bestPreisspanne[2])} ${l("pro")} m²`,
     },
   ];
 
   if (
-    highestPreisspanne[0] == lowestPreisspanne[0] &&
-    highestPreisspanne[1] == lowestPreisspanne[1] &&
-    highestPreisspanne[2] == lowestPreisspanne[2]
+    worstPreisspanne[0] == bestPreisspanne[0] &&
+    worstPreisspanne[1] == bestPreisspanne[1] &&
+    worstPreisspanne[2] == bestPreisspanne[2]
   ) {
     return (
       <Table>

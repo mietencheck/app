@@ -11,10 +11,7 @@ import { preisspannenByMietspiegeljahr } from "~/mietspiegel/preisspannen";
 import { Preisspanne } from "~/mietspiegel/types";
 
 /**
- * Calculates the lowest and highest possible Ausstattungsabzug ('facility discount') based on the provided answers.
- *
- * @param {FinalAnswers} answers - The answers object containing user input data.
- * @returns  {{ highestDiscount: number; lowestDiscount: number } | undefined} - The lowest and highest discounts in Euro, or undefined if the calculation cannot be performed.
+ * Calculates the worst and best possible Ausstattungsabzug ('facility discount') based on the provided answers.
  */
 export function getWorstBestAusstattungsAbzug(
   answers: FinalAnswers,
@@ -73,10 +70,7 @@ export function getWorstBestAusstattungsAbzug(
 }
 
 /**
- *  Calculates the lowest and highest applicable Preisspanne ('rent bracket') based on the provided answers.
- *
- * @param {FinalAnswers} answers - The answers object containing user input data.
- * @returns {{ lowest: Preisspanne; highest: Preisspanne  } | undefined} - The the highest and lowest Preisspanne, each represented as a tuple of three numbers (average value, lower threshold, upper threshold), or undefined if the calculation.
+ *  Calculates the worst and best applicable Preisspanne ('rent bracket') based on the provided answers.
  */
 export function getWorstBestPreisspanne(
   answers: FinalAnswers,
@@ -89,7 +83,7 @@ export function getWorstBestPreisspanne(
     visibleQuestionAliases,
   );
   const wohnlage = getWohnlage(answers, visibleQuestionAliases);
-  const highestLowestAusstattungsAbzug = getWorstBestAusstattungsAbzug(
+  const worstBestAusstattungsAbzug = getWorstBestAusstattungsAbzug(
     answers,
     visibleQuestionAliases,
   );
@@ -99,7 +93,7 @@ export function getWorstBestPreisspanne(
     !baujahrSpanne ||
     !wohnlage ||
     !wohnflaecheSpanne ||
-    !highestLowestAusstattungsAbzug
+    !worstBestAusstattungsAbzug
   ) {
     return undefined;
   }
@@ -125,7 +119,7 @@ export function getWorstBestPreisspanne(
   }
 
   const { best: bestAusstattungsAbzug, worst: worstAusstattungsAbzug } =
-    highestLowestAusstattungsAbzug;
+    worstBestAusstattungsAbzug;
 
   return {
     best: [

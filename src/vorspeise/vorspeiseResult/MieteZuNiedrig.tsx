@@ -1,6 +1,6 @@
 import {
-  useLowestHighestZulaessigeHoechstmiete,
-  useLowestHighestZulaessigeHoechstmieteDiff,
+  useWorstBestZulaessigeHoechstmiete,
+  useWorstBestZulaessigeHoechstmieteDiff,
 } from "~/details/utils";
 import { useLocalizeField } from "~/l10n";
 import { formatEuro } from "~/utils";
@@ -9,11 +9,11 @@ import { WerdeAktiv } from "../partials";
 
 export function MieteZuNiedrig() {
   const {
-    highest: highestZulaessigeHoechstmiete,
-    lowest: lowestZulaessigeHoechstmiete,
-  } = useLowestHighestZulaessigeHoechstmiete();
-  const { highest: highestDiff, lowest: lowestDiff } =
-    useLowestHighestZulaessigeHoechstmieteDiff();
+    worst: worstZulaessigeHoechstmiete,
+    best: bestZulaessigeHoechstmiete,
+  } = useWorstBestZulaessigeHoechstmiete();
+  const { worst: worstDiff, best: bestDiff } =
+    useWorstBestZulaessigeHoechstmieteDiff();
   const l = useLocalizeField();
 
   return (
@@ -23,13 +23,13 @@ export function MieteZuNiedrig() {
       </h2>
       <div className="text-neutral-faded space-y-2 mb-6">
         <p className="text-neutral-faded">
-          {highestDiff == lowestDiff
+          {worstDiff == bestDiff
             ? l("Ergebnis zulässige Höchstmiete", {
-                MIETE: formatEuro(lowestZulaessigeHoechstmiete),
+                MIETE: formatEuro(bestZulaessigeHoechstmiete),
               })
             : l("Ergebnis zulässige Höchstmiete zwischen X und Y", {
-                LOWESTMIETE: formatEuro(lowestZulaessigeHoechstmiete),
-                HIGHESTMIETE: formatEuro(highestZulaessigeHoechstmiete),
+                LOWESTMIETE: formatEuro(bestZulaessigeHoechstmiete),
+                HIGHESTMIETE: formatEuro(worstZulaessigeHoechstmiete),
               })}{" "}
         </p>
         <p>

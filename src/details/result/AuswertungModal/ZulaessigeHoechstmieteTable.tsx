@@ -1,7 +1,7 @@
 import React from "react";
 
 import { getWorstBestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
-import { getLowestHighestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
+import { getWorstBestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
 import {
   Table,
   TableBody,
@@ -20,21 +20,19 @@ export function ZulaessigeHoechstmieteTable() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  const {
-    worst: highestVergleichsmietePerQm,
-    best: lowestVergleichsmietePerQm,
-  } = getWorstBestOrtsueblicheVergleichsmiete(
-    answers,
-    visibleQuestionAliases,
-  ) ?? {
-    worst: 0,
-    best: 0,
-  };
+  const { worst: worstVergleichsmietePerQm, best: bestVergleichsmietePerQm } =
+    getWorstBestOrtsueblicheVergleichsmiete(
+      answers,
+      visibleQuestionAliases,
+    ) ?? {
+      worst: 0,
+      best: 0,
+    };
 
-  const { highest: highestHöchstmiete, lowest: lowestHöchstmiete } =
-    getLowestHighestZulaessigeHoechstmiete(answers, visibleQuestionAliases) ?? {
-      highest: 0,
-      lowest: 0,
+  const { best: bestHöchstmiete, worst: worstHöchstmiete } =
+    getWorstBestZulaessigeHoechstmiete(answers, visibleQuestionAliases) ?? {
+      best: 0,
+      worst: 0,
     };
 
   const wohnflaeche = getWohnflaeche(answers, visibleQuestionAliases);
@@ -42,16 +40,16 @@ export function ZulaessigeHoechstmieteTable() {
   const rows = [
     {
       name: l("Ortsübliche Vergleichsmiete"),
-      worst: l("pro-qm", { VALUE: formatEuro(highestVergleichsmietePerQm) }),
-      best: l("pro-qm", { VALUE: formatEuro(lowestVergleichsmietePerQm) }),
+      worst: l("pro-qm", { VALUE: formatEuro(worstVergleichsmietePerQm) }),
+      best: l("pro-qm", { VALUE: formatEuro(bestVergleichsmietePerQm) }),
     },
     {
       name: l("10% Aufschlag"),
       worst: l("pro-qm", {
-        VALUE: formatEuro(highestVergleichsmietePerQm * 0.1),
+        VALUE: formatEuro(worstVergleichsmietePerQm * 0.1),
       }),
       best: l("pro-qm", {
-        VALUE: formatEuro(lowestVergleichsmietePerQm * 0.1),
+        VALUE: formatEuro(bestVergleichsmietePerQm * 0.1),
       }),
     },
     {
@@ -61,12 +59,12 @@ export function ZulaessigeHoechstmieteTable() {
     },
     {
       name: l("Zulässige Höchstmiete"),
-      worst: l("pro-qm", { VALUE: formatEuro(highestHöchstmiete) }),
-      best: l("pro-qm", { VALUE: formatEuro(lowestHöchstmiete) }),
+      worst: l("pro-qm", { VALUE: formatEuro(worstHöchstmiete) }),
+      best: l("pro-qm", { VALUE: formatEuro(bestHöchstmiete) }),
     },
   ];
 
-  if (formatEuro(highestHöchstmiete) == formatEuro(lowestHöchstmiete)) {
+  if (formatEuro(bestHöchstmiete) == formatEuro(worstHöchstmiete)) {
     return (
       <Table>
         <TableHeader>

@@ -1,6 +1,6 @@
 import { Button, LinkButton } from "~/components/ui";
 import { DetailsRouter } from "~/details/router";
-import { useLowestHighestZulaessigeHoechstmieteDiff } from "~/details/utils";
+import { useWorstBestZulaessigeHoechstmieteDiff } from "~/details/utils";
 import { useLocalizeField } from "~/l10n";
 
 import { StepperType } from "..";
@@ -10,18 +10,18 @@ import { MieteZuNiedrig } from "./MieteZuNiedrig";
 
 export function VorspeiseResult({ stepper }: { stepper: StepperType }) {
   const l = useLocalizeField();
-  const { highest: highestDiff } = useLowestHighestZulaessigeHoechstmieteDiff();
+  const { best: bestDiff } = useWorstBestZulaessigeHoechstmieteDiff();
 
   useMarkEstimatorSeen();
 
   return (
     <>
       <p className="text-base text-neutral-faded mb-2">{l("Prediction")}</p>
-      {highestDiff < 0 ? <MieteZuNiedrig /> : <MieteZuHoch />}
+      {bestDiff < 0 ? <MieteZuNiedrig /> : <MieteZuHoch />}
 
       <div className="flex flex-row flex-wrap justify-center gap-3 mt-10">
         {stepper.back && <Button onPress={stepper.back}>{l("Back")}</Button>}
-        {highestDiff > 0 ? (
+        {bestDiff > 0 ? (
           <LinkButton
             color="primary"
             variant="solid"

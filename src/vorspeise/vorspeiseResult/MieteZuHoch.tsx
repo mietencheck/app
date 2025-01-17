@@ -1,43 +1,43 @@
 import {
-  useLowestHighestZulaessigeHoechstmiete,
-  useLowestHighestZulaessigeHoechstmieteDiff,
+  useWorstBestZulaessigeHoechstmiete,
+  useWorstBestZulaessigeHoechstmieteDiff,
 } from "~/details/utils";
 import { useLocalizeField } from "~/l10n";
 import { formatEuro } from "~/utils";
 
 export function MieteZuHoch() {
   const {
-    highest: highestZulaessigeHoechstmiete,
-    lowest: lowestZulaessigeHoechstmiete,
-  } = useLowestHighestZulaessigeHoechstmiete();
-  const { lowest: lowestDiff, highest: highestDiff } =
-    useLowestHighestZulaessigeHoechstmieteDiff();
+    worst: worstZulaessigeHoechstmiete,
+    best: bestZulaessigeHoechstmiete,
+  } = useWorstBestZulaessigeHoechstmiete();
+  const { worst: worstDiff, best: bestDiff } =
+    useWorstBestZulaessigeHoechstmieteDiff();
   const l = useLocalizeField();
 
   return (
     <>
       <h2 className="heading-24 mb-8">
-        {lowestDiff > 0 && highestDiff !== lowestDiff
+        {worstDiff > 0 && worstDiff !== bestDiff
           ? l("Du könntest zwischen X und Y zu viel zahlen", {
-              LOWESTDIFF: formatEuro(lowestDiff),
-              HIGHESTDIFF: formatEuro(highestDiff),
+              WORSTDIFF: formatEuro(worstDiff),
+              BESTDIFF: formatEuro(bestDiff),
             })
           : l("Du könntest X zu viel zahlen", {
-              DIFF: formatEuro(highestDiff),
+              DIFF: formatEuro(bestDiff),
             })}
       </h2>
       <h3 className="text-base-medium mb-2">{l("Was bedeutet das?")}</h3>
       <div className="text-neutral-faded space-y-2 mb-6">
         <p>
-          {highestDiff == lowestDiff
+          {worstDiff == bestDiff
             ? l("Ergebnis zulässige Höchstmiete", {
-                MIETE: formatEuro(lowestZulaessigeHoechstmiete),
+                MIETE: formatEuro(bestZulaessigeHoechstmiete),
               })
             : l("Ergebnis zulässige Höchstmiete zwischen X und Y", {
-                LOWESTMIETE: formatEuro(lowestZulaessigeHoechstmiete),
-                HIGHESTMIETE: formatEuro(highestZulaessigeHoechstmiete),
+                LOWESTMIETE: formatEuro(bestZulaessigeHoechstmiete),
+                HIGHESTMIETE: formatEuro(worstZulaessigeHoechstmiete),
               })}{" "}
-          {lowestDiff <= 0
+          {bestDiff <= 0
             ? l("Ergebnis Mietpreisbremse nicht möglich")
             : l("Ergebnis Mietpreisbremse möglich")}
         </p>

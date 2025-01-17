@@ -308,27 +308,3 @@ test.each([
     getMerkmalStatesByGruppe(answers, getVisibleQuestionAliases(answers)),
   ).toEqual(merkmalgruppen);
 });
-
-/*
-test.each([
-  {
-    answers: {
-      Ost: false,
-      Wohnlage: "einfach",
-      Unterschrieben: "Ja",
-      Vertragsdatum: "2022-2024",
-      Baujahr: 1918,
-      Qm: 1,
-      "Wohnung hat Sammelheizung": "Ja",
-      "Badezimmer in Wohnung": "Ja",
-    } as FinalAnswers,
-    spanneneinordnung: {
-
-    }
-  }
-])("getLowestHighestSpanneneinordnung(%o)", ({ answers, spanneneinordnung}) => {
-  expect(
-    getLowestHighestSpanneneinordnung(answers, getVisibleQuestionAliases(answers))
-  ).toEqual(spanneneinordnung); 
-});
-*/

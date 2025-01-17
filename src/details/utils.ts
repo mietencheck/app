@@ -3,7 +3,7 @@ import { Group, Question, ungroup } from "flow-machine";
 import { useCallback, useEffect, useMemo } from "react";
 import { useLocalStorage, useSessionStorage } from "usehooks-ts";
 
-import { getLowestHighestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
+import { getWorstBestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
 import { getNettokaltmiete } from "~/form/api";
 import {
   useAnswers,
@@ -116,40 +116,37 @@ export function useMissingAnswersInSession(): Set<RequiredQuestionAlias> {
   return missing;
 }
 
-export function useLowestHighestZulaessigeHoechstmiete(): {
-  lowest: number;
-  highest: number;
+export function useWorstBestZulaessigeHoechstmiete(): {
+  worst: number;
+  best: number;
 } {
   const answers = useAnswers();
   const visibleQuestionAlises = useVisibleQuestionAliases();
   return useMemo(
     () =>
-      getLowestHighestZulaessigeHoechstmiete(
+      getWorstBestZulaessigeHoechstmiete(
         answers.getAliasedState(),
         visibleQuestionAlises,
       ) ?? {
-        lowest: 0,
-        highest: 0,
+        worst: 0,
+        best: 0,
       },
     [answers, visibleQuestionAlises],
   );
 }
 
-export function useLowestHighestZulaessigeHoechstmieteDiff(): {
-  lowest: number;
-  highest: number;
+export function useWorstBestZulaessigeHoechstmieteDiff(): {
+  worst: number;
+  best: number;
 } {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAlises = useVisibleQuestionAliases();
 
   const nettokaltmiete = getNettokaltmiete(answers, visibleQuestionAlises);
-  const lowestHighestZulaessigeHoechstmiete =
-    useLowestHighestZulaessigeHoechstmiete();
+  const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
 
   return {
-    lowest:
-      Number(nettokaltmiete) - lowestHighestZulaessigeHoechstmiete.highest,
-    highest:
-      Number(nettokaltmiete) - lowestHighestZulaessigeHoechstmiete.lowest,
+    worst: Number(nettokaltmiete) - zulaessigeHoechstmiete.worst,
+    best: Number(nettokaltmiete) - zulaessigeHoechstmiete.best,
   };
 }
