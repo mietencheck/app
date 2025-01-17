@@ -12393,6 +12393,7 @@ export type StepInfoByAlias = {
             "Gebäude ist in gutem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat <5 Stockwerke und Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat >=5 Stockwerke und kein Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Gebäude hat <5 Stockwerke und Fahrstuhl": {
@@ -12510,6 +12511,7 @@ export type StepInfoByAlias = {
             "Gebäude ist in gutem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat <5 Stockwerke und Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat >=5 Stockwerke und kein Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": {
@@ -12627,6 +12629,7 @@ export type StepInfoByAlias = {
             "Gebäude ist in gutem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat <5 Stockwerke und Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat >=5 Stockwerke und kein Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     Fahrrad: {

@@ -266,7 +266,11 @@ export const answersToMerkmalStateMapping = {
   },
   "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug": {
     checked_if: {
-      "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
+      logic: "and",
+      conditions: [
+        { "Gebäude hat Fahrstuhl": "Ja" },
+        { "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja" },
+      ],
     },
   },
   "[Gebäude-] Gebäude hat keine Fahrradabstellmöglichkeit": {
@@ -352,7 +356,11 @@ export const answersToMerkmalStateMapping = {
     },
   "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen": {
     checked_if: {
-      "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
+      logic: "and",
+      conditions: [
+        { "Gebäude hat Fahrstuhl": "Ja" },
+        { "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja" },
+      ],
     },
   },
   "[Gebäude+] Gebäude hat Fahrradabstellraum/Fahrradstellplätze": {

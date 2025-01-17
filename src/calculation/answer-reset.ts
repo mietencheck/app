@@ -18,6 +18,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Mehrere WCs": "Nein",
   "Getrenntes WC": "Nein",
   "Bad hat wandhängendes WC": "Nein",
+  "Bad hat hochwertiges Stand-WC": "Nein",
   "Bad mit moderner Entlüftung": "Nein",
   "Bad mit Strukturheizkörper": "Nein",
   "Bad mit Fußbodenheizung": "Nein",

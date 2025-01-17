@@ -21,8 +21,6 @@ export const getWorstBestMerkmalStateByMerkmalGruppe = (
     visibleQuestionAliases,
   );
 
-  console.log("merkmalStatesByGruppe", merkmalStatesByGruppe);
-
   return Object.entries(merkmalStatesByGruppe).reduce(
     (result, [merkmalGruppe, merkmale]) => {
       result[merkmalGruppe as MerkmalGruppe] = {
@@ -77,11 +75,6 @@ export const getWorstBestSpanneneinordnungInPercent = (
 } => {
   const worstBestMerkmalStateByMerkmalGruppe =
     getWorstBestMerkmalStateByMerkmalGruppe(answers, visibleQuestionAliases);
-
-  console.log(
-    "worstBestMerkmalStateByMerkmalGruppe",
-    worstBestMerkmalStateByMerkmalGruppe,
-  );
 
   const calcSpanneneinordnung = (
     result: number,
