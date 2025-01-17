@@ -268,6 +268,7 @@ test.each([
               "unchecked",
             "Gebäude in schlechten Instandhaltungszustand": "unchecked",
             "Gebäude Hauseingangstür ist nicht abschließbar": "unchecked",
+            "Wohnung ab fünftem Obergeschoss ohne Personenaufzug": "unchecked",
             "Energieverbrauchskennwert größer als 170/155/145": "unchecked",
             "Energieverbrauchskennwert größer als 210/195": "unchecked",
             "Energieverbrauchskennwert größer als 250/235": "unchecked",
