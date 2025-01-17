@@ -1,7 +1,6 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
-  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -4262,6 +4261,21 @@
                         {
                           "id": "c59au",
                           "type": "IfCase",
+                          "test": {
+                            "id": "5vvsi",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
+                            ]
+                          },
                           "block": [
                             {
                               "id": "a8ffw",
@@ -4321,33 +4335,33 @@
                               ],
                               "alternate": []
                             }
-                          ],
-                          "test": {
-                            "id": "5vvsi",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Vertragsdatum"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "m2jo",
-                              "4obam",
-                              "oqyrs"
-                            ]
-                          }
+                          ]
                         }
                       ],
                       "alternate": [
                         {
                           "id": "tsoy6",
                           "type": "If",
-                          "alternate": [],
                           "cases": [
                             {
                               "id": "5myqp",
                               "type": "IfCase",
+                              "test": {
+                                "id": "yriuz",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Baujahr"
+                                },
+                                "negated": false,
+                                "type": "AnswerNumberComparison",
+                                "operator": "lte",
+                                "comparands": [
+                                  {
+                                    "type": "NumberLiteral",
+                                    "value": 2001
+                                  }
+                                ]
+                              },
                               "block": [
                                 {
                                   "id": "xihum",
@@ -4378,25 +4392,10 @@
                                   "required": false,
                                   "note": "Merkmal 2015:\nnur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2017:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten [++]\n\nMerkmal 2019-2023:\nWandhängendes WC mit in der Wand eingelassenem Spülkasten; gilt nicht in der Baualtersklasse ab 2003 [++]\n\nMerkmal >=2024:\nWandhängendes WC mit in der Wand eingelassenem\nSpülkasten (gilt nicht für die Baualtersklassen ab 2002)\noder hochwertiges Stand-WC [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
-                              ],
-                              "test": {
-                                "id": "yriuz",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2001
-                                  }
-                                ]
-                              }
+                              ]
                             }
-                          ]
+                          ],
+                          "alternate": []
                         },
                         {
                           "id": "k0ong",
@@ -5833,8 +5832,8 @@
                             {
                               "id": "9tcd7h",
                               "type": "Question",
-                              "alias": "Küche hat Gas/Elektroherd",
-                              "text": "Handelt es sich bei dem Herd um einen Gas- oder Elektroherd?",
+                              "alias": "Küche hat Gas/Elektroherd ohne Backofen",
+                              "text": "Handelt es sich bei dem Herd um einen Gas- oder Elektroherd ohne Backofen?",
                               "info": null,
                               "answer": {
                                 "type": "ChoiceAnswer",
@@ -5857,62 +5856,7 @@
                                 ]
                               },
                               "required": false,
-                              "note": "Merkmal:\nKeine Kochmöglichkeit oder Gas-/ Elektroherd ohne Backofen [--]\n\nNicht sicher -> Nicht sicher"
-                            },
-                            {
-                              "id": "0q2f5",
-                              "type": "If",
-                              "cases": [
-                                {
-                                  "id": "edbwt",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "4j694",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Küche hat Gas/Elektroherd"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "uiajj"
-                                    ]
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "cupvd",
-                                      "type": "Question",
-                                      "alias": "Küche hat Gas/Elektroherd ohne Backofen",
-                                      "text": "Hat der Herd einen Backofen?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "zvczy",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "20mmb",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "7fp6sf",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
-                                        ]
-                                      },
-                                      "required": false,
-                                      "note": "Merkmal:\nKeine Kochmöglichkeit oder Gas-/ Elektroherd ohne Backofen [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "alternate": []
+                              "note": "Merkmal:\nKeine Kochmöglichkeit oder Gas-/ Elektroherd ohne Backofen [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         }
@@ -5930,7 +5874,7 @@
                             "id": "j5c3p",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Küche hat Gas/Elektroherd"
+                              "value": "Küche hat Gas/Elektroherd ohne Backofen"
                             },
                             "negated": false,
                             "type": "AnswerOptionComparison",
@@ -7794,7 +7738,7 @@
                                 ]
                               },
                               "required": false,
-                              "note": "Merkmal 2015:\nUnzureichende Elektroinstallation: Kein gleichzeitiger Betrieb von mindestens zwei haushaltsüblichen größeren Elektrogeräten (z.B. Waschmaschine und Staubsauger) möglich oder weniger als zwei Steckdosen in Wohnräumen [--]\n\nMerkmal >=2017:\nUnzureichende Elektroinstallation, z.B. keine ausreichende Elektrosteigeleitung und/oder VDE-gerechte Elektroinstallation (z.B. kein FI- Schalter, Potentialausgleich) [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nUnzureichende Elektroinstallation: Kein gleichzeitiger Betrieb von mindestens zwei haushaltsüblichen größeren Elektrogeräten (z.B. Waschmaschine und Staubsauger) möglich oder weniger als zwei Steckdosen in Wohnräumen [--]\n\nMerkmal >=2017:\nUnzureichende Elektroinstallation, z.B. keine ausreichende Elektrosteigeleitung und/oder VDE-gerechte Elektroinstallation (z.B. kein FI- Schalter, Potentialausgleich) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         }
@@ -8300,7 +8244,7 @@
                     {
                       "id": "j33tt",
                       "type": "Question",
-                      "alias": "Gebäude ist abschließbar",
+                      "alias": "Gebäude Hauseingangstür ist nicht abschließbar",
                       "text": "Ist es jederzeit möglich ohne Schlüssel bis zu deiner Wohnungstür zu kommen?",
                       "info": "Dies ist etwa der Fall wenn das Treppenhaus keine Eingangstür hat. Es reicht nicht aus, dass der Gebäude-Eingang kurzzeitig kaputt ist.\nWenn du im Hinterhaus wohnst, reicht es wenn man das Vorderhaus abschließen kannst.",
                       "answer": {
@@ -8324,7 +8268,7 @@
                         ]
                       },
                       "required": false,
-                      "note": "Merkmal 2015-2023:\nHauseingangstür nicht abschließbar [--]\n\nMerkmal 2024:\nJederzeit von außen frei zugänglicher Hauseingang [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                      "note": "Merkmal 2015-2023:\nHauseingangstür nicht abschließbar [--]\n\nMerkmal 2024:\nJederzeit von außen frei zugänglicher Hauseingang [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                     },
                     {
                       "id": "h19i5g",
@@ -8771,7 +8715,6 @@
                               "id": "t04m9",
                               "type": "If",
                               "note": "Das Sondermerkmal „Aufzug im Haus“ wird nur für Gebäude mit einem Baujahr vor 1918 abgefragt.",
-                              "alternate": [],
                               "cases": [
                                 {
                                   "id": "qk5ls",
@@ -8782,9 +8725,9 @@
                                       "type": "AliasRef",
                                       "value": "Sondermerkmal Aufzug"
                                     },
-                                    "operator": "is",
                                     "negated": true,
                                     "type": "AnswerOptionComparison",
+                                    "operator": "is",
                                     "comparands": [
                                       "uiajj"
                                     ]
@@ -8822,11 +8765,24 @@
                                     {
                                       "id": "x7m57",
                                       "type": "If",
-                                      "alternate": [],
                                       "cases": [
                                         {
                                           "id": "8dfum",
                                           "type": "IfCase",
+                                          "test": {
+                                            "id": "w5m5d",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Gebäude hat Fahrstuhl"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "uiajj",
+                                              "8i22j"
+                                            ]
+                                          },
                                           "block": [
                                             {
                                               "id": "fp2vg",
@@ -8857,42 +8813,30 @@
                                               "required": false,
                                               "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2024:\nPersonenaufzug bei weniger als fünf Obergeschossen; gilt nicht für die Baualtersklassen ab 2010 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                             }
-                                          ],
-                                          "test": {
-                                            "id": "w5m5d",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Gebäude hat Fahrstuhl"
-                                            },
-                                            "negated": false,
-                                            "type": "AnswerOptionComparison",
-                                            "operator": "is",
-                                            "comparands": [
-                                              "uiajj",
-                                              "8i22j"
-                                            ]
-                                          }
+                                          ]
                                         }
-                                      ]
+                                      ],
+                                      "alternate": []
                                     }
                                   ]
                                 }
-                              ]
+                              ],
+                              "alternate": []
                             }
                           ]
                         },
                         {
-                          "type": "IfCase",
                           "id": "elcml",
+                          "type": "IfCase",
                           "test": {
                             "id": "y79f4g",
                             "questionRef": {
                               "type": "AliasRef",
                               "value": "Vertragsdatum"
                             },
-                            "operator": "is",
                             "negated": false,
                             "type": "AnswerOptionComparison",
+                            "operator": "is",
                             "comparands": [
                               "7np1",
                               "m2jo",
@@ -9022,8 +8966,31 @@
                           "note": ""
                         },
                         {
-                          "type": "If",
                           "id": "z4edm",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "7wr6c",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "np07e",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Baujahr"
+                                },
+                                "negated": false,
+                                "type": "AnswerNumberComparison",
+                                "operator": "gt",
+                                "comparands": [
+                                  {
+                                    "type": "NumberLiteral",
+                                    "value": 2010
+                                  }
+                                ]
+                              },
+                              "block": []
+                            }
+                          ],
                           "alternate": [
                             {
                               "id": "hdpeq",
@@ -9054,47 +9021,24 @@
                               "required": false,
                               "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2024:\nPersonenaufzug bei weniger als fünf Obergeschossen; gilt nicht für die Baualtersklassen ab 2010 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
-                          ],
-                          "cases": [
-                            {
-                              "type": "IfCase",
-                              "id": "7wr6c",
-                              "test": {
-                                "id": "np07e",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "operator": "gt",
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2010
-                                  }
-                                ]
-                              },
-                              "block": []
-                            }
                           ]
                         },
                         {
-                          "type": "If",
                           "id": "h4cq7",
+                          "type": "If",
                           "cases": [
                             {
-                              "type": "IfCase",
                               "id": "3g7wn",
+                              "type": "IfCase",
                               "test": {
                                 "id": "ztsa3",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Baujahr"
                                 },
-                                "operator": "lt",
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
+                                "operator": "lt",
                                 "comparands": [
                                   {
                                     "type": "NumberLiteral",
@@ -11800,5 +11744,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subs": []
 }

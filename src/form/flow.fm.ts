@@ -67,7 +67,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -104,7 +103,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -597,7 +596,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -634,7 +632,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -744,7 +742,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -781,7 +778,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -891,7 +888,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -928,7 +924,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1158,7 +1154,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -1195,7 +1190,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1505,7 +1500,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -1542,7 +1536,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1652,7 +1646,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -1689,7 +1682,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1799,7 +1792,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -1836,7 +1828,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2039,7 +2031,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -2076,7 +2067,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2219,7 +2210,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -2256,7 +2246,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2471,7 +2461,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -2508,7 +2497,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2694,7 +2683,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -2731,7 +2719,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3048,7 +3036,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -3085,7 +3072,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3330,7 +3317,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -3367,7 +3353,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3672,7 +3658,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -3709,7 +3694,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3976,7 +3961,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -4013,7 +3997,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4346,7 +4330,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -4383,7 +4366,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4674,7 +4657,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -4711,7 +4693,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5269,7 +5251,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -5306,7 +5287,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5417,75 +5398,6 @@ export type StepInfoByAlias = {
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
         };
     };
-    "Küche hat Gas/Elektroherd": {
-        answer: "Ja" | "Nein" | "Nicht sicher";
-        state: {
-            Adresse?: string;
-            Ost?: boolean;
-            Wohnlage?: "einfach" | "mittel" | "gut";
-            Unterschrieben?: "Ja" | "Nein";
-            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
-            Kaltmiete?: number;
-            Qm?: number;
-            Dachgeschoss?: "Nicht sicher";
-            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 2002"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-";
-            "Baujahr ab 2002"?: number;
-            Baujahr?: number;
-            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
-            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
-            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
-            "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
-            "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
-            "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
-            Vormiete?: number;
-            "Vermieter hat über umfassende Sanierung informiert"?: "Ja" | "Nein" | "Nicht sicher";
-            "Vermieter hat Renovierungskosten mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
-            "Vermieter hat Renovierungskosten schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
-            "Renovierungskosten ein Drittel des Neubaupreises"?: "Ja" | "Nein" | "Nicht sicher";
-            "Sondermerkmal Badezimmer Klein"?: "Ja" | "Nein" | "Nicht sicher";
-            "Sondermerkmal Dusche Und Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
-            "Sondermerkmal Modernes Bad"?: "Ja" | "Nein" | "Nicht sicher";
-            "Sondermerkmal Moderne Küche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Sondermerkmal Schallschutzfenster"?: "Ja" | "Nein" | "Nicht sicher";
-            "Sondermerkmal Aufzug"?: "Ja" | "Nein" | "Nicht sicher";
-            "Sondermerkmal Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad größer als 4qm"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad größer als 8qm"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
-            "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad nur kleines Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad großes Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
-            "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
-            "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad ohne Heizung"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad mit alter Heizung"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad mit Strukturheizkörper"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad mit Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad mit Dielenfußboden"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad Wände ausreichend gefließt"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad Boden und Wand hochwertig"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad mit hochwertiger Ausstattung"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad hat Einhebelmischbatterie"?: "Ja" | "Nein" | "Nicht sicher";
-            "Bad hat Warmwasser"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            Gefliest?: "Ja" | "Nein" | "nicht sicher";
-            "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-        };
-    };
     "Küche hat Gas/Elektroherd ohne Backofen": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
@@ -5553,7 +5465,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Küche hat Ceran-/Induktionsherd": {
@@ -5623,7 +5534,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -5694,7 +5604,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -5731,7 +5640,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5841,7 +5750,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -5913,7 +5821,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -5986,7 +5893,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -6023,7 +5929,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6133,7 +6039,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -6207,7 +6112,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -6282,7 +6186,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -6358,7 +6261,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -6395,7 +6297,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6505,7 +6407,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -6583,7 +6484,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -6661,7 +6561,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -6740,7 +6639,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -6820,7 +6718,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -6857,7 +6754,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6967,7 +6864,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -7048,7 +6944,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -7085,7 +6980,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7195,7 +7090,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -7232,7 +7126,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7342,7 +7236,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -7424,7 +7317,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -7507,7 +7399,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -7591,7 +7482,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -7628,7 +7518,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7738,7 +7628,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -7823,7 +7712,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -7909,7 +7797,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -7996,7 +7883,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -8033,7 +7919,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8143,7 +8029,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -8231,7 +8116,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -8321,7 +8205,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -8411,7 +8294,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -8448,7 +8330,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8558,7 +8440,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -8649,7 +8530,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -8742,7 +8622,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -8779,7 +8658,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8889,7 +8768,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -8982,7 +8860,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -9076,7 +8953,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -9171,7 +9047,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -9267,7 +9142,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -9304,7 +9178,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9414,7 +9288,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -9511,7 +9384,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -9611,7 +9483,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -9710,7 +9581,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -9747,7 +9617,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9857,7 +9727,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -9957,7 +9826,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -10058,7 +9926,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -10095,7 +9962,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10205,7 +10072,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -10307,7 +10173,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -10410,7 +10275,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -10515,7 +10379,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -10620,7 +10483,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -10657,7 +10519,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10767,7 +10629,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -10804,7 +10665,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10847,7 +10708,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
-    "Gebäude ist abschließbar": {
+    "Gebäude Hauseingangstür ist nicht abschließbar": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
             Adresse?: string;
@@ -10914,7 +10775,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -11020,7 +10880,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -11057,7 +10916,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Gebäude hat Gegensprechanlage": {
@@ -11127,7 +10986,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -11164,7 +11022,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -11235,7 +11093,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -11272,7 +11129,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -11344,7 +11201,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -11381,7 +11237,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11491,7 +11347,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -11528,7 +11383,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11601,7 +11456,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -11638,7 +11492,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11712,7 +11566,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -11749,7 +11602,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11859,7 +11712,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -11896,7 +11748,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11971,7 +11823,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -12008,7 +11859,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12084,7 +11935,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -12121,7 +11971,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12198,7 +12048,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -12235,7 +12084,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12345,7 +12194,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -12382,7 +12230,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12463,7 +12311,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -12500,7 +12347,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12581,7 +12428,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -12618,7 +12464,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12699,7 +12545,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -12736,7 +12581,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12846,7 +12691,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -12883,7 +12727,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12964,7 +12808,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -13001,7 +12844,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13085,7 +12928,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -13122,7 +12964,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13205,7 +13047,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -13242,7 +13083,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13352,7 +13193,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -13389,7 +13229,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13473,7 +13313,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -13510,7 +13349,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13596,7 +13435,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -13633,7 +13471,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13719,7 +13557,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -13756,7 +13593,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13843,7 +13680,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -13880,7 +13716,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13968,7 +13804,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -14005,7 +13840,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14115,7 +13950,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -14152,7 +13986,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14262,7 +14096,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -14299,7 +14132,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14388,7 +14221,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -14425,7 +14257,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14516,7 +14348,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -14553,7 +14384,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14645,7 +14476,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -14682,7 +14512,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14792,7 +14622,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -14829,7 +14658,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14923,7 +14752,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -14960,7 +14788,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15054,7 +14882,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -15091,7 +14918,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15185,7 +15012,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -15222,7 +15048,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15318,7 +15144,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -15355,7 +15180,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15465,7 +15290,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -15502,7 +15326,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15612,7 +15436,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -15649,7 +15472,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15745,7 +15568,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -15782,7 +15604,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15879,7 +15701,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -15916,7 +15737,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16014,7 +15835,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -16051,7 +15871,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16150,7 +15970,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -16187,7 +16006,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16297,7 +16116,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -16334,7 +16152,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16435,7 +16253,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -16472,7 +16289,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16573,7 +16390,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -16610,7 +16426,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16712,7 +16528,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -16749,7 +16564,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16852,7 +16667,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -16889,7 +16703,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16993,7 +16807,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -17030,7 +16843,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17135,7 +16948,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -17172,7 +16984,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17282,7 +17094,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -17319,7 +17130,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17425,7 +17236,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -17462,7 +17272,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17569,7 +17379,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -17606,7 +17415,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17714,7 +17523,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -17751,7 +17559,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17860,7 +17668,6 @@ export type StepInfoByAlias = {
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
             Gefliest?: "Ja" | "Nein" | "nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Gas/Elektroherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
             "Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
@@ -17897,7 +17704,7 @@ export type StepInfoByAlias = {
             "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
-            "Gebäude ist abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";

@@ -117,7 +117,7 @@ export const answersToMerkmalStateMapping = {
       logic: "or",
       conditions: [
         { "Küche hat Kochmöglichkeit": "Nein" },
-        { "Küche hat Gas/Elektroherd ohne Backofen": "Nein" },
+        { "Küche hat Gas/Elektroherd ohne Backofen": "Ja" },
       ],
     },
   },
@@ -246,7 +246,7 @@ export const answersToMerkmalStateMapping = {
   // Gebäude
   "[Gebäude-] Gebäude Hauseingangstür ist nicht abschließbar": {
     checked_if: {
-      "Gebäude ist abschließbar": "Nein",
+      "Gebäude Hauseingangstür ist nicht abschließbar": "Ja",
     },
   },
   "[Gebäude-] Gebäude hat keine Gegensprechanlage": {

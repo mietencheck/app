@@ -52,8 +52,7 @@ export const MERKMAL_RESET_ANSWERS = {
 
   // Küche-
   "Küche hat Kochmöglichkeit": "Ja",
-  "Küche hat Gas/Elektroherd": "Ja",
-  "Küche hat Gas/Elektroherd ohne Backofen": "Ja",
+  "Küche hat Gas/Elektroherd ohne Backofen": "Nein",
   "Küche hat Spüle": "Ja",
   "Küche hat Warmwasser": "Ja",
   "Küche hat Heizung": "Ja",
@@ -102,7 +101,7 @@ export const MERKMAL_RESET_ANSWERS = {
   Energiebedarfskennwert: "0",
 
   // Gebäude-
-  "Gebäude ist abschließbar": "Ja",
+  "Gebäude Hauseingangstür ist nicht abschließbar": "Nein",
   "Gebäude hat Gegensprechanlage": "Ja",
   "Gebäude hat Treppenhaus in schlechtem Zustand": "Nein",
   "Gebäude ist in schlechtem Zustand": "Nein",
