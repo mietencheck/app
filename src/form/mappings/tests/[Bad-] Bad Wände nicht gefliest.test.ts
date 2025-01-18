@@ -17,29 +17,28 @@ test.each([
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude Hauseingangstür ist nicht abschließbar": "Ja",
+        "Bad Wände ausreichend gefließt": "Ja",
       },
       expected: {
-        "[Gebäude-] Gebäude Hauseingangstür ist nicht abschließbar": "checked",
+        "[Bad-] Bad Wände nicht gefliest": "unchecked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude Hauseingangstür ist nicht abschließbar": "Nicht sicher",
+        "Bad Wände ausreichend gefließt": "Nicht sicher",
       },
       expected: {
-        "[Gebäude-] Gebäude Hauseingangstür ist nicht abschließbar": "maybe",
+        "[Bad-] Bad Wände nicht gefliest": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude Hauseingangstür ist nicht abschließbar": "Nein",
+        "Bad Wände ausreichend gefließt": "Nein",
       },
       expected: {
-        "[Gebäude-] Gebäude Hauseingangstür ist nicht abschließbar":
-          "unchecked",
+        "[Bad-] Bad Wände nicht gefliest": "checked",
       },
     })),
   ].map(({ answers, expected }) => {

@@ -17,74 +17,55 @@ test.each([
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Ja",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
+        "Wohnung hat Balkon": "Ja",
+        "Wohnung hat großen Balkon": "Ja",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "checked",
+        "[Wohnung+] Wohnung hat großen Balkon": "checked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
+        "Wohnung hat Balkon": "Ja",
+        "Wohnung hat großen Balkon": "Nicht sicher",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "maybe",
+        "[Wohnung+] Wohnung hat großen Balkon": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Nicht sicher",
+        "Wohnung hat Balkon": "Ja",
+        "Wohnung hat großen Balkon": "Nein",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "maybe",
+        "[Wohnung+] Wohnung hat großen Balkon": "unchecked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Nein",
+        "Wohnung hat Balkon": "Nicht sicher",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
+        "[Wohnung+] Wohnung hat großen Balkon": "unchecked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nein",
+        "Wohnung hat Balkon": "Nein",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
+        "[Wohnung+] Wohnung hat großen Balkon": "unchecked",
       },
     })),
-    // Sondermerkmal Aufzug
-    {
-      answers: {
-        Vertragsdatum: "2015-2016",
-        "Sondermerkmal Aufzug": "Ja",
-        "Gebäude hat Fahrstuhl": "Nein",
-      },
-      expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
-      },
-    },
   ].map(({ answers, expected }) => {
     return {
       answers: {
         Unterschrieben: "Ja",
-        Baujahr: 1918,
         "Wohnung hat Sammelheizung": "Ja",
         "Badezimmer in Wohnung": "Ja",
         ...MERKMAL_RESET_ANSWERS,

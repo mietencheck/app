@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -3201,6 +3202,7 @@
                 {
                   "id": "nrsqz",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "tqfuq",
@@ -3588,6 +3590,7 @@
                                 {
                                   "id": "e51xr",
                                   "type": "IfCase",
+                                  "block": [],
                                   "test": {
                                     "id": "x8e",
                                     "questionRef": {
@@ -3600,14 +3603,44 @@
                                     "comparands": [
                                       "vove8"
                                     ]
-                                  },
-                                  "block": []
+                                  }
                                 }
                               ],
                               "alternate": [
                                 {
                                   "id": "rj5pk",
                                   "type": "If",
+                                  "alternate": [
+                                    {
+                                      "id": "3hedjh",
+                                      "type": "Question",
+                                      "alias": "Bad hat Dusche und Wanne",
+                                      "text": "Gibt es in der Wohnung sowohl eine Dusche als auch eine separate Badewanne?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "kewsy",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "wcek6",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "wx0n",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche [++]\n\nMerkmal >= 2017:\nVon der Badewanne getrennte zusätzliche Duschtasse oder -kabine [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ],
                                   "cases": [
                                     {
                                       "id": "qhmpfj",
@@ -3629,29 +3662,6 @@
                                         {
                                           "id": "7r05y",
                                           "type": "If",
-                                          "cases": [
-                                            {
-                                              "id": "04sajg",
-                                              "type": "IfCase",
-                                              "test": {
-                                                "id": "b0smz",
-                                                "questionRef": {
-                                                  "type": "AliasRef",
-                                                  "value": "Baujahr"
-                                                },
-                                                "negated": false,
-                                                "type": "AnswerNumberComparison",
-                                                "operator": "lte",
-                                                "comparands": [
-                                                  {
-                                                    "type": "NumberLiteral",
-                                                    "value": 1918
-                                                  }
-                                                ]
-                                              },
-                                              "block": []
-                                            }
-                                          ],
                                           "alternate": [
                                             {
                                               "id": "h492n",
@@ -3682,40 +3692,29 @@
                                               "required": false,
                                               "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche [++]\n\nMerkmal >= 2017:\nVon der Badewanne getrennte zusätzliche Duschtasse oder -kabine [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                             }
+                                          ],
+                                          "cases": [
+                                            {
+                                              "id": "04sajg",
+                                              "type": "IfCase",
+                                              "block": [],
+                                              "test": {
+                                                "id": "b0smz",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Sondermerkmal Dusche Und Badewanne"
+                                                },
+                                                "operator": "is",
+                                                "negated": true,
+                                                "type": "AnswerOptionComparison",
+                                                "comparands": [
+                                                  "qzhja"
+                                                ]
+                                              }
+                                            }
                                           ]
                                         }
                                       ]
-                                    }
-                                  ],
-                                  "alternate": [
-                                    {
-                                      "id": "3hedjh",
-                                      "type": "Question",
-                                      "alias": "Bad hat Dusche und Wanne",
-                                      "text": "Gibt es in der Wohnung sowohl eine Dusche als auch eine separate Badewanne?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "kewsy",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "wcek6",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "wx0n",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
-                                        ]
-                                      },
-                                      "required": false,
-                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche [++]\n\nMerkmal >= 2017:\nVon der Badewanne getrennte zusätzliche Duschtasse oder -kabine [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     }
                                   ]
                                 },
@@ -3777,6 +3776,7 @@
                                 {
                                   "id": "aebtq",
                                   "type": "If",
+                                  "alternate": [],
                                   "cases": [
                                     {
                                       "id": "bi81t",
@@ -3823,28 +3823,16 @@
                                             ]
                                           },
                                           "required": false,
-                                          "note": "Merkmal:\nBad ohne separate Dusche mit frei stehender Badewanne mit oder ohne Verblendung in nicht modernisiertem Bad [--]\n\nNicht sicher -> Nicht sicher"
+                                          "note": "Merkmal:\nBad ohne separate Dusche mit frei stehender Badewanne mit oder ohne Verblendung in nicht modernisiertem Bad [--]"
                                         },
                                         {
                                           "id": "dryf5",
                                           "type": "If",
+                                          "alternate": [],
                                           "cases": [
                                             {
                                               "id": "nvaf0i",
                                               "type": "IfCase",
-                                              "test": {
-                                                "id": "btohj",
-                                                "questionRef": {
-                                                  "type": "AliasRef",
-                                                  "value": "Duschen nur in freistehender Badewanne"
-                                                },
-                                                "negated": false,
-                                                "type": "AnswerOptionComparison",
-                                                "operator": "is",
-                                                "comparands": [
-                                                  "uiajj"
-                                                ]
-                                              },
                                               "block": [
                                                 {
                                                   "id": "xz3zd",
@@ -3875,15 +3863,27 @@
                                                   "required": false,
                                                   "note": "Merkmal:\nBad ohne separate Dusche mit frei stehender Badewanne mit oder ohne Verblendung in nicht modernisiertem Bad [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                                 }
-                                              ]
+                                              ],
+                                              "test": {
+                                                "id": "btohj",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Duschen nur in freistehender Badewanne"
+                                                },
+                                                "negated": false,
+                                                "type": "AnswerOptionComparison",
+                                                "operator": "is",
+                                                "comparands": [
+                                                  "uiajj",
+                                                  "8i22j"
+                                                ]
+                                              }
                                             }
-                                          ],
-                                          "alternate": []
+                                          ]
                                         }
                                       ]
                                     }
-                                  ],
-                                  "alternate": []
+                                  ]
                                 }
                               ]
                             }
@@ -3891,8 +3891,7 @@
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 },
                 {
                   "id": "wn0p",
@@ -6753,11 +6752,12 @@
                         ]
                       },
                       "required": false,
-                      "note": "Merkmal 2015:\nKein Balkon (das Merkmal gilt nicht, wenn der Balkon aus baulichen und/oder rechtlichen Gründen nicht möglich oder nicht zulässig ist) [--]\n\nMerkmal >= 2017:\nKein Balkon, (Dach-)Terrasse, Loggia und Winter-/Dachgarten (gilt nicht, wenn das Merkmal aus baulichen und/oder rechtlichen Gründen nicht möglich oder nicht zulässig ist) [--]\n\nNicht sicher -> Nicht sicher"
+                      "note": ""
                     },
                     {
                       "id": "0yy1s",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "e3xzt",
@@ -6808,19 +6808,20 @@
                           ]
                         },
                         {
-                          "id": "1j48i",
                           "type": "IfCase",
+                          "id": "x814c",
                           "test": {
-                            "id": "siz92",
+                            "id": "t0sbu",
                             "questionRef": {
                               "type": "AliasRef",
                               "value": "Wohnung hat Balkon"
                             },
+                            "operator": "is",
                             "negated": false,
                             "type": "AnswerOptionComparison",
-                            "operator": "is",
                             "comparands": [
-                              "43bd3"
+                              "43bd3",
+                              "36h0m"
                             ]
                           },
                           "block": [
@@ -6851,12 +6852,11 @@
                                 ]
                               },
                               "required": false,
-                              "note": "Merkmal 2015:\nKein Balkon (das Merkmal gilt nicht, wenn der Balkon aus baulichen und/oder rechtlichen Gründen nicht möglich oder nicht zulässig ist) [--]\n\nMerkmal >= 2017:\nKein Balkon, (Dach-)Terrasse, Loggia und Winter-/Dachgarten (gilt nicht, wenn das Merkmal aus baulichen und/oder rechtlichen Gründen nicht möglich oder nicht zulässig ist) [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nKein Balkon (das Merkmal gilt nicht, wenn der Balkon aus baulichen und/oder rechtlichen Gründen nicht möglich oder nicht zulässig ist) [--]\n\nMerkmal >= 2017:\nKein Balkon, (Dach-)Terrasse, Loggia und Winter-/Dachgarten (gilt nicht, wenn das Merkmal aus baulichen und/oder rechtlichen Gründen nicht möglich oder nicht zulässig ist) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         }
-                      ],
-                      "alternate": []
+                      ]
                     }
                   ]
                 },
@@ -11744,6 +11744,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }

@@ -17,74 +17,76 @@ test.each([
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Ja",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
+        "Mehrere WCs": "Ja",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "checked",
+        "[Bad+] Zweites WC oder Bad/WC getrennt": "checked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
+        "Mehrere WCs": "Nicht sicher",
+        "Getrenntes WC": "Ja",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "maybe",
+        "[Bad+] Zweites WC oder Bad/WC getrennt": "checked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Nicht sicher",
+        "Mehrere WCs": "Nicht sicher",
+        "Getrenntes WC": "Nicht sicher",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "maybe",
+        "[Bad+] Zweites WC oder Bad/WC getrennt": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Nein",
+        "Mehrere WCs": "Nicht sicher",
+        "Getrenntes WC": "Nein",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
+        "[Bad+] Zweites WC oder Bad/WC getrennt": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nein",
+        "Mehrere WCs": "Nein",
+        "Getrenntes WC": "Ja",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
+        "[Bad+] Zweites WC oder Bad/WC getrennt": "checked",
       },
     })),
-    // Sondermerkmal Aufzug
-    {
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
-        Vertragsdatum: "2015-2016",
-        "Sondermerkmal Aufzug": "Ja",
-        "Gebäude hat Fahrstuhl": "Nein",
+        Vertragsdatum: vertragsdatum,
+        "Mehrere WCs": "Nein",
+        "Getrenntes WC": "Nicht sicher",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
+        "[Bad+] Zweites WC oder Bad/WC getrennt": "maybe",
       },
-    },
+    })),
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
+      answers: {
+        Vertragsdatum: vertragsdatum,
+        "Mehrere WCs": "Nein",
+        "Getrenntes WC": "Nein",
+      },
+      expected: {
+        "[Bad+] Zweites WC oder Bad/WC getrennt": "unchecked",
+      },
+    })),
   ].map(({ answers, expected }) => {
     return {
       answers: {
         Unterschrieben: "Ja",
-        Baujahr: 1918,
         "Wohnung hat Sammelheizung": "Ja",
         "Badezimmer in Wohnung": "Ja",
         ...MERKMAL_RESET_ANSWERS,

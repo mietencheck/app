@@ -17,29 +17,28 @@ test.each([
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude Hauseingangstür ist nicht abschließbar": "Ja",
+        "WC ohne Lüftung": "Ja",
       },
       expected: {
-        "[Gebäude-] Gebäude Hauseingangstür ist nicht abschließbar": "checked",
+        "[Bad-] WC ohne Entlüftung": "checked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude Hauseingangstür ist nicht abschließbar": "Nicht sicher",
+        "WC ohne Lüftung": "Nicht sicher",
       },
       expected: {
-        "[Gebäude-] Gebäude Hauseingangstür ist nicht abschließbar": "maybe",
+        "[Bad-] WC ohne Entlüftung": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude Hauseingangstür ist nicht abschließbar": "Nein",
+        "WC ohne Lüftung": "Nein",
       },
       expected: {
-        "[Gebäude-] Gebäude Hauseingangstür ist nicht abschließbar":
-          "unchecked",
+        "[Bad-] WC ohne Entlüftung": "unchecked",
       },
     })),
   ].map(({ answers, expected }) => {

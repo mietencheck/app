@@ -78,7 +78,7 @@ export const getWohnflaecheSpanne = (
   const wohnflaeche = getWohnflaeche(answers, visibleQuestionAliases);
 
   if (mietspiegeljahr && baujahrSpanne && wohnlage && wohnflaeche) {
-    const livingSpaceRanges = Object.keys(
+    const wohnflaecheRanges = Object.keys(
       preisspannenByMietspiegeljahr[
         mietspiegeljahr as keyof typeof preisspannenByMietspiegeljahr
       ][
@@ -86,7 +86,7 @@ export const getWohnflaecheSpanne = (
       ][wohnlage],
     );
 
-    return livingSpaceRanges.find((livingSpaceRange) => {
+    return wohnflaecheRanges.find((livingSpaceRange) => {
       const livingSpaceLimits = livingSpaceRange.split("-");
       return (
         wohnflaeche >= Number(livingSpaceLimits[0]) &&

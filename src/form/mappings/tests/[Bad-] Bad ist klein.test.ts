@@ -17,29 +17,28 @@ test.each([
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude Hauseingangstür ist nicht abschließbar": "Ja",
+        "Bad größer als 4qm": "Ja",
       },
       expected: {
-        "[Gebäude-] Gebäude Hauseingangstür ist nicht abschließbar": "checked",
+        "[Bad-] Bad ist klein": "unchecked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude Hauseingangstür ist nicht abschließbar": "Nicht sicher",
+        "Bad größer als 4qm": "Nicht sicher",
       },
       expected: {
-        "[Gebäude-] Gebäude Hauseingangstür ist nicht abschließbar": "maybe",
+        "[Bad-] Bad ist klein": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude Hauseingangstür ist nicht abschließbar": "Nein",
+        "Bad größer als 4qm": "Nein",
       },
       expected: {
-        "[Gebäude-] Gebäude Hauseingangstür ist nicht abschließbar":
-          "unchecked",
+        "[Bad-] Bad ist klein": "checked",
       },
     })),
   ].map(({ answers, expected }) => {

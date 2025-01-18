@@ -76,7 +76,7 @@ export const MERKMAL_RESET_ANSWERS = {
 
   // Wohnung-
   "Wohnung hat Durchgangszimmer": "Nein",
-  "Wohnung keinen Balkon weil unmöglich": "Ja",
+  "Wohnung keinen Balkon weil unmöglich": "Nein",
   "Wohnung hat einfach verglaste Fenster": "Nein",
   "Wohnung hat nicht sichtbare Elektroinstallation": "Ja",
   "Wohnung hat Kabelanschluss": "Ja",

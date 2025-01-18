@@ -46,8 +46,14 @@ export const answersToMerkmalStateMapping = {
   },
   "[Bad-] Bad ohne separate Dusche mit frei stehender Wanne": {
     checked_if: {
-      "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad":
-        "Ja",
+      logic: "and",
+      conditions: [
+        { "Duschen nur in freistehender Badewanne": "Ja" },
+        {
+          "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad":
+            "Ja",
+        },
+      ],
     },
   },
   "[Bad-] Bad Wände nicht gefliest": {
@@ -169,7 +175,11 @@ export const answersToMerkmalStateMapping = {
   },
   "[Wohnung-] Wohnung hat kein Balkon": {
     checked_if: {
-      "Wohnung keinen Balkon weil unmöglich": "Nein",
+      logic: "and",
+      conditions: [
+        { "Wohnung hat Balkon": "Nein" },
+        { "Wohnung keinen Balkon weil unmöglich": "Ja" },
+      ],
     },
   },
   "[Wohnung-] Wohnung hat sichtbare Elektroinstallation": {
@@ -202,7 +212,13 @@ export const answersToMerkmalStateMapping = {
     checked_if: { "Wohnung hat Abstellraum": "Ja" },
   },
   "[Wohnung+] Wohnung hat großen Balkon": {
-    checked_if: { "Wohnung hat großen Balkon": "Ja" },
+    checked_if: {
+      logic: "and",
+      conditions: [
+        { "Wohnung hat Balkon": "Ja" },
+        { "Wohnung hat großen Balkon": "Ja" },
+      ],
+    },
   },
   "[Wohnung+] Wohnung hat Schallschutzfenster/Wärmeschutzverglasung": {
     checked_if: {

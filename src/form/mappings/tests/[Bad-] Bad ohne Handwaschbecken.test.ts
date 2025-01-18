@@ -7,20 +7,14 @@ import {
 import { getMerkmalStates } from "~/form/api";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 
-import { MERKMAL_DEFAULT_STATE } from "./merkmal-default-state";
-
-const allVertragsdatum = [
-  "2015-2016",
-  "2016-2018",
-  "2018-2020",
-  "2020-2022",
-  "2022-2024",
-  ">2024",
-];
+import {
+  ALL_VERTRAGSDATUM,
+  MERKMAL_DEFAULT_STATE,
+} from "./merkmal-default-state";
 
 test.each([
   ...[
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Bad & WC ohne Waschbecken": "Ja",
@@ -29,7 +23,7 @@ test.each([
         "[Bad-] Bad ohne Handwaschbecken": "checked",
       },
     })),
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Bad & WC ohne Waschbecken": "Nicht sicher",
@@ -39,7 +33,7 @@ test.each([
         "[Bad-] Bad ohne Handwaschbecken": "checked",
       },
     })),
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Bad & WC ohne Waschbecken": "Nicht sicher",
@@ -49,7 +43,7 @@ test.each([
         "[Bad-] Bad ohne Handwaschbecken": "maybe",
       },
     })),
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Bad & WC ohne Waschbecken": "Nicht sicher",
@@ -59,7 +53,7 @@ test.each([
         "[Bad-] Bad ohne Handwaschbecken": "maybe",
       },
     })),
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Bad & WC ohne Waschbecken": "Nein",
@@ -69,7 +63,7 @@ test.each([
         "[Bad-] Bad ohne Handwaschbecken": "checked",
       },
     })),
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Bad & WC ohne Waschbecken": "Nein",
@@ -79,7 +73,7 @@ test.each([
         "[Bad-] Bad ohne Handwaschbecken": "maybe",
       },
     })),
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Bad & WC ohne Waschbecken": "Nein",

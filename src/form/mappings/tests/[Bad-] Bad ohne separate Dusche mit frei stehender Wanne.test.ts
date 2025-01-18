@@ -17,69 +17,79 @@ test.each([
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Ja",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
+        "Duschen nur in freistehender Badewanne": "Ja",
+        "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad":
+          "Ja",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "checked",
+        "[Bad-] Bad ohne separate Dusche mit frei stehender Wanne": "checked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
+        "Duschen nur in freistehender Badewanne": "Ja",
+        "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad":
+          "Nicht sicher",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "maybe",
+        "[Bad-] Bad ohne separate Dusche mit frei stehender Wanne": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Nicht sicher",
+        "Duschen nur in freistehender Badewanne": "Ja",
+        "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad":
+          "Nein",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "maybe",
+        "[Bad-] Bad ohne separate Dusche mit frei stehender Wanne": "unchecked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Nein",
+        "Duschen nur in freistehender Badewanne": "Nicht sicher",
+        "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad":
+          "Ja",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
+        "[Bad-] Bad ohne separate Dusche mit frei stehender Wanne": "maybe",
+      },
+    })),
+
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
+      answers: {
+        Vertragsdatum: vertragsdatum,
+        "Duschen nur in freistehender Badewanne": "Nicht sicher",
+        "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad":
+          "Nicht sicher",
+      },
+      expected: {
+        "[Bad-] Bad ohne separate Dusche mit frei stehender Wanne": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nein",
+        "Duschen nur in freistehender Badewanne": "Nicht sicher",
+        "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad":
+          "Nein",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
+        "[Bad-] Bad ohne separate Dusche mit frei stehender Wanne": "unchecked",
       },
     })),
-    // Sondermerkmal Aufzug
-    {
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
-        Vertragsdatum: "2015-2016",
-        "Sondermerkmal Aufzug": "Ja",
-        "Gebäude hat Fahrstuhl": "Nein",
+        Vertragsdatum: vertragsdatum,
+        "Duschen nur in freistehender Badewanne": "Nein",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
+        "[Bad-] Bad ohne separate Dusche mit frei stehender Wanne": "unchecked",
       },
-    },
+    })),
   ].map(({ answers, expected }) => {
     return {
       answers: {

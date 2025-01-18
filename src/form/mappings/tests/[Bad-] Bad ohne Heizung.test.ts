@@ -17,74 +17,76 @@ test.each([
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Ja",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
+        "Bad ohne Heizung": "Ja",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "checked",
+        "[Bad-] Bad ohne Heizung": "checked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
+        "Bad ohne Heizung": "Nicht sicher",
+        "Bad mit alter Heizung": "Ja",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "maybe",
+        "[Bad-] Bad ohne Heizung": "checked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Nicht sicher",
+        "Bad ohne Heizung": "Nicht sicher",
+        "Bad mit alter Heizung": "Nicht sicher",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "maybe",
+        "[Bad-] Bad ohne Heizung": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nicht sicher",
-        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Nein",
+        "Bad ohne Heizung": "Nicht sicher",
+        "Bad mit alter Heizung": "Nein",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
+        "[Bad-] Bad ohne Heizung": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Gebäude hat Fahrstuhl": "Nein",
+        "Bad ohne Heizung": "Nein",
+        "Bad mit alter Heizung": "Ja",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
+        "[Bad-] Bad ohne Heizung": "checked",
       },
     })),
-    // Sondermerkmal Aufzug
-    {
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
-        Vertragsdatum: "2015-2016",
-        "Sondermerkmal Aufzug": "Ja",
-        "Gebäude hat Fahrstuhl": "Nein",
+        Vertragsdatum: vertragsdatum,
+        "Bad ohne Heizung": "Nein",
+        "Bad mit alter Heizung": "Nicht sicher",
       },
       expected: {
-        "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen":
-          "unchecked",
+        "[Bad-] Bad ohne Heizung": "maybe",
       },
-    },
+    })),
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
+      answers: {
+        Vertragsdatum: vertragsdatum,
+        "Bad ohne Heizung": "Nein",
+        "Bad mit alter Heizung": "Nein",
+      },
+      expected: {
+        "[Bad-] Bad ohne Heizung": "unchecked",
+      },
+    })),
   ].map(({ answers, expected }) => {
     return {
       answers: {
         Unterschrieben: "Ja",
-        Baujahr: 1918,
         "Wohnung hat Sammelheizung": "Ja",
         "Badezimmer in Wohnung": "Ja",
         ...MERKMAL_RESET_ANSWERS,

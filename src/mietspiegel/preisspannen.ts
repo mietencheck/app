@@ -1035,7 +1035,9 @@ export const preisspannenByMietspiegeljahr = {
       },
     },
     "2010-2015": {
-      einfach: [7.24, 9.98, 14.48],
+      einfach: {
+        "0-": [7.24, 9.98, 14.48],
+      },
       mittel: {
         "-70": [8.18, 10.76, 16.75],
         "70-95": [8.92, 12.05, 16.11],
@@ -1071,11 +1073,9 @@ export const preisspannenByMietspiegeljahr = {
 } satisfies {
   [Jahr in Mietspiegeljahr]: {
     [Baujahr in BaujahrSpanneInMietspiegeljahr[Jahr]]: {
-      [Lage in Wohnlage]:
-        | Preisspanne
-        | Partial<{
-            [Flaeche in Wohnflaeche]: Preisspanne;
-          }>;
+      [Lage in Wohnlage]: Partial<{
+        [Flaeche in Wohnflaeche]: Preisspanne;
+      }>;
     };
   };
 };

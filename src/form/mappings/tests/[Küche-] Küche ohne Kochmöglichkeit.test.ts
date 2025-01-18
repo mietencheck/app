@@ -7,20 +7,14 @@ import {
 import { getMerkmalStates } from "~/form/api";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 
-import { MERKMAL_DEFAULT_STATE } from "./merkmal-default-state";
-
-const allVertragsdatum = [
-  "2015-2016",
-  "2016-2018",
-  "2018-2020",
-  "2020-2022",
-  "2022-2024",
-  ">2024",
-];
+import {
+  ALL_VERTRAGSDATUM,
+  MERKMAL_DEFAULT_STATE,
+} from "./merkmal-default-state";
 
 test.each([
   ...[
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Küche hat Kochmöglichkeit": "Ja",
@@ -30,7 +24,7 @@ test.each([
         "[Küche-] Küche ohne Kochmöglichkeit": "checked",
       },
     })),
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Küche hat Kochmöglichkeit": "Ja",
@@ -40,7 +34,7 @@ test.each([
         "[Küche-] Küche ohne Kochmöglichkeit": "maybe",
       },
     })),
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Küche hat Kochmöglichkeit": "Ja",
@@ -50,7 +44,7 @@ test.each([
         "[Küche-] Küche ohne Kochmöglichkeit": "unchecked",
       },
     })),
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Küche hat Kochmöglichkeit": "Nicht sicher",
@@ -60,7 +54,7 @@ test.each([
         "[Küche-] Küche ohne Kochmöglichkeit": "maybe",
       },
     })),
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Küche hat Kochmöglichkeit": "Nicht sicher",
@@ -70,7 +64,7 @@ test.each([
         "[Küche-] Küche ohne Kochmöglichkeit": "maybe",
       },
     })),
-    ...allVertragsdatum.map((vertragsdatum) => ({
+    ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         "Küche hat Kochmöglichkeit": "Nicht sicher",

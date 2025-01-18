@@ -25,3 +25,12 @@ export const MERKMAL_DEFAULT_STATE = {
     Object.keys(merkmale2024).map((key) => [key, "unchecked"]),
   ),
 } as const;
+
+export const ALL_VERTRAGSDATUM = [
+  "2015-2016",
+  "2016-2018",
+  "2018-2020",
+  "2020-2022",
+  "2022-2024",
+  ">2024",
+];

@@ -68,7 +68,6 @@ export function getWorstBestOrtsueblicheVergleichsmiete(
   if (!preisspanne) {
     return undefined;
   }
-
   return {
     best: calcOrtsueblicheVergleichsmiete(
       preisspanne.best,
