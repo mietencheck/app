@@ -125,6 +125,67 @@ test.each([
         best: 660.66,
       },
     },
+    {
+      answers: {
+        Vertragsdatum: ">2024",
+        Baujahr: 1972,
+        Ost: false,
+        Wohnlage: "einfach",
+        Qm: 40,
+        "Bad ohne Heizung": "Ja",
+        "Bad Boden und Wand hochwertig": "Ja",
+        "Bad hat bodengleiche Dusche": "Ja",
+        "Küche hat hochwertigen Fußboden": "Ja",
+        "Wohnung hat einfach verglaste Fenster": "Ja",
+        "Wohnung hat sichtbare Heizungsrohe": "Nein",
+        "Wohnung ist barrierearm": "Ja",
+        "Gebäude hat Fahrstuhl": "Nein",
+        "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
+        "Kennt Energieverbrauch oder Energiebedarf": "Energieverbrauchswert",
+        Energieverbrauchskennwert: "++",
+        "Wohnumfeld ist aufwendig gestaltet": "Ja",
+      },
+      result: {
+        worst: 377.52,
+        best: 377.52,
+      },
+    },
+    {
+      answers: {
+        Vertragsdatum: ">2024",
+        Baujahr: 1912,
+        Ost: false,
+        Wohnlage: "einfach",
+        Qm: 60,
+        "Bad mit WC ohne Fenster": "Ja",
+        "Bad größer als 4qm": "Nein",
+        "Bad mit Strukturheizkörper": "Ja",
+        "Bad mit hochwertiger Ausstattung": "Ja",
+        "Bad Wände ausreichend gefließt": "Nein",
+        "Küche hat Ceran-/Induktionsherd": "Ja",
+        "Wohnung hat hochwertigen Bodenbelag": "Ja",
+        "Kennt Energieverbrauch oder Energiebedarf": "Nein",
+        "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad": "Ja",
+        "Gebäude hat schwellenarmen Zugang": "Ja",
+      },
+      result: {
+        worst: 504.9,
+        best: 504.9,
+      },
+    },
+    {
+      answers: {
+        Vertragsdatum: ">2024",
+        Baujahr: 2003,
+        Ost: false,
+        Wohnlage: "mittel",
+        Qm: 90,
+      },
+      result: {
+        worst: 890.01,
+        best: 890.01,
+      },
+    },
   ].map(({ answers, result }) => {
     return {
       answers: {
@@ -139,6 +200,10 @@ test.each([
     };
   }),
 ])("getWorstBestZulaessigeHoechstmiete(%o)", ({ answers, result }) => {
+  console.log(
+    "getVisibleQuestionAliases(answers)",
+    getVisibleQuestionAliases(answers),
+  );
   expect(
     getWorstBestZulaessigeHoechstmiete(
       answers,

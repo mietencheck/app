@@ -1,4 +1,4 @@
-import { getWorstBestAusstattungsAbzug } from "~/calculation/preisspanne";
+import { getWorstBestAusstattungsAbzug } from "~/calculation/ausstattungsAbzug";
 import {
   Table,
   TableBody,

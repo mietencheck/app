@@ -7,10 +7,7 @@ import {
 import { getMerkmalStates } from "~/form/api";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 
-import {
-  ALL_VERTRAGSDATUM,
-  MERKMAL_DEFAULT_STATE,
-} from "./merkmal-default-state";
+import { MERKMAL_DEFAULT_STATE } from "./merkmal-default-state";
 
 test.each([
   ...[
@@ -24,6 +21,90 @@ test.each([
         },
         expected: {
           "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
+            "unchecked",
+        },
+      }),
+    ),
+    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
+      (vertragsdatum) => ({
+        answers: {
+          Vertragsdatum: vertragsdatum,
+          Baujahr: 1949,
+          "Gebäude hat Fahrstuhl": "Ja",
+          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nicht sicher",
+        },
+        expected: {
+          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
+            "unchecked",
+        },
+      }),
+    ),
+    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
+      (vertragsdatum) => ({
+        answers: {
+          Vertragsdatum: vertragsdatum,
+          Baujahr: 1949,
+          "Gebäude hat Fahrstuhl": "Ja",
+          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nein",
+        },
+        expected: {
+          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
+            "unchecked",
+        },
+      }),
+    ),
+    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
+      (vertragsdatum) => ({
+        answers: {
+          Vertragsdatum: vertragsdatum,
+          Baujahr: 1949,
+          "Gebäude hat Fahrstuhl": "Nicht sicher",
+          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
+        },
+        expected: {
+          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
+            "maybe",
+        },
+      }),
+    ),
+    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
+      (vertragsdatum) => ({
+        answers: {
+          Vertragsdatum: vertragsdatum,
+          Baujahr: 1949,
+          "Gebäude hat Fahrstuhl": "Nicht sicher",
+          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nicht sicher",
+        },
+        expected: {
+          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
+            "maybe",
+        },
+      }),
+    ),
+    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
+      (vertragsdatum) => ({
+        answers: {
+          Vertragsdatum: vertragsdatum,
+          Baujahr: 1949,
+          "Gebäude hat Fahrstuhl": "Nicht sicher",
+          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nein",
+        },
+        expected: {
+          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
+            "unchecked",
+        },
+      }),
+    ),
+    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
+      (vertragsdatum) => ({
+        answers: {
+          Vertragsdatum: vertragsdatum,
+          Baujahr: 1949,
+          "Gebäude hat Fahrstuhl": "Nein",
+          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
+        },
+        expected: {
+          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
             "checked",
         },
       }),
@@ -33,96 +114,12 @@ test.each([
         answers: {
           Vertragsdatum: vertragsdatum,
           Baujahr: 1949,
-          "Gebäude hat Fahrstuhl": "Ja",
-          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nicht sicher",
-        },
-        expected: {
-          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
-            "maybe",
-        },
-      }),
-    ),
-    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
-      (vertragsdatum) => ({
-        answers: {
-          Vertragsdatum: vertragsdatum,
-          Baujahr: 1949,
-          "Gebäude hat Fahrstuhl": "Ja",
-          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nein",
-        },
-        expected: {
-          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
-            "unchecked",
-        },
-      }),
-    ),
-    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
-      (vertragsdatum) => ({
-        answers: {
-          Vertragsdatum: vertragsdatum,
-          Baujahr: 1949,
-          "Gebäude hat Fahrstuhl": "Nicht sicher",
-          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
-        },
-        expected: {
-          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
-            "maybe",
-        },
-      }),
-    ),
-    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
-      (vertragsdatum) => ({
-        answers: {
-          Vertragsdatum: vertragsdatum,
-          Baujahr: 1949,
-          "Gebäude hat Fahrstuhl": "Nicht sicher",
-          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nicht sicher",
-        },
-        expected: {
-          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
-            "maybe",
-        },
-      }),
-    ),
-    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
-      (vertragsdatum) => ({
-        answers: {
-          Vertragsdatum: vertragsdatum,
-          Baujahr: 1949,
-          "Gebäude hat Fahrstuhl": "Nicht sicher",
-          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nein",
-        },
-        expected: {
-          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
-            "unchecked",
-        },
-      }),
-    ),
-    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
-      (vertragsdatum) => ({
-        answers: {
-          Vertragsdatum: vertragsdatum,
-          Baujahr: 1949,
-          "Gebäude hat Fahrstuhl": "Nein",
-          "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
-        },
-        expected: {
-          "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
-            "unchecked",
-        },
-      }),
-    ),
-    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
-      (vertragsdatum) => ({
-        answers: {
-          Vertragsdatum: vertragsdatum,
-          Baujahr: 1949,
           "Gebäude hat Fahrstuhl": "Nein",
           "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nicht sicher",
         },
         expected: {
           "[Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug":
-            "unchecked",
+            "maybe",
         },
       }),
     ),

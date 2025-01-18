@@ -40,7 +40,7 @@ test.each([
     {
       description: "Case where contract was signed after 2024",
       answers: { Vertragsdatum: ">2024" },
-      preisspanne: [7.19, 9.87, 14.19],
+      preisspanne: [9.87, 7.19, 14.19],
     },
   ].map(({ description, answers, preisspanne }) => ({
     description: description,

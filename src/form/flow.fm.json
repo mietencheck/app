@@ -5640,52 +5640,87 @@
                       "alternate": []
                     },
                     {
-                      "id": "ckfyf",
                       "type": "If",
+                      "id": "1blo2",
                       "cases": [
                         {
-                          "id": "nmc6z",
                           "type": "IfCase",
+                          "id": "hg0l6l",
                           "test": {
-                            "id": "l81j9",
-                            "type": "LogicalOperation",
-                            "operator": "and",
+                            "id": "6qt1w",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "operator": "is",
                             "negated": false,
-                            "conditions": [
-                              {
-                                "id": "rv80gg",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Vertragsdatum"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "wejo0k"
-                                ]
-                              },
-                              {
-                                "id": "rv80gg",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Sondermerkmal Moderne Küche"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "uiajj"
-                                ]
-                              }
+                            "type": "AnswerOptionComparison",
+                            "comparands": [
+                              "wejo0k"
                             ]
                           },
-                          "block": []
+                          "block": [
+                            {
+                              "type": "If",
+                              "id": "ssvoo",
+                              "cases": [
+                                {
+                                  "type": "IfCase",
+                                  "id": "66un0f",
+                                  "block": [],
+                                  "test": {
+                                    "id": "1ox53",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Sondermerkmal Moderne Küche"
+                                    },
+                                    "operator": "is",
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "comparands": [
+                                      "uiajj"
+                                    ]
+                                  }
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "wlhgh",
+                                  "type": "Question",
+                                  "alias": "Küche hat Einbauküche",
+                                  "text": "Ist die Küche von der Vermieterin mit einer Einbauküche mit Ober- und Unterschränken, Herd und Spüle ausgestattet worden?",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "tcod4",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "43bd3",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "36h0m",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "required": false,
+                                  "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Moderne Küchenausstattung“ nicht zutrifft:\nEinbauküche mit Ober- und Unterschränken sowie Herd und Spüle [++]\n\nMerkmal >=2017:\nEinbauküche mit Ober- und Unter- schränken sowie Herd und Spüle [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ],
                       "alternate": [
                         {
-                          "id": "9rilk",
+                          "id": "m0lvg",
                           "type": "Question",
                           "alias": "Küche hat Einbauküche",
                           "text": "Ist die Küche von der Vermieterin mit einer Einbauküche mit Ober- und Unterschränken, Herd und Spüle ausgestattet worden?",
@@ -5716,14 +5751,46 @@
                       ]
                     },
                     {
-                      "id": "0aqrq",
+                      "id": "a43v3",
                       "type": "If",
+                      "alternate": [
+                        {
+                          "id": "x94sm",
+                          "type": "Question",
+                          "alias": "Küche hat Kücheninsel",
+                          "text": "Ist die Küche von der Vermieterin mit einer freistehenden Kücheninsel mit Kochmöglichkeit oder Spüle ausgestattet worden? ",
+                          "info": "Freistehend heißt, dass diese nicht mit einer Wand oder einer anderen Arbeitsfläche verbunden ist. L-förmige Küchentheken sind daher nicht freistehend.",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "1xuk8",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "ulivf",
+                                "alias": "Nein",
+                                "text": "Nein "
+                              },
+                              {
+                                "id": "k0ogk",
+                                "alias": "nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
+                          },
+                          "required": false,
+                          "note": "Merkmal >=2024: Freistehender Küchenblock mit Arbeitsfläche und Kochmöglichkeit oder Spüle [++]\n\nJa -> Check\nNicht sicher -> nicht sicher"
+                        }
+                      ],
                       "cases": [
                         {
-                          "id": "cv6aw",
+                          "id": "kvdrs",
                           "type": "IfCase",
+                          "block": [],
                           "test": {
-                            "id": "3bnnc",
+                            "id": "n75c9",
                             "questionRef": {
                               "type": "AliasRef",
                               "value": "Vertragsdatum"
@@ -5732,43 +5799,15 @@
                             "type": "AnswerOptionComparison",
                             "operator": "is",
                             "comparands": [
-                              "ve0tek"
+                              "wejo0k",
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
                             ]
-                          },
-                          "block": [
-                            {
-                              "id": "ip9f8",
-                              "type": "Question",
-                              "alias": "Gefliest",
-                              "text": "Sie die Wände um die Arbeitsbereiche in der Küche gefliest oder mit einem anderen Wandbelag bedeckt, den man gut reinigen kann?",
-                              "info": "Dies können etwa Silikonfarbe, Linoleum, Edelstahl oder behandeltes Holz sein.\nDabei geht es um die Bereiche, die bei einer normalen Benutzung häufig dreckig werden",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "axcbu",
-                                    "alias": "Ja",
-                                    "text": "Ja"
-                                  },
-                                  {
-                                    "id": "jh7gu",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  },
-                                  {
-                                    "id": "pxe25",
-                                    "alias": "nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": false,
-                              "note": "\nMS 2024: Keine Wandfliesen oder vergleichbarer Wandschutz\nim Arbeitsbereich (--)\n\nNein -> Check\nnicht sicher-> nicht sicher"
-                            }
-                          ]
+                          }
                         }
-                      ],
-                      "alternate": []
+                      ]
                     }
                   ]
                 },
@@ -5865,120 +5904,112 @@
                     {
                       "id": "zq4f2k",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "wfkalj",
                           "type": "IfCase",
-                          "test": {
-                            "id": "j5c3p",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Küche hat Gas/Elektroherd ohne Backofen"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "qzhja",
-                              "8i22j"
-                            ]
-                          },
                           "block": [
                             {
-                              "id": "k7pjzh",
                               "type": "If",
+                              "id": "i8xg9l",
                               "cases": [
                                 {
-                                  "id": "1w26v",
                                   "type": "IfCase",
+                                  "id": "n1ree",
                                   "test": {
-                                    "id": "44p03",
-                                    "type": "LogicalOperation",
-                                    "operator": "and",
+                                    "id": "pdf7u",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "operator": "is",
                                     "negated": false,
-                                    "conditions": [
-                                      {
-                                        "id": "3ap5a",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Vertragsdatum"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerOptionComparison",
-                                        "operator": "is",
-                                        "comparands": [
-                                          "wejo0k"
-                                        ]
-                                      },
-                                      {
-                                        "id": "3ap5a",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Sondermerkmal Moderne Küche"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerOptionComparison",
-                                        "operator": "is",
-                                        "comparands": [
-                                          "uiajj"
-                                        ]
-                                      }
+                                    "type": "AnswerOptionComparison",
+                                    "comparands": [
+                                      "wejo0k"
                                     ]
                                   },
-                                  "block": []
-                                }
-                              ],
-                              "alternate": [
-                                {
-                                  "id": "f3ds6",
-                                  "type": "If",
-                                  "cases": [
+                                  "block": [
                                     {
-                                      "id": "jwul4",
-                                      "type": "IfCase",
-                                      "test": {
-                                        "id": "ik8dl",
-                                        "type": "LogicalOperation",
-                                        "operator": "and",
-                                        "negated": false,
-                                        "conditions": [
-                                          {
-                                            "id": "5g5cq",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Vertragsdatum"
-                                            },
-                                            "negated": false,
-                                            "type": "AnswerOptionComparison",
-                                            "operator": "is",
-                                            "comparands": [
-                                              "ve0tek"
-                                            ]
-                                          },
-                                          {
-                                            "id": "5g5cq",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Baujahr"
-                                            },
-                                            "negated": false,
-                                            "type": "AnswerNumberComparison",
-                                            "operator": "lte",
-                                            "comparands": [
+                                      "type": "If",
+                                      "id": "vncyr",
+                                      "alternate": [
+                                        {
+                                          "id": "qmwfnk",
+                                          "type": "Question",
+                                          "alias": "Küche hat Ceran-/Induktionsherd",
+                                          "text": "Handelt es sich bei dem Herd um ein Ceran- oder Induktions-Kochfeld?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
                                               {
-                                                "type": "NumberLiteral",
-                                                "value": 2001
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
                                               }
                                             ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Moderne Küchenausstattung“ nicht zutrifft: Ceran-Kochfeld oder Induktions- Kochfeld [++]\n\nMerkmal 2017-2023:\nCeran-Kochfeld oder Induktions- Kochfeld [++]\n\nMerkmal >=2024: \nCeran-Kochfeld oder Induktions-Kochfeld (gilt für Baualtersklassen bis einschließlich 2001)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ],
+                                      "cases": [
+                                        {
+                                          "type": "IfCase",
+                                          "id": "ntjw9",
+                                          "block": [],
+                                          "test": {
+                                            "id": "4k6iz",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Sondermerkmal Moderne Küche"
+                                            },
+                                            "operator": "is",
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "comparands": [
+                                              "uiajj"
+                                            ]
                                           }
-                                        ]
-                                      },
-                                      "block": []
+                                        }
+                                      ]
                                     }
-                                  ],
-                                  "alternate": [
+                                  ]
+                                },
+                                {
+                                  "type": "IfCase",
+                                  "id": "t6hvh",
+                                  "test": {
+                                    "id": "yk6pl",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "operator": "is",
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "comparands": [
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
+                                    ]
+                                  },
+                                  "block": [
                                     {
-                                      "id": "fprvm",
+                                      "id": "plpr5",
                                       "type": "Question",
                                       "alias": "Küche hat Ceran-/Induktionsherd",
                                       "text": "Handelt es sich bei dem Herd um ein Ceran- oder Induktions-Kochfeld?",
@@ -6004,134 +6035,111 @@
                                         ]
                                       },
                                       "required": false,
-                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Moderne Küchenausstattung“ nicht zutrifft: Ceran-Kochfeld oder Induktions- Kochfeld [++]\n\nMerkmal >=2017:\nCeran-Kochfeld oder Induktions- Kochfeld [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Moderne Küchenausstattung“ nicht zutrifft: Ceran-Kochfeld oder Induktions- Kochfeld [++]\n\nMerkmal 2017-2023:\nCeran-Kochfeld oder Induktions- Kochfeld [++]\n\nMerkmal >=2024: \nCeran-Kochfeld oder Induktions-Kochfeld (gilt für Baualtersklassen bis einschließlich 2001)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "type": "If",
+                                  "id": "91zivh",
+                                  "alternate": [],
+                                  "cases": [
+                                    {
+                                      "type": "IfCase",
+                                      "id": "tqr2t",
+                                      "test": {
+                                        "id": "h868v",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr"
+                                        },
+                                        "operator": "lte",
+                                        "negated": false,
+                                        "type": "AnswerNumberComparison",
+                                        "comparands": [
+                                          {
+                                            "type": "NumberLiteral",
+                                            "value": 2001
+                                          }
+                                        ]
+                                      },
+                                      "block": [
+                                        {
+                                          "id": "b8ez6",
+                                          "type": "Question",
+                                          "alias": "Küche hat Ceran-/Induktionsherd",
+                                          "text": "Handelt es sich bei dem Herd um ein Ceran- oder Induktions-Kochfeld?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Moderne Küchenausstattung“ nicht zutrifft: Ceran-Kochfeld oder Induktions- Kochfeld [++]\n\nMerkmal 2017-2023:\nCeran-Kochfeld oder Induktions- Kochfeld [++]\n\nMerkmal >=2024: \nCeran-Kochfeld oder Induktions-Kochfeld (gilt für Baualtersklassen bis einschließlich 2001)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
                               ]
                             }
-                          ]
-                        }
-                      ],
-                      "alternate": []
-                    }
-                  ]
-                },
-                {
-                  "id": "6rjhc",
-                  "type": "Group",
-                  "category": null,
-                  "alias": "Arbeitsflächen",
-                  "block": [
-                    {
-                      "id": "a43v3",
-                      "type": "If",
-                      "cases": [
-                        {
-                          "id": "kvdrs",
-                          "type": "IfCase",
+                          ],
                           "test": {
-                            "id": "n75c9",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Vertragsdatum"
-                            },
+                            "type": "LogicalOperation",
+                            "id": "siv5q",
+                            "operator": "and",
                             "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "ve0tek"
-                            ]
-                          },
-                          "block": [
-                            {
-                              "id": "x94sm",
-                              "type": "Question",
-                              "alias": "Kücheninsel",
-                              "text": "Gibt es eine freistehende Küchentheke (Kücheninsel)? ",
-                              "info": "Freistehend heißt, dass diese nicht mit einer Wand oder einer anderen Arbeitsfläche verbunden ist. L-förmige Küchentheken sind daher nicht freistehend.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "1xuk8",
-                                    "alias": "Ja",
-                                    "text": "Ja"
-                                  },
-                                  {
-                                    "id": "ulivf",
-                                    "alias": "Nein",
-                                    "text": "Nein "
-                                  },
-                                  {
-                                    "id": "k0ogk",
-                                    "alias": "nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
+                            "conditions": [
+                              {
+                                "id": "j5c3p",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Küche hat Kochmöglichkeit"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "8i22j",
+                                  "uiajj"
                                 ]
                               },
-                              "required": false,
-                              "note": "Merkmal MS 24: Freistehender Küchenblock mit Arbeitsfläche und\nKochmöglichkeit oder Spüle [++]\n\nNicht sicher -> nicht sicher"
-                            },
-                            {
-                              "id": "ge1z1",
-                              "type": "If",
-                              "cases": [
-                                {
-                                  "id": "yojwh",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "o6jm2",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Kücheninsel"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "1xuk8"
-                                    ]
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "4bf5j",
-                                      "type": "Question",
-                                      "alias": "Kücheninsel mit Herd/Spüle",
-                                      "text": "Ist in dieser freistehenden Küchentheke ein Kochfeld oder die Spüle eingebaut?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "ltsjp",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "lufkq",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "8ns4z",
-                                            "alias": "nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
-                                        ]
-                                      },
-                                      "required": false,
-                                      "note": "MS 24: Freistehender Küchenblock mit Arbeitsfläche und\nKochmöglichkeit oder Spüle [++]\n\nJa -> Check\nNicht sicher -> nicht sicher"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "alternate": []
-                            }
-                          ]
+                              {
+                                "id": "j5c3p",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Küche hat Gas/Elektroherd ohne Backofen"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "qzhja",
+                                  "8i22j"
+                                ]
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "alternate": []
+                      ]
                     }
                   ]
                 },
@@ -6530,87 +6538,200 @@
                   ]
                 },
                 {
-                  "id": "tahyc",
-                  "type": "Group",
-                  "category": "Section",
-                  "alias": "Fußboden",
-                  "block": [
+                  "id": "0aqrq",
+                  "type": "If",
+                  "cases": [
                     {
-                      "id": "ckli2",
-                      "type": "If",
-                      "cases": [
+                      "id": "cv6aw",
+                      "type": "IfCase",
+                      "block": [],
+                      "test": {
+                        "id": "3bnnc",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Vertragsdatum"
+                        },
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "wejo0k",
+                          "7np1",
+                          "m2jo",
+                          "4obam",
+                          "oqyrs"
+                        ]
+                      }
+                    }
+                  ],
+                  "alternate": [
+                    {
+                      "type": "Group",
+                      "id": "x4mjv",
+                      "category": "Section",
+                      "alias": "Wände",
+                      "block": []
+                    },
+                    {
+                      "id": "ip9f8",
+                      "type": "Question",
+                      "alias": "Küche ist gefliest",
+                      "text": "Sie die Wände um die Arbeitsbereiche in der Küche gefliest oder mit einem anderen Wandbelag bedeckt, den man gut reinigen kann?",
+                      "info": "Dies können etwa Silikonfarbe, Linoleum, Edelstahl oder behandeltes Holz sein.\nDabei geht es um die Bereiche, die bei einer normalen Benutzung häufig dreckig werden",
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "axcbu",
+                            "alias": "Ja",
+                            "text": "Ja"
+                          },
+                          {
+                            "id": "jh7gu",
+                            "alias": "Nein",
+                            "text": "Nein"
+                          },
+                          {
+                            "id": "pxe25",
+                            "alias": "nicht sicher",
+                            "text": "Ich bin mir nicht sicher"
+                          }
+                        ]
+                      },
+                      "required": false,
+                      "note": "Merkmal >=2024: Keine Wandfliesen oder vergleichbarer Wandschutz im Arbeitsbereich [--]\n\nNein -> Check\nNicht sicher-> nicht sicher"
+                    }
+                  ]
+                },
+                {
+                  "id": "ckli2",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "poeae",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "tewks",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Vertragsdatum"
+                        },
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "wejo0k",
+                          "7np1",
+                          "m2jo",
+                          "4obam",
+                          "oqyrs"
+                        ]
+                      },
+                      "block": [
                         {
-                          "id": "poeae",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "i1rvg",
-                            "type": "LogicalOperation",
-                            "operator": "and",
-                            "negated": false,
-                            "conditions": [
-                              {
-                                "id": "tewks",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Vertragsdatum"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "ve0tek"
-                                ]
-                              },
-                              {
-                                "id": "tewks",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lte",
-                                "comparands": [
+                          "type": "Group",
+                          "id": "q2ng4k",
+                          "category": "Section",
+                          "alias": "Fußboden",
+                          "block": [
+                            {
+                              "id": "vgdl4",
+                              "type": "Question",
+                              "alias": "Küche hat hochwertigen Fußboden",
+                              "text": "Ist in der Küche von der Vermieterin ein hochwertiger Fußboden verlegt worden?",
+                              "info": "Hierzu zählen z.B. hochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraumlaminat, Parkett oder Terrazzo. Gilt nur, wenn diese auch in einem guten Zustand sind.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
                                   {
-                                    "type": "NumberLiteral",
-                                    "value": 2009
+                                    "id": "tcod4",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "43bd3",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "36h0m",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
                                   }
                                 ]
-                              }
-                            ]
-                          },
-                          "block": []
+                              },
+                              "required": false,
+                              "note": "Merkmal 2015-2023:\nHochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraum- laminat, Parkett, Terrazzo als Bodenbelag jeweils in gutem Zustand [++]\n\nMerkmal >=2024: \nHochwertige Fliesen, hochwertiges Linoleum, hoch-\nwertiges Feuchtraumlaminat, Parkett, Terrazzo als Bodenbelag jeweils in gutem Zustand (gilt für Baualtersklassen bis einschließlich 2009) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ]
                         }
-                      ],
-                      "alternate": [
+                      ]
+                    }
+                  ],
+                  "alternate": [
+                    {
+                      "type": "If",
+                      "id": "zerqeg",
+                      "alternate": [],
+                      "cases": [
                         {
-                          "id": "h1y5ug",
-                          "type": "Question",
-                          "alias": "Küche hat hochwertigen Fußboden",
-                          "text": "Ist in der Küche von der Vermieterin ein hochwertiger Fußboden verlegt worden?",
-                          "info": "Hierzu zählen z.B. hochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraumlaminat, Parkett oder Terrazzo. Gilt nur, wenn diese auch in einem guten Zustand sind.",
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
+                          "type": "IfCase",
+                          "id": "lhvtf",
+                          "test": {
+                            "id": "4sh92",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Baujahr"
+                            },
+                            "operator": "lte",
+                            "negated": false,
+                            "type": "AnswerNumberComparison",
+                            "comparands": [
                               {
-                                "id": "tcod4",
-                                "alias": "Ja",
-                                "text": "Ja"
-                              },
-                              {
-                                "id": "43bd3",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              },
-                              {
-                                "id": "36h0m",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
+                                "type": "NumberLiteral",
+                                "value": 2009
                               }
                             ]
                           },
-                          "required": false,
-                          "note": "Merkmal:\nHochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraum- laminat, Parkett, Terrazzo als Bodenbelag jeweils in gutem Zustand [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                          "block": [
+                            {
+                              "id": "9786g",
+                              "type": "Group",
+                              "category": "Section",
+                              "alias": "Fußboden",
+                              "block": [
+                                {
+                                  "id": "q1w2wg",
+                                  "type": "Question",
+                                  "alias": "Küche hat hochwertigen Fußboden",
+                                  "text": "Ist in der Küche von der Vermieterin ein hochwertiger Fußboden verlegt worden?",
+                                  "info": "Hierzu zählen z.B. hochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraumlaminat, Parkett oder Terrazzo. Gilt nur, wenn diese auch in einem guten Zustand sind.",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "tcod4",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "43bd3",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "36h0m",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "required": false,
+                                  "note": "Merkmal 2015-2023:\nHochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraum- laminat, Parkett, Terrazzo als Bodenbelag jeweils in gutem Zustand [++]\n\nMerkmal >=2024: \nHochwertige Fliesen, hochwertiges Linoleum, hoch-\nwertiges Feuchtraumlaminat, Parkett, Terrazzo als Bodenbelag jeweils in gutem Zustand (gilt für Baualtersklassen bis einschließlich 2009) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -8505,39 +8626,69 @@
                   ]
                 },
                 {
-                  "id": "h4hrn",
-                  "type": "Group",
-                  "category": null,
-                  "alias": "Barrierearm",
-                  "block": [
+                  "type": "If",
+                  "id": "g3886",
+                  "cases": [
                     {
-                      "id": "ft3tfh",
-                      "type": "Question",
-                      "alias": "Schwellenarmer Zugang zur Wohnung",
-                      "text": "Ist der Zugang zur Wohnung Schwellenarm möglich?",
-                      "info": "Beachte: Dies ist der Fall wenn der Zutritt zum Gebäude maximal eine Stufe hat und der Zugang zur Wohnung danach über maximal eine weitere Stufe möglich ist. Es kommt nicht darauf an, dass du auf den schwellenarmen Zugang angewiesen bist.",
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "msxpi",
-                            "alias": "Ja",
-                            "text": "Ja"
-                          },
-                          {
-                            "id": "w5whii",
-                            "alias": "Nein",
-                            "text": "Nein"
-                          },
-                          {
-                            "id": "pbcku",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
-                          }
+                      "type": "IfCase",
+                      "id": "3q7ky",
+                      "block": [],
+                      "test": {
+                        "id": "uzqd2",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Vertragsdatum"
+                        },
+                        "operator": "is",
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "comparands": [
+                          "wejo0k",
+                          "7np1",
+                          "m2jo",
+                          "4obam",
+                          "oqyrs"
                         ]
-                      },
-                      "required": false,
-                      "note": "Merkmal 2024:\nSchwellenarmer Zugang zum Gebäude (max. eine Stufe)\nund zur Wohnung einschließlich Treppenhaus (max. eine\nStufe) [++]"
+                      }
+                    }
+                  ],
+                  "alternate": [
+                    {
+                      "id": "h4hrn",
+                      "type": "Group",
+                      "category": "Section",
+                      "alias": "Barrierefreiheit",
+                      "block": [
+                        {
+                          "id": "ft3tfh",
+                          "type": "Question",
+                          "alias": "Gebäude hat schwellenarmen Zugang",
+                          "text": "Ist ein schwellenarmer Zugang zum Gebäude (max. 1 Stufe) und der Wohnung (max. 1 Stufe) möglich?",
+                          "info": "Beachte: Es kommt nicht darauf an, dass du auf den schwellenarmen Zugang angewiesen bist.",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "msxpi",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "w5whii",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "pbcku",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
+                          },
+                          "required": false,
+                          "note": "Merkmal >=2024:\nSchwellenarmer Zugang zum Gebäude (max. eine Stufe)\nund zur Wohnung einschließlich Treppenhaus (max. eine\nStufe) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ]
                     }
                   ]
                 },

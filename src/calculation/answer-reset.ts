@@ -49,6 +49,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Küche hat Kühlschrank": "Nein",
   "Küche hat Dunstabzug": "Nein",
   "Küche hat hochwertigen Fußboden": "Nein",
+  "Küche hat Kücheninsel": "Nein",
 
   // Küche-
   "Küche hat Kochmöglichkeit": "Ja",
@@ -58,6 +59,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Küche hat Heizung": "Ja",
   "Küche hat Lüftung": "Ja",
   "Küche kann Spülmaschine": "Ja",
+  "Küche ist gefliest": "Ja",
 
   // Wohnung+
   "Wohnung hat großen Wohnraum": "Nein",
@@ -97,6 +99,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Gebäude hat Parkplatz": "Nein",
   "Gebäude hat gute Wärmedämmung": "Nein",
   "Gebäude hat moderne Heizanlage": "Nein",
+  "Gebäude hat schwellenarmen Zugang": "Nein",
   Energieverbrauchskennwert: "0",
   Energiebedarfskennwert: "0",
 

@@ -139,6 +139,9 @@ export const answersToMerkmalStateMapping = {
   "[Küche-] Küche ohne Geschirrspüler Anschluss": {
     checked_if: { "Küche kann Spülmaschine": "Nein" },
   },
+  "[Küche-] Küche ist nicht ausreichend gefliest": {
+    checked_if: { "Küche ist gefliest": "Nein" },
+  },
   "[Küche+] Küche hat hochwertigen Bodenbelag": {
     checked_if: { "Küche hat hochwertigen Fußboden": "Ja" },
   },
@@ -155,13 +158,18 @@ export const answersToMerkmalStateMapping = {
     checked_if: { "Küche hat Einbauküche": "Ja" },
   },
   "[Küche+] Küche hat Ceran-/Induktionsherd": {
-    checked_if: { "Küche hat Ceran-/Induktionsherd": "Ja" },
+    checked_if: {
+      "Küche hat Ceran-/Induktionsherd": "Ja",
+    },
   },
   "[Küche+] Küche hat Dunstabzugshaube": {
     checked_if: { "Küche hat Dunstabzug": "Ja" },
   },
   "[Küche+] Küche hat Kühlschrank": {
     checked_if: { "Küche hat Kühlschrank": "Ja" },
+  },
+  "[Küche+] Küche hat freistehenden Küchenblock": {
+    checked_if: { "Küche hat Kücheninsel": "Ja" },
   },
 
   // Wohnung
@@ -225,7 +233,7 @@ export const answersToMerkmalStateMapping = {
       "Wohnung hat Schallschutzfenster": "Ja",
     },
   },
-  "[Wohnung+] Wohnugn hat Rollläden": {
+  "[Wohnung+] Wohnung hat Rollläden": {
     checked_if: { "Wohnung hat Rollläden": "Ja" },
   },
   "[Wohnung+] Wohnugn ist barrierearm": {
@@ -284,7 +292,7 @@ export const answersToMerkmalStateMapping = {
     checked_if: {
       logic: "and",
       conditions: [
-        { "Gebäude hat Fahrstuhl": "Ja" },
+        { "Gebäude hat Fahrstuhl": "Nein" },
         { "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja" },
       ],
     },
@@ -405,6 +413,11 @@ export const answersToMerkmalStateMapping = {
         { "Gebäude hat gute Wärmedämmung": "Ja" },
         { "Gebäude hat moderne Heizanlage": "Ja" },
       ],
+    },
+  },
+  "[Gebäude+] Gebäude und Wohnung hat schwellenarmen Zugang": {
+    checked_if: {
+      "Gebäude hat schwellenarmen Zugang": "Ja",
     },
   },
   "[Gebäude+] Energieverbrauchskennwert kleiner als 120": {

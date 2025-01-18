@@ -1,4 +1,4 @@
-import { getWorstBestAusstattungsAbzug } from "~/calculation/preisspanne";
+import { getWorstBestAusstattungsAbzug } from "~/calculation/ausstattungsAbzug";
 import { IconButton, Tab, TabList, TabPanel, Tabs } from "~/components/ui";
 import { CloseIcon } from "~/components/ui/Icons/Close";
 import { getMietspiegeljahr } from "~/form/api";
