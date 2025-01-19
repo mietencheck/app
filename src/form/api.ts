@@ -7,7 +7,10 @@ import { parseAdresse } from "~/utils";
 import { baujahrSpannenByMietspiegeljahr } from "../mietspiegel/baujahrSpannen";
 import { preisspannenByMietspiegeljahr } from "../mietspiegel/preisspannen";
 import { Mietspiegeljahr } from "../mietspiegel/types";
-import { answersToMerkmalStateMapping } from "./mappings/merkmale";
+import {
+  AnswerMerkmalStateMapping,
+  answersToMerkmalStateMapping,
+} from "./mappings/merkmale";
 import { answersToSondermerkmalStateMapping } from "./mappings/sondermerkmale";
 import { vertragsdatumToMietspiegelJahrMapping } from "./mappings/vertragsdatum";
 import { mapAnswerToMerkmalState } from "./utils/mapAnswerToMerkmalState";
@@ -199,16 +202,21 @@ export const getMerkmalStates = (
     return fromEntries(
       entries(answersToMerkmalStateMapping)
         .filter(([merkmal]) => merkmale.has(merkmal))
-        .map(([key, answerMerkmalMapping]: [string, any]) => {
-          return [
-            key,
-            mapAnswerToMerkmalState(
-              answerMerkmalMapping,
-              answers,
-              visibleQuestionAliases,
-            ),
-          ];
-        }),
+        .map(
+          ([key, answerMerkmalMapping]: [
+            string,
+            AnswerMerkmalStateMapping,
+          ]) => {
+            return [
+              key,
+              mapAnswerToMerkmalState(
+                answerMerkmalMapping,
+                answers,
+                visibleQuestionAliases,
+              ),
+            ];
+          },
+        ),
     );
   }
   return {};

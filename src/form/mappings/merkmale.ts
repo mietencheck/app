@@ -10,10 +10,12 @@ export type ConditionGroup = {
   conditions: Condition[];
 };
 
+export type AnswerMerkmalStateMappings = {
+  [key in Merkmal]: AnswerMerkmalStateMapping;
+};
+
 export type AnswerMerkmalStateMapping = {
-  [key in Merkmal]: {
-    checked_if: ConditionGroup | Condition;
-  };
+  checked_if: ConditionGroup | Condition;
 };
 
 export const answersToMerkmalStateMapping = {
@@ -501,4 +503,4 @@ export const answersToMerkmalStateMapping = {
   "[Umfeld+] Vom Vermieter zur Verfügung gestellter Parkplatz": {
     checked_if: { "Wohnumfeld hat Parkplatz": "Ja" },
   },
-} satisfies AnswerMerkmalStateMapping;
+} satisfies AnswerMerkmalStateMappings;

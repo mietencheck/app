@@ -1,7 +1,19 @@
 import { baujahrSpannenByMietspiegeljahr } from "./baujahrSpannen";
+import merkmale2015 from "./merkmale/2015.json";
+import merkmale2017 from "./merkmale/2017.json";
+import merkmale2019 from "./merkmale/2019.json";
+import merkmale2021 from "./merkmale/2021.json";
+import merkmale2023 from "./merkmale/2023.json";
+import merkmale2024 from "./merkmale/2024.json";
 import { sondermerkmale } from "./sondermerkmale";
 
-export type Merkmal = string;
+export type Merkmal =
+  | keyof typeof merkmale2015
+  | keyof typeof merkmale2017
+  | keyof typeof merkmale2019
+  | keyof typeof merkmale2021
+  | keyof typeof merkmale2023
+  | keyof typeof merkmale2024;
 export type MerkmalGruppe = "Bad" | "Küche" | "Wohnung" | "Gebäude" | "Umfeld";
 export type MerkmalTyp = "Wohnwerterhoehend" | "Wohnwertmindernd";
 

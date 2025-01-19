@@ -42,7 +42,8 @@ export const mapMerkmalStateToMerkmalGruppen = (merkmale: MerkmalStateList) => {
           : ("Wohnwertmindernd" as MerkmalTyp);
       const merkmal = key.replace(match[0], "").trim() as Merkmal;
 
-      merkmalGruppen[merkmalGruppe][merkmalTyp][merkmal] = merkmale[key];
+      merkmalGruppen[merkmalGruppe][merkmalTyp][merkmal] =
+        merkmale[key as Merkmal];
     }
   }
   return merkmalGruppen;
