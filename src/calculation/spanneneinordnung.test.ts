@@ -3,7 +3,7 @@ import { expect, test } from "vitest";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import { MerkmalGruppe } from "~/mietspiegel/types";
 
-import { MERKMAL_RESET_ANSWERS } from "./answer-reset";
+import { MERKMAL_RESET_ANSWERS } from "../form/mappings/answer-reset";
 import {
   getWorstBestMerkmalStateByMerkmalGruppe,
   getWorstBestMerkmalStateByMerkmalGrupppeInPercent,

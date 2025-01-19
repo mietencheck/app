@@ -2370,6 +2370,7 @@
             {
               "id": "wb48s",
               "type": "If",
+              "alternate": [],
               "cases": [
                 {
                   "id": "2mtvk",
@@ -2427,14 +2428,45 @@
                             {
                               "id": "qmgjz",
                               "type": "If",
+                              "alternate": [],
                               "cases": [
                                 {
                                   "id": "bcted",
                                   "type": "IfCase",
+                                  "block": [
+                                    {
+                                      "id": "beiwa",
+                                      "type": "Question",
+                                      "alias": "Sondermerkmal Badezimmer Klein",
+                                      "text": "Gibt es ein Badezimmer, das größer als 4 qm ist?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false
+                                    }
+                                  ],
                                   "test": {
                                     "id": "t4ral",
                                     "type": "LogicalOperation",
-                                    "operator": "or",
+                                    "operator": "and",
                                     "negated": false,
                                     "conditions": [
                                       {
@@ -2470,40 +2502,9 @@
                                         ]
                                       }
                                     ]
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "beiwa",
-                                      "type": "Question",
-                                      "alias": "Sondermerkmal Badezimmer Klein",
-                                      "text": "Gibt es ein Badezimmer, das größer als 4 qm ist?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "uiajj",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "qzhja",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "8i22j",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
-                                        ]
-                                      },
-                                      "required": false
-                                    }
-                                  ]
+                                  }
                                 }
-                              ],
-                              "alternate": []
+                              ]
                             },
                             {
                               "id": "4suun",
@@ -3190,8 +3191,7 @@
                     }
                   ]
                 }
-              ],
-              "alternate": []
+              ]
             },
             {
               "id": "kp858",

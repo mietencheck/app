@@ -5,7 +5,7 @@ import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import {
   MERKMAL_RESET_ANSWERS,
   SONDERMERKMAL_RESET_ANSWERS,
-} from "./answer-reset";
+} from "../form/mappings/answer-reset";
 import { getWorstBestOrtsueblicheVergleichsmiete } from "./ortsueblicheVergleichsmiete";
 
 test.each([

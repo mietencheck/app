@@ -5,7 +5,7 @@ import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import {
   MERKMAL_RESET_ANSWERS,
   SONDERMERKMAL_RESET_ANSWERS,
-} from "./answer-reset";
+} from "../form/mappings/answer-reset";
 import { getWorstBestZulaessigeHoechstmiete } from "./zulaessigeHoechstmiete";
 
 test.each([
@@ -184,6 +184,84 @@ test.each([
       result: {
         worst: 890.01,
         best: 890.01,
+      },
+    },
+    {
+      answers: {
+        Vertragsdatum: ">2024",
+        Baujahr: 1984,
+        Ost: false,
+        Wohnlage: "mittel",
+        Qm: 140,
+        "Duschen nur in freistehender Badewanne": "Ja",
+        "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad":
+          "Ja",
+        "Bad hat wandhängendes WC": "Ja",
+        "Küche kann Spülmaschine": "Nein",
+        "Küche hat Kücheninsel": "Ja",
+        "Wohnung hat Durchgangszimmer": "Ja",
+        "Wohnung hat Schallschutzfenster": "Ja",
+        "Wohnung hat verstärkte Tür": "Ja",
+        "Gebäude hat Fahrstuhl": "Ja",
+        "Gebäude hat <5 Stockwerke und Fahrstuhl": "Ja",
+        "Wohnumfeld ist stark vernachlässigt": "Ja",
+        "Wohnumfeld hat Parkplatz": "Ja",
+      },
+      result: {
+        worst: 1347.5,
+        best: 1347.5,
+      },
+    },
+    {
+      answers: {
+        Vertragsdatum: ">2024",
+        Baujahr: 1985,
+        Ost: true,
+        Wohnlage: "gut",
+        Qm: 20,
+        "Bad hat Duschmöglichkeit": "Nein",
+        "Küche hat Lüftung": "Nein",
+        "Wohnung kann Waschmaschiene": "Nein",
+        "Kennt Energieverbrauch oder Energiebedarf": "Energieverbrauchswert",
+        Energieverbrauchskennwert: "--",
+        "Gebäude ist in gutem Zustand": "Ja",
+        "Wohnumfeld hat Fahrradabstellmöglichkeiten": "Nein",
+      },
+      result: {
+        worst: 134.42,
+        best: 134.42,
+      },
+    },
+    {
+      answers: {
+        Vertragsdatum: "2015-2016",
+        Baujahr: 1914,
+        Ost: false,
+        Wohnlage: "gut",
+        Qm: 140,
+        "Sondermerkmal Dusche Und Badewanne": "Ja",
+        "Sondermerkmal Modernes Bad": "Ja",
+        "Sondermerkmal Moderne Küche": "Ja",
+        "Sondermerkmal Schallschutzfenster": "Ja",
+        "Sondermerkmal Aufzug": "Ja",
+        "Sondermerkmal Bodenbelag": "Ja",
+        "WC ohne Lüftung": "Ja",
+        "Bad großes Waschbecken": "Ja",
+        "Getrenntes WC": "Ja",
+        "Küche hat hochwertigen Fußboden": "Ja",
+        "Wohnung hat Raum mit <2 Steckdosen": "Ja",
+        "Wohnung hat nicht sichtbare Elektroinstallation": "Nein",
+        "Wohnung hat Abstellraum": "Ja",
+        "Wohnung hat großen Balkon": "Ja",
+        "Wohnung hat Fußbodenheizung": "Ja",
+        "Gebäude hat Fahrradstellplätze mit Anschließmöglichkeit": "Ja",
+        "Wohnumfeld ist repräsentativ": "Ja",
+        "Wohnumfeld ist besonders laut": "Ja",
+        "Wohnumfeld ist aufwendig gestaltet": "Ja",
+      },
+      result: {
+        worst: 1540,
+        best: 1540,
       },
     },
   ].map(({ answers, result }) => {

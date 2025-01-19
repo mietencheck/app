@@ -3,7 +3,7 @@ import { expect, test } from "vitest";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import { Sondermerkmal } from "~/mietspiegel/types";
 
-import { SONDERMERKMAL_RESET_ANSWERS } from "./answer-reset";
+import { SONDERMERKMAL_RESET_ANSWERS } from "../form/mappings/answer-reset";
 import { getWorstBestSondermerkmalAufschlagBySondermerkmal } from "./sondermerkmale";
 
 test.each([

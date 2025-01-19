@@ -4,6 +4,11 @@ import merkmale2019 from "~/mietspiegel/merkmale/2019.json";
 import merkmale2021 from "~/mietspiegel/merkmale/2021.json";
 import merkmale2023 from "~/mietspiegel/merkmale/2023.json";
 import merkmale2024 from "~/mietspiegel/merkmale/2024.json";
+import { sondermerkmale } from "~/mietspiegel/sondermerkmale";
+
+export const SONDERMERKMAL_DEFAULT_STATE = Object.fromEntries(
+  Object.keys(sondermerkmale).map((key) => [key, "unchecked"]),
+);
 
 export const MERKMAL_DEFAULT_STATE = {
   "2015-2016": Object.fromEntries(

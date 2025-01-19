@@ -1,11 +1,11 @@
 import { expect, test } from "vitest";
 
+import { getMerkmalStates } from "~/form/api";
+import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import {
   MERKMAL_RESET_ANSWERS,
   SONDERMERKMAL_RESET_ANSWERS,
-} from "~/calculation/answer-reset";
-import { getMerkmalStates } from "~/form/api";
-import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
+} from "~/form/mappings/answer-reset";
 
 import {
   ALL_VERTRAGSDATUM,
