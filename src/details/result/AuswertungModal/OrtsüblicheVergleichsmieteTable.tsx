@@ -102,7 +102,7 @@ export function OrtsüblicheVergleichsmieteTable() {
     {
       name: l("Merkmalsgruppen (pro m²)"),
       worst: l("pro-qm", {
-        VALUE: `${formatEuro(merkmalsgruppenInEuro.worst)} ${merkmalsgruppenValueIsLimited && "*"}`,
+        VALUE: `${formatEuro(merkmalsgruppenInEuro.worst)} ${merkmalsgruppenValueIsLimited ? "*" : ""}`,
       }),
       best: l("pro-qm", {
         VALUE: formatEuro(merkmalsgruppenInEuro.best),
