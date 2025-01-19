@@ -138,6 +138,8 @@ test.each([
             "Gebäude hat zusätzliche nutzbare Räume": "unchecked",
             "Gebäude hat Auto Stellplatz": "unchecked",
             "Gebäude hat hochwertigen Eingangsbereich": "unchecked",
+            "Gebäude ist in überdurchschnittlich gutem Instandhaltungszustand":
+              "unchecked",
             "Gebäude hat zusätzliche Einbruchsicherung": "unchecked",
             "Gebäude hat Gegensprechanlage mit Video": "unchecked",
             "Gebäude hat Aufzug bei weniger als fünf Geschossen": "unchecked",
@@ -250,6 +252,8 @@ test.each([
             "Gebäude hat Fahrradabstellraum/Fahrradstellplätze": "unchecked",
             "Gebäude hat zusätzliche nutzbare Räume": "unchecked",
             "Gebäude hat hochwertigen Eingangsbereich": "unchecked",
+            "Gebäude ist in überdurchschnittlich gutem Instandhaltungszustand":
+              "unchecked",
             "Gebäude hat Gegensprechanlage mit Video": "unchecked",
             "Gebäude hat Aufzug bei weniger als fünf Geschossen": "unchecked",
             "Gebäude hat zusätzliche Wärmedämmung": "unchecked",
@@ -376,6 +380,8 @@ test.each([
             "Gebäude hat Fahrradabstellraum/Fahrradstellplätze": "unchecked",
             "Gebäude hat zusätzliche nutzbare Räume": "unchecked",
             "Gebäude hat hochwertigen Eingangsbereich": "unchecked",
+            "Gebäude ist in überdurchschnittlich gutem Instandhaltungszustand":
+              "unchecked",
             "Gebäude hat Gegensprechanlage mit Video": "unchecked",
             "Gebäude hat Aufzug bei weniger als fünf Geschossen": "unchecked",
             "Gebäude hat zusätzliche Wärmedämmung": "unchecked",

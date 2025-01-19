@@ -11833,6 +11833,7 @@ export type StepInfoByAlias = {
             "Gebäude hat Treppenhaus in gutem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schwellenarmen Zugang"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist in schlechtem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude ist in gutem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     Fahrstuhl: {

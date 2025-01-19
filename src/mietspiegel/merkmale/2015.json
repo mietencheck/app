@@ -67,6 +67,7 @@
   "[Gebäude+] Gebäude hat zusätzliche nutzbare Räume": "Zusätzliche und in angemessenem Umfang nutzbare Räume außerhalb der Wohnung in fußläufiger Entfernung (z.B. Partyraum)",
   "[Gebäude+] Gebäude hat Auto Stellplatz": "Zur Wohnung gehörige(r) Garage/Stellplatz (ohne zusätzliches Entgelt)",
   "[Gebäude+] Gebäude hat hochwertigen Eingangsbereich": "Repräsentativer/s oder hochwertig sanierter/s Eingangsbereich/Treppenhaus (z.B. Spiegel, Marmor, exklusive Beleuchtung, hochwertiger Anstrich / Wandbelag, Läufer im gesamten Flur- und Treppenbereich)",
+  "[Gebäude+] Gebäude ist in überdurchschnittlich gutem Instandhaltungszustand": "Überdurchschnittlich guter Instandhaltungszustand des Gebäude(-teil)s, indem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach)",
   "[Gebäude+] Gebäude hat zusätzliche Einbruchsicherung": "Einbruchhemmende Wohnungs- und Haustür (zusätzliche moderne Einbruchsicherungsmaßnahmen)",
   "[Gebäude+] Gebäude hat Gegensprechanlage mit Video": "Gegen-/Wechselsprechanlage mit Videokontakt und elektrischem Türöffner",
   "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen": "Nur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen",

@@ -18,53 +18,45 @@ test.each([
       answers: {
         Vertragsdatum: vertragsdatum,
         Baujahr: 1918,
-        "Küche hat Ceran-/Induktionsherd": "Ja",
+        "Gebäude ist in gutem Zustand": "Ja",
       },
       expected: {
-        "[Küche+] Küche hat Ceran-/Induktionsherd": "checked",
+        "[Gebäude+] Gebäude ist in überdurchschnittlich gutem Instandhaltungszustand":
+          "checked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         Baujahr: 1918,
-        "Küche hat Ceran-/Induktionsherd": "Nicht sicher",
+        "Gebäude ist in gutem Zustand": "Nicht sicher",
       },
       expected: {
-        "[Küche+] Küche hat Ceran-/Induktionsherd": "maybe",
+        "[Gebäude+] Gebäude ist in überdurchschnittlich gutem Instandhaltungszustand":
+          "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
         Baujahr: 1918,
-        "Küche hat Ceran-/Induktionsherd": "Nein",
+        "Gebäude ist in gutem Zustand": "Nein",
       },
       expected: {
-        "[Küche+] Küche hat Ceran-/Induktionsherd": "unchecked",
+        "[Gebäude+] Gebäude ist in überdurchschnittlich gutem Instandhaltungszustand":
+          "unchecked",
       },
     })),
-    //  Check if answer is ignored if 'Sondermerkmal Moderne Küche' is 'Ja'
-    {
-      answers: {
-        Vertragsdatum: "2015-2016",
-        Baujahr: 1918,
-        "Sondermerkmal Moderne Küche": "Ja",
-        "Küche hat Ceran-/Induktionsherd": "Ja",
-      },
-      expected: {
-        "[Küche+] Küche hat Ceran-/Induktionsherd": "unchecked",
-      },
-    },
-    // Check if answer is ignored if Baujahr is > 2001
+    // Check if answer is ignored if Baujahr is > 2015
     {
       answers: {
         Vertragsdatum: ">2024",
-        Baujahr: 2002,
-        "Küche hat Ceran-/Induktionsherd": "Ja",
+        Baujahr: 2016,
+        "Gebäude ist in gutem Zustand": "Ja",
       },
       expected: {
-        "[Küche+] Küche hat Ceran-/Induktionsherd": "unchecked",
+        "[Gebäude+] Gebäude ist in überdurchschnittlich gutem Instandhaltungszustand":
+          "unchecked",
       },
     },
   ].map(({ answers, expected }) => {
@@ -86,6 +78,10 @@ test.each([
     };
   }),
 ])("getMerkmalStates(%o)", ({ answers, expected }) => {
+  console.log(
+    "getVisibleQuestionAliases(answers)",
+    getVisibleQuestionAliases(answers),
+  );
   expect(getMerkmalStates(answers, getVisibleQuestionAliases(answers))).toEqual(
     expected,
   );

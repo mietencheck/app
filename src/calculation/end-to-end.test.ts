@@ -200,10 +200,6 @@ test.each([
     };
   }),
 ])("getWorstBestZulaessigeHoechstmiete(%o)", ({ answers, result }) => {
-  console.log(
-    "getVisibleQuestionAliases(answers)",
-    getVisibleQuestionAliases(answers),
-  );
   expect(
     getWorstBestZulaessigeHoechstmiete(
       answers,

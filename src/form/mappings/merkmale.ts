@@ -372,7 +372,7 @@ export const answersToMerkmalStateMapping = {
       "Gebäude hat Treppenhaus in gutem Zustand": "Ja",
     },
   },
-  "[Gebäude+] Gebäude ist in überdurchschnittlich guten Instandhaltungszustand":
+  "[Gebäude+] Gebäude ist in überdurchschnittlich gutem Instandhaltungszustand":
     {
       checked_if: {
         "Gebäude ist in gutem Zustand": "Ja",

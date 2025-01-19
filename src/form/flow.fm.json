@@ -8730,6 +8730,7 @@
                     {
                       "id": "l28ub",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "4mchoi",
@@ -8750,88 +8751,126 @@
                           },
                           "block": [
                             {
-                              "id": "yrxyz",
                               "type": "If",
-                              "cases": [
+                              "id": "5sykm",
+                              "alternate": [
                                 {
-                                  "id": "dxj8d",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "91gxq",
-                                    "type": "LogicalOperation",
-                                    "operator": "and",
-                                    "negated": false,
-                                    "conditions": [
-                                      {
-                                        "id": "vyojh",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Vertragsdatum"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerOptionComparison",
-                                        "operator": "is",
-                                        "comparands": [
-                                          "ve0tek"
-                                        ]
-                                      },
-                                      {
-                                        "id": "vyojh",
+                                  "type": "If",
+                                  "id": "ciipi",
+                                  "alternate": [],
+                                  "cases": [
+                                    {
+                                      "type": "IfCase",
+                                      "id": "i9bwul",
+                                      "test": {
+                                        "id": "5846m",
                                         "questionRef": {
                                           "type": "AliasRef",
                                           "value": "Baujahr"
                                         },
+                                        "operator": "lte",
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
-                                        "operator": "lte",
                                         "comparands": [
                                           {
                                             "type": "NumberLiteral",
                                             "value": 2015
                                           }
                                         ]
-                                      }
-                                    ]
-                                  },
-                                  "block": []
+                                      },
+                                      "block": [
+                                        {
+                                          "id": "eiemr",
+                                          "type": "Question",
+                                          "alias": "Gebäude ist in gutem Zustand",
+                                          "text": "Ist das Gebäude, in dem sich die Wohnung befindet, in einem sehr guten Zustand?",
+                                          "info": "Insgesamt sollte der Eindruck eines frisch renovierten Hauses entstehen. Das ist dann anzunehmen, wenn sowohl Fassade als auch Dach den Eindruck machen frisch renoviert zu sein.",
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal 2015-2023:\nÜberdurchschnittlich guter Instandhaltungszustand des Gebäude(-teil)s, indem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach) [++]\n\nMerkmal >=2024:\nÜberdurchschnittlich guter Instandhaltungszustand des\nGebäude (-teil-)s, in dem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach); gilt für die Baualtersklassen bis einschließlich 2015\n\nJa -> Check\nNicht sicher -> Nicht sicher \n"
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ],
-                              "alternate": [
+                              "cases": [
                                 {
-                                  "id": "wdsgk",
-                                  "type": "Question",
-                                  "alias": "Gebäude ist in gutem Zustand",
-                                  "text": "Ist das Gebäude, in dem sich die Wohnung befindet, in einem sehr guten Zustand?",
-                                  "info": "Insgesamt sollte der Eindruck eines frisch renovierten Hauses entstehen. Das ist dann anzunehmen, wenn sowohl Fassade als auch Dach den Eindruck machen frisch renoviert zu sein.",
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "uiajj",
-                                        "alias": "Ja",
-                                        "text": "Ja"
-                                      },
-                                      {
-                                        "id": "qzhja",
-                                        "alias": "Nein",
-                                        "text": "Nein"
-                                      },
-                                      {
-                                        "id": "8i22j",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
-                                      }
+                                  "type": "IfCase",
+                                  "id": "az5yz",
+                                  "test": {
+                                    "id": "ye0fw",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "operator": "is",
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "comparands": [
+                                      "wejo0k",
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
                                     ]
                                   },
-                                  "required": false,
-                                  "note": "Merkmal:\nÜberdurchschnittlich guter Instandhaltungszustand des Gebäude(-teil)s, indem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher \n"
+                                  "block": [
+                                    {
+                                      "id": "s6877i",
+                                      "type": "Question",
+                                      "alias": "Gebäude ist in gutem Zustand",
+                                      "text": "Ist das Gebäude, in dem sich die Wohnung befindet, in einem sehr guten Zustand?",
+                                      "info": "Insgesamt sollte der Eindruck eines frisch renovierten Hauses entstehen. Das ist dann anzunehmen, wenn sowohl Fassade als auch Dach den Eindruck machen frisch renoviert zu sein.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015-2023:\nÜberdurchschnittlich guter Instandhaltungszustand des Gebäude(-teil)s, indem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach) [++]\n\nMerkmal >=2024:\nÜberdurchschnittlich guter Instandhaltungszustand des\nGebäude (-teil-)s, in dem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach); gilt für die Baualtersklassen bis einschließlich 2015\n\nJa -> Check\nNicht sicher -> Nicht sicher \n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
                           ]
                         }
-                      ],
-                      "alternate": []
+                      ]
                     }
                   ]
                 },
