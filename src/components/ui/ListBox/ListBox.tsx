@@ -1,10 +1,11 @@
 import cx from "classnames";
-import { useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import {
   ListBoxItem as AriaItem,
   ListBoxItemProps as AriaItemProps,
   ListBox as AriaListBox,
   ListBoxProps as AriaListBoxProps,
+  ListBoxItemRenderProps,
 } from "react-aria-components";
 
 import { CheckIcon } from "../Icons/Check";
@@ -38,12 +39,17 @@ export const LISTBOX_ITEM_CLASS_NAME = cx(
   "group flex gap-1.5",
   "hover:bg-primary-solid hover:text-on-primary active:bg-primary-solid active:text-on-primary focus-visible:outline-none focus-visible:bg-primary-solid focus-visible:text-on-primary",
 );
-export function ListBoxItem({ children, ...props }: AriaItemProps) {
+export function ListBoxItem({
+  children,
+  ...props
+}: AriaItemProps & {
+  children: ReactNode | ((props: ListBoxItemRenderProps) => ReactNode);
+}) {
   return (
     <AriaItem className={LISTBOX_ITEM_CLASS_NAME} {...props}>
-      {({ isSelected }) => (
+      {(renderProps) => (
         <>
-          {isSelected ? (
+          {renderProps.isSelected ? (
             <CheckIcon
               aria-hidden="true"
               className="text-neutral-faded group-hover:text-on-primary group-active:text-on-primary group-focus-visible:text-on-primary"
@@ -51,7 +57,7 @@ export function ListBoxItem({ children, ...props }: AriaItemProps) {
           ) : (
             <span className="w-5" />
           )}
-          {children}
+          {typeof children === "function" ? children(renderProps) : children}
         </>
       )}
     </AriaItem>
