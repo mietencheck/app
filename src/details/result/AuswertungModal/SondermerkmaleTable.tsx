@@ -1,8 +1,8 @@
 import React from "react";
 
 import {
-  getWorstBestSondermerkmalAufschlag,
-  getWorstBestSondermerkmalAufschlagBySondermerkmal,
+  getWorstBestSondermerkmalModifier,
+  getWorstBestSondermerkmalModifierBySondermerkmal,
 } from "~/calculation/sondermerkmale";
 import {
   Table,
@@ -27,11 +27,11 @@ export function SondermerkmaleTable() {
   const lString = useLocalizeString();
 
   const aufschlagBySondermerkmal =
-    getWorstBestSondermerkmalAufschlagBySondermerkmal(
+    getWorstBestSondermerkmalModifierBySondermerkmal(
       answers,
       visibleQuestionAliases,
     );
-  const sondermerkmalAufschlag = getWorstBestSondermerkmalAufschlag(
+  const sondermerkmalAufschlag = getWorstBestSondermerkmalModifier(
     answers,
     visibleQuestionAliases,
   );

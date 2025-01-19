@@ -4,14 +4,14 @@ import {
   getSondermerkmalStates,
 } from "~/form/api";
 import { FinalAnswers } from "~/form/flow-machine";
-import { sondermerkmaleAufschlaegeByMietspiegeljahr } from "~/mietspiegel/sondermerkmale";
+import { sondermerkmaleModifierByMietspiegeljahr } from "~/mietspiegel/sondermerkmale";
 import {
   BaujahrSpanneInMietspiegeljahr,
   Mietspiegeljahr,
   Sondermerkmal,
 } from "~/mietspiegel/types";
 
-const calcSondermerkmalAufschlag = (
+const calcSondermerkmalModifier = (
   mietspiegeljahr: Mietspiegeljahr | undefined,
   sondermerkmal: Sondermerkmal,
   baujahrSpanne: BaujahrSpanneInMietspiegeljahr[2015],
@@ -25,14 +25,14 @@ const calcSondermerkmalAufschlag = (
     return 0;
   }
 
-  const abzuege = sondermerkmaleAufschlaegeByMietspiegeljahr["2015"][
+  const modifier = sondermerkmaleModifierByMietspiegeljahr["2015"][
     sondermerkmal
   ] as Record<BaujahrSpanneInMietspiegeljahr[2015], number>;
 
-  return abzuege[baujahrSpanne] ?? 0;
+  return modifier[baujahrSpanne] ?? 0;
 };
 
-export const getWorstBestSondermerkmalAufschlagBySondermerkmal = (
+export const getWorstBestSondermerkmalModifierBySondermerkmal = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ):
@@ -57,15 +57,24 @@ export const getWorstBestSondermerkmalAufschlagBySondermerkmal = (
 
   return Object.entries(sondermerkmalStates).reduce(
     (result, [sondermerkmal, state]) => {
-      const abzug = calcSondermerkmalAufschlag(
+      const modifier = calcSondermerkmalModifier(
         mietspiegeljahr,
         sondermerkmal as Sondermerkmal,
         baujahrSpanne as BaujahrSpanneInMietspiegeljahr[2015],
       );
-      result[sondermerkmal as Sondermerkmal] = {
-        worst: state == "checked" || state == "maybe" ? abzug : 0,
-        best: state == "checked" ? abzug : 0,
-      };
+
+      if (modifier >= 0) {
+        result[sondermerkmal as Sondermerkmal] = {
+          worst: state == "checked" || state == "maybe" ? modifier : 0,
+          best: state == "checked" ? modifier : 0,
+        };
+      } else {
+        result[sondermerkmal as Sondermerkmal] = {
+          worst: state == "checked" ? modifier : 0,
+          best: state == "checked" || state == "maybe" ? modifier : 0,
+        };
+      }
+
       return result;
     },
     {} as {
@@ -77,30 +86,30 @@ export const getWorstBestSondermerkmalAufschlagBySondermerkmal = (
   );
 };
 
-export function getWorstBestSondermerkmalAufschlag(
+export function getWorstBestSondermerkmalModifier(
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): {
   worst: number;
   best: number;
 } {
-  const aufschlagBySondermerkmal =
-    getWorstBestSondermerkmalAufschlagBySondermerkmal(
+  const modifierBySondermerkmal =
+    getWorstBestSondermerkmalModifierBySondermerkmal(
       answers,
       visibleQuestionAliases,
     );
 
-  if (!aufschlagBySondermerkmal) {
+  if (!modifierBySondermerkmal) {
     return {
       worst: 0,
       best: 0,
     };
   }
 
-  return Object.entries(aufschlagBySondermerkmal).reduce(
+  return Object.entries(modifierBySondermerkmal).reduce(
     (result, [_, aufschlag]) => {
-      result.worst = result.worst + aufschlag.worst;
-      result.best = result.best + aufschlag.best;
+      result.worst = Number((result.worst + aufschlag.worst).toFixed(2));
+      result.best = Number((result.best + aufschlag.best).toFixed(2));
       return result;
     },
     { worst: 0, best: 0 },

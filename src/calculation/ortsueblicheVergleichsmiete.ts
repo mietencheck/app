@@ -1,7 +1,7 @@
 import { getWorstBestPreisspanne } from "~/calculation/preisspanne";
 import { FinalAnswers } from "~/form/flow-machine";
 
-import { getWorstBestSondermerkmalAufschlag } from "./sondermerkmale";
+import { getWorstBestSondermerkmalModifier } from "./sondermerkmale";
 import { getWorstBestSpanneneinordnungInPercent } from "./spanneneinordnung";
 
 export const calcMerkmalsgruppenValueInEuro = (
@@ -60,7 +60,7 @@ export function getWorstBestOrtsueblicheVergleichsmiete(
     answers,
     visibleQuestionAliases,
   );
-  const sondermerkmalAufschlag = getWorstBestSondermerkmalAufschlag(
+  const sondermerkmalAufschlag = getWorstBestSondermerkmalModifier(
     answers,
     visibleQuestionAliases,
   );

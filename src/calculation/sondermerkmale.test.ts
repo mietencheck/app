@@ -1,45 +1,94 @@
 import { expect, test } from "vitest";
 
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
-import { Sondermerkmal } from "~/mietspiegel/types";
 
 import { SONDERMERKMAL_RESET_ANSWERS } from "../form/mappings/answer-reset";
-import { getWorstBestSondermerkmalAufschlagBySondermerkmal } from "./sondermerkmale";
+import { getWorstBestSondermerkmalModifier } from "./sondermerkmale";
 
 test.each([
   ...[
     {
       description: "Case where all Sondermerkmale are 'unchecked'",
       answers: {},
-      result: {},
+      result: {
+        worst: 0,
+        best: 0,
+      },
     },
     {
-      description: "Case where Sondermerkmal is 'checked'",
+      description:
+        "Case where Sondermerkmal is 'checked' for a wohnwertsteigerndes Sondermerkmal",
       answers: {
         "Sondermerkmal Bodenbelag": "Ja",
         Baujahr: 1918,
       },
       result: {
-        "[Sondermerkmal] Hochwertiger Bodenbelag": {
-          best: 0.56,
-          worst: 0.56,
-        },
+        best: 0.56,
+        worst: 0.56,
       },
     },
     {
-      description: "Case where Sondermerkmal is 'maybe'",
+      description:
+        "Case where Sondermerkmal is 'maybe' for a wohnwertsteigerndes Sondermerkmal",
       answers: {
         "Sondermerkmal Bodenbelag": "Nicht sicher",
         Baujahr: 1918,
       },
       result: {
-        "[Sondermerkmal] Hochwertiger Bodenbelag": {
-          best: 0,
-          worst: 0.56,
-        },
+        best: 0,
+        worst: 0.56,
       },
     },
-
+    {
+      description:
+        "Case where Sondermerkmal is 'checked' for a wohnwertminderendes Sondermerkmal",
+      answers: {
+        "Sondermerkmal Badezimmer Klein": "Nein",
+        Baujahr: 1991,
+      },
+      result: {
+        best: -0.32,
+        worst: -0.32,
+      },
+    },
+    {
+      description:
+        "Case where Sondermerkmal is 'maybe' for a wohnwertminderendes Sondermerkmal",
+      answers: {
+        "Sondermerkmal Badezimmer Klein": "Nicht sicher",
+        Baujahr: 1991,
+      },
+      result: {
+        best: -0.32,
+        worst: 0,
+      },
+    },
+    {
+      description:
+        "Case where Sondermerkmal is 'checked' for a wohnwertminderendes and a wohnwertsteigerndes Sondermerkmal",
+      answers: {
+        "Sondermerkmal Bodenbelag": "Ja",
+        "Sondermerkmal Badezimmer Klein": "Nein",
+        Baujahr: 1991,
+      },
+      result: {
+        best: 0.47,
+        worst: 0.47,
+      },
+    },
+    {
+      description:
+        "Case where Sondermerkmal is 'maybe' for a wohnwertminderendes and a wohnwertsteigerndes Sondermerkmal",
+      answers: {
+        "Sondermerkmal Bodenbelag": "Nicht sicher",
+        "Sondermerkmal Badezimmer Klein": "Nicht sicher",
+        Baujahr: 1991,
+      },
+      result: {
+        best: -0.32,
+        worst: 0.79,
+      },
+    },
     {
       description:
         "Case where Sondermerkmal is 'checked' for Baujahrspanne without value",
@@ -48,10 +97,8 @@ test.each([
         Baujahr: 1965,
       },
       result: {
-        "[Sondermerkmal] Hochwertiger Bodenbelag": {
-          best: 0,
-          worst: 0,
-        },
+        best: 0,
+        worst: 0,
       },
     },
     {
@@ -63,10 +110,8 @@ test.each([
         Ost: true,
       },
       result: {
-        "[Sondermerkmal] Modernes Bad": {
-          best: 0.16,
-          worst: 0.16,
-        },
+        best: 0.16,
+        worst: 0.16,
       },
     },
   ].map(({ answers, result }) => {
@@ -81,49 +126,15 @@ test.each([
         },
         ...answers,
       } as FinalAnswers,
-      result: {
-        ...{
-          "[Sondermerkmal] Hochwertiger Bodenbelag": {
-            best: 0,
-            worst: 0,
-          },
-          "[Sondermerkmal] Moderne Küchenausstattung": {
-            best: 0,
-            worst: 0,
-          },
-          "[Sondermerkmal] Von der Badewanne getrennte Dusche": {
-            best: 0,
-            worst: 0,
-          },
-          "[Sondermerkmal] Kleines Bad": {
-            best: 0,
-            worst: 0,
-          },
-          "[Sondermerkmal] Modernes Bad": {
-            best: 0,
-            worst: 0,
-          },
-          "[Sondermerkmal] Isolierverglasung/Schallschutzfenster": {
-            best: 0,
-            worst: 0,
-          },
-          "[Sondermerkmal] Aufzug im Haus": {
-            best: 0,
-            worst: 0,
-          },
-        },
-        ...result,
-      } as {
-        [key in Sondermerkmal]: {
-          best: number;
-          worst: number;
-        };
+      result: result as {
+        best: number;
+        worst: number;
       },
     };
   }),
-])("getWorstBestSondermerkmalAbzuege(%o)", ({ answers, result }) => {
+])("getWorstBestSondermerkmalModifier(%o)", ({ answers, result }) => {
   expect(
-    getWorstBestSondermerkmalAufschlagBySondermerkmal(
+    getWorstBestSondermerkmalModifier(
       answers,
       getVisibleQuestionAliases(answers),
     ),

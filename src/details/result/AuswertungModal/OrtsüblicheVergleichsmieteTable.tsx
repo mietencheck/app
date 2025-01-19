@@ -5,7 +5,7 @@ import {
   getWorstBestOrtsueblicheVergleichsmiete,
 } from "~/calculation/ortsueblicheVergleichsmiete";
 import { getWorstBestPreisspanne } from "~/calculation/preisspanne";
-import { getWorstBestSondermerkmalAufschlag } from "~/calculation/sondermerkmale";
+import { getWorstBestSondermerkmalModifier } from "~/calculation/sondermerkmale";
 import { getWorstBestSpanneneinordnungInPercent } from "~/calculation/spanneneinordnung";
 import {
   Table,
@@ -38,7 +38,7 @@ export function OrtsüblicheVergleichsmieteTable() {
     visibleQuestionAliases,
   );
 
-  const sondermerkmalAufschlag = getWorstBestSondermerkmalAufschlag(
+  const sondermerkmalAufschlag = getWorstBestSondermerkmalModifier(
     answers,
     visibleQuestionAliases,
   );
