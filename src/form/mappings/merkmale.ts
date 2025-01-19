@@ -502,27 +502,3 @@ export const answersToMerkmalStateMapping = {
     checked_if: { "Wohnumfeld hat Parkplatz": "Ja" },
   },
 } satisfies AnswerMerkmalStateMapping;
-
-/*
-  Umfeld: {
-    pro: {
-      ruhig: { "Wohnumfeld ist besonders leise": "Ja" },
-      Gestaltung: { "Wohnumfeld ist aufwendig gestaltet": "Ja" },
-      Müllfläche: {
-        "Wohnumfeld hat gepflegte Müllstandsfläche": "Ja",
-      },
-      Garten: [
-        { "Wohnumfeld hat eigenen Garten": "Ja" },
-        { "Wohnumfeld hat Gemeinschaftsgarten": "Ja" },
-      ],
-      Citylage: { "Wohnumfeld ist repräsentativ": "Ja" },
-      Villenartig: {
-        "Wohnumfeld hat villenartige Mehrfamilienhäuser": "Ja",
-      },
-      Parkplatz: { "Wohnumfeld hat Parkplatz": "Ja" },
-    },
-    con: {
-      
-    },
-  },
-*/

@@ -21,8 +21,6 @@ export const getWorstBestMerkmalStateByMerkmalGruppe = (
     visibleQuestionAliases,
   );
 
-  console.log("merkmalStatesByGruppe", merkmalStatesByGruppe);
-
   return Object.entries(merkmalStatesByGruppe).reduce(
     (result, [merkmalGruppe, merkmale]) => {
       result[merkmalGruppe as MerkmalGruppe] = {

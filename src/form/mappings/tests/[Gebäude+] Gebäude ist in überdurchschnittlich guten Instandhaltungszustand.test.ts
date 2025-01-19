@@ -78,10 +78,6 @@ test.each([
     };
   }),
 ])("getMerkmalStates(%o)", ({ answers, expected }) => {
-  console.log(
-    "getVisibleQuestionAliases(answers)",
-    getVisibleQuestionAliases(answers),
-  );
   expect(getMerkmalStates(answers, getVisibleQuestionAliases(answers))).toEqual(
     expected,
   );
