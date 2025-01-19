@@ -45,7 +45,6 @@ const calcOrtsueblicheVergleichsmiete = (
     spanneneinordnung,
     sondermerkmalAufschlag,
   );
-
   return Number(
     (average + merkmalsgruppenValue + sondermerkmalAufschlag).toFixed(2),
   );
@@ -60,7 +59,7 @@ export function getWorstBestOrtsueblicheVergleichsmiete(
     answers,
     visibleQuestionAliases,
   );
-  const sondermerkmalAufschlag = getWorstBestSondermerkmalModifier(
+  const sondermerkmalModifier = getWorstBestSondermerkmalModifier(
     answers,
     visibleQuestionAliases,
   );
@@ -72,12 +71,12 @@ export function getWorstBestOrtsueblicheVergleichsmiete(
     best: calcOrtsueblicheVergleichsmiete(
       preisspanne.best,
       spanneneinordnung.best,
-      sondermerkmalAufschlag.best,
+      sondermerkmalModifier.best,
     ),
     worst: calcOrtsueblicheVergleichsmiete(
       preisspanne.worst,
       spanneneinordnung.worst,
-      sondermerkmalAufschlag.worst,
+      sondermerkmalModifier.worst,
     ),
   };
 }

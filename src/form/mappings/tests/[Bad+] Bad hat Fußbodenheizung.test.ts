@@ -17,56 +17,30 @@ test.each([
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Bad größer als 4qm": "Ja",
+        "Bad mit Fußbodenheizung": "Ja",
       },
       expected: {
-        "[Bad-] Bad ist klein": "unchecked",
+        "[Bad+] Bad hat Fußbodenheizung": "checked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Bad größer als 4qm": "Nicht sicher",
+        "Bad mit Fußbodenheizung": "Nicht sicher",
       },
       expected: {
-        "[Bad-] Bad ist klein": "maybe",
+        "[Bad+] Bad hat Fußbodenheizung": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Bad größer als 4qm": "Nein",
+        "Bad mit Fußbodenheizung": "Nein",
       },
       expected: {
-        "[Bad-] Bad ist klein": "checked",
+        "[Bad+] Bad hat Fußbodenheizung": "unchecked",
       },
     })),
-    // Check if answer is ignored when Sondermerkmal Badezimmer Klein is checked
-    {
-      answers: {
-        Vertragsdatum: "2015-2016",
-        Baujahr: 1991,
-        "Sondermerkmal Badezimmer Klein": "Nein",
-        "Bad größer als 4qm": "Nein",
-      },
-      expected: {
-        "[Bad-] Bad ist klein": "unchecked",
-      },
-    },
-    // Check if answer is ignored when when BaujahrSpanne is '1973-1990 Ost'
-    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
-      (vertragsdatum) => ({
-        answers: {
-          Vertragsdatum: vertragsdatum,
-          Baujahr: 1973,
-          Ost: true,
-          "Bad größer als 4qm": "Nein",
-        },
-        expected: {
-          "[Bad-] Bad ist klein": "unchecked",
-        },
-      }),
-    ),
   ].map(({ answers, expected }) => {
     return {
       answers: {

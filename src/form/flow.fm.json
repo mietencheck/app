@@ -3252,53 +3252,6 @@
                                       "id": "5hoc7",
                                       "type": "If",
                                       "note": "Die Frage \"Badezimmer klein\" soll nur gestellt werden, wenn das Sondermerkmal \"Kleines Bad\" nicht erfüllt ist. \n\nDas Sondermerkmal \"Kleines Bad\" ist nur für das Baujahr \"1991-2002\" relevant.\n\nDa Sondermerkmal und Frage exakt gleich sind, muss die Frage hier nicht wiederholt werden, wenn sie schonmal gefragt wurde:\n- Wenn das Sondermerkmal erfüllt ist, fällt diese Frage raus\n- Wenn das Sondermerkmal nicht erfüllt ist, dann wäre die Antwort auf diese Frage sowieso ebenfalls \"Nein\"\n",
-                                      "cases": [
-                                        {
-                                          "id": "kjzm8l",
-                                          "type": "IfCase",
-                                          "test": {
-                                            "id": "hcczok",
-                                            "type": "LogicalOperation",
-                                            "operator": "and",
-                                            "negated": false,
-                                            "conditions": [
-                                              {
-                                                "id": "0wbce",
-                                                "questionRef": {
-                                                  "type": "AliasRef",
-                                                  "value": "Baujahr"
-                                                },
-                                                "negated": false,
-                                                "type": "AnswerNumberComparison",
-                                                "operator": "gte",
-                                                "comparands": [
-                                                  {
-                                                    "type": "NumberLiteral",
-                                                    "value": 1991
-                                                  }
-                                                ]
-                                              },
-                                              {
-                                                "id": "0wbce",
-                                                "questionRef": {
-                                                  "type": "AliasRef",
-                                                  "value": "Baujahr"
-                                                },
-                                                "negated": false,
-                                                "type": "AnswerNumberComparison",
-                                                "operator": "lte",
-                                                "comparands": [
-                                                  {
-                                                    "type": "NumberLiteral",
-                                                    "value": 2002
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          },
-                                          "block": []
-                                        }
-                                      ],
                                       "alternate": [
                                         {
                                           "id": "uyizu",
@@ -3328,6 +3281,26 @@
                                           },
                                           "required": false,
                                           "note": "Merkmal 2015:\nNur wenn Sondermerkmal „kleines Bad (kleiner als 4 m2)“ nicht zutrifft: Kleines Bad (kleiner als 4 m2) [--]\n\nMerkmal >=2017:\nKleines Bad (kleiner als 4 m2); gilt nicht in der Baualtersklasse 1973 bis 1990 Ost [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher\n"
+                                        }
+                                      ],
+                                      "cases": [
+                                        {
+                                          "id": "kjzm8l",
+                                          "type": "IfCase",
+                                          "block": [],
+                                          "test": {
+                                            "id": "0wbce",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Sondermerkmal Badezimmer Klein"
+                                            },
+                                            "operator": "is",
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "comparands": [
+                                              "qzhja"
+                                            ]
+                                          }
                                         }
                                       ]
                                     }
@@ -3546,7 +3519,7 @@
                                         ]
                                       },
                                       "required": false,
-                                      "note": "Merkmal >=2025:\nKeine Duschmöglichkeit (z. B. kein Spritzwasserschutz, keine Duschkopfhalterung, sehr kleine Standfläche) [--]\n\nMerkmal <=2023:\nKeine Duschmöglichkeit [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal 2015-2023:\nKeine Duschmöglichkeit [--]\n\nMerkmal >=2024:\nKeine Duschmöglichkeit (z. B. kein Spritzwasserschutz, keine Duschkopfhalterung, sehr kleine Standfläche) [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                                     }
                                   ]
                                 }
@@ -3579,7 +3552,7 @@
                                     ]
                                   },
                                   "required": false,
-                                  "note": "Merkmal >=2025:\nKeine Duschmöglichkeit (z. B. kein Spritzwasserschutz, keine Duschkopfhalterung, sehr kleine Standfläche) [--]\n\nMerkmal <=2023:\nKeine Duschmöglichkeit [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                  "note": "Merkmal 2015-2023:\nKeine Duschmöglichkeit [--]\n\nMerkmal >=2024:\nKeine Duschmöglichkeit (z. B. kein Spritzwasserschutz, keine Duschkopfhalterung, sehr kleine Standfläche) [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                                 }
                               ]
                             },
@@ -3705,10 +3678,10 @@
                                                   "value": "Sondermerkmal Dusche Und Badewanne"
                                                 },
                                                 "operator": "is",
-                                                "negated": true,
+                                                "negated": false,
                                                 "type": "AnswerOptionComparison",
                                                 "comparands": [
-                                                  "qzhja"
+                                                  "uiajj"
                                                 ]
                                               }
                                             }
@@ -3900,33 +3873,93 @@
                   "alias": "Waschbecken",
                   "block": [
                     {
-                      "id": "5y96s",
-                      "type": "Question",
-                      "alias": "Bad & WC ohne Waschbecken",
-                      "text": "Gibt es ein Badezimmer oder WC, welches kein Handwaschbecken hat?",
-                      "info": null,
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "3naif",
-                            "alias": "Ja",
-                            "text": "Ja"
-                          },
-                          {
-                            "id": "3t07yi",
-                            "alias": "Nein",
-                            "text": "Nein"
-                          },
-                          {
-                            "id": "3ayyvg",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
+                      "type": "If",
+                      "id": "4w8hp",
+                      "cases": [
+                        {
+                          "type": "IfCase",
+                          "id": "bmsjy",
+                          "block": [
+                            {
+                              "id": "5y96s",
+                              "type": "Question",
+                              "alias": "Bad & WC ohne Waschbecken",
+                              "text": "Gibt es ein Badezimmer oder WC, welches kein Handwaschbecken hat?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "3naif",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "3t07yi",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "3ayyvg",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Merkmal 2015-2023:\nKein Handwaschbecken in Bad oder WC oder im Bad nur ein kleines Handwaschbecken (Außenmaß 50 x 25 cm oder kleiner) [--]\n\nMerkmal >=2024:\nKein Handwaschbecken in Bad oder WC oder im Bad nur ein kleines Handwaschbecken (Außenmaß 50 x 25 cm oder kleiner) [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ],
+                          "test": {
+                            "id": "5v853k",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "operator": "is",
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "comparands": [
+                              "wejo0k",
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
+                            ]
                           }
-                        ]
-                      },
-                      "required": false,
-                      "note": "Merkmal:\nKein Handwaschbecken in Bad oder WC oder im Bad nur ein kleines Handwaschbecken (Außenmaß 50 x 25 cm oder kleiner) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "1g2qk",
+                          "type": "Question",
+                          "alias": "Bad & WC ohne Waschbecken",
+                          "text": "Gibt es ein Badezimmer oder WC, welches kein Handwaschbecken hat?",
+                          "info": "Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "3naif",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "3t07yi",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "3ayyvg",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
+                          },
+                          "required": false,
+                          "note": "Merkmal 2015-2023:\nKein Handwaschbecken in Bad oder WC oder im Bad nur ein kleines Handwaschbecken (Außenmaß 50 x 25 cm oder kleiner) [--]\n\nMerkmal >=2024:\nKein Handwaschbecken in Bad oder WC oder im Bad nur ein kleines Handwaschbecken (Außenmaß 50 x 25 cm oder kleiner) [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ]
                     },
                     {
                       "id": "8mrpx",
@@ -4462,37 +4495,98 @@
                   "alias": "Lüftung",
                   "block": [
                     {
-                      "id": "illba",
-                      "type": "Question",
-                      "alias": "WC ohne Lüftung",
-                      "text": "Gibt es einen Raum mit einer Toilette, in welchem es keine Möglichkeit zur Entlüftung gibt?",
-                      "info": "Dies ist der Fall, wenn es in dem Raum kein Fenster und keine Lüftungsanlage gibt.",
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "uiajj",
-                            "alias": "Ja",
-                            "text": "Ja"
-                          },
-                          {
-                            "id": "qzhja",
-                            "alias": "Nein",
-                            "text": "Nein"
-                          },
-                          {
-                            "id": "8i22j",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
+                      "type": "If",
+                      "id": "6xcqw",
+                      "cases": [
+                        {
+                          "type": "IfCase",
+                          "id": "h6ej2",
+                          "block": [
+                            {
+                              "id": "illba",
+                              "type": "Question",
+                              "alias": "WC ohne Lüftung",
+                              "text": "Gibt es einen Raum mit einer Toilette, in welchem es keine Möglichkeit zur Entlüftung gibt?",
+                              "info": "Dies ist der Fall, wenn es in dem Raum kein Fenster und keine Lüftungsanlage gibt.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Merkmal 2015-2023:\nWC ohne Lüftungsmöglichkeit und Entlüftung [--]\n\nMerkmal >=2024\nWC ohne Lüftungsmöglichkeit und Entlüftung\n[bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ],
+                          "test": {
+                            "id": "yp1op",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "operator": "is",
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "comparands": [
+                              "wejo0k",
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
+                            ]
                           }
-                        ]
-                      },
-                      "required": false,
-                      "note": "Merkmal:\nWC ohne Lüftungsmöglichkeit und Entlüftung [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "5gkyd",
+                          "type": "Question",
+                          "alias": "WC ohne Lüftung",
+                          "text": "Gibt es einen Raum mit einer Toilette, in welchem es keine Möglichkeit zur Entlüftung gibt?",
+                          "info": "Dies ist der Fall, wenn es in dem Raum kein Fenster und keine Lüftungsanlage gibt. Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs.",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "uiajj",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "qzhja",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "8i22j",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
+                          },
+                          "required": false,
+                          "note": "Merkmal 2015-2023:\nWC ohne Lüftungsmöglichkeit und Entlüftung [--]\n\nMerkmal >=2024\nWC ohne Lüftungsmöglichkeit und Entlüftung [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ]
                     },
                     {
                       "id": "vu6qw",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "rweyg",
@@ -4514,61 +4608,6 @@
                             {
                               "id": "bdljul",
                               "type": "If",
-                              "cases": [
-                                {
-                                  "id": "gpjga",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "j4igy",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Vertragsdatum"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "08tnb",
-                                      "wejo0k",
-                                      "7np1",
-                                      "m2jo",
-                                      "4obam",
-                                      "oqyrs"
-                                    ]
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "h0j1f",
-                                      "type": "Question",
-                                      "alias": "Bad mit WC ohne Fenster",
-                                      "text": "Gibt es ein Badezimmer mit einer Toilette, welches kein Fenster hat?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "uiajj",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "qzhja",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "8i22j",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
-                                        ]
-                                      },
-                                      "required": false,
-                                      "note": "Merkmal <=2023:\nBad mit WC ohne Fenster [--]\n\nMerkmal >=2025: Bad mit WC ohne Fenster; gilt nicht für die Baualtersklasse 1973 bis 1990 Ost\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                    }
-                                  ]
-                                }
-                              ],
                               "alternate": [
                                 {
                                   "id": "ndkp3",
@@ -4663,6 +4702,61 @@
                                     }
                                   ]
                                 }
+                              ],
+                              "cases": [
+                                {
+                                  "id": "gpjga",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "j4igy",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "08tnb",
+                                      "wejo0k",
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "h0j1f",
+                                      "type": "Question",
+                                      "alias": "Bad mit WC ohne Fenster",
+                                      "text": "Gibt es ein Badezimmer mit einer Toilette, welches kein Fenster hat?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015-2023:\nBad mit WC ohne Fenster [--]\n\nMerkmal >=2025: Bad mit WC ohne Fenster; gilt nicht für die Baualtersklasse 1973 bis 1990 Ost\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
+                                }
                               ]
                             },
                             {
@@ -4696,14 +4790,14 @@
                             }
                           ]
                         }
-                      ],
-                      "alternate": []
+                      ]
                     }
                   ]
                 },
                 {
                   "id": "x19izk",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "jxcsq",
@@ -4729,33 +4823,93 @@
                           "alias": "Heizung",
                           "block": [
                             {
-                              "id": "4issj",
-                              "type": "Question",
-                              "alias": "Bad ohne Heizung",
-                              "text": "Gibt es ein Badezimmer oder WC, welches nicht beheizbar ist?",
-                              "info": null,
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "tcod4",
-                                    "alias": "Ja",
-                                    "text": "Ja"
-                                  },
-                                  {
-                                    "id": "43bd3",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  },
-                                  {
-                                    "id": "36h0m",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
+                              "type": "If",
+                              "id": "npmf4",
+                              "cases": [
+                                {
+                                  "type": "IfCase",
+                                  "id": "x7oaq",
+                                  "block": [
+                                    {
+                                      "id": "4issj",
+                                      "type": "Question",
+                                      "alias": "Bad ohne Heizung",
+                                      "text": "Gibt es ein Badezimmer oder WC, welches nicht beheizbar ist?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "tcod4",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "43bd3",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "36h0m",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015-2023:\nBad oder WC nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler [--]\n\nMerkmal >=2024:\nBad nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ],
+                                  "test": {
+                                    "id": "aq5ptg",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "operator": "is",
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "comparands": [
+                                      "wejo0k",
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
+                                    ]
                                   }
-                                ]
-                              },
-                              "required": false,
-                              "note": "Merkmal:\nBad oder WC nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "tinoy",
+                                  "type": "Question",
+                                  "alias": "Bad ohne Heizung",
+                                  "text": "Gibt es ein Badezimmer welches nicht beheizbar ist?",
+                                  "info": "Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "tcod4",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "43bd3",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "36h0m",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "required": false,
+                                  "note": "Merkmal 2015-2023:\nBad oder WC nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler [--]\n\nMerkmal >=2024:\nBad nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ]
                             },
                             {
                               "id": "f1987",
@@ -5122,6 +5276,56 @@
                                       "note": "Merkmal 2015:\nDielenfußboden im Bad [--]\n\nMerkmal >2017:\nDielenfußboden im Bad (wenn nicht feuchtraumgeeignet) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "IfCase",
+                                  "id": "wm63f",
+                                  "test": {
+                                    "id": "43leo",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "operator": "is",
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "comparands": [
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "4nqkni",
+                                      "type": "Question",
+                                      "alias": "Bad mit Dielenfußboden",
+                                      "text": "Gibt es ein Badezimmer mit Dielenfußboden, welcher nicht feuchtraumgeeignet ist?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015-2017:\nDielenfußboden im Bad [--]\n\nMerkmal 2019-2023:\nDielenfußboden im Bad (wenn nicht feuchtraumgeeignet) [--]\n\nMerkmal >=2014:\nDielenfußboden im Bad (wenn nicht feuchtraumgeeignet) [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
                                 }
                               ],
                               "alternate": [
@@ -5130,7 +5334,7 @@
                                   "type": "Question",
                                   "alias": "Bad mit Dielenfußboden",
                                   "text": "Gibt es ein Badezimmer mit Dielenfußboden, welcher nicht feuchtraumgeeignet ist?",
-                                  "info": null,
+                                  "info": "Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs",
                                   "answer": {
                                     "type": "ChoiceAnswer",
                                     "options": [
@@ -5152,7 +5356,7 @@
                                     ]
                                   },
                                   "required": false,
-                                  "note": "Merkmal 2015:\nDielenfußboden im Bad [--]\n\nMerkmal >2017:\nDielenfußboden im Bad (wenn nicht feuchtraumgeeignet) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  "note": "Merkmal 2015-2017:\nDielenfußboden im Bad [--]\n\nMerkmal 2019-2023:\nDielenfußboden im Bad (wenn nicht feuchtraumgeeignet) [--]\n\nMerkmal >=2014:\nDielenfußboden im Bad (wenn nicht feuchtraumgeeignet) [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
                               ]
                             },
@@ -5505,40 +5709,99 @@
                               "alternate": []
                             },
                             {
-                              "id": "ve6xp",
-                              "type": "Question",
-                              "alias": "Bad hat Warmwasser",
-                              "text": "Gibt es eine ausreichende Warmwasserversorgung?",
-                              "info": "Das ist der Fall, wenn es einen Durchlauferhitzer, einen Boiler mit mehr als 60 Litern oder eine zentrale Warmwasserversorgung vorhanden ist.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
+                              "type": "If",
+                              "id": "eyx6c",
+                              "alternate": [
+                                {
+                                  "id": "txd1p",
+                                  "type": "Question",
+                                  "alias": "Bad hat Warmwasser",
+                                  "text": "Gibt es im Badezimmer eine ausreichende Warmwasserversorgung?",
+                                  "info": "Das ist der Fall, wenn es einen Durchlauferhitzer, einen Boiler mit mehr als 60 Litern oder eine zentrale Warmwasserversorgung vorhanden ist. Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs.",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
                                   },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
+                                  "required": false,
+                                  "note": "Merkmal 2015-2023:\nKeine ausreichende Warmwasserversorgung (keine zentrale Warmwasserversorgung, kein Durchlauferhitzer, kein Boiler > 60 Liter) [--]\n\nMekrmal >=2024: \nKeine ausreichende Warmwasserversorgung (keine zentrale Warmwasserversorgung, kein Durchlauferhitzer, kein Boiler > 60 Liter) [bezieht sich nicht auf Gäste-WCs] [--] \n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ],
+                              "cases": [
+                                {
+                                  "type": "IfCase",
+                                  "id": "k0urd",
+                                  "test": {
+                                    "id": "3b2tqh",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "operator": "is",
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "comparands": [
+                                      "wejo0k",
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
+                                    ]
                                   },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": false,
-                              "note": "Merkmal:\nKeine ausreichende Warmwasserversorgung (keine zentrale Warm- wasserversorgung, kein Durchlauferhitzer, kein Boiler > 60 Liter) [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                  "block": [
+                                    {
+                                      "id": "ve6xp",
+                                      "type": "Question",
+                                      "alias": "Bad hat Warmwasser",
+                                      "text": "Gibt es im Badezimmer eine ausreichende Warmwasserversorgung?",
+                                      "info": "Das ist der Fall, wenn es einen Durchlauferhitzer, einen Boiler mit mehr als 60 Litern oder eine zentrale Warmwasserversorgung vorhanden ist.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015-2023:\nKeine ausreichende Warmwasserversorgung (keine zentrale Warmwasserversorgung, kein Durchlauferhitzer, kein Boiler > 60 Liter) [--]\n\nMekrmal >=2024: \nKeine ausreichende Warmwasserversorgung (keine zentrale Warmwasserversorgung, kein Durchlauferhitzer, kein Boiler > 60 Liter) [bezieht sich nicht auf Gäste-WCs] [--] \n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 }
               ]
             },

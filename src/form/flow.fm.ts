@@ -3144,6 +3144,7 @@ export type StepInfoByAlias = {
             "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
             "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Bad nur kleines Waschbecken": {
@@ -3771,6 +3772,7 @@ export type StepInfoByAlias = {
             "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Bad mit WC ohne Fenster": {
@@ -4076,6 +4078,7 @@ export type StepInfoByAlias = {
             "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad ohne Heizung"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Bad mit alter Heizung": {
@@ -4902,6 +4905,7 @@ export type StepInfoByAlias = {
             "Bad Boden und Wand hochwertig"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad mit hochwertiger Ausstattung"?: "Ja" | "Nein" | "Nicht sicher";
             "Bad hat Einhebelmischbatterie"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Warmwasser"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Küche ist groß": {
