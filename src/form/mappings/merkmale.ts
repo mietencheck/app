@@ -239,7 +239,7 @@ export const answersToMerkmalStateMapping = {
   "[Wohnung+] Wohnugn ist barrierearm": {
     checked_if: { "Wohnung ist barrierearm": "Ja" },
   },
-  "[Wohnung+] Wohnugn hat zusätzliche Einbruchssicherung": {
+  "[Wohnung+] Wohnung hat zusätzliche Einbruchssicherung": {
     checked_if: { "Wohnung hat verstärkte Tür": "Ja" },
   },
   "[Wohnung+] Wohnugn hat wohnungsbezogenen Kaltwasserzähler": {

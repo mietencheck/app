@@ -233,7 +233,7 @@ test.each([
             "Wohnung hat hochwertigen Boden": "unchecked",
             "Wohnung hat Schallschutzfenster/Wärmeschutzverglasung":
               "unchecked",
-            "Wohnugn hat zusätzliche Einbruchssicherung": "unchecked",
+            "Wohnung hat zusätzliche Einbruchssicherung": "unchecked",
           },
           Wohnwertmindernd: {
             "Wohnung hat Einfachverglasung": "unchecked",
@@ -359,7 +359,7 @@ test.each([
             "Wohnung hat hochwertigen Boden": "unchecked",
             "Wohnung hat Schallschutzfenster/Wärmeschutzverglasung":
               "unchecked",
-            "Wohnugn hat zusätzliche Einbruchssicherung": "unchecked",
+            "Wohnung hat zusätzliche Einbruchssicherung": "unchecked",
           },
           Wohnwertmindernd: {
             "Wohnung hat Einfachverglasung": "unchecked",
