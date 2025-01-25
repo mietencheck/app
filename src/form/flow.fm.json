@@ -4497,6 +4497,37 @@
                     {
                       "type": "If",
                       "id": "6xcqw",
+                      "alternate": [
+                        {
+                          "id": "5gkyd",
+                          "type": "Question",
+                          "alias": "WC ohne Lüftung",
+                          "text": "Gibt es einen Raum mit einer Toilette, in welchem es keine Möglichkeit zur Entlüftung gibt?",
+                          "info": "Dies ist der Fall, wenn es in dem Raum kein Fenster und keine Lüftungsanlage gibt. Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs.",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "uiajj",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "qzhja",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "8i22j",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
+                          },
+                          "required": false,
+                          "note": "Merkmal 2015-2023:\nWC ohne Lüftungsmöglichkeit und Entlüftung [--]\n\nMerkmal >=2024\nWC ohne Lüftungsmöglichkeit und Entlüftung [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ],
                       "cases": [
                         {
                           "type": "IfCase",
@@ -4549,37 +4580,6 @@
                               "oqyrs"
                             ]
                           }
-                        }
-                      ],
-                      "alternate": [
-                        {
-                          "id": "5gkyd",
-                          "type": "Question",
-                          "alias": "WC ohne Lüftung",
-                          "text": "Gibt es einen Raum mit einer Toilette, in welchem es keine Möglichkeit zur Entlüftung gibt?",
-                          "info": "Dies ist der Fall, wenn es in dem Raum kein Fenster und keine Lüftungsanlage gibt. Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs.",
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "uiajj",
-                                "alias": "Ja",
-                                "text": "Ja"
-                              },
-                              {
-                                "id": "qzhja",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              },
-                              {
-                                "id": "8i22j",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
-                              }
-                            ]
-                          },
-                          "required": false,
-                          "note": "Merkmal 2015-2023:\nWC ohne Lüftungsmöglichkeit und Entlüftung [--]\n\nMerkmal >=2024\nWC ohne Lüftungsmöglichkeit und Entlüftung [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                         }
                       ]
                     },
