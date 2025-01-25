@@ -1,14 +1,14 @@
 import { useEffect, useMemo } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
-import { useAnswers, useStarterSteps } from "~/form/flow-machine";
+import { useAnswers, useSchnelltestSteps } from "~/form/flow-machine";
 
 const useEstimatorSeenState = (value = "") =>
   useLocalStorage("estimator-seen-for-answers", value);
 
-function useStarterAnswersHash() {
+function useSchnelltestAnswersHash() {
   const answers = useAnswers();
-  const steps = useStarterSteps();
+  const steps = useSchnelltestSteps();
   return useMemo(
     () =>
       JSON.stringify(
@@ -21,7 +21,7 @@ function useStarterAnswersHash() {
 }
 
 export function useMarkEstimatorSeen() {
-  const hash = useStarterAnswersHash();
+  const hash = useSchnelltestAnswersHash();
   const [, setValue] = useEstimatorSeenState(hash);
   useEffect(() => {
     setValue(hash);
@@ -29,7 +29,7 @@ export function useMarkEstimatorSeen() {
 }
 
 export function useEstimatorSeen() {
-  const hash = useStarterAnswersHash();
+  const hash = useSchnelltestAnswersHash();
   const [seen] = useEstimatorSeenState();
   return seen === hash;
 }

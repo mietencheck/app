@@ -2,7 +2,7 @@ import React, { useEffect, useMemo } from "react";
 import useLocalStorageState from "use-local-storage-state";
 
 import { Header } from "~/components/partials";
-import { useStarterSteps } from "~/form/flow-machine";
+import { useSchnelltestSteps } from "~/form/flow-machine";
 
 import { SchnelltestExit } from "./schnelltestExit";
 import { SchnelltestQuestion } from "./schnelltestQuestion";
@@ -33,7 +33,7 @@ function useStepper(count: number) {
 }
 
 export function SchnelltestPage() {
-  let steps = useStarterSteps();
+  let steps = useSchnelltestSteps();
   steps = useMemo(
     () =>
       steps.filter(

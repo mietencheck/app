@@ -7,7 +7,7 @@ import { getWorstBestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoec
 import { getNettokaltmiete } from "~/form/api";
 import {
   useAnswers,
-  useMainSteps,
+  useDetailsSteps,
   useSteps,
   useVisibleQuestionAliases,
 } from "~/form/flow-machine";
@@ -38,7 +38,7 @@ export const usePathname = () => {
 
 export function useCheckIsGroupCompleted() {
   const answers = useAnswers();
-  const mainSteps = useMainSteps();
+  const mainSteps = useDetailsSteps();
   const [visitedPages] = useVisitedPages();
 
   return useCallback(

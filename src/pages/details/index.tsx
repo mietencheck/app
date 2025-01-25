@@ -3,7 +3,11 @@ import React, { useEffect, useMemo, useRef } from "react";
 
 import { Header } from "~/components/partials";
 import { Button, LinkButton } from "~/components/ui";
-import { useAnswers, useMainSteps, useStarterSteps } from "~/form/flow-machine";
+import {
+  useAnswers,
+  useDetailsSteps,
+  useSchnelltestSteps,
+} from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import { NavBar } from "~/pages/details/NavBar";
 
@@ -19,7 +23,7 @@ import { useHasMissingAnswers, useIsCompleted, usePathname } from "./utils";
 function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
-  const mainSteps = useMainSteps();
+  const mainSteps = useDetailsSteps();
   const isCompleted = useIsCompleted();
 
   const pages = useMainNavItems(mainSteps);
@@ -107,20 +111,20 @@ export default function DetailsPage() {
   const location = useLocation();
 
   const answers = useAnswers();
-  const starterSteps = useStarterSteps();
+  const schnelltestSteps = useSchnelltestSteps();
   const isDoneWithStart = useMemo(
     () =>
-      starterSteps.every(
+      schnelltestSteps.every(
         (s) => s.type != "Question" || answers.getById(s.id) !== undefined,
       ),
-    [answers, starterSteps],
+    [answers, schnelltestSteps],
   );
 
   useEffect(() => {
     if (!isDoneWithStart) {
       window.location.href = "/";
     }
-  }, [answers, isDoneWithStart, starterSteps]);
+  }, [answers, isDoneWithStart, schnelltestSteps]);
 
   const prevLocationRef = useRef(location.path);
   useEffect(() => {

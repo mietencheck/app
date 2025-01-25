@@ -46,7 +46,7 @@ function Router() {
     "UeberUns",
     "Datenschutz",
     "Impressum",
-    "Starter",
+    "Schnelltest",
     "Details",
     "Error",
   ]);
@@ -55,7 +55,7 @@ function Router() {
   switch (route.name) {
     case "Landing":
       return <LandingPage />;
-    case "Starter":
+    case "Schnelltest":
       return <SchnelltestPage />;
     case "Details":
       return <DetailsPage />;

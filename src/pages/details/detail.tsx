@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import {
   postMessageToFloma,
   useAnswers,
-  useMainSteps,
+  useDetailsSteps,
 } from "~/form/flow-machine";
 import { useLocalizeString } from "~/l10n";
 
@@ -50,7 +50,7 @@ function NodeView({ step }: { step: Step }) {
 }
 
 export function DetailPage() {
-  const mainSteps = useMainSteps();
+  const mainSteps = useDetailsSteps();
   const l = useLocalizeString();
   const pathname = usePathname();
   const group = useMemo(

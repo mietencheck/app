@@ -1,7 +1,7 @@
 import { Link } from "@swan-io/chicane";
 import { AnswerValueType, Question } from "flow-machine";
 
-import { useAnswers, useStarterSteps } from "~/form/flow-machine";
+import { useAnswers, useSchnelltestSteps } from "~/form/flow-machine";
 import { useLocalizeField, useLocalizeString } from "~/l10n";
 import { AppRouter } from "~/router";
 import {
@@ -38,7 +38,7 @@ function AnswerView({
 
 export function SummaryPage() {
   const answers = useAnswers();
-  const steps = useStarterSteps();
+  const steps = useSchnelltestSteps();
   const lField = useLocalizeField();
   const lString = useLocalizeString();
   return (
@@ -71,7 +71,7 @@ export function SummaryPage() {
                 </p>
               </div>
               <Link
-                to={`${AppRouter.Starter()}#${q.id}`}
+                to={`${AppRouter.Schnelltest()}#${q.id}`}
                 className="self-start text-purple-11 underline hover:text-purple-11"
               >
                 {lField("Ändern")}

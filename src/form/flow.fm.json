@@ -1,7 +1,6 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
-  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -1767,7 +1766,7 @@
       "id": "loro8f",
       "type": "Group",
       "category": null,
-      "alias": "Hauptspeise",
+      "alias": "Details",
       "block": [
         {
           "id": "7zl9i",
@@ -12197,5 +12196,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subs": []
 }

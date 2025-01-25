@@ -180,26 +180,26 @@ export function useVisibleQuestionAliases() {
   );
 }
 
-export function useStarterSteps() {
+export function useSchnelltestSteps() {
   const steps = useSteps();
   return useMemo(() => {
-    const starter = steps.find(
+    const schnelltest = steps.find(
       (s) => s.type == "Group" && s.alias == "Schnelltest",
     );
-    return starter?.type == "Group" ? ungroup(starter.steps) : [];
+    return schnelltest?.type == "Group" ? ungroup(schnelltest.steps) : [];
   }, [steps]);
 }
 
-export function useMainSteps() {
+export function useDetailsSteps() {
   const steps = useSteps();
   return useMemo(() => {
-    const starter = steps.find(
-      (s) => s.type == "Group" && s.alias == "Hauptspeise",
+    const details = steps.find(
+      (s) => s.type == "Group" && s.alias == "Details",
     );
-    return starter?.type == "Group" ? starter.steps : [];
+    return details?.type == "Group" ? details.steps : [];
   }, [steps]);
 }
-export type MainSteps = ReturnType<typeof useMainSteps>;
+export type MainSteps = ReturnType<typeof useDetailsSteps>;
 
 export * from "./flow.fm";
 

@@ -528,7 +528,7 @@ export type StepInfoByAlias = {
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
         };
     };
-    Hauptspeise: {
+    Details: {
         answer: null;
         state: {
             Adresse?: string;

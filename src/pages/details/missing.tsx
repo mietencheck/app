@@ -5,15 +5,15 @@ import { ChoiceControl } from "~/form/AnswerControl";
 import {
   StepInfoByAlias,
   useAnswers,
-  useStarterSteps,
+  useSchnelltestSteps,
 } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
 import { LabelAndFeedback } from "./AnswerField";
 import { MISSING_OPTION_ALIAS, useMissingAnswersInSession } from "./utils";
 
-function useStarterQuestion(alias: keyof StepInfoByAlias) {
-  const steps = useStarterSteps();
+function useSchnelltestQuestion(alias: keyof StepInfoByAlias) {
+  const steps = useSchnelltestSteps();
   const question = useMemo(
     () =>
       steps.find((s) => s.type == "Question" && s.alias == alias) as
@@ -25,7 +25,7 @@ function useStarterQuestion(alias: keyof StepInfoByAlias) {
 }
 
 function MissingChoiceField({ alias }: { alias: keyof StepInfoByAlias }) {
-  const question = useStarterQuestion(alias);
+  const question = useSchnelltestQuestion(alias);
   const answers = useAnswers();
   if (question?.answer.type != "ChoiceAnswer") return;
   return (
