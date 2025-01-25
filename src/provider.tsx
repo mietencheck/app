@@ -1,6 +1,6 @@
 import { RouterProvider } from "react-aria-components";
 
-import { AnswersProvider, StepsProvider } from "~/form/flow-machine"; // Jonas: Temporary fix
+import { AnswersProvider, StepsProvider } from "~/form/flow-machine";
 
 import { L10nPovider } from "./L10nContext";
 import { AppRouter } from "./router";

@@ -125,12 +125,12 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
 
   const answersValue = useMemo(() => {
     const lageInfo = buildLageInfo(bareAnswers);
-    const constructionYear = buildBaujahr(bareAnswers); // Jonas
+    const baujahr = buildBaujahr(bareAnswers);
     const value = {
       ...storedAnswers,
       Ost: lageInfo?.ost ?? null,
       Wohnlage: lageInfo?.wohnlage ?? null,
-      Baujahr: constructionYear || null, // Jonas
+      Baujahr: baujahr || null,
     };
     postMessageToFloma("Answers", { value });
     return flowMachine.answers(value, setKV);
