@@ -1,8 +1,8 @@
+import { useLocalizeField } from "~/l10n";
 import {
   useWorstBestZulaessigeHoechstmiete,
   useWorstBestZulaessigeHoechstmieteDiff,
-} from "~/details/utils";
-import { useLocalizeField } from "~/l10n";
+} from "~/pages/details/utils";
 import { formatEuro } from "~/utils";
 
 import { WerdeAktiv } from "../partials";

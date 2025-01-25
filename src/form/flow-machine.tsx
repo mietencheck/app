@@ -184,7 +184,7 @@ export function useStarterSteps() {
   const steps = useSteps();
   return useMemo(() => {
     const starter = steps.find(
-      (s) => s.type == "Group" && s.alias == "Vorspeise",
+      (s) => s.type == "Group" && s.alias == "Schnelltest",
     );
     return starter?.type == "Group" ? ungroup(starter.steps) : [];
   }, [steps]);

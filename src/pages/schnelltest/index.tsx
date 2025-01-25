@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo } from "react";
 import useLocalStorageState from "use-local-storage-state";
 
-import { Header } from "~/components";
+import { Header } from "~/components/partials";
 import { useStarterSteps } from "~/form/flow-machine";
 
-import { VorspeiseExit } from "./vorspeiseExit";
-import { VorspeiseQuestion } from "./vorspeiseQuestion";
-import { VorspeiseResult } from "./vorspeiseResult";
+import { SchnelltestExit } from "./schnelltestExit";
+import { SchnelltestQuestion } from "./schnelltestQuestion";
+import { SchnelltestResult } from "./schnelltestResult";
 
 const getHash = () => decodeURIComponent(window.location.hash.replace("#", ""));
 
@@ -32,7 +32,7 @@ function useStepper(count: number) {
   return { index, set: setIndex, back, forward };
 }
 
-export function VorspeisePage() {
+export function SchnelltestPage() {
   let steps = useStarterSteps();
   steps = useMemo(
     () =>
@@ -68,11 +68,11 @@ export function VorspeisePage() {
 
   const renderContent = () => {
     if (!step || step.type == "Info") {
-      return <VorspeiseResult stepper={stepper} />;
+      return <SchnelltestResult stepper={stepper} />;
     } else if (step.type == "Exit") {
-      return <VorspeiseExit step={step} stepper={stepper} />;
+      return <SchnelltestExit step={step} stepper={stepper} />;
     } else {
-      return <VorspeiseQuestion step={step} stepper={stepper} />;
+      return <SchnelltestQuestion step={step} stepper={stepper} />;
     }
   };
 

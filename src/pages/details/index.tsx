@@ -1,14 +1,13 @@
 import { pushUnsafe, useLocation } from "@swan-io/chicane";
 import React, { useEffect, useMemo, useRef } from "react";
 
-import { Header } from "~/components";
+import { Header } from "~/components/partials";
 import { Button, LinkButton } from "~/components/ui";
-import { NavBar } from "~/details/NavBar";
 import { useAnswers, useMainSteps, useStarterSteps } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
+import { NavBar } from "~/pages/details/NavBar";
 
 import { DetailPage } from "./detail";
-import { IntroPage } from "./intro";
 import { ListNav, NavItem, PageNavItem, SubListNav } from "./ListNav";
 import { MissingFieldsPage } from "./missing";
 import { buildPageIndex, getRelNavItems, useMainNavItems } from "./navigation";
@@ -99,7 +98,6 @@ function Layout({ children }: { children: React.ReactNode }) {
 
 export default function DetailsPage() {
   const route = DetailsRouter.useRoute([
-    "Intro",
     "Summary",
     "FormPage",
     "Result",
@@ -133,7 +131,7 @@ export default function DetailsPage() {
 
   useEffect(() => {
     if (location.path.length == 1 && location.path[0] == "details") {
-      DetailsRouter.push("Intro");
+      DetailsRouter.push("Summary");
     }
   }, [location.path]);
 
@@ -153,9 +151,6 @@ export default function DetailsPage() {
     <Layout>
       {(() => {
         switch (route.name) {
-          case "Intro":
-            return <IntroPage />;
-
           case "Summary":
             return <SummaryPage />;
 

@@ -1,14 +1,14 @@
 import { Button, LinkButton } from "~/components/ui";
-import { DetailsRouter } from "~/details/router";
-import { useWorstBestZulaessigeHoechstmieteDiff } from "~/details/utils";
 import { useLocalizeField } from "~/l10n";
+import { DetailsRouter } from "~/pages/details/router";
+import { useWorstBestZulaessigeHoechstmieteDiff } from "~/pages/details/utils";
 
 import { StepperType } from "..";
 import { useMarkEstimatorSeen } from "../utils";
 import { MieteZuHoch } from "./MieteZuHoch";
 import { MieteZuNiedrig } from "./MieteZuNiedrig";
 
-export function VorspeiseResult({ stepper }: { stepper: StepperType }) {
+export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
   const l = useLocalizeField();
   const { best: bestDiff } = useWorstBestZulaessigeHoechstmieteDiff();
 

@@ -7,7 +7,7 @@
       "id": "ybyse",
       "type": "Group",
       "category": null,
-      "alias": "Vorspeise",
+      "alias": "Schnelltest",
       "block": [
         {
           "id": "inf5s",
@@ -2370,7 +2370,6 @@
             {
               "id": "wb48s",
               "type": "If",
-              "alternate": [],
               "cases": [
                 {
                   "id": "2mtvk",
@@ -2428,41 +2427,10 @@
                             {
                               "id": "qmgjz",
                               "type": "If",
-                              "alternate": [],
                               "cases": [
                                 {
                                   "id": "bcted",
                                   "type": "IfCase",
-                                  "block": [
-                                    {
-                                      "id": "beiwa",
-                                      "type": "Question",
-                                      "alias": "Sondermerkmal Badezimmer Klein",
-                                      "text": "Gibt es ein Badezimmer, das größer als 4 qm ist?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "uiajj",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "qzhja",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "8i22j",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
-                                        ]
-                                      },
-                                      "required": false
-                                    }
-                                  ],
                                   "test": {
                                     "id": "t4ral",
                                     "type": "LogicalOperation",
@@ -2502,9 +2470,40 @@
                                         ]
                                       }
                                     ]
-                                  }
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "beiwa",
+                                      "type": "Question",
+                                      "alias": "Sondermerkmal Badezimmer Klein",
+                                      "text": "Gibt es ein Badezimmer, das größer als 4 qm ist?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false
+                                    }
+                                  ]
                                 }
-                              ]
+                              ],
+                              "alternate": []
                             },
                             {
                               "id": "4suun",
@@ -3191,7 +3190,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "alternate": []
             },
             {
               "id": "kp858",
@@ -3202,7 +3202,6 @@
                 {
                   "id": "nrsqz",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "tqfuq",
@@ -3252,6 +3251,26 @@
                                       "id": "5hoc7",
                                       "type": "If",
                                       "note": "Die Frage \"Badezimmer klein\" soll nur gestellt werden, wenn das Sondermerkmal \"Kleines Bad\" nicht erfüllt ist. \n\nDas Sondermerkmal \"Kleines Bad\" ist nur für das Baujahr \"1991-2002\" relevant.\n\nDa Sondermerkmal und Frage exakt gleich sind, muss die Frage hier nicht wiederholt werden, wenn sie schonmal gefragt wurde:\n- Wenn das Sondermerkmal erfüllt ist, fällt diese Frage raus\n- Wenn das Sondermerkmal nicht erfüllt ist, dann wäre die Antwort auf diese Frage sowieso ebenfalls \"Nein\"\n",
+                                      "cases": [
+                                        {
+                                          "id": "kjzm8l",
+                                          "type": "IfCase",
+                                          "test": {
+                                            "id": "0wbce",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Sondermerkmal Badezimmer Klein"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "qzhja"
+                                            ]
+                                          },
+                                          "block": []
+                                        }
+                                      ],
                                       "alternate": [
                                         {
                                           "id": "uyizu",
@@ -3281,26 +3300,6 @@
                                           },
                                           "required": false,
                                           "note": "Merkmal 2015:\nNur wenn Sondermerkmal „kleines Bad (kleiner als 4 m2)“ nicht zutrifft: Kleines Bad (kleiner als 4 m2) [--]\n\nMerkmal >=2017:\nKleines Bad (kleiner als 4 m2); gilt nicht in der Baualtersklasse 1973 bis 1990 Ost [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher\n"
-                                        }
-                                      ],
-                                      "cases": [
-                                        {
-                                          "id": "kjzm8l",
-                                          "type": "IfCase",
-                                          "block": [],
-                                          "test": {
-                                            "id": "0wbce",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Sondermerkmal Badezimmer Klein"
-                                            },
-                                            "operator": "is",
-                                            "negated": false,
-                                            "type": "AnswerOptionComparison",
-                                            "comparands": [
-                                              "qzhja"
-                                            ]
-                                          }
                                         }
                                       ]
                                     }
@@ -3563,7 +3562,6 @@
                                 {
                                   "id": "e51xr",
                                   "type": "IfCase",
-                                  "block": [],
                                   "test": {
                                     "id": "x8e",
                                     "questionRef": {
@@ -3576,44 +3574,14 @@
                                     "comparands": [
                                       "vove8"
                                     ]
-                                  }
+                                  },
+                                  "block": []
                                 }
                               ],
                               "alternate": [
                                 {
                                   "id": "rj5pk",
                                   "type": "If",
-                                  "alternate": [
-                                    {
-                                      "id": "3hedjh",
-                                      "type": "Question",
-                                      "alias": "Bad hat Dusche und Wanne",
-                                      "text": "Gibt es in der Wohnung sowohl eine Dusche als auch eine separate Badewanne?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "kewsy",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "wcek6",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "wx0n",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
-                                        ]
-                                      },
-                                      "required": false,
-                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche [++]\n\nMerkmal >= 2017:\nVon der Badewanne getrennte zusätzliche Duschtasse oder -kabine [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                    }
-                                  ],
                                   "cases": [
                                     {
                                       "id": "qhmpfj",
@@ -3635,6 +3603,26 @@
                                         {
                                           "id": "7r05y",
                                           "type": "If",
+                                          "cases": [
+                                            {
+                                              "id": "04sajg",
+                                              "type": "IfCase",
+                                              "test": {
+                                                "id": "b0smz",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Sondermerkmal Dusche Und Badewanne"
+                                                },
+                                                "negated": false,
+                                                "type": "AnswerOptionComparison",
+                                                "operator": "is",
+                                                "comparands": [
+                                                  "uiajj"
+                                                ]
+                                              },
+                                              "block": []
+                                            }
+                                          ],
                                           "alternate": [
                                             {
                                               "id": "h492n",
@@ -3665,29 +3653,40 @@
                                               "required": false,
                                               "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche [++]\n\nMerkmal >= 2017:\nVon der Badewanne getrennte zusätzliche Duschtasse oder -kabine [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                             }
-                                          ],
-                                          "cases": [
-                                            {
-                                              "id": "04sajg",
-                                              "type": "IfCase",
-                                              "block": [],
-                                              "test": {
-                                                "id": "b0smz",
-                                                "questionRef": {
-                                                  "type": "AliasRef",
-                                                  "value": "Sondermerkmal Dusche Und Badewanne"
-                                                },
-                                                "operator": "is",
-                                                "negated": false,
-                                                "type": "AnswerOptionComparison",
-                                                "comparands": [
-                                                  "uiajj"
-                                                ]
-                                              }
-                                            }
                                           ]
                                         }
                                       ]
+                                    }
+                                  ],
+                                  "alternate": [
+                                    {
+                                      "id": "3hedjh",
+                                      "type": "Question",
+                                      "alias": "Bad hat Dusche und Wanne",
+                                      "text": "Gibt es in der Wohnung sowohl eine Dusche als auch eine separate Badewanne?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "kewsy",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "wcek6",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "wx0n",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche [++]\n\nMerkmal >= 2017:\nVon der Badewanne getrennte zusätzliche Duschtasse oder -kabine [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     }
                                   ]
                                 },
@@ -3749,7 +3748,6 @@
                                 {
                                   "id": "aebtq",
                                   "type": "If",
-                                  "alternate": [],
                                   "cases": [
                                     {
                                       "id": "bi81t",
@@ -3801,11 +3799,24 @@
                                         {
                                           "id": "dryf5",
                                           "type": "If",
-                                          "alternate": [],
                                           "cases": [
                                             {
                                               "id": "nvaf0i",
                                               "type": "IfCase",
+                                              "test": {
+                                                "id": "btohj",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Duschen nur in freistehender Badewanne"
+                                                },
+                                                "negated": false,
+                                                "type": "AnswerOptionComparison",
+                                                "operator": "is",
+                                                "comparands": [
+                                                  "uiajj",
+                                                  "8i22j"
+                                                ]
+                                              },
                                               "block": [
                                                 {
                                                   "id": "xz3zd",
@@ -3836,27 +3847,15 @@
                                                   "required": false,
                                                   "note": "Merkmal:\nBad ohne separate Dusche mit frei stehender Badewanne mit oder ohne Verblendung in nicht modernisiertem Bad [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                                 }
-                                              ],
-                                              "test": {
-                                                "id": "btohj",
-                                                "questionRef": {
-                                                  "type": "AliasRef",
-                                                  "value": "Duschen nur in freistehender Badewanne"
-                                                },
-                                                "negated": false,
-                                                "type": "AnswerOptionComparison",
-                                                "operator": "is",
-                                                "comparands": [
-                                                  "uiajj",
-                                                  "8i22j"
-                                                ]
-                                              }
+                                              ]
                                             }
-                                          ]
+                                          ],
+                                          "alternate": []
                                         }
                                       ]
                                     }
-                                  ]
+                                  ],
+                                  "alternate": []
                                 }
                               ]
                             }
@@ -3864,7 +3863,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 },
                 {
                   "id": "wn0p",
@@ -3873,12 +3873,29 @@
                   "alias": "Waschbecken",
                   "block": [
                     {
-                      "type": "If",
                       "id": "4w8hp",
+                      "type": "If",
                       "cases": [
                         {
-                          "type": "IfCase",
                           "id": "bmsjy",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "5v853k",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "wejo0k",
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
+                            ]
+                          },
                           "block": [
                             {
                               "id": "5y96s",
@@ -3909,24 +3926,7 @@
                               "required": false,
                               "note": "Merkmal 2015-2023:\nKein Handwaschbecken in Bad oder WC oder im Bad nur ein kleines Handwaschbecken (Außenmaß 50 x 25 cm oder kleiner) [--]\n\nMerkmal >=2024:\nKein Handwaschbecken in Bad oder WC oder im Bad nur ein kleines Handwaschbecken (Außenmaß 50 x 25 cm oder kleiner) [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
-                          ],
-                          "test": {
-                            "id": "5v853k",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Vertragsdatum"
-                            },
-                            "operator": "is",
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "comparands": [
-                              "wejo0k",
-                              "7np1",
-                              "m2jo",
-                              "4obam",
-                              "oqyrs"
-                            ]
-                          }
+                          ]
                         }
                       ],
                       "alternate": [
@@ -4495,43 +4495,29 @@
                   "alias": "Lüftung",
                   "block": [
                     {
-                      "type": "If",
                       "id": "6xcqw",
-                      "alternate": [
-                        {
-                          "id": "5gkyd",
-                          "type": "Question",
-                          "alias": "WC ohne Lüftung",
-                          "text": "Gibt es einen Raum mit einer Toilette, in welchem es keine Möglichkeit zur Entlüftung gibt?",
-                          "info": "Dies ist der Fall, wenn es in dem Raum kein Fenster und keine Lüftungsanlage gibt. Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs.",
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "uiajj",
-                                "alias": "Ja",
-                                "text": "Ja"
-                              },
-                              {
-                                "id": "qzhja",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              },
-                              {
-                                "id": "8i22j",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
-                              }
-                            ]
-                          },
-                          "required": false,
-                          "note": "Merkmal 2015-2023:\nWC ohne Lüftungsmöglichkeit und Entlüftung [--]\n\nMerkmal >=2024\nWC ohne Lüftungsmöglichkeit und Entlüftung [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                        }
-                      ],
+                      "type": "If",
                       "cases": [
                         {
-                          "type": "IfCase",
                           "id": "h6ej2",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "yp1op",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "wejo0k",
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
+                            ]
+                          },
                           "block": [
                             {
                               "id": "illba",
@@ -4562,31 +4548,44 @@
                               "required": false,
                               "note": "Merkmal 2015-2023:\nWC ohne Lüftungsmöglichkeit und Entlüftung [--]\n\nMerkmal >=2024\nWC ohne Lüftungsmöglichkeit und Entlüftung\n[bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
-                          ],
-                          "test": {
-                            "id": "yp1op",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Vertragsdatum"
-                            },
-                            "operator": "is",
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "comparands": [
-                              "wejo0k",
-                              "7np1",
-                              "m2jo",
-                              "4obam",
-                              "oqyrs"
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "5gkyd",
+                          "type": "Question",
+                          "alias": "WC ohne Lüftung",
+                          "text": "Gibt es einen Raum mit einer Toilette, in welchem es keine Möglichkeit zur Entlüftung gibt?",
+                          "info": "Dies ist der Fall, wenn es in dem Raum kein Fenster und keine Lüftungsanlage gibt. Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs.",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "uiajj",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "qzhja",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "8i22j",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
                             ]
-                          }
+                          },
+                          "required": false,
+                          "note": "Merkmal 2015-2023:\nWC ohne Lüftungsmöglichkeit und Entlüftung [--]\n\nMerkmal >=2024\nWC ohne Lüftungsmöglichkeit und Entlüftung [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                         }
                       ]
                     },
                     {
                       "id": "vu6qw",
                       "type": "If",
-                      "alternate": [],
                       "cases": [
                         {
                           "id": "rweyg",
@@ -4608,6 +4607,61 @@
                             {
                               "id": "bdljul",
                               "type": "If",
+                              "cases": [
+                                {
+                                  "id": "gpjga",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "j4igy",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "08tnb",
+                                      "wejo0k",
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "h0j1f",
+                                      "type": "Question",
+                                      "alias": "Bad mit WC ohne Fenster",
+                                      "text": "Gibt es ein Badezimmer mit einer Toilette, welches kein Fenster hat?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015-2023:\nBad mit WC ohne Fenster [--]\n\nMerkmal >=2025: Bad mit WC ohne Fenster; gilt nicht für die Baualtersklasse 1973 bis 1990 Ost\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
+                                }
+                              ],
                               "alternate": [
                                 {
                                   "id": "ndkp3",
@@ -4702,61 +4756,6 @@
                                     }
                                   ]
                                 }
-                              ],
-                              "cases": [
-                                {
-                                  "id": "gpjga",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "j4igy",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Vertragsdatum"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "08tnb",
-                                      "wejo0k",
-                                      "7np1",
-                                      "m2jo",
-                                      "4obam",
-                                      "oqyrs"
-                                    ]
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "h0j1f",
-                                      "type": "Question",
-                                      "alias": "Bad mit WC ohne Fenster",
-                                      "text": "Gibt es ein Badezimmer mit einer Toilette, welches kein Fenster hat?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "uiajj",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "qzhja",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          },
-                                          {
-                                            "id": "8i22j",
-                                            "alias": "Nicht sicher",
-                                            "text": "Ich bin mir nicht sicher"
-                                          }
-                                        ]
-                                      },
-                                      "required": false,
-                                      "note": "Merkmal 2015-2023:\nBad mit WC ohne Fenster [--]\n\nMerkmal >=2025: Bad mit WC ohne Fenster; gilt nicht für die Baualtersklasse 1973 bis 1990 Ost\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                    }
-                                  ]
-                                }
                               ]
                             },
                             {
@@ -4790,14 +4789,14 @@
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "alternate": []
                     }
                   ]
                 },
                 {
                   "id": "x19izk",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "jxcsq",
@@ -4823,12 +4822,29 @@
                           "alias": "Heizung",
                           "block": [
                             {
-                              "type": "If",
                               "id": "npmf4",
+                              "type": "If",
                               "cases": [
                                 {
-                                  "type": "IfCase",
                                   "id": "x7oaq",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "aq5ptg",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "wejo0k",
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
+                                    ]
+                                  },
                                   "block": [
                                     {
                                       "id": "4issj",
@@ -4859,24 +4875,7 @@
                                       "required": false,
                                       "note": "Merkmal 2015-2023:\nBad oder WC nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler [--]\n\nMerkmal >=2024:\nBad nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     }
-                                  ],
-                                  "test": {
-                                    "id": "aq5ptg",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Vertragsdatum"
-                                    },
-                                    "operator": "is",
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "comparands": [
-                                      "wejo0k",
-                                      "7np1",
-                                      "m2jo",
-                                      "4obam",
-                                      "oqyrs"
-                                    ]
-                                  }
+                                  ]
                                 }
                               ],
                               "alternate": [
@@ -5278,17 +5277,17 @@
                                   ]
                                 },
                                 {
-                                  "type": "IfCase",
                                   "id": "wm63f",
+                                  "type": "IfCase",
                                   "test": {
                                     "id": "43leo",
                                     "questionRef": {
                                       "type": "AliasRef",
                                       "value": "Vertragsdatum"
                                     },
-                                    "operator": "is",
                                     "negated": false,
                                     "type": "AnswerOptionComparison",
+                                    "operator": "is",
                                     "comparands": [
                                       "m2jo",
                                       "4obam",
@@ -5709,52 +5708,21 @@
                               "alternate": []
                             },
                             {
-                              "type": "If",
                               "id": "eyx6c",
-                              "alternate": [
-                                {
-                                  "id": "txd1p",
-                                  "type": "Question",
-                                  "alias": "Bad hat Warmwasser",
-                                  "text": "Gibt es im Badezimmer eine ausreichende Warmwasserversorgung?",
-                                  "info": "Das ist der Fall, wenn es einen Durchlauferhitzer, einen Boiler mit mehr als 60 Litern oder eine zentrale Warmwasserversorgung vorhanden ist. Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs.",
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "uiajj",
-                                        "alias": "Ja",
-                                        "text": "Ja"
-                                      },
-                                      {
-                                        "id": "qzhja",
-                                        "alias": "Nein",
-                                        "text": "Nein"
-                                      },
-                                      {
-                                        "id": "8i22j",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
-                                      }
-                                    ]
-                                  },
-                                  "required": false,
-                                  "note": "Merkmal 2015-2023:\nKeine ausreichende Warmwasserversorgung (keine zentrale Warmwasserversorgung, kein Durchlauferhitzer, kein Boiler > 60 Liter) [--]\n\nMekrmal >=2024: \nKeine ausreichende Warmwasserversorgung (keine zentrale Warmwasserversorgung, kein Durchlauferhitzer, kein Boiler > 60 Liter) [bezieht sich nicht auf Gäste-WCs] [--] \n\nNein -> Check\nNicht sicher -> Nicht sicher"
-                                }
-                              ],
+                              "type": "If",
                               "cases": [
                                 {
-                                  "type": "IfCase",
                                   "id": "k0urd",
+                                  "type": "IfCase",
                                   "test": {
                                     "id": "3b2tqh",
                                     "questionRef": {
                                       "type": "AliasRef",
                                       "value": "Vertragsdatum"
                                     },
-                                    "operator": "is",
                                     "negated": false,
                                     "type": "AnswerOptionComparison",
+                                    "operator": "is",
                                     "comparands": [
                                       "wejo0k",
                                       "7np1",
@@ -5795,13 +5763,45 @@
                                     }
                                   ]
                                 }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "txd1p",
+                                  "type": "Question",
+                                  "alias": "Bad hat Warmwasser",
+                                  "text": "Gibt es im Badezimmer eine ausreichende Warmwasserversorgung?",
+                                  "info": "Das ist der Fall, wenn es einen Durchlauferhitzer, einen Boiler mit mehr als 60 Litern oder eine zentrale Warmwasserversorgung vorhanden ist. Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs.",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "required": false,
+                                  "note": "Merkmal 2015-2023:\nKeine ausreichende Warmwasserversorgung (keine zentrale Warmwasserversorgung, kein Durchlauferhitzer, kein Boiler > 60 Liter) [--]\n\nMekrmal >=2024: \nKeine ausreichende Warmwasserversorgung (keine zentrale Warmwasserversorgung, kein Durchlauferhitzer, kein Boiler > 60 Liter) [bezieht sich nicht auf Gäste-WCs] [--] \n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                }
                               ]
                             }
                           ]
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 }
               ]
             },
@@ -5903,47 +5903,47 @@
                       "alternate": []
                     },
                     {
-                      "type": "If",
                       "id": "1blo2",
+                      "type": "If",
                       "cases": [
                         {
-                          "type": "IfCase",
                           "id": "hg0l6l",
+                          "type": "IfCase",
                           "test": {
                             "id": "6qt1w",
                             "questionRef": {
                               "type": "AliasRef",
                               "value": "Vertragsdatum"
                             },
-                            "operator": "is",
                             "negated": false,
                             "type": "AnswerOptionComparison",
+                            "operator": "is",
                             "comparands": [
                               "wejo0k"
                             ]
                           },
                           "block": [
                             {
-                              "type": "If",
                               "id": "ssvoo",
+                              "type": "If",
                               "cases": [
                                 {
-                                  "type": "IfCase",
                                   "id": "66un0f",
-                                  "block": [],
+                                  "type": "IfCase",
                                   "test": {
                                     "id": "1ox53",
                                     "questionRef": {
                                       "type": "AliasRef",
                                       "value": "Sondermerkmal Moderne Küche"
                                     },
-                                    "operator": "is",
                                     "negated": false,
                                     "type": "AnswerOptionComparison",
+                                    "operator": "is",
                                     "comparands": [
                                       "uiajj"
                                     ]
-                                  }
+                                  },
+                                  "block": []
                                 }
                               ],
                               "alternate": [
@@ -6016,6 +6016,30 @@
                     {
                       "id": "a43v3",
                       "type": "If",
+                      "cases": [
+                        {
+                          "id": "kvdrs",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "n75c9",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "wejo0k",
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
+                            ]
+                          },
+                          "block": []
+                        }
+                      ],
                       "alternate": [
                         {
                           "id": "x94sm",
@@ -6045,30 +6069,6 @@
                           },
                           "required": false,
                           "note": "Merkmal >=2024: Freistehender Küchenblock mit Arbeitsfläche und Kochmöglichkeit oder Spüle [++]\n\nJa -> Check\nNicht sicher -> nicht sicher"
-                        }
-                      ],
-                      "cases": [
-                        {
-                          "id": "kvdrs",
-                          "type": "IfCase",
-                          "block": [],
-                          "test": {
-                            "id": "n75c9",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Vertragsdatum"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "wejo0k",
-                              "7np1",
-                              "m2jo",
-                              "4obam",
-                              "oqyrs"
-                            ]
-                          }
                         }
                       ]
                     }
@@ -6167,36 +6167,91 @@
                     {
                       "id": "zq4f2k",
                       "type": "If",
-                      "alternate": [],
                       "cases": [
                         {
                           "id": "wfkalj",
                           "type": "IfCase",
+                          "test": {
+                            "id": "siv5q",
+                            "type": "LogicalOperation",
+                            "operator": "and",
+                            "negated": false,
+                            "conditions": [
+                              {
+                                "id": "j5c3p",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Küche hat Kochmöglichkeit"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "8i22j",
+                                  "uiajj"
+                                ]
+                              },
+                              {
+                                "id": "j5c3p",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Küche hat Gas/Elektroherd ohne Backofen"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "qzhja",
+                                  "8i22j"
+                                ]
+                              }
+                            ]
+                          },
                           "block": [
                             {
-                              "type": "If",
                               "id": "i8xg9l",
+                              "type": "If",
                               "cases": [
                                 {
-                                  "type": "IfCase",
                                   "id": "n1ree",
+                                  "type": "IfCase",
                                   "test": {
                                     "id": "pdf7u",
                                     "questionRef": {
                                       "type": "AliasRef",
                                       "value": "Vertragsdatum"
                                     },
-                                    "operator": "is",
                                     "negated": false,
                                     "type": "AnswerOptionComparison",
+                                    "operator": "is",
                                     "comparands": [
                                       "wejo0k"
                                     ]
                                   },
                                   "block": [
                                     {
-                                      "type": "If",
                                       "id": "vncyr",
+                                      "type": "If",
+                                      "cases": [
+                                        {
+                                          "id": "ntjw9",
+                                          "type": "IfCase",
+                                          "test": {
+                                            "id": "4k6iz",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Sondermerkmal Moderne Küche"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "uiajj"
+                                            ]
+                                          },
+                                          "block": []
+                                        }
+                                      ],
                                       "alternate": [
                                         {
                                           "id": "qmwfnk",
@@ -6227,42 +6282,22 @@
                                           "required": false,
                                           "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Moderne Küchenausstattung“ nicht zutrifft: Ceran-Kochfeld oder Induktions- Kochfeld [++]\n\nMerkmal 2017-2023:\nCeran-Kochfeld oder Induktions- Kochfeld [++]\n\nMerkmal >=2024: \nCeran-Kochfeld oder Induktions-Kochfeld (gilt für Baualtersklassen bis einschließlich 2001)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                         }
-                                      ],
-                                      "cases": [
-                                        {
-                                          "type": "IfCase",
-                                          "id": "ntjw9",
-                                          "block": [],
-                                          "test": {
-                                            "id": "4k6iz",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Sondermerkmal Moderne Küche"
-                                            },
-                                            "operator": "is",
-                                            "negated": false,
-                                            "type": "AnswerOptionComparison",
-                                            "comparands": [
-                                              "uiajj"
-                                            ]
-                                          }
-                                        }
                                       ]
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "IfCase",
                                   "id": "t6hvh",
+                                  "type": "IfCase",
                                   "test": {
                                     "id": "yk6pl",
                                     "questionRef": {
                                       "type": "AliasRef",
                                       "value": "Vertragsdatum"
                                     },
-                                    "operator": "is",
                                     "negated": false,
                                     "type": "AnswerOptionComparison",
+                                    "operator": "is",
                                     "comparands": [
                                       "7np1",
                                       "m2jo",
@@ -6305,22 +6340,21 @@
                               ],
                               "alternate": [
                                 {
-                                  "type": "If",
                                   "id": "91zivh",
-                                  "alternate": [],
+                                  "type": "If",
                                   "cases": [
                                     {
-                                      "type": "IfCase",
                                       "id": "tqr2t",
+                                      "type": "IfCase",
                                       "test": {
                                         "id": "h868v",
                                         "questionRef": {
                                           "type": "AliasRef",
                                           "value": "Baujahr"
                                         },
-                                        "operator": "lte",
                                         "negated": false,
                                         "type": "AnswerNumberComparison",
+                                        "operator": "lte",
                                         "comparands": [
                                           {
                                             "type": "NumberLiteral",
@@ -6360,49 +6394,15 @@
                                         }
                                       ]
                                     }
-                                  ]
+                                  ],
+                                  "alternate": []
                                 }
                               ]
                             }
-                          ],
-                          "test": {
-                            "type": "LogicalOperation",
-                            "id": "siv5q",
-                            "operator": "and",
-                            "negated": false,
-                            "conditions": [
-                              {
-                                "id": "j5c3p",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Küche hat Kochmöglichkeit"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "8i22j",
-                                  "uiajj"
-                                ]
-                              },
-                              {
-                                "id": "j5c3p",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Küche hat Gas/Elektroherd ohne Backofen"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "qzhja",
-                                  "8i22j"
-                                ]
-                              }
-                            ]
-                          }
+                          ]
                         }
-                      ]
+                      ],
+                      "alternate": []
                     }
                   ]
                 },
@@ -6807,7 +6807,6 @@
                     {
                       "id": "cv6aw",
                       "type": "IfCase",
-                      "block": [],
                       "test": {
                         "id": "3bnnc",
                         "questionRef": {
@@ -6824,13 +6823,14 @@
                           "4obam",
                           "oqyrs"
                         ]
-                      }
+                      },
+                      "block": []
                     }
                   ],
                   "alternate": [
                     {
-                      "type": "Group",
                       "id": "x4mjv",
+                      "type": "Group",
                       "category": "Section",
                       "alias": "Wände",
                       "block": []
@@ -6892,8 +6892,8 @@
                       },
                       "block": [
                         {
-                          "type": "Group",
                           "id": "q2ng4k",
+                          "type": "Group",
                           "category": "Section",
                           "alias": "Fußboden",
                           "block": [
@@ -6933,22 +6933,21 @@
                   ],
                   "alternate": [
                     {
-                      "type": "If",
                       "id": "zerqeg",
-                      "alternate": [],
+                      "type": "If",
                       "cases": [
                         {
-                          "type": "IfCase",
                           "id": "lhvtf",
+                          "type": "IfCase",
                           "test": {
                             "id": "4sh92",
                             "questionRef": {
                               "type": "AliasRef",
                               "value": "Baujahr"
                             },
-                            "operator": "lte",
                             "negated": false,
                             "type": "AnswerNumberComparison",
+                            "operator": "lte",
                             "comparands": [
                               {
                                 "type": "NumberLiteral",
@@ -6996,7 +6995,8 @@
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "alternate": []
                     }
                   ]
                 }
@@ -7141,7 +7141,6 @@
                     {
                       "id": "0yy1s",
                       "type": "If",
-                      "alternate": [],
                       "cases": [
                         {
                           "id": "e3xzt",
@@ -7192,17 +7191,17 @@
                           ]
                         },
                         {
-                          "type": "IfCase",
                           "id": "x814c",
+                          "type": "IfCase",
                           "test": {
                             "id": "t0sbu",
                             "questionRef": {
                               "type": "AliasRef",
                               "value": "Wohnung hat Balkon"
                             },
-                            "operator": "is",
                             "negated": false,
                             "type": "AnswerOptionComparison",
+                            "operator": "is",
                             "comparands": [
                               "43bd3",
                               "36h0m"
@@ -7240,7 +7239,8 @@
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "alternate": []
                     }
                   ]
                 },
@@ -8889,22 +8889,21 @@
                   ]
                 },
                 {
-                  "type": "If",
                   "id": "g3886",
+                  "type": "If",
                   "cases": [
                     {
-                      "type": "IfCase",
                       "id": "3q7ky",
-                      "block": [],
+                      "type": "IfCase",
                       "test": {
                         "id": "uzqd2",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Vertragsdatum"
                         },
-                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
+                        "operator": "is",
                         "comparands": [
                           "wejo0k",
                           "7np1",
@@ -8912,7 +8911,8 @@
                           "4obam",
                           "oqyrs"
                         ]
-                      }
+                      },
+                      "block": []
                     }
                   ],
                   "alternate": [
@@ -8993,7 +8993,6 @@
                     {
                       "id": "l28ub",
                       "type": "If",
-                      "alternate": [],
                       "cases": [
                         {
                           "id": "4mchoi",
@@ -9014,81 +9013,21 @@
                           },
                           "block": [
                             {
-                              "type": "If",
                               "id": "5sykm",
-                              "alternate": [
-                                {
-                                  "type": "If",
-                                  "id": "ciipi",
-                                  "alternate": [],
-                                  "cases": [
-                                    {
-                                      "type": "IfCase",
-                                      "id": "i9bwul",
-                                      "test": {
-                                        "id": "5846m",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Baujahr"
-                                        },
-                                        "operator": "lte",
-                                        "negated": false,
-                                        "type": "AnswerNumberComparison",
-                                        "comparands": [
-                                          {
-                                            "type": "NumberLiteral",
-                                            "value": 2015
-                                          }
-                                        ]
-                                      },
-                                      "block": [
-                                        {
-                                          "id": "eiemr",
-                                          "type": "Question",
-                                          "alias": "Gebäude ist in gutem Zustand",
-                                          "text": "Ist das Gebäude, in dem sich die Wohnung befindet, in einem sehr guten Zustand?",
-                                          "info": "Insgesamt sollte der Eindruck eines frisch renovierten Hauses entstehen. Das ist dann anzunehmen, wenn sowohl Fassade als auch Dach den Eindruck machen frisch renoviert zu sein.",
-                                          "answer": {
-                                            "type": "ChoiceAnswer",
-                                            "options": [
-                                              {
-                                                "id": "uiajj",
-                                                "alias": "Ja",
-                                                "text": "Ja"
-                                              },
-                                              {
-                                                "id": "qzhja",
-                                                "alias": "Nein",
-                                                "text": "Nein"
-                                              },
-                                              {
-                                                "id": "8i22j",
-                                                "alias": "Nicht sicher",
-                                                "text": "Ich bin mir nicht sicher"
-                                              }
-                                            ]
-                                          },
-                                          "required": false,
-                                          "note": "Merkmal 2015-2023:\nÜberdurchschnittlich guter Instandhaltungszustand des Gebäude(-teil)s, indem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach) [++]\n\nMerkmal >=2024:\nÜberdurchschnittlich guter Instandhaltungszustand des\nGebäude (-teil-)s, in dem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach); gilt für die Baualtersklassen bis einschließlich 2015\n\nJa -> Check\nNicht sicher -> Nicht sicher \n"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ],
+                              "type": "If",
                               "cases": [
                                 {
-                                  "type": "IfCase",
                                   "id": "az5yz",
+                                  "type": "IfCase",
                                   "test": {
                                     "id": "ye0fw",
                                     "questionRef": {
                                       "type": "AliasRef",
                                       "value": "Vertragsdatum"
                                     },
-                                    "operator": "is",
                                     "negated": false,
                                     "type": "AnswerOptionComparison",
+                                    "operator": "is",
                                     "comparands": [
                                       "wejo0k",
                                       "7np1",
@@ -9129,11 +9068,72 @@
                                     }
                                   ]
                                 }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "ciipi",
+                                  "type": "If",
+                                  "cases": [
+                                    {
+                                      "id": "i9bwul",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "5846m",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerNumberComparison",
+                                        "operator": "lte",
+                                        "comparands": [
+                                          {
+                                            "type": "NumberLiteral",
+                                            "value": 2015
+                                          }
+                                        ]
+                                      },
+                                      "block": [
+                                        {
+                                          "id": "eiemr",
+                                          "type": "Question",
+                                          "alias": "Gebäude ist in gutem Zustand",
+                                          "text": "Ist das Gebäude, in dem sich die Wohnung befindet, in einem sehr guten Zustand?",
+                                          "info": "Insgesamt sollte der Eindruck eines frisch renovierten Hauses entstehen. Das ist dann anzunehmen, wenn sowohl Fassade als auch Dach den Eindruck machen frisch renoviert zu sein.",
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal 2015-2023:\nÜberdurchschnittlich guter Instandhaltungszustand des Gebäude(-teil)s, indem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach) [++]\n\nMerkmal >=2024:\nÜberdurchschnittlich guter Instandhaltungszustand des\nGebäude (-teil-)s, in dem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach); gilt für die Baualtersklassen bis einschließlich 2015\n\nJa -> Check\nNicht sicher -> Nicht sicher \n"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "alternate": []
+                                }
                               ]
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "alternate": []
                     }
                   ]
                 },

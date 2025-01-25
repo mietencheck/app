@@ -1,4 +1,4 @@
-import { Table, TableBody, TableCell, TableRow } from "~/components";
+import { Table, TableBody, TableCell, TableRow } from "~/components/ui";
 import {
   getAdresse,
   getAusstattung,

@@ -4,10 +4,10 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Button } from "react-aria-components";
 
 import { StatusIcon, StatusIconProps } from "~/components/ui";
-import { NavItemData } from "~/details/navigation";
+import { ChevronDownIcon } from "~/components/ui/Icons/ChevronDown";
 import { useLocalizeString } from "~/l10n";
+import { NavItemData } from "~/pages/details/navigation";
 
-import { ChevronDownIcon } from "../components/ui/Icons/ChevronDown";
 import {
   useCheckIsGroupCompleted,
   useHasMissingAnswers,

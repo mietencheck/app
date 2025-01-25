@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button } from "~/components";
+import { Button } from "~/components/ui";
 import { useAnswers } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
@@ -30,7 +30,7 @@ const Exits = {
   "Möblierte Wohnung": () => <ExitMöbliert />,
 };
 
-export function VorspeiseExit({
+export function SchnelltestExit({
   step,
   stepper,
 }: {

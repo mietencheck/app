@@ -1,10 +1,10 @@
-import { Button, Label, LinkButton } from "~/components";
-import { DetailsRouter } from "~/details/router";
-import { useWorstBestZulaessigeHoechstmieteDiff } from "~/details/utils";
+import { Button, Label, LinkButton } from "~/components/ui";
 import { AdresseForm } from "~/form/adresse/AdresseForm";
 import { AnswerControl, GlossyText } from "~/form/AnswerControl";
 import { postMessageToFloma, useAnswers } from "~/form/flow-machine";
 import { useLocalizeField, useLocalizeString } from "~/l10n";
+import { DetailsRouter } from "~/pages/details/router";
+import { useWorstBestZulaessigeHoechstmieteDiff } from "~/pages/details/utils";
 
 import { StepperType } from "..";
 import { useEstimatorSeen } from "../utils";
@@ -27,7 +27,7 @@ const GlossyLabel = ({
   </div>
 );
 
-export function VorspeiseQuestion({
+export function SchnelltestQuestion({
   step,
   stepper,
 }: {

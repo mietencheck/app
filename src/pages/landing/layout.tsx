@@ -1,9 +1,10 @@
 import { Menu } from "lucide-react";
 import React from "react";
 
-import { IconButton } from "~/components";
-import { LanguageSelect } from "~/components/LanguageSelect";
+import { IconButton } from "~/components/ui";
 import { useLocaleState, useLocalizeField } from "~/l10n";
+
+import { LanguageSelect } from "../../components/partials/LanguageSelect";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [menu, setMenu] = React.useState(false);

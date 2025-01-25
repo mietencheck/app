@@ -1,8 +1,8 @@
+import { useLocalizeField } from "~/l10n";
 import {
   useWorstBestZulaessigeHoechstmiete,
   useWorstBestZulaessigeHoechstmieteDiff,
-} from "~/details/utils";
-import { useLocalizeField } from "~/l10n";
+} from "~/pages/details/utils";
 import { formatEuro } from "~/utils";
 
 export function MieteZuHoch() {
@@ -45,7 +45,7 @@ export function MieteZuHoch() {
       </div>
 
       <h3 className="text-base-medium mb-2">{l("Was nun?")}</h3>
-      <p className="text-neutral-faded mb-6">{l("Vorspeise Was Nun Text")}</p>
+      <p className="text-neutral-faded mb-6">{l("Schnelltest Was Nun Text")}</p>
     </>
   );
 }
