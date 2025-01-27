@@ -43,7 +43,7 @@ export const getWorstBestSondermerkmalModifierBySondermerkmal = (
       };
     }
   | undefined => {
-  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const mietspiegeljahr = getMietspiegeljahr(answers);
   const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
 
   const sondermerkmalStates = getSondermerkmalStates(

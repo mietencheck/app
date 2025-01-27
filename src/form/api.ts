@@ -23,10 +23,15 @@ import {
 
 export const getMietspiegeljahr = (
   answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
 ): Mietspiegeljahr | undefined => {
   const alias = "Vertragsdatum";
-  return answers[alias] && visibleQuestionAliases.has(alias)
+
+  // If contract is not signed, use newest Mietspiegel
+  if (answers["Unterschrieben"] == "Nein") {
+    return "2024";
+  }
+
+  return answers[alias]
     ? vertragsdatumToMietspiegelJahrMapping[answers[alias]]
     : undefined;
 };
@@ -75,7 +80,7 @@ export const getWohnflaecheSpanne = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ) => {
-  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const mietspiegeljahr = getMietspiegeljahr(answers);
   const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
   const wohnlage = getWohnlage(answers, visibleQuestionAliases);
   const wohnflaeche = getWohnflaeche(answers, visibleQuestionAliases);
@@ -125,7 +130,7 @@ export const getBaujahrSpanne = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ) => {
-  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const mietspiegeljahr = getMietspiegeljahr(answers);
   const baujahr = getBaujahr(answers, visibleQuestionAliases);
   const ost = getOst(answers, visibleQuestionAliases);
 
@@ -194,7 +199,7 @@ export const getMerkmalStates = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): MerkmalStateList => {
-  const mietspiegelJahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const mietspiegelJahr = getMietspiegeljahr(answers);
 
   if (mietspiegelJahr) {
     const merkmale = merkmaleByYear[mietspiegelJahr];
@@ -226,7 +231,7 @@ export const getSondermerkmalStates = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): SondermerkmalStateList | undefined => {
-  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const mietspiegeljahr = getMietspiegeljahr(answers);
 
   if (mietspiegeljahr == "2015") {
     return fromEntries(

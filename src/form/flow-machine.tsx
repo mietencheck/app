@@ -72,11 +72,25 @@ export function useFlowMachine() {
 
 type AnswerMachine = ReturnType<typeof flowMachine.answers>;
 
-function buildLageInfo(answers: AnswerMachine) {
+function buildVertragsdatum(answers: AnswerMachine) {
+  const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
   const vertragsdatum = answers.getWithOptionAlias("Vertragsdatum");
+
+  if (unterschrieben == "Nein") {
+    return ">2024";
+  }
+
+  return vertragsdatum;
+}
+
+function buildLageInfo(answers: AnswerMachine) {
+  const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
+  const vertragsdatum = buildVertragsdatum(answers);
+
   const mietspieglJahr =
-    (vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum]) ||
-    undefined;
+    unterschrieben == "Nein"
+      ? "2024" // If contract is not signed, use newest Mietspiegel
+      : vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum];
 
   const addresse = answers.get("Adresse");
   const lage =
@@ -124,13 +138,16 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
   );
 
   const answersValue = useMemo(() => {
+    const vertragsdatum = buildVertragsdatum(bareAnswers);
     const lageInfo = buildLageInfo(bareAnswers);
     const baujahr = buildBaujahr(bareAnswers);
+
     const value = {
       ...storedAnswers,
       Ost: lageInfo?.ost ?? null,
       Wohnlage: lageInfo?.wohnlage ?? null,
       Baujahr: baujahr || null,
+      Vertragsdatum: vertragsdatum || null,
     };
     postMessageToFloma("Answers", { value });
     return flowMachine.answers(value, setKV);

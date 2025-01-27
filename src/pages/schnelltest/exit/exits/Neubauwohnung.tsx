@@ -1,5 +1,5 @@
 import { getMietspiegeljahr } from "~/form/api";
-import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
+import { useAnswers } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
 import { WerdeAktiv } from "../../partials";
@@ -7,8 +7,7 @@ import { WerdeAktiv } from "../../partials";
 export function Neubauwohnung() {
   const l = useLocalizeField();
   const answers = useAnswers().getAliasedState();
-  const visibleQuestionAliases = useVisibleQuestionAliases();
-  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const mietspiegeljahr = getMietspiegeljahr(answers);
 
   return (
     <>
