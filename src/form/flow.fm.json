@@ -709,26 +709,11 @@
         {
           "id": "k3jgpi",
           "type": "If",
+          "alternate": [],
           "cases": [
             {
               "id": "hmm0v",
               "type": "IfCase",
-              "test": {
-                "id": "sfabh",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Baujahr"
-                },
-                "negated": false,
-                "type": "AnswerNumberComparison",
-                "operator": "gt",
-                "comparands": [
-                  {
-                    "type": "NumberLiteral",
-                    "value": 2014
-                  }
-                ]
-              },
               "block": [
                 {
                   "id": "ie8uh",
@@ -736,7 +721,68 @@
                   "text": "",
                   "type": "Exit"
                 }
-              ]
+              ],
+              "test": {
+                "type": "LogicalOperation",
+                "id": "eflw9",
+                "operator": "or",
+                "negated": false,
+                "conditions": [
+                  {
+                    "type": "LogicalOperation",
+                    "id": "3i4jxg",
+                    "operator": "and",
+                    "negated": false,
+                    "conditions": [
+                      {
+                        "id": "sfabh",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Vertragsdatum"
+                        },
+                        "operator": "is",
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "comparands": [
+                          "wejo0k"
+                        ]
+                      },
+                      {
+                        "id": "sfabh",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Baujahr"
+                        },
+                        "negated": false,
+                        "type": "AnswerNumberComparison",
+                        "operator": "gte",
+                        "comparands": [
+                          {
+                            "type": "NumberLiteral",
+                            "value": 2014
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "sfabh",
+                    "questionRef": {
+                      "type": "AliasRef",
+                      "value": "Baujahr"
+                    },
+                    "negated": false,
+                    "type": "AnswerNumberComparison",
+                    "operator": "gt",
+                    "comparands": [
+                      {
+                        "type": "NumberLiteral",
+                        "value": 2014
+                      }
+                    ]
+                  }
+                ]
+              }
             },
             {
               "id": "prsb6i",
@@ -875,8 +921,7 @@
                 }
               ]
             }
-          ],
-          "alternate": []
+          ]
         },
         {
           "id": "9x41yh",

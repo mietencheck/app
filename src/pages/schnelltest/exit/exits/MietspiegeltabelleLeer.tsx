@@ -18,9 +18,6 @@ export function MietspiegeltabelleLeer() {
         <p className="text-neutral-faded">
           {l("Exit MietspiegeltabelleLeer Text 3")}
         </p>
-        <a className="inline-block underline" href="TODO">
-          {l("Mehr Informationen")}
-        </a>
       </div>
     </>
   );
