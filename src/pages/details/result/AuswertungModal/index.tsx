@@ -96,9 +96,8 @@ export function AuswertungTabPanel() {
 export function AuswertungsModal({ onClose }: { onClose: () => void }) {
   const l = useLocalizeField();
   const answers = useAnswers().getAliasedState();
-  const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  const mietspiegljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const mietspiegljahr = getMietspiegeljahr(answers);
 
   return (
     <>

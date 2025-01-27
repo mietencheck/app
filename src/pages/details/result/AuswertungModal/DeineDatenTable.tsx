@@ -26,7 +26,7 @@ export function DeineDatenTable() {
     plz: "",
   };
   const wohnlage = getWohnlage(answers, visibleQuestionAliases) || "";
-  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const mietspiegeljahr = getMietspiegeljahr(answers);
   const nettokaltmiete =
     getNettokaltmiete(answers, visibleQuestionAliases) || 0;
   const wohnflaeche = getWohnflaeche(answers, visibleQuestionAliases) || 0;

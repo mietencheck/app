@@ -69,7 +69,7 @@ export function OrtsüblicheVergleichsmieteTable() {
     ortsueblicheVergleichsmiete.worst >= upper &&
     merkmalsgruppenInEuro.worst !== upper - avg;
 
-  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const mietspiegeljahr = getMietspiegeljahr(answers);
 
   const rows = [
     {

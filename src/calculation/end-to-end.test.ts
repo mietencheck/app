@@ -325,6 +325,19 @@ test.each([
         best: 393.36,
       },
     },
+    {
+      answers: {
+        Unterschrieben: "Nein",
+        Baujahr: 2003,
+        Ost: false,
+        Wohnlage: "mittel",
+        Qm: 90,
+      },
+      result: {
+        worst: 890.01,
+        best: 890.01,
+      },
+    },
   ].map(({ answers, result }) => {
     return {
       answers: {

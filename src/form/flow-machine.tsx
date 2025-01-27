@@ -72,9 +72,21 @@ export function useFlowMachine() {
 
 type AnswerMachine = ReturnType<typeof flowMachine.answers>;
 
-function buildLageInfo(answers: AnswerMachine) {
+function buildVertragsdatum(answers: AnswerMachine) {
+  const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
   const vertragsdatum = answers.getWithOptionAlias("Vertragsdatum");
-  const mietspieglJahr =
+
+  if (unterschrieben == "Nein") {
+    return ">2024";
+  }
+
+  return vertragsdatum;
+}
+
+function buildLageInfo(answers: AnswerMachine) {
+  const vertragsdatum = buildVertragsdatum(answers);
+
+  let mietspieglJahr =
     (vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum]) ||
     undefined;
 
@@ -124,13 +136,16 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
   );
 
   const answersValue = useMemo(() => {
+    const vertragsdatum = buildVertragsdatum(bareAnswers);
     const lageInfo = buildLageInfo(bareAnswers);
     const baujahr = buildBaujahr(bareAnswers);
+
     const value = {
       ...storedAnswers,
       Ost: lageInfo?.ost ?? null,
       Wohnlage: lageInfo?.wohnlage ?? null,
       Baujahr: baujahr || null,
+      Vertragsdatum: vertragsdatum || null,
     };
     postMessageToFloma("Answers", { value });
     return flowMachine.answers(value, setKV);

@@ -13,7 +13,7 @@ export function getWorstBestAusstattungsAbzug(
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): { worst: number; best: number } | undefined {
-  const mietspiegelJahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const mietspiegelJahr = getMietspiegeljahr(answers);
   const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
   const ausstattung = getAusstattung(answers, visibleQuestionAliases);
 

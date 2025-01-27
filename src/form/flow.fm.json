@@ -18,7 +18,7 @@
           "answer": {
             "type": "TextAnswer"
           },
-          "required": false
+          "required": true
         },
         {
           "id": "khlf2",
@@ -82,11 +82,12 @@
               }
             ]
           },
-          "required": false
+          "required": true
         },
         {
           "id": "j4sr7",
           "type": "If",
+          "alternate": [],
           "cases": [
             {
               "id": "dgylv",
@@ -151,7 +152,7 @@
                       }
                     ]
                   },
-                  "required": false
+                  "required": true
                 },
                 {
                   "id": "lrir7",
@@ -216,12 +217,11 @@
                       }
                     ]
                   },
-                  "required": false
+                  "required": true
                 }
               ]
             }
-          ],
-          "alternate": []
+          ]
         },
         {
           "id": "j8x3c",
@@ -253,7 +253,7 @@
                   "answer": {
                     "type": "NumberAnswer"
                   },
-                  "required": false
+                  "required": true
                 }
               ]
             },
@@ -283,7 +283,7 @@
                   "answer": {
                     "type": "NumberAnswer"
                   },
-                  "required": false
+                  "required": true
                 }
               ]
             }
@@ -298,7 +298,7 @@
               "answer": {
                 "type": "NumberAnswer"
               },
-              "required": false
+              "required": true
             }
           ]
         },
@@ -311,7 +311,7 @@
           "answer": {
             "type": "NumberAnswer"
           },
-          "required": false
+          "required": true
         },
         {
           "id": "9e585",
@@ -339,7 +339,7 @@
               }
             ]
           },
-          "required": false
+          "required": true
         },
         {
           "id": "5igw6",
@@ -391,12 +391,13 @@
                   }
                 ]
               },
-              "required": false,
+              "required": true,
               "note": ""
             },
             {
               "id": "gh2txh",
               "type": "If",
+              "alternate": [],
               "cases": [
                 {
                   "id": "dqtn8",
@@ -424,12 +425,11 @@
                       "answer": {
                         "type": "NumberAnswer"
                       },
-                      "required": false
+                      "required": true
                     }
                   ]
                 }
-              ],
-              "alternate": []
+              ]
             }
           ],
           "cases": [
@@ -476,7 +476,7 @@
                       }
                     ]
                   },
-                  "required": false
+                  "required": true
                 },
                 {
                   "id": "93ib8",
@@ -505,7 +505,6 @@
                           "alias": "Baujahr vor 1991",
                           "text": "Wann wurde das Dachgeschoss ausgebaut? ",
                           "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-                          "required": false,
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -545,11 +544,13 @@
                                 "text": "Ab einschließlich 1991"
                               }
                             ]
-                          }
+                          },
+                          "required": true
                         },
                         {
                           "id": "u1twq",
                           "type": "If",
+                          "alternate": [],
                           "cases": [
                             {
                               "id": "4swtk",
@@ -577,12 +578,11 @@
                                   "answer": {
                                     "type": "NumberAnswer"
                                   },
-                                  "required": false
+                                  "required": true
                                 }
                               ]
                             }
-                          ],
-                          "alternate": []
+                          ]
                         }
                       ]
                     }
@@ -594,7 +594,6 @@
                       "alias": "Baujahr vor 1991",
                       "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, gebaut",
                       "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-                      "required": false,
                       "answer": {
                         "type": "ChoiceAnswer",
                         "options": [
@@ -634,11 +633,13 @@
                             "text": "Ab einschließlich 1991"
                           }
                         ]
-                      }
+                      },
+                      "required": true
                     },
                     {
                       "id": "w5s01",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "1gulzh",
@@ -666,12 +667,11 @@
                               "answer": {
                                 "type": "NumberAnswer"
                               },
-                              "required": false
+                              "required": true
                             }
                           ]
                         }
-                      ],
-                      "alternate": []
+                      ]
                     }
                   ]
                 }
@@ -694,6 +694,7 @@
         {
           "id": "k3jgpi",
           "type": "If",
+          "alternate": [],
           "cases": [
             {
               "id": "hmm0v",
@@ -835,7 +836,7 @@
                               }
                             ]
                           },
-                          "required": false
+                          "required": true
                         }
                       ]
                     }
@@ -867,7 +868,7 @@
                           }
                         ]
                       },
-                      "required": false
+                      "required": true
                     }
                   ]
                 },
@@ -905,8 +906,7 @@
                 }
               ]
             }
-          ],
-          "alternate": []
+          ]
         },
         {
           "id": "9x41yh",
@@ -1584,13 +1584,29 @@
           "alternate": []
         },
         {
-          "type": "If",
           "id": "3ub8gi",
+          "type": "If",
           "alternate": [],
           "cases": [
             {
-              "type": "IfCase",
               "id": "7o9r3k",
+              "type": "IfCase",
+              "test": {
+                "id": "5bl2j",
+                "questionRef": {
+                  "type": "AliasRef",
+                  "value": "Baujahr"
+                },
+                "negated": false,
+                "type": "AnswerNumberComparison",
+                "operator": "lte",
+                "comparands": [
+                  {
+                    "type": "NumberLiteral",
+                    "value": 1964
+                  }
+                ]
+              },
               "block": [
                 {
                   "id": "yzup4",
@@ -1618,7 +1634,7 @@
                       }
                     ]
                   },
-                  "required": false
+                  "required": true
                 },
                 {
                   "id": "hnhnz",
@@ -1646,25 +1662,9 @@
                       }
                     ]
                   },
-                  "required": false
+                  "required": true
                 }
-              ],
-              "test": {
-                "id": "5bl2j",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Baujahr"
-                },
-                "operator": "lte",
-                "negated": false,
-                "type": "AnswerNumberComparison",
-                "comparands": [
-                  {
-                    "type": "NumberLiteral",
-                    "value": 1964
-                  }
-                ]
-              }
+              ]
             }
           ]
         },
@@ -1704,7 +1704,7 @@
               }
             ]
           },
-          "required": false
+          "required": true
         },
         {
           "id": "rk32x",

@@ -17,7 +17,7 @@ export function getWorstBestPreisspanne(
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): { worst: Preisspanne; best: Preisspanne } | undefined {
-  const mietspiegeljahr = getMietspiegeljahr(answers, visibleQuestionAliases);
+  const mietspiegeljahr = getMietspiegeljahr(answers);
   const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
   const wohnflaecheSpanne = getWohnflaecheSpanne(
     answers,
