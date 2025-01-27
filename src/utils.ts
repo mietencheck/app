@@ -1,4 +1,7 @@
-import { AdresseFormValue, AdresseWithLage } from "~/form/adresse/types";
+import {
+  AdresseFormValue,
+  AdresseWithLage,
+} from "~/components/AdresseForm/types";
 
 export function isKeyOfObject<T extends object>(
   key: string | number | symbol,

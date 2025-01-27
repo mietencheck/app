@@ -2,16 +2,17 @@ import * as Sentry from "@sentry/react";
 import React, { Suspense, useCallback, useEffect, useMemo } from "react";
 import { Dialog } from "react-aria-components";
 
-import LandingPage from "./landing";
-import { DatenschutzPage } from "./landing/datenschutz";
-import { ImpressumPage } from "./landing/impressum";
-import { UeberUnsPage } from "./landing/ueber-uns";
+import { BeratungPage } from "~/pages/beratung";
+import LandingPage from "~/pages/landing";
+import { DatenschutzPage } from "~/pages/landing/datenschutz";
+import { ImpressumPage } from "~/pages/landing/impressum";
+import { UeberUnsPage } from "~/pages/landing/ueber-uns";
+import { SchnelltestPage } from "~/pages/schnelltest";
+
 import { AppRouter } from "./router";
 import { ContinueSessionModal, SESSION_PARAM, useSyncAnswers } from "./session";
-import { VorspeisePage } from "./vorspeise";
 
-const DetailsPage = React.lazy(() => import("./details"));
-const PDFs = React.lazy(() => import("./pdf"));
+const DetailsPage = React.lazy(() => import("~/pages/details"));
 
 function parseJSONOrUseDirectly(value: unknown) {
   try {
@@ -46,9 +47,9 @@ function Router() {
     "UeberUns",
     "Datenschutz",
     "Impressum",
-    "Starter",
+    "Schnelltest",
     "Details",
-    "PDFs",
+    "Beratung",
     "Error",
   ]);
 
@@ -56,12 +57,12 @@ function Router() {
   switch (route.name) {
     case "Landing":
       return <LandingPage />;
-    case "Starter":
-      return <VorspeisePage />;
+    case "Schnelltest":
+      return <SchnelltestPage />;
     case "Details":
       return <DetailsPage />;
-    case "PDFs":
-      return <PDFs />;
+    case "Beratung":
+      return <BeratungPage />;
     case "UeberUns":
       return <UeberUnsPage />;
     case "Datenschutz":

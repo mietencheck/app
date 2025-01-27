@@ -17,44 +17,10 @@ import { parseAdresse } from "~/utils";
 
 import { StepInfoByAlias } from "./flow.fm";
 import flow from "./flow.fm.json";
-import { MietspiegelJahr, OstWestBaujahr } from "./mietspiegel";
+import { vertragsdatumToMietspiegelJahrMapping } from "./mappings/vertragsdatum";
 
 export type EstimateAnswers = StepInfoByAlias["Einschätzung"]["state"];
 export type FinalAnswers = StepInfoByAlias["Auswertung"]["state"];
-
-export function getOstWestBaujahr(
-  baujahr: EstimateAnswers["Baujahr"],
-  ost: boolean,
-): OstWestBaujahr | null {
-  switch (baujahr) {
-    case undefined:
-    case "Nicht sicher":
-      return null;
-    case "1973-1990":
-      return ost ? "O:1973-1990" : "W:1973-1990";
-    case "2003-2014":
-    case ">2014":
-      return "2003-2017";
-    default:
-      return baujahr;
-  }
-}
-
-export const vertragsDatumToMietspiegelJahr = {
-  "<2015": null,
-  "2015-2016": "2015",
-  "2016-2018": "2017",
-  "2018-2020": "2019",
-  "2020-2022": "2021",
-  "2022-2024": "2023",
-  ">2024": null,
-} satisfies Record<
-  NonNullable<EstimateAnswers["Vertragsdatum"]>,
-  MietspiegelJahr | null
->;
-
-export const getMietspiegelJahr = (datum?: EstimateAnswers["Vertragsdatum"]) =>
-  datum ? vertragsDatumToMietspiegelJahr[datum] : null;
 
 const noop = () => {};
 
@@ -106,16 +72,31 @@ export function useFlowMachine() {
 
 type AnswerMachine = ReturnType<typeof flowMachine.answers>;
 
-function getLageInfo(answers: AnswerMachine) {
-  const datum = answers.getWithOptionAlias("Vertragsdatum");
-  const jahr = (datum && vertragsDatumToMietspiegelJahr[datum]) || null;
-  const adressValue = answers.get("Adresse");
+function buildLageInfo(answers: AnswerMachine) {
+  const vertragsdatum = answers.getWithOptionAlias("Vertragsdatum");
+  const mietspieglJahr =
+    (vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum]) ||
+    undefined;
+
+  const addresse = answers.get("Adresse");
   const lage =
-    (adressValue &&
-      typeof adressValue == "string" &&
-      parseAdresse(adressValue).lage) ||
+    (addresse && typeof addresse == "string" && parseAdresse(addresse).lage) ||
     null;
-  return (jahr && lage?.[jahr]) ?? null;
+  return (mietspieglJahr && lage?.[mietspieglJahr]) ?? null;
+}
+
+function buildBaujahr(answers: AnswerMachine) {
+  const baujahrSpanne = answers.getWithOptionAlias("Baujahr vor 1991");
+  const baujahr = answers.getWithOptionAlias("Baujahr ab 1991");
+
+  if (baujahrSpanne == "1991-") {
+    return baujahr;
+  } else {
+    const constructionYearBoundaries = baujahrSpanne?.split("-");
+    return constructionYearBoundaries?.[0] !== ""
+      ? constructionYearBoundaries?.[0]
+      : constructionYearBoundaries[1];
+  }
 }
 
 const AnswersContext = React.createContext<AnswerMachine>(
@@ -143,11 +124,13 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
   );
 
   const answersValue = useMemo(() => {
-    const lageInfo = getLageInfo(bareAnswers);
+    const lageInfo = buildLageInfo(bareAnswers);
+    const baujahr = buildBaujahr(bareAnswers);
     const value = {
       ...storedAnswers,
       Ost: lageInfo?.ost ?? null,
       Wohnlage: lageInfo?.wohnlage ?? null,
+      Baujahr: baujahr || null,
     };
     postMessageToFloma("Answers", { value });
     return flowMachine.answers(value, setKV);
@@ -197,26 +180,26 @@ export function useVisibleQuestionAliases() {
   );
 }
 
-export function useStarterSteps() {
+export function useSchnelltestSteps() {
   const steps = useSteps();
   return useMemo(() => {
-    const starter = steps.find(
-      (s) => s.type == "Group" && s.alias == "Vorspeise",
+    const schnelltest = steps.find(
+      (s) => s.type == "Group" && s.alias == "Schnelltest",
     );
-    return starter?.type == "Group" ? ungroup(starter.steps) : [];
+    return schnelltest?.type == "Group" ? ungroup(schnelltest.steps) : [];
   }, [steps]);
 }
 
-export function useMainSteps() {
+export function useDetailsSteps() {
   const steps = useSteps();
   return useMemo(() => {
-    const starter = steps.find(
-      (s) => s.type == "Group" && s.alias == "Hauptspeise",
+    const details = steps.find(
+      (s) => s.type == "Group" && s.alias == "Details",
     );
-    return starter?.type == "Group" ? starter.steps : [];
+    return details?.type == "Group" ? details.steps : [];
   }, [steps]);
 }
-export type MainSteps = ReturnType<typeof useMainSteps>;
+export type MainSteps = ReturnType<typeof useDetailsSteps>;
 
 export * from "./flow.fm";
 
