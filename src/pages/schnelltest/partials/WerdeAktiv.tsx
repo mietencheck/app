@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "~/components/ui";
+} from "~/components";
 import { useLocaleState, useLocalizeField } from "~/l10n";
 
 export function WerdeAktiv() {

@@ -1,6 +1,6 @@
 import { getWorstBestAusstattungsAbzug } from "~/calculation/ausstattungsAbzug";
-import { IconButton, Tab, TabList, TabPanel, Tabs } from "~/components/ui";
-import { CloseIcon } from "~/components/ui/Icons/Close";
+import { IconButton, Tab, TabList, TabPanel, Tabs } from "~/components";
+import { CloseIcon } from "~/components/Icons/Close";
 import { getMietspiegeljahr } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";

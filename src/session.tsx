@@ -6,7 +6,7 @@ import { omit } from "remeda";
 import useSWR from "swr";
 import { useDebounceCallback, useLocalStorage } from "usehooks-ts";
 
-import { Button, TextInput } from "~/components/ui";
+import { Button, TextInput } from "~/components";
 import { useStoredAnswers } from "~/form/flow-machine";
 
 import { useLocalizeField, useLocalizeString } from "./l10n";

@@ -7,6 +7,7 @@ export const AppRouter = createRouter({
   Impressum: "/impressum",
   Schnelltest: "/schnelltest",
   Details: "/details/*",
+  Beratung: "/beratung/*",
   PDFs: "/pdfs",
   Error: "/error",
 });

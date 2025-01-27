@@ -3,8 +3,8 @@ import { useMeasure } from "@uidotdev/usehooks";
 import { useEffect, useState } from "react";
 import { Button, DialogTrigger, Popover } from "react-aria-components";
 
-import { LIST_BOX_CLASS_NAME } from "~/components/ui";
-import { ChevronDownIcon } from "~/components/ui/Icons/ChevronDown";
+import { LIST_BOX_CLASS_NAME } from "~/components";
+import { ChevronDownIcon } from "~/components/Icons/ChevronDown";
 
 import { PageNavItem, SubListNav } from "./ListNav";
 import type { NavItemData } from "./navigation";

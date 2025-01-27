@@ -1,8 +1,8 @@
 import { pushUnsafe, useLocation } from "@swan-io/chicane";
 import React, { useEffect, useMemo, useRef } from "react";
 
-import { Header } from "~/components/partials";
-import { Button, LinkButton } from "~/components/ui";
+import { Button, LinkButton } from "~/components";
+import { Header } from "~/components/Header";
 import {
   useAnswers,
   useDetailsSteps,
@@ -13,12 +13,11 @@ import { NavBar } from "~/pages/details/NavBar";
 
 import { DetailPage } from "./detail";
 import { ListNav, NavItem, PageNavItem, SubListNav } from "./ListNav";
-import { MissingFieldsPage } from "./missing";
 import { buildPageIndex, getRelNavItems, useMainNavItems } from "./navigation";
 import { ResultPage } from "./result";
 import { DetailsRouter } from "./router";
 import { SummaryPage } from "./summary";
-import { useHasMissingAnswers, useIsCompleted, usePathname } from "./utils";
+import { useIsCompleted, usePathname } from "./utils";
 
 function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -101,12 +100,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function DetailsPage() {
-  const route = DetailsRouter.useRoute([
-    "Summary",
-    "FormPage",
-    "Result",
-    "Missing",
-  ]);
+  const route = DetailsRouter.useRoute(["Summary", "FormPage", "Result"]);
 
   const location = useLocation();
 
@@ -139,17 +133,6 @@ export default function DetailsPage() {
     }
   }, [location.path]);
 
-  const hasMissingFields = useHasMissingAnswers();
-  useEffect(() => {
-    if (
-      hasMissingFields &&
-      (route?.name == "FormPage" || route?.name == "Result") &&
-      location.path.at(-1) != "mietvertrag"
-    ) {
-      DetailsRouter.replace("Missing");
-    }
-  }, [hasMissingFields, location.path, route?.name]);
-
   if (!route) return null;
   return (
     <Layout>
@@ -157,9 +140,6 @@ export default function DetailsPage() {
         switch (route.name) {
           case "Summary":
             return <SummaryPage />;
-
-          case "Missing":
-            return <MissingFieldsPage />;
 
           case "FormPage":
             return <DetailPage />;

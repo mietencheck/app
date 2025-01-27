@@ -2,31 +2,60 @@ import { Group, Step } from "flow-machine";
 import { useMemo } from "react";
 
 import {
+  FeedbackButton,
+  FormDescription,
+  FormField,
+  FormLabel,
+  InputControl,
+} from "~/components";
+import {
   postMessageToFloma,
   useAnswers,
   useDetailsSteps,
 } from "~/form/flow-machine";
 import { useLocalizeString } from "~/l10n";
 
-import { AnswerField } from "./AnswerField";
 import { getSlugForAlias, usePathname } from "./utils";
 
-function NodeView({ step }: { step: Step }) {
+export function Node({ step }: { step: Step }) {
   const l = useLocalizeString();
-  const answers = useAnswers();
   switch (step.type) {
-    case "Question":
+    case "Question": {
+      const answers = useAnswers();
+
       return (
-        <AnswerField
-          key={step.id}
-          question={step}
-          value={answers.getById(step.id) as string}
-          onChange={(value) => {
-            answers.setById(step.id, value);
-            postMessageToFloma("ActiveStepId", { value: step.id });
-          }}
-        />
+        <FormField>
+          <FormLabel
+            htmlFor={step.id}
+            alias={step.alias}
+            label={step.text}
+            className="text-lg-book"
+          />
+          {step.info && (
+            <FormDescription
+              description={step.info}
+              className="text-base text-neutral-faded mt-1.5"
+            />
+          )}
+          <div className="mt-4">
+            <InputControl
+              autoFocus
+              id={step.id}
+              alias={step.alias}
+              answer={step.answer}
+              value={answers.getById(step.id, step.answer) as never}
+              onChange={(value) => {
+                answers.setById(step.id, value);
+                postMessageToFloma("ActiveStepId", { value: step.id });
+              }}
+            />
+          </div>
+          <div className="mt-4 flex justify-end">
+            <FeedbackButton question={step} />
+          </div>
+        </FormField>
       );
+    }
 
     case "Info":
       return (
@@ -40,7 +69,7 @@ function NodeView({ step }: { step: Step }) {
       return (
         <div key={step.alias} className="flex gap-12 flex-col">
           {step.alias && <h2 className="heading-24">{l(step.alias)}</h2>}
-          {step.steps?.map((child) => <NodeView key={child.id} step={child} />)}
+          {step.steps?.map((child) => <Node key={child.id} step={child} />)}
         </div>
       );
 
@@ -74,7 +103,7 @@ export function DetailPage() {
     <div className="flex flex-col gap-12">
       {group.alias && <p className="heading-28">{l(group.alias)}</p>}
       {group.steps.map((step) => (
-        <NodeView key={step.id} step={step} />
+        <Node key={step.id} step={step} />
       ))}
     </div>
   );

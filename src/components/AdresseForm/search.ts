@@ -3,12 +3,13 @@ import memoize from "memoizerific";
 import sanitize from "sanitize-filename";
 
 import strassen from "~/../public/strassenverzeichnis/strassen.json";
+
 import type {
   AdresseWithLage,
   LageInfo,
   LageInfoByJahr,
   StrassenDataRaw,
-} from "~/form/adresse/types";
+} from "./types";
 
 async function fetchWithRetryBackOff(url: string): Promise<Response> {
   const MAX_RETRIES = 30;

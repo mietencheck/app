@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from "cva";
 
-import { CheckIcon } from "~/components/ui/Icons/Check";
-import { MoreHorizontalIcon } from "~/components/ui/Icons/MoreHorizontal";
+import { CheckIcon } from "~/components/Icons/Check";
+import { MoreHorizontalIcon } from "~/components/Icons/MoreHorizontal";
 
 const statusIconVariants = cva(
   "flex w-[18px] h-[18px] items-center justify-center rounded-full",

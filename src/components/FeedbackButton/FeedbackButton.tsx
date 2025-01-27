@@ -4,12 +4,12 @@ import { useState } from "react";
 import { DialogTrigger } from "react-aria-components";
 import { pick } from "remeda";
 
-import { IconButton, TextArea } from "~/components/ui";
+import { IconButton, TextArea } from "~/components";
 import { useLocaleState, useLocalizeField, useLocalizeString } from "~/l10n";
 
-import { Button } from ".";
-import { CloseIcon } from "./Icons/Close";
-import { ModalDialog } from "./ModalDialog";
+import { Button } from "..";
+import { CloseIcon } from "../Icons/Close";
+import { ModalDialog } from "../Modal/ModalDialog";
 
 export const FeedbackButton = ({ question }: { question: Question }) => {
   const { locale } = useLocaleState();

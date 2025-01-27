@@ -1,7 +1,7 @@
 import { ReactNode, useState } from "react";
 import { DialogTrigger } from "react-aria-components";
 
-import { Button, ModalDialog } from "~/components/ui";
+import { Button, ModalDialog } from "~/components";
 import { useLocalizeField } from "~/l10n";
 import { SaveSessionModal } from "~/session";
 

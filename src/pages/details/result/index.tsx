@@ -7,8 +7,8 @@ import {
   AccordionItem,
   AccordionTrigger,
   Button,
-} from "~/components/ui";
-import { ModalDialog } from "~/components/ui/ModalDialog";
+  ModalDialog,
+} from "~/components";
 import { useLocaleState, useLocalizeField } from "~/l10n";
 import { SaveSessionModal } from "~/session";
 import { formatEuro } from "~/utils";
@@ -37,7 +37,6 @@ export function ResultPage() {
 
   const isCompleted = useIsCompleted();
 
-  const debugginginfo = localStorage.getItem("mb-flow");
   const l = useLocalizeField();
   const { locale } = useLocaleState();
 
@@ -90,10 +89,6 @@ export function ResultPage() {
         </div>
         <AuswertungTabPanel />
         <MerkmalTabPanel />
-        <div className="mt-12">
-          <h2 className="heading-24 mb-6">Entwickler Informationen</h2>
-          <p className="text-sm text-neutral-faded">{debugginginfo}</p>
-        </div>
       </div>
 
       <h2 className="heading-24 mb-4">

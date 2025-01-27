@@ -3,16 +3,12 @@ import cx from "classnames";
 import React, { useEffect, useMemo, useState } from "react";
 import { Button } from "react-aria-components";
 
-import { StatusIcon, StatusIconProps } from "~/components/ui";
-import { ChevronDownIcon } from "~/components/ui/Icons/ChevronDown";
+import { StatusIcon, StatusIconProps } from "~/components";
+import { ChevronDownIcon } from "~/components/Icons/ChevronDown";
 import { useLocalizeString } from "~/l10n";
 import { NavItemData } from "~/pages/details/navigation";
 
-import {
-  useCheckIsGroupCompleted,
-  useHasMissingAnswers,
-  usePathname,
-} from "./utils";
+import { useCheckIsGroupCompleted, usePathname } from "./utils";
 
 type ListNavigationProps = {
   children: React.ReactNode;
@@ -65,7 +61,6 @@ export function PageNavItem({ page }: { page: NavItemData }) {
     () => checkIsGroupCompleted(page),
     [checkIsGroupCompleted, page],
   );
-  const hasMissingAnswers = useHasMissingAnswers();
   return (
     <NavItem
       title={page.title}
@@ -73,8 +68,7 @@ export function PageNavItem({ page }: { page: NavItemData }) {
       status={
         checkIsActive(page.href)
           ? "active"
-          : isGroupCompleted ||
-              (page.href == "/details/fehlende-angaben" && !hasMissingAnswers)
+          : isGroupCompleted
             ? "completed"
             : "default"
       }

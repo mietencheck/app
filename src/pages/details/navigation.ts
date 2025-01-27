@@ -2,9 +2,8 @@ import type { Group } from "flow-machine";
 import { useMemo } from "react";
 
 import type { MainSteps } from "~/form/flow-machine";
-import { useLocalizeField } from "~/l10n";
 
-import { getSlugForAlias, useMissingAnswersInSession } from "./utils";
+import { getSlugForAlias } from "./utils";
 
 export type NavItemData = {
   title: string;
@@ -16,9 +15,7 @@ export type NavItemData = {
 };
 
 export function useMainNavItems(mainSteps: MainSteps): NavItemData[] {
-  const l = useLocalizeField();
-  const hadMissingFields = useMissingAnswersInSession().size > 0;
-  const navItems = useMemo(
+  return useMemo(
     () =>
       mainSteps
         .filter((s): s is Group => s.type == "Group" && s.category == "Page")
@@ -38,17 +35,6 @@ export function useMainNavItems(mainSteps: MainSteps): NavItemData[] {
           };
         }),
     [mainSteps],
-  );
-  return useMemo(
-    () =>
-      hadMissingFields
-        ? navItems.toSpliced(1, 0, {
-            title: l("Fehlende Angaben"),
-            href: "/details/fehlende-angaben",
-            children: [],
-          })
-        : navItems,
-    [hadMissingFields, l, navItems],
   );
 }
 

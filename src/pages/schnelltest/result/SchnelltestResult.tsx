@@ -1,4 +1,4 @@
-import { Button, LinkButton } from "~/components/ui";
+import { Button, LinkButton } from "~/components";
 import { useLocalizeField } from "~/l10n";
 import { DetailsRouter } from "~/pages/details/router";
 import { useWorstBestZulaessigeHoechstmieteDiff } from "~/pages/details/utils";

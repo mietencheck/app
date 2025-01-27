@@ -1,11 +1,12 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
       "type": "Group",
-      "category": null,
+      "category": "Section",
       "alias": "Schnelltest",
       "block": [
         {
@@ -1765,7 +1766,7 @@
     {
       "id": "loro8f",
       "type": "Group",
-      "category": null,
+      "category": "Section",
       "alias": "Details",
       "block": [
         {
@@ -3201,6 +3202,7 @@
                 {
                   "id": "nrsqz",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "tqfuq",
@@ -3862,8 +3864,7 @@
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 },
                 {
                   "id": "wn0p",
@@ -12196,6 +12197,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }

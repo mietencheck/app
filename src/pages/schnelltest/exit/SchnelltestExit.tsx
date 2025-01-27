@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button } from "~/components/ui";
+import { Button } from "~/components";
 import { useAnswers } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 

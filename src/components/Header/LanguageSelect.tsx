@@ -2,7 +2,7 @@ import cx from "classnames";
 import { ChevronDownIcon, LanguagesIcon } from "lucide-react";
 import { entries } from "remeda";
 
-import { buttonVariants } from "~/components/ui";
+import { buttonVariants } from "~/components";
 import { useLocaleState, useLocalizeField } from "~/l10n";
 import type { Locale } from "~/L10nContext";
 

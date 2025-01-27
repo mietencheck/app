@@ -1,7 +1,7 @@
 import { useLocation } from "@swan-io/chicane";
 import { Group, Question, ungroup } from "flow-machine";
 import { useCallback, useEffect, useMemo } from "react";
-import { useLocalStorage, useSessionStorage } from "usehooks-ts";
+import { useLocalStorage } from "usehooks-ts";
 
 import { getWorstBestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
 import { getNettokaltmiete } from "~/form/api";
@@ -73,49 +73,6 @@ export function useIsCompleted() {
   );
 }
 
-const eqSet = (xs: Set<unknown>, ys: Set<unknown>) =>
-  xs.size === ys.size && [...xs].every((x) => ys.has(x));
-
-export const MISSING_OPTION_ALIAS = "Nicht sicher";
-
-const REQUIRED_QUESTION_ALIASES = [] as const;
-type RequiredQuestionAlias = (typeof REQUIRED_QUESTION_ALIASES)[number];
-
-export function useHasMissingAnswers() {
-  const answers = useAnswers();
-  return useMemo(
-    () =>
-      REQUIRED_QUESTION_ALIASES.some(
-        (alias) => answers.getWithOptionAlias(alias) == MISSING_OPTION_ALIAS,
-      ),
-    [answers],
-  );
-}
-
-export function useMissingAnswersInSession(): Set<RequiredQuestionAlias> {
-  const answers = useAnswers();
-  const [missing, setMissing] = useSessionStorage<Set<RequiredQuestionAlias>>(
-    "missing-answers",
-    new Set(),
-    {
-      serializer: (v) => JSON.stringify([...v]),
-      deserializer: (v) => new Set(JSON.parse(v)),
-    },
-  );
-  useEffect(() => {
-    const newMissing = new Set([
-      ...missing,
-      ...REQUIRED_QUESTION_ALIASES.filter(
-        (alias) => answers.getWithOptionAlias(alias) == MISSING_OPTION_ALIAS,
-      ),
-    ]);
-    if (!eqSet(missing, newMissing)) {
-      setMissing(newMissing);
-    }
-  }, [answers, missing, setMissing]);
-  return missing;
-}
-
 export function useWorstBestZulaessigeHoechstmiete(): {
   worst: number;
   best: number;
@@ -146,7 +103,11 @@ export function useWorstBestZulaessigeHoechstmieteDiff(): {
   const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
 
   return {
-    worst: Number(nettokaltmiete) - zulaessigeHoechstmiete.worst,
-    best: Number(nettokaltmiete) - zulaessigeHoechstmiete.best,
+    worst: Number(
+      (Number(nettokaltmiete) - zulaessigeHoechstmiete.worst).toFixed(2),
+    ),
+    best: Number(
+      (Number(nettokaltmiete) - zulaessigeHoechstmiete.best).toFixed(2),
+    ),
   };
 }

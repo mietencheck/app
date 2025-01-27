@@ -11,7 +11,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "~/components/ui";
+} from "~/components";
 import { getSondermerkmalStates } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField, useLocalizeString } from "~/l10n";

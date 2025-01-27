@@ -1,12 +1,12 @@
 import React, { useEffect, useMemo } from "react";
 import useLocalStorageState from "use-local-storage-state";
 
-import { Header } from "~/components/partials";
+import { Header } from "~/components/Header";
 import { useSchnelltestSteps } from "~/form/flow-machine";
 
-import { SchnelltestExit } from "./schnelltestExit";
-import { SchnelltestQuestion } from "./schnelltestQuestion";
-import { SchnelltestResult } from "./schnelltestResult";
+import { SchnelltestExit } from "./exit";
+import { SchnelltestQuestion } from "./question";
+import { SchnelltestResult } from "./result";
 
 const getHash = () => decodeURIComponent(window.location.hash.replace("#", ""));
 

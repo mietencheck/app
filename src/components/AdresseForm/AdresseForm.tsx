@@ -11,12 +11,12 @@ import {
   LIST_BOX_CLASS_NAME,
   LISTBOX_ITEM_CLASS_NAME,
   TextField,
-} from "~/components/ui";
-import type { Adresse, AdresseFormValue } from "~/form/adresse/types";
+} from "~/components";
 import { useLocalizeField } from "~/l10n";
 import { formatAddresse } from "~/utils";
 
 import { extractNummerQuery, fetchStrasseData, strassenIndex } from "./search";
+import type { Adresse, AdresseFormValue } from "./types";
 
 type ComboBoxProps<Item> = {
   items: Item[];
@@ -42,7 +42,7 @@ function ComboBox<Item>({
   const itemToString: ((item: Item | null) => string) | undefined = (item) =>
     itemToInputValue?.(item) ??
     itemToLabel?.(item) ??
-    (item ? itemToKey?.(item) ?? "" : "");
+    (item ? (itemToKey?.(item) ?? "") : "");
   const {
     isOpen,
     getToggleButtonProps,
