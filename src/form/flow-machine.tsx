@@ -84,11 +84,13 @@ function buildVertragsdatum(answers: AnswerMachine) {
 }
 
 function buildLageInfo(answers: AnswerMachine) {
+  const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
   const vertragsdatum = buildVertragsdatum(answers);
 
-  let mietspieglJahr =
-    (vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum]) ||
-    undefined;
+  const mietspieglJahr =
+    unterschrieben == "Nein"
+      ? "2024" // If contract is not signed, use newest Mietspiegel
+      : vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum];
 
   const addresse = answers.get("Adresse");
   const lage =

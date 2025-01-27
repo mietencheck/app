@@ -26,6 +26,11 @@ export const getMietspiegeljahr = (
 ): Mietspiegeljahr | undefined => {
   const alias = "Vertragsdatum";
 
+  // If contract is not signed, use newest Mietspiegel
+  if (answers["Unterschrieben"] == "Nein") {
+    return "2024";
+  }
+
   return answers[alias]
     ? vertragsdatumToMietspiegelJahrMapping[answers[alias]]
     : undefined;

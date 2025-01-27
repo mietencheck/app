@@ -341,7 +341,7 @@ test.each([
   ].map(({ answers, result }) => {
     return {
       answers: {
-        Unterschrieben: "Ja",
+        Unterschrieben: answers.Unterschrieben || "Ja",
         "Wohnung hat Sammelheizung": "Ja",
         "Badezimmer in Wohnung": "Ja",
         ...SONDERMERKMAL_RESET_ANSWERS,
