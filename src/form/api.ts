@@ -174,11 +174,11 @@ export const getAusstattung = (
     sammelheizung:
       answers[alias_sh] && visibleQuestionAliases?.has(alias_sh)
         ? answers[alias_sh]
-        : undefined,
+        : "Nein",
     bad:
       answers[alias_bad] && visibleQuestionAliases?.has(alias_bad)
         ? answers[alias_bad]
-        : undefined,
+        : "Nein",
   };
 };
 

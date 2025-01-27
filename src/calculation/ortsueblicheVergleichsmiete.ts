@@ -64,6 +64,8 @@ export function getWorstBestOrtsueblicheVergleichsmiete(
     visibleQuestionAliases,
   );
 
+  console.log("preisspanne", preisspanne);
+
   if (!preisspanne) {
     return undefined;
   }

@@ -344,94 +344,6 @@
         {
           "id": "5igw6",
           "type": "If",
-          "alternate": [
-            {
-              "id": "15zdr",
-              "type": "Question",
-              "alias": "Baujahr vor 1991",
-              "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, erbaut?",
-              "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-              "required": false,
-              "note": "",
-              "answer": {
-                "type": "ChoiceAnswer",
-                "options": [
-                  {
-                    "id": "var1rl",
-                    "alias": "-1918",
-                    "text": "Bis einschließlich 1918"
-                  },
-                  {
-                    "id": "ameym",
-                    "alias": "1919-1949",
-                    "text": "1919-1949"
-                  },
-                  {
-                    "id": "bsegni",
-                    "alias": "1950-1964",
-                    "text": "1950-1964"
-                  },
-                  {
-                    "id": "gyz0y",
-                    "alias": "1965-1972",
-                    "text": "1965-1972"
-                  },
-                  {
-                    "id": "adc2e",
-                    "alias": "1973-1985",
-                    "text": "1973-1985"
-                  },
-                  {
-                    "id": "cjm4t",
-                    "alias": "1986-1990",
-                    "text": "1986-1990"
-                  },
-                  {
-                    "id": "ig2go",
-                    "alias": "1991-",
-                    "text": "Ab einschließlich 1991"
-                  }
-                ]
-              }
-            },
-            {
-              "id": "gh2txh",
-              "type": "If",
-              "alternate": [],
-              "cases": [
-                {
-                  "id": "dqtn8",
-                  "type": "IfCase",
-                  "test": {
-                    "id": "iex2v",
-                    "questionRef": {
-                      "type": "AliasRef",
-                      "value": "Baujahr vor 1991"
-                    },
-                    "negated": false,
-                    "type": "AnswerOptionComparison",
-                    "operator": "is",
-                    "comparands": [
-                      "ig2go"
-                    ]
-                  },
-                  "block": [
-                    {
-                      "id": "glqwp",
-                      "type": "Question",
-                      "alias": "Baujahr ab 1991",
-                      "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
-                      "info": null,
-                      "answer": {
-                        "type": "NumberAnswer"
-                      },
-                      "required": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "cases": [
             {
               "id": "yoj0w",
@@ -481,98 +393,6 @@
                 {
                   "id": "93ib8",
                   "type": "If",
-                  "alternate": [
-                    {
-                      "id": "ki2wb",
-                      "type": "Question",
-                      "alias": "Baujahr vor 1991",
-                      "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, gebaut",
-                      "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "var1rl",
-                            "alias": "-1918",
-                            "text": "Bis einschließlich 1918"
-                          },
-                          {
-                            "id": "ameym",
-                            "alias": "1919-1949",
-                            "text": "1919-1949"
-                          },
-                          {
-                            "id": "bsegni",
-                            "alias": "1950-1964",
-                            "text": "1950-1964"
-                          },
-                          {
-                            "id": "gyz0y",
-                            "alias": "1965-1972",
-                            "text": "1965-1972"
-                          },
-                          {
-                            "id": "adc2e",
-                            "alias": "1973-1985",
-                            "text": "1973-1985"
-                          },
-                          {
-                            "id": "cjm4t",
-                            "alias": "1986-1990",
-                            "text": "1986-1990"
-                          },
-                          {
-                            "id": "ie4ym",
-                            "alias": "1991-2001",
-                            "text": "1991-2001"
-                          },
-                          {
-                            "id": "ig2go",
-                            "alias": "2002-",
-                            "text": "Ab einschließlich 2002"
-                          }
-                        ]
-                      },
-                      "required": false
-                    },
-                    {
-                      "id": "w5s01",
-                      "type": "If",
-                      "alternate": [],
-                      "cases": [
-                        {
-                          "id": "1gulzh",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "d2gvm",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Baujahr vor 1991"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "ig2go"
-                            ]
-                          },
-                          "block": [
-                            {
-                              "id": "zfjdx",
-                              "type": "Question",
-                              "alias": "Baujahr ab 1991",
-                              "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, gebaut?",
-                              "info": null,
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": false
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
                   "cases": [
                     {
                       "id": "b1qeo",
@@ -647,7 +467,6 @@
                         {
                           "id": "u1twq",
                           "type": "If",
-                          "alternate": [],
                           "cases": [
                             {
                               "id": "4swtk",
@@ -679,13 +498,194 @@
                                 }
                               ]
                             }
-                          ]
+                          ],
+                          "alternate": []
                         }
                       ]
+                    }
+                  ],
+                  "alternate": [
+                    {
+                      "id": "ki2wb",
+                      "type": "Question",
+                      "alias": "Baujahr vor 1991",
+                      "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, gebaut",
+                      "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "var1rl",
+                            "alias": "-1918",
+                            "text": "Bis einschließlich 1918"
+                          },
+                          {
+                            "id": "ameym",
+                            "alias": "1919-1949",
+                            "text": "1919-1949"
+                          },
+                          {
+                            "id": "bsegni",
+                            "alias": "1950-1964",
+                            "text": "1950-1964"
+                          },
+                          {
+                            "id": "gyz0y",
+                            "alias": "1965-1972",
+                            "text": "1965-1972"
+                          },
+                          {
+                            "id": "adc2e",
+                            "alias": "1973-1985",
+                            "text": "1973-1985"
+                          },
+                          {
+                            "id": "cjm4t",
+                            "alias": "1986-1990",
+                            "text": "1986-1990"
+                          },
+                          {
+                            "id": "ie4ym",
+                            "alias": "1991-2001",
+                            "text": "1991-2001"
+                          },
+                          {
+                            "id": "ig2go",
+                            "alias": "2002-",
+                            "text": "Ab einschließlich 2002"
+                          }
+                        ]
+                      },
+                      "required": false
+                    },
+                    {
+                      "id": "w5s01",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "1gulzh",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "d2gvm",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Baujahr vor 1991"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "ig2go"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "zfjdx",
+                              "type": "Question",
+                              "alias": "Baujahr ab 1991",
+                              "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, gebaut?",
+                              "info": null,
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": false
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
                     }
                   ]
                 }
               ]
+            }
+          ],
+          "alternate": [
+            {
+              "id": "15zdr",
+              "type": "Question",
+              "alias": "Baujahr vor 1991",
+              "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, erbaut?",
+              "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
+              "answer": {
+                "type": "ChoiceAnswer",
+                "options": [
+                  {
+                    "id": "var1rl",
+                    "alias": "-1918",
+                    "text": "Bis einschließlich 1918"
+                  },
+                  {
+                    "id": "ameym",
+                    "alias": "1919-1949",
+                    "text": "1919-1949"
+                  },
+                  {
+                    "id": "bsegni",
+                    "alias": "1950-1964",
+                    "text": "1950-1964"
+                  },
+                  {
+                    "id": "gyz0y",
+                    "alias": "1965-1972",
+                    "text": "1965-1972"
+                  },
+                  {
+                    "id": "adc2e",
+                    "alias": "1973-1985",
+                    "text": "1973-1985"
+                  },
+                  {
+                    "id": "cjm4t",
+                    "alias": "1986-1990",
+                    "text": "1986-1990"
+                  },
+                  {
+                    "id": "ig2go",
+                    "alias": "1991-",
+                    "text": "Ab einschließlich 1991"
+                  }
+                ]
+              },
+              "required": false,
+              "note": ""
+            },
+            {
+              "id": "gh2txh",
+              "type": "If",
+              "cases": [
+                {
+                  "id": "dqtn8",
+                  "type": "IfCase",
+                  "test": {
+                    "id": "iex2v",
+                    "questionRef": {
+                      "type": "AliasRef",
+                      "value": "Baujahr vor 1991"
+                    },
+                    "negated": false,
+                    "type": "AnswerOptionComparison",
+                    "operator": "is",
+                    "comparands": [
+                      "ig2go"
+                    ]
+                  },
+                  "block": [
+                    {
+                      "id": "glqwp",
+                      "type": "Question",
+                      "alias": "Baujahr ab 1991",
+                      "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
+                      "info": null,
+                      "answer": {
+                        "type": "NumberAnswer"
+                      },
+                      "required": false
+                    }
+                  ]
+                }
+              ],
+              "alternate": []
             }
           ]
         },
@@ -704,28 +704,19 @@
         {
           "id": "k3jgpi",
           "type": "If",
-          "alternate": [],
           "cases": [
             {
               "id": "hmm0v",
               "type": "IfCase",
-              "block": [
-                {
-                  "id": "ie8uh",
-                  "alias": "Zu neu",
-                  "text": "",
-                  "type": "Exit"
-                }
-              ],
               "test": {
-                "type": "LogicalOperation",
                 "id": "eflw9",
+                "type": "LogicalOperation",
                 "operator": "or",
                 "negated": false,
                 "conditions": [
                   {
-                    "type": "LogicalOperation",
                     "id": "3i4jxg",
+                    "type": "LogicalOperation",
                     "operator": "and",
                     "negated": false,
                     "conditions": [
@@ -735,9 +726,9 @@
                           "type": "AliasRef",
                           "value": "Vertragsdatum"
                         },
-                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
+                        "operator": "is",
                         "comparands": [
                           "wejo0k"
                         ]
@@ -777,7 +768,15 @@
                     ]
                   }
                 ]
-              }
+              },
+              "block": [
+                {
+                  "id": "ie8uh",
+                  "alias": "Zu neu",
+                  "text": "",
+                  "type": "Exit"
+                }
+              ]
             },
             {
               "id": "prsb6i",
@@ -916,7 +915,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "alternate": []
         },
         {
           "id": "9x41yh",
@@ -1594,60 +1594,89 @@
           "alternate": []
         },
         {
-          "id": "yzup4",
-          "type": "Question",
-          "alias": "Wohnung hat Sammelheizung",
-          "text": "Hat die Wohnung eine Zentralheizung, Etagenheizung, oder Wohnungsheizung (Gas, Öl, Elektro)?",
-          "info": "Dies trifft auf ein Großteil der Wohnungen in Berlin zu.",
-          "answer": {
-            "type": "ChoiceAnswer",
-            "options": [
-              {
-                "id": "uiajj",
-                "alias": "Ja",
-                "text": "Ja"
-              },
-              {
-                "id": "qzhja",
-                "alias": "Nein",
-                "text": "Nein"
-              },
-              {
-                "id": "8i22j",
-                "alias": "Nicht sicher",
-                "text": "Ich bin mir nicht sicher"
+          "type": "If",
+          "id": "3ub8gi",
+          "alternate": [],
+          "cases": [
+            {
+              "type": "IfCase",
+              "id": "7o9r3k",
+              "block": [
+                {
+                  "id": "yzup4",
+                  "type": "Question",
+                  "alias": "Wohnung hat Sammelheizung",
+                  "text": "Hat die Wohnung eine Zentralheizung, Etagenheizung, oder Wohnungsheizung (Gas, Öl, Elektro)?",
+                  "info": "Dies trifft auf ein Großteil der Wohnungen in Berlin zu.",
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "uiajj",
+                        "alias": "Ja",
+                        "text": "Ja"
+                      },
+                      {
+                        "id": "qzhja",
+                        "alias": "Nein",
+                        "text": "Nein"
+                      },
+                      {
+                        "id": "8i22j",
+                        "alias": "Nicht sicher",
+                        "text": "Ich bin mir nicht sicher"
+                      }
+                    ]
+                  },
+                  "required": false
+                },
+                {
+                  "id": "hnhnz",
+                  "type": "Question",
+                  "alias": "Badezimmer in Wohnung",
+                  "text": "Hat die Wohnung ein Badezimmer?",
+                  "info": "Dies trifft auf fast alle Wohnungen in Berlin zu.",
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "uiajj",
+                        "alias": "Ja",
+                        "text": "Ja"
+                      },
+                      {
+                        "id": "qzhja",
+                        "alias": "Nein",
+                        "text": "Nein"
+                      },
+                      {
+                        "id": "8i22j",
+                        "alias": "Nicht sicher",
+                        "text": "Ich bin mir nicht sicher"
+                      }
+                    ]
+                  },
+                  "required": false
+                }
+              ],
+              "test": {
+                "id": "5bl2j",
+                "questionRef": {
+                  "type": "AliasRef",
+                  "value": "Baujahr"
+                },
+                "operator": "lte",
+                "negated": false,
+                "type": "AnswerNumberComparison",
+                "comparands": [
+                  {
+                    "type": "NumberLiteral",
+                    "value": 1964
+                  }
+                ]
               }
-            ]
-          },
-          "required": false
-        },
-        {
-          "id": "hnhnz",
-          "type": "Question",
-          "alias": "Badezimmer in Wohnung",
-          "text": "Hat die Wohnung ein Badezimmer?",
-          "info": "Dies trifft auf fast alle Wohnungen in Berlin zu.",
-          "answer": {
-            "type": "ChoiceAnswer",
-            "options": [
-              {
-                "id": "uiajj",
-                "alias": "Ja",
-                "text": "Ja"
-              },
-              {
-                "id": "qzhja",
-                "alias": "Nein",
-                "text": "Nein"
-              },
-              {
-                "id": "8i22j",
-                "alias": "Nicht sicher",
-                "text": "Ich bin mir nicht sicher"
-              }
-            ]
-          },
-          "required": false
+            }
+          ]
         },
         {
           "id": "dkg1y",
@@ -3242,7 +3271,6 @@
                 {
                   "id": "nrsqz",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "tqfuq",
@@ -3904,7 +3932,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 },
                 {
                   "id": "wn0p",
