@@ -344,262 +344,6 @@
         {
           "id": "5igw6",
           "type": "If",
-          "cases": [
-            {
-              "id": "yoj0w",
-              "type": "IfCase",
-              "test": {
-                "id": "9nxzr",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Dachgeschoss"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "uiajj"
-                ]
-              },
-              "block": [
-                {
-                  "id": "shep8",
-                  "type": "Question",
-                  "alias": "Dachgeschoss Ausgebaut",
-                  "text": "Wurde das Dachgeschoss nachträglich ausgebaut?",
-                  "info": null,
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "45g3h",
-                        "alias": "Ja",
-                        "text": "Ja"
-                      },
-                      {
-                        "id": "d5u3d",
-                        "alias": "Nein",
-                        "text": "Nein"
-                      },
-                      {
-                        "id": "e7e5e",
-                        "alias": "Nicht sicher",
-                        "text": "Ich bin mir nicht sicher"
-                      }
-                    ]
-                  },
-                  "required": false
-                },
-                {
-                  "id": "93ib8",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "b1qeo",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "x25th",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Dachgeschoss Ausgebaut"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "45g3h"
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "licgah",
-                          "type": "Question",
-                          "alias": "Baujahr vor 1991",
-                          "text": "Wann wurde das Dachgeschoss ausgebaut? ",
-                          "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "var1rl",
-                                "alias": "-1918",
-                                "text": "Bis einschließlich 1918"
-                              },
-                              {
-                                "id": "ameym",
-                                "alias": "1919-1949",
-                                "text": "1919-1949"
-                              },
-                              {
-                                "id": "bsegni",
-                                "alias": "1950-1964",
-                                "text": "1950-1964"
-                              },
-                              {
-                                "id": "gyz0y",
-                                "alias": "1965-1972",
-                                "text": "1965-1972"
-                              },
-                              {
-                                "id": "adc2e",
-                                "alias": "1973-1985",
-                                "text": "1973-1985"
-                              },
-                              {
-                                "id": "cjm4t",
-                                "alias": "1986-1990",
-                                "text": "1986-1990"
-                              },
-                              {
-                                "id": "ie4ym",
-                                "alias": "1991-2001",
-                                "text": "1991-2001"
-                              },
-                              {
-                                "id": "ig2go",
-                                "alias": "2002-",
-                                "text": "Ab einschließlich 2002"
-                              }
-                            ]
-                          },
-                          "required": false
-                        },
-                        {
-                          "id": "u1twq",
-                          "type": "If",
-                          "cases": [
-                            {
-                              "id": "4swtk",
-                              "type": "IfCase",
-                              "test": {
-                                "id": "ggh8x",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr vor 1991"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "ig2go"
-                                ]
-                              },
-                              "block": [
-                                {
-                                  "id": "3e721",
-                                  "type": "Question",
-                                  "alias": "Baujahr ab 1991",
-                                  "text": "In welchem Jahr wurde das Dachgeschoss ausgebaut.",
-                                  "info": null,
-                                  "answer": {
-                                    "type": "NumberAnswer"
-                                  },
-                                  "required": false
-                                }
-                              ]
-                            }
-                          ],
-                          "alternate": []
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": [
-                    {
-                      "id": "ki2wb",
-                      "type": "Question",
-                      "alias": "Baujahr vor 1991",
-                      "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, gebaut",
-                      "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "var1rl",
-                            "alias": "-1918",
-                            "text": "Bis einschließlich 1918"
-                          },
-                          {
-                            "id": "ameym",
-                            "alias": "1919-1949",
-                            "text": "1919-1949"
-                          },
-                          {
-                            "id": "bsegni",
-                            "alias": "1950-1964",
-                            "text": "1950-1964"
-                          },
-                          {
-                            "id": "gyz0y",
-                            "alias": "1965-1972",
-                            "text": "1965-1972"
-                          },
-                          {
-                            "id": "adc2e",
-                            "alias": "1973-1985",
-                            "text": "1973-1985"
-                          },
-                          {
-                            "id": "cjm4t",
-                            "alias": "1986-1990",
-                            "text": "1986-1990"
-                          },
-                          {
-                            "id": "ie4ym",
-                            "alias": "1991-2001",
-                            "text": "1991-2001"
-                          },
-                          {
-                            "id": "ig2go",
-                            "alias": "2002-",
-                            "text": "Ab einschließlich 2002"
-                          }
-                        ]
-                      },
-                      "required": false
-                    },
-                    {
-                      "id": "w5s01",
-                      "type": "If",
-                      "cases": [
-                        {
-                          "id": "1gulzh",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "d2gvm",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Baujahr vor 1991"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "ig2go"
-                            ]
-                          },
-                          "block": [
-                            {
-                              "id": "zfjdx",
-                              "type": "Question",
-                              "alias": "Baujahr ab 1991",
-                              "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, gebaut?",
-                              "info": null,
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": false
-                            }
-                          ]
-                        }
-                      ],
-                      "alternate": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "alternate": [
             {
               "id": "15zdr",
@@ -686,6 +430,252 @@
                 }
               ],
               "alternate": []
+            }
+          ],
+          "cases": [
+            {
+              "id": "yoj0w",
+              "type": "IfCase",
+              "test": {
+                "id": "9nxzr",
+                "questionRef": {
+                  "type": "AliasRef",
+                  "value": "Dachgeschoss"
+                },
+                "negated": false,
+                "type": "AnswerOptionComparison",
+                "operator": "is",
+                "comparands": [
+                  "uiajj"
+                ]
+              },
+              "block": [
+                {
+                  "id": "shep8",
+                  "type": "Question",
+                  "alias": "Dachgeschoss Ausgebaut",
+                  "text": "Wurde das Dachgeschoss nachträglich ausgebaut?",
+                  "info": null,
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "45g3h",
+                        "alias": "Ja",
+                        "text": "Ja"
+                      },
+                      {
+                        "id": "d5u3d",
+                        "alias": "Nein",
+                        "text": "Nein"
+                      },
+                      {
+                        "id": "e7e5e",
+                        "alias": "Nicht sicher",
+                        "text": "Ich bin mir nicht sicher"
+                      }
+                    ]
+                  },
+                  "required": false
+                },
+                {
+                  "id": "93ib8",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "b1qeo",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "x25th",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Dachgeschoss Ausgebaut"
+                        },
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "45g3h"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "licgah",
+                          "type": "Question",
+                          "alias": "Baujahr vor 1991",
+                          "text": "Wann wurde das Dachgeschoss ausgebaut? ",
+                          "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
+                          "required": false,
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "var1rl",
+                                "alias": "-1918",
+                                "text": "Bis einschließlich 1918"
+                              },
+                              {
+                                "id": "ameym",
+                                "alias": "1919-1949",
+                                "text": "1919-1949"
+                              },
+                              {
+                                "id": "bsegni",
+                                "alias": "1950-1964",
+                                "text": "1950-1964"
+                              },
+                              {
+                                "id": "gyz0y",
+                                "alias": "1965-1972",
+                                "text": "1965-1972"
+                              },
+                              {
+                                "id": "adc2e",
+                                "alias": "1973-1985",
+                                "text": "1973-1985"
+                              },
+                              {
+                                "id": "cjm4t",
+                                "alias": "1986-1990",
+                                "text": "1986-1990"
+                              },
+                              {
+                                "id": "ig2go",
+                                "alias": "1991-",
+                                "text": "Ab einschließlich 1991"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "u1twq",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "4swtk",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "ggh8x",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Baujahr vor 1991"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "ig2go"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "3e721",
+                                  "type": "Question",
+                                  "alias": "Baujahr ab 1991",
+                                  "text": "In welchem Jahr wurde das Dachgeschoss ausgebaut.",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "NumberAnswer"
+                                  },
+                                  "required": false
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": []
+                        }
+                      ]
+                    }
+                  ],
+                  "alternate": [
+                    {
+                      "id": "ki2wb",
+                      "type": "Question",
+                      "alias": "Baujahr vor 1991",
+                      "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, gebaut",
+                      "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
+                      "required": false,
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "var1rl",
+                            "alias": "-1918",
+                            "text": "Bis einschließlich 1918"
+                          },
+                          {
+                            "id": "ameym",
+                            "alias": "1919-1949",
+                            "text": "1919-1949"
+                          },
+                          {
+                            "id": "bsegni",
+                            "alias": "1950-1964",
+                            "text": "1950-1964"
+                          },
+                          {
+                            "id": "gyz0y",
+                            "alias": "1965-1972",
+                            "text": "1965-1972"
+                          },
+                          {
+                            "id": "adc2e",
+                            "alias": "1973-1985",
+                            "text": "1973-1985"
+                          },
+                          {
+                            "id": "cjm4t",
+                            "alias": "1986-1990",
+                            "text": "1986-1990"
+                          },
+                          {
+                            "id": "ig2go",
+                            "alias": "1991-",
+                            "text": "Ab einschließlich 1991"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "w5s01",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "1gulzh",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "d2gvm",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Baujahr vor 1991"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "ig2go"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "zfjdx",
+                              "type": "Question",
+                              "alias": "Baujahr ab 1991",
+                              "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, gebaut?",
+                              "info": null,
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": false
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },

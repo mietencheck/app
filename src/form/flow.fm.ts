@@ -13,7 +13,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -251,7 +251,7 @@ export type StepInfoByAlias = {
         };
     };
     "Baujahr vor 1991": {
-        answer: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+        answer: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
         state: {
             Adresse?: string;
             Ost?: boolean;
@@ -263,7 +263,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
         };
     };
@@ -280,7 +280,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
         };
     };
@@ -297,7 +297,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
         };
     };
@@ -314,7 +314,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -333,7 +333,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -352,7 +352,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -371,7 +371,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -390,7 +390,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -410,7 +410,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -431,7 +431,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -453,7 +453,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -475,7 +475,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -497,7 +497,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -519,7 +519,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -541,7 +541,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -686,7 +686,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -831,7 +831,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -976,7 +976,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1001,7 +1001,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1023,7 +1023,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1046,7 +1046,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1070,7 +1070,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1096,7 +1096,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1241,7 +1241,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1267,7 +1267,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1294,7 +1294,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1322,7 +1322,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1351,7 +1351,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1381,7 +1381,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1411,7 +1411,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1441,7 +1441,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1586,7 +1586,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1731,7 +1731,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1876,7 +1876,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1906,7 +1906,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1937,7 +1937,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1969,7 +1969,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2114,7 +2114,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2147,7 +2147,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2292,7 +2292,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2326,7 +2326,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2361,7 +2361,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2397,7 +2397,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2542,7 +2542,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2580,7 +2580,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2618,7 +2618,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2763,7 +2763,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2803,7 +2803,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2844,7 +2844,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2885,7 +2885,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2927,7 +2927,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2970,7 +2970,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3115,7 +3115,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3160,7 +3160,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3205,7 +3205,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3251,7 +3251,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3396,7 +3396,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3443,7 +3443,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3491,7 +3491,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3541,7 +3541,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3591,7 +3591,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3736,7 +3736,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3788,7 +3788,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3841,7 +3841,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3894,7 +3894,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4039,7 +4039,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4094,7 +4094,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4149,7 +4149,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4206,7 +4206,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4263,7 +4263,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4408,7 +4408,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4467,7 +4467,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4528,7 +4528,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4589,7 +4589,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4734,7 +4734,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4795,7 +4795,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4857,7 +4857,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4921,7 +4921,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4985,7 +4985,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5050,7 +5050,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5117,7 +5117,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5184,7 +5184,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5329,7 +5329,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5397,7 +5397,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5466,7 +5466,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5537,7 +5537,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5682,7 +5682,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5753,7 +5753,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5825,7 +5825,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5898,7 +5898,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6043,7 +6043,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6118,7 +6118,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6193,7 +6193,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6269,7 +6269,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6346,7 +6346,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6491,7 +6491,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6569,7 +6569,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6714,7 +6714,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6794,7 +6794,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6939,7 +6939,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7084,7 +7084,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7164,7 +7164,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7245,7 +7245,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7327,7 +7327,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7472,7 +7472,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7555,7 +7555,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7639,7 +7639,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7724,7 +7724,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7869,7 +7869,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7955,7 +7955,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8043,7 +8043,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8131,7 +8131,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8276,7 +8276,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8365,7 +8365,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8456,7 +8456,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8601,7 +8601,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8692,7 +8692,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8784,7 +8784,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8877,7 +8877,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8971,7 +8971,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9116,7 +9116,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9211,7 +9211,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9309,7 +9309,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9406,7 +9406,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9551,7 +9551,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9649,7 +9649,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9748,7 +9748,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9893,7 +9893,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9993,7 +9993,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10094,7 +10094,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10197,7 +10197,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10300,7 +10300,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10445,7 +10445,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10590,7 +10590,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10694,7 +10694,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10799,7 +10799,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10905,7 +10905,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11012,7 +11012,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11157,7 +11157,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11265,7 +11265,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11374,7 +11374,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11519,7 +11519,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11629,7 +11629,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11740,7 +11740,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11853,7 +11853,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11998,7 +11998,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12114,7 +12114,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12230,7 +12230,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12346,7 +12346,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12491,7 +12491,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12607,7 +12607,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12726,7 +12726,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12844,7 +12844,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12989,7 +12989,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13108,7 +13108,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13229,7 +13229,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13350,7 +13350,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13472,7 +13472,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13595,7 +13595,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13740,7 +13740,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13885,7 +13885,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14009,7 +14009,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14135,7 +14135,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14262,7 +14262,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14407,7 +14407,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14536,7 +14536,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14665,7 +14665,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14794,7 +14794,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14925,7 +14925,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15070,7 +15070,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15215,7 +15215,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15346,7 +15346,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15478,7 +15478,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15611,7 +15611,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15745,7 +15745,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15890,7 +15890,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16026,7 +16026,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16162,7 +16162,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16299,7 +16299,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16437,7 +16437,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16576,7 +16576,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16716,7 +16716,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16861,7 +16861,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17002,7 +17002,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17144,7 +17144,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17287,7 +17287,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17431,7 +17431,7 @@ export type StepInfoByAlias = {
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-2001" | "2002-" | "1991-";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
