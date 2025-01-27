@@ -86,10 +86,10 @@ function buildLageInfo(answers: AnswerMachine) {
 }
 
 function buildBaujahr(answers: AnswerMachine) {
-  const baujahrSpanne = answers.getWithOptionAlias("Baujahr vor 2002");
-  const baujahr = answers.getWithOptionAlias("Baujahr ab 2002");
+  const baujahrSpanne = answers.getWithOptionAlias("Baujahr vor 1991");
+  const baujahr = answers.getWithOptionAlias("Baujahr ab 1991");
 
-  if (baujahrSpanne == "2002-") {
+  if (baujahrSpanne == "1991-") {
     return baujahr;
   } else {
     const constructionYearBoundaries = baujahrSpanne?.split("-");
