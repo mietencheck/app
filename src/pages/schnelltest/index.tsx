@@ -1,3 +1,4 @@
+import { Step } from "flow-machine";
 import React, { useEffect, useMemo } from "react";
 import useLocalStorageState from "use-local-storage-state";
 
@@ -30,6 +31,29 @@ function useStepper(count: number) {
     [count, setIndex, index],
   );
   return { index, set: setIndex, back, forward };
+}
+
+type NodeType = {
+  step: Step | undefined;
+  stepper: StepperType;
+};
+
+function Node({ step, stepper }: NodeType) {
+  if (!step) {
+    return <SchnelltestResult stepper={stepper} />;
+  }
+
+  switch (step.type) {
+    case "Info": {
+      return <SchnelltestResult stepper={stepper} />;
+    }
+    case "Exit": {
+      return <SchnelltestExit step={step} stepper={stepper} />;
+    }
+    case "Question": {
+      return <SchnelltestQuestion step={step} stepper={stepper} />;
+    }
+  }
 }
 
 export function SchnelltestPage() {
@@ -66,16 +90,6 @@ export function SchnelltestPage() {
     }
   }, [setStepIndex, steps]);
 
-  const renderContent = () => {
-    if (!step || step.type == "Info") {
-      return <SchnelltestResult stepper={stepper} />;
-    } else if (step.type == "Exit") {
-      return <SchnelltestExit step={step} stepper={stepper} />;
-    } else {
-      return <SchnelltestQuestion step={step} stepper={stepper} />;
-    }
-  };
-
   return (
     <>
       <Header />
@@ -87,7 +101,7 @@ export function SchnelltestPage() {
               stepper.forward?.();
             }}
           >
-            {renderContent()}
+            <Node step={step} stepper={stepper} />
           </form>
         </div>
       </main>

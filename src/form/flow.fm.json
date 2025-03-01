@@ -10,174 +10,137 @@
       "alias": "Schnelltest",
       "block": [
         {
-          "id": "inf5s",
+          "id": "lng2s",
           "type": "Question",
-          "alias": "Adresse",
-          "text": "Wie lautet die Adresse der Wohnung?",
-          "info": null,
-          "answer": {
-            "type": "TextAnswer"
-          },
-          "required": true
-        },
-        {
-          "id": "khlf2",
-          "type": "Question",
-          "alias": "Ost",
-          "text": "",
-          "info": null,
-          "answer": {
-            "type": "BooleanAnswer"
-          },
-          "required": false,
-          "note": "Diese Frage wird nicht angezeigt"
-        },
-        {
-          "id": "be0en",
-          "type": "Question",
-          "alias": "Wohnlage",
-          "text": "",
+          "alias": "Typ",
+          "text": "Was möchtest du überprüfen?",
           "info": null,
           "answer": {
             "type": "ChoiceAnswer",
             "options": [
               {
-                "id": "8ktp",
-                "alias": "einfach",
-                "text": "einfach"
+                "id": "wb3w3",
+                "alias": "Miete",
+                "text": "Miete für aktuelle oder neue Wohnung "
               },
               {
-                "id": "pi77s",
-                "alias": "mittel",
-                "text": "mittel"
-              },
-              {
-                "id": "v4s5m",
-                "alias": "gut",
-                "text": "gut"
-              }
-            ]
-          },
-          "required": false,
-          "note": "Diese Frage wird nicht angezeigt"
-        },
-        {
-          "id": "8ah5gi",
-          "type": "Question",
-          "alias": "Unterschrieben",
-          "text": "Hast du den Mietvertrag für die Wohnung bereits unterschrieben?",
-          "info": null,
-          "answer": {
-            "type": "ChoiceAnswer",
-            "options": [
-              {
-                "id": "or4h3j",
-                "alias": "Ja",
-                "text": "Ja"
-              },
-              {
-                "id": "128cg",
-                "alias": "Nein",
-                "text": "Nein"
+                "id": "4uoj6",
+                "alias": "Mieterhöhung",
+                "text": "Mieterhöhung"
               }
             ]
           },
           "required": true
         },
         {
-          "id": "j4sr7",
+          "id": "sxmb3g",
           "type": "If",
-          "alternate": [],
-          "cases": [
+          "alternate": [
             {
-              "id": "dgylv",
-              "type": "IfCase",
-              "test": {
-                "id": "svgf2",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Unterschrieben"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "or4h3j"
-                ]
-              },
+              "id": "ccn8",
+              "type": "Group",
+              "category": null,
+              "alias": "Mieterhöhung",
               "block": [
                 {
-                  "id": "ybara",
+                  "id": "g767u",
                   "type": "Question",
-                  "alias": "Vertragsdatum",
-                  "text": "Wann hast du den Mietvertrag unterschrieben?",
-                  "info": "Wenn du dir nicht sicher bist, kannst du das Datum auch erstmal schätzen und später korrigieren.",
+                  "alias": "Adresse",
+                  "text": "Wie lautet die Adresse der Wohnung?",
+                  "info": null,
+                  "answer": {
+                    "type": "TextAnswer"
+                  },
+                  "required": true
+                },
+                {
+                  "id": "9n7um",
+                  "type": "Question",
+                  "alias": "Ost",
+                  "text": "",
+                  "info": null,
+                  "answer": {
+                    "type": "BooleanAnswer"
+                  },
+                  "required": false,
+                  "note": "Diese Frage wird nicht angezeigt"
+                },
+                {
+                  "id": "xkk8c",
+                  "type": "Question",
+                  "alias": "Wohnlage",
+                  "text": "",
+                  "info": null,
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
                       {
-                        "id": "08tnb",
-                        "alias": "<2015",
-                        "text": "Vor 01.06.2015"
+                        "id": "8ktp",
+                        "alias": "einfach",
+                        "text": "einfach"
                       },
                       {
-                        "id": "wejo0k",
-                        "alias": "2015-2016",
-                        "text": "Zwischen 01.06.2015 und 31.08.2016"
+                        "id": "pi77s",
+                        "alias": "mittel",
+                        "text": "mittel"
                       },
                       {
-                        "id": "7np1",
-                        "alias": "2016-2018",
-                        "text": "Zwischen 01.09.2016 und 31.08.2018"
+                        "id": "v4s5m",
+                        "alias": "gut",
+                        "text": "gut"
+                      }
+                    ]
+                  },
+                  "required": false,
+                  "note": "Diese Frage wird nicht angezeigt"
+                },
+                {
+                  "id": "p897el",
+                  "type": "Question",
+                  "alias": "Mieterhöhung zugestimmt",
+                  "text": "Hast du der Mieterhöhung bereits zugestimmt?",
+                  "info": "Beachte: Wenn du die erhöhte bereits drei Mal überwiesen hast, gilt dies rechtlich als Zustimmung.",
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "ggo2s",
+                        "alias": "Ja",
+                        "text": "Ja"
                       },
                       {
-                        "id": "m2jo",
-                        "alias": "2018-2020",
-                        "text": "Zwischen 01.09.2018 und 31.08.2020"
-                      },
-                      {
-                        "id": "4obam",
-                        "alias": "2020-2022",
-                        "text": "Zwischen 01.09.2020 und 31.08.2022"
-                      },
-                      {
-                        "id": "oqyrs",
-                        "alias": "2022-2024",
-                        "text": "Zwischen 01.09.2022 und 31.08.2023"
-                      },
-                      {
-                        "id": "ve0tek",
-                        "alias": ">2024",
-                        "text": "Ab 01.09.2023"
+                        "id": "b8nwa",
+                        "alias": "Nein",
+                        "text": "Nein"
                       }
                     ]
                   },
                   "required": true
                 },
                 {
-                  "id": "lrir7",
+                  "id": "jp3gij",
                   "type": "If",
                   "cases": [
                     {
-                      "id": "xyk71",
+                      "id": "enkni",
                       "type": "IfCase",
                       "test": {
-                        "id": "byha7j",
+                        "id": "pbtgx",
                         "questionRef": {
                           "type": "AliasRef",
-                          "value": "Vertragsdatum"
+                          "value": "Mieterhöhung zugestimmt"
                         },
                         "negated": false,
                         "type": "AnswerOptionComparison",
                         "operator": "is",
                         "comparands": [
-                          "08tnb"
+                          "ggo2s"
                         ]
                       },
                       "block": [
                         {
-                          "id": "961qhi",
-                          "alias": "Mietvertrag zu alt",
+                          "id": "3sh9c",
+                          "alias": "Exit: Mieterhöhung zugestimmt",
                           "text": "",
                           "type": "Exit"
                         }
@@ -187,7 +150,139 @@
                   "alternate": []
                 },
                 {
-                  "id": "kdvb1h",
+                  "id": "qpksij",
+                  "type": "Question",
+                  "alias": "Mieterhöhung Grund",
+                  "text": "Hat sich der Vermieter bei der Mieterhöhung auf den Mietspiegel, Vergleichsmieten oder  § 558 BGB berufen?",
+                  "info": "Diese Information solltest du im Schreiben zur Mieterhöhung finden.",
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "ggo2s",
+                        "alias": "Ja",
+                        "text": "Ja"
+                      },
+                      {
+                        "id": "b8nwa",
+                        "alias": "Nein",
+                        "text": "Nein"
+                      },
+                      {
+                        "id": "whpa6",
+                        "alias": "Nicht sicher",
+                        "text": "Ich bin mir nicht sicher"
+                      }
+                    ]
+                  },
+                  "required": true
+                },
+                {
+                  "id": "v1qld",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "lt4zg",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "pm5q8",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Mieterhöhung Grund"
+                        },
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "b8nwa"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "c4mwi",
+                          "type": "Question",
+                          "alias": "Mieterhöhung anderer Grund",
+                          "text": "Hat der Vermieter andere Gründe für die Mieterhöhung gegeben?",
+                          "info": "Hat er z.B. energetische Sanierung, Renovierungs- oder Umbau-Maßnahmen, Betriebskosten als Grund angegeben? Oder klar gemacht, dass die Mieterhöhung freiwillig erfolgt?",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "ggo2s",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "b8nwa",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "whpa6",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
+                          },
+                          "required": true
+                        },
+                        {
+                          "id": "69kz9",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "r1trb",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "re7f",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung anderer Grund"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "ggo2s"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "9pxsr",
+                                  "alias": "Exit: Mieterhöhung mit anderem Grund ",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "x1vd9",
+                              "alias": "Exit: Mieterhöhung ohne Begründung",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "alternate": []
+                },
+                {
+                  "id": "ykten",
+                  "type": "Question",
+                  "alias": "Mieterhöhung Datum",
+                  "text": "An welchem Datum hast du das Schreiben zur Mieterhöhung erhalten?",
+                  "info": "Wenn du dir nicht sicher bist, kannst du das Datum auch erstmal schätzen und später korrigieren.",
+                  "answer": {
+                    "type": "NumberAnswer"
+                  },
+                  "required": true
+                },
+                {
+                  "id": "6wrc9",
                   "type": "Question",
                   "alias": "Mietart",
                   "text": "Ist im Mietvertrag eine Staffelmiete oder Indexmiete vereinbart?",
@@ -218,292 +313,792 @@
                     ]
                   },
                   "required": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "j8x3c",
-          "type": "If",
-          "cases": [
-            {
-              "id": "cwg9d",
-              "type": "IfCase",
-              "test": {
-                "id": "qot9d",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Unterschrieben"
                 },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "128cg"
-                ]
-              },
-              "block": [
                 {
-                  "id": "8s3ur",
-                  "type": "Question",
-                  "alias": "Kaltmiete",
-                  "text": "Wie hoch ist die geforderte Nettokaltmiete pro Monat in Euro?",
-                  "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
-                  "answer": {
-                    "type": "NumberAnswer"
-                  },
-                  "required": true
-                }
-              ]
-            },
-            {
-              "id": "l4pfj",
-              "type": "IfCase",
-              "test": {
-                "id": "hjkb2",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Mietart"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "jwmlg"
-                ]
-              },
-              "block": [
-                {
-                  "id": "2kp3n",
-                  "type": "Question",
-                  "alias": "Kaltmiete",
-                  "text": "Wie hoch war die Nettokaltmiete ursprünglich bei Abschluss des Mietvertrages pro Monat in Euro?",
-                  "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
-                  "answer": {
-                    "type": "NumberAnswer"
-                  },
-                  "required": true
-                }
-              ]
-            }
-          ],
-          "alternate": [
-            {
-              "id": "fkeyp",
-              "type": "Question",
-              "alias": "Kaltmiete",
-              "text": "Wie hoch ist deine aktuelle Nettokaltmiete pro Monat in Euro?",
-              "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
-              "answer": {
-                "type": "NumberAnswer"
-              },
-              "required": true
-            }
-          ]
-        },
-        {
-          "id": "2fl3w",
-          "type": "Question",
-          "alias": "Qm",
-          "text": "Wie groß ist die Wohnung in qm?",
-          "info": "Auch die Größe der Wohnung sollte in dem Mietvertrag angegeben sein. Falls du den gerade nicht zur Hand hast, kannst du den Wert auch einfach schätzen und später korrigieren.",
-          "answer": {
-            "type": "NumberAnswer"
-          },
-          "required": true
-        },
-        {
-          "id": "9e585",
-          "type": "Question",
-          "alias": "Dachgeschoss",
-          "text": "Liegt deine Wohnung im Dachgeschoss?",
-          "info": null,
-          "answer": {
-            "type": "ChoiceAnswer",
-            "options": [
-              {
-                "id": "uiajj",
-                "alias": "",
-                "text": "Ja"
-              },
-              {
-                "id": "qzhja",
-                "alias": "",
-                "text": "Nein"
-              },
-              {
-                "id": "8i22j",
-                "alias": "Nicht sicher",
-                "text": "Ich bin mir nicht sicher"
-              }
-            ]
-          },
-          "required": true
-        },
-        {
-          "id": "5igw6",
-          "type": "If",
-          "alternate": [
-            {
-              "id": "15zdr",
-              "type": "Question",
-              "alias": "Baujahr vor 1991",
-              "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, erbaut?",
-              "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-              "answer": {
-                "type": "ChoiceAnswer",
-                "options": [
-                  {
-                    "id": "var1rl",
-                    "alias": "-1918",
-                    "text": "Bis einschließlich 1918"
-                  },
-                  {
-                    "id": "ameym",
-                    "alias": "1919-1949",
-                    "text": "1919-1949"
-                  },
-                  {
-                    "id": "bsegni",
-                    "alias": "1950-1964",
-                    "text": "1950-1964"
-                  },
-                  {
-                    "id": "gyz0y",
-                    "alias": "1965-1972",
-                    "text": "1965-1972"
-                  },
-                  {
-                    "id": "adc2e",
-                    "alias": "1973-1985",
-                    "text": "1973-1985"
-                  },
-                  {
-                    "id": "cjm4t",
-                    "alias": "1986-1990",
-                    "text": "1986-1990"
-                  },
-                  {
-                    "id": "ig2go",
-                    "alias": "1991-",
-                    "text": "Ab einschließlich 1991"
-                  }
-                ]
-              },
-              "required": true,
-              "note": ""
-            },
-            {
-              "id": "gh2txh",
-              "type": "If",
-              "alternate": [],
-              "cases": [
-                {
-                  "id": "dqtn8",
-                  "type": "IfCase",
-                  "test": {
-                    "id": "iex2v",
-                    "questionRef": {
-                      "type": "AliasRef",
-                      "value": "Baujahr vor 1991"
-                    },
-                    "negated": false,
-                    "type": "AnswerOptionComparison",
-                    "operator": "is",
-                    "comparands": [
-                      "ig2go"
-                    ]
-                  },
-                  "block": [
+                  "id": "sokgp",
+                  "type": "If",
+                  "cases": [
                     {
-                      "id": "glqwp",
-                      "type": "Question",
-                      "alias": "Baujahr ab 1991",
-                      "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
-                      "info": null,
-                      "answer": {
-                        "type": "NumberAnswer"
+                      "id": "dpott",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "7kgyii",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Mietart"
+                        },
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "jwmlg"
+                        ]
                       },
-                      "required": true
+                      "block": [
+                        {
+                          "id": "l192g",
+                          "alias": "Exit: Mieterhöhung bei Staffelmiete",
+                          "text": "",
+                          "type": "Exit"
+                        }
+                      ]
                     }
-                  ]
-                }
-              ]
-            }
-          ],
-          "cases": [
-            {
-              "id": "yoj0w",
-              "type": "IfCase",
-              "test": {
-                "id": "9nxzr",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Dachgeschoss"
+                  ],
+                  "alternate": []
                 },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "uiajj"
-                ]
-              },
-              "block": [
                 {
-                  "id": "shep8",
+                  "id": "jiwom",
                   "type": "Question",
-                  "alias": "Dachgeschoss Ausgebaut",
-                  "text": "Wurde das Dachgeschoss nachträglich ausgebaut?",
+                  "alias": "Dachgeschoss",
+                  "text": "Liegt deine Wohnung im Dachgeschoss?",
                   "info": null,
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
                       {
-                        "id": "45g3h",
-                        "alias": "Ja",
+                        "id": "uiajj",
+                        "alias": "",
                         "text": "Ja"
                       },
                       {
-                        "id": "d5u3d",
-                        "alias": "Nein",
+                        "id": "qzhja",
+                        "alias": "",
                         "text": "Nein"
                       },
                       {
-                        "id": "e7e5e",
+                        "id": "8i22j",
                         "alias": "Nicht sicher",
                         "text": "Ich bin mir nicht sicher"
                       }
                     ]
                   },
                   "required": true
+                }
+              ]
+            }
+          ],
+          "cases": [
+            {
+              "id": "rnj3d",
+              "type": "IfCase",
+              "test": {
+                "id": "doi7w",
+                "questionRef": {
+                  "type": "AliasRef",
+                  "value": "Typ"
                 },
+                "negated": false,
+                "type": "AnswerOptionComparison",
+                "operator": "is",
+                "comparands": [
+                  "wb3w3"
+                ]
+              },
+              "block": [
                 {
-                  "id": "93ib8",
-                  "type": "If",
-                  "cases": [
+                  "id": "23mp9",
+                  "type": "Group",
+                  "category": "Section",
+                  "alias": "Miete",
+                  "block": [
                     {
-                      "id": "b1qeo",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "x25th",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Dachgeschoss Ausgebaut"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "45g3h"
+                      "id": "0w5a7",
+                      "type": "Question",
+                      "alias": "Adresse",
+                      "text": "Wie lautet die Adresse der Wohnung?",
+                      "info": null,
+                      "answer": {
+                        "type": "TextAnswer"
+                      },
+                      "required": true
+                    },
+                    {
+                      "id": "qwlyh",
+                      "type": "Question",
+                      "alias": "Ost",
+                      "text": "",
+                      "info": null,
+                      "answer": {
+                        "type": "BooleanAnswer"
+                      },
+                      "required": false,
+                      "note": "Diese Frage wird nicht angezeigt"
+                    },
+                    {
+                      "id": "k6fty",
+                      "type": "Question",
+                      "alias": "Wohnlage",
+                      "text": "",
+                      "info": null,
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "8ktp",
+                            "alias": "einfach",
+                            "text": "einfach"
+                          },
+                          {
+                            "id": "pi77s",
+                            "alias": "mittel",
+                            "text": "mittel"
+                          },
+                          {
+                            "id": "v4s5m",
+                            "alias": "gut",
+                            "text": "gut"
+                          }
                         ]
                       },
-                      "block": [
+                      "required": false,
+                      "note": "Diese Frage wird nicht angezeigt"
+                    },
+                    {
+                      "id": "atgzp",
+                      "type": "Question",
+                      "alias": "Unterschrieben",
+                      "text": "Hast du den Mietvertrag für die Wohnung bereits unterschrieben?",
+                      "info": null,
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "or4h3j",
+                            "alias": "Ja",
+                            "text": "Ja"
+                          },
+                          {
+                            "id": "128cg",
+                            "alias": "Nein",
+                            "text": "Nein"
+                          }
+                        ]
+                      },
+                      "required": true
+                    },
+                    {
+                      "id": "rto8q",
+                      "type": "If",
+                      "alternate": [],
+                      "cases": [
                         {
-                          "id": "licgah",
+                          "id": "6k8f8",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "h0wnag",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Unterschrieben"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "or4h3j"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "c568q",
+                              "type": "Question",
+                              "alias": "Vertragsdatum",
+                              "text": "Wann hast du den Mietvertrag unterschrieben?",
+                              "info": "Wenn du dir nicht sicher bist, kannst du das Datum auch erstmal schätzen und später korrigieren.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "08tnb",
+                                    "alias": "<2015",
+                                    "text": "Vor 01.06.2015"
+                                  },
+                                  {
+                                    "id": "wejo0k",
+                                    "alias": "2015-2016",
+                                    "text": "Zwischen 01.06.2015 und 31.08.2016"
+                                  },
+                                  {
+                                    "id": "7np1",
+                                    "alias": "2016-2018",
+                                    "text": "Zwischen 01.09.2016 und 31.08.2018"
+                                  },
+                                  {
+                                    "id": "m2jo",
+                                    "alias": "2018-2020",
+                                    "text": "Zwischen 01.09.2018 und 31.08.2020"
+                                  },
+                                  {
+                                    "id": "4obam",
+                                    "alias": "2020-2022",
+                                    "text": "Zwischen 01.09.2020 und 31.08.2022"
+                                  },
+                                  {
+                                    "id": "oqyrs",
+                                    "alias": "2022-2024",
+                                    "text": "Zwischen 01.09.2022 und 31.08.2023"
+                                  },
+                                  {
+                                    "id": "ve0tek",
+                                    "alias": ">2024",
+                                    "text": "Ab 01.09.2023"
+                                  }
+                                ]
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "mt4i8",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "yfn6l",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "l2rtq",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "08tnb"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "m62xs",
+                                      "alias": "Mietvertrag zu alt",
+                                      "text": "",
+                                      "type": "Exit"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            },
+                            {
+                              "id": "133yp",
+                              "type": "Question",
+                              "alias": "Bisherige Mieterhöhungen",
+                              "text": "Hat dein Vermieter seit deinem Einzug bereits die Miete erhöht?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "ggo2s",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "b8nwa",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  }
+                                ]
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "in0lv",
+                              "type": "If",
+                              "alternate": [],
+                              "cases": [
+                                {
+                                  "id": "0r8ye",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "5m3jg",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Bisherige Mieterhöhungen"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "ggo2s"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "1mc5k",
+                                      "type": "Question",
+                                      "alias": "Bisherige Mieterhöhungen zugestimmt",
+                                      "text": "Hast du der Mieterhöhung bereits zugestimmt?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "ggo2s",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "b8nwa",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          }
+                                        ]
+                                      },
+                                      "required": true
+                                    },
+                                    {
+                                      "id": "1z9sik",
+                                      "type": "If",
+                                      "alternate": [
+                                        {
+                                          "id": "asoi7",
+                                          "alias": "Exit: Überprüfe Mieterhöhung ",
+                                          "text": "",
+                                          "type": "Exit"
+                                        }
+                                      ],
+                                      "cases": [
+                                        {
+                                          "id": "9t8dqh",
+                                          "type": "IfCase",
+                                          "test": {
+                                            "id": "u74g8",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Bisherige Mieterhöhungen zugestimmt"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "ggo2s"
+                                            ]
+                                          },
+                                          "block": [
+                                            {
+                                              "type": "Exit",
+                                              "id": "dx6vm",
+                                              "alias": "Exit: Mieterhöhung zugestimmt",
+                                              "text": ""
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "id": "wkj67",
+                              "type": "Question",
+                              "alias": "Mietart",
+                              "text": "Ist im Mietvertrag eine Staffelmiete oder Indexmiete vereinbart?",
+                              "info": "Staffel- und Indexmietverträge sind eine besondere Art von Mietvertrag, bei dem sich die Miete regelmäßig erhöhen kann. Wenn du einen Staffel- oder Indexmiete hast, steht ein Vermerk hierzu in deinem Mietvertrag.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "8dx4p",
+                                    "alias": "Staffelmiete",
+                                    "text": "Staffelmiete"
+                                  },
+                                  {
+                                    "id": "jwmlg",
+                                    "alias": "Indexmiete",
+                                    "text": "Indexmiete"
+                                  },
+                                  {
+                                    "id": "h1ddm",
+                                    "alias": "Normal",
+                                    "text": "Keins von beiden"
+                                  },
+                                  {
+                                    "id": "w3kuwj",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0a7wh",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "0ya0n",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "ryezt",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Unterschrieben"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "128cg"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "0n0s7",
+                              "type": "Question",
+                              "alias": "Kaltmiete",
+                              "text": "Wie hoch ist die geforderte Nettokaltmiete pro Monat in Euro?",
+                              "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": true
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ly5r4",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "jwf18",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Mietart"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "jwmlg"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "8ddts",
+                              "type": "Question",
+                              "alias": "Kaltmiete",
+                              "text": "Wie hoch war die Nettokaltmiete ursprünglich bei Abschluss des Mietvertrages pro Monat in Euro?",
+                              "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": true
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "ysmlo",
+                          "type": "Question",
+                          "alias": "Kaltmiete",
+                          "text": "Wie hoch ist deine aktuelle Nettokaltmiete pro Monat in Euro?",
+                          "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
+                          "answer": {
+                            "type": "NumberAnswer"
+                          },
+                          "required": true
+                        }
+                      ]
+                    },
+                    {
+                      "id": "op3kd",
+                      "type": "Question",
+                      "alias": "Qm",
+                      "text": "Wie groß ist die Wohnung in qm?",
+                      "info": "Auch die Größe der Wohnung sollte in dem Mietvertrag angegeben sein. Falls du den gerade nicht zur Hand hast, kannst du den Wert auch einfach schätzen und später korrigieren.",
+                      "answer": {
+                        "type": "NumberAnswer"
+                      },
+                      "required": true
+                    },
+                    {
+                      "id": "p5val",
+                      "type": "Question",
+                      "alias": "Dachgeschoss",
+                      "text": "Liegt deine Wohnung im Dachgeschoss?",
+                      "info": null,
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "uiajj",
+                            "alias": "",
+                            "text": "Ja"
+                          },
+                          {
+                            "id": "qzhja",
+                            "alias": "",
+                            "text": "Nein"
+                          },
+                          {
+                            "id": "8i22j",
+                            "alias": "Nicht sicher",
+                            "text": "Ich bin mir nicht sicher"
+                          }
+                        ]
+                      },
+                      "required": true
+                    },
+                    {
+                      "id": "y8jpo",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "170mb",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "n6z1l",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Dachgeschoss"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "uiajj"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "nuo4o",
+                              "type": "Question",
+                              "alias": "Dachgeschoss Ausgebaut",
+                              "text": "Wurde das Dachgeschoss nachträglich ausgebaut?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "45g3h",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "d5u3d",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "e7e5e",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "wz1qx",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "l6onh",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "6vz2j",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Dachgeschoss Ausgebaut"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "45g3h"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "vskq8",
+                                      "type": "Question",
+                                      "alias": "Baujahr vor 1991",
+                                      "text": "Wann wurde das Dachgeschoss ausgebaut? ",
+                                      "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "var1rl",
+                                            "alias": "-1918",
+                                            "text": "Bis einschließlich 1918"
+                                          },
+                                          {
+                                            "id": "ameym",
+                                            "alias": "1919-1949",
+                                            "text": "1919-1949"
+                                          },
+                                          {
+                                            "id": "bsegni",
+                                            "alias": "1950-1964",
+                                            "text": "1950-1964"
+                                          },
+                                          {
+                                            "id": "gyz0y",
+                                            "alias": "1965-1972",
+                                            "text": "1965-1972"
+                                          },
+                                          {
+                                            "id": "adc2e",
+                                            "alias": "1973-1985",
+                                            "text": "1973-1985"
+                                          },
+                                          {
+                                            "id": "cjm4t",
+                                            "alias": "1986-1990",
+                                            "text": "1986-1990"
+                                          },
+                                          {
+                                            "id": "ig2go",
+                                            "alias": "1991-",
+                                            "text": "Ab einschließlich 1991"
+                                          }
+                                        ]
+                                      },
+                                      "required": true
+                                    },
+                                    {
+                                      "id": "br9s4",
+                                      "type": "If",
+                                      "cases": [
+                                        {
+                                          "id": "3rynif",
+                                          "type": "IfCase",
+                                          "test": {
+                                            "id": "p6nrf",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr vor 1991"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "ig2go"
+                                            ]
+                                          },
+                                          "block": [
+                                            {
+                                              "id": "g95tu",
+                                              "type": "Question",
+                                              "alias": "Baujahr ab 1991",
+                                              "text": "In welchem Jahr wurde das Dachgeschoss ausgebaut.",
+                                              "info": null,
+                                              "answer": {
+                                                "type": "NumberAnswer"
+                                              },
+                                              "required": true
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "alternate": []
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "j62f",
+                                  "type": "Question",
+                                  "alias": "Baujahr vor 1991",
+                                  "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, gebaut",
+                                  "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "var1rl",
+                                        "alias": "-1918",
+                                        "text": "Bis einschließlich 1918"
+                                      },
+                                      {
+                                        "id": "ameym",
+                                        "alias": "1919-1949",
+                                        "text": "1919-1949"
+                                      },
+                                      {
+                                        "id": "bsegni",
+                                        "alias": "1950-1964",
+                                        "text": "1950-1964"
+                                      },
+                                      {
+                                        "id": "gyz0y",
+                                        "alias": "1965-1972",
+                                        "text": "1965-1972"
+                                      },
+                                      {
+                                        "id": "adc2e",
+                                        "alias": "1973-1985",
+                                        "text": "1973-1985"
+                                      },
+                                      {
+                                        "id": "cjm4t",
+                                        "alias": "1986-1990",
+                                        "text": "1986-1990"
+                                      },
+                                      {
+                                        "id": "ig2go",
+                                        "alias": "1991-",
+                                        "text": "Ab einschließlich 1991"
+                                      }
+                                    ]
+                                  },
+                                  "required": true
+                                },
+                                {
+                                  "id": "ab7tql",
+                                  "type": "If",
+                                  "cases": [
+                                    {
+                                      "id": "8y9yn",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "69aqu",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr vor 1991"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "ig2go"
+                                        ]
+                                      },
+                                      "block": [
+                                        {
+                                          "id": "6c3yc",
+                                          "type": "Question",
+                                          "alias": "Baujahr ab 1991",
+                                          "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, gebaut?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "NumberAnswer"
+                                          },
+                                          "required": true
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "alternate": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "rucbs",
                           "type": "Question",
                           "alias": "Baujahr vor 1991",
-                          "text": "Wann wurde das Dachgeschoss ausgebaut? ",
+                          "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, erbaut?",
                           "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
                           "answer": {
                             "type": "ChoiceAnswer",
@@ -545,18 +1140,18 @@
                               }
                             ]
                           },
-                          "required": true
+                          "required": true,
+                          "note": ""
                         },
                         {
-                          "id": "u1twq",
+                          "id": "2dxy5",
                           "type": "If",
-                          "alternate": [],
                           "cases": [
                             {
-                              "id": "4swtk",
+                              "id": "5kh9i",
                               "type": "IfCase",
                               "test": {
-                                "id": "ggh8x",
+                                "id": "vd5ym",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Baujahr vor 1991"
@@ -570,10 +1165,10 @@
                               },
                               "block": [
                                 {
-                                  "id": "3e721",
+                                  "id": "lqpxn",
                                   "type": "Question",
                                   "alias": "Baujahr ab 1991",
-                                  "text": "In welchem Jahr wurde das Dachgeschoss ausgebaut.",
+                                  "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, erbaut?",
                                   "info": null,
                                   "answer": {
                                     "type": "NumberAnswer"
@@ -582,1236 +1177,1150 @@
                                 }
                               ]
                             }
-                          ]
+                          ],
+                          "alternate": []
                         }
                       ]
-                    }
-                  ],
-                  "alternate": [
-                    {
-                      "id": "ki2wb",
-                      "type": "Question",
-                      "alias": "Baujahr vor 1991",
-                      "text": "Wann wurde das Haus, in dem sich deine Wohnung befindet, gebaut",
-                      "info": "Das Baujahr des Hauses findest du in dem Energieausweis, welchen du bei Abschluss des Mietvertrages erhalten haben solltest. Alternativ kannst du das Baujahr auch schätzen und später korrigieren.",
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "var1rl",
-                            "alias": "-1918",
-                            "text": "Bis einschließlich 1918"
-                          },
-                          {
-                            "id": "ameym",
-                            "alias": "1919-1949",
-                            "text": "1919-1949"
-                          },
-                          {
-                            "id": "bsegni",
-                            "alias": "1950-1964",
-                            "text": "1950-1964"
-                          },
-                          {
-                            "id": "gyz0y",
-                            "alias": "1965-1972",
-                            "text": "1965-1972"
-                          },
-                          {
-                            "id": "adc2e",
-                            "alias": "1973-1985",
-                            "text": "1973-1985"
-                          },
-                          {
-                            "id": "cjm4t",
-                            "alias": "1986-1990",
-                            "text": "1986-1990"
-                          },
-                          {
-                            "id": "ig2go",
-                            "alias": "1991-",
-                            "text": "Ab einschließlich 1991"
-                          }
-                        ]
-                      },
-                      "required": true
                     },
                     {
-                      "id": "w5s01",
+                      "id": "bq92i",
+                      "type": "Question",
+                      "alias": "Baujahr",
+                      "text": "",
+                      "info": null,
+                      "answer": {
+                        "type": "NumberAnswer"
+                      },
+                      "required": false,
+                      "note": "Diese Frage wird nicht angezeigt"
+                    },
+                    {
+                      "id": "26zie",
                       "type": "If",
-                      "alternate": [],
                       "cases": [
                         {
-                          "id": "1gulzh",
+                          "id": "xihob",
                           "type": "IfCase",
                           "test": {
-                            "id": "d2gvm",
+                            "id": "lsb48",
+                            "type": "LogicalOperation",
+                            "operator": "or",
+                            "negated": false,
+                            "conditions": [
+                              {
+                                "id": "dx7mo",
+                                "type": "LogicalOperation",
+                                "operator": "and",
+                                "negated": false,
+                                "conditions": [
+                                  {
+                                    "id": "tiqyp",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "wejo0k"
+                                    ]
+                                  },
+                                  {
+                                    "id": "ieevt",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerNumberComparison",
+                                    "operator": "gte",
+                                    "comparands": [
+                                      {
+                                        "type": "NumberLiteral",
+                                        "value": 2014
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "id": "llc80h",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Baujahr"
+                                },
+                                "negated": false,
+                                "type": "AnswerNumberComparison",
+                                "operator": "gt",
+                                "comparands": [
+                                  {
+                                    "type": "NumberLiteral",
+                                    "value": 2014
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "8xdme",
+                              "alias": "Zu neu",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "seaql",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "s4w6r",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Baujahr vor 1991"
+                              "value": "Baujahr"
+                            },
+                            "negated": false,
+                            "type": "AnswerNumberComparison",
+                            "operator": "is",
+                            "comparands": [
+                              {
+                                "type": "NumberLiteral",
+                                "value": 2014
+                              }
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "vwe93k",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "yermv",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "37vmr",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Dachgeschoss Ausgebaut"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "45g3h"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "iu3bt",
+                                      "type": "Question",
+                                      "alias": "Baujahr vor 1.10.2014",
+                                      "text": "Wurde das Dachgeschoss vor dem 01.10.2014 ausgebaut?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "q2aer",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "xx5lz",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "9wzd8",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": true
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "oa8jh",
+                                  "type": "Question",
+                                  "alias": "Baujahr vor 1.10.2014",
+                                  "text": "Wurde das Haus, in dem sich die Wohnung befindet, vor dem 01.10.2014 erbaut?",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "q2aer",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "xx5lz",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "9wzd8",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "required": true
+                                }
+                              ]
+                            },
+                            {
+                              "id": "1upxp",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "552mk",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "8souu",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr vor 1.10.2014"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "xx5lz"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "wuhshh",
+                                      "alias": "Zu neu",
+                                      "text": "",
+                                      "type": "Exit"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
+                    },
+                    {
+                      "id": "nhn6k",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "drq0aj",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "p93py",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
                             },
                             "negated": false,
                             "type": "AnswerOptionComparison",
                             "operator": "is",
                             "comparands": [
-                              "ig2go"
+                              "wejo0k"
                             ]
                           },
                           "block": [
                             {
-                              "id": "zfjdx",
+                              "id": "3wc2a",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "i9tpif",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "l4oh7",
+                                    "type": "LogicalOperation",
+                                    "operator": "or",
+                                    "negated": false,
+                                    "conditions": [
+                                      {
+                                        "id": "j9iar",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "9wld1",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "gte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 1973
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "qobz5",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 1990
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "afq81",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Ost"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerBooleanComparison",
+                                            "operator": "is",
+                                            "value": false
+                                          },
+                                          {
+                                            "id": "jy77v",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Qm"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lt",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 40
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "id": "cd7u4",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "ieeft",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "gte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 1991
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "d3m5u",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2002
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "lcjvs",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Qm"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lt",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 40
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "ox6qd",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Wohnlage"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "8ktp",
+                                              "pi77s"
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "id": "bmdrr",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "zpmra",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "gte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2003
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "0cocs",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2013
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "jx5po",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Qm"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lt",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 40
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "id": "bky94",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "qwto6k",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "gte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2003
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "xlqf4",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2013
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "nj6k",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Qm"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "gte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 40
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "e44g",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Qm"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lt",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 60
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "b502s",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Wohnlage"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "8ktp"
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "rrp6g",
+                                      "alias": "Mietspiegeltabelle Leer",
+                                      "text": "",
+                                      "type": "Exit"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "g5xat",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "dtp6i",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "7np1"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "i7kls",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "yli9u",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "07161",
+                                    "type": "LogicalOperation",
+                                    "operator": "or",
+                                    "negated": false,
+                                    "conditions": [
+                                      {
+                                        "id": "3t3zb",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "ob3z1",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "gte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 1991
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "dwssb",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2002
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "1sdyk",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Qm"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lt",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 40
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "id": "yz1thl",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "d9cpdi",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "gte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2003
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "8t0gr",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2013
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "0vdnd",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Qm"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lt",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 40
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "15ep7i",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Wohnlage"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "v4s5m"
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "piqre",
+                                      "alias": "Mietspiegeltabelle Leer",
+                                      "text": "",
+                                      "type": "Exit"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "rsk7x",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "buma6",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "l1wqb",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "gcrvt",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "ctana",
+                                    "type": "LogicalOperation",
+                                    "operator": "or",
+                                    "negated": false,
+                                    "conditions": [
+                                      {
+                                        "id": "6pyio",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "ibmbn",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "gte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 1991
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "7psuz",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2017
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "yqni1",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Qm"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lt",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 40
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "id": "v9a9y",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "jk6s2",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "gte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 1950
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "6k7uk",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 1964
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "2z7m",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Qm"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "gte",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 90
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "wzyt3",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Wohnlage"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "8ktp"
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "6o6x3",
+                                      "alias": "Mietspiegeltabelle Leer",
+                                      "text": "",
+                                      "type": "Exit"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
+                    },
+                    {
+                      "id": "i2nl3",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "s4lja",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "u9327",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Baujahr"
+                            },
+                            "negated": false,
+                            "type": "AnswerNumberComparison",
+                            "operator": "lte",
+                            "comparands": [
+                              {
+                                "type": "NumberLiteral",
+                                "value": 1964
+                              }
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "icpny",
                               "type": "Question",
-                              "alias": "Baujahr ab 1991",
-                              "text": "In welchem Jahr wurde das Haus, in dem sich die Wohnung befindet, gebaut?",
-                              "info": null,
+                              "alias": "Wohnung hat Sammelheizung",
+                              "text": "Hat die Wohnung eine Zentralheizung, Etagenheizung, oder Wohnungsheizung (Gas, Öl, Elektro)?",
+                              "info": "Dies trifft auf ein Großteil der Wohnungen in Berlin zu.",
                               "answer": {
-                                "type": "NumberAnswer"
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "hzqza",
+                              "type": "Question",
+                              "alias": "Badezimmer in Wohnung",
+                              "text": "Hat die Wohnung ein Badezimmer?",
+                              "info": "Dies trifft auf fast alle Wohnungen in Berlin zu.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
                               },
                               "required": true
                             }
                           ]
                         }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "hipf6j",
-          "type": "Question",
-          "alias": "Baujahr",
-          "text": "",
-          "info": null,
-          "answer": {
-            "type": "NumberAnswer"
-          },
-          "required": false,
-          "note": "Diese Frage wird nicht angezeigt"
-        },
-        {
-          "id": "k3jgpi",
-          "type": "If",
-          "alternate": [],
-          "cases": [
-            {
-              "id": "hmm0v",
-              "type": "IfCase",
-              "test": {
-                "id": "eflw9",
-                "type": "LogicalOperation",
-                "operator": "or",
-                "negated": false,
-                "conditions": [
-                  {
-                    "id": "3i4jxg",
-                    "type": "LogicalOperation",
-                    "operator": "and",
-                    "negated": false,
-                    "conditions": [
-                      {
-                        "id": "sfabh",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Vertragsdatum"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "wejo0k"
-                        ]
-                      },
-                      {
-                        "id": "sfabh",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Baujahr"
-                        },
-                        "negated": false,
-                        "type": "AnswerNumberComparison",
-                        "operator": "gte",
-                        "comparands": [
-                          {
-                            "type": "NumberLiteral",
-                            "value": 2014
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "id": "sfabh",
-                    "questionRef": {
-                      "type": "AliasRef",
-                      "value": "Baujahr"
+                      ],
+                      "alternate": []
                     },
-                    "negated": false,
-                    "type": "AnswerNumberComparison",
-                    "operator": "gt",
-                    "comparands": [
-                      {
-                        "type": "NumberLiteral",
-                        "value": 2014
-                      }
-                    ]
-                  }
-                ]
-              },
-              "block": [
-                {
-                  "id": "ie8uh",
-                  "alias": "Zu neu",
-                  "text": "",
-                  "type": "Exit"
-                }
-              ]
-            },
-            {
-              "id": "prsb6i",
-              "type": "IfCase",
-              "test": {
-                "id": "pewzwj",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Baujahr"
-                },
-                "negated": false,
-                "type": "AnswerNumberComparison",
-                "operator": "is",
-                "comparands": [
-                  {
-                    "type": "NumberLiteral",
-                    "value": 2014
-                  }
-                ]
-              },
-              "block": [
-                {
-                  "id": "4v6zgk",
-                  "type": "If",
-                  "cases": [
                     {
-                      "id": "fy2vdj",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "9nfd9j",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Dachgeschoss Ausgebaut"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "45g3h"
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "1oa6lk",
-                          "type": "Question",
-                          "alias": "Baujahr vor 1.10.2014",
-                          "text": "Wurde das Dachgeschoss vor dem 01.10.2014 ausgebaut?",
-                          "info": null,
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "q2aer",
-                                "alias": "Ja",
-                                "text": "Ja"
-                              },
-                              {
-                                "id": "xx5lz",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              },
-                              {
-                                "id": "9wzd8",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
-                              }
-                            ]
-                          },
-                          "required": true
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": [
-                    {
-                      "id": "7shdl",
+                      "id": "8mage",
                       "type": "Question",
-                      "alias": "Baujahr vor 1.10.2014",
-                      "text": "Wurde das Haus, in dem sich die Wohnung befindet, vor dem 01.10.2014 erbaut?",
+                      "alias": "Ausnahmen",
+                      "text": "Trifft eine dieser Aussagen auf die Wohnung zu?",
                       "info": null,
                       "answer": {
-                        "type": "ChoiceAnswer",
+                        "type": "MultiChoiceAnswer",
                         "options": [
                           {
-                            "id": "q2aer",
-                            "alias": "Ja",
-                            "text": "Ja"
+                            "id": "g7tps",
+                            "alias": "Sozialwohnung",
+                            "text": "Die Wohnung ist eine Sozialwohnung"
                           },
                           {
-                            "id": "xx5lz",
-                            "alias": "Nein",
-                            "text": "Nein"
+                            "id": "3e0a4",
+                            "alias": "Reihenhaus",
+                            "text": "Die Wohnung liegt in einem Einfamilienhaus, Zweifamilienhaus oder Reihenhaus"
                           },
                           {
-                            "id": "9wzd8",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
+                            "id": "jcjul",
+                            "alias": "Wohnung ohne WC ",
+                            "text": "Es gibt kein WC innerhalb der Wohnung "
+                          },
+                          {
+                            "id": "94gwk",
+                            "alias": "Möbliert",
+                            "text": "Die Wohnung wird möbliert vermietet"
+                          },
+                          {
+                            "id": "nl5be",
+                            "alias": "Keine",
+                            "text": "Keine der Aussagen trifft zu"
                           }
                         ]
                       },
                       "required": true
+                    },
+                    {
+                      "id": "yoc33",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "hzpedl",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "x8vtj",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Ausnahmen"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "g7tps"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "z5pz1g",
+                              "alias": "Mietpreisbremse gilt nicht für Sozialwohnungen",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "8xr6x",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "1x4",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Ausnahmen"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "3e0a4"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "a0enbl",
+                              "alias": "Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "6ge18i",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "b07cs",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Ausnahmen"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "jcjul"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "4jl5a",
+                              "alias": "Mietspiegel gilt nicht für Wohnungen ohne WC",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "dh9dj",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "zz6lk",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Ausnahmen"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "94gwk"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "xfyg1",
+                              "alias": "Möblierte Wohnung",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
                     }
                   ]
-                },
-                {
-                  "id": "n66m3",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "0m4gki",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "1bfc7j",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Baujahr vor 1.10.2014"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "xx5lz"
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "gmhg",
-                          "alias": "Zu neu",
-                          "text": "",
-                          "type": "Exit"
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": []
                 }
               ]
             }
           ]
-        },
-        {
-          "id": "9x41yh",
-          "type": "If",
-          "cases": [
-            {
-              "id": "xv9kd",
-              "type": "IfCase",
-              "test": {
-                "id": "wrw0th",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Vertragsdatum"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "wejo0k"
-                ]
-              },
-              "block": [
-                {
-                  "id": "981oo",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "jk51f",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "bto61",
-                        "type": "LogicalOperation",
-                        "operator": "or",
-                        "negated": false,
-                        "conditions": [
-                          {
-                            "id": "4mz4v",
-                            "type": "LogicalOperation",
-                            "operator": "and",
-                            "negated": false,
-                            "conditions": [
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 1973
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 1990
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Ost"
-                                },
-                                "negated": false,
-                                "type": "AnswerBooleanComparison",
-                                "operator": "is",
-                                "value": false
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Qm"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lt",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 40
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "id": "x8bk6l",
-                            "type": "LogicalOperation",
-                            "operator": "and",
-                            "negated": false,
-                            "conditions": [
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 1991
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2002
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Qm"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lt",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 40
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Wohnlage"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "8ktp",
-                                  "pi77s"
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "id": "x8bk6l",
-                            "type": "LogicalOperation",
-                            "operator": "and",
-                            "negated": false,
-                            "conditions": [
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2003
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2013
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Qm"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lt",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 40
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "id": "x8bk6l",
-                            "type": "LogicalOperation",
-                            "operator": "and",
-                            "negated": false,
-                            "conditions": [
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2003
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2013
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Qm"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 40
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Qm"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lt",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 60
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "jmy3uj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Wohnlage"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "8ktp"
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "296e3",
-                          "alias": "Mietspiegeltabelle Leer",
-                          "text": "",
-                          "type": "Exit"
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": []
-                }
-              ]
-            },
-            {
-              "id": "2uskn",
-              "type": "IfCase",
-              "test": {
-                "id": "v9xxb",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Vertragsdatum"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "7np1"
-                ]
-              },
-              "block": [
-                {
-                  "id": "w0bnk",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "chtcf",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "uqqft",
-                        "type": "LogicalOperation",
-                        "operator": "or",
-                        "negated": false,
-                        "conditions": [
-                          {
-                            "id": "ulw6w",
-                            "type": "LogicalOperation",
-                            "operator": "and",
-                            "negated": false,
-                            "conditions": [
-                              {
-                                "id": "mg77s",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 1991
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "mg77s",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2002
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "mg77s",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Qm"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lt",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 40
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "id": "ulw6w",
-                            "type": "LogicalOperation",
-                            "operator": "and",
-                            "negated": false,
-                            "conditions": [
-                              {
-                                "id": "mg77s",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2003
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "mg77s",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2013
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "mg77s",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Qm"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lt",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 40
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "mg77s",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Wohnlage"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "v4s5m"
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "ek7me",
-                          "alias": "Mietspiegeltabelle Leer",
-                          "text": "",
-                          "type": "Exit"
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": []
-                }
-              ]
-            },
-            {
-              "id": "2afq7",
-              "type": "IfCase",
-              "test": {
-                "id": "9vw9k",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Vertragsdatum"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "m2jo",
-                  "4obam",
-                  "oqyrs"
-                ]
-              },
-              "block": [
-                {
-                  "id": "sgu2g",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "3ymonh",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "py548",
-                        "type": "LogicalOperation",
-                        "operator": "or",
-                        "negated": false,
-                        "conditions": [
-                          {
-                            "id": "3oubek",
-                            "type": "LogicalOperation",
-                            "operator": "and",
-                            "negated": false,
-                            "conditions": [
-                              {
-                                "id": "c9csaj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 1991
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "c9csaj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2017
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "c9csaj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Qm"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lt",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 40
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "id": "3oubek",
-                            "type": "LogicalOperation",
-                            "operator": "and",
-                            "negated": false,
-                            "conditions": [
-                              {
-                                "id": "c9csaj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 1950
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "c9csaj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 1964
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "c9csaj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Qm"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 90
-                                  }
-                                ]
-                              },
-                              {
-                                "id": "c9csaj",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Wohnlage"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "8ktp"
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "8zbfh",
-                          "alias": "Mietspiegeltabelle Leer",
-                          "text": "",
-                          "type": "Exit"
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": []
-                }
-              ]
-            }
-          ],
-          "alternate": []
-        },
-        {
-          "id": "3ub8gi",
-          "type": "If",
-          "alternate": [],
-          "cases": [
-            {
-              "id": "7o9r3k",
-              "type": "IfCase",
-              "test": {
-                "id": "5bl2j",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Baujahr"
-                },
-                "negated": false,
-                "type": "AnswerNumberComparison",
-                "operator": "lte",
-                "comparands": [
-                  {
-                    "type": "NumberLiteral",
-                    "value": 1964
-                  }
-                ]
-              },
-              "block": [
-                {
-                  "id": "yzup4",
-                  "type": "Question",
-                  "alias": "Wohnung hat Sammelheizung",
-                  "text": "Hat die Wohnung eine Zentralheizung, Etagenheizung, oder Wohnungsheizung (Gas, Öl, Elektro)?",
-                  "info": "Dies trifft auf ein Großteil der Wohnungen in Berlin zu.",
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "uiajj",
-                        "alias": "Ja",
-                        "text": "Ja"
-                      },
-                      {
-                        "id": "qzhja",
-                        "alias": "Nein",
-                        "text": "Nein"
-                      },
-                      {
-                        "id": "8i22j",
-                        "alias": "Nicht sicher",
-                        "text": "Ich bin mir nicht sicher"
-                      }
-                    ]
-                  },
-                  "required": true
-                },
-                {
-                  "id": "hnhnz",
-                  "type": "Question",
-                  "alias": "Badezimmer in Wohnung",
-                  "text": "Hat die Wohnung ein Badezimmer?",
-                  "info": "Dies trifft auf fast alle Wohnungen in Berlin zu.",
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "uiajj",
-                        "alias": "Ja",
-                        "text": "Ja"
-                      },
-                      {
-                        "id": "qzhja",
-                        "alias": "Nein",
-                        "text": "Nein"
-                      },
-                      {
-                        "id": "8i22j",
-                        "alias": "Nicht sicher",
-                        "text": "Ich bin mir nicht sicher"
-                      }
-                    ]
-                  },
-                  "required": true
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "dkg1y",
-          "type": "Question",
-          "alias": "Ausnahmen",
-          "text": "Trifft eine dieser Aussagen auf die Wohnung zu?",
-          "info": null,
-          "answer": {
-            "type": "MultiChoiceAnswer",
-            "options": [
-              {
-                "id": "g7tps",
-                "alias": "Sozialwohnung",
-                "text": "Die Wohnung ist eine Sozialwohnung"
-              },
-              {
-                "id": "3e0a4",
-                "alias": "Reihenhaus",
-                "text": "Die Wohnung liegt in einem Einfamilienhaus, Zweifamilienhaus oder Reihenhaus"
-              },
-              {
-                "id": "jcjul",
-                "alias": "Wohnung ohne WC ",
-                "text": "Es gibt kein WC innerhalb der Wohnung "
-              },
-              {
-                "id": "94gwk",
-                "alias": "Möbliert",
-                "text": "Die Wohnung wird möbliert vermietet"
-              },
-              {
-                "id": "nl5be",
-                "alias": "Keine",
-                "text": "Keine der Aussagen trifft zu"
-              }
-            ]
-          },
-          "required": true
-        },
-        {
-          "id": "rk32x",
-          "type": "If",
-          "cases": [
-            {
-              "id": "zuu0hf",
-              "type": "IfCase",
-              "test": {
-                "id": "16oaq",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Ausnahmen"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "g7tps"
-                ]
-              },
-              "block": [
-                {
-                  "id": "frgkv",
-                  "alias": "Mietpreisbremse gilt nicht für Sozialwohnungen",
-                  "text": "",
-                  "type": "Exit"
-                }
-              ]
-            },
-            {
-              "id": "t5j2vf",
-              "type": "IfCase",
-              "test": {
-                "id": "mwnct",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Ausnahmen"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "3e0a4"
-                ]
-              },
-              "block": [
-                {
-                  "id": "la3nw",
-                  "alias": "Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser",
-                  "text": "",
-                  "type": "Exit"
-                }
-              ]
-            },
-            {
-              "id": "c18jf",
-              "type": "IfCase",
-              "test": {
-                "id": "lxitv",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Ausnahmen"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "jcjul"
-                ]
-              },
-              "block": [
-                {
-                  "id": "7989d",
-                  "alias": "Mietspiegel gilt nicht für Wohnungen ohne WC",
-                  "text": "",
-                  "type": "Exit"
-                }
-              ]
-            },
-            {
-              "id": "71bk5l",
-              "type": "IfCase",
-              "test": {
-                "id": "cr1i4g",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Ausnahmen"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "94gwk"
-                ]
-              },
-              "block": [
-                {
-                  "id": "f9xcd",
-                  "alias": "Möblierte Wohnung",
-                  "text": "",
-                  "type": "Exit"
-                }
-              ]
-            }
-          ],
-          "alternate": []
         },
         {
           "id": "y8fot",
