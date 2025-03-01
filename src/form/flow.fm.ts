@@ -3,11 +3,14 @@ export type StepInfoByAlias = {
     Schnelltest: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -20,6 +23,166 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
+            "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            Vormiete?: number;
+            "Vermieter hat über umfassende Sanierung informiert"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Renovierungskosten mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Renovierungskosten schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Renovierungskosten ein Drittel des Neubaupreises"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Badezimmer Klein"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Dusche Und Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Modernes Bad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Moderne Küche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Schallschutzfenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Aufzug"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad größer als 4qm"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad größer als 8qm"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad nur kleines Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad großes Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
+            "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad ohne Heizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit alter Heizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit Strukturheizkörper"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit Dielenfußboden"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad Wände ausreichend gefließt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad Boden und Wand hochwertig"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit hochwertiger Ausstattung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Einhebelmischbatterie"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Warmwasser"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Spüle"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche kann Spülmaschine"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Warmwasser"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Kühlschrank"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Heizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Dunstabzug"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche ist gefliest"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat hochwertigen Fußboden"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat großen Wohnraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Abstellraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Durchgangszimmer"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Balkon"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat großen Balkon"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung keinen Balkon weil unmöglich"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat einfach verglaste Fenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Schallschutzfenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Rollläden"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat nicht sichtbare Elektroinstallation"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat ausreichende Elektroinstallation"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Raum mit <2 Steckdosen"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Kabelanschluss"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Internetanschluss"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung ist barrierearm"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Treppenhaus in schlechtem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Treppenhaus in gutem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat schwellenarmen Zugang"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude ist in schlechtem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude ist in gutem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat <5 Stockwerke und Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat >=5 Stockwerke und kein Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrradabstellmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrradstellplätze mit Anschließmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrradabstellraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat privaten Abstellraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat privaten Keller"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
+            Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
+            "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist besonders laut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist geräuschs- oder geruchsbelastet"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist geruchsbelastet"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist aufwendig gestaltet"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat villenartige Mehrfamilienhäuser"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
+        };
+    };
+    Typ: {
+        answer: "Miete" | "Mieterhöhung";
+        state: null;
+    };
+    Miete: {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -147,24 +310,83 @@ export type StepInfoByAlias = {
     };
     Adresse: {
         answer: string;
-        state: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+        };
     };
     Ost: {
         answer: boolean;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
         };
     };
     Wohnlage: {
         answer: "einfach" | "mittel" | "gut";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
         };
     };
     Unterschrieben: {
         answer: "Ja" | "Nein";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
@@ -173,6 +395,7 @@ export type StepInfoByAlias = {
     Vertragsdatum: {
         answer: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
@@ -182,31 +405,116 @@ export type StepInfoByAlias = {
     "Mietvertrag zu alt": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+        };
+    };
+    "Bisherige Mieterhöhungen": {
+        answer: "Ja" | "Nein";
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+        };
+    };
+    "Bisherige Mieterhöhungen zugestimmt": {
+        answer: "Ja" | "Nein";
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+        };
+    };
+    "Exit: Mieterhöhung zugestimmt": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+        };
+    };
+    "Exit: Überprüfe Mieterhöhung ": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
         };
     };
     Mietart: {
         answer: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
         };
     };
     Kaltmiete: {
         answer: number;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
         };
@@ -214,11 +522,14 @@ export type StepInfoByAlias = {
     Qm: {
         answer: number;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
         };
@@ -226,24 +537,43 @@ export type StepInfoByAlias = {
     Dachgeschoss: {
         answer: "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
         };
     };
     "Dachgeschoss Ausgebaut": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -253,11 +583,14 @@ export type StepInfoByAlias = {
     "Baujahr vor 1991": {
         answer: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -270,11 +603,14 @@ export type StepInfoByAlias = {
     "Baujahr ab 1991": {
         answer: number;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -287,11 +623,14 @@ export type StepInfoByAlias = {
     Baujahr: {
         answer: number;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -304,11 +643,14 @@ export type StepInfoByAlias = {
     "Zu neu": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -323,11 +665,14 @@ export type StepInfoByAlias = {
     "Baujahr vor 1.10.2014": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -342,11 +687,14 @@ export type StepInfoByAlias = {
     "Mietspiegeltabelle Leer": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -361,11 +709,14 @@ export type StepInfoByAlias = {
     "Wohnung hat Sammelheizung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -380,11 +731,14 @@ export type StepInfoByAlias = {
     "Badezimmer in Wohnung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -400,11 +754,14 @@ export type StepInfoByAlias = {
     Ausnahmen: {
         answer: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -421,11 +778,14 @@ export type StepInfoByAlias = {
     "Mietpreisbremse gilt nicht für Sozialwohnungen": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -443,11 +803,14 @@ export type StepInfoByAlias = {
     "Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -465,11 +828,14 @@ export type StepInfoByAlias = {
     "Mietspiegel gilt nicht für Wohnungen ohne WC": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -487,11 +853,14 @@ export type StepInfoByAlias = {
     "Möblierte Wohnung": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -504,16 +873,362 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+        };
+    };
+    "Mieterhöhung": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
+            "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            Vormiete?: number;
+            "Vermieter hat über umfassende Sanierung informiert"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Renovierungskosten mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Renovierungskosten schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Renovierungskosten ein Drittel des Neubaupreises"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Badezimmer Klein"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Dusche Und Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Modernes Bad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Moderne Küche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Schallschutzfenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Aufzug"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad größer als 4qm"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad größer als 8qm"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad nur kleines Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad großes Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
+            "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad ohne Heizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit alter Heizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit Strukturheizkörper"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit Dielenfußboden"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad Wände ausreichend gefließt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad Boden und Wand hochwertig"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit hochwertiger Ausstattung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Einhebelmischbatterie"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Warmwasser"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Spüle"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche kann Spülmaschine"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Warmwasser"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Kühlschrank"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Heizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Dunstabzug"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche ist gefliest"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat hochwertigen Fußboden"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat großen Wohnraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Abstellraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Durchgangszimmer"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Balkon"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat großen Balkon"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung keinen Balkon weil unmöglich"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat einfach verglaste Fenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Schallschutzfenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Rollläden"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat nicht sichtbare Elektroinstallation"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat ausreichende Elektroinstallation"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Raum mit <2 Steckdosen"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Kabelanschluss"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Internetanschluss"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung ist barrierearm"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Treppenhaus in schlechtem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Treppenhaus in gutem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat schwellenarmen Zugang"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude ist in schlechtem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude ist in gutem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat <5 Stockwerke und Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat >=5 Stockwerke und kein Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrradabstellmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrradstellplätze mit Anschließmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrradabstellraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat privaten Abstellraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat privaten Keller"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
+            Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
+            "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist besonders laut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist geräuschs- oder geruchsbelastet"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist geruchsbelastet"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist aufwendig gestaltet"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat villenartige Mehrfamilienhäuser"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
+        };
+    };
+    "Mieterhöhung zugestimmt": {
+        answer: "Ja" | "Nein";
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+        };
+    };
+    "Mieterhöhung Grund": {
+        answer: "Ja" | "Nein" | "Nicht sicher";
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+        };
+    };
+    "Mieterhöhung anderer Grund": {
+        answer: "Ja" | "Nein" | "Nicht sicher";
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+        };
+    };
+    "Exit: Mieterhöhung mit anderem Grund ": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+        };
+    };
+    "Exit: Mieterhöhung ohne Begründung": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+        };
+    };
+    "Mieterhöhung Datum": {
+        answer: number;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+        };
+    };
+    "Exit: Mieterhöhung bei Staffelmiete": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
         };
     };
     "Einschätzung": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -526,16 +1241,23 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
         };
     };
     Details: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -548,6 +1270,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -676,11 +1402,14 @@ export type StepInfoByAlias = {
     "Bisherige Angaben": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -693,6 +1422,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -821,11 +1554,14 @@ export type StepInfoByAlias = {
     Mietvertrag: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -838,6 +1574,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -966,11 +1706,14 @@ export type StepInfoByAlias = {
     Vormiete: {
         answer: number;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -983,6 +1726,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -991,11 +1738,14 @@ export type StepInfoByAlias = {
     "Vermieter hat über Vormiete informiert": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1008,16 +1758,23 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
         };
     };
     "Vermiete hat Vormiete mitgeteilt": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1030,17 +1787,24 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Vermieter hat Vormiete schriftlich mitgeteilt": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1053,6 +1817,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -1060,11 +1828,14 @@ export type StepInfoByAlias = {
     "Wichtig: Vermieterinnen haben unter Umständen das Recht eine höhere Miete zu fordern, wenn die Vormieterin bereits eine höhere Miete gezahlt hat. Wir empfehlen nochmal zu überprüfen, ob die Vermieterin bei Vertragsabschluss über die Vormiete schriftlich informiert hat und dies nochmal bei einem Beratungstermin mit einer Mietrechtsexpertin anzusprechen.": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1077,6 +1848,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1086,11 +1861,14 @@ export type StepInfoByAlias = {
     "Erste Vermietung nach umfassender Renovierung": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1103,6 +1881,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1231,11 +2013,14 @@ export type StepInfoByAlias = {
     "Vermieter hat über umfassende Sanierung informiert": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1248,6 +2033,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1257,11 +2046,14 @@ export type StepInfoByAlias = {
     "Vermieter hat Renovierungskosten mitgeteilt": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1274,6 +2066,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1284,11 +2080,14 @@ export type StepInfoByAlias = {
     "Vermieter hat Renovierungskosten schriftlich mitgeteilt": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1301,6 +2100,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1312,11 +2115,14 @@ export type StepInfoByAlias = {
     "Renovierungskosten ein Drittel des Neubaupreises": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1329,6 +2135,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1341,11 +2151,14 @@ export type StepInfoByAlias = {
     "Die Regelungen der Mietpreisbremse gelten nicht für Wohnungen, die nach einer umfassenden Modernisierung erstmals vermietet werden. Dies könnte bei dir unter Umständen der Fall sein. Wir empfehlen dir, den Fragebogen weiter auszufüllen und dieses Thema mit einer Mietrechtsexpertin zu besprechen.": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1358,6 +2171,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1371,11 +2188,14 @@ export type StepInfoByAlias = {
     "Die Regelungen der Mietpreisbremse gelten nicht für Wohnungen, die nach einer umfassenden Modernisierung erstmals vermietet werden. Wir empfehlen dir, diese Information nochmal nachzugucken und das Thema gegebenenfalls mit einer Mietrechtsexpertin zu besprechen.": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1388,6 +2208,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1401,11 +2225,14 @@ export type StepInfoByAlias = {
     "Die Regelungen der Mietpreisbremse gelten nicht für Wohnungen, die nach einer umfassenden Modernisierung erstmals vermietet werden. Selbst wenn die Vermieterin dies behauptet, muss dies aber nicht unbedingt stimmen. Wir empfehlen dir, den Fragebogen weiter auszufüllen und dieses Thema mit einer Mietrechtsexpertin zu besprechen.": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1418,6 +2245,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1431,11 +2262,14 @@ export type StepInfoByAlias = {
     Merkmalsgruppen: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1448,6 +2282,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1576,11 +2414,14 @@ export type StepInfoByAlias = {
     Sondermerkmale: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1593,6 +2434,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1721,11 +2566,14 @@ export type StepInfoByAlias = {
     Badezimmer: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1738,6 +2586,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1866,11 +2718,14 @@ export type StepInfoByAlias = {
     "Sondermerkmal Badezimmer Klein": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1883,6 +2738,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1896,11 +2755,14 @@ export type StepInfoByAlias = {
     "Sondermerkmal Dusche Und Badewanne": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1913,6 +2775,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1927,11 +2793,14 @@ export type StepInfoByAlias = {
     "Sondermerkmal Modernes Bad": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1944,6 +2813,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1959,11 +2832,14 @@ export type StepInfoByAlias = {
     "Küche": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -1976,6 +2852,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2104,11 +2984,14 @@ export type StepInfoByAlias = {
     "Sondermerkmal Moderne Küche": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2121,6 +3004,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2137,11 +3024,14 @@ export type StepInfoByAlias = {
     Allgemein: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2154,6 +3044,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2282,11 +3176,14 @@ export type StepInfoByAlias = {
     "Sondermerkmal Schallschutzfenster": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2299,6 +3196,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2316,11 +3217,14 @@ export type StepInfoByAlias = {
     "Sondermerkmal Aufzug": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2333,6 +3237,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2351,11 +3259,14 @@ export type StepInfoByAlias = {
     "Sondermerkmal Bodenbelag": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2368,6 +3279,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2387,11 +3302,14 @@ export type StepInfoByAlias = {
     "Bad & WC": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2404,6 +3322,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2532,11 +3454,14 @@ export type StepInfoByAlias = {
     "Bad größer als 4qm": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2549,6 +3474,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2570,11 +3499,14 @@ export type StepInfoByAlias = {
     "Bad größer als 8qm": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2587,6 +3519,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2608,11 +3544,14 @@ export type StepInfoByAlias = {
     "Dusche & Badewanne": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2625,6 +3564,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2753,11 +3696,14 @@ export type StepInfoByAlias = {
     "Bad hat Duschmöglichkeit": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2770,6 +3716,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2793,11 +3743,14 @@ export type StepInfoByAlias = {
     "Bad hat Dusche und Wanne": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2810,6 +3763,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2834,11 +3791,14 @@ export type StepInfoByAlias = {
     "Bad hat bodengleiche Dusche": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2851,6 +3811,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2875,11 +3839,14 @@ export type StepInfoByAlias = {
     "Duschen nur in freistehender Badewanne": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2892,6 +3859,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2917,11 +3888,14 @@ export type StepInfoByAlias = {
     "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2934,6 +3908,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2960,11 +3938,14 @@ export type StepInfoByAlias = {
     Waschbecken: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -2977,6 +3958,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3105,11 +4090,14 @@ export type StepInfoByAlias = {
     "Bad & WC ohne Waschbecken": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3122,6 +4110,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3150,11 +4142,14 @@ export type StepInfoByAlias = {
     "Bad nur kleines Waschbecken": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3167,6 +4162,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3195,11 +4194,14 @@ export type StepInfoByAlias = {
     "Bad großes Waschbecken": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3212,6 +4214,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3241,11 +4247,14 @@ export type StepInfoByAlias = {
     Toilette: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3258,6 +4267,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3386,11 +4399,14 @@ export type StepInfoByAlias = {
     "Mehrere WCs": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3403,6 +4419,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3433,11 +4453,14 @@ export type StepInfoByAlias = {
     "Getrenntes WC": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3450,6 +4473,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3481,11 +4508,14 @@ export type StepInfoByAlias = {
     "Bad hat wandhängendes WC": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3498,6 +4528,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3531,11 +4565,14 @@ export type StepInfoByAlias = {
     "Bad hat hochwertiges Stand-WC": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3548,6 +4585,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3581,11 +4622,14 @@ export type StepInfoByAlias = {
     "Lüftung": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3598,6 +4642,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3726,11 +4774,14 @@ export type StepInfoByAlias = {
     "WC ohne Lüftung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3743,6 +4794,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3778,11 +4833,14 @@ export type StepInfoByAlias = {
     "Bad mit WC ohne Fenster": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3795,6 +4853,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3831,11 +4893,14 @@ export type StepInfoByAlias = {
     "Bad mit moderner Entlüftung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3848,6 +4913,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3884,11 +4953,14 @@ export type StepInfoByAlias = {
     Heizung: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -3901,6 +4973,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4029,11 +5105,14 @@ export type StepInfoByAlias = {
     "Bad ohne Heizung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4046,6 +5125,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4084,11 +5167,14 @@ export type StepInfoByAlias = {
     "Bad mit alter Heizung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4101,6 +5187,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4139,11 +5229,14 @@ export type StepInfoByAlias = {
     "Bad mit Strukturheizkörper": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4156,6 +5249,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4196,11 +5293,14 @@ export type StepInfoByAlias = {
     "Bad mit Fußbodenheizung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4213,6 +5313,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4253,11 +5357,14 @@ export type StepInfoByAlias = {
     "Wände & Boden": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4270,6 +5377,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4398,11 +5509,14 @@ export type StepInfoByAlias = {
     "Bad mit Dielenfußboden": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4415,6 +5529,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4457,11 +5575,14 @@ export type StepInfoByAlias = {
     "Bad Wände ausreichend gefließt": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4474,6 +5595,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4518,11 +5643,14 @@ export type StepInfoByAlias = {
     "Bad Boden und Wand hochwertig": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4535,6 +5663,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4579,11 +5711,14 @@ export type StepInfoByAlias = {
     "Weitere Ausstattung": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4596,6 +5731,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4724,11 +5863,14 @@ export type StepInfoByAlias = {
     "Bad mit hochwertiger Ausstattung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4741,6 +5883,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4785,11 +5931,14 @@ export type StepInfoByAlias = {
     "Bad hat Einhebelmischbatterie": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4802,6 +5951,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4847,11 +6000,14 @@ export type StepInfoByAlias = {
     "Bad hat Warmwasser": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4864,6 +6020,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4911,11 +6071,14 @@ export type StepInfoByAlias = {
     "Küche ist groß": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4928,6 +6091,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4975,11 +6142,14 @@ export type StepInfoByAlias = {
     "Küche ist separater Raum": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -4992,6 +6162,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5040,11 +6214,14 @@ export type StepInfoByAlias = {
     "Küche hat Einbauküche": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -5057,6 +6234,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5107,11 +6288,14 @@ export type StepInfoByAlias = {
     "Küche hat Kücheninsel": {
         answer: "Ja" | "Nein" | "nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -5124,6 +6308,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5174,11 +6362,14 @@ export type StepInfoByAlias = {
     Kochen: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -5191,6 +6382,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5319,11 +6514,14 @@ export type StepInfoByAlias = {
     "Küche hat Kochmöglichkeit": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -5336,6 +6534,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5387,11 +6589,14 @@ export type StepInfoByAlias = {
     "Küche hat Gas/Elektroherd ohne Backofen": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -5404,6 +6609,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5456,11 +6665,14 @@ export type StepInfoByAlias = {
     "Küche hat Ceran-/Induktionsherd": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -5473,6 +6685,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5527,11 +6743,14 @@ export type StepInfoByAlias = {
     "Spülen": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -5544,6 +6763,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5672,11 +6895,14 @@ export type StepInfoByAlias = {
     "Küche hat Spüle": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -5689,6 +6915,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5743,11 +6973,14 @@ export type StepInfoByAlias = {
     "Küche kann Spülmaschine": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -5760,6 +6993,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5815,11 +7052,14 @@ export type StepInfoByAlias = {
     "Küche hat Warmwasser": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -5832,6 +7072,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5888,11 +7132,14 @@ export type StepInfoByAlias = {
     "Kühlschrank": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -5905,6 +7152,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6033,11 +7284,14 @@ export type StepInfoByAlias = {
     "Küche hat Kühlschrank": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -6050,6 +7304,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6108,11 +7366,14 @@ export type StepInfoByAlias = {
     "Küche hat Heizung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -6125,6 +7386,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6183,11 +7448,14 @@ export type StepInfoByAlias = {
     "Küche hat Lüftung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -6200,6 +7468,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6259,11 +7531,14 @@ export type StepInfoByAlias = {
     "Küche hat Dunstabzug": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -6276,6 +7551,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6336,11 +7615,14 @@ export type StepInfoByAlias = {
     "Wände": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -6353,6 +7635,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6481,11 +7767,14 @@ export type StepInfoByAlias = {
     "Küche ist gefliest": {
         answer: "Ja" | "Nein" | "nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -6498,6 +7787,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6559,11 +7852,14 @@ export type StepInfoByAlias = {
     "Fußboden": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -6576,6 +7872,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6704,11 +8004,14 @@ export type StepInfoByAlias = {
     "Küche hat hochwertigen Fußboden": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -6721,6 +8024,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6784,11 +8091,14 @@ export type StepInfoByAlias = {
     Wohnung: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -6801,6 +8111,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6929,11 +8243,14 @@ export type StepInfoByAlias = {
     "Räume": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -6946,6 +8263,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7074,11 +8395,14 @@ export type StepInfoByAlias = {
     "Wohnung hat großen Wohnraum": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -7091,6 +8415,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7154,11 +8482,14 @@ export type StepInfoByAlias = {
     "Wohnung hat Abstellraum": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -7171,6 +8502,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7235,11 +8570,14 @@ export type StepInfoByAlias = {
     "Wohnung hat Durchgangszimmer": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -7252,6 +8590,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7317,11 +8659,14 @@ export type StepInfoByAlias = {
     "Außenbereich": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -7334,6 +8679,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7462,11 +8811,14 @@ export type StepInfoByAlias = {
     "Wohnung hat Balkon": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -7479,6 +8831,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7545,11 +8901,14 @@ export type StepInfoByAlias = {
     "Wohnung hat großen Balkon": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -7562,6 +8921,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7629,11 +8992,14 @@ export type StepInfoByAlias = {
     "Wohnung keinen Balkon weil unmöglich": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -7646,6 +9012,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7714,11 +9084,14 @@ export type StepInfoByAlias = {
     Fenster: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -7731,6 +9104,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7859,11 +9236,14 @@ export type StepInfoByAlias = {
     "Wohnung hat einfach verglaste Fenster": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -7876,6 +9256,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7945,11 +9329,14 @@ export type StepInfoByAlias = {
     "Wohnung hat Schallschutzfenster": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -7962,6 +9349,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8033,11 +9424,14 @@ export type StepInfoByAlias = {
     "Wohnung hat Rollläden": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -8050,6 +9444,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8121,11 +9519,14 @@ export type StepInfoByAlias = {
     "Wände, Decke und Boden": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -8138,6 +9539,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8266,11 +9671,14 @@ export type StepInfoByAlias = {
     "Wohnung hat aufwendige Wand- und Deckenverkleidung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -8283,6 +9691,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8355,11 +9767,14 @@ export type StepInfoByAlias = {
     "Wohnung hat hochwertigen Bodenbelag": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -8372,6 +9787,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8446,11 +9865,14 @@ export type StepInfoByAlias = {
     "Heizung & Sanitär": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -8463,6 +9885,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8591,11 +10017,14 @@ export type StepInfoByAlias = {
     "Wohnung hat Fußbodenheizung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -8608,6 +10037,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8682,11 +10115,14 @@ export type StepInfoByAlias = {
     "Wohnung hat sichtbare Heizungsrohe": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -8699,6 +10135,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8774,11 +10214,14 @@ export type StepInfoByAlias = {
     "Wohnnung hat sichtbare Bewässerungsleitungen": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -8791,6 +10234,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8867,11 +10314,14 @@ export type StepInfoByAlias = {
     "Wohnung kann Waschmaschiene": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -8884,6 +10334,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8961,11 +10415,14 @@ export type StepInfoByAlias = {
     Elektronik: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -8978,6 +10435,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9106,11 +10567,14 @@ export type StepInfoByAlias = {
     "Wohnung hat nicht sichtbare Elektroinstallation": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -9123,6 +10587,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9201,11 +10669,14 @@ export type StepInfoByAlias = {
     "Wohnung hat ausreichende Elektroinstallation": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -9218,6 +10689,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9299,11 +10774,14 @@ export type StepInfoByAlias = {
     "Wohnung hat Raum mit <2 Steckdosen": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -9316,6 +10794,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9396,11 +10878,14 @@ export type StepInfoByAlias = {
     "Internet & Fernsehen": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -9413,6 +10898,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9541,11 +11030,14 @@ export type StepInfoByAlias = {
     "Wohnung hat Kabelanschluss": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -9558,6 +11050,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9639,11 +11135,14 @@ export type StepInfoByAlias = {
     "Wohnung hat Internetanschluss": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -9656,6 +11155,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9738,11 +11241,14 @@ export type StepInfoByAlias = {
     "Weitere Fragen": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -9755,6 +11261,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9883,11 +11393,14 @@ export type StepInfoByAlias = {
     "Wohnung ist barrierearm": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -9900,6 +11413,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9983,11 +11500,14 @@ export type StepInfoByAlias = {
     "Wohnung hat verstärkte Tür": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -10000,6 +11520,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10084,11 +11608,14 @@ export type StepInfoByAlias = {
     "Wohnung hat Kaltwasserzähler": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -10101,6 +11628,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10187,11 +11718,14 @@ export type StepInfoByAlias = {
     "Mieter zahlt für Kaltwasserzähler": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -10204,6 +11738,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10290,11 +11828,14 @@ export type StepInfoByAlias = {
     "Gebäude": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -10307,6 +11848,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10435,11 +11980,14 @@ export type StepInfoByAlias = {
     "Haustür": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -10452,6 +12000,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10580,11 +12132,14 @@ export type StepInfoByAlias = {
     "Gebäude Hauseingangstür ist nicht abschließbar": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -10597,6 +12152,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10684,11 +12243,14 @@ export type StepInfoByAlias = {
     "Gebäude hat sichere Haustür": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -10701,6 +12263,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10789,11 +12355,14 @@ export type StepInfoByAlias = {
     "Gebäude hat Gegensprechanlage": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -10806,6 +12375,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10895,11 +12468,14 @@ export type StepInfoByAlias = {
     "Gebäude hat Gegensprechanlage mit Kamera": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -10912,6 +12488,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11002,11 +12582,14 @@ export type StepInfoByAlias = {
     "Treppenhaus & Eingangsbereich": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -11019,6 +12602,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11147,11 +12734,14 @@ export type StepInfoByAlias = {
     "Gebäude hat Treppenhaus in schlechtem Zustand": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -11164,6 +12754,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11255,11 +12849,14 @@ export type StepInfoByAlias = {
     "Gebäude hat Treppenhaus in gutem Zustand": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -11272,6 +12869,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11364,11 +12965,14 @@ export type StepInfoByAlias = {
     Barrierefreiheit: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -11381,6 +12985,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11509,11 +13117,14 @@ export type StepInfoByAlias = {
     "Gebäude hat schwellenarmen Zugang": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -11526,6 +13137,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11619,11 +13234,14 @@ export type StepInfoByAlias = {
     "Gebäude ist in schlechtem Zustand": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -11636,6 +13254,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11730,11 +13352,14 @@ export type StepInfoByAlias = {
     "Gebäude ist in gutem Zustand": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -11747,6 +13372,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11843,11 +13472,14 @@ export type StepInfoByAlias = {
     Fahrstuhl: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -11860,6 +13492,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11988,11 +13624,14 @@ export type StepInfoByAlias = {
     "Gebäude hat Fahrstuhl": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -12005,6 +13644,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12104,11 +13747,14 @@ export type StepInfoByAlias = {
     "Gebäude hat <5 Stockwerke und Fahrstuhl": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -12121,6 +13767,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12220,11 +13870,14 @@ export type StepInfoByAlias = {
     "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -12237,6 +13890,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12336,11 +13993,14 @@ export type StepInfoByAlias = {
     Fahrrad: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -12353,6 +14013,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12481,11 +14145,14 @@ export type StepInfoByAlias = {
     "Gebäude hat Fahrradabstellmöglichkeit": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -12498,6 +14165,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12597,11 +14268,14 @@ export type StepInfoByAlias = {
     "Gebäude hat Fahrradstellplätze mit Anschließmöglichkeit": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -12614,6 +14288,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12716,11 +14394,14 @@ export type StepInfoByAlias = {
     "Gebäude hat Fahrradabstellraum": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -12733,6 +14414,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12834,11 +14519,14 @@ export type StepInfoByAlias = {
     "Keller & Abstellräume": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -12851,6 +14539,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12979,11 +14671,14 @@ export type StepInfoByAlias = {
     "Gebäude hat privaten Abstellraum": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -12996,6 +14691,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13098,11 +14797,14 @@ export type StepInfoByAlias = {
     "Gebäude hat privaten Keller": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -13115,6 +14817,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13219,11 +14925,14 @@ export type StepInfoByAlias = {
     "Gebäude hat zusätzliche Räume": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -13236,6 +14945,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13340,11 +15053,14 @@ export type StepInfoByAlias = {
     "Gebäude hat Parkplatz": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -13357,6 +15073,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13462,11 +15182,14 @@ export type StepInfoByAlias = {
     "Gebäude ist dicht bebaut": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -13479,6 +15202,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13585,11 +15312,14 @@ export type StepInfoByAlias = {
     "Wärmedämmung": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -13602,6 +15332,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13730,11 +15464,14 @@ export type StepInfoByAlias = {
     Energieverbrauch: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -13747,6 +15484,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13875,11 +15616,14 @@ export type StepInfoByAlias = {
     "Kennt Energieverbrauch oder Energiebedarf": {
         answer: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -13892,6 +15636,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13999,11 +15747,14 @@ export type StepInfoByAlias = {
     Energieverbrauchskennwert: {
         answer: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -14016,6 +15767,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14125,11 +15880,14 @@ export type StepInfoByAlias = {
     Energiebedarfskennwert: {
         answer: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -14142,6 +15900,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14252,11 +16014,14 @@ export type StepInfoByAlias = {
     Heizanlage: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -14269,6 +16034,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14397,11 +16166,14 @@ export type StepInfoByAlias = {
     "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -14414,6 +16186,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14526,11 +16302,14 @@ export type StepInfoByAlias = {
     "Gebäude hat moderne Heizanlage": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -14543,6 +16322,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14655,11 +16438,14 @@ export type StepInfoByAlias = {
     "Gebäude hat schlechte Wärmedämmung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -14672,6 +16458,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14784,11 +16574,14 @@ export type StepInfoByAlias = {
     "Gebäude hat gute Wärmedämmung": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -14801,6 +16594,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14915,11 +16712,14 @@ export type StepInfoByAlias = {
     Wohnumfeld: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -14932,6 +16732,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15060,11 +16864,14 @@ export type StepInfoByAlias = {
     "Lärm- und Geruchsbelastung": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -15077,6 +16884,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15205,11 +17016,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld ist besonders leise": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -15222,6 +17036,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15336,11 +17154,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld ist besonders laut": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -15353,6 +17174,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15468,11 +17293,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld ist geräuschs- oder geruchsbelastet": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -15485,6 +17313,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15601,11 +17433,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld ist geruchsbelastet": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -15618,6 +17453,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15735,11 +17574,14 @@ export type StepInfoByAlias = {
     "Garten & Grundstück": {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -15752,6 +17594,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15880,11 +17726,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld ist aufwendig gestaltet": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -15897,6 +17746,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16016,11 +17869,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld hat ungepflegte Müllstandsfläche": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -16033,6 +17889,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16152,11 +18012,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld hat gepflegte Müllstandsfläche": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -16169,6 +18032,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16289,11 +18156,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld hat eigenen Garten": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -16306,6 +18176,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16427,11 +18301,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld hat Gemeinschaftsgarten": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -16444,6 +18321,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16566,11 +18447,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld hat Fahrradabstellmöglichkeiten": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -16583,6 +18467,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16706,11 +18594,14 @@ export type StepInfoByAlias = {
     Umgebung: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -16723,6 +18614,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16851,11 +18746,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld ist stark vernachlässigt": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -16868,6 +18766,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16992,11 +18894,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld ist repräsentativ": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -17009,6 +18914,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17134,11 +19043,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld hat villenartige Mehrfamilienhäuser": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -17151,6 +19063,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17277,11 +19193,14 @@ export type StepInfoByAlias = {
     "Wohnumfeld hat Parkplatz": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -17294,6 +19213,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17421,11 +19344,14 @@ export type StepInfoByAlias = {
     Auswertung: {
         answer: null;
         state: {
+            Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
             Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Bisherige Mieterhöhungen"?: "Ja" | "Nein";
+            "Bisherige Mieterhöhungen zugestimmt"?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
             Kaltmiete?: number;
             Qm?: number;
@@ -17438,6 +19364,10 @@ export type StepInfoByAlias = {
             "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung anderer Grund"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung Datum"?: number;
             "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
             "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
