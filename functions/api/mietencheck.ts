@@ -3,5 +3,8 @@ export function onRequestGet() {
 }
 
 export function onRequestPost() {
-  return "hi";
+  console.log("POST request received");
+  return new Response(JSON.stringify({ message: "hi" }), {
+    headers: { "Content-Type": "application/json" },
+  });
 }
