@@ -1,47 +1,16 @@
-import { Button, LinkButton } from "~/components";
-import { useLocalizeField } from "~/l10n";
-import { DetailsRouter } from "~/pages/details/router";
-import { useWorstBestZulaessigeHoechstmieteDiff } from "~/pages/details/utils";
+import { useAnswers } from "~/form/flow-machine";
 
 import { StepperType } from "..";
-import { useMarkEstimatorSeen } from "../utils";
-import { MieteZuHoch } from "./MieteZuHoch";
-import { MieteZuNiedrig } from "./MieteZuNiedrig";
+import { MieteSchnelltestResult } from "./miete/MieteSchnelltestResult";
+import { MieterhoehungSchnelltestResult } from "./mieterhoehung/MieterhoehungSchnelltestResult";
 
 export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
-  const l = useLocalizeField();
-  const { best: bestDiff } = useWorstBestZulaessigeHoechstmieteDiff();
+  const answers = useAnswers();
+  const typ = answers.getWithOptionAlias("Typ");
 
-  useMarkEstimatorSeen();
+  if (typ == "Mieterhöhung") {
+    return <MieterhoehungSchnelltestResult />;
+  }
 
-  return (
-    <>
-      <p className="text-base text-neutral-faded mb-2">{l("Prediction")}</p>
-      {bestDiff < 0 ? <MieteZuNiedrig /> : <MieteZuHoch />}
-
-      <div className="flex flex-row flex-wrap justify-center gap-3 mt-10">
-        {stepper.back && <Button onPress={stepper.back}>{l("Back")}</Button>}
-        {bestDiff > 0 ? (
-          <LinkButton
-            color="primary"
-            variant="solid"
-            to={DetailsRouter.Summary()}
-          >
-            {l("go_to_details")}
-          </LinkButton>
-        ) : (
-          <Button
-            color="primary"
-            variant="solid"
-            onPress={() => {
-              localStorage.clear();
-              location.reload();
-            }}
-          >
-            {l("restart")}
-          </Button>
-        )}
-      </div>
-    </>
-  );
+  return <MieteSchnelltestResult stepper={stepper} />;
 }

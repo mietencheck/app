@@ -73,14 +73,18 @@ export function useFlowMachine() {
 type AnswerMachine = ReturnType<typeof flowMachine.answers>;
 
 function buildVertragsdatum(answers: AnswerMachine) {
-  const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
-  const vertragsdatum = answers.getWithOptionAlias("Vertragsdatum");
+  const typ = answers.getWithOptionAlias("Typ");
 
-  if (unterschrieben == "Nein") {
-    return ">2024";
+  if (typ == "Mieterhöhung") {
+    return "2022-2024";
+  } else {
+    const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
+
+    if (unterschrieben == "Nein") {
+      return ">2024";
+    }
+    return answers.getWithOptionAlias("Vertragsdatum");
   }
-
-  return vertragsdatum;
 }
 
 function buildLageInfo(answers: AnswerMachine) {
