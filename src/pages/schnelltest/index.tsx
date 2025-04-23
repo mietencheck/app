@@ -3,7 +3,7 @@ import React, { useEffect, useMemo } from "react";
 import useLocalStorageState from "use-local-storage-state";
 
 import { Header } from "~/components/Header";
-import { useSchnelltestSteps } from "~/form/flow-machine";
+import { useAnswers, useSchnelltestSteps } from "~/form/flow-machine";
 
 import { SchnelltestExit } from "./exit";
 import { SchnelltestQuestion } from "./question";
@@ -58,17 +58,23 @@ function Node({ step, stepper }: NodeType) {
 
 export function SchnelltestPage() {
   let steps = useSchnelltestSteps();
-  steps = useMemo(
-    () =>
-      steps.filter(
-        (s) =>
-          !(
-            s.type == "Question" &&
-            (s.alias == "Ost" || s.alias == "Wohnlage" || s.alias == "Baujahr")
-          ),
-      ),
-    [steps],
-  );
+  const answers = useAnswers().getAliasedState();
+
+  steps = useMemo(() => {
+    const hiddenSteps = new Set(["Ost", "Wohnlage", "Baujahr"]);
+    const hiddenForMieterhoehung = new Set(["Vertragsdatum"]);
+
+    return steps.filter(
+      (s) =>
+        !(
+          s.type === "Question" &&
+          s.alias !== null &&
+          (hiddenSteps.has(s.alias) ||
+            (answers.Typ === "Mieterhöhung" &&
+              hiddenForMieterhoehung.has(s.alias)))
+        ),
+    );
+  }, [steps, answers]);
 
   const stepper = useStepper(steps.length);
   const step = steps.at(stepper.index);

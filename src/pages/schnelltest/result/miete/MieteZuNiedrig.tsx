@@ -5,7 +5,7 @@ import {
 } from "~/pages/details/utils";
 import { formatEuro } from "~/utils";
 
-import { WerdeAktiv } from "../partials";
+import { WerdeAktiv } from "../../partials";
 
 export function MieteZuNiedrig() {
   const {
