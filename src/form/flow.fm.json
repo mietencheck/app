@@ -1,7 +1,6 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
-  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -21,7 +20,7 @@
               {
                 "id": "wb3w3",
                 "alias": "Miete",
-                "text": "Miete für aktuelle oder neue Wohnung "
+                "text": "Miete für aktuelle oder neue Wohnung"
               },
               {
                 "id": "4uoj6",
@@ -87,6 +86,387 @@
         {
           "id": "sxmb3g",
           "type": "If",
+          "cases": [
+            {
+              "id": "rnj3d",
+              "type": "IfCase",
+              "test": {
+                "id": "doi7w",
+                "questionRef": {
+                  "type": "AliasRef",
+                  "value": "Typ"
+                },
+                "negated": false,
+                "type": "AnswerOptionComparison",
+                "operator": "is",
+                "comparands": [
+                  "wb3w3"
+                ]
+              },
+              "block": [
+                {
+                  "id": "23mp9",
+                  "type": "Group",
+                  "category": "Section",
+                  "alias": "Miete",
+                  "block": [
+                    {
+                      "id": "atgzp",
+                      "type": "Question",
+                      "alias": "Unterschrieben",
+                      "text": "Hast du den Mietvertrag für die Wohnung bereits unterschrieben?",
+                      "info": null,
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "or4h3j",
+                            "alias": "Ja",
+                            "text": "Ja"
+                          },
+                          {
+                            "id": "128cg",
+                            "alias": "Nein",
+                            "text": "Nein"
+                          }
+                        ]
+                      },
+                      "required": true
+                    },
+                    {
+                      "id": "rto8q",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "6k8f8",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "h0wnag",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Unterschrieben"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "or4h3j"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "c568q",
+                              "type": "Question",
+                              "alias": "Vertragsdatum",
+                              "text": "Wann hast du den Mietvertrag unterschrieben?",
+                              "info": "Wenn du dir nicht sicher bist, kannst du das Datum auch erstmal schätzen und später korrigieren.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "08tnb",
+                                    "alias": "<2015",
+                                    "text": "Vor 01.06.2015"
+                                  },
+                                  {
+                                    "id": "wejo0k",
+                                    "alias": "2015-2016",
+                                    "text": "Zwischen 01.06.2015 und 31.08.2016"
+                                  },
+                                  {
+                                    "id": "7np1",
+                                    "alias": "2016-2018",
+                                    "text": "Zwischen 01.09.2016 und 31.08.2018"
+                                  },
+                                  {
+                                    "id": "m2jo",
+                                    "alias": "2018-2020",
+                                    "text": "Zwischen 01.09.2018 und 31.08.2020"
+                                  },
+                                  {
+                                    "id": "4obam",
+                                    "alias": "2020-2022",
+                                    "text": "Zwischen 01.09.2020 und 31.08.2022"
+                                  },
+                                  {
+                                    "id": "oqyrs",
+                                    "alias": "2022-2024",
+                                    "text": "Zwischen 01.09.2022 und 31.08.2023"
+                                  },
+                                  {
+                                    "id": "ve0tek",
+                                    "alias": ">2024",
+                                    "text": "Ab 01.09.2023"
+                                  }
+                                ]
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "mt4i8",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "yfn6l",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "l2rtq",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "08tnb"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "m62xs",
+                                      "alias": "Mietvertrag zu alt",
+                                      "text": "",
+                                      "type": "Exit"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            },
+                            {
+                              "id": "5ggu7i",
+                              "type": "Question",
+                              "alias": "Bisherige Mieterhöhungen",
+                              "text": "Hat dein Vermieter seit deinem Einzug bereits die Miete erhöht?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "rvo83",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "mbwz8",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  }
+                                ]
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "1svtv",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "sj4oyg",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "qpz3qi",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Bisherige Mieterhöhungen"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "rvo83"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "1mc5k",
+                                      "type": "Question",
+                                      "alias": "Bisherige Mieterhöhungen zugestimmt",
+                                      "text": "Hast du der Mieterhöhung bereits zugestimmt?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "ggo2s",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "b8nwa",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          }
+                                        ]
+                                      },
+                                      "required": true
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            },
+                            {
+                              "id": "1z9sik",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "9t8dqh",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "u74g8",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Bisherige Mieterhöhungen zugestimmt"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "ggo2s"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "dx6vm",
+                                      "alias": "Exit: Mieterhöhung zugestimmt",
+                                      "text": "",
+                                      "type": "Exit"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "asoi7",
+                                  "alias": "Exit: Überprüfe Mieterhöhung ",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "wkj67",
+                              "type": "Question",
+                              "alias": "Mietart",
+                              "text": "Ist im Mietvertrag eine Staffelmiete oder Indexmiete vereinbart?",
+                              "info": "Staffel- und Indexmietverträge sind eine besondere Art von Mietvertrag, bei dem sich die Miete regelmäßig erhöhen kann. Wenn du einen Staffel- oder Indexmiete hast, steht ein Vermerk hierzu in deinem Mietvertrag.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "8dx4p",
+                                    "alias": "Staffelmiete",
+                                    "text": "Staffelmiete"
+                                  },
+                                  {
+                                    "id": "jwmlg",
+                                    "alias": "Indexmiete",
+                                    "text": "Indexmiete"
+                                  },
+                                  {
+                                    "id": "h1ddm",
+                                    "alias": "Normal",
+                                    "text": "Keins von beiden"
+                                  },
+                                  {
+                                    "id": "w3kuwj",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": true
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
+                    },
+                    {
+                      "id": "0a7wh",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "0ya0n",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "ryezt",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Unterschrieben"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "128cg"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "0n0s7",
+                              "type": "Question",
+                              "alias": "Kaltmiete",
+                              "text": "Wie hoch ist die geforderte Nettokaltmiete pro Monat in Euro?",
+                              "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": true
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ly5r4",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "jwf18",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Mietart"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "jwmlg"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "8ddts",
+                              "type": "Question",
+                              "alias": "Kaltmiete",
+                              "text": "Wie hoch war die Nettokaltmiete ursprünglich bei Abschluss des Mietvertrages pro Monat in Euro?",
+                              "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": true
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "ysmlo",
+                          "type": "Question",
+                          "alias": "Kaltmiete",
+                          "text": "Wie hoch ist deine aktuelle Nettokaltmiete pro Monat in Euro?",
+                          "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
+                          "answer": {
+                            "type": "NumberAnswer"
+                          },
+                          "required": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
           "alternate": [
             {
               "id": "ccn8",
@@ -95,15 +475,15 @@
               "alias": "Mieterhöhung",
               "block": [
                 {
-                  "id": "ykten",
+                  "id": "dzhcml",
                   "type": "Question",
-                  "alias": "Mieterhöhung Datum",
+                  "alias": "foo",
                   "text": "An welchem Datum hast du das Schreiben zur Mieterhöhung erhalten?",
-                  "info": "Wenn du dir nicht sicher bist, kannst du das Datum auch erstmal schätzen und später korrigieren.",
+                  "info": null,
                   "answer": {
                     "type": "NumberAnswer"
                   },
-                  "required": true
+                  "required": false
                 },
                 {
                   "id": "g4o2",
@@ -158,7 +538,7 @@
                   "type": "Question",
                   "alias": "Mieterhöhung zugestimmt",
                   "text": "Hast du der Mieterhöhung bereits zugestimmt?",
-                  "info": "Beachte: Wenn du die erhöhte bereits drei Mal überwiesen hast, gilt dies rechtlich als Zustimmung.",
+                  "info": "Beachte: Wenn du die neue geforderte Miete bereits drei Mal überwiesen hast, gilt dies rechtlich als Zustimmung.",
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
@@ -440,387 +820,41 @@
                     "type": "NumberAnswer"
                   },
                   "required": true
-                }
-              ]
-            }
-          ],
-          "cases": [
-            {
-              "id": "rnj3d",
-              "type": "IfCase",
-              "test": {
-                "id": "doi7w",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Typ"
                 },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "wb3w3"
-                ]
-              },
-              "block": [
                 {
-                  "id": "23mp9",
-                  "type": "Group",
-                  "category": "Section",
-                  "alias": "Miete",
-                  "block": [
+                  "id": "wgisy",
+                  "type": "If",
+                  "cases": [
                     {
-                      "id": "atgzp",
-                      "type": "Question",
-                      "alias": "Unterschrieben",
-                      "text": "Hast du den Mietvertrag für die Wohnung bereits unterschrieben?",
-                      "info": null,
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
+                      "id": "7qxraj",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "zlvh3",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Aktuelle Nettokaltmiete"
+                        },
+                        "negated": false,
+                        "type": "AnswerNumberComparison",
+                        "operator": "gte",
+                        "comparands": [
                           {
-                            "id": "or4h3j",
-                            "alias": "Ja",
-                            "text": "Ja"
-                          },
-                          {
-                            "id": "128cg",
-                            "alias": "Nein",
-                            "text": "Nein"
+                            "type": "AliasRef",
+                            "value": "Geforderte Nettokaltmiete"
                           }
                         ]
                       },
-                      "required": true
-                    },
-                    {
-                      "id": "rto8q",
-                      "type": "If",
-                      "cases": [
+                      "block": [
                         {
-                          "id": "6k8f8",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "h0wnag",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Unterschrieben"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "or4h3j"
-                            ]
-                          },
-                          "block": [
-                            {
-                              "id": "c568q",
-                              "type": "Question",
-                              "alias": "Vertragsdatum",
-                              "text": "Wann hast du den Mietvertrag unterschrieben?",
-                              "info": "Wenn du dir nicht sicher bist, kannst du das Datum auch erstmal schätzen und später korrigieren.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "08tnb",
-                                    "alias": "<2015",
-                                    "text": "Vor 01.06.2015"
-                                  },
-                                  {
-                                    "id": "wejo0k",
-                                    "alias": "2015-2016",
-                                    "text": "Zwischen 01.06.2015 und 31.08.2016"
-                                  },
-                                  {
-                                    "id": "7np1",
-                                    "alias": "2016-2018",
-                                    "text": "Zwischen 01.09.2016 und 31.08.2018"
-                                  },
-                                  {
-                                    "id": "m2jo",
-                                    "alias": "2018-2020",
-                                    "text": "Zwischen 01.09.2018 und 31.08.2020"
-                                  },
-                                  {
-                                    "id": "4obam",
-                                    "alias": "2020-2022",
-                                    "text": "Zwischen 01.09.2020 und 31.08.2022"
-                                  },
-                                  {
-                                    "id": "oqyrs",
-                                    "alias": "2022-2024",
-                                    "text": "Zwischen 01.09.2022 und 31.08.2023"
-                                  },
-                                  {
-                                    "id": "ve0tek",
-                                    "alias": ">2024",
-                                    "text": "Ab 01.09.2023"
-                                  }
-                                ]
-                              },
-                              "required": true
-                            },
-                            {
-                              "id": "mt4i8",
-                              "type": "If",
-                              "cases": [
-                                {
-                                  "id": "yfn6l",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "l2rtq",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Vertragsdatum"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "08tnb"
-                                    ]
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "m62xs",
-                                      "alias": "Mietvertrag zu alt",
-                                      "text": "",
-                                      "type": "Exit"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "alternate": []
-                            },
-                            {
-                              "id": "133yp",
-                              "type": "Question",
-                              "alias": "Bisherige Mieterhöhungen",
-                              "text": "Hat dein Vermieter seit deinem Einzug bereits die Miete erhöht?",
-                              "info": null,
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "ggo2s",
-                                    "alias": "Ja",
-                                    "text": "Ja"
-                                  },
-                                  {
-                                    "id": "b8nwa",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  }
-                                ]
-                              },
-                              "required": true
-                            },
-                            {
-                              "id": "in0lv",
-                              "type": "If",
-                              "cases": [
-                                {
-                                  "id": "0r8ye",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "5m3jg",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Bisherige Mieterhöhungen"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "ggo2s"
-                                    ]
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "1mc5k",
-                                      "type": "Question",
-                                      "alias": "Bisherige Mieterhöhungen zugestimmt",
-                                      "text": "Hast du der Mieterhöhung bereits zugestimmt?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "ggo2s",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "b8nwa",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          }
-                                        ]
-                                      },
-                                      "required": true
-                                    },
-                                    {
-                                      "id": "1z9sik",
-                                      "type": "If",
-                                      "cases": [
-                                        {
-                                          "id": "9t8dqh",
-                                          "type": "IfCase",
-                                          "test": {
-                                            "id": "u74g8",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Bisherige Mieterhöhungen zugestimmt"
-                                            },
-                                            "negated": false,
-                                            "type": "AnswerOptionComparison",
-                                            "operator": "is",
-                                            "comparands": [
-                                              "ggo2s"
-                                            ]
-                                          },
-                                          "block": [
-                                            {
-                                              "id": "dx6vm",
-                                              "alias": "Exit: Mieterhöhung zugestimmt",
-                                              "text": "",
-                                              "type": "Exit"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "alternate": [
-                                        {
-                                          "id": "asoi7",
-                                          "alias": "Exit: Überprüfe Mieterhöhung ",
-                                          "text": "",
-                                          "type": "Exit"
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ],
-                              "alternate": []
-                            },
-                            {
-                              "id": "wkj67",
-                              "type": "Question",
-                              "alias": "Mietart",
-                              "text": "Ist im Mietvertrag eine Staffelmiete oder Indexmiete vereinbart?",
-                              "info": "Staffel- und Indexmietverträge sind eine besondere Art von Mietvertrag, bei dem sich die Miete regelmäßig erhöhen kann. Wenn du einen Staffel- oder Indexmiete hast, steht ein Vermerk hierzu in deinem Mietvertrag.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "8dx4p",
-                                    "alias": "Staffelmiete",
-                                    "text": "Staffelmiete"
-                                  },
-                                  {
-                                    "id": "jwmlg",
-                                    "alias": "Indexmiete",
-                                    "text": "Indexmiete"
-                                  },
-                                  {
-                                    "id": "h1ddm",
-                                    "alias": "Normal",
-                                    "text": "Keins von beiden"
-                                  },
-                                  {
-                                    "id": "w3kuwj",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": true
-                            }
-                          ]
-                        }
-                      ],
-                      "alternate": []
-                    },
-                    {
-                      "id": "0a7wh",
-                      "type": "If",
-                      "alternate": [
-                        {
-                          "id": "ysmlo",
-                          "type": "Question",
-                          "alias": "Kaltmiete",
-                          "text": "Wie hoch ist deine aktuelle Nettokaltmiete pro Monat in Euro?",
-                          "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
-                          "answer": {
-                            "type": "NumberAnswer"
-                          },
-                          "required": true
-                        }
-                      ],
-                      "cases": [
-                        {
-                          "id": "0ya0n",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "ryezt",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Unterschrieben"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "128cg"
-                            ]
-                          },
-                          "block": [
-                            {
-                              "id": "0n0s7",
-                              "type": "Question",
-                              "alias": "Kaltmiete",
-                              "text": "Wie hoch ist die geforderte Nettokaltmiete pro Monat in Euro?",
-                              "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": true
-                            }
-                          ]
-                        },
-                        {
-                          "id": "ly5r4",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "jwf18",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Mietart"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "jwmlg"
-                            ]
-                          },
-                          "block": [
-                            {
-                              "id": "8ddts",
-                              "type": "Question",
-                              "alias": "Kaltmiete",
-                              "text": "Wie hoch war die Nettokaltmiete ursprünglich bei Abschluss des Mietvertrages pro Monat in Euro?",
-                              "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": true
-                            }
-                          ]
+                          "id": "3oo92",
+                          "alias": "Exit: Geforderte Nettokaltmiete niedriger als aktuelle",
+                          "text": "",
+                          "type": "Exit"
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 }
               ]
             }
@@ -866,21 +900,21 @@
           "required": true
         },
         {
-          "type": "If",
           "id": "d7pvvg",
+          "type": "If",
           "cases": [
             {
-              "type": "IfCase",
               "id": "pkc7m",
+              "type": "IfCase",
               "test": {
                 "id": "k20quf",
                 "questionRef": {
                   "type": "AliasRef",
                   "value": "Dachgeschoss"
                 },
-                "operator": "is",
                 "negated": false,
                 "type": "AnswerOptionComparison",
+                "operator": "is",
                 "comparands": [
                   "uiajj"
                 ]
@@ -915,21 +949,21 @@
                   "required": true
                 },
                 {
-                  "type": "If",
                   "id": "spntl",
+                  "type": "If",
                   "cases": [
                     {
-                      "type": "IfCase",
                       "id": "jo8n4",
+                      "type": "IfCase",
                       "test": {
                         "id": "kwmbx",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Dachgeschoss Ausgebaut"
                         },
-                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
+                        "operator": "is",
                         "comparands": [
                           "45g3h"
                         ]
@@ -984,22 +1018,21 @@
                           "required": true
                         },
                         {
-                          "type": "If",
                           "id": "maea4",
-                          "alternate": [],
+                          "type": "If",
                           "cases": [
                             {
-                              "type": "IfCase",
                               "id": "stfen",
+                              "type": "IfCase",
                               "test": {
                                 "id": "k4qp8",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Baujahr vor 1991"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "ig2go"
                                 ]
@@ -1018,7 +1051,8 @@
                                 }
                               ]
                             }
-                          ]
+                          ],
+                          "alternate": []
                         }
                       ]
                     }
@@ -1073,22 +1107,21 @@
                       "required": true
                     },
                     {
-                      "type": "If",
                       "id": "dvxg1",
-                      "alternate": [],
+                      "type": "If",
                       "cases": [
                         {
-                          "type": "IfCase",
                           "id": "8vncag",
+                          "type": "IfCase",
                           "test": {
                             "id": "uz118",
                             "questionRef": {
                               "type": "AliasRef",
                               "value": "Baujahr vor 1991"
                             },
-                            "operator": "is",
                             "negated": false,
                             "type": "AnswerOptionComparison",
+                            "operator": "is",
                             "comparands": [
                               "ig2go"
                             ]
@@ -1107,7 +1140,8 @@
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "alternate": []
                     }
                   ]
                 }
@@ -1165,22 +1199,21 @@
               "note": ""
             },
             {
-              "type": "If",
               "id": "rvbx2",
-              "alternate": [],
+              "type": "If",
               "cases": [
                 {
-                  "type": "IfCase",
                   "id": "2sqxxj",
+                  "type": "IfCase",
                   "test": {
                     "id": "d540q",
                     "questionRef": {
                       "type": "AliasRef",
                       "value": "Baujahr vor 1991"
                     },
-                    "operator": "is",
                     "negated": false,
                     "type": "AnswerOptionComparison",
+                    "operator": "is",
                     "comparands": [
                       "ig2go"
                     ]
@@ -1199,7 +1232,8 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "alternate": []
             }
           ]
         },
@@ -2360,51 +2394,16 @@
           "block": []
         },
         {
-          "type": "Group",
           "id": "x6ydr",
+          "type": "Group",
           "category": "Page",
           "alias": "foo",
           "block": [
             {
-              "type": "Question",
-              "id": "bhlh3",
-              "text": "Hat dein Vermieter seit deinem Einzug bereits die Miete erhöht?",
-              "alias": "Bisherige Mieterhöhungen",
-              "info": null,
-              "answer": {
-                "type": "ChoiceAnswer",
-                "options": []
-              },
-              "required": true
-            },
-            {
-              "type": "If",
-              "id": "yjbe9",
-              "cases": [
-                {
-                  "type": "IfCase",
-                  "id": "mjy0yk",
-                  "test": {
-                    "id": "e30rv",
-                    "questionRef": {
-                      "type": "AliasRef",
-                      "value": "Bisherige Mieterhöhungen"
-                    },
-                    "operator": "is",
-                    "negated": false,
-                    "type": "AnswerOptionComparison",
-                    "comparands": []
-                  },
-                  "block": []
-                }
-              ],
-              "alternate": []
-            },
-            {
-              "type": "Question",
               "id": "pg8sqj",
-              "text": "Wie hoch war die nettokaltmiete vor 2 jahren und 9 monate?",
+              "type": "Question",
               "alias": "Nettokaltmiete vor 3 Jahren",
+              "text": "Wie hoch war die nettokaltmiete vor 2 jahren und 9 monate?",
               "info": "Es geht ums Datum wann das Mieterhöhungsschreiben angekommen ist",
               "answer": {
                 "type": "ChoiceAnswer",
@@ -12835,5 +12834,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subs": []
 }
