@@ -3,6 +3,7 @@
     "target": "ESNext",
     "module": "NodeNext",
     "lib": ["esnext"],
-    "types": ["@cloudflare/workers-types"]
+    "types": ["@cloudflare/workers-types"],
+    "jsx": "react-jsx"
   }
 }
