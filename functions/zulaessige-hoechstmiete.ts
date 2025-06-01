@@ -25,7 +25,7 @@ export const onRequest: PagesFunction<Env> = async ({ request }) => {
     );
 
     // Return the result as JSON
-    return new Response(JSON.stringify(result), {
+    return new Response(JSON.stringify(result || "foo"), {
       headers: {
         "Content-Type": "application/json",
       },
