@@ -21,8 +21,8 @@ export const useStoredSession = () =>
   });
 
 const useFetchServerSession = (hash: string | null) =>
-  useSWR<AnswersRecord | undefined>("session-" + hash, () =>
-    hash ? fetch("/sessions/" + hash).then((r) => r.json()) : undefined,
+  useSWR<AnswersRecord>(hash ? "/sessions/" + hash : null, (url: string) =>
+    fetch(url).then((r) => r.json() as Promise<AnswersRecord>),
   );
 
 export function useSyncAnswers() {
