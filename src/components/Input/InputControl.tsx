@@ -2,6 +2,7 @@ import { Question } from "flow-machine";
 
 import {
   CheckboxGroup,
+  Input,
   NumberInput,
   RadioGroup,
   Select,
@@ -87,6 +88,18 @@ export function InputControl({
           id={id}
           value={value || ""}
           onChange={onChange as never}
+          required
+        />
+      );
+
+    case "DateAnswer":
+      return (
+        <Input
+          autoFocus={autoFocus}
+          id={id}
+          value={value || ""}
+          type="date"
+          onChange={(e) => onChange(e.target.value)}
           required
         />
       );

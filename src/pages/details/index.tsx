@@ -109,7 +109,8 @@ export default function DetailsPage() {
   const isDoneWithStart = useMemo(
     () =>
       schnelltestSteps.every(
-        (s) => s.type != "Question" || answers.getById(s.id) !== undefined,
+        (s) =>
+          s.type != "Question" || answers.get([s.alias || s.id]) !== undefined,
       ),
     [answers, schnelltestSteps],
   );

@@ -1,13 +1,12 @@
 import * as Sentry from "@sentry/react";
 import fetchWithRetry from "fetch-retry";
-import { AnswersRecord } from "flow-machine";
 import { useCallback, useEffect, useMemo } from "react";
 import { omit } from "remeda";
 import useSWR from "swr";
 import { useDebounceCallback, useLocalStorage } from "usehooks-ts";
 
 import { Button, TextInput } from "~/components";
-import { useStoredAnswers } from "~/form/flow-machine";
+import { useStoredAnswers, type AnswerData } from "~/form/flow-machine";
 
 import { useLocalizeField, useLocalizeString } from "./l10n";
 import { parseAdresse } from "./utils";
@@ -21,8 +20,9 @@ export const useStoredSession = () =>
   });
 
 const useFetchServerSession = (hash: string | null) =>
-  useSWR<AnswersRecord>(hash ? "/sessions/" + hash : null, (url: string) =>
-    fetch(url).then((r) => r.json() as Promise<AnswersRecord>),
+  useSWR<AnswerData | undefined>(
+    hash ? "/sessions/" + hash : null,
+    (url: string) => fetch(url).then((r) => r.json() as Promise<AnswerData>),
   );
 
 export function useSyncAnswers() {

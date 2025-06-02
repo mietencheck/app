@@ -19,6 +19,7 @@ export function SchnelltestQuestion({
   step,
   stepper,
 }: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   step: any;
   stepper: StepperType;
 }) {
@@ -50,9 +51,9 @@ export function SchnelltestQuestion({
         {step.alias == "Adresse" ? (
           <AdresseForm
             id={step.id}
-            value={JSON.parse((answers.get("Adresse") as string) || "null")}
+            value={JSON.parse((answers.get(["Adresse"]) as string) || "null")}
             onChange={(value) => {
-              answers.setById(step.id, JSON.stringify(value));
+              answers.set([step.alias ?? step.id], JSON.stringify(value));
               postMessageToFloma("ActiveStepId", { value: step.id });
             }}
           />
@@ -62,9 +63,11 @@ export function SchnelltestQuestion({
             id={step.id}
             alias={step.alias}
             answer={step.answer}
-            value={answers.getById(step.id, step.answer) as never}
+            value={
+              (answers.get([step.alias ?? step.id]) ?? step.answer) as never
+            }
             onChange={(value) => {
-              answers.setById(step.id, value);
+              answers.set([step.alias ?? step.id], value);
               postMessageToFloma("ActiveStepId", { value: step.id });
             }}
           />

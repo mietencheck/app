@@ -1,5 +1,6 @@
 import type { DE } from "~/l10n";
 
+import { useAnswers } from "./flow-machine";
 import { StepInfoByAlias } from "./flow.fm";
 
 export const questionTextLinks: Partial<
@@ -14,5 +15,22 @@ export const questionTextLinks: Partial<
   "Bad hat Einhebelmischbatterie": {
     "image-link:Bad hat Einhebelmischbatterie":
       "/images/einhebelmischbatterie.jpg",
+  },
+};
+
+export const questionTextVars: Partial<
+  Record<
+    keyof StepInfoByAlias,
+    Record<string, (answers: ReturnType<typeof useAnswers>) => string>
+  >
+> = {
+  "Bereits Mieterhöhung erhalten": {
+    VON: (a) => {
+      const date = new Date(a.get(["Mieterhöhungsdatum"]) as string);
+      date.setMonth(date.getMonth() - 15);
+      return date.toLocaleDateString();
+    },
+    BIS: (a) =>
+      new Date(a.get(["Mieterhöhungsdatum"]) as string).toLocaleDateString(),
   },
 };
