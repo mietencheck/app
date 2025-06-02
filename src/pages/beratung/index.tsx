@@ -9,6 +9,7 @@ import { useWorstBestZulaessigeHoechstmieteDiff } from "../details/utils";
 
 function Node({ step }: { step: Step }) {
   const l = useLocalizeString();
+  const answers = useAnswers();
 
   switch (step.type) {
     case "Group":
@@ -30,7 +31,6 @@ function Node({ step }: { step: Step }) {
         return null;
       }
 
-      const answers = useAnswers();
       return (
         <FormField>
           <FormLabel
@@ -43,9 +43,11 @@ function Node({ step }: { step: Step }) {
             {step.alias == "Adresse" ? (
               <AdresseForm
                 id={step.id}
-                value={JSON.parse((answers.get("Adresse") as string) || "null")}
+                value={JSON.parse(
+                  (answers.get(["Adresse"]) as string) || "null",
+                )}
                 onChange={(value) => {
-                  answers.setById(step.id, JSON.stringify(value));
+                  answers.set([step.alias || step.id], JSON.stringify(value));
                   postMessageToFloma("ActiveStepId", { value: step.id });
                 }}
               />
@@ -55,9 +57,11 @@ function Node({ step }: { step: Step }) {
                 id={step.id}
                 alias={step.alias}
                 answer={step.answer}
-                value={answers.getById(step.id, step.answer) as never}
+                value={
+                  answers.set([step.alias || step.id], step.answer) as never
+                }
                 onChange={(value) => {
-                  answers.setById(step.id, value);
+                  answers.set([step.alias || step.id], value);
                   postMessageToFloma("ActiveStepId", { value: step.id });
                 }}
               />

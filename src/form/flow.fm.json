@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -477,13 +478,36 @@
                 {
                   "id": "dzhcml",
                   "type": "Question",
-                  "alias": "foo",
+                  "alias": "Mieterhöhungsdatum",
                   "text": "An welchem Datum hast du das Schreiben zur Mieterhöhung erhalten?",
                   "info": null,
                   "answer": {
-                    "type": "NumberAnswer"
+                    "type": "DateAnswer"
                   },
                   "required": false
+                },
+                {
+                  "type": "Question",
+                  "id": "61rqr",
+                  "text": "Hast du zwischen $VON$ und $BIS$ bereits eine Mieterhöhung erhalten?",
+                  "alias": "Bereits Mieterhöhung erhalten",
+                  "info": null,
+                  "required": false,
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "7na8k",
+                        "text": "Ja",
+                        "alias": "Ja"
+                      },
+                      {
+                        "id": "nrr2e",
+                        "text": "Nein",
+                        "alias": "Nein"
+                      }
+                    ]
+                  }
                 },
                 {
                   "id": "g4o2",
@@ -12834,6 +12858,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }

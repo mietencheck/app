@@ -14,7 +14,7 @@ function useSchnelltestAnswersHash() {
       JSON.stringify(
         steps
           .filter((s) => s.type == "Question")
-          .map((s) => answers.getById(s.id)),
+          .map((s) => answers.get([s.alias || s.id])),
       ),
     [answers, steps],
   );

@@ -1,6 +1,6 @@
 import * as Sentry from "@sentry/react";
 import fetchWithRetry from "fetch-retry";
-import { AnswersRecord } from "flow-machine";
+import { AnswerData } from "flow-machine";
 import { useCallback, useEffect, useMemo } from "react";
 import { omit } from "remeda";
 import useSWR from "swr";
@@ -21,7 +21,7 @@ export const useStoredSession = () =>
   });
 
 const useFetchServerSession = (hash: string | null) =>
-  useSWR<AnswersRecord | undefined>("session-" + hash, () =>
+  useSWR<AnswerData | undefined>("session-" + hash, () =>
     hash ? fetch("/sessions/" + hash).then((r) => r.json()) : undefined,
   );
 

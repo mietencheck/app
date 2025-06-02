@@ -33,7 +33,7 @@ function AnswerView({
       .map((o) => l(o.text))
       .join(", ");
   }
-  return answerValue;
+  return answerValue as string;
 }
 
 export function SummaryPage() {
@@ -66,7 +66,9 @@ export function SummaryPage() {
                 <p className="text-neutral-faded flex flex-row justify-between">
                   <AnswerView
                     question={q}
-                    answerValue={answers.getById(q.id) ?? null}
+                    answerValue={
+                      (answers.get([q.alias || q.id]) as string) || null
+                    }
                   />
                 </p>
               </div>

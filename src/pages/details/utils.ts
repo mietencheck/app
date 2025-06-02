@@ -54,7 +54,9 @@ export function useCheckIsGroupCompleted() {
         (s): s is Question => s.type == "Question",
       );
       return questions.length > 0
-        ? questions.every((q) => typeof answers.getById(q.id) !== "undefined")
+        ? questions.every(
+            (q) => typeof answers.get([q.alias || q.id]) !== "undefined",
+          )
         : visitedPages.has(page.href);
     },
     [answers, mainSteps, visitedPages],
@@ -68,7 +70,7 @@ export function useIsCompleted() {
     () =>
       ungroup(steps)
         .filter((s) => s.type == "Question")
-        .every((q) => typeof answers.getById(q.id) !== "undefined"),
+        .every((q) => typeof answers.get([q.alias || q.id]) !== "undefined"),
     [answers, steps],
   );
 }

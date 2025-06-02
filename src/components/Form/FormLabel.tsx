@@ -1,6 +1,7 @@
-import { mapKeys, mapValues } from "remeda";
+import { mapKeys, mapValues, pipe } from "remeda";
 
-import { questionTextLinks } from "~/form/links";
+import { useAnswers } from "~/form/flow-machine";
+import { questionTextLinks, questionTextVars } from "~/form/question-text";
 import { useLocaleState, useLocalizeField, useLocalizeString } from "~/l10n";
 import { isKeyOfObject } from "~/utils";
 
@@ -42,6 +43,7 @@ export function FormLabel({
   const l = useLocalizeField();
   label = lString(label);
   const { glossary } = useLocaleState();
+  const answers = useAnswers();
 
   return (
     <Label htmlFor={htmlFor} id={`${htmlFor}-label`} className={className}>
@@ -54,12 +56,19 @@ export function FormLabel({
         )),
         alias && isKeyOfObject(alias, questionTextLinks)
           ? mapValues(
-              mapKeys(questionTextLinks[alias]!, l as any),
+              mapKeys(questionTextLinks[alias]!, l as never),
               (href, text) => (
                 <a key={text} href={href} target="_blank" className="underline">
                   {text}
                 </a>
               ),
+            )
+          : {},
+        alias && isKeyOfObject(alias, questionTextVars)
+          ? pipe(
+              questionTextVars[alias]!,
+              mapKeys((k) => `$${k}$`),
+              mapValues((f) => f(answers)),
             )
           : {},
       )}

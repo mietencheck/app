@@ -19,10 +19,10 @@ import { getSlugForAlias, usePathname } from "./utils";
 
 export function Node({ step }: { step: Step }) {
   const l = useLocalizeString();
+  const answers = useAnswers();
+
   switch (step.type) {
     case "Question": {
-      const answers = useAnswers();
-
       return (
         <FormField>
           <FormLabel
@@ -43,9 +43,9 @@ export function Node({ step }: { step: Step }) {
               id={step.id}
               alias={step.alias}
               answer={step.answer}
-              value={answers.getById(step.id, step.answer) as never}
+              value={answers.get([step.alias || step.id]) as string}
               onChange={(value) => {
-                answers.setById(step.id, value);
+                answers.set([step.alias || step.id], value);
                 postMessageToFloma("ActiveStepId", { value: step.id });
               }}
             />

@@ -1,16 +1,5 @@
-import {
-  AnswersRecord,
-  AnswerValueType,
-  FlowMachine,
-  Steps,
-} from "flow-machine";
-import React, {
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { AnswerData, FlowMachine, Steps } from "flow-machine";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
 import { parseAdresse } from "~/utils";
@@ -96,7 +85,7 @@ function buildLageInfo(answers: AnswerMachine) {
       ? "2024" // If contract is not signed, use newest Mietspiegel
       : vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum];
 
-  const addresse = answers.get("Adresse");
+  const addresse = answers.get(["Adresse"]);
   const lage =
     (addresse && typeof addresse == "string" && parseAdresse(addresse).lage) ||
     null;
@@ -122,17 +111,10 @@ const AnswersContext = React.createContext<AnswerMachine>(
 );
 
 export const useStoredAnswers = () =>
-  useLocalStorage<AnswersRecord>("mb-flow", {});
+  useLocalStorage<AnswerData>("mb-flow", {});
 
 export function AnswersProvider({ children }: { children: React.ReactNode }) {
   const [storedAnswers, setStoredAnswers] = useStoredAnswers();
-
-  const setKV = useCallback(
-    (key: string, value: AnswerValueType) => {
-      return setStoredAnswers((state) => ({ ...state, [key]: value }));
-    },
-    [setStoredAnswers],
-  );
 
   const flowMachine = useFlowMachine();
 
@@ -154,8 +136,8 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
       Vertragsdatum: vertragsdatum || null,
     };
     postMessageToFloma("Answers", { value });
-    return flowMachine.answers(value, setKV);
-  }, [bareAnswers, flowMachine, setKV, storedAnswers]);
+    return flowMachine.answers(value, setStoredAnswers);
+  }, [bareAnswers, flowMachine, storedAnswers, setStoredAnswers]);
   return (
     <AnswersContext.Provider value={answersValue}>
       {children}
