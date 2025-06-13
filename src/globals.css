@@ -6,28 +6,28 @@
   @font-face {
     font-family: "Suisse Intl";
     font-weight: 400;
-    src: url(/fonts/SuisseIntl-Regular-WebM.woff2) format("woff2");
+    src: url(/fonts/SuisseIntl-Regular-WebXL.woff2) format("woff2");
     display: swap;
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-weight: 450;
-    src: url(/fonts/SuisseIntl-Book-WebM.woff2) format("woff2");
+    src: url(/fonts/SuisseIntl-Book-WebXL.woff2) format("woff2");
     display: swap;
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-weight: 500;
-    src: url(/fonts/SuisseIntl-Medium-WebM.woff2) format("woff2");
+    src: url(/fonts/SuisseIntl-Medium-WebXL.woff2) format("woff2");
     display: swap;
   }
 
   @font-face {
     font-family: "Suisse Intl";
     font-weight: 600;
-    src: url(/fonts/SuisseIntl-SemiBold-WebM.woff2) format("woff2");
+    src: url(/fonts/SuisseIntl-SemiBold-WebXL.woff2) format("woff2");
     display: swap;
   }
 
@@ -48,22 +48,22 @@
     --color-gray-11: #6f6f6f;
     --color-gray-12: #171717;
 
-    --color-purple-1: #FFFCFD;
-    --color-purple-2: #FFF7F9;
-    --color-purple-3: #FFE8F2;
-    --color-purple-4: #FFDAEB;
-    --color-purple-5: #FBCBE0;
-    --color-purple-6: #F4BDD2;
-    --color-purple-7: #EBAAC6;
-    --color-purple-8: #E194B4;
-    --color-purple-9: #811C63;
-    --color-purple-10: #6E0253;
-    --color-purple-11: #811C63;
-    --color-purple-12: #6A004F;
+    --color-purple-1: #fffcfd;
+    --color-purple-2: #fff7f9;
+    --color-purple-3: #ffe8f2;
+    --color-purple-4: #ffdaeb;
+    --color-purple-5: #fbcbe0;
+    --color-purple-6: #f4bdd2;
+    --color-purple-7: #ebaac6;
+    --color-purple-8: #e194b4;
+    --color-purple-9: #811c63;
+    --color-purple-10: #6e0253;
+    --color-purple-11: #811c63;
+    --color-purple-12: #6a004f;
 
-    --color-yellow-9: #FDD817;
-    --color-yellow-10: #F0CC0F;
-    --color-yellow-11: #FDD817;
+    --color-yellow-9: #fdd817;
+    --color-yellow-10: #f0cc0f;
+    --color-yellow-11: #fdd817;
 
     /* DWE Colors */
     --dwe-yellow: #fdd816;
@@ -294,10 +294,12 @@ body {
   }
 
   .bg-gradient-dashed {
-    background: repeating-linear-gradient(to right,
-        theme("colors.gray.9") 0,
-        theme("colors.gray.9") 3px,
-        rgba(255, 255, 255, 0) 3px,
-        rgba(255, 255, 255, 0) 6px);
+    background: repeating-linear-gradient(
+      to right,
+      theme("colors.gray.9") 0,
+      theme("colors.gray.9") 3px,
+      rgba(255, 255, 255, 0) 3px,
+      rgba(255, 255, 255, 0) 6px
+    );
   }
 }
