@@ -1,6 +1,6 @@
 import { useLocalizeField } from "~/l10n";
 
-export function MietvertragZuNeu() {
+export function ExitMietvertragZuNeu() {
   const l = useLocalizeField();
 
   return (

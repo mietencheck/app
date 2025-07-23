@@ -1,6 +1,6 @@
 import { useLocalizeField } from "~/l10n";
 
-export function MietspiegeltabelleLeer() {
+export function ExitMietspiegeltabelleLeer() {
   const l = useLocalizeField();
 
   return (

@@ -5,31 +5,39 @@ import { useAnswers } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
 import {
-  ExitHäuser,
+  ExitHaeuser,
   ExitKeinWC,
+  ExitMieterhoehungMitAnderemGrund,
+  ExitMieterhoehungOhneBegruendung,
   ExitMieterhoehungZugestimmt,
-  ExitMöbliert,
+  ExitMietspiegeltabelleLeer,
+  ExitMietvertragZuAlt,
+  ExitMietvertragZuNeu,
+  ExitMoebliert,
+  ExitNeubauwohnung,
   ExitSozialwohnungen,
-  MietspiegeltabelleLeer,
-  MietvertragZuAlt,
-  MietvertragZuNeu,
-  Neubauwohnung,
 } from ".";
 import { StepperType } from "..";
 
 const Exits = {
-  "Mietvertrag zu alt": () => <MietvertragZuAlt />,
-  Mietspiegel2024: () => <MietvertragZuNeu />,
-  "Mietspiegeltabelle Leer": () => <MietspiegeltabelleLeer />,
-  "Zu neu": () => <Neubauwohnung />,
+  "Mietvertrag zu alt": () => <ExitMietvertragZuAlt />,
+  Mietspiegel2024: () => <ExitMietvertragZuNeu />,
+  "Mietspiegeltabelle Leer": () => <ExitMietspiegeltabelleLeer />,
+  "Zu neu": () => <ExitNeubauwohnung />,
   "Mietpreisbremse gilt nicht für Sozialwohnungen": () => (
     <ExitSozialwohnungen />
   ),
   "Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser":
-    () => <ExitHäuser />,
+    () => <ExitHaeuser />,
   "Mietspiegel gilt nicht für Wohnungen ohne WC": () => <ExitKeinWC />,
-  "Möblierte Wohnung": () => <ExitMöbliert />,
+  "Möblierte Wohnung": () => <ExitMoebliert />,
   "Exit: Mieterhöhung zugestimmt": () => <ExitMieterhoehungZugestimmt />,
+  "Exit: Mieterhöhung mit anderem Grund ": () => (
+    <ExitMieterhoehungMitAnderemGrund />
+  ),
+  "Exit: Mieterhöhung ohne Begründung": () => (
+    <ExitMieterhoehungOhneBegruendung />
+  ),
 };
 
 export function SchnelltestExit({
