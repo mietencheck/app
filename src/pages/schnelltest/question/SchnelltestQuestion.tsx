@@ -63,9 +63,7 @@ export function SchnelltestQuestion({
             id={step.id}
             alias={step.alias}
             answer={step.answer}
-            value={
-              (answers.get([step.alias ?? step.id]) ?? step.answer) as never
-            }
+            value={answers.get([step.alias || step.id]) as string}
             onChange={(value) => {
               answers.set([step.alias ?? step.id], value);
               postMessageToFloma("ActiveStepId", { value: step.id });
