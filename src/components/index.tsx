@@ -8,7 +8,6 @@ export * from "./Form/FormField";
 export * from "./Form/FormLabel";
 export * from "./IconButton/IconButton";
 export * from "./Input/Input";
-export * from "./Input/DateInput";
 export * from "./Input/NumberInput";
 export * from "./Input/TextInput";
 export * from "./Input/InputControl";

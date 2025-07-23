@@ -6,3 +6,4 @@ export * from "./MietvertragZuAlt";
 export * from "./MietvertragZuNeu";
 export * from "./MietspiegeltabelleLeer";
 export * from "./Neubauwohnung";
+export * from "./ExitMieterhoehungZugestimmt";

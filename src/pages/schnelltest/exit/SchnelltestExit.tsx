@@ -7,6 +7,7 @@ import { useLocalizeField } from "~/l10n";
 import {
   ExitHäuser,
   ExitKeinWC,
+  ExitMieterhoehungZugestimmt,
   ExitMöbliert,
   ExitSozialwohnungen,
   MietspiegeltabelleLeer,
@@ -28,6 +29,7 @@ const Exits = {
     () => <ExitHäuser />,
   "Mietspiegel gilt nicht für Wohnungen ohne WC": () => <ExitKeinWC />,
   "Möblierte Wohnung": () => <ExitMöbliert />,
+  "Exit: Mieterhöhung zugestimmt": () => <ExitMieterhoehungZugestimmt />,
 };
 
 export function SchnelltestExit({

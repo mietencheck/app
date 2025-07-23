@@ -1,7 +1,6 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
-  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -87,569 +86,6 @@
         {
           "id": "sxmb3g",
           "type": "If",
-          "alternate": [
-            {
-              "id": "ccn8",
-              "type": "Group",
-              "category": null,
-              "alias": "Mieterhöhung",
-              "block": [
-                {
-                  "id": "dzhcml",
-                  "type": "Question",
-                  "alias": "Mieterhöhungsdatum",
-                  "text": "An welchem Datum hast du das Schreiben zur Mieterhöhung erhalten?",
-                  "info": "Gib das Datum möglichst genau an. Auf 2 oder 3 Tage kommt es aber im Zweifel nicht an.",
-                  "answer": {
-                    "type": "DateAnswer"
-                  },
-                  "required": false
-                },
-                {
-                  "id": "61rqr",
-                  "type": "Question",
-                  "alias": "Bereits Mieterhöhung erhalten",
-                  "text": "Hast du zwischen $VON$ und $BIS$ bereits eine Mieterhöhung erhalten?",
-                  "info": null,
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "7na8k",
-                        "alias": "Ja",
-                        "text": "Ja"
-                      },
-                      {
-                        "id": "nrr2e",
-                        "alias": "Nein",
-                        "text": "Nein"
-                      }
-                    ]
-                  },
-                  "required": false
-                },
-                {
-                  "id": "g4o2",
-                  "type": "Question",
-                  "alias": "Vertragsdatum",
-                  "text": "",
-                  "info": null,
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "08tnb",
-                        "alias": "<2015",
-                        "text": "Vor 01.06.2015"
-                      },
-                      {
-                        "id": "wejo0k",
-                        "alias": "2015-2016",
-                        "text": "Zwischen 01.06.2015 und 31.08.2016"
-                      },
-                      {
-                        "id": "7np1",
-                        "alias": "2016-2018",
-                        "text": "Zwischen 01.09.2016 und 31.08.2018"
-                      },
-                      {
-                        "id": "m2jo",
-                        "alias": "2018-2020",
-                        "text": "Zwischen 01.09.2018 und 31.08.2020"
-                      },
-                      {
-                        "id": "4obam",
-                        "alias": "2020-2022",
-                        "text": "Zwischen 01.09.2020 und 31.08.2022"
-                      },
-                      {
-                        "id": "oqyrs",
-                        "alias": "2022-2024",
-                        "text": "Zwischen 01.09.2022 und 31.08.2023"
-                      },
-                      {
-                        "id": "ve0tek",
-                        "alias": ">2024",
-                        "text": "Ab 01.09.2023"
-                      }
-                    ]
-                  },
-                  "required": true
-                },
-                {
-                  "id": "p897el",
-                  "type": "Question",
-                  "alias": "Mieterhöhung zugestimmt",
-                  "text": "Hast du der Mieterhöhung bereits zugestimmt?",
-                  "info": "Beachte: Wenn du die neue geforderte Miete bereits drei Mal überwiesen hast, gilt dies rechtlich als Zustimmung.",
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "ggo2s",
-                        "alias": "Ja",
-                        "text": "Ja"
-                      },
-                      {
-                        "id": "b8nwa",
-                        "alias": "Nein",
-                        "text": "Nein"
-                      }
-                    ]
-                  },
-                  "required": true
-                },
-                {
-                  "id": "jp3gij",
-                  "type": "If",
-                  "alternate": [],
-                  "cases": [
-                    {
-                      "id": "enkni",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "pbtgx",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Mieterhöhung zugestimmt"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "ggo2s"
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "3sh9c",
-                          "alias": "Exit: Mieterhöhung zugestimmt",
-                          "text": "Leider können wir dir nicht weiterhelfen, weil du der Mieterhöhung bereits zugestimmt hast. In diesem Falle ist es sehr schwer die Mieterhöhung wieder zurückzunehmen, selbst wenn sie nicht rechtmäßig war und du jetzt eine überhöhte Miete zahlst. Unter Umständen kann es sich aber trotzdem lohnen, die Mieterhöhung bei einer kostenlosen Mieterberatung überprüfen zu lassen. \nSpätestens wenn du deine nächste Mieterhöhung erhältst solltest du diese überprüfen bevor du ihr zustimmst.\nZudem kannst du immer noch deine ursprüngliche Miethöhe überprüfen. Die Mieterhöhung bleibt dann zwar wirksam, die Basis wird aber vielleicht reduziert.",
-                          "type": "Exit"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "qpksij",
-                  "type": "Question",
-                  "alias": "Mieterhöhung Grund",
-                  "text": "Hat sich der Vermieter bei der Mieterhöhung auf den Mietspiegel, Vergleichsmieten oder  § 558 BGB berufen?",
-                  "info": "Diese Information solltest du im Schreiben zur Mieterhöhung finden.",
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "ggo2s",
-                        "alias": "Ja",
-                        "text": "Ja"
-                      },
-                      {
-                        "id": "b8nwa",
-                        "alias": "Nein",
-                        "text": "Nein"
-                      },
-                      {
-                        "id": "whpa6",
-                        "alias": "Nicht sicher",
-                        "text": "Ich bin mir nicht sicher"
-                      }
-                    ]
-                  },
-                  "required": true
-                },
-                {
-                  "id": "v1qld",
-                  "type": "If",
-                  "alternate": [],
-                  "cases": [
-                    {
-                      "id": "lt4zg",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "pm5q8",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Mieterhöhung Grund"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "b8nwa"
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "c4mwi",
-                          "type": "Question",
-                          "alias": "Mieterhöhung anderer Grund",
-                          "text": "Hat der Vermieter andere Gründe für die Mieterhöhung gegeben?",
-                          "info": "Hat er z.B. energetische Sanierung, Renovierungs- oder Umbau-Maßnahmen, Betriebskosten als Grund angegeben? Oder klar gemacht, dass die Mieterhöhung freiwillig erfolgt?",
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "ggo2s",
-                                "alias": "Ja",
-                                "text": "Ja"
-                              },
-                              {
-                                "id": "b8nwa",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              },
-                              {
-                                "id": "whpa6",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
-                              }
-                            ]
-                          },
-                          "required": true
-                        },
-                        {
-                          "id": "69kz9",
-                          "type": "If",
-                          "cases": [
-                            {
-                              "id": "r1trb",
-                              "type": "IfCase",
-                              "test": {
-                                "id": "re7f",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung anderer Grund"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "ggo2s"
-                                ]
-                              },
-                              "block": [
-                                {
-                                  "id": "9pxsr",
-                                  "alias": "Exit: Mieterhöhung mit anderem Grund ",
-                                  "text": "Leider funktioniert unsere Website nur für Mieterhöhung, welche aufgrund des Mietspiegels ausgesprochen werden. Mieterhöhungen aus anderem Grund – etwa wegen Modernisierung oder freiwillige Mieterhöhungen können wir leider nicht abdecken. Unter Umständen kann es sich aber trotzdem lohnen, die Mieterhöhung bei einer kostenlosen Mieterberatung überprüfen zu lassen. ",
-                                  "type": "Exit"
-                                }
-                              ]
-                            }
-                          ],
-                          "alternate": [
-                            {
-                              "id": "x1vd9",
-                              "alias": "Exit: Mieterhöhung ohne Begründung",
-                              "text": "Die Vermieterin ist gesetzlich verpflichtet die Mieterhöhung zu begründen. Insbesondere muss sie bei Mieterhöhung aufgrund der ortsüblichen Vergleichsmiete auf den Mietenspiegel verweisen. Diese Begründung kann auch ganz kurz sein sollte aber zumindest eins der Wörter „Mietspiegel“ oder „Vergleichsmiete“ enthalten oder auf ein Tabellenfeld des Mietspiegels Bezug nehmen.\nHat deine Vermieterin die Mieterhöhung nicht begründet hast du zwei Optionen:\n -\tDu kannst deine Vermieterin um eine Begründung bitten.\nWenn deine Vermieterin die Begründung nachreicht, hast du immer noch mindestens einen Monat Zeit nachdem diese Begründung bei dir ankommt, um der Mieterhöhung zuzustimmen und deine Miete über diese Website zu überprüfen. Diese Frist kann die Vermieterin dir nicht wegnehmen.\n -\tDu kannst auf die Mieterhöhung nicht antworten.\nIn diesem Falle kann es sein, dass deine Vermieterin dich auf die Zustimmung zur Mieterhöhung verklagt. Die Vermieterin hat dann die Option die Begründung der Mieterhöhung vor Gericht nachzuholen und wird dies wahrscheinlich auch tun. Dann hast du erneut mindestens einen Monat Zeit um der Mieterhöhung zuzustimmen und die Mieterhöhung über diese Website zu überprüfen. Wenn du der Mieterhöhung innerhalb der Frist zustimmst musst du auch nicht die Prozess- und Anwaltskosten tragen. Dieses Vorgehen ist stressiger dafür musst du aber bis die Vermieterin die Begründung nachholt nur die alte Miete bezahlen. \n\nWie du dich hier verhältst ist deine persönliche Entscheidung.",
-                              "type": "Exit"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "6wrc9",
-                  "type": "Question",
-                  "alias": "Mietart",
-                  "text": "Ist im Mietvertrag eine Staffelmiete oder Indexmiete vereinbart?",
-                  "info": "Staffel- und Indexmietverträge sind eine besondere Art von Mietvertrag, bei dem sich die Miete regelmäßig erhöhen kann. Wenn du einen Staffel- oder Indexmiete hast, steht ein Vermerk hierzu in deinem Mietvertrag.",
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "8dx4p",
-                        "alias": "Staffelmiete",
-                        "text": "Staffelmiete"
-                      },
-                      {
-                        "id": "jwmlg",
-                        "alias": "Indexmiete",
-                        "text": "Indexmiete"
-                      },
-                      {
-                        "id": "h1ddm",
-                        "alias": "Normal",
-                        "text": "Keins von beiden"
-                      },
-                      {
-                        "id": "w3kuwj",
-                        "alias": "Nicht sicher",
-                        "text": "Ich bin mir nicht sicher"
-                      }
-                    ]
-                  },
-                  "required": true
-                },
-                {
-                  "id": "sokgp",
-                  "type": "If",
-                  "alternate": [],
-                  "cases": [
-                    {
-                      "id": "dpott",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "7kgyii",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Mietart"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "jwmlg"
-                        ]
-                      },
-                      "block": [
-                        {
-                          "type": "Question",
-                          "id": "kwrsa",
-                          "text": "Wurde die Miete gerade aufgrund der vereinbarten Indexmiete erhöht?",
-                          "alias": "Mieterhöhung wegen Indexmiete",
-                          "info": "Hinweise hierfür sind Wörter wie \"Indexmiete\", \"Verbraucherpreisindex\" oder \"VPI\"",
-                          "required": true,
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "dtnn9",
-                                "text": "Ja, der Vermieter hat die Miete nur um die Inflationsrate angehoben.",
-                                "alias": "Ja"
-                              },
-                              {
-                                "id": "xx83k",
-                                "text": "Nein, der Vermieter will die Miete zusätzlich wegen des Mietspiegels erhöhen.",
-                                "alias": "Nein"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "type": "If",
-                          "id": "kvu5x",
-                          "alternate": [],
-                          "cases": [
-                            {
-                              "type": "IfCase",
-                              "id": "29cqh",
-                              "test": {
-                                "id": "0l26l",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung wegen Indexmiete"
-                                },
-                                "operator": "is",
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "comparands": [
-                                  "dtnn9"
-                                ]
-                              },
-                              "block": [
-                                {
-                                  "id": "l192g",
-                                  "alias": "Exit: Mieterhöhung wegen Indexmiete",
-                                  "text": "Wenn eine Indexmiete vereinbart ist, hat der Vermieter immer das Recht die Miete um die jeweilige Inflationsrate zu erhöhen. In diesem Falle kann man nur die Miethöhe zu Beginn des Vertrages überprüfen. Falls du dies noch nicht getan hast, gehe noch einmal zurück und wähle bei der ersten Frage \"Die Miethöhe zu Beginn des Mietvertrages.\" und gib als deine Miete an, was du zu Beginn des Mietverhältnisses ohne Betriebskosten gezahlt hast.",
-                                  "type": "Exit"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "IfCase",
-                              "id": "mzj1d",
-                              "test": {
-                                "id": "lo52a",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung wegen Indexmiete"
-                                },
-                                "operator": "is",
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "comparands": [
-                                  "xx83k"
-                                ]
-                              },
-                              "block": [
-                                {
-                                  "type": "Exit",
-                                  "id": "k5jczk",
-                                  "alias": "Exit: Mieterhöhung zusätzlich zur Mieterhöhung",
-                                  "text": "Wenn eine Indexmiete vereinbart ist, darf der Vermieter nicht zusätzlich noch die Miete aufgrund des Mietspiegels erhöhen.\nIn diesem Falle ist die zusätzliche Mieterhöhung rechtswidrig. Überprüfe noch einmal, ob es sich nicht doch um eine Mieterhöhung aufgrund der vereinbarten Indexmiete handelt. Anhaltspunkte dafür können die Wörter \"Indexmiete\", \"Verbraucherpreisindex\" oder \"VPI\" sein.\n\nWenn du dir sicher bist, dass es sich um eine zusätzliche Mieterhöhung handelt, kannst du sie ignorieren oder der Mieterhöhung formlos widersprechen."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "id": "6cadj",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "474z8",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Mietart"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "8dx4p"
-                        ]
-                      },
-                      "block": [
-                        {
-                          "type": "Question",
-                          "id": "bhxey",
-                          "text": "Wurde die Miete gerade aufgrund der vereinbarten Staffelmiete erhöht. ",
-                          "alias": "Mieterhöhung wegen Staffelmiete",
-                          "info": "Die Rate um welche sich die Miete jährlich erhöht, muss bereits im ursprünglichen Mietvertrag angegeben sein",
-                          "required": true,
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "0q8jti",
-                                "text": "Ja, der Vermieter hat die Miete um die im Mietvertrag angegebene Rate erhöht.",
-                                "alias": "Ja"
-                              },
-                              {
-                                "id": "k16tp",
-                                "text": "Nein, der Vermieter will die Miete zusätzlich zur vereinbarten Staffelmiete erhöhen.",
-                                "alias": "Nei"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "type": "If",
-                          "id": "n7uz7",
-                          "alternate": [],
-                          "cases": [
-                            {
-                              "type": "IfCase",
-                              "id": "hwuhz",
-                              "test": {
-                                "id": "azvce",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung wegen Staffelmiete"
-                                },
-                                "operator": "is",
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "comparands": [
-                                  "0q8jti"
-                                ]
-                              },
-                              "block": [
-                                {
-                                  "id": "clvs5",
-                                  "alias": "Exit: Mieterhöhung wegen Staffelmiete",
-                                  "text": "Wenn eine Staffelmiete vereinbart ist, wird jede neue Rate bzw. Mieterhöhung als eine Art Neuvermietung gewertet. Gehe daher nochmal zurück zur Ersten Frage und Wähle dort \"Die Miethöhe zu Beginn des Mietvertrages.\" aus. Gib dann als Miete allerdings die Miete an, welche du jetzt neuerdings zahlen sollst.",
-                                  "type": "Exit"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "IfCase",
-                              "id": "ls82t",
-                              "test": {
-                                "id": "g4w96",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung wegen Staffelmiete"
-                                },
-                                "operator": "is",
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "comparands": [
-                                  "k16tp"
-                                ]
-                              },
-                              "block": [
-                                {
-                                  "type": "Exit",
-                                  "id": "6f3phg",
-                                  "alias": "Exit: Mieterhöhung zusätzlich zur Staffelmiete",
-                                  "text": "Wenn eine Staffelmiete vereinbart ist, darf der Vermieter nicht zusätzlich noch die Miete aufgrund des Mietspiegels erhöhen.\nIn diesem Falle ist die zusätzliche Mieterhöhung rechtswidrig. Überprüfe noch einmal, ob es sich nicht doch um eine Mieterhöhung aufgrund der vereinbarten Staffelmiete handelt. Ein Anhaltspunkt dafür kann sein, dass Vermieter sich auf vertraglich vereinbarte Mieterhöhung beruft oder der Erhöhungsbetrag mit bereits im Mietvertrag vereinbarten Mietsteigerungen übereinstimmt.\n\nWenn du dir sicher bist, dass es sich um eine zusätzliche Mieterhöhung handelt, kannst du sie ignorieren oder der Mieterhöhung formlos widersprechen."
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "ez0nm",
-                  "type": "Question",
-                  "alias": "Aktuelle Nettokaltmiete",
-                  "text": "Wie hoch ist die bisherige Nettokaltmiete pro Monat in Euro?",
-                  "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
-                  "answer": {
-                    "type": "NumberAnswer"
-                  },
-                  "required": true
-                },
-                {
-                  "id": "587d",
-                  "type": "Question",
-                  "alias": "Geforderte Nettokaltmiete",
-                  "text": "Wie hoch ist   Nettokaltmiete pro Monat, welche der Vermieter zukünftig fordert?",
-                  "info": "TODO",
-                  "answer": {
-                    "type": "NumberAnswer"
-                  },
-                  "required": true
-                },
-                {
-                  "id": "wgisy",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "7qxraj",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "zlvh3",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Aktuelle Nettokaltmiete"
-                        },
-                        "negated": false,
-                        "type": "AnswerNumberComparison",
-                        "operator": "gte",
-                        "comparands": [
-                          {
-                            "type": "AliasRef",
-                            "value": "Geforderte Nettokaltmiete"
-                          }
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "3oo92",
-                          "alias": "Exit: Geforderte Nettokaltmiete niedriger als aktuelle",
-                          "text": "",
-                          "type": "Exit"
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": []
-                }
-              ]
-            }
-          ],
           "cases": [
             {
               "id": "rnj3d",
@@ -700,7 +136,6 @@
                     {
                       "id": "rto8q",
                       "type": "If",
-                      "alternate": [],
                       "cases": [
                         {
                           "id": "6k8f8",
@@ -834,7 +269,8 @@
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "alternate": []
                     },
                     {
                       "id": "0a7wh",
@@ -916,6 +352,523 @@
                       ]
                     }
                   ]
+                }
+              ]
+            }
+          ],
+          "alternate": [
+            {
+              "id": "ccn8",
+              "type": "Group",
+              "category": null,
+              "alias": "Mieterhöhung",
+              "block": [
+                {
+                  "id": "dzhcml",
+                  "type": "Question",
+                  "alias": "Mieterhöhungsdatum",
+                  "text": "An welchem Datum hast du das Schreiben zur Mieterhöhung erhalten?",
+                  "info": "Gib das Datum möglichst genau an. Auf 2 oder 3 Tage kommt es aber im Zweifel nicht an.",
+                  "answer": {
+                    "type": "DateAnswer"
+                  },
+                  "required": false
+                },
+                {
+                  "id": "61rqr",
+                  "type": "Question",
+                  "alias": "Bereits Mieterhöhung erhalten",
+                  "text": "Hast du zwischen $VON$ und $BIS$ bereits eine Mieterhöhung erhalten?",
+                  "info": null,
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "7na8k",
+                        "alias": "Ja",
+                        "text": "Ja"
+                      },
+                      {
+                        "id": "nrr2e",
+                        "alias": "Nein",
+                        "text": "Nein"
+                      }
+                    ]
+                  },
+                  "required": false
+                },
+                {
+                  "id": "g4o2",
+                  "type": "Question",
+                  "alias": "Vertragsdatum",
+                  "text": "",
+                  "info": null,
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "08tnb",
+                        "alias": "<2015",
+                        "text": "Vor 01.06.2015"
+                      },
+                      {
+                        "id": "wejo0k",
+                        "alias": "2015-2016",
+                        "text": "Zwischen 01.06.2015 und 31.08.2016"
+                      },
+                      {
+                        "id": "7np1",
+                        "alias": "2016-2018",
+                        "text": "Zwischen 01.09.2016 und 31.08.2018"
+                      },
+                      {
+                        "id": "m2jo",
+                        "alias": "2018-2020",
+                        "text": "Zwischen 01.09.2018 und 31.08.2020"
+                      },
+                      {
+                        "id": "4obam",
+                        "alias": "2020-2022",
+                        "text": "Zwischen 01.09.2020 und 31.08.2022"
+                      },
+                      {
+                        "id": "oqyrs",
+                        "alias": "2022-2024",
+                        "text": "Zwischen 01.09.2022 und 31.08.2023"
+                      },
+                      {
+                        "id": "ve0tek",
+                        "alias": ">2024",
+                        "text": "Ab 01.09.2023"
+                      }
+                    ]
+                  },
+                  "required": true
+                },
+                {
+                  "id": "p897el",
+                  "type": "Question",
+                  "alias": "Mieterhöhung zugestimmt",
+                  "text": "Hast du der Mieterhöhung bereits zugestimmt?",
+                  "info": "Beachte: Wenn du die neue geforderte Miete bereits drei Mal überwiesen hast, gilt dies rechtlich als Zustimmung.",
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "ggo2s",
+                        "alias": "Ja",
+                        "text": "Ja"
+                      },
+                      {
+                        "id": "b8nwa",
+                        "alias": "Nein",
+                        "text": "Nein"
+                      }
+                    ]
+                  },
+                  "required": true
+                },
+                {
+                  "id": "jp3gij",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "enkni",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "pbtgx",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Mieterhöhung zugestimmt"
+                        },
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "ggo2s"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "3sh9c",
+                          "alias": "Exit: Mieterhöhung zugestimmt",
+                          "text": "Leider können wir dir nicht weiterhelfen, weil du der Mieterhöhung bereits zugestimmt hast. In diesem Falle ist es sehr schwer die Mieterhöhung wieder zurückzunehmen, selbst wenn sie nicht rechtmäßig war und du jetzt eine überhöhte Miete zahlst. Unter Umständen kann es sich aber trotzdem lohnen, die Mieterhöhung bei einer kostenlosen Mieterberatung überprüfen zu lassen. \nSpätestens wenn du deine nächste Mieterhöhung erhältst solltest du diese überprüfen bevor du ihr zustimmst.\nZudem kannst du immer noch deine ursprüngliche Miethöhe überprüfen. Die Mieterhöhung bleibt dann zwar wirksam, die Basis wird aber vielleicht reduziert.",
+                          "type": "Exit"
+                        }
+                      ]
+                    }
+                  ],
+                  "alternate": []
+                },
+                {
+                  "id": "qpksij",
+                  "type": "Question",
+                  "alias": "Mieterhöhung Grund",
+                  "text": "Hat sich der Vermieter bei der Mieterhöhung auf den Mietspiegel, Vergleichsmieten oder § 558 BGB berufen?",
+                  "info": "Diese Information solltest du im Schreiben zur Mieterhöhung finden.",
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "ggo2s",
+                        "alias": "Ja",
+                        "text": "Ja"
+                      },
+                      {
+                        "id": "b8nwa",
+                        "alias": "Nein",
+                        "text": "Nein"
+                      }
+                    ]
+                  },
+                  "required": true
+                },
+                {
+                  "id": "v1qld",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "lt4zg",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "pm5q8",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Mieterhöhung Grund"
+                        },
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "b8nwa"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "c4mwi",
+                          "type": "Question",
+                          "alias": "Mieterhöhung anderer Grund",
+                          "text": "Hat der Vermieter andere Gründe für die Mieterhöhung gegeben?",
+                          "info": "Hat er z.B. energetische Sanierung, Renovierungs- oder Umbau-Maßnahmen, Betriebskosten als Grund angegeben? Oder klar gemacht, dass die Mieterhöhung freiwillig erfolgt?",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "ggo2s",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "b8nwa",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              }
+                            ]
+                          },
+                          "required": true
+                        },
+                        {
+                          "id": "69kz9",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "r1trb",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "re7f",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung anderer Grund"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "ggo2s"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "9pxsr",
+                                  "alias": "Exit: Mieterhöhung mit anderem Grund ",
+                                  "text": "Leider funktioniert unsere Website nur für Mieterhöhung, welche aufgrund des Mietspiegels ausgesprochen werden. Mieterhöhungen aus anderem Grund – etwa wegen Modernisierung oder freiwillige Mieterhöhungen können wir leider nicht abdecken. Unter Umständen kann es sich aber trotzdem lohnen, die Mieterhöhung bei einer kostenlosen Mieterberatung überprüfen zu lassen. ",
+                                  "type": "Exit"
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "x1vd9",
+                              "alias": "Exit: Mieterhöhung ohne Begründung",
+                              "text": "Die Vermieterin ist gesetzlich verpflichtet die Mieterhöhung zu begründen. Insbesondere muss sie bei Mieterhöhung aufgrund der ortsüblichen Vergleichsmiete auf den Mietenspiegel verweisen. Diese Begründung kann auch ganz kurz sein sollte aber zumindest eins der Wörter „Mietspiegel“ oder „Vergleichsmiete“ enthalten oder auf ein Tabellenfeld des Mietspiegels Bezug nehmen.\nHat deine Vermieterin die Mieterhöhung nicht begründet hast du zwei Optionen:\n -\tDu kannst deine Vermieterin um eine Begründung bitten.\nWenn deine Vermieterin die Begründung nachreicht, hast du immer noch mindestens einen Monat Zeit nachdem diese Begründung bei dir ankommt, um der Mieterhöhung zuzustimmen und deine Miete über diese Website zu überprüfen. Diese Frist kann die Vermieterin dir nicht wegnehmen.\n -\tDu kannst auf die Mieterhöhung nicht antworten.\nIn diesem Falle kann es sein, dass deine Vermieterin dich auf die Zustimmung zur Mieterhöhung verklagt. Die Vermieterin hat dann die Option die Begründung der Mieterhöhung vor Gericht nachzuholen und wird dies wahrscheinlich auch tun. Dann hast du erneut mindestens einen Monat Zeit um der Mieterhöhung zuzustimmen und die Mieterhöhung über diese Website zu überprüfen. Wenn du der Mieterhöhung innerhalb der Frist zustimmst musst du auch nicht die Prozess- und Anwaltskosten tragen. Dieses Vorgehen ist stressiger dafür musst du aber bis die Vermieterin die Begründung nachholt nur die alte Miete bezahlen. \n\nWie du dich hier verhältst ist deine persönliche Entscheidung.",
+                              "type": "Exit"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "alternate": []
+                },
+                {
+                  "id": "6wrc9",
+                  "type": "Question",
+                  "alias": "Mietart",
+                  "text": "Ist im Mietvertrag eine Staffelmiete oder Indexmiete vereinbart?",
+                  "info": "Staffel- und Indexmietverträge sind eine besondere Art von Mietvertrag, bei dem sich die Miete regelmäßig erhöhen kann. Wenn du einen Staffel- oder Indexmiete hast, steht ein Vermerk hierzu in deinem Mietvertrag.",
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "8dx4p",
+                        "alias": "Staffelmiete",
+                        "text": "Staffelmiete"
+                      },
+                      {
+                        "id": "jwmlg",
+                        "alias": "Indexmiete",
+                        "text": "Indexmiete"
+                      },
+                      {
+                        "id": "h1ddm",
+                        "alias": "Normal",
+                        "text": "Keins von beiden"
+                      },
+                      {
+                        "id": "w3kuwj",
+                        "alias": "Nicht sicher",
+                        "text": "Ich bin mir nicht sicher"
+                      }
+                    ]
+                  },
+                  "required": true
+                },
+                {
+                  "id": "sokgp",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "dpott",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "7kgyii",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Mietart"
+                        },
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "jwmlg"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "kwrsa",
+                          "type": "Question",
+                          "alias": "Mieterhöhung wegen Indexmiete",
+                          "text": "Wurde die Miete gerade aufgrund der vereinbarten Indexmiete erhöht?",
+                          "info": "Hinweise hierfür sind Wörter wie \"Indexmiete\", \"Verbraucherpreisindex\" oder \"VPI\"",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "dtnn9",
+                                "alias": "Ja",
+                                "text": "Ja, der Vermieter hat die Miete nur um die Inflationsrate angehoben."
+                              },
+                              {
+                                "id": "xx83k",
+                                "alias": "Nein",
+                                "text": "Nein, der Vermieter will die Miete zusätzlich wegen des Mietspiegels erhöhen."
+                              }
+                            ]
+                          },
+                          "required": true
+                        },
+                        {
+                          "id": "kvu5x",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "29cqh",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "0l26l",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung wegen Indexmiete"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "dtnn9"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "l192g",
+                                  "alias": "Exit: Mieterhöhung wegen Indexmiete",
+                                  "text": "Wenn eine Indexmiete vereinbart ist, hat der Vermieter immer das Recht die Miete um die jeweilige Inflationsrate zu erhöhen. In diesem Falle kann man nur die Miethöhe zu Beginn des Vertrages überprüfen. Falls du dies noch nicht getan hast, gehe noch einmal zurück und wähle bei der ersten Frage \"Die Miethöhe zu Beginn des Mietvertrages.\" und gib als deine Miete an, was du zu Beginn des Mietverhältnisses ohne Betriebskosten gezahlt hast.",
+                                  "type": "Exit"
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "k5jczk",
+                              "alias": "Exit: Mieterhöhung zusätzlich zur Mieterhöhung",
+                              "text": "Wenn eine Indexmiete vereinbart ist, darf der Vermieter nicht zusätzlich noch die Miete aufgrund des Mietspiegels erhöhen.\nIn diesem Falle ist die zusätzliche Mieterhöhung rechtswidrig. Überprüfe noch einmal, ob es sich nicht doch um eine Mieterhöhung aufgrund der vereinbarten Indexmiete handelt. Anhaltspunkte dafür können die Wörter \"Indexmiete\", \"Verbraucherpreisindex\" oder \"VPI\" sein.\n\nWenn du dir sicher bist, dass es sich um eine zusätzliche Mieterhöhung handelt, kannst du sie ignorieren oder der Mieterhöhung formlos widersprechen.",
+                              "type": "Exit"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "6cadj",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "474z8",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Mietart"
+                        },
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "8dx4p"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "bhxey",
+                          "type": "Question",
+                          "alias": "Mieterhöhung wegen Staffelmiete",
+                          "text": "Wurde die Miete gerade aufgrund der vereinbarten Staffelmiete erhöht. ",
+                          "info": "Die Rate um welche sich die Miete jährlich erhöht, muss bereits im ursprünglichen Mietvertrag angegeben sein",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "0q8jti",
+                                "alias": "Ja",
+                                "text": "Ja, der Vermieter hat die Miete um die im Mietvertrag angegebene Rate erhöht."
+                              },
+                              {
+                                "id": "k16tp",
+                                "alias": "Nein",
+                                "text": "Nein, der Vermieter will die Miete zusätzlich zur vereinbarten Staffelmiete erhöhen."
+                              }
+                            ]
+                          },
+                          "required": true
+                        },
+                        {
+                          "id": "n7uz7",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "hwuhz",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "azvce",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung wegen Staffelmiete"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "0q8jti"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "clvs5",
+                                  "alias": "Exit: Mieterhöhung wegen Staffelmiete",
+                                  "text": "Wenn eine Staffelmiete vereinbart ist, wird jede neue Rate bzw. Mieterhöhung als eine Art Neuvermietung gewertet. Gehe daher nochmal zurück zur Ersten Frage und Wähle dort \"Die Miethöhe zu Beginn des Mietvertrages.\" aus. Gib dann als Miete allerdings die Miete an, welche du jetzt neuerdings zahlen sollst.",
+                                  "type": "Exit"
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "6f3phg",
+                              "alias": "Exit: Mieterhöhung zusätzlich zur Staffelmiete",
+                              "text": "Wenn eine Staffelmiete vereinbart ist, darf der Vermieter nicht zusätzlich noch die Miete aufgrund des Mietspiegels erhöhen.\nIn diesem Falle ist die zusätzliche Mieterhöhung rechtswidrig. Überprüfe noch einmal, ob es sich nicht doch um eine Mieterhöhung aufgrund der vereinbarten Staffelmiete handelt. Ein Anhaltspunkt dafür kann sein, dass Vermieter sich auf vertraglich vereinbarte Mieterhöhung beruft oder der Erhöhungsbetrag mit bereits im Mietvertrag vereinbarten Mietsteigerungen übereinstimmt.\n\nWenn du dir sicher bist, dass es sich um eine zusätzliche Mieterhöhung handelt, kannst du sie ignorieren oder der Mieterhöhung formlos widersprechen.",
+                              "type": "Exit"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "alternate": []
+                },
+                {
+                  "id": "ez0nm",
+                  "type": "Question",
+                  "alias": "Aktuelle Nettokaltmiete",
+                  "text": "Wie hoch ist die bisherige Nettokaltmiete pro Monat in Euro?",
+                  "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
+                  "answer": {
+                    "type": "NumberAnswer"
+                  },
+                  "required": true
+                },
+                {
+                  "id": "587d",
+                  "type": "Question",
+                  "alias": "Geforderte Nettokaltmiete",
+                  "text": "Wie hoch ist   Nettokaltmiete pro Monat, welche der Vermieter zukünftig fordert?",
+                  "info": "TODO",
+                  "answer": {
+                    "type": "NumberAnswer"
+                  },
+                  "required": true
+                },
+                {
+                  "id": "wgisy",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "7qxraj",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "zlvh3",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Aktuelle Nettokaltmiete"
+                        },
+                        "negated": false,
+                        "type": "AnswerNumberComparison",
+                        "operator": "gte",
+                        "comparands": [
+                          {
+                            "type": "AliasRef",
+                            "value": "Geforderte Nettokaltmiete"
+                          }
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "3oo92",
+                          "alias": "Exit: Geforderte Nettokaltmiete niedriger als aktuelle",
+                          "text": "",
+                          "type": "Exit"
+                        }
+                      ]
+                    }
+                  ],
+                  "alternate": []
                 }
               ]
             }
@@ -2461,67 +2414,123 @@
           "alias": "Kappungsgrenze und Sperrfristen",
           "block": [
             {
-              "id": "b4va8",
-              "type": "Question",
-              "alias": "Bisherige Mieterhöhungen",
-              "text": "Hast du in der Zeit seit dem Datum (Mieterhöhungsdatum - 33 Monate) mindestens eine weitere Mieterhöhung bekommen?",
-              "info": "Hier geht es nur im Mieterhöhungen nach dem Mietspiegel oder der ortsüblichen Vergleichsmiete. Andere Mieterhöhung solltest du bei der Beantwortung der Frage nicht berücksichtigen.",
-              "answer": {
-                "type": "ChoiceAnswer",
-                "options": [
-                  {
-                    "id": "889i3",
-                    "alias": "Ja",
-                    "text": "Ja, ich habe in dieser Zeit bereits eine Mieterhöhung erhalten"
-                  },
-                  {
-                    "id": "6ft55",
-                    "alias": "Nein",
-                    "text": "Nein, ich habe bisher noch keine Mieterhöhungen erhalten."
-                  },
-                  {
-                    "id": "vlcz8",
-                    "alias": "Nicht sicher",
-                    "text": "Ich bin mir nicht sicher"
-                  }
-                ]
-              },
-              "required": true
-            },
-            {
-              "type": "If",
-              "id": "d0a6g",
-              "alternate": [
+              "id": "enxbuh",
+              "type": "Group",
+              "category": null,
+              "alias": "Kappungsgrenze",
+              "block": [
                 {
+                  "id": "b4va8",
                   "type": "Question",
-                  "id": "s6p49",
-                  "text": "Abgleich alte und neue miete",
-                  "alias": "Einhaltung Kappungsgrenze ohne vorige Mieterhöhung",
+                  "alias": "Bisherige Mieterhöhungen",
+                  "text": "Hast du in der Zeit seit dem Datum (Mieterhöhungsdatum - 33 Monate) mindestens eine weitere Mieterhöhung bekommen?",
                   "info": null,
                   "answer": {
-                    "type": "BooleanAnswer"
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "889i3",
+                        "alias": "Ja",
+                        "text": "Ja, ich habe in dieser Zeit bereits eine Mieterhöhung erhalten"
+                      },
+                      {
+                        "id": "6ft55",
+                        "alias": "Nein",
+                        "text": "Nein, ich habe bisher noch keine Mieterhöhungen erhalten."
+                      }
+                    ]
                   },
                   "required": true
                 }
-              ],
+              ]
+            },
+            {
+              "id": "d0a6g",
+              "type": "If",
               "cases": [
                 {
-                  "type": "IfCase",
                   "id": "tougi",
+                  "type": "IfCase",
                   "test": {
                     "id": "gbg4h",
                     "questionRef": {
                       "type": "AliasRef",
                       "value": "Bisherige Mieterhöhungen"
                     },
-                    "operator": "is",
                     "negated": false,
                     "type": "AnswerOptionComparison",
+                    "operator": "is",
                     "comparands": [
                       "889i3"
                     ]
                   },
                   "block": [
+                    {
+                      "id": "3i26a",
+                      "type": "Question",
+                      "alias": "Bisherige Mieterhöhung Grund",
+                      "text": "Welche Begründungen hatten diese Mieterhöhungen?",
+                      "info": null,
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "arevf",
+                            "alias": "",
+                            "text": "Vergleichsmieten bzw. Mietspiegel"
+                          },
+                          {
+                            "id": "0nabx",
+                            "alias": "",
+                            "text": "Moderniersierung bzw. bauliche Maßnahme"
+                          },
+                          {
+                            "id": "spngf",
+                            "alias": "",
+                            "text": "Freiwillige Mieterhöhung"
+                          }
+                        ]
+                      },
+                      "required": true,
+                      "note": "\n\nVor 3 Jahren: 100€\n\nVor 2 Jahren:\nModerniersierung: 50€\n\nHeute:\nMieterhöhung um 15€\n\n100€ + 50€\n150€ + 15% = 172.5€\n\n\n100€ + 15€ + 50€ = 165€\n"
+                    },
+                    {
+                      "id": "87hhm",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "y9lh7",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "lao9n",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Bisherige Mieterhöhung Grund"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "0nabx"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "5g3y1",
+                              "type": "Question",
+                              "alias": "Bisherige Mieterhöhungen Modernisierung Summe",
+                              "text": "Um welchen Betrag wurde deine Miete seit XXX für Modernisierung erhöht?",
+                              "info": null,
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": true
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
+                    },
                     {
                       "id": "z45vj",
                       "type": "Question",
@@ -2534,26 +2543,164 @@
                       "required": true
                     },
                     {
-                      "type": "Question",
                       "id": "cld9c",
+                      "type": "Question",
+                      "alias": "Kappungsgrenze eingehalten",
                       "text": "Abgleich Nettokaltmiete vor 3 Jahren und neue Miete",
-                      "alias": "Einhaltung Kappungsgrenze bei vorigen Mieterhöhungen",
                       "info": null,
                       "answer": {
-                        "type": "BooleanAnswer"
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "uh0lp",
+                            "alias": "",
+                            "text": "Ja"
+                          },
+                          {
+                            "id": "f1mtsh",
+                            "alias": "",
+                            "text": "Teilweise"
+                          },
+                          {
+                            "id": "tefjq",
+                            "alias": "",
+                            "text": "Nein"
+                          }
+                        ]
                       },
-                      "required": true
+                      "required": true,
+                      "note": "\n\nVor 3 Jahren: 100€\nVor 2 Jahren: 150€\nHeute: 160€\n\nKappungsgrenze: 115€\n\nGesamte Mieterhöhung nicht rechts\n\n\nVor 3 Jahren: 100€\nVor 2 Jahren: 110€\nHeute: 120€\n\nKappungsgrenze: 115€\n\nMieterhöhung teilweise nicht rechts"
                     },
                     {
-                      "type": "Question",
-                      "id": "knj9h",
-                      "text": "Wann ist deine letzte Mieterhöhung eingetreten? Ab welchem Monat musstest du sie also Zahlen?",
-                      "alias": "Letzte Mieterhöhung Datum",
-                      "info": "Wenn du dies nicht mehr weißt, kannst du in deinen Bankauszügen nachschauen oder den Brief raussuchen, in welchem dein Vermieter die letzte Mieterhöhung geltend gemacht hat.",
-                      "answer": {
-                        "type": "DateAnswer"
+                      "id": "rdawq",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "yujam",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "yrazl",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Kappungsgrenze eingehalten"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "uh0lp"
+                            ]
+                          },
+                          "block": []
+                        },
+                        {
+                          "id": "uq1eh",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "394lx",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Kappungsgrenze eingehalten"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "f1mtsh"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "wmux8",
+                              "alias": "Kappungsgrenze teilweise nicht eingehalten",
+                              "text": "",
+                              "type": "Info",
+                              "title": ""
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "vfrkv",
+                          "alias": "Kappungsgrenze nicht eingehalten",
+                          "text": "",
+                          "type": "Exit"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "alternate": [
+                {
+                  "id": "s6p49",
+                  "type": "Question",
+                  "alias": "Einhaltung Kappungsgrenze ohne vorige Mieterhöhung",
+                  "text": "Abgleich alte und neue miete",
+                  "info": null,
+                  "answer": {
+                    "type": "BooleanAnswer"
+                  },
+                  "required": true
+                }
+              ]
+            },
+            {
+              "id": "udq5",
+              "type": "Group",
+              "category": null,
+              "alias": "Sperrfristen",
+              "block": [
+                {
+                  "id": "knj9h",
+                  "type": "Question",
+                  "alias": "Letzte Mieterhöhung Datum",
+                  "text": "Wann ist deine letzte Mieterhöhung eingetreten? Ab welchem Monat musstest du sie also Zahlen?",
+                  "info": "Nur Erhöhungen wegen Mietspiegel sind relevant.",
+                  "answer": {
+                    "type": "DateAnswer"
+                  },
+                  "required": true
+                },
+                {
+                  "id": "85do9",
+                  "type": "Question",
+                  "alias": "Sperrfristen eingehalten",
+                  "text": "",
+                  "info": null,
+                  "answer": {
+                    "type": "BooleanAnswer"
+                  },
+                  "required": true
+                },
+                {
+                  "id": "pg576",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "6dtd9",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "fecq1",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Sperrfristen eingehalten"
+                        },
+                        "negated": false,
+                        "type": "AnswerBooleanComparison",
+                        "operator": "is",
+                        "value": true
                       },
-                      "required": true
+                      "block": []
+                    }
+                  ],
+                  "alternate": [
+                    {
+                      "id": "3moz9h",
+                      "alias": "Exit: Sperrfristen nicht eingehalten",
+                      "text": "",
+                      "type": "Exit"
                     }
                   ]
                 }
@@ -12982,5 +13129,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subs": []
 }
