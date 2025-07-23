@@ -2,7 +2,7 @@ import { useLocalizeField } from "~/l10n";
 
 import { WerdeAktiv } from "../../partials";
 
-export function MietvertragZuAlt() {
+export function ExitMietvertragZuAlt() {
   const l = useLocalizeField();
 
   return (

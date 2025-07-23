@@ -67,7 +67,7 @@ function buildVertragsdatum(answers: AnswerMachine) {
   const typ = answers.getWithOptionAlias("Typ");
 
   if (typ == "Mieterhöhung") {
-    return "2022-2024";
+    return ">2024";
   } else {
     const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
 
@@ -108,6 +108,24 @@ function buildBaujahr(answers: AnswerMachine) {
   }
 }
 
+function buildDatumEintrittMieterhoehung(answers: AnswerMachine) {
+  const datumMieterhoehungsschreiben = answers.getWithOptionAlias(
+    "Datum Mieterhöhungsschreiben",
+  );
+
+  if (!datumMieterhoehungsschreiben) {
+    return false;
+  }
+
+  const datumEintrittMieterhoehung = new Date(datumMieterhoehungsschreiben);
+  datumEintrittMieterhoehung.setDate(1);
+  datumEintrittMieterhoehung.setMonth(
+    datumEintrittMieterhoehung.getMonth() + 3,
+  );
+
+  return datumEintrittMieterhoehung.toISOString().slice(0, 10);
+}
+
 const AnswersContext = React.createContext<AnswerMachine>(
   flowMachine.answers({}),
 );
@@ -129,6 +147,8 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
     const vertragsdatum = buildVertragsdatum(bareAnswers);
     const lageInfo = buildLageInfo(bareAnswers);
     const baujahr = buildBaujahr(bareAnswers);
+    const datumEintrittMieterhoehung =
+      buildDatumEintrittMieterhoehung(bareAnswers);
 
     const value = {
       ...storedAnswers,
@@ -136,6 +156,7 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
       Wohnlage: lageInfo?.wohnlage ?? null,
       Baujahr: baujahr || null,
       Vertragsdatum: vertragsdatum || null,
+      "Datum Eintritt Mieterhöhung": datumEintrittMieterhoehung || null,
     };
     postMessageToFloma("Answers", { value });
     return flowMachine.answers(value, setStoredAnswers);

@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -366,36 +367,24 @@
                 {
                   "id": "dzhcml",
                   "type": "Question",
-                  "alias": "Mieterhöhungsdatum",
+                  "alias": "Datum Mieterhöhungsschreiben",
                   "text": "An welchem Datum hast du das Schreiben zur Mieterhöhung erhalten?",
-                  "info": "Gib das Datum möglichst genau an. Auf 2 oder 3 Tage kommt es aber im Zweifel nicht an.",
+                  "info": null,
                   "answer": {
                     "type": "DateAnswer"
                   },
                   "required": false
                 },
                 {
-                  "id": "61rqr",
                   "type": "Question",
-                  "alias": "Bereits Mieterhöhung erhalten",
-                  "text": "Hast du zwischen $VON$ und $BIS$ bereits eine Mieterhöhung erhalten?",
+                  "id": "1qgns",
+                  "text": "",
+                  "alias": "Datum Eintritt Mieterhöhung",
                   "info": null,
                   "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "7na8k",
-                        "alias": "Ja",
-                        "text": "Ja"
-                      },
-                      {
-                        "id": "nrr2e",
-                        "alias": "Nein",
-                        "text": "Nein"
-                      }
-                    ]
+                    "type": "DateAnswer"
                   },
-                  "required": false
+                  "required": true
                 },
                 {
                   "id": "g4o2",
@@ -471,6 +460,7 @@
                 {
                   "id": "jp3gij",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "enkni",
@@ -492,124 +482,103 @@
                         {
                           "id": "3sh9c",
                           "alias": "Exit: Mieterhöhung zugestimmt",
-                          "text": "Leider können wir dir nicht weiterhelfen, weil du der Mieterhöhung bereits zugestimmt hast. In diesem Falle ist es sehr schwer die Mieterhöhung wieder zurückzunehmen, selbst wenn sie nicht rechtmäßig war und du jetzt eine überhöhte Miete zahlst. Unter Umständen kann es sich aber trotzdem lohnen, die Mieterhöhung bei einer kostenlosen Mieterberatung überprüfen zu lassen. \nSpätestens wenn du deine nächste Mieterhöhung erhältst solltest du diese überprüfen bevor du ihr zustimmst.\nZudem kannst du immer noch deine ursprüngliche Miethöhe überprüfen. Die Mieterhöhung bleibt dann zwar wirksam, die Basis wird aber vielleicht reduziert.",
+                          "text": "",
                           "type": "Exit"
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 },
                 {
-                  "id": "qpksij",
                   "type": "Question",
+                  "id": "35d19",
+                  "text": "Welche Gründe für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
                   "alias": "Mieterhöhung Grund",
-                  "text": "Hat sich der Vermieter bei der Mieterhöhung auf den Mietspiegel, Vergleichsmieten oder § 558 BGB berufen?",
-                  "info": "Diese Information solltest du im Schreiben zur Mieterhöhung finden.",
+                  "info": null,
+                  "required": true,
                   "answer": {
-                    "type": "ChoiceAnswer",
+                    "type": "MultiChoiceAnswer",
                     "options": [
                       {
-                        "id": "ggo2s",
-                        "alias": "Ja",
-                        "text": "Ja"
+                        "id": "a2giz",
+                        "text": "Mietspiegel, Vergleichsmieten oder § 558 BGB",
+                        "alias": "Mietspiegel"
                       },
                       {
-                        "id": "b8nwa",
-                        "alias": "Nein",
-                        "text": "Nein"
+                        "id": "808h4",
+                        "text": "Moderniersierung oder bauliche Maßnahmen",
+                        "alias": "Modernisierung"
+                      },
+                      {
+                        "id": "e1agr",
+                        "text": "Freiwillige Mieterhöhung",
+                        "alias": "Freiwillig Mieterhöhung"
+                      },
+                      {
+                        "id": "7oedm",
+                        "text": "Keine der Optionen",
+                        "alias": "Kein Grund"
                       }
                     ]
-                  },
-                  "required": true
+                  }
                 },
                 {
-                  "id": "v1qld",
                   "type": "If",
+                  "id": "zylzr",
+                  "alternate": [],
                   "cases": [
                     {
-                      "id": "lt4zg",
                       "type": "IfCase",
+                      "id": "bqfou",
+                      "block": [
+                        {
+                          "id": "9pxsr",
+                          "alias": "Exit: Mieterhöhung mit anderem Grund ",
+                          "text": "",
+                          "type": "Exit"
+                        }
+                      ],
                       "test": {
-                        "id": "pm5q8",
+                        "id": "om9t2",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Mieterhöhung Grund"
                         },
+                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
-                        "operator": "is",
                         "comparands": [
-                          "b8nwa"
+                          "808h4",
+                          "e1agr"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "IfCase",
+                      "id": "21pk6j",
+                      "test": {
+                        "id": "ug1kn",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Mieterhöhung Grund"
+                        },
+                        "operator": "is",
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "comparands": [
+                          "7oedm"
                         ]
                       },
                       "block": [
                         {
-                          "id": "c4mwi",
-                          "type": "Question",
-                          "alias": "Mieterhöhung anderer Grund",
-                          "text": "Hat der Vermieter andere Gründe für die Mieterhöhung gegeben?",
-                          "info": "Hat er z.B. energetische Sanierung, Renovierungs- oder Umbau-Maßnahmen, Betriebskosten als Grund angegeben? Oder klar gemacht, dass die Mieterhöhung freiwillig erfolgt?",
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "ggo2s",
-                                "alias": "Ja",
-                                "text": "Ja"
-                              },
-                              {
-                                "id": "b8nwa",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              }
-                            ]
-                          },
-                          "required": true
-                        },
-                        {
-                          "id": "69kz9",
-                          "type": "If",
-                          "cases": [
-                            {
-                              "id": "r1trb",
-                              "type": "IfCase",
-                              "test": {
-                                "id": "re7f",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung anderer Grund"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "ggo2s"
-                                ]
-                              },
-                              "block": [
-                                {
-                                  "id": "9pxsr",
-                                  "alias": "Exit: Mieterhöhung mit anderem Grund ",
-                                  "text": "Leider funktioniert unsere Website nur für Mieterhöhung, welche aufgrund des Mietspiegels ausgesprochen werden. Mieterhöhungen aus anderem Grund – etwa wegen Modernisierung oder freiwillige Mieterhöhungen können wir leider nicht abdecken. Unter Umständen kann es sich aber trotzdem lohnen, die Mieterhöhung bei einer kostenlosen Mieterberatung überprüfen zu lassen. ",
-                                  "type": "Exit"
-                                }
-                              ]
-                            }
-                          ],
-                          "alternate": [
-                            {
-                              "id": "x1vd9",
-                              "alias": "Exit: Mieterhöhung ohne Begründung",
-                              "text": "Die Vermieterin ist gesetzlich verpflichtet die Mieterhöhung zu begründen. Insbesondere muss sie bei Mieterhöhung aufgrund der ortsüblichen Vergleichsmiete auf den Mietenspiegel verweisen. Diese Begründung kann auch ganz kurz sein sollte aber zumindest eins der Wörter „Mietspiegel“ oder „Vergleichsmiete“ enthalten oder auf ein Tabellenfeld des Mietspiegels Bezug nehmen.\nHat deine Vermieterin die Mieterhöhung nicht begründet hast du zwei Optionen:\n -\tDu kannst deine Vermieterin um eine Begründung bitten.\nWenn deine Vermieterin die Begründung nachreicht, hast du immer noch mindestens einen Monat Zeit nachdem diese Begründung bei dir ankommt, um der Mieterhöhung zuzustimmen und deine Miete über diese Website zu überprüfen. Diese Frist kann die Vermieterin dir nicht wegnehmen.\n -\tDu kannst auf die Mieterhöhung nicht antworten.\nIn diesem Falle kann es sein, dass deine Vermieterin dich auf die Zustimmung zur Mieterhöhung verklagt. Die Vermieterin hat dann die Option die Begründung der Mieterhöhung vor Gericht nachzuholen und wird dies wahrscheinlich auch tun. Dann hast du erneut mindestens einen Monat Zeit um der Mieterhöhung zuzustimmen und die Mieterhöhung über diese Website zu überprüfen. Wenn du der Mieterhöhung innerhalb der Frist zustimmst musst du auch nicht die Prozess- und Anwaltskosten tragen. Dieses Vorgehen ist stressiger dafür musst du aber bis die Vermieterin die Begründung nachholt nur die alte Miete bezahlen. \n\nWie du dich hier verhältst ist deine persönliche Entscheidung.",
-                              "type": "Exit"
-                            }
-                          ]
+                          "id": "x1vd9",
+                          "alias": "Exit: Mieterhöhung ohne Begründung",
+                          "text": "",
+                          "type": "Exit"
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 },
                 {
                   "id": "6wrc9",
@@ -2413,6 +2382,29 @@
           "category": "Page",
           "alias": "Kappungsgrenze und Sperrfristen",
           "block": [
+            {
+              "id": "28yusg",
+              "type": "Question",
+              "alias": "Bereits Mieterhöhung erhalten",
+              "text": "Hast du zwischen dem $VON$ und $BIS$ bereits eine Mieterhöhung erhalten?",
+              "info": null,
+              "answer": {
+                "type": "ChoiceAnswer",
+                "options": [
+                  {
+                    "id": "7na8k",
+                    "alias": "Ja",
+                    "text": "Ja"
+                  },
+                  {
+                    "id": "nrr2e",
+                    "alias": "Nein",
+                    "text": "Nein"
+                  }
+                ]
+              },
+              "required": false
+            },
             {
               "id": "enxbuh",
               "type": "Group",
@@ -13129,6 +13121,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }

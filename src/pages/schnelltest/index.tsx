@@ -62,7 +62,10 @@ export function SchnelltestPage() {
 
   steps = useMemo(() => {
     const hiddenSteps = new Set(["Ost", "Wohnlage", "Baujahr"]);
-    const hiddenForMieterhoehung = new Set(["Vertragsdatum"]);
+    const hiddenForMieterhoehung = new Set([
+      "Vertragsdatum",
+      "Datum Eintritt Mieterhöhung",
+    ]);
 
     return steps.filter(
       (s) =>

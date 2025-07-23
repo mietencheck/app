@@ -4,7 +4,7 @@ import { useLocalizeField } from "~/l10n";
 
 import { WerdeAktiv } from "../../partials";
 
-export function Neubauwohnung() {
+export function ExitNeubauwohnung() {
   const l = useLocalizeField();
   const answers = useAnswers().getAliasedState();
   const mietspiegeljahr = getMietspiegeljahr(answers);

@@ -26,11 +26,13 @@ export const questionTextVars: Partial<
 > = {
   "Bereits Mieterhöhung erhalten": {
     VON: (a) => {
-      const date = new Date(a.get(["Mieterhöhungsdatum"]) as string);
+      const date = new Date(a.get(["Datum Mieterhöhungsschreiben"]) as string);
       date.setMonth(date.getMonth() - 15);
-      return date.toLocaleDateString();
+      return date.toLocaleDateString("de-DE");
     },
     BIS: (a) =>
-      new Date(a.get(["Mieterhöhungsdatum"]) as string).toLocaleDateString(),
+      new Date(
+        a.get(["Datum Mieterhöhungsschreiben"]) as string,
+      ).toLocaleDateString("de-DE"),
   },
 };
