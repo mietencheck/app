@@ -21,6 +21,16 @@ import {
   SondermerkmalStateList,
 } from "./utils/mapMerkmalStateToMerkmalGruppen";
 
+export const getTyp = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+) => {
+  const alias = "Typ";
+  return answers && visibleQuestionAliases?.has(alias)
+    ? answers[alias]
+    : undefined;
+};
+
 export const getMietspiegeljahr = (
   answers: FinalAnswers,
 ): Mietspiegeljahr | undefined => {
@@ -163,6 +173,26 @@ export const getNettokaltmiete = (
   visibleQuestionAliases: Set<string>,
 ): number | undefined => {
   const alias = "Kaltmiete";
+  return answers[alias] && visibleQuestionAliases?.has(alias)
+    ? Number(answers[alias])
+    : undefined;
+};
+
+export const getAktuelleNettokaltmiete = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+): number | undefined => {
+  const alias = "Aktuelle Nettokaltmiete";
+  return answers[alias] && visibleQuestionAliases?.has(alias)
+    ? Number(answers[alias])
+    : undefined;
+};
+
+export const getGeforderteNettokaltmiete = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+): number | undefined => {
+  const alias = "Geforderte Nettokaltmiete";
   return answers[alias] && visibleQuestionAliases?.has(alias)
     ? Number(answers[alias])
     : undefined;

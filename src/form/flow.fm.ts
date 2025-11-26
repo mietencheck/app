@@ -371,7 +371,7 @@ export type StepInfoByAlias = {
             "Datum Eintritt Mieterhöhung"?: Date;
         };
     };
-    "Mietvertrag zu alt": {
+    "Exit: Mietvertrag zu alt": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -647,7 +647,24 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
     };
-    "Exit: Mieterhöhung mit anderem Grund ": {
+    "Exit: Mieterhöhung Modernisierung": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Datum Eintritt Mieterhöhung"?: Date;
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Kein Grund";
+        };
+    };
+    "Exit: Mieterhöhung freiwillig": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -716,7 +733,7 @@ export type StepInfoByAlias = {
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
         };
     };
-    "Exit: Mieterhöhung zusätzlich zur Mieterhöhung": {
+    "Exit: Mieterhöhung zusätzlich zur Indexmiete": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -827,27 +844,6 @@ export type StepInfoByAlias = {
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
             "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
             "Aktuelle Nettokaltmiete"?: number;
-        };
-    };
-    "Exit: Geforderte Nettokaltmiete niedriger als aktuelle": {
-        answer: null;
-        state: {
-            Typ?: "Miete" | "Mieterhöhung";
-            Adresse?: string;
-            Ost?: boolean;
-            Wohnlage?: "einfach" | "mittel" | "gut";
-            Unterschrieben?: "Ja" | "Nein";
-            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
-            Kaltmiete?: number;
-            "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
-            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Kein Grund";
-            "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
-            "Aktuelle Nettokaltmiete"?: number;
-            "Geforderte Nettokaltmiete"?: number;
         };
     };
     Qm: {
@@ -994,6 +990,61 @@ export type StepInfoByAlias = {
             "Baujahr ab 1991"?: number;
         };
     };
+    "Exit: Zu neu": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Datum Eintritt Mieterhöhung"?: Date;
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Kein Grund";
+            "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
+            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Aktuelle Nettokaltmiete"?: number;
+            "Geforderte Nettokaltmiete"?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+        };
+    };
+    "Baujahr vor 1.10.2014": {
+        answer: "Ja" | "Nein" | "Nicht sicher";
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Kaltmiete?: number;
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Datum Eintritt Mieterhöhung"?: Date;
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Kein Grund";
+            "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
+            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Aktuelle Nettokaltmiete"?: number;
+            "Geforderte Nettokaltmiete"?: number;
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+        };
+    };
     "Zu neu": {
         answer: null;
         state: {
@@ -1022,8 +1073,8 @@ export type StepInfoByAlias = {
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
-    "Baujahr vor 1.10.2014": {
-        answer: "Ja" | "Nein" | "Nicht sicher";
+    "Exit: Mietspiegeltabelle Leer": {
+        answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
@@ -1165,7 +1216,7 @@ export type StepInfoByAlias = {
             "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
-    "Mietpreisbremse gilt nicht für Sozialwohnungen": {
+    "Exit: Mietpreisbremse gilt nicht für Sozialwohnungen": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -1196,7 +1247,7 @@ export type StepInfoByAlias = {
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
         };
     };
-    "Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser": {
+    "Exit: Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -1227,7 +1278,7 @@ export type StepInfoByAlias = {
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
         };
     };
-    "Mietspiegel gilt nicht für Wohnungen ohne WC": {
+    "Exit: Mietspiegel gilt nicht für Wohnungen ohne WC": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -1258,7 +1309,7 @@ export type StepInfoByAlias = {
             Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
         };
     };
-    "Möblierte Wohnung": {
+    "Exit: Möblierte Wohnung": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -2094,7 +2145,7 @@ export type StepInfoByAlias = {
             "Bisherige Mieterhöhungen Modernisierung Summe"?: number;
         };
     };
-    "Kappungsgrenze teilweise nicht eingehalten": {
+    "Exit: Kappungsgrenze teilweise nicht eingehalten": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -2129,7 +2180,7 @@ export type StepInfoByAlias = {
             "Nettokaltmiete vor 33 Monaten"?: number;
         };
     };
-    "Kappungsgrenze nicht eingehalten": {
+    "Exit: Kappungsgrenze nicht eingehalten": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";

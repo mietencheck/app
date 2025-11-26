@@ -1,8 +1,8 @@
 import { expect, test } from "vitest";
 
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
+import { SONDERMERKMAL_RESET_ANSWERS } from "~/form/mappings/answer-reset";
 
-import { SONDERMERKMAL_RESET_ANSWERS } from "../form/mappings/answer-reset";
 import { getWorstBestSondermerkmalModifier } from "./sondermerkmale";
 
 test.each([

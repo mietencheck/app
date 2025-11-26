@@ -1,9 +1,9 @@
 import { expect, test } from "vitest";
 
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
+import { MERKMAL_RESET_ANSWERS } from "~/form/mappings/answer-reset";
 import { MerkmalGruppe } from "~/mietspiegel/types";
 
-import { MERKMAL_RESET_ANSWERS } from "../form/mappings/answer-reset";
 import {
   getWorstBestMerkmalStateByMerkmalGruppe,
   getWorstBestMerkmalStateByMerkmalGrupppeInPercent,
@@ -95,6 +95,7 @@ const cases = [
 ].map(({ answers, result }) => {
   return {
     answers: {
+      Typ: "Miete",
       Unterschrieben: "Ja",
       Vertragsdatum: "2022-2024",
       ...MERKMAL_RESET_ANSWERS,

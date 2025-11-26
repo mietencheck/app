@@ -1,7 +1,6 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
-  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -226,7 +225,7 @@
                                   "block": [
                                     {
                                       "id": "m62xs",
-                                      "alias": "Mietvertrag zu alt",
+                                      "alias": "Exit: Mietvertrag zu alt",
                                       "text": "",
                                       "type": "Exit"
                                     }
@@ -373,13 +372,13 @@
                   "answer": {
                     "type": "DateAnswer"
                   },
-                  "required": false
+                  "required": true
                 },
                 {
-                  "type": "Question",
                   "id": "1qgns",
-                  "text": "",
+                  "type": "Question",
                   "alias": "Datum Eintritt Mieterhöhung",
+                  "text": "",
                   "info": null,
                   "answer": {
                     "type": "DateAnswer"
@@ -460,7 +459,6 @@
                 {
                   "id": "jp3gij",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "enkni",
@@ -487,84 +485,108 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 },
                 {
-                  "type": "Question",
                   "id": "35d19",
-                  "text": "Welche Gründe für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
+                  "type": "Question",
                   "alias": "Mieterhöhung Grund",
+                  "text": "Welche Gründe für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
                   "info": null,
-                  "required": true,
                   "answer": {
-                    "type": "MultiChoiceAnswer",
+                    "type": "ChoiceAnswer",
                     "options": [
                       {
                         "id": "a2giz",
-                        "text": "Mietspiegel, Vergleichsmieten oder § 558 BGB",
-                        "alias": "Mietspiegel"
+                        "alias": "Mietspiegel",
+                        "text": "Mietspiegel, Vergleichsmieten oder § 558 BGB"
                       },
                       {
                         "id": "808h4",
-                        "text": "Moderniersierung oder bauliche Maßnahmen",
-                        "alias": "Modernisierung"
+                        "alias": "Modernisierung",
+                        "text": "Moderniersierung oder bauliche Maßnahmen"
                       },
                       {
                         "id": "e1agr",
-                        "text": "Freiwillige Mieterhöhung",
-                        "alias": "Freiwillig Mieterhöhung"
+                        "alias": "Freiwillig Mieterhöhung",
+                        "text": "Freiwillige Mieterhöhung"
                       },
                       {
                         "id": "7oedm",
-                        "text": "Keine der Optionen",
-                        "alias": "Kein Grund"
+                        "alias": "Kein Grund",
+                        "text": "Keine der Optionen"
                       }
                     ]
-                  }
+                  },
+                  "required": true
                 },
                 {
-                  "type": "If",
                   "id": "zylzr",
-                  "alternate": [],
+                  "type": "If",
                   "cases": [
                     {
-                      "type": "IfCase",
                       "id": "bqfou",
-                      "block": [
-                        {
-                          "id": "9pxsr",
-                          "alias": "Exit: Mieterhöhung mit anderem Grund ",
-                          "text": "",
-                          "type": "Exit"
-                        }
-                      ],
+                      "type": "IfCase",
                       "test": {
                         "id": "om9t2",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Mieterhöhung Grund"
                         },
-                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
+                        "operator": "is",
                         "comparands": [
-                          "808h4",
-                          "e1agr"
+                          "808h4"
                         ]
-                      }
+                      },
+                      "block": [
+                        {
+                          "id": "9pxsr",
+                          "alias": "Exit: Mieterhöhung Modernisierung",
+                          "text": "",
+                          "type": "Exit"
+                        }
+                      ]
                     },
                     {
-                      "type": "IfCase",
                       "id": "21pk6j",
+                      "type": "IfCase",
                       "test": {
                         "id": "ug1kn",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Mieterhöhung Grund"
                         },
-                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "e1agr"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "3k1ob",
+                          "alias": "Exit: Mieterhöhung freiwillig",
+                          "text": "",
+                          "type": "Exit"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "r9cby",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "csnmc",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Mieterhöhung Grund"
+                        },
+                        "negated": false,
+                        "type": "AnswerMultiOptionComparison",
+                        "operator": "is",
                         "comparands": [
                           "7oedm"
                         ]
@@ -578,7 +600,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 },
                 {
                   "id": "6wrc9",
@@ -690,7 +713,7 @@
                           "alternate": [
                             {
                               "id": "k5jczk",
-                              "alias": "Exit: Mieterhöhung zusätzlich zur Mieterhöhung",
+                              "alias": "Exit: Mieterhöhung zusätzlich zur Indexmiete",
                               "text": "Wenn eine Indexmiete vereinbart ist, darf der Vermieter nicht zusätzlich noch die Miete aufgrund des Mietspiegels erhöhen.\nIn diesem Falle ist die zusätzliche Mieterhöhung rechtswidrig. Überprüfe noch einmal, ob es sich nicht doch um eine Mieterhöhung aufgrund der vereinbarten Indexmiete handelt. Anhaltspunkte dafür können die Wörter \"Indexmiete\", \"Verbraucherpreisindex\" oder \"VPI\" sein.\n\nWenn du dir sicher bist, dass es sich um eine zusätzliche Mieterhöhung handelt, kannst du sie ignorieren oder der Mieterhöhung formlos widersprechen.",
                               "type": "Exit"
                             }
@@ -798,46 +821,11 @@
                   "type": "Question",
                   "alias": "Geforderte Nettokaltmiete",
                   "text": "Wie hoch ist   Nettokaltmiete pro Monat, welche der Vermieter zukünftig fordert?",
-                  "info": "TODO",
+                  "info": "Diese Information findest du im Schreiben zur Mieterhöhung.",
                   "answer": {
                     "type": "NumberAnswer"
                   },
                   "required": true
-                },
-                {
-                  "id": "wgisy",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "7qxraj",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "zlvh3",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Aktuelle Nettokaltmiete"
-                        },
-                        "negated": false,
-                        "type": "AnswerNumberComparison",
-                        "operator": "gte",
-                        "comparands": [
-                          {
-                            "type": "AliasRef",
-                            "value": "Geforderte Nettokaltmiete"
-                          }
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "3oo92",
-                          "alias": "Exit: Geforderte Nettokaltmiete niedriger als aktuelle",
-                          "text": "",
-                          "type": "Exit"
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": []
                 }
               ]
             }
@@ -1303,7 +1291,7 @@
               "block": [
                 {
                   "id": "8xdme",
-                  "alias": "Zu neu",
+                  "alias": "Exit: Zu neu",
                   "text": "",
                   "type": "Exit"
                 }
@@ -1766,7 +1754,7 @@
                       "block": [
                         {
                           "id": "rrp6g",
-                          "alias": "Mietspiegeltabelle Leer",
+                          "alias": "Exit: Mietspiegeltabelle Leer",
                           "text": "",
                           "type": "Exit"
                         }
@@ -2270,7 +2258,7 @@
               "block": [
                 {
                   "id": "z5pz1g",
-                  "alias": "Mietpreisbremse gilt nicht für Sozialwohnungen",
+                  "alias": "Exit: Mietpreisbremse gilt nicht für Sozialwohnungen",
                   "text": "",
                   "type": "Exit"
                 }
@@ -2295,7 +2283,7 @@
               "block": [
                 {
                   "id": "a0enbl",
-                  "alias": "Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser",
+                  "alias": "Exit: Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser",
                   "text": "",
                   "type": "Exit"
                 }
@@ -2320,7 +2308,7 @@
               "block": [
                 {
                   "id": "4jl5a",
-                  "alias": "Mietspiegel gilt nicht für Wohnungen ohne WC",
+                  "alias": "Exit: Mietspiegel gilt nicht für Wohnungen ohne WC",
                   "text": "",
                   "type": "Exit"
                 }
@@ -2345,7 +2333,7 @@
               "block": [
                 {
                   "id": "xfyg1",
-                  "alias": "Möblierte Wohnung",
+                  "alias": "Exit: Möblierte Wohnung",
                   "text": "",
                   "type": "Exit"
                 }
@@ -2377,503 +2365,340 @@
           "block": []
         },
         {
-          "id": "x6ydr",
-          "type": "Group",
-          "category": "Page",
-          "alias": "Kappungsgrenze und Sperrfristen",
-          "block": [
+          "id": "ofbvt",
+          "type": "If",
+          "cases": [
             {
-              "id": "28yusg",
-              "type": "Question",
-              "alias": "Bereits Mieterhöhung erhalten",
-              "text": "Hast du zwischen dem $VON$ und $BIS$ bereits eine Mieterhöhung erhalten?",
-              "info": null,
-              "answer": {
-                "type": "ChoiceAnswer",
-                "options": [
-                  {
-                    "id": "7na8k",
-                    "alias": "Ja",
-                    "text": "Ja"
-                  },
-                  {
-                    "id": "nrr2e",
-                    "alias": "Nein",
-                    "text": "Nein"
-                  }
+              "id": "x5kyd",
+              "type": "IfCase",
+              "test": {
+                "id": "mcsut",
+                "questionRef": {
+                  "type": "AliasRef",
+                  "value": "Typ"
+                },
+                "negated": false,
+                "type": "AnswerOptionComparison",
+                "operator": "is",
+                "comparands": [
+                  "4uoj6"
                 ]
               },
-              "required": false
-            },
-            {
-              "id": "enxbuh",
-              "type": "Group",
-              "category": null,
-              "alias": "Kappungsgrenze",
               "block": [
                 {
-                  "id": "b4va8",
-                  "type": "Question",
-                  "alias": "Bisherige Mieterhöhungen",
-                  "text": "Hast du in der Zeit seit dem Datum (Mieterhöhungsdatum - 33 Monate) mindestens eine weitere Mieterhöhung bekommen?",
-                  "info": null,
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "889i3",
-                        "alias": "Ja",
-                        "text": "Ja, ich habe in dieser Zeit bereits eine Mieterhöhung erhalten"
-                      },
-                      {
-                        "id": "6ft55",
-                        "alias": "Nein",
-                        "text": "Nein, ich habe bisher noch keine Mieterhöhungen erhalten."
-                      }
-                    ]
-                  },
-                  "required": true
-                }
-              ]
-            },
-            {
-              "id": "d0a6g",
-              "type": "If",
-              "cases": [
-                {
-                  "id": "tougi",
-                  "type": "IfCase",
-                  "test": {
-                    "id": "gbg4h",
-                    "questionRef": {
-                      "type": "AliasRef",
-                      "value": "Bisherige Mieterhöhungen"
-                    },
-                    "negated": false,
-                    "type": "AnswerOptionComparison",
-                    "operator": "is",
-                    "comparands": [
-                      "889i3"
-                    ]
-                  },
+                  "id": "x6ydr",
+                  "type": "Group",
+                  "category": "Page",
+                  "alias": "Kappungsgrenze und Sperrfristen",
                   "block": [
                     {
-                      "id": "3i26a",
+                      "id": "28yusg",
                       "type": "Question",
-                      "alias": "Bisherige Mieterhöhung Grund",
-                      "text": "Welche Begründungen hatten diese Mieterhöhungen?",
+                      "alias": "Bereits Mieterhöhung erhalten",
+                      "text": "Hast du zwischen dem $VON$ und $BIS$ bereits eine Mieterhöhung erhalten?",
                       "info": null,
                       "answer": {
                         "type": "ChoiceAnswer",
                         "options": [
                           {
-                            "id": "arevf",
-                            "alias": "",
-                            "text": "Vergleichsmieten bzw. Mietspiegel"
-                          },
-                          {
-                            "id": "0nabx",
-                            "alias": "",
-                            "text": "Moderniersierung bzw. bauliche Maßnahme"
-                          },
-                          {
-                            "id": "spngf",
-                            "alias": "",
-                            "text": "Freiwillige Mieterhöhung"
-                          }
-                        ]
-                      },
-                      "required": true,
-                      "note": "\n\nVor 3 Jahren: 100€\n\nVor 2 Jahren:\nModerniersierung: 50€\n\nHeute:\nMieterhöhung um 15€\n\n100€ + 50€\n150€ + 15% = 172.5€\n\n\n100€ + 15€ + 50€ = 165€\n"
-                    },
-                    {
-                      "id": "87hhm",
-                      "type": "If",
-                      "cases": [
-                        {
-                          "id": "y9lh7",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "lao9n",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Bisherige Mieterhöhung Grund"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "0nabx"
-                            ]
-                          },
-                          "block": [
-                            {
-                              "id": "5g3y1",
-                              "type": "Question",
-                              "alias": "Bisherige Mieterhöhungen Modernisierung Summe",
-                              "text": "Um welchen Betrag wurde deine Miete seit XXX für Modernisierung erhöht?",
-                              "info": null,
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": true
-                            }
-                          ]
-                        }
-                      ],
-                      "alternate": []
-                    },
-                    {
-                      "id": "z45vj",
-                      "type": "Question",
-                      "alias": "Nettokaltmiete vor 33 Monaten",
-                      "text": "Wie hoch war deine Nettokaltmiete im Monat (Monat des Mieterhöhungsschreibens - 33 Monate / also etwa September 2023)?",
-                      "info": "Um dies rauszufinden kannst du zb in deine Bankauszüge gucken, dabei darfst du aber nicht bergessen die Betriebskosten von dem Betrag abzuziehen.",
-                      "answer": {
-                        "type": "NumberAnswer"
-                      },
-                      "required": true
-                    },
-                    {
-                      "id": "cld9c",
-                      "type": "Question",
-                      "alias": "Kappungsgrenze eingehalten",
-                      "text": "Abgleich Nettokaltmiete vor 3 Jahren und neue Miete",
-                      "info": null,
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "uh0lp",
-                            "alias": "",
+                            "id": "7na8k",
+                            "alias": "Ja",
                             "text": "Ja"
                           },
                           {
-                            "id": "f1mtsh",
-                            "alias": "",
-                            "text": "Teilweise"
-                          },
-                          {
-                            "id": "tefjq",
-                            "alias": "",
+                            "id": "nrr2e",
+                            "alias": "Nein",
                             "text": "Nein"
                           }
                         ]
                       },
-                      "required": true,
-                      "note": "\n\nVor 3 Jahren: 100€\nVor 2 Jahren: 150€\nHeute: 160€\n\nKappungsgrenze: 115€\n\nGesamte Mieterhöhung nicht rechts\n\n\nVor 3 Jahren: 100€\nVor 2 Jahren: 110€\nHeute: 120€\n\nKappungsgrenze: 115€\n\nMieterhöhung teilweise nicht rechts"
+                      "required": false
                     },
                     {
-                      "id": "rdawq",
+                      "id": "enxbuh",
+                      "type": "Group",
+                      "category": null,
+                      "alias": "Kappungsgrenze",
+                      "block": [
+                        {
+                          "id": "b4va8",
+                          "type": "Question",
+                          "alias": "Bisherige Mieterhöhungen",
+                          "text": "Hast du in der Zeit seit dem Datum (Mieterhöhungsdatum - 33 Monate) mindestens eine weitere Mieterhöhung bekommen?",
+                          "info": null,
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "889i3",
+                                "alias": "Ja",
+                                "text": "Ja, ich habe in dieser Zeit bereits eine Mieterhöhung erhalten"
+                              },
+                              {
+                                "id": "6ft55",
+                                "alias": "Nein",
+                                "text": "Nein, ich habe bisher noch keine Mieterhöhungen erhalten."
+                              }
+                            ]
+                          },
+                          "required": true
+                        }
+                      ]
+                    },
+                    {
+                      "id": "d0a6g",
                       "type": "If",
                       "cases": [
                         {
-                          "id": "yujam",
+                          "id": "tougi",
                           "type": "IfCase",
                           "test": {
-                            "id": "yrazl",
+                            "id": "gbg4h",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Kappungsgrenze eingehalten"
+                              "value": "Bisherige Mieterhöhungen"
                             },
                             "negated": false,
                             "type": "AnswerOptionComparison",
                             "operator": "is",
                             "comparands": [
-                              "uh0lp"
-                            ]
-                          },
-                          "block": []
-                        },
-                        {
-                          "id": "uq1eh",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "394lx",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Kappungsgrenze eingehalten"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "f1mtsh"
+                              "889i3"
                             ]
                           },
                           "block": [
                             {
-                              "id": "wmux8",
-                              "alias": "Kappungsgrenze teilweise nicht eingehalten",
-                              "text": "",
-                              "type": "Info",
-                              "title": ""
+                              "id": "3i26a",
+                              "type": "Question",
+                              "alias": "Bisherige Mieterhöhung Grund",
+                              "text": "Welche Begründungen hatten diese Mieterhöhungen?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "arevf",
+                                    "alias": "",
+                                    "text": "Vergleichsmieten bzw. Mietspiegel"
+                                  },
+                                  {
+                                    "id": "0nabx",
+                                    "alias": "",
+                                    "text": "Moderniersierung bzw. bauliche Maßnahme"
+                                  },
+                                  {
+                                    "id": "spngf",
+                                    "alias": "",
+                                    "text": "Freiwillige Mieterhöhung"
+                                  }
+                                ]
+                              },
+                              "required": true,
+                              "note": "\n\nVor 3 Jahren: 100€\n\nVor 2 Jahren:\nModerniersierung: 50€\n\nHeute:\nMieterhöhung um 15€\n\n100€ + 50€\n150€ + 15% = 172.5€\n\n\n100€ + 15€ + 50€ = 165€\n"
+                            },
+                            {
+                              "id": "87hhm",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "y9lh7",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "lao9n",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Bisherige Mieterhöhung Grund"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "0nabx"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "5g3y1",
+                                      "type": "Question",
+                                      "alias": "Bisherige Mieterhöhungen Modernisierung Summe",
+                                      "text": "Um welchen Betrag wurde deine Miete seit XXX für Modernisierung erhöht?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "NumberAnswer"
+                                      },
+                                      "required": true
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            },
+                            {
+                              "id": "z45vj",
+                              "type": "Question",
+                              "alias": "Nettokaltmiete vor 33 Monaten",
+                              "text": "Wie hoch war deine Nettokaltmiete im Monat (Monat des Mieterhöhungsschreibens - 33 Monate / also etwa September 2023)?",
+                              "info": "Um dies rauszufinden kannst du zb in deine Bankauszüge gucken, dabei darfst du aber nicht bergessen die Betriebskosten von dem Betrag abzuziehen.",
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "cld9c",
+                              "type": "Question",
+                              "alias": "Kappungsgrenze eingehalten",
+                              "text": "Abgleich Nettokaltmiete vor 3 Jahren und neue Miete",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uh0lp",
+                                    "alias": "",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "f1mtsh",
+                                    "alias": "",
+                                    "text": "Teilweise"
+                                  },
+                                  {
+                                    "id": "tefjq",
+                                    "alias": "",
+                                    "text": "Nein"
+                                  }
+                                ]
+                              },
+                              "required": true,
+                              "note": "\n\nVor 3 Jahren: 100€\nVor 2 Jahren: 150€\nHeute: 160€\n\nKappungsgrenze: 115€\n\nGesamte Mieterhöhung nicht rechts\n\n\nVor 3 Jahren: 100€\nVor 2 Jahren: 110€\nHeute: 120€\n\nKappungsgrenze: 115€\n\nMieterhöhung teilweise nicht rechts"
+                            },
+                            {
+                              "id": "rdawq",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "yujam",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "yrazl",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Kappungsgrenze eingehalten"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "uh0lp"
+                                    ]
+                                  },
+                                  "block": []
+                                },
+                                {
+                                  "id": "uq1eh",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "394lx",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Kappungsgrenze eingehalten"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "f1mtsh"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "wmux8",
+                                      "alias": "Exit: Kappungsgrenze teilweise nicht eingehalten",
+                                      "text": "",
+                                      "type": "Info",
+                                      "title": ""
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "vfrkv",
+                                  "alias": "Exit: Kappungsgrenze nicht eingehalten",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
                             }
                           ]
                         }
                       ],
                       "alternate": [
                         {
-                          "id": "vfrkv",
-                          "alias": "Kappungsgrenze nicht eingehalten",
-                          "text": "",
-                          "type": "Exit"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "alternate": [
-                {
-                  "id": "s6p49",
-                  "type": "Question",
-                  "alias": "Einhaltung Kappungsgrenze ohne vorige Mieterhöhung",
-                  "text": "Abgleich alte und neue miete",
-                  "info": null,
-                  "answer": {
-                    "type": "BooleanAnswer"
-                  },
-                  "required": true
-                }
-              ]
-            },
-            {
-              "id": "udq5",
-              "type": "Group",
-              "category": null,
-              "alias": "Sperrfristen",
-              "block": [
-                {
-                  "id": "knj9h",
-                  "type": "Question",
-                  "alias": "Letzte Mieterhöhung Datum",
-                  "text": "Wann ist deine letzte Mieterhöhung eingetreten? Ab welchem Monat musstest du sie also Zahlen?",
-                  "info": "Nur Erhöhungen wegen Mietspiegel sind relevant.",
-                  "answer": {
-                    "type": "DateAnswer"
-                  },
-                  "required": true
-                },
-                {
-                  "id": "85do9",
-                  "type": "Question",
-                  "alias": "Sperrfristen eingehalten",
-                  "text": "",
-                  "info": null,
-                  "answer": {
-                    "type": "BooleanAnswer"
-                  },
-                  "required": true
-                },
-                {
-                  "id": "pg576",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "6dtd9",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "fecq1",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Sperrfristen eingehalten"
-                        },
-                        "negated": false,
-                        "type": "AnswerBooleanComparison",
-                        "operator": "is",
-                        "value": true
-                      },
-                      "block": []
-                    }
-                  ],
-                  "alternate": [
-                    {
-                      "id": "3moz9h",
-                      "alias": "Exit: Sperrfristen nicht eingehalten",
-                      "text": "",
-                      "type": "Exit"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "9ve5k",
-          "type": "Group",
-          "category": "Page",
-          "alias": "Mietvertrag",
-          "block": [
-            {
-              "id": "8c7r4",
-              "type": "Group",
-              "category": "Section",
-              "alias": "Vormiete",
-              "block": [
-                {
-                  "id": "gm5dd",
-                  "type": "Question",
-                  "alias": "Vermieter hat über Vormiete informiert",
-                  "text": "Hat die Vermieterin sich bei Abschluss des Mietvertrages darauf berufen, dass die Mietpreisbremse nicht gilt, weil die Vormieterin bereits eine höhere Miete gezahlt hat?",
-                  "info": null,
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "y4lgh",
-                        "alias": "Ja",
-                        "text": "Ja"
-                      },
-                      {
-                        "id": "o2xpn",
-                        "alias": "Nein",
-                        "text": "Nein"
-                      },
-                      {
-                        "id": "gbreq",
-                        "alias": "Nicht sicher",
-                        "text": "Ich bin mir nicht sicher"
-                      }
-                    ]
-                  },
-                  "required": false
-                },
-                {
-                  "id": "bp4e7f",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "rnetgi",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "uwgna",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Vermieter hat über Vormiete informiert"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "y4lgh"
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "akjqpk",
+                          "id": "s6p49",
                           "type": "Question",
-                          "alias": "Vermiete hat Vormiete mitgeteilt",
-                          "text": "Hat die Vermieterin dir mitgeteilt wie hoch die Miete der Vormieterin war?",
+                          "alias": "Einhaltung Kappungsgrenze ohne vorige Mieterhöhung",
+                          "text": "Abgleich alte und neue miete",
                           "info": null,
                           "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "z988p",
-                                "alias": "Ja",
-                                "text": "Ja"
-                              },
-                              {
-                                "id": "eof0v",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              },
-                              {
-                                "id": "dmi7j",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
-                              }
-                            ]
+                            "type": "BooleanAnswer"
                           },
-                          "required": false
+                          "required": true
+                        }
+                      ]
+                    },
+                    {
+                      "id": "udq5",
+                      "type": "Group",
+                      "category": null,
+                      "alias": "Sperrfristen",
+                      "block": [
+                        {
+                          "id": "knj9h",
+                          "type": "Question",
+                          "alias": "Letzte Mieterhöhung Datum",
+                          "text": "Wann ist deine letzte Mieterhöhung eingetreten? Ab welchem Monat musstest du sie also Zahlen?",
+                          "info": "Nur Erhöhungen wegen Mietspiegel sind relevant.",
+                          "answer": {
+                            "type": "DateAnswer"
+                          },
+                          "required": true
                         },
                         {
-                          "id": "f4r5r",
+                          "id": "85do9",
+                          "type": "Question",
+                          "alias": "Sperrfristen eingehalten",
+                          "text": "",
+                          "info": null,
+                          "answer": {
+                            "type": "BooleanAnswer"
+                          },
+                          "required": true
+                        },
+                        {
+                          "id": "pg576",
                           "type": "If",
                           "cases": [
                             {
-                              "id": "c6q02",
+                              "id": "6dtd9",
                               "type": "IfCase",
                               "test": {
-                                "id": "vt1kdk",
+                                "id": "fecq1",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Vermiete hat Vormiete mitgeteilt"
+                                  "value": "Sperrfristen eingehalten"
                                 },
                                 "negated": false,
-                                "type": "AnswerOptionComparison",
+                                "type": "AnswerBooleanComparison",
                                 "operator": "is",
-                                "comparands": [
-                                  "z988p"
-                                ]
+                                "value": false
                               },
                               "block": [
                                 {
-                                  "id": "t1fpcj",
-                                  "type": "Question",
-                                  "alias": "Vermieter hat Vormiete schriftlich mitgeteilt",
-                                  "text": "Wurde dir die Höhe der Miete schriftlich mitgeteilt? ",
-                                  "info": "Dazu zählt Papier, Email, Fax, WhatsApp, SMS oder irgendeine nicht rein mündliche Mitteilung.",
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "nqrd8",
-                                        "alias": "Ja",
-                                        "text": "Ja"
-                                      },
-                                      {
-                                        "id": "kurhg",
-                                        "alias": "Nein",
-                                        "text": "Nein"
-                                      },
-                                      {
-                                        "id": "r6jkug",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
-                                      }
-                                    ]
-                                  },
-                                  "required": false
-                                },
-                                {
-                                  "id": "vu3zv",
-                                  "type": "If",
-                                  "cases": [
-                                    {
-                                      "id": "75n6p",
-                                      "type": "IfCase",
-                                      "test": {
-                                        "id": "dxdmo",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Vermieter hat Vormiete schriftlich mitgeteilt"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerOptionComparison",
-                                        "operator": "is",
-                                        "comparands": [
-                                          "nqrd8"
-                                        ]
-                                      },
-                                      "block": [
-                                        {
-                                          "id": "rfggi",
-                                          "type": "Question",
-                                          "alias": "Vormiete",
-                                          "text": "Wie hoch ist die von der Vermieterin genannte Nettokaltmiete der Vormieterin?",
-                                          "info": null,
-                                          "answer": {
-                                            "type": "NumberAnswer"
-                                          },
-                                          "required": false
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "alternate": []
+                                  "id": "3moz9h",
+                                  "alias": "Exit: Sperrfristen nicht eingehalten",
+                                  "text": "",
+                                  "type": "Exit"
                                 }
                               ]
                             }
@@ -2882,24 +2707,61 @@
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
-                },
+                  ]
+                }
+              ]
+            }
+          ],
+          "alternate": [
+            {
+              "id": "9ve5k",
+              "type": "Group",
+              "category": "Page",
+              "alias": "Mietvertrag",
+              "block": [
                 {
-                  "id": "xxqgz",
-                  "type": "If",
-                  "cases": [
+                  "id": "8c7r4",
+                  "type": "Group",
+                  "category": "Section",
+                  "alias": "Vormiete",
+                  "block": [
                     {
-                      "id": "gx6hd",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "7khky",
-                        "type": "LogicalOperation",
-                        "operator": "or",
-                        "negated": false,
-                        "conditions": [
+                      "id": "gm5dd",
+                      "type": "Question",
+                      "alias": "Vermieter hat über Vormiete informiert",
+                      "text": "Hat die Vermieterin sich bei Abschluss des Mietvertrages darauf berufen, dass die Mietpreisbremse nicht gilt, weil die Vormieterin bereits eine höhere Miete gezahlt hat?",
+                      "info": null,
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
                           {
-                            "id": "x897i",
+                            "id": "y4lgh",
+                            "alias": "Ja",
+                            "text": "Ja"
+                          },
+                          {
+                            "id": "o2xpn",
+                            "alias": "Nein",
+                            "text": "Nein"
+                          },
+                          {
+                            "id": "gbreq",
+                            "alias": "Nicht sicher",
+                            "text": "Ich bin mir nicht sicher"
+                          }
+                        ]
+                      },
+                      "required": false
+                    },
+                    {
+                      "id": "bp4e7f",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "rnetgi",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "uwgna",
                             "questionRef": {
                               "type": "AliasRef",
                               "value": "Vermieter hat über Vormiete informiert"
@@ -2908,146 +2770,475 @@
                             "type": "AnswerOptionComparison",
                             "operator": "is",
                             "comparands": [
-                              "gbreq"
+                              "y4lgh"
                             ]
                           },
-                          {
-                            "id": "x897i",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Vermiete hat Vormiete mitgeteilt"
+                          "block": [
+                            {
+                              "id": "akjqpk",
+                              "type": "Question",
+                              "alias": "Vermiete hat Vormiete mitgeteilt",
+                              "text": "Hat die Vermieterin dir mitgeteilt wie hoch die Miete der Vormieterin war?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "z988p",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "eof0v",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "dmi7j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false
                             },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "dmi7j",
-                              "eof0v"
-                            ]
-                          },
-                          {
-                            "id": "x897i",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Vermieter hat Vormiete schriftlich mitgeteilt"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "r6jkug",
-                              "kurhg"
-                            ]
-                          }
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "lxroz",
-                          "alias": "Wichtig: Vermieterinnen haben unter Umständen das Recht eine höhere Miete zu fordern, wenn die Vormieterin bereits eine höhere Miete gezahlt hat. Wir empfehlen nochmal zu überprüfen, ob die Vermieterin bei Vertragsabschluss über die Vormiete schriftlich informiert hat und dies nochmal bei einem Beratungstermin mit einer Mietrechtsexpertin anzusprechen.",
-                          "text": "",
-                          "type": "Info",
-                          "title": ""
+                            {
+                              "id": "f4r5r",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "c6q02",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "vt1kdk",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vermiete hat Vormiete mitgeteilt"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "z988p"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "t1fpcj",
+                                      "type": "Question",
+                                      "alias": "Vermieter hat Vormiete schriftlich mitgeteilt",
+                                      "text": "Wurde dir die Höhe der Miete schriftlich mitgeteilt? ",
+                                      "info": "Dazu zählt Papier, Email, Fax, WhatsApp, SMS oder irgendeine nicht rein mündliche Mitteilung.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "nqrd8",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "kurhg",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "r6jkug",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false
+                                    },
+                                    {
+                                      "id": "vu3zv",
+                                      "type": "If",
+                                      "cases": [
+                                        {
+                                          "id": "75n6p",
+                                          "type": "IfCase",
+                                          "test": {
+                                            "id": "dxdmo",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Vermieter hat Vormiete schriftlich mitgeteilt"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "nqrd8"
+                                            ]
+                                          },
+                                          "block": [
+                                            {
+                                              "id": "rfggi",
+                                              "type": "Question",
+                                              "alias": "Vormiete",
+                                              "text": "Wie hoch ist die von der Vermieterin genannte Nettokaltmiete der Vormieterin?",
+                                              "info": null,
+                                              "answer": {
+                                                "type": "NumberAnswer"
+                                              },
+                                              "required": false
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "alternate": []
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            }
+                          ]
                         }
-                      ]
-                    }
-                  ],
-                  "alternate": []
-                }
-              ]
-            },
-            {
-              "id": "mgvv3",
-              "type": "Group",
-              "category": "Section",
-              "alias": "Erste Vermietung nach umfassender Renovierung",
-              "block": [
-                {
-                  "id": "zs324",
-                  "type": "Question",
-                  "alias": "Vermieter hat über umfassende Sanierung informiert",
-                  "text": "Hat die Vermieterin sich bei Abschluss des Mietvertrages darauf berufen, dass es sich um die erstmalige Vermietung nach umfassender Renovierung handelt?",
-                  "info": null,
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "ck16",
-                        "alias": "Ja",
-                        "text": "Ja"
-                      },
-                      {
-                        "id": "m5uh5",
-                        "alias": "Nein",
-                        "text": "Nein"
-                      },
-                      {
-                        "id": "ha0h5",
-                        "alias": "Nicht sicher",
-                        "text": "Ich bin mir nicht sicher"
-                      }
-                    ]
-                  },
-                  "required": false
-                },
-                {
-                  "id": "397c6",
-                  "type": "If",
-                  "cases": [
+                      ],
+                      "alternate": []
+                    },
                     {
-                      "id": "oxcowf",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "u4y59",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Vermieter hat über umfassende Sanierung informiert"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "ck16"
-                        ]
-                      },
-                      "block": [
+                      "id": "xxqgz",
+                      "type": "If",
+                      "cases": [
                         {
-                          "id": "mjqd6l",
-                          "type": "Question",
-                          "alias": "Vermieter hat Renovierungskosten mitgeteilt",
-                          "text": "Hat die Vermieterin dir Auskunft über die Höhe der Renovierungskosten gegeben?",
-                          "info": null,
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
+                          "id": "gx6hd",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "7khky",
+                            "type": "LogicalOperation",
+                            "operator": "or",
+                            "negated": false,
+                            "conditions": [
                               {
-                                "id": "movbgk",
-                                "alias": "Ja",
-                                "text": "Ja"
+                                "id": "x897i",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Vermieter hat über Vormiete informiert"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "gbreq"
+                                ]
                               },
                               {
-                                "id": "arjqc",
-                                "alias": "Nein",
-                                "text": "Nein"
+                                "id": "x897i",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Vermiete hat Vormiete mitgeteilt"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "dmi7j",
+                                  "eof0v"
+                                ]
                               },
                               {
-                                "id": "usg3ll",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
+                                "id": "x897i",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Vermieter hat Vormiete schriftlich mitgeteilt"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "r6jkug",
+                                  "kurhg"
+                                ]
                               }
                             ]
                           },
-                          "required": false
+                          "block": [
+                            {
+                              "id": "lxroz",
+                              "alias": "Wichtig: Vermieterinnen haben unter Umständen das Recht eine höhere Miete zu fordern, wenn die Vormieterin bereits eine höhere Miete gezahlt hat. Wir empfehlen nochmal zu überprüfen, ob die Vermieterin bei Vertragsabschluss über die Vormiete schriftlich informiert hat und dies nochmal bei einem Beratungstermin mit einer Mietrechtsexpertin anzusprechen.",
+                              "text": "",
+                              "type": "Info",
+                              "title": ""
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
+                    }
+                  ]
+                },
+                {
+                  "id": "mgvv3",
+                  "type": "Group",
+                  "category": "Section",
+                  "alias": "Erste Vermietung nach umfassender Renovierung",
+                  "block": [
+                    {
+                      "id": "zs324",
+                      "type": "Question",
+                      "alias": "Vermieter hat über umfassende Sanierung informiert",
+                      "text": "Hat die Vermieterin sich bei Abschluss des Mietvertrages darauf berufen, dass es sich um die erstmalige Vermietung nach umfassender Renovierung handelt?",
+                      "info": null,
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "ck16",
+                            "alias": "Ja",
+                            "text": "Ja"
+                          },
+                          {
+                            "id": "m5uh5",
+                            "alias": "Nein",
+                            "text": "Nein"
+                          },
+                          {
+                            "id": "ha0h5",
+                            "alias": "Nicht sicher",
+                            "text": "Ich bin mir nicht sicher"
+                          }
+                        ]
+                      },
+                      "required": false
+                    },
+                    {
+                      "id": "397c6",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "oxcowf",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "u4y59",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vermieter hat über umfassende Sanierung informiert"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "ck16"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "mjqd6l",
+                              "type": "Question",
+                              "alias": "Vermieter hat Renovierungskosten mitgeteilt",
+                              "text": "Hat die Vermieterin dir Auskunft über die Höhe der Renovierungskosten gegeben?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "movbgk",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "arjqc",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "usg3ll",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false
+                            },
+                            {
+                              "id": "oqwe9",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "sna3hk",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "i5a0z",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vermieter hat Renovierungskosten mitgeteilt"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "movbgk"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "x25e8",
+                                      "type": "Question",
+                                      "alias": "Vermieter hat Renovierungskosten schriftlich mitgeteilt",
+                                      "text": "Wurde dir die Höhe der Renovierungskosten schriftlich mitgeteilt?",
+                                      "info": "Dazu zählt Papier, Email, Fax, WhatsApp, SMS oder irgendeine nicht rein mündliche Mitteilung.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "fc5zw",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "wgq0r",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "4nz88",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false
+                                    },
+                                    {
+                                      "id": "53vve",
+                                      "type": "If",
+                                      "cases": [
+                                        {
+                                          "id": "k086b",
+                                          "type": "IfCase",
+                                          "test": {
+                                            "id": "xyflq",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Vermieter hat Renovierungskosten schriftlich mitgeteilt"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "fc5zw"
+                                            ]
+                                          },
+                                          "block": [
+                                            {
+                                              "id": "o83ks",
+                                              "type": "Question",
+                                              "alias": "Renovierungskosten ein Drittel des Neubaupreises",
+                                              "text": "Waren die Renovierungskosten mindestens ein Drittel des Neubaupreis?",
+                                              "info": "Den genauen Neubaupreis kann man als Mieter*in meist nur schätzen. Du kannst dafür etwa 800€ pro Quadratmeter veranschlagen.",
+                                              "answer": {
+                                                "type": "ChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "v0z7s",
+                                                    "alias": "Ja",
+                                                    "text": "Ja"
+                                                  },
+                                                  {
+                                                    "id": "gid5s",
+                                                    "alias": "Nein",
+                                                    "text": "Nein"
+                                                  },
+                                                  {
+                                                    "id": "8n7lz",
+                                                    "alias": "Nicht sicher",
+                                                    "text": "Ich bin mir nicht sicher"
+                                                  }
+                                                ]
+                                              },
+                                              "required": false
+                                            },
+                                            {
+                                              "id": "srrya",
+                                              "type": "If",
+                                              "cases": [
+                                                {
+                                                  "id": "wmahkh",
+                                                  "type": "IfCase",
+                                                  "test": {
+                                                    "id": "2ov9e",
+                                                    "questionRef": {
+                                                      "type": "AliasRef",
+                                                      "value": "Renovierungskosten ein Drittel des Neubaupreises"
+                                                    },
+                                                    "negated": false,
+                                                    "type": "AnswerOptionComparison",
+                                                    "operator": "is",
+                                                    "comparands": [
+                                                      "v0z7s"
+                                                    ]
+                                                  },
+                                                  "block": [
+                                                    {
+                                                      "id": "4ofs3",
+                                                      "alias": "Die Regelungen der Mietpreisbremse gelten nicht für Wohnungen, die nach einer umfassenden Modernisierung erstmals vermietet werden. Dies könnte bei dir unter Umständen der Fall sein. Wir empfehlen dir, den Fragebogen weiter auszufüllen und dieses Thema mit einer Mietrechtsexpertin zu besprechen.",
+                                                      "text": "",
+                                                      "type": "Info",
+                                                      "title": ""
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "alternate": []
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "alternate": []
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            }
+                          ]
                         },
                         {
-                          "id": "oqwe9",
-                          "type": "If",
-                          "cases": [
+                          "id": "4bzg1",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "uswa6",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vermieter hat über umfassende Sanierung informiert"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "ha0h5"
+                            ]
+                          },
+                          "block": [
                             {
-                              "id": "sna3hk",
-                              "type": "IfCase",
-                              "test": {
-                                "id": "i5a0z",
+                              "id": "kt54d",
+                              "alias": "Die Regelungen der Mietpreisbremse gelten nicht für Wohnungen, die nach einer umfassenden Modernisierung erstmals vermietet werden. Wir empfehlen dir, diese Information nochmal nachzugucken und das Thema gegebenenfalls mit einer Mietrechtsexpertin zu besprechen.",
+                              "text": "",
+                              "type": "Info",
+                              "title": ""
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
+                    },
+                    {
+                      "id": "cdxlr",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "3gjnvi",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "3por4",
+                            "type": "LogicalOperation",
+                            "operator": "or",
+                            "negated": false,
+                            "conditions": [
+                              {
+                                "id": "qm01m",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Vermieter hat Renovierungskosten mitgeteilt"
@@ -3056,230 +3247,54 @@
                                 "type": "AnswerOptionComparison",
                                 "operator": "is",
                                 "comparands": [
-                                  "movbgk"
+                                  "arjqc",
+                                  "usg3ll"
                                 ]
                               },
-                              "block": [
-                                {
-                                  "id": "x25e8",
-                                  "type": "Question",
-                                  "alias": "Vermieter hat Renovierungskosten schriftlich mitgeteilt",
-                                  "text": "Wurde dir die Höhe der Renovierungskosten schriftlich mitgeteilt?",
-                                  "info": "Dazu zählt Papier, Email, Fax, WhatsApp, SMS oder irgendeine nicht rein mündliche Mitteilung.",
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "fc5zw",
-                                        "alias": "Ja",
-                                        "text": "Ja"
-                                      },
-                                      {
-                                        "id": "wgq0r",
-                                        "alias": "Nein",
-                                        "text": "Nein"
-                                      },
-                                      {
-                                        "id": "4nz88",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
-                                      }
-                                    ]
-                                  },
-                                  "required": false
+                              {
+                                "id": "qm01m",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Vermieter hat Renovierungskosten schriftlich mitgeteilt"
                                 },
-                                {
-                                  "id": "53vve",
-                                  "type": "If",
-                                  "cases": [
-                                    {
-                                      "id": "k086b",
-                                      "type": "IfCase",
-                                      "test": {
-                                        "id": "xyflq",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Vermieter hat Renovierungskosten schriftlich mitgeteilt"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerOptionComparison",
-                                        "operator": "is",
-                                        "comparands": [
-                                          "fc5zw"
-                                        ]
-                                      },
-                                      "block": [
-                                        {
-                                          "id": "o83ks",
-                                          "type": "Question",
-                                          "alias": "Renovierungskosten ein Drittel des Neubaupreises",
-                                          "text": "Waren die Renovierungskosten mindestens ein Drittel des Neubaupreis?",
-                                          "info": "Den genauen Neubaupreis kann man als Mieter*in meist nur schätzen. Du kannst dafür etwa 800€ pro Quadratmeter veranschlagen.",
-                                          "answer": {
-                                            "type": "ChoiceAnswer",
-                                            "options": [
-                                              {
-                                                "id": "v0z7s",
-                                                "alias": "Ja",
-                                                "text": "Ja"
-                                              },
-                                              {
-                                                "id": "gid5s",
-                                                "alias": "Nein",
-                                                "text": "Nein"
-                                              },
-                                              {
-                                                "id": "8n7lz",
-                                                "alias": "Nicht sicher",
-                                                "text": "Ich bin mir nicht sicher"
-                                              }
-                                            ]
-                                          },
-                                          "required": false
-                                        },
-                                        {
-                                          "id": "srrya",
-                                          "type": "If",
-                                          "cases": [
-                                            {
-                                              "id": "wmahkh",
-                                              "type": "IfCase",
-                                              "test": {
-                                                "id": "2ov9e",
-                                                "questionRef": {
-                                                  "type": "AliasRef",
-                                                  "value": "Renovierungskosten ein Drittel des Neubaupreises"
-                                                },
-                                                "negated": false,
-                                                "type": "AnswerOptionComparison",
-                                                "operator": "is",
-                                                "comparands": [
-                                                  "v0z7s"
-                                                ]
-                                              },
-                                              "block": [
-                                                {
-                                                  "id": "4ofs3",
-                                                  "alias": "Die Regelungen der Mietpreisbremse gelten nicht für Wohnungen, die nach einer umfassenden Modernisierung erstmals vermietet werden. Dies könnte bei dir unter Umständen der Fall sein. Wir empfehlen dir, den Fragebogen weiter auszufüllen und dieses Thema mit einer Mietrechtsexpertin zu besprechen.",
-                                                  "text": "",
-                                                  "type": "Info",
-                                                  "title": ""
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "alternate": []
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "alternate": []
-                                }
-                              ]
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "wgq0r",
+                                  "4nz88"
+                                ]
+                              },
+                              {
+                                "id": "qm01m",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Renovierungskosten ein Drittel des Neubaupreises"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "gid5s",
+                                  "8n7lz"
+                                ]
+                              }
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "rpavt",
+                              "alias": "Die Regelungen der Mietpreisbremse gelten nicht für Wohnungen, die nach einer umfassenden Modernisierung erstmals vermietet werden. Selbst wenn die Vermieterin dies behauptet, muss dies aber nicht unbedingt stimmen. Wir empfehlen dir, den Fragebogen weiter auszufüllen und dieses Thema mit einer Mietrechtsexpertin zu besprechen.",
+                              "text": "",
+                              "type": "Info",
+                              "title": ""
                             }
-                          ],
-                          "alternate": []
+                          ]
                         }
-                      ]
-                    },
-                    {
-                      "id": "4bzg1",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "uswa6",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Vermieter hat über umfassende Sanierung informiert"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "ha0h5"
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "kt54d",
-                          "alias": "Die Regelungen der Mietpreisbremse gelten nicht für Wohnungen, die nach einer umfassenden Modernisierung erstmals vermietet werden. Wir empfehlen dir, diese Information nochmal nachzugucken und das Thema gegebenenfalls mit einer Mietrechtsexpertin zu besprechen.",
-                          "text": "",
-                          "type": "Info",
-                          "title": ""
-                        }
-                      ]
+                      ],
+                      "alternate": []
                     }
-                  ],
-                  "alternate": []
-                },
-                {
-                  "id": "cdxlr",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "3gjnvi",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "3por4",
-                        "type": "LogicalOperation",
-                        "operator": "or",
-                        "negated": false,
-                        "conditions": [
-                          {
-                            "id": "qm01m",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Vermieter hat Renovierungskosten mitgeteilt"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "arjqc",
-                              "usg3ll"
-                            ]
-                          },
-                          {
-                            "id": "qm01m",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Vermieter hat Renovierungskosten schriftlich mitgeteilt"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "wgq0r",
-                              "4nz88"
-                            ]
-                          },
-                          {
-                            "id": "qm01m",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Renovierungskosten ein Drittel des Neubaupreises"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "gid5s",
-                              "8n7lz"
-                            ]
-                          }
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "rpavt",
-                          "alias": "Die Regelungen der Mietpreisbremse gelten nicht für Wohnungen, die nach einer umfassenden Modernisierung erstmals vermietet werden. Selbst wenn die Vermieterin dies behauptet, muss dies aber nicht unbedingt stimmen. Wir empfehlen dir, den Fragebogen weiter auszufüllen und dieses Thema mit einer Mietrechtsexpertin zu besprechen.",
-                          "text": "",
-                          "type": "Info",
-                          "title": ""
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": []
+                  ]
                 }
               ]
             }
@@ -13121,5 +13136,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subs": []
 }

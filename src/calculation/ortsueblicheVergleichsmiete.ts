@@ -1,8 +1,7 @@
 import { getWorstBestPreisspanne } from "~/calculation/preisspanne";
+import { getWorstBestSondermerkmalModifier } from "~/calculation/sondermerkmale";
+import { getWorstBestSpanneneinordnungInPercent } from "~/calculation/spanneneinordnung";
 import { FinalAnswers } from "~/form/flow-machine";
-
-import { getWorstBestSondermerkmalModifier } from "./sondermerkmale";
-import { getWorstBestSpanneneinordnungInPercent } from "./spanneneinordnung";
 
 export const calcMerkmalsgruppenValueInEuro = (
   preisspanne: [number, number, number],

@@ -7,9 +7,14 @@ import { useLocalizeField } from "~/l10n";
 import {
   ExitHaeuser,
   ExitKeinWC,
-  ExitMieterhoehungMitAnderemGrund,
+  ExitMieterhoehungFreiwillig,
+  ExitMieterhoehungIndexmiete,
+  ExitMieterhoehungModernisierung,
   ExitMieterhoehungOhneBegruendung,
+  ExitMieterhoehungStaffelmiete,
   ExitMieterhoehungZugestimmt,
+  ExitMieterhoehungZusaetzlichZurIndexmiete,
+  ExitMieterhoehungZusaetzlichZurStaffelmiete,
   ExitMietspiegeltabelleLeer,
   ExitMietvertragZuAlt,
   ExitMietvertragZuNeu,
@@ -20,23 +25,34 @@ import {
 import { StepperType } from "..";
 
 const Exits = {
-  "Mietvertrag zu alt": () => <ExitMietvertragZuAlt />,
   Mietspiegel2024: () => <ExitMietvertragZuNeu />,
-  "Mietspiegeltabelle Leer": () => <ExitMietspiegeltabelleLeer />,
-  "Zu neu": () => <ExitNeubauwohnung />,
-  "Mietpreisbremse gilt nicht für Sozialwohnungen": () => (
+  "Exit: Mietvertrag zu alt": () => <ExitMietvertragZuAlt />,
+  "Exit: Mietspiegeltabelle Leer": () => <ExitMietspiegeltabelleLeer />,
+  "Exit: Zu neu": () => <ExitNeubauwohnung />,
+  "Exit: Mietpreisbremse gilt nicht für Sozialwohnungen": () => (
     <ExitSozialwohnungen />
   ),
-  "Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser":
+  "Exit: Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser":
     () => <ExitHaeuser />,
-  "Mietspiegel gilt nicht für Wohnungen ohne WC": () => <ExitKeinWC />,
-  "Möblierte Wohnung": () => <ExitMoebliert />,
+  "Exit: Mietspiegel gilt nicht für Wohnungen ohne WC": () => <ExitKeinWC />,
+  "Exit: Möblierte Wohnung": () => <ExitMoebliert />,
   "Exit: Mieterhöhung zugestimmt": () => <ExitMieterhoehungZugestimmt />,
-  "Exit: Mieterhöhung mit anderem Grund ": () => (
-    <ExitMieterhoehungMitAnderemGrund />
+  "Exit: Mieterhöhung freiwillig": () => <ExitMieterhoehungFreiwillig />,
+  "Exit: Mieterhöhung Modernisierung": () => (
+    <ExitMieterhoehungModernisierung />
   ),
   "Exit: Mieterhöhung ohne Begründung": () => (
     <ExitMieterhoehungOhneBegruendung />
+  ),
+  "Exit: Mieterhöhung wegen Indexmiete": () => <ExitMieterhoehungIndexmiete />,
+  "Exit: Mieterhöhung zusätzlich zur Indexmiete": () => (
+    <ExitMieterhoehungZusaetzlichZurIndexmiete />
+  ),
+  "Exit: Mieterhöhung wegen Staffelmiete": () => (
+    <ExitMieterhoehungStaffelmiete />
+  ),
+  "Exit: Mieterhöhung zusätzlich zur Staffelmiete": () => (
+    <ExitMieterhoehungZusaetzlichZurStaffelmiete />
   ),
 };
 
