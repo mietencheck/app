@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -639,6 +640,7 @@
                 {
                   "id": "sokgp",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "dpott",
@@ -742,24 +744,24 @@
                           "id": "bhxey",
                           "type": "Question",
                           "alias": "Mieterhöhung wegen Staffelmiete",
-                          "text": "Wurde die Miete gerade aufgrund der vereinbarten Staffelmiete erhöht. ",
-                          "info": "Die Rate um welche sich die Miete jährlich erhöht, muss bereits im ursprünglichen Mietvertrag angegeben sein",
+                          "text": "Soll die Miete genau um den Betrag erhöht werden, der Mietvertrag vereinbarten wurde?",
+                          "info": "Bei einer Staffelmiete ist im Mietvertrag ein fester Betrag festgelegt, um welchen sich die Miete jedes Jahr erhöht. Du solltest diesen Betrag also in deinem Mietvertrag finden.",
+                          "required": true,
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
                               {
                                 "id": "0q8jti",
                                 "alias": "Ja",
-                                "text": "Ja, der Vermieter hat die Miete um die im Mietvertrag angegebene Rate erhöht."
+                                "text": "Ja, der Vermieter hat die Miete um die im Mietvertrag angegebene Betrag erhöht."
                               },
                               {
                                 "id": "k16tp",
                                 "alias": "Nein",
-                                "text": "Nein, der Vermieter will die Miete zusätzlich zur vereinbarten Staffelmiete erhöhen."
+                                "text": "Nein, der Vermieter will die Miete zusätzlich zum vereinbarten Betrag erhöhen."
                               }
                             ]
-                          },
-                          "required": true
+                          }
                         },
                         {
                           "id": "n7uz7",
@@ -802,8 +804,7 @@
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 },
                 {
                   "id": "ez0nm",
@@ -13136,6 +13137,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }
