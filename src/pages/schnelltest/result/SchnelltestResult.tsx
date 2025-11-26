@@ -23,16 +23,10 @@ import { ResultMieterhöhungZulaessig } from "./mieterhoehung/ResultMieterhoehun
 export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
-  const { best: bestDiff } = useWorstBestZulaessigeHoechstmieteDiff();
 
   const typ = getTyp(answers, visibleQuestionAliases);
 
   const l = useLocalizeField();
-
-  const {
-    best: bestZulaessigeHoechstmiete,
-    worst: worstZulaessigeHoechstmiete,
-  } = useWorstBestZulaessigeHoechstmiete();
 
   useMarkEstimatorSeen();
 
@@ -40,17 +34,42 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
 
   const renderResult = () => {
     if (typ === "Miete") {
-      if (bestDiff < 0) {
+      const { best: bestZulaessigeHoechstmieteDiff } =
+        useWorstBestZulaessigeHoechstmieteDiff();
+
+      if (bestZulaessigeHoechstmieteDiff < 0) {
         return <ResultMieteZulaessig />;
       } else {
         showContinueToDetailsButton = true;
         return <ResultMieteNichtZulaessig />;
       }
     } else {
-      const aktuelleNettokaltmiete =
-        getAktuelleNettokaltmiete(answers, visibleQuestionAliases) || 0;
-      const geforderteNettokaltmiete =
-        getGeforderteNettokaltmiete(answers, visibleQuestionAliases) || 0;
+      const aktuelleNettokaltmiete = getAktuelleNettokaltmiete(
+        answers,
+        visibleQuestionAliases,
+      );
+      const geforderteNettokaltmiete = getGeforderteNettokaltmiete(
+        answers,
+        visibleQuestionAliases,
+      );
+      const {
+        best: bestZulaessigeHoechstmiete,
+        worst: worstZulaessigeHoechstmiete,
+      } = useWorstBestZulaessigeHoechstmiete();
+
+      if (!aktuelleNettokaltmiete || !geforderteNettokaltmiete) {
+        return (
+          <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
+            <h2 className="heading-24 mb-4">
+              Fehler beim Berechnen des Ergebnisses
+            </h2>
+            <p className="text-neutral-faded mb-4">
+              Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten.
+              Bitte klick unten auf "Neu anfangen".
+            </p>
+          </div>
+        );
+      }
 
       if (geforderteNettokaltmiete < bestZulaessigeHoechstmiete) {
         /*
