@@ -47,27 +47,6 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
         return <ResultMieteNichtZulaessig />;
       }
     } else {
-      /*
-
-        Beispiel 3a:
-          Daten:
-          - Aktuelle Miete: 900€
-          - Gefordert Miete: 1100€
-          - zulässigeHöchstmiete: { best: 500, worst: 1000}
-          -> Die geforderte Miete liegt über der schlecht-möglichsten zulässigen Höchstmiete.
-          -> Die aktuelle Miete liegt jedoch unter der schlecht-möglichsten zulässigen Höchstmiete.
-          -> Die Mieterhöhung ist wahrscheinlich in ihrer Höhe unzulässig.
-          -> Weiteres ausfüllen notwendig
-      
-        Beispiel 3b:
-          Daten:
-          - Aktuelle Miete: 1100€
-          - Gefordert Miete: 1200€
-          - zulässigeHöchstmiete: { best: 500, worst: 1000}
-          -> Die aktuelle und die geforderte Miete liegt beide über der schlecht-möglichsten Höchstmiete
-          -> Die Mieterhöhung ist in ihrer Höhe unzulässig.
-            -> Kein weiteres ausfüllen notwendig
-        */
       const aktuelleNettokaltmiete =
         getAktuelleNettokaltmiete(answers, visibleQuestionAliases) || 0;
       const geforderteNettokaltmiete =
