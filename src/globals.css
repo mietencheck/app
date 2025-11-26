@@ -202,91 +202,91 @@ body {
   }
 
   .heading-16 {
-    @apply text-base/[22px] font-500;
+    @apply text-base/[22px] font-500 text-pretty;
   }
 
   .heading-18 {
-    @apply text-lg/[24px] font-500;
+    @apply text-lg/[24px] font-500 text-pretty;
   }
 
   .heading-20 {
-    @apply text-xl/[28px] font-500;
+    @apply text-xl/[28px] font-500 text-pretty;
   }
 
   .heading-22 {
-    @apply text-[22px]/[30px] font-500;
+    @apply text-[22px]/[30px] font-500 text-pretty;
   }
 
   .heading-24 {
-    @apply text-2xl/[32px] font-500;
+    @apply text-2xl/[32px] font-500 text-pretty;
   }
 
   .heading-28 {
-    @apply text-3xl/[34px] font-500;
+    @apply text-3xl/[34px] font-500 text-pretty;
   }
 
   .title-16 {
-    @apply text-base/[132%] font-600;
+    @apply text-base/[132%] font-600 text-pretty;
   }
 
   .title-18 {
-    @apply text-lg/[132%] font-600;
+    @apply text-lg/[132%] font-600 text-pretty;
   }
 
   .title-20 {
-    @apply text-xl/[132%] font-600;
+    @apply text-xl/[132%] font-600 text-pretty;
   }
 
   .title-24 {
-    @apply text-2xl/[132%] font-600;
+    @apply text-2xl/[132%] font-600 text-pretty;
   }
 
   .title-28 {
-    @apply text-3xl/[132%] font-600;
+    @apply text-3xl/[132%] font-600 text-pretty;
   }
 
   .title-32 {
-    @apply text-4xl/[120%] font-600;
+    @apply text-4xl/[120%] font-600 text-pretty;
   }
 
   .title-36 {
-    @apply text-5xl/[120%] font-600;
+    @apply text-5xl/[120%] font-600 text-pretty;
   }
 
   .title-40 {
-    @apply text-6xl/[120%] font-600;
+    @apply text-6xl/[120%] font-600 text-pretty;
   }
 
   .title-44 {
-    @apply text-7xl/[120%] font-600;
+    @apply text-7xl/[120%] font-600 text-pretty;
   }
 
   .title-48 {
-    @apply text-8xl/[120%] font-600;
+    @apply text-8xl/[120%] font-600 text-pretty;
   }
 
   .title-52 {
-    @apply text-9xl/[110%] font-600;
+    @apply text-9xl/[110%] font-600 text-pretty;
   }
 
   .title-56 {
-    @apply text-10xl/[110%] font-600;
+    @apply text-10xl/[110%] font-600 text-pretty;
   }
 
   .title-60 {
-    @apply text-11xl/[110%] font-600;
+    @apply text-11xl/[110%] font-600 text-pretty;
   }
 
   .title-64 {
-    @apply text-12xl/[110%] font-600;
+    @apply text-12xl/[110%] font-600 text-pretty;
   }
 
   .title-68 {
-    @apply text-13xl/[110%] font-600;
+    @apply text-13xl/[110%] font-600 text-pretty;
   }
 
   .title-72 {
-    @apply text-14xl/[110%] font-600;
+    @apply text-14xl/[110%] font-600 text-pretty;
   }
 
   .bg-gradient-dashed {

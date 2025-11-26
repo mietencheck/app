@@ -5,7 +5,9 @@ import {
 } from "~/pages/details/utils";
 import { formatEuro } from "~/utils";
 
-export function MieteZuHoch() {
+import { WerdeAktiv } from "../../partials";
+
+export function ResultMieteZulaessig() {
   const {
     worst: worstZulaessigeHoechstmiete,
     best: bestZulaessigeHoechstmiete,
@@ -16,19 +18,11 @@ export function MieteZuHoch() {
 
   return (
     <>
-      <h2 className="heading-24 mb-8">
-        {worstDiff > 0 && worstDiff !== bestDiff
-          ? l("Du könntest zwischen X und Y zu viel zahlen", {
-              WORSTDIFF: formatEuro(worstDiff),
-              BESTDIFF: formatEuro(bestDiff),
-            })
-          : l("Du könntest X zu viel zahlen", {
-              DIFF: formatEuro(bestDiff),
-            })}
+      <h2 className="heading-24 mb-6">
+        {l("Leider ist deine Miete im Rahmen des Mietspiegels.")}
       </h2>
-      <h3 className="text-base-medium mb-2">{l("Was bedeutet das?")}</h3>
       <div className="text-neutral-faded space-y-2 mb-6">
-        <p>
+        <p className="text-neutral-faded">
           {worstDiff == bestDiff
             ? l("Ergebnis zulässige Höchstmiete", {
                 MIETE: formatEuro(bestZulaessigeHoechstmiete),
@@ -37,15 +31,22 @@ export function MieteZuHoch() {
                 LOWESTMIETE: formatEuro(bestZulaessigeHoechstmiete),
                 HIGHESTMIETE: formatEuro(worstZulaessigeHoechstmiete),
               })}{" "}
-          {bestDiff <= 0
-            ? l("Ergebnis Mietpreisbremse nicht möglich")
-            : l("Ergebnis Mietpreisbremse möglich")}
         </p>
-        <p>{l("Bitte beachte, dass dieses Ergebnis nur vorläufig ist.")}</p>
+        <p>
+          {l(
+            "Da deine Miete unter diese Spanne liegt, kann die Mietpreisbremse leider nicht angewendet werden.",
+          )}
+        </p>
       </div>
-
-      <h3 className="text-base-medium mb-2">{l("Was nun?")}</h3>
-      <p className="text-neutral-faded mb-6">{l("Schnelltest Was Nun Text")}</p>
+      <div className="space-y-2 mb-6 text-neutral-faded">
+        <h3 className="text-base-medium text-neutral">{l("Was nun?")}</h3>
+        <p>
+          {l(
+            "Auch wenn die Mietpreisbremse für die Wohnung nicht gilt, kannst du dich trotzdem für bezahlbare Mieten einsetzen.",
+          )}
+        </p>
+      </div>
+      <WerdeAktiv />
     </>
   );
 }

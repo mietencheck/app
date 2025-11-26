@@ -1,12 +1,12 @@
 import { expect, test } from "vitest";
 
+import { getWorstBestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 
 import {
   MERKMAL_RESET_ANSWERS,
   SONDERMERKMAL_RESET_ANSWERS,
 } from "../form/mappings/answer-reset";
-import { getWorstBestOrtsueblicheVergleichsmiete } from "./ortsueblicheVergleichsmiete";
 
 test.each([
   ...[

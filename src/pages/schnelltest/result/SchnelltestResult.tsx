@@ -1,16 +1,163 @@
-import { useAnswers } from "~/form/flow-machine";
+import { Button, LinkButton } from "~/components";
+import {
+  getAktuelleNettokaltmiete,
+  getGeforderteNettokaltmiete,
+  getTyp,
+} from "~/form/api";
+import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
+import { useLocalizeField } from "~/l10n";
+import { DetailsRouter } from "~/pages/details/router";
+import {
+  useWorstBestZulaessigeHoechstmiete,
+  useWorstBestZulaessigeHoechstmieteDiff,
+} from "~/pages/details/utils";
 
 import { StepperType } from "..";
-import { MieteSchnelltestResult } from "./miete/MieteSchnelltestResult";
-import { MieterhoehungSchnelltestResult } from "./mieterhoehung/MieterhoehungSchnelltestResult";
+import { useMarkEstimatorSeen } from "../utils";
+import { ResultMieteNichtZulaessig } from "./miete/ResultMieteNichtZulaessig";
+import { ResultMieteZulaessig } from "./miete/ResultMieteZulaessig";
+import { ResultMieterhoehungPotentiellUnzulaessig } from "./mieterhoehung/ResultMietePotentiellUnzulaessig";
+import { ResultMieterhoehungNichtZulaessig } from "./mieterhoehung/ResultMieterhoehungNichtZulaessig";
+import { ResultMieterhöhungZulaessig } from "./mieterhoehung/ResultMieterhoehungZulaessig";
 
 export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
-  const answers = useAnswers();
-  const typ = answers.getWithOptionAlias("Typ");
+  const answers = useAnswers().getAliasedState();
+  const visibleQuestionAliases = useVisibleQuestionAliases();
+  const { best: bestDiff } = useWorstBestZulaessigeHoechstmieteDiff();
 
-  if (typ == "Mieterhöhung") {
-    return <MieterhoehungSchnelltestResult />;
-  }
+  const typ = getTyp(answers, visibleQuestionAliases);
 
-  return <MieteSchnelltestResult stepper={stepper} />;
+  const l = useLocalizeField();
+
+  const {
+    best: bestZulaessigeHoechstmiete,
+    worst: worstZulaessigeHoechstmiete,
+  } = useWorstBestZulaessigeHoechstmiete();
+
+  useMarkEstimatorSeen();
+
+  let showContinueToDetailsButton = false;
+
+  const renderResult = () => {
+    if (typ === "Miete") {
+      if (bestDiff < 0) {
+        return <ResultMieteZulaessig />;
+      } else {
+        showContinueToDetailsButton = true;
+        return <ResultMieteNichtZulaessig />;
+      }
+    } else {
+      /*
+
+        Beispiel 3a:
+          Daten:
+          - Aktuelle Miete: 900€
+          - Gefordert Miete: 1100€
+          - zulässigeHöchstmiete: { best: 500, worst: 1000}
+          -> Die geforderte Miete liegt über der schlecht-möglichsten zulässigen Höchstmiete.
+          -> Die aktuelle Miete liegt jedoch unter der schlecht-möglichsten zulässigen Höchstmiete.
+          -> Die Mieterhöhung ist wahrscheinlich in ihrer Höhe unzulässig.
+          -> Weiteres ausfüllen notwendig
+      
+        Beispiel 3b:
+          Daten:
+          - Aktuelle Miete: 1100€
+          - Gefordert Miete: 1200€
+          - zulässigeHöchstmiete: { best: 500, worst: 1000}
+          -> Die aktuelle und die geforderte Miete liegt beide über der schlecht-möglichsten Höchstmiete
+          -> Die Mieterhöhung ist in ihrer Höhe unzulässig.
+            -> Kein weiteres ausfüllen notwendig
+        */
+      const aktuelleNettokaltmiete =
+        getAktuelleNettokaltmiete(answers, visibleQuestionAliases) || 0;
+      const geforderteNettokaltmiete =
+        getGeforderteNettokaltmiete(answers, visibleQuestionAliases) || 0;
+
+      if (geforderteNettokaltmiete < bestZulaessigeHoechstmiete) {
+        /*
+          Die geforderte Miete liegt unter der best-möglichsten zulässigen Höchstmiete.
+          -> Die Mieterhöhung ist deswegen zulässig.
+
+          Beispiel:
+          - Aktuelle Miete: 400€
+          - Geforderte Miete: 450€
+          - zulässigeHöchstmiete: { best: 500, worst: 1000}
+         */
+        return <ResultMieterhöhungZulaessig />;
+      } else if (geforderteNettokaltmiete < worstZulaessigeHoechstmiete) {
+        /* 
+          Die geforderte Miete liegt über der best-möglichsten zulässigen Höchstmiete, aber unter der schlecht-möglichsten zulässigen Höchstmiete.
+          -> Die Mieterhöhung könnte deswegen in ihrer Höhe unzulässig sein.
+          -> Der Fragebogen muss komplett ausgefüllt werden.
+
+          Beispiel
+          - Aktuelle Miete: 700€
+          - Gefordert Miete: 750€
+          - zulässigeHöchstmiete: { best: 500, worst: 1000}
+        */
+        showContinueToDetailsButton = true;
+        return <ResultMieterhoehungPotentiellUnzulaessig />;
+      } else {
+        if (aktuelleNettokaltmiete < worstZulaessigeHoechstmiete) {
+          /*
+            Die geforderte Miete liegt über der schlecht-möglichsten zulässigen Höchstmiete.
+            -> Die Mieterhöhung ist deswegen auf jeden Fall in ihrer Höhe unzulässig.
+            
+            Die aktuelle Miete liegt jedoch unter der schlecht-möglichsten zulässigen Höchstmiete.
+            -> Die Miete könnte also bis zur schlecht-möglichsten zulässigen Höchstmiete erhöht werden.
+            -> Der Fragebogen muss komplett ausgefüllt werden.
+
+            Beispiel:
+            - Aktuelle Miete: 900€
+            - Gefordert Miete: 1100€
+            - zulässigeHöchstmiete: { best: 500, worst: 1000}
+          */
+          showContinueToDetailsButton = true;
+          return <ResultMieterhoehungPotentiellUnzulaessig />;
+        } else {
+          /*
+            Die aktuelle und die geforderte Miete liegt beide über der schlecht-möglichsten zulässigen Höchstmiete.
+            -> Die Mieterhöhung ist somit komplett unzulässig.
+
+            Beispiel:
+            - Aktuelle Miete: 1100€
+            - Gefordert Miete: 1200€
+            - zulässigeHöchstmiete: { best: 500, worst: 1000}
+          */
+          return <ResultMieterhoehungNichtZulaessig />;
+        }
+      }
+    }
+  };
+
+  return (
+    <>
+      <p className="text-base text-neutral-faded mb-2">{l("Prediction")}</p>
+      {renderResult()}
+
+      <div className="flex flex-row flex-wrap justify-center gap-3 mt-10">
+        {stepper.back && <Button onPress={stepper.back}>{l("Back")}</Button>}
+        {showContinueToDetailsButton ? (
+          <LinkButton
+            color="primary"
+            variant="solid"
+            to={DetailsRouter.Summary()}
+          >
+            {l("go_to_details")}
+          </LinkButton>
+        ) : (
+          <Button
+            color="primary"
+            variant="solid"
+            onPress={() => {
+              localStorage.clear();
+              location.reload();
+            }}
+          >
+            {l("restart")}
+          </Button>
+        )}
+      </div>
+    </>
+  );
 }
