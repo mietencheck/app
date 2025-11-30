@@ -87,276 +87,6 @@
         {
           "id": "sxmb3g",
           "type": "If",
-          "cases": [
-            {
-              "id": "rnj3d",
-              "type": "IfCase",
-              "test": {
-                "id": "doi7w",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Typ"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "wb3w3"
-                ]
-              },
-              "block": [
-                {
-                  "id": "23mp9",
-                  "type": "Group",
-                  "category": "Section",
-                  "alias": "Miete",
-                  "block": [
-                    {
-                      "id": "atgzp",
-                      "type": "Question",
-                      "alias": "Unterschrieben",
-                      "text": "Hast du den Mietvertrag für die Wohnung bereits unterschrieben?",
-                      "info": null,
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "or4h3j",
-                            "alias": "Ja",
-                            "text": "Ja"
-                          },
-                          {
-                            "id": "128cg",
-                            "alias": "Nein",
-                            "text": "Nein"
-                          }
-                        ]
-                      },
-                      "required": true
-                    },
-                    {
-                      "id": "rto8q",
-                      "type": "If",
-                      "cases": [
-                        {
-                          "id": "6k8f8",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "h0wnag",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Unterschrieben"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "or4h3j"
-                            ]
-                          },
-                          "block": [
-                            {
-                              "id": "c568q",
-                              "type": "Question",
-                              "alias": "Vertragsdatum",
-                              "text": "Wann hast du den Mietvertrag unterschrieben?",
-                              "info": "Wenn du dir nicht sicher bist, kannst du das Datum auch erstmal schätzen und später korrigieren.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "08tnb",
-                                    "alias": "<2015",
-                                    "text": "Vor 01.06.2015"
-                                  },
-                                  {
-                                    "id": "wejo0k",
-                                    "alias": "2015-2016",
-                                    "text": "Zwischen 01.06.2015 und 31.08.2016"
-                                  },
-                                  {
-                                    "id": "7np1",
-                                    "alias": "2016-2018",
-                                    "text": "Zwischen 01.09.2016 und 31.08.2018"
-                                  },
-                                  {
-                                    "id": "m2jo",
-                                    "alias": "2018-2020",
-                                    "text": "Zwischen 01.09.2018 und 31.08.2020"
-                                  },
-                                  {
-                                    "id": "4obam",
-                                    "alias": "2020-2022",
-                                    "text": "Zwischen 01.09.2020 und 31.08.2022"
-                                  },
-                                  {
-                                    "id": "oqyrs",
-                                    "alias": "2022-2024",
-                                    "text": "Zwischen 01.09.2022 und 31.08.2023"
-                                  },
-                                  {
-                                    "id": "ve0tek",
-                                    "alias": ">2024",
-                                    "text": "Ab 01.09.2023"
-                                  }
-                                ]
-                              },
-                              "required": true
-                            },
-                            {
-                              "id": "mt4i8",
-                              "type": "If",
-                              "cases": [
-                                {
-                                  "id": "yfn6l",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "l2rtq",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Vertragsdatum"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "08tnb"
-                                    ]
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "m62xs",
-                                      "alias": "Exit: Mietvertrag zu alt",
-                                      "text": "",
-                                      "type": "Exit"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "alternate": []
-                            },
-                            {
-                              "id": "wkj67",
-                              "type": "Question",
-                              "alias": "Mietart",
-                              "text": "Ist im Mietvertrag eine Staffelmiete oder Indexmiete vereinbart?",
-                              "info": "Staffel- und Indexmietverträge sind eine besondere Art von Mietvertrag, bei dem sich die Miete regelmäßig erhöhen kann. Wenn du einen Staffel- oder Indexmiete hast, steht ein Vermerk hierzu in deinem Mietvertrag.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "8dx4p",
-                                    "alias": "Staffelmiete",
-                                    "text": "Staffelmiete"
-                                  },
-                                  {
-                                    "id": "jwmlg",
-                                    "alias": "Indexmiete",
-                                    "text": "Indexmiete"
-                                  },
-                                  {
-                                    "id": "h1ddm",
-                                    "alias": "Normal",
-                                    "text": "Keins von beiden"
-                                  },
-                                  {
-                                    "id": "w3kuwj",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": true
-                            }
-                          ]
-                        }
-                      ],
-                      "alternate": []
-                    },
-                    {
-                      "id": "0a7wh",
-                      "type": "If",
-                      "cases": [
-                        {
-                          "id": "0ya0n",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "ryezt",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Unterschrieben"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "128cg"
-                            ]
-                          },
-                          "block": [
-                            {
-                              "id": "0n0s7",
-                              "type": "Question",
-                              "alias": "Kaltmiete",
-                              "text": "Wie hoch ist die geforderte Nettokaltmiete pro Monat in Euro?",
-                              "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": true
-                            }
-                          ]
-                        },
-                        {
-                          "id": "ly5r4",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "jwf18",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Mietart"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "jwmlg"
-                            ]
-                          },
-                          "block": [
-                            {
-                              "id": "8ddts",
-                              "type": "Question",
-                              "alias": "Kaltmiete",
-                              "text": "Wie hoch war die Nettokaltmiete ursprünglich bei Abschluss des Mietvertrages pro Monat in Euro?",
-                              "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": true
-                            }
-                          ]
-                        }
-                      ],
-                      "alternate": [
-                        {
-                          "id": "ysmlo",
-                          "type": "Question",
-                          "alias": "Kaltmiete",
-                          "text": "Wie hoch ist deine aktuelle Nettokaltmiete pro Monat in Euro?",
-                          "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
-                          "answer": {
-                            "type": "NumberAnswer"
-                          },
-                          "required": true
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "alternate": [
             {
               "id": "ccn8",
@@ -610,6 +340,7 @@
                   "alias": "Mietart",
                   "text": "Ist im Mietvertrag eine Staffelmiete oder Indexmiete vereinbart?",
                   "info": "Staffel- und Indexmietverträge sind eine besondere Art von Mietvertrag, bei dem sich die Miete regelmäßig erhöhen kann. Wenn du einen Staffel- oder Indexmiete hast, steht ein Vermerk hierzu in deinem Mietvertrag.",
+                  "required": true,
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
@@ -627,20 +358,13 @@
                         "id": "h1ddm",
                         "alias": "Normal",
                         "text": "Keins von beiden"
-                      },
-                      {
-                        "id": "w3kuwj",
-                        "alias": "Nicht sicher",
-                        "text": "Ich bin mir nicht sicher"
                       }
                     ]
-                  },
-                  "required": true
+                  }
                 },
                 {
                   "id": "sokgp",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "dpott",
@@ -663,7 +387,7 @@
                           "id": "kwrsa",
                           "type": "Question",
                           "alias": "Mieterhöhung wegen Indexmiete",
-                          "text": "Wurde die Miete gerade aufgrund der vereinbarten Indexmiete erhöht?",
+                          "text": "Wurde diese Miete gerade aufgrund der vereinbarten Indexmiete erhöht?",
                           "info": "Hinweise hierfür sind Wörter wie \"Indexmiete\", \"Verbraucherpreisindex\" oder \"VPI\"",
                           "answer": {
                             "type": "ChoiceAnswer",
@@ -746,7 +470,6 @@
                           "alias": "Mieterhöhung wegen Staffelmiete",
                           "text": "Soll die Miete genau um den Betrag erhöht werden, der Mietvertrag vereinbarten wurde?",
                           "info": "Bei einer Staffelmiete ist im Mietvertrag ein fester Betrag festgelegt, um welchen sich die Miete jedes Jahr erhöht. Du solltest diesen Betrag also in deinem Mietvertrag finden.",
-                          "required": true,
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -761,7 +484,8 @@
                                 "text": "Nein, der Vermieter will die Miete zusätzlich zum vereinbarten Betrag erhöhen."
                               }
                             ]
-                          }
+                          },
+                          "required": true
                         },
                         {
                           "id": "n7uz7",
@@ -804,7 +528,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 },
                 {
                   "id": "ez0nm",
@@ -827,6 +552,271 @@
                     "type": "NumberAnswer"
                   },
                   "required": true
+                }
+              ]
+            }
+          ],
+          "cases": [
+            {
+              "id": "rnj3d",
+              "type": "IfCase",
+              "test": {
+                "id": "doi7w",
+                "questionRef": {
+                  "type": "AliasRef",
+                  "value": "Typ"
+                },
+                "negated": false,
+                "type": "AnswerOptionComparison",
+                "operator": "is",
+                "comparands": [
+                  "wb3w3"
+                ]
+              },
+              "block": [
+                {
+                  "id": "23mp9",
+                  "type": "Group",
+                  "category": "Section",
+                  "alias": "Miete",
+                  "block": [
+                    {
+                      "id": "atgzp",
+                      "type": "Question",
+                      "alias": "Unterschrieben",
+                      "text": "Hast du den Mietvertrag für die Wohnung bereits unterschrieben?",
+                      "info": null,
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "or4h3j",
+                            "alias": "Ja",
+                            "text": "Ja"
+                          },
+                          {
+                            "id": "128cg",
+                            "alias": "Nein",
+                            "text": "Nein"
+                          }
+                        ]
+                      },
+                      "required": true
+                    },
+                    {
+                      "id": "rto8q",
+                      "type": "If",
+                      "alternate": [],
+                      "cases": [
+                        {
+                          "id": "6k8f8",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "h0wnag",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Unterschrieben"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "or4h3j"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "c568q",
+                              "type": "Question",
+                              "alias": "Vertragsdatum",
+                              "text": "Wann hast du den Mietvertrag unterschrieben?",
+                              "info": "Wenn du dir nicht sicher bist, kannst du das Datum auch erstmal schätzen und später korrigieren.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "08tnb",
+                                    "alias": "<2015",
+                                    "text": "Vor 01.06.2015"
+                                  },
+                                  {
+                                    "id": "wejo0k",
+                                    "alias": "2015-2016",
+                                    "text": "Zwischen 01.06.2015 und 31.08.2016"
+                                  },
+                                  {
+                                    "id": "7np1",
+                                    "alias": "2016-2018",
+                                    "text": "Zwischen 01.09.2016 und 31.08.2018"
+                                  },
+                                  {
+                                    "id": "m2jo",
+                                    "alias": "2018-2020",
+                                    "text": "Zwischen 01.09.2018 und 31.08.2020"
+                                  },
+                                  {
+                                    "id": "4obam",
+                                    "alias": "2020-2022",
+                                    "text": "Zwischen 01.09.2020 und 31.08.2022"
+                                  },
+                                  {
+                                    "id": "oqyrs",
+                                    "alias": "2022-2024",
+                                    "text": "Zwischen 01.09.2022 und 31.08.2023"
+                                  },
+                                  {
+                                    "id": "ve0tek",
+                                    "alias": ">2024",
+                                    "text": "Ab 01.09.2023"
+                                  }
+                                ]
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "mt4i8",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "yfn6l",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "l2rtq",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "08tnb"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "m62xs",
+                                      "alias": "Exit: Mietvertrag zu alt",
+                                      "text": "",
+                                      "type": "Exit"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            },
+                            {
+                              "id": "wkj67",
+                              "type": "Question",
+                              "alias": "Mietart",
+                              "text": "Ist im Mietvertrag eine Staffelmiete oder Indexmiete vereinbart?",
+                              "info": "Staffel- und Indexmietverträge sind eine besondere Art von Mietvertrag, bei dem sich die Miete regelmäßig erhöhen kann. Wenn du einen Staffel- oder Indexmiete hast, steht ein Vermerk hierzu in deinem Mietvertrag.",
+                              "required": true,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "8dx4p",
+                                    "alias": "Staffelmiete",
+                                    "text": "Staffelmiete"
+                                  },
+                                  {
+                                    "id": "jwmlg",
+                                    "alias": "Indexmiete",
+                                    "text": "Indexmiete"
+                                  },
+                                  {
+                                    "id": "h1ddm",
+                                    "alias": "Normal",
+                                    "text": "Keins von beiden"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0a7wh",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "0ya0n",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "ryezt",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Unterschrieben"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "128cg"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "0n0s7",
+                              "type": "Question",
+                              "alias": "Kaltmiete",
+                              "text": "Wie hoch ist die geforderte Nettokaltmiete pro Monat in Euro?",
+                              "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": true
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ly5r4",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "jwf18",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Mietart"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "jwmlg"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "8ddts",
+                              "type": "Question",
+                              "alias": "Kaltmiete",
+                              "text": "Wie hoch war die Nettokaltmiete ursprünglich bei Abschluss des Mietvertrages pro Monat in Euro?",
+                              "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": true
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "ysmlo",
+                          "type": "Question",
+                          "alias": "Kaltmiete",
+                          "text": "Wie hoch ist deine aktuelle Nettokaltmiete pro Monat in Euro?",
+                          "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
+                          "answer": {
+                            "type": "NumberAnswer"
+                          },
+                          "required": true
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
