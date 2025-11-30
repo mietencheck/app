@@ -9,7 +9,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -195,7 +195,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -365,7 +365,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -383,7 +383,7 @@ export type StepInfoByAlias = {
         };
     };
     Mietart: {
-        answer: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+        answer: "Staffelmiete" | "Indexmiete" | "Normal";
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
@@ -391,7 +391,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -408,7 +408,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
         };
     };
@@ -421,7 +421,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -582,7 +582,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
         };
     };
@@ -595,7 +595,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
         };
@@ -609,7 +609,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -624,7 +624,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -640,7 +640,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -656,7 +656,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -673,7 +673,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -690,7 +690,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -707,7 +707,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -724,7 +724,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -742,7 +742,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -760,7 +760,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -778,7 +778,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -797,7 +797,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -816,7 +816,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -835,7 +835,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -855,7 +855,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -876,7 +876,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -898,7 +898,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -921,7 +921,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -947,7 +947,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -973,7 +973,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -999,7 +999,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1026,7 +1026,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1054,7 +1054,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1082,7 +1082,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1110,7 +1110,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1138,7 +1138,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1166,7 +1166,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1195,7 +1195,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1225,7 +1225,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1256,7 +1256,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1287,7 +1287,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1318,7 +1318,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1349,7 +1349,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1380,7 +1380,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1541,7 +1541,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1702,7 +1702,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1863,7 +1863,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -1894,7 +1894,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2055,7 +2055,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2087,7 +2087,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2120,7 +2120,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2154,7 +2154,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2189,7 +2189,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2224,7 +2224,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2259,7 +2259,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2420,7 +2420,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2456,7 +2456,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2493,7 +2493,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2531,7 +2531,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2692,7 +2692,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2733,7 +2733,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2771,7 +2771,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2810,7 +2810,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2850,7 +2850,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -2892,7 +2892,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3053,7 +3053,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3095,7 +3095,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3138,7 +3138,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3182,7 +3182,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3227,7 +3227,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3273,7 +3273,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3319,7 +3319,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3365,7 +3365,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3526,7 +3526,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3687,7 +3687,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3848,7 +3848,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3894,7 +3894,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3941,7 +3941,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -3989,7 +3989,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -4150,7 +4150,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -4199,7 +4199,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -4360,7 +4360,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -4410,7 +4410,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -4461,7 +4461,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -4513,7 +4513,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -4674,7 +4674,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -4728,7 +4728,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -4782,7 +4782,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -4943,7 +4943,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -4999,7 +4999,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5056,7 +5056,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5113,7 +5113,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5171,7 +5171,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5230,7 +5230,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5391,7 +5391,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5452,7 +5452,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5513,7 +5513,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5575,7 +5575,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5736,7 +5736,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5799,7 +5799,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5863,7 +5863,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5929,7 +5929,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -5995,7 +5995,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -6156,7 +6156,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -6224,7 +6224,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -6293,7 +6293,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -6362,7 +6362,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -6523,7 +6523,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -6594,7 +6594,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -6665,7 +6665,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -6738,7 +6738,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -6811,7 +6811,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -6972,7 +6972,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -7047,7 +7047,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -7124,7 +7124,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -7201,7 +7201,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -7362,7 +7362,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -7439,7 +7439,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -7517,7 +7517,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -7597,7 +7597,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -7677,7 +7677,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -7758,7 +7758,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -7841,7 +7841,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -7924,7 +7924,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -8085,7 +8085,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -8169,7 +8169,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -8254,7 +8254,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -8341,7 +8341,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -8502,7 +8502,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -8589,7 +8589,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -8677,7 +8677,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -8766,7 +8766,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -8927,7 +8927,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -9018,7 +9018,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -9109,7 +9109,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -9201,7 +9201,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -9294,7 +9294,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -9455,7 +9455,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -9549,7 +9549,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -9710,7 +9710,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -9806,7 +9806,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -9967,7 +9967,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -10128,7 +10128,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -10224,7 +10224,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -10321,7 +10321,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -10419,7 +10419,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -10580,7 +10580,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -10679,7 +10679,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -10779,7 +10779,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -10880,7 +10880,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -11041,7 +11041,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -11143,7 +11143,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -11247,7 +11247,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -11351,7 +11351,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -11512,7 +11512,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -11617,7 +11617,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -11724,7 +11724,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -11885,7 +11885,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -11992,7 +11992,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -12100,7 +12100,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -12209,7 +12209,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -12319,7 +12319,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -12480,7 +12480,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -12591,7 +12591,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -12705,7 +12705,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -12818,7 +12818,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -12979,7 +12979,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -13093,7 +13093,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -13208,7 +13208,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -13369,7 +13369,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -13485,7 +13485,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -13602,7 +13602,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -13721,7 +13721,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -13840,7 +13840,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -14001,7 +14001,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -14162,7 +14162,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -14282,7 +14282,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -14403,7 +14403,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -14525,7 +14525,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -14648,7 +14648,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -14809,7 +14809,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -14933,7 +14933,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -15058,7 +15058,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -15219,7 +15219,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -15345,7 +15345,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -15472,7 +15472,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -15601,7 +15601,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -15762,7 +15762,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -15894,7 +15894,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -16026,7 +16026,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -16158,7 +16158,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -16319,7 +16319,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -16451,7 +16451,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -16586,7 +16586,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -16720,7 +16720,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -16881,7 +16881,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -17016,7 +17016,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -17153,7 +17153,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -17290,7 +17290,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -17428,7 +17428,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -17567,7 +17567,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -17728,7 +17728,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -17889,7 +17889,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -18029,7 +18029,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -18171,7 +18171,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -18314,7 +18314,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -18475,7 +18475,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -18620,7 +18620,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -18765,7 +18765,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -18910,7 +18910,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -19057,7 +19057,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -19218,7 +19218,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -19379,7 +19379,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -19526,7 +19526,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -19674,7 +19674,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -19823,7 +19823,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -19973,7 +19973,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -20134,7 +20134,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -20286,7 +20286,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -20438,7 +20438,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -20591,7 +20591,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -20745,7 +20745,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -20900,7 +20900,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -21056,7 +21056,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -21217,7 +21217,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -21374,7 +21374,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -21532,7 +21532,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -21691,7 +21691,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
@@ -21851,7 +21851,7 @@ export type StepInfoByAlias = {
             Wohnlage?: "einfach" | "mittel" | "gut";
             Unterschrieben?: "Ja" | "Nein";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal" | "Nicht sicher";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
             "Datum Eintritt Mieterhöhung"?: Date;
