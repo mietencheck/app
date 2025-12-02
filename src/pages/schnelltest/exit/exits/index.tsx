@@ -14,3 +14,5 @@ export * from "./mieterhoehung/ExitMieterhoehungModernisierung";
 export * from "./mieterhoehung/ExitMieterhoehungOhneBegruendung";
 export * from "./mieterhoehung/ExitMieterhoehungStaffelmiete";
 export * from "./mieterhoehung/ExitMieterhoehungZusaetzlichZurStaffelmiete";
+export * from "./mieterhoehung/ExitMieterhoehungBetriebskosten";
+export * from "./mieterhoehung/ResultKappungsgrenzeUeberschritten";

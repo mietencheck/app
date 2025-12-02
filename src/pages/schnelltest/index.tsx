@@ -65,6 +65,9 @@ export function SchnelltestPage() {
     const hiddenForMieterhoehung = new Set([
       "Vertragsdatum",
       "Datum Eintritt Mieterhöhung",
+      "Kappungsgrenze überschritten durch aktuelle Mieterhöhung",
+      "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten",
+      "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate",
     ]);
 
     return steps.filter(

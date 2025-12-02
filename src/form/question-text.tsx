@@ -24,7 +24,7 @@ export const questionTextVars: Partial<
     Record<string, (answers: ReturnType<typeof useAnswers>) => string>
   >
 > = {
-  "Bereits Mieterhöhung erhalten": {
+  "Mieterhöhung innerhalb der letzten 15 Monaten": {
     VON: (a) => {
       const date = new Date(a.get(["Datum Mieterhöhungsschreiben"]) as string);
       date.setMonth(date.getMonth() - 15);
@@ -34,5 +34,22 @@ export const questionTextVars: Partial<
       new Date(
         a.get(["Datum Mieterhöhungsschreiben"]) as string,
       ).toLocaleDateString("de-DE"),
+  },
+  "Mieterhöhung innerhalb von 3 Jahren": {
+    DATUM_MIETERHOEHUNG_MINUS_33_MONATE: (a) => {
+      const date = new Date(a.get(["Datum Mieterhöhungsschreiben"]) as string);
+      date.setMonth(date.getMonth() - 33);
+      return date.toLocaleDateString("de-DE");
+    },
+  },
+  "Nettokaltmiete vor 33 Monaten": {
+    MONAT_MIETERHOEHUNG_MINUS_33_MONATE: (a) => {
+      const date = new Date(a.get(["Datum Mieterhöhungsschreiben"]) as string);
+      date.setMonth(date.getMonth() - 33);
+      return date.toLocaleDateString("de-DE", {
+        month: "long",
+        year: "numeric",
+      });
+    },
   },
 };
