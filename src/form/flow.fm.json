@@ -2653,65 +2653,91 @@
               ]
             },
             {
-              "id": "udq5",
-              "type": "Group",
-              "category": null,
-              "alias": "Sperrfristen",
-              "block": [
+              "type": "If",
+              "id": "4zh3s",
+              "alternate": [],
+              "cases": [
                 {
-                  "id": "28yusg",
-                  "type": "Question",
-                  "alias": "Mieterhöhung innerhalb der letzten 15 Monaten",
-                  "text": "Hast du seit dem $VON$ bereits eine Mieterhöhung mit Bezug auf Mietspiegel, Vergleichsmieten oder § 558 BGB erhalten?",
-                  "info": null,
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "7na8k",
-                        "alias": "Ja",
-                        "text": "Ja"
-                      },
-                      {
-                        "id": "nrr2e",
-                        "alias": "Nein",
-                        "text": "Nein"
-                      }
-                    ]
-                  },
-                  "required": false
-                },
-                {
-                  "id": "pg576",
-                  "type": "If",
-                  "alternate": [],
-                  "cases": [
+                  "type": "IfCase",
+                  "id": "swf23",
+                  "block": [
                     {
-                      "id": "6dtd9",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "fecq1",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Mieterhöhung innerhalb der letzten 15 Monaten"
-                        },
-                        "operator": "is",
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "comparands": [
-                          "7na8k"
-                        ]
-                      },
+                      "id": "udq5",
+                      "type": "Group",
+                      "category": null,
+                      "alias": "Sperrfristen",
                       "block": [
                         {
-                          "id": "3moz9h",
-                          "alias": "Exit: Sperrfristen nicht eingehalten",
-                          "text": "",
-                          "type": "Exit"
+                          "id": "28yusg",
+                          "type": "Question",
+                          "alias": "Mieterhöhung innerhalb der letzten 15 Monaten",
+                          "text": "Hast du seit dem $VON$ bereits eine Mieterhöhung mit Bezug auf Mietspiegel, Vergleichsmieten oder § 558 BGB erhalten?",
+                          "info": null,
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "7na8k",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "nrr2e",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              }
+                            ]
+                          },
+                          "required": false
+                        },
+                        {
+                          "id": "pg576",
+                          "type": "If",
+                          "alternate": [],
+                          "cases": [
+                            {
+                              "id": "6dtd9",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "fecq1",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung innerhalb der letzten 15 Monaten"
+                                },
+                                "operator": "is",
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "comparands": [
+                                  "7na8k"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "3moz9h",
+                                  "alias": "Exit: Sperrfristen nicht eingehalten",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "test": {
+                    "id": "xx45t",
+                    "questionRef": {
+                      "type": "AliasRef",
+                      "value": "Mieterhöhung innerhalb von 3 Jahren"
+                    },
+                    "operator": "is",
+                    "negated": false,
+                    "type": "AnswerOptionComparison",
+                    "comparands": [
+                      "889i3"
+                    ]
+                  }
                 }
               ]
             }
