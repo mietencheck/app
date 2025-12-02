@@ -29,7 +29,7 @@ export function InputControl({
 
   switch (answer.type) {
     case "ChoiceAnswer": {
-      if (answer.options.length <= 4) {
+      if (answer.options.length <= 5) {
         return (
           <RadioGroup
             autoFocus={autoFocus}

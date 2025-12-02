@@ -126,6 +126,96 @@ function buildDatumEintrittMieterhoehung(answers: AnswerMachine) {
   return datumEintrittMieterhoehung.toISOString().slice(0, 10);
 }
 
+function buildKappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung(
+  answers: AnswerMachine,
+) {
+  const aktuelleNettokaltmiete = answers.getWithOptionAlias(
+    "Aktuelle Nettokaltmiete",
+  );
+  const geforderteNettokaltmiete = answers.getWithOptionAlias(
+    "Geforderte Nettokaltmiete",
+  );
+
+  if (!aktuelleNettokaltmiete || !geforderteNettokaltmiete) {
+    return false;
+  }
+
+  const nachKappungsgrenzeZulaessigeMiete =
+    Number(aktuelleNettokaltmiete) * 1.15;
+
+  if (
+    Number(nachKappungsgrenzeZulaessigeMiete) >=
+    Number(geforderteNettokaltmiete)
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function buildKappungsgrenzeUeberschrittenDurchMietspiegelMieterhoehungenInLetzten33Monaten(
+  answers: AnswerMachine,
+) {
+  const nettokaltmieteVor33Monaten = answers.getWithOptionAlias(
+    "Nettokaltmiete vor 33 Monaten",
+  );
+  const geforderteNettokaltmiete = answers.getWithOptionAlias(
+    "Geforderte Nettokaltmiete",
+  );
+
+  if (!nettokaltmieteVor33Monaten || !geforderteNettokaltmiete) {
+    return false;
+  }
+
+  const nachKappungsgrenzeZulaessigeMiete =
+    Number(nettokaltmieteVor33Monaten) * 1.15;
+
+  if (
+    Number(nachKappungsgrenzeZulaessigeMiete) >=
+    Number(geforderteNettokaltmiete)
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function buildKappungsgrenzeUeberschrittenDurchMietspiegelMieterhoehungenAusgenommenAndererGruendeInLetzten33Monate(
+  answers: AnswerMachine,
+) {
+  const nettokaltmieteVor33Monaten = answers.getWithOptionAlias(
+    "Nettokaltmiete vor 33 Monaten",
+  );
+  const geforderteNettokaltmiete = answers.getWithOptionAlias(
+    "Geforderte Nettokaltmiete",
+  );
+
+  const summeMieterhoehungenOhneMietspiegel = answers.getWithOptionAlias(
+    "Summe Mieterhöhungen ohne Mietspiegel",
+  );
+
+  if (
+    !nettokaltmieteVor33Monaten ||
+    !geforderteNettokaltmiete ||
+    !summeMieterhoehungenOhneMietspiegel
+  ) {
+    return false;
+  }
+
+  const nachKappungsgrenzeZulaessigeMiete =
+    Number(nettokaltmieteVor33Monaten) * 1.15 +
+    Number(summeMieterhoehungenOhneMietspiegel);
+
+  if (
+    Number(nachKappungsgrenzeZulaessigeMiete) >=
+    Number(geforderteNettokaltmiete)
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
 const AnswersContext = React.createContext<AnswerMachine>(
   flowMachine.answers({}),
 );
@@ -147,8 +237,20 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
     const vertragsdatum = buildVertragsdatum(bareAnswers);
     const lageInfo = buildLageInfo(bareAnswers);
     const baujahr = buildBaujahr(bareAnswers);
+
+    // Mieterhoehungen
     const datumEintrittMieterhoehung =
       buildDatumEintrittMieterhoehung(bareAnswers);
+    const kappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung =
+      buildKappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung(bareAnswers);
+    const kappungsgrenzeUeberschrittenDurchMietspiegelMieterhoehungenInLetzten33Monaten =
+      buildKappungsgrenzeUeberschrittenDurchMietspiegelMieterhoehungenInLetzten33Monaten(
+        bareAnswers,
+      );
+    const kappungsgrenzeUeberschrittenDurchMietspiegelMieterhoehungenAusgenommenAndererGruendeInLetzten33Monate =
+      buildKappungsgrenzeUeberschrittenDurchMietspiegelMieterhoehungenAusgenommenAndererGruendeInLetzten33Monate(
+        bareAnswers,
+      );
 
     const value = {
       ...storedAnswers,
@@ -157,6 +259,12 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
       Baujahr: baujahr || null,
       Vertragsdatum: vertragsdatum || null,
       "Datum Eintritt Mieterhöhung": datumEintrittMieterhoehung || null,
+      "Kappungsgrenze überschritten durch aktuelle Mieterhöhung":
+        kappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung,
+      "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten":
+        kappungsgrenzeUeberschrittenDurchMietspiegelMieterhoehungenInLetzten33Monaten,
+      "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate":
+        kappungsgrenzeUeberschrittenDurchMietspiegelMieterhoehungenAusgenommenAndererGruendeInLetzten33Monate,
     };
     postMessageToFloma("Answers", { value });
     return flowMachine.answers(value, setStoredAnswers);

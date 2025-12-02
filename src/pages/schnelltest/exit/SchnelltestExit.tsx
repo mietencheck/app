@@ -7,6 +7,7 @@ import { useLocalizeField } from "~/l10n";
 import {
   ExitHaeuser,
   ExitKeinWC,
+  ExitMieterhoehungBetriebskosten,
   ExitMieterhoehungFreiwillig,
   ExitMieterhoehungIndexmiete,
   ExitMieterhoehungModernisierung,
@@ -21,6 +22,7 @@ import {
   ExitMoebliert,
   ExitNeubauwohnung,
   ExitSozialwohnungen,
+  ResultKappungsgrenzeUeberschritten,
 } from ".";
 import { StepperType } from "..";
 
@@ -53,6 +55,10 @@ const Exits = {
   ),
   "Exit: Mieterhöhung zusätzlich zur Staffelmiete": () => (
     <ExitMieterhoehungZusaetzlichZurStaffelmiete />
+  ),
+  "Exit: Betriebskostenerhöhung": () => <ExitMieterhoehungBetriebskosten />,
+  "Result: Kappungsgrenze überschritten": () => (
+    <ResultKappungsgrenzeUeberschritten />
   ),
 };
 
