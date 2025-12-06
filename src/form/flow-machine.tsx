@@ -106,24 +106,6 @@ function buildBaujahr(answers: AnswerMachine) {
   }
 }
 
-function buildDatumEintrittMieterhoehung(answers: AnswerMachine) {
-  const datumMieterhoehungsschreiben = answers.getWithOptionAlias(
-    "Datum Mieterhöhungsschreiben",
-  );
-
-  if (!datumMieterhoehungsschreiben) {
-    return false;
-  }
-
-  const datumEintrittMieterhoehung = new Date(datumMieterhoehungsschreiben);
-  datumEintrittMieterhoehung.setDate(1);
-  datumEintrittMieterhoehung.setMonth(
-    datumEintrittMieterhoehung.getMonth() + 3,
-  );
-
-  return datumEintrittMieterhoehung.toISOString().slice(0, 10);
-}
-
 function buildKappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung(
   answers: AnswerMachine,
 ) {
@@ -237,8 +219,6 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
     const baujahr = buildBaujahr(bareAnswers);
 
     // Mieterhoehungen
-    const datumEintrittMieterhoehung =
-      buildDatumEintrittMieterhoehung(bareAnswers);
     const kappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung =
       buildKappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung(bareAnswers);
     const kappungsgrenzeUeberschrittenDurchMietspiegelMieterhoehungenInLetzten33Monaten =
@@ -256,7 +236,6 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
       Wohnlage: lageInfo?.wohnlage ?? null,
       Baujahr: baujahr || null,
       Vertragsdatum: vertragsdatum || null,
-      "Datum Eintritt Mieterhöhung": datumEintrittMieterhoehung || null,
       "Kappungsgrenze überschritten durch aktuelle Mieterhöhung":
         kappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung,
       "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten":

@@ -6,14 +6,14 @@ import { Button, DialogTrigger, Popover } from "react-aria-components";
 import { LIST_BOX_CLASS_NAME } from "~/components";
 import { ChevronDownIcon } from "~/components/Icons/ChevronDown";
 
-import { PageNavItem, SubListNav } from "./ListNav";
-import type { NavItemData } from "./navigation";
+import { NavigationGroup, PageNavigationItem } from "./Navigation";
+import type { PageNavigationItemData } from "./utils";
 
-export const NavBar = ({
+export const MobileNavigation = ({
   pages,
   activeItem,
 }: {
-  pages: NavItemData[];
+  pages: PageNavigationItemData[];
   activeItem?: string;
 }) => {
   const [ref, { width }] = useMeasure();
@@ -37,9 +37,9 @@ export const NavBar = ({
         <ul className={LIST_BOX_CLASS_NAME} style={width ? { width } : {}}>
           {pages.map((page) =>
             page.children && page.children.length > 0 ? (
-              <SubListNav key={page.href} item={page} />
+              <NavigationGroup key={page.href} item={page} />
             ) : (
-              <PageNavItem key={page.href} page={page} />
+              <PageNavigationItem key={page.href} page={page} />
             ),
           )}
         </ul>
