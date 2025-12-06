@@ -2,7 +2,6 @@ import * as Sentry from "@sentry/react";
 import React, { Suspense, useCallback, useEffect, useMemo } from "react";
 import { Dialog } from "react-aria-components";
 
-import { BeratungPage } from "~/pages/beratung";
 import LandingPage from "~/pages/landing";
 import { DatenschutzPage } from "~/pages/landing/datenschutz";
 import { ImpressumPage } from "~/pages/landing/impressum";
@@ -49,7 +48,6 @@ function Router() {
     "Impressum",
     "Schnelltest",
     "Details",
-    "Beratung",
     "Error",
   ]);
 
@@ -61,8 +59,6 @@ function Router() {
       return <SchnelltestPage />;
     case "Details":
       return <DetailsPage />;
-    case "Beratung":
-      return <BeratungPage />;
     case "UeberUns":
       return <UeberUnsPage />;
     case "Datenschutz":
