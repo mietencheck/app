@@ -7,7 +7,7 @@ import { DetailPage } from "./detail";
 import { Layout } from "./Layout";
 import { ResultPage } from "./result";
 import { DetailsRouter } from "./router";
-import { SummaryPage } from "./summary";
+import { SummaryPage } from "./summary/index";
 
 export default function DetailsPage() {
   const route = DetailsRouter.useRoute(["Summary", "FormPage", "Result"]);
