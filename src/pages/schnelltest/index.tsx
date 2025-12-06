@@ -3,7 +3,7 @@ import React, { useEffect, useMemo } from "react";
 import useLocalStorageState from "use-local-storage-state";
 
 import { Header } from "~/components/Header";
-import { useAnswers, useSchnelltestSteps } from "~/form/flow-machine";
+import { useVisibleSchnelltestSteps } from "~/form/flow-machine";
 
 import { SchnelltestExit } from "./exit";
 import { SchnelltestQuestion } from "./question";
@@ -57,30 +57,7 @@ function Node({ step, stepper }: NodeType) {
 }
 
 export function SchnelltestPage() {
-  let steps = useSchnelltestSteps();
-  const answers = useAnswers().getAliasedState();
-
-  steps = useMemo(() => {
-    const hiddenSteps = new Set(["Ost", "Wohnlage", "Baujahr"]);
-    const hiddenForMieterhoehung = new Set([
-      "Vertragsdatum",
-      "Datum Eintritt Mieterhöhung",
-      "Kappungsgrenze überschritten durch aktuelle Mieterhöhung",
-      "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten",
-      "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate",
-    ]);
-
-    return steps.filter(
-      (s) =>
-        !(
-          s.type === "Question" &&
-          s.alias !== null &&
-          (hiddenSteps.has(s.alias) ||
-            (answers.Typ === "Mieterhöhung" &&
-              hiddenForMieterhoehung.has(s.alias)))
-        ),
-    );
-  }, [steps, answers]);
+  const steps = useVisibleSchnelltestSteps();
 
   const stepper = useStepper(steps.length);
   const step = steps.at(stepper.index);

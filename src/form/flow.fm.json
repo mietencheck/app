@@ -2568,7 +2568,7 @@
           "text": "Trifft eine dieser Aussagen auf die Wohnung zu?",
           "info": null,
           "answer": {
-            "type": "MultiChoiceAnswer",
+            "type": "ChoiceAnswer",
             "options": [
               {
                 "id": "g7tps",
