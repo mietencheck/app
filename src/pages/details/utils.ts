@@ -12,7 +12,7 @@ import {
   useVisibleQuestionAliases,
 } from "~/form/flow-machine";
 
-import { PageNavigationItemData } from "./partials/navigation/utils";
+import { PageNavigationItemData } from "./components/Navigation/utils";
 
 export const getSlugForAlias = (title: string) =>
   encodeURIComponent(

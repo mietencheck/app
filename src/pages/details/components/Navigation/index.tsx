@@ -6,9 +6,9 @@ import { Button } from "react-aria-components";
 import { StatusIcon, StatusIconProps } from "~/components";
 import { ChevronDownIcon } from "~/components/Icons/ChevronDown";
 import { useLocalizeString } from "~/l10n";
-import { PageNavigationItemData } from "~/pages/details/partials/navigation/utils";
 
 import { useCheckIsGroupCompleted, usePathname } from "../../utils";
+import { PageNavigationItemData } from "./utils";
 
 type ListNavigationProps = {
   children: React.ReactNode;
@@ -53,7 +53,7 @@ export function NavigationItem({
   );
 }
 
-export function PageNavigationItem({ page }: { page: PageNavigationItemData }) {
+export function NavigationPageItem({ page }: { page: PageNavigationItemData }) {
   const pathname = usePathname();
   const checkIsActive = (href: string) => pathname == decodeURI(href);
   const checkIsGroupCompleted = useCheckIsGroupCompleted();
@@ -120,7 +120,7 @@ export function NavigationGroup({ item }: { item: PageNavigationItemData }) {
       {open && (
         <ul className="ml-7">
           {item.children?.map((subpage) => (
-            <PageNavigationItem key={subpage.href} page={subpage} />
+            <NavigationPageItem key={subpage.href} page={subpage} />
           ))}
         </ul>
       )}

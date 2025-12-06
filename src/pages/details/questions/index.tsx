@@ -15,7 +15,7 @@ import {
 } from "~/form/flow-machine";
 import { useLocalizeString } from "~/l10n";
 
-import { getSlugForAlias, usePathname } from "./utils";
+import { getSlugForAlias, usePathname } from "../utils";
 
 export function Node({ step }: { step: Step }) {
   const l = useLocalizeString();
@@ -78,7 +78,7 @@ export function Node({ step }: { step: Step }) {
   }
 }
 
-export function DetailPage() {
+export function Questions() {
   const mainSteps = useDetailsSteps();
   const l = useLocalizeString();
   const pathname = usePathname();

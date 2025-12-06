@@ -6,8 +6,8 @@ import { Button, DialogTrigger, Popover } from "react-aria-components";
 import { LIST_BOX_CLASS_NAME } from "~/components";
 import { ChevronDownIcon } from "~/components/Icons/ChevronDown";
 
-import { NavigationGroup, PageNavigationItem } from "./Navigation";
-import type { PageNavigationItemData } from "./utils";
+import { NavigationGroup, NavigationPageItem } from "../Navigation";
+import type { PageNavigationItemData } from "../Navigation/utils";
 
 export const MobileNavigation = ({
   pages,
@@ -39,7 +39,7 @@ export const MobileNavigation = ({
             page.children && page.children.length > 0 ? (
               <NavigationGroup key={page.href} item={page} />
             ) : (
-              <PageNavigationItem key={page.href} page={page} />
+              <NavigationPageItem key={page.href} page={page} />
             ),
           )}
         </ul>
