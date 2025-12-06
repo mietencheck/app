@@ -1,13 +1,18 @@
 import { Link } from "@swan-io/chicane";
 import { AnswerValueType, Question } from "flow-machine";
+import { mapKeys, mapValues, pipe } from "remeda";
 
 import { useAnswers, useSchnelltestSteps } from "~/form/flow-machine";
+import { questionTextVars } from "~/form/question-text";
 import { useLocalizeField, useLocalizeString } from "~/l10n";
 import { AppRouter } from "~/router";
 import {
   formatAddresse as formatAdresse,
+  formatDate,
   formatEuro,
+  isKeyOfObject,
   parseAdresse,
+  replaceWith,
 } from "~/utils";
 
 function AnswerView({
@@ -23,6 +28,12 @@ function AnswerView({
   }
   if (q.alias == "Kaltmiete" && typeof answerValue == "number") {
     return formatEuro(answerValue);
+  }
+  if (
+    q.alias == "Datum Mieterhöhungsschreiben" &&
+    typeof answerValue == "string"
+  ) {
+    return formatDate(answerValue);
   }
   if (q.answer.type == "ChoiceAnswer") {
     return l(q.answer.options.find((o) => o.id == answerValue)?.text ?? "");
@@ -41,6 +52,8 @@ export function SummaryPage() {
   const steps = useSchnelltestSteps();
   const lField = useLocalizeField();
   const lString = useLocalizeString();
+
+  console.log(steps);
   return (
     <>
       <h1 className="heading-28">{lField("Bisherige Angaben")}</h1>
@@ -54,7 +67,13 @@ export function SummaryPage() {
               s.type == "Question" &&
               s.alias != "Ost" &&
               s.alias != "Wohnlage" &&
-              s.alias != "Baujahr",
+              s.alias != "Baujahr" &&
+              s.alias !=
+                "Kappungsgrenze überschritten durch aktuelle Mieterhöhung" &&
+              s.alias !=
+                "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten" &&
+              s.alias !=
+                "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate",
           )
           .map((q) => (
             <div
@@ -62,7 +81,18 @@ export function SummaryPage() {
               key={q.id}
             >
               <div>
-                <p className="text-base-book mb-1">{lString(q.text)}</p>
+                <p className="text-base-book mb-1">
+                  {replaceWith(
+                    lString(q.text),
+                    q.alias && isKeyOfObject(q.alias, questionTextVars)
+                      ? pipe(
+                          questionTextVars[q.alias]!,
+                          mapKeys((k) => `$${k}$`),
+                          mapValues((f) => f(answers)),
+                        )
+                      : {},
+                  )}
+                </p>
                 <p className="text-neutral-faded flex flex-row justify-between">
                   <AnswerView
                     question={q}
