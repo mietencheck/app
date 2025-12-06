@@ -3,30 +3,9 @@ import { mapKeys, mapValues, pipe } from "remeda";
 import { useAnswers } from "~/form/flow-machine";
 import { questionTextLinks, questionTextVars } from "~/form/question-text";
 import { useLocaleState, useLocalizeField, useLocalizeString } from "~/l10n";
-import { isKeyOfObject } from "~/utils";
+import { isKeyOfObject, replaceWith } from "~/utils";
 
 import { Label, WithTooltip } from "..";
-
-function replaceWith(
-  text: string,
-  ...replacementMaps: Record<string, React.ReactNode>[]
-): React.ReactNode[] {
-  let parts: React.ReactNode[] = [text];
-  for (const replacementsMap of replacementMaps) {
-    for (const [needle, replacement] of Object.entries(replacementsMap)) {
-      parts = parts.flatMap((part) =>
-        typeof part == "string"
-          ? part
-              .split(needle)
-              .flatMap((subpart, i, a) =>
-                i + 1 < a.length ? [subpart, replacement] : [subpart],
-              )
-          : [part],
-      );
-    }
-  }
-  return parts;
-}
 
 export function FormLabel({
   htmlFor,

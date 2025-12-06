@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -648,6 +649,7 @@
                 {
                   "id": "sokgp",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "dpott",
@@ -811,8 +813,7 @@
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 },
                 {
                   "id": "ez0nm",
@@ -13200,6 +13201,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }
