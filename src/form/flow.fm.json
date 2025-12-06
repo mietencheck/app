@@ -838,6 +838,360 @@
                   "required": true
                 }
               ]
+            },
+            {
+              "id": "x6ydr",
+              "type": "Group",
+              "category": "Page",
+              "alias": "Kappungsgrenze und Sperrfristen",
+              "block": [
+                {
+                  "id": "b4va8",
+                  "type": "Question",
+                  "alias": "Mieterhöhung innerhalb von 3 Jahren",
+                  "text": "Ist die Miete seit dem $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ bereits schon einmal erhöht worden?",
+                  "info": "Falls es bei dir knapp ist: Es zählt hier das Datum an dem die vorherige Mieterhöhung in Kraft getreten ist, nicht das Datum an dem du Mieterhöhung erhalten hast.",
+                  "required": true,
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "889i3",
+                        "alias": "Ja",
+                        "text": "Ja, die Miete wurde in dieser Zeit bereits erhöht"
+                      },
+                      {
+                        "id": "6ft55",
+                        "alias": "Nein",
+                        "text": "Nein, die Miete wurde in dieser Zeit noch nicht erhöht"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "73x6d",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "bsmdhg",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "stjwo",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Mieterhöhung innerhalb von 3 Jahren"
+                        },
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "889i3"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "z45vj",
+                          "type": "Question",
+                          "alias": "Nettokaltmiete vor 33 Monaten",
+                          "text": "Wie hoch war deine Nettokaltmiete im $MONAT_MIETERHOEHUNG_MINUS_33_MONATE$?",
+                          "info": "Um dies rauszufinden kannst du z.B. in deine Bankauszüge gucken.  Dabei darfst du aber nicht vergessen die Betriebskosten von dem Betrag abzuziehen.",
+                          "answer": {
+                            "type": "NumberAnswer"
+                          },
+                          "required": true
+                        },
+                        {
+                          "id": "3i26a",
+                          "type": "Question",
+                          "alias": "Bisherige Mieterhöhung Grund",
+                          "text": "Welche Begründungen wurden in der Mieterhöhung bzw. den Mieterhöhungen angegeben?",
+                          "info": "Du solltest die Begründung in der jeweiligen Mieterhöhung finden. Falls mehrere Begründungen angebgeben wurden, wähle bitte alle aus.",
+                          "answer": {
+                            "type": "MultiChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "a2giz",
+                                "alias": "Mietspiegel",
+                                "text": "Mietspiegel, Vergleichsmieten oder § 558 BGB"
+                              },
+                              {
+                                "id": "808h4",
+                                "alias": "Modernisierung",
+                                "text": "Modernisierung oder bauliche Maßnahmen"
+                              },
+                              {
+                                "id": "1jbj5",
+                                "alias": "Betriebskostenerhöhung",
+                                "text": "Erhöhung der Betriebskosten"
+                              },
+                              {
+                                "id": "e1agr",
+                                "alias": "Freiwillig Mieterhöhung",
+                                "text": "Freiwillige Mieterhöhung"
+                              }
+                            ]
+                          },
+                          "required": true,
+                          "note": "\n\nVor 3 Jahren: 100€\n\nVor 2 Jahren:\nModerniersierung: 50€\n\nHeute:\nMieterhöhung um 15€\n\n100€ + 50€\n150€ + 15% = 172.5€\n\n\n100€ + 15€ + 50€ = 165€\n"
+                        },
+                        {
+                          "id": "hlu07",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "8r5e5",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "v3z6q",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Bisherige Mieterhöhung Grund"
+                                },
+                                "negated": false,
+                                "type": "AnswerMultiOptionComparison",
+                                "operator": "isExactly",
+                                "comparands": [
+                                  "a2giz"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "shke1",
+                                  "type": "Question",
+                                  "alias": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten",
+                                  "text": "",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "BooleanAnswer"
+                                  },
+                                  "required": true
+                                },
+                                {
+                                  "id": "bvb77",
+                                  "type": "If",
+                                  "cases": [
+                                    {
+                                      "id": "d4quj",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "mfrdog",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerBooleanComparison",
+                                        "operator": "is",
+                                        "value": true
+                                      },
+                                      "block": [
+                                        {
+                                          "id": "vum7ef",
+                                          "alias": "Result: Kappungsgrenze überschritten",
+                                          "text": "",
+                                          "type": "Exit"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "alternate": []
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "ott6n",
+                              "type": "Question",
+                              "alias": "Summe Mieterhöhungen ohne Mietspiegel",
+                              "text": "Wie hoch sind alle Mieterhöhungen aufgrund von Modernisierung,  bauliche Maßnahmen, Erhöhung der Betriebskosten, oder freiwillige Mieterhöhung zusammen gerechnet?",
+                              "info": null,
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "022ko",
+                              "type": "Question",
+                              "alias": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate",
+                              "text": "",
+                              "info": null,
+                              "answer": {
+                                "type": "BooleanAnswer"
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "qw58h",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "qy8h8",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "66fxt",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerBooleanComparison",
+                                    "operator": "is",
+                                    "value": true
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "upd5x",
+                                      "alias": "Result: Kappungsgrenze überschritten",
+                                      "text": "",
+                                      "type": "Exit"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "alternate": [
+                    {
+                      "id": "7kd02f",
+                      "type": "Question",
+                      "alias": "Kappungsgrenze überschritten durch aktuelle Mieterhöhung",
+                      "text": "",
+                      "info": null,
+                      "answer": {
+                        "type": "BooleanAnswer"
+                      },
+                      "required": true,
+                      "note": "Ist die geforderte Miete weniger als 15% über der aktuelle Miete."
+                    },
+                    {
+                      "id": "ppfc7",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "j4ul6",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "yckrf",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Kappungsgrenze überschritten durch aktuelle Mieterhöhung"
+                            },
+                            "negated": false,
+                            "type": "AnswerBooleanComparison",
+                            "operator": "is",
+                            "value": true
+                          },
+                          "block": [
+                            {
+                              "id": "sdqkgj",
+                              "alias": "Result: Kappungsgrenze überschritten",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "4zh3s",
+              "type": "If",
+              "cases": [
+                {
+                  "id": "swf23",
+                  "type": "IfCase",
+                  "test": {
+                    "id": "xx45t",
+                    "questionRef": {
+                      "type": "AliasRef",
+                      "value": "Mieterhöhung innerhalb von 3 Jahren"
+                    },
+                    "negated": false,
+                    "type": "AnswerOptionComparison",
+                    "operator": "is",
+                    "comparands": [
+                      "889i3"
+                    ]
+                  },
+                  "block": [
+                    {
+                      "id": "udq5",
+                      "type": "Group",
+                      "category": null,
+                      "alias": "Sperrfristen",
+                      "block": [
+                        {
+                          "id": "28yusg",
+                          "type": "Question",
+                          "alias": "Mieterhöhung innerhalb der letzten 15 Monaten",
+                          "text": "Hast du seit dem $VON$ bereits eine Mieterhöhung mit Bezug auf Mietspiegel, Vergleichsmieten oder § 558 BGB erhalten?",
+                          "info": null,
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "7na8k",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "nrr2e",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              }
+                            ]
+                          },
+                          "required": false
+                        },
+                        {
+                          "id": "pg576",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "6dtd9",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "fecq1",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung innerhalb der letzten 15 Monaten"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "7na8k"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "3moz9h",
+                                  "alias": "Exit: Sperrfristen nicht eingehalten",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "alternate": []
             }
           ]
         },
@@ -2351,386 +2705,6 @@
             }
           ],
           "alternate": []
-        },
-        {
-          "id": "nv81ol",
-          "type": "If",
-          "cases": [
-            {
-              "id": "5lk92",
-              "type": "IfCase",
-              "test": {
-                "id": "5jb4g",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Typ"
-                },
-                "negated": false,
-                "type": "AnswerOptionComparison",
-                "operator": "is",
-                "comparands": [
-                  "wb3w3"
-                ]
-              },
-              "block": []
-            }
-          ],
-          "alternate": [
-            {
-              "id": "x6ydr",
-              "type": "Group",
-              "category": "Page",
-              "alias": "Kappungsgrenze und Sperrfristen",
-              "block": [
-                {
-                  "id": "b4va8",
-                  "type": "Question",
-                  "alias": "Mieterhöhung innerhalb von 3 Jahren",
-                  "text": "Hast du seit dem $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ mindestens eine weitere Mieterhöhung bekommen?",
-                  "info": null,
-                  "answer": {
-                    "type": "ChoiceAnswer",
-                    "options": [
-                      {
-                        "id": "889i3",
-                        "alias": "Ja",
-                        "text": "Ja, ich habe in dieser Zeit eine weitere Mieterhöhung erhalten"
-                      },
-                      {
-                        "id": "6ft55",
-                        "alias": "Nein",
-                        "text": "Nein, ich habe in dieser Zeit noch keine Mieterhöhungen erhalten."
-                      }
-                    ]
-                  },
-                  "required": true
-                },
-                {
-                  "id": "73x6d",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "bsmdhg",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "stjwo",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Mieterhöhung innerhalb von 3 Jahren"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "889i3"
-                        ]
-                      },
-                      "block": [
-                        {
-                          "id": "z45vj",
-                          "type": "Question",
-                          "alias": "Nettokaltmiete vor 33 Monaten",
-                          "text": "Wie hoch war deine Nettokaltmiete im $MONAT_MIETERHOEHUNG_MINUS_33_MONATE$?",
-                          "info": "Um dies rauszufinden kannst du z.B. in deine Bankauszüge gucken.  Dabei darfst du aber nicht vergessen die Betriebskosten von dem Betrag abzuziehen.",
-                          "answer": {
-                            "type": "NumberAnswer"
-                          },
-                          "required": true
-                        },
-                        {
-                          "id": "3i26a",
-                          "type": "Question",
-                          "alias": "Bisherige Mieterhöhung Grund",
-                          "text": "Welche Begründungen wurden in der Mieterhöhung bzw. den Mieterhöhungen angegeben?",
-                          "info": "Du solltest die Begründung in der jeweiligen Mieterhöhung finden. Falls mehrere Begründungen angebgeben wurden, wähle bitte alle aus.",
-                          "answer": {
-                            "type": "MultiChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "a2giz",
-                                "alias": "Mietspiegel",
-                                "text": "Mietspiegel, Vergleichsmieten oder § 558 BGB"
-                              },
-                              {
-                                "id": "808h4",
-                                "alias": "Modernisierung",
-                                "text": "Modernisierung oder bauliche Maßnahmen"
-                              },
-                              {
-                                "id": "1jbj5",
-                                "alias": "Betriebskostenerhöhung",
-                                "text": "Erhöhung der Betriebskosten"
-                              },
-                              {
-                                "id": "e1agr",
-                                "alias": "Freiwillig Mieterhöhung",
-                                "text": "Freiwillige Mieterhöhung"
-                              }
-                            ]
-                          },
-                          "required": true,
-                          "note": "\n\nVor 3 Jahren: 100€\n\nVor 2 Jahren:\nModerniersierung: 50€\n\nHeute:\nMieterhöhung um 15€\n\n100€ + 50€\n150€ + 15% = 172.5€\n\n\n100€ + 15€ + 50€ = 165€\n"
-                        },
-                        {
-                          "id": "hlu07",
-                          "type": "If",
-                          "cases": [
-                            {
-                              "id": "8r5e5",
-                              "type": "IfCase",
-                              "test": {
-                                "id": "v3z6q",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Bisherige Mieterhöhung Grund"
-                                },
-                                "negated": false,
-                                "type": "AnswerMultiOptionComparison",
-                                "operator": "isExactly",
-                                "comparands": [
-                                  "a2giz"
-                                ]
-                              },
-                              "block": [
-                                {
-                                  "id": "shke1",
-                                  "type": "Question",
-                                  "alias": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten",
-                                  "text": "",
-                                  "info": null,
-                                  "answer": {
-                                    "type": "BooleanAnswer"
-                                  },
-                                  "required": true
-                                },
-                                {
-                                  "id": "bvb77",
-                                  "type": "If",
-                                  "cases": [
-                                    {
-                                      "id": "d4quj",
-                                      "type": "IfCase",
-                                      "test": {
-                                        "id": "mfrdog",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerBooleanComparison",
-                                        "operator": "is",
-                                        "value": true
-                                      },
-                                      "block": [
-                                        {
-                                          "id": "vum7ef",
-                                          "alias": "Result: Kappungsgrenze überschritten",
-                                          "text": "",
-                                          "type": "Exit"
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "alternate": []
-                                }
-                              ]
-                            }
-                          ],
-                          "alternate": [
-                            {
-                              "id": "ott6n",
-                              "type": "Question",
-                              "alias": "Summe Mieterhöhungen ohne Mietspiegel",
-                              "text": "Wie hoch sind alle Mieterhöhungen aufgrund von Modernisierung,  bauliche Maßnahmen, Erhöhung der Betriebskosten, oder freiwillige Mieterhöhung zusammen gerechnet?",
-                              "info": null,
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": true
-                            },
-                            {
-                              "id": "022ko",
-                              "type": "Question",
-                              "alias": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate",
-                              "text": "",
-                              "info": null,
-                              "answer": {
-                                "type": "BooleanAnswer"
-                              },
-                              "required": true
-                            },
-                            {
-                              "id": "qw58h",
-                              "type": "If",
-                              "cases": [
-                                {
-                                  "id": "qy8h8",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "66fxt",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerBooleanComparison",
-                                    "operator": "is",
-                                    "value": true
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "upd5x",
-                                      "alias": "Result: Kappungsgrenze überschritten",
-                                      "text": "",
-                                      "type": "Exit"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "alternate": []
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": [
-                    {
-                      "id": "7kd02f",
-                      "type": "Question",
-                      "alias": "Kappungsgrenze überschritten durch aktuelle Mieterhöhung",
-                      "text": "",
-                      "info": null,
-                      "answer": {
-                        "type": "BooleanAnswer"
-                      },
-                      "required": true,
-                      "note": "Ist die geforderte Miete weniger als 15% über der aktuelle Miete."
-                    },
-                    {
-                      "id": "ppfc7",
-                      "type": "If",
-                      "cases": [
-                        {
-                          "id": "j4ul6",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "yckrf",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Kappungsgrenze überschritten durch aktuelle Mieterhöhung"
-                            },
-                            "negated": false,
-                            "type": "AnswerBooleanComparison",
-                            "operator": "is",
-                            "value": true
-                          },
-                          "block": [
-                            {
-                              "id": "sdqkgj",
-                              "alias": "Result: Kappungsgrenze überschritten",
-                              "text": "",
-                              "type": "Exit"
-                            }
-                          ]
-                        }
-                      ],
-                      "alternate": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "4zh3s",
-              "type": "If",
-              "cases": [
-                {
-                  "id": "swf23",
-                  "type": "IfCase",
-                  "test": {
-                    "id": "xx45t",
-                    "questionRef": {
-                      "type": "AliasRef",
-                      "value": "Mieterhöhung innerhalb von 3 Jahren"
-                    },
-                    "negated": false,
-                    "type": "AnswerOptionComparison",
-                    "operator": "is",
-                    "comparands": [
-                      "889i3"
-                    ]
-                  },
-                  "block": [
-                    {
-                      "id": "udq5",
-                      "type": "Group",
-                      "category": null,
-                      "alias": "Sperrfristen",
-                      "block": [
-                        {
-                          "id": "28yusg",
-                          "type": "Question",
-                          "alias": "Mieterhöhung innerhalb der letzten 15 Monaten",
-                          "text": "Hast du seit dem $VON$ bereits eine Mieterhöhung mit Bezug auf Mietspiegel, Vergleichsmieten oder § 558 BGB erhalten?",
-                          "info": null,
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "7na8k",
-                                "alias": "Ja",
-                                "text": "Ja"
-                              },
-                              {
-                                "id": "nrr2e",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              }
-                            ]
-                          },
-                          "required": false
-                        },
-                        {
-                          "id": "pg576",
-                          "type": "If",
-                          "cases": [
-                            {
-                              "id": "6dtd9",
-                              "type": "IfCase",
-                              "test": {
-                                "id": "fecq1",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung innerhalb der letzten 15 Monaten"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "7na8k"
-                                ]
-                              },
-                              "block": [
-                                {
-                                  "id": "3moz9h",
-                                  "alias": "Exit: Sperrfristen nicht eingehalten",
-                                  "text": "",
-                                  "type": "Exit"
-                                }
-                              ]
-                            }
-                          ],
-                          "alternate": []
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "alternate": []
-            }
-          ]
         },
         {
           "id": "y8fot",
