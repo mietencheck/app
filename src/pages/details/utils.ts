@@ -12,7 +12,7 @@ import {
   useVisibleQuestionAliases,
 } from "~/form/flow-machine";
 
-import { NavItemData } from "./navigation";
+import { PageNavigationItemData } from "./partials/navigation/utils";
 
 export const getSlugForAlias = (title: string) =>
   encodeURIComponent(
@@ -42,7 +42,7 @@ export function useCheckIsGroupCompleted() {
   const [visitedPages] = useVisitedPages();
 
   return useCallback(
-    (page: NavItemData) => {
+    (page: PageNavigationItemData) => {
       const group = mainSteps
         .filter((s): s is Group => s.type == "Group" && s.category == "Page")
         .flatMap((group) => [group, ...(group.steps ?? [])])

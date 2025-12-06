@@ -370,17 +370,6 @@
                   "required": true
                 },
                 {
-                  "id": "1qgns",
-                  "type": "Question",
-                  "alias": "Datum Eintritt Mieterhöhung",
-                  "text": "",
-                  "info": null,
-                  "answer": {
-                    "type": "DateAnswer"
-                  },
-                  "required": true
-                },
-                {
                   "id": "g4o2",
                   "type": "Question",
                   "alias": "Vertragsdatum",

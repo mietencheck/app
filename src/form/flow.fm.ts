@@ -12,7 +12,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -199,7 +198,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -370,7 +368,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
         };
     };
     "Exit: Mietvertrag zu alt": {
@@ -396,7 +393,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
         };
@@ -426,7 +422,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -589,20 +584,6 @@ export type StepInfoByAlias = {
             Kaltmiete?: number;
         };
     };
-    "Datum Eintritt Mieterhöhung": {
-        answer: Date;
-        state: {
-            Typ?: "Miete" | "Mieterhöhung";
-            Adresse?: string;
-            Ost?: boolean;
-            Wohnlage?: "einfach" | "mittel" | "gut";
-            Unterschrieben?: "Ja" | "Nein";
-            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
-            Kaltmiete?: number;
-            "Datum Mieterhöhungsschreiben"?: Date;
-        };
-    };
     "Mieterhöhung zugestimmt": {
         answer: "Ja" | "Nein";
         state: {
@@ -615,7 +596,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
         };
     };
     "Exit: Mieterhöhung zugestimmt": {
@@ -630,7 +610,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
     };
@@ -646,7 +625,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
     };
@@ -662,7 +640,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
         };
@@ -679,7 +656,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
         };
@@ -696,7 +672,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
         };
@@ -713,7 +688,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
         };
@@ -730,7 +704,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
         };
@@ -747,7 +720,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -765,7 +737,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -783,7 +754,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -801,7 +771,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -820,7 +789,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -839,7 +807,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -858,7 +825,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -878,7 +844,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -899,7 +864,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -921,7 +885,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -944,7 +907,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -970,7 +932,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -996,7 +957,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1022,7 +982,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1049,7 +1008,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1077,7 +1035,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1105,7 +1062,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1133,7 +1089,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1161,7 +1116,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1189,7 +1143,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1218,7 +1171,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1248,7 +1200,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1279,7 +1230,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1310,7 +1260,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1341,7 +1290,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1372,7 +1320,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1534,7 +1481,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1565,7 +1511,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1597,7 +1542,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1630,7 +1574,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1664,7 +1607,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1702,7 +1644,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1737,7 +1678,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1773,7 +1713,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1810,7 +1749,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -1972,7 +1910,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2010,7 +1947,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2049,7 +1985,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2088,7 +2023,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2250,7 +2184,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2412,7 +2345,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2574,7 +2506,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2616,7 +2547,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2655,7 +2585,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2695,7 +2624,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2736,7 +2664,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2779,7 +2706,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2941,7 +2867,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -2984,7 +2909,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3028,7 +2952,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3073,7 +2996,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3119,7 +3041,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3166,7 +3087,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3213,7 +3133,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3260,7 +3179,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3422,7 +3340,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3584,7 +3501,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3746,7 +3662,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3793,7 +3708,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3841,7 +3755,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -3890,7 +3803,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4052,7 +3964,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4102,7 +4013,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4264,7 +4174,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4315,7 +4224,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4367,7 +4275,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4420,7 +4327,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4582,7 +4488,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4637,7 +4542,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4692,7 +4596,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4854,7 +4757,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4911,7 +4813,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -4969,7 +4870,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5027,7 +4927,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5086,7 +4985,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5146,7 +5044,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5308,7 +5205,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5370,7 +5266,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5432,7 +5327,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5495,7 +5389,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5657,7 +5550,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5721,7 +5613,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5786,7 +5677,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5853,7 +5743,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -5920,7 +5809,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -6082,7 +5970,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -6151,7 +6038,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -6221,7 +6107,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -6291,7 +6176,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -6453,7 +6337,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -6525,7 +6408,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -6597,7 +6479,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -6671,7 +6552,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -6745,7 +6625,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -6907,7 +6786,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -6983,7 +6861,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -7061,7 +6938,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -7139,7 +7015,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -7301,7 +7176,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -7379,7 +7253,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -7458,7 +7331,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -7539,7 +7411,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -7620,7 +7491,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -7702,7 +7572,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -7786,7 +7655,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -7870,7 +7738,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -8032,7 +7899,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -8117,7 +7983,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -8203,7 +8068,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -8291,7 +8155,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -8453,7 +8316,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -8541,7 +8403,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -8630,7 +8491,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -8720,7 +8580,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -8882,7 +8741,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -8974,7 +8832,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -9066,7 +8923,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -9159,7 +9015,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -9253,7 +9108,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -9415,7 +9269,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -9510,7 +9363,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -9672,7 +9524,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -9769,7 +9620,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -9931,7 +9781,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -10093,7 +9942,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -10190,7 +10038,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -10288,7 +10135,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -10387,7 +10233,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -10549,7 +10394,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -10649,7 +10493,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -10750,7 +10593,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -10852,7 +10694,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -11014,7 +10855,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -11117,7 +10957,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -11222,7 +11061,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -11327,7 +11165,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -11489,7 +11326,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -11595,7 +11431,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -11703,7 +11538,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -11865,7 +11699,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -11973,7 +11806,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -12082,7 +11914,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -12192,7 +12023,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -12303,7 +12133,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -12465,7 +12294,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -12577,7 +12405,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -12692,7 +12519,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -12806,7 +12632,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -12968,7 +12793,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -13083,7 +12907,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -13199,7 +13022,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -13361,7 +13183,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -13478,7 +13299,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -13596,7 +13416,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -13716,7 +13535,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -13836,7 +13654,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -13998,7 +13815,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -14160,7 +13976,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -14281,7 +14096,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -14403,7 +14217,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -14526,7 +14339,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -14650,7 +14462,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -14812,7 +14623,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -14937,7 +14747,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -15063,7 +14872,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -15225,7 +15033,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -15352,7 +15159,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -15480,7 +15286,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -15610,7 +15415,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -15772,7 +15576,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -15905,7 +15708,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -16038,7 +15840,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -16171,7 +15972,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -16333,7 +16133,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -16466,7 +16265,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -16602,7 +16400,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -16737,7 +16534,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -16899,7 +16695,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -17035,7 +16830,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -17173,7 +16967,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -17311,7 +17104,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -17450,7 +17242,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -17590,7 +17381,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -17752,7 +17542,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -17914,7 +17703,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -18055,7 +17843,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -18198,7 +17985,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -18342,7 +18128,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -18504,7 +18289,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -18650,7 +18434,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -18796,7 +18579,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -18942,7 +18724,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -19090,7 +18871,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -19252,7 +19032,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -19414,7 +19193,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -19562,7 +19340,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -19711,7 +19488,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -19861,7 +19637,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -20012,7 +19787,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -20174,7 +19948,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -20327,7 +20100,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -20480,7 +20252,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -20634,7 +20405,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -20789,7 +20559,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -20945,7 +20714,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -21102,7 +20870,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -21264,7 +21031,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -21422,7 +21188,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -21581,7 +21346,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -21741,7 +21505,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";
@@ -21902,7 +21665,6 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Datum Eintritt Mieterhöhung"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen Indexmiete"?: "Ja" | "Nein";

@@ -3,9 +3,9 @@ import { useMemo } from "react";
 
 import type { MainSteps } from "~/form/flow-machine";
 
-import { getSlugForAlias } from "./utils";
+import { getSlugForAlias } from "../../utils";
 
-export type NavItemData = {
+export type PageNavigationItemData = {
   title: string;
   href: string;
   children?: {
@@ -14,7 +14,9 @@ export type NavItemData = {
   }[];
 };
 
-export function useMainNavItems(mainSteps: MainSteps): NavItemData[] {
+export function useMainNavItems(
+  mainSteps: MainSteps,
+): PageNavigationItemData[] {
   return useMemo(
     () =>
       mainSteps
@@ -38,7 +40,10 @@ export function useMainNavItems(mainSteps: MainSteps): NavItemData[] {
   );
 }
 
-export function getRelNavItems(navItems: NavItemData[], pathname: string) {
+export function getRelNavItems(
+  navItems: PageNavigationItemData[],
+  pathname: string,
+) {
   const pagesFlat = navItems.flatMap((p) =>
     p.children && p.children.length > 0 ? [...p.children] : p,
   );
@@ -50,7 +55,10 @@ export function getRelNavItems(navItems: NavItemData[], pathname: string) {
   };
 }
 
-export function buildPageIndex(pages: NavItemData[], pathname: string) {
+export function buildPageIndex(
+  pages: PageNavigationItemData[],
+  pathname: string,
+) {
   const mainPageIndex = pages.findIndex(({ href }) => pathname.includes(href));
   const subPageIndex = pages
     .at(mainPageIndex)

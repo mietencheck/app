@@ -6,19 +6,19 @@ import { Button } from "react-aria-components";
 import { StatusIcon, StatusIconProps } from "~/components";
 import { ChevronDownIcon } from "~/components/Icons/ChevronDown";
 import { useLocalizeString } from "~/l10n";
-import { NavItemData } from "~/pages/details/navigation";
+import { PageNavigationItemData } from "~/pages/details/partials/navigation/utils";
 
-import { useCheckIsGroupCompleted, usePathname } from "./utils";
+import { useCheckIsGroupCompleted, usePathname } from "../../utils";
 
 type ListNavigationProps = {
   children: React.ReactNode;
 };
 
-export function ListNav({ children }: ListNavigationProps) {
+export function Navigation({ children }: ListNavigationProps) {
   return <ul className="sticky top-[98px] print:hidden">{children}</ul>;
 }
 
-export function NavItem({
+export function NavigationItem({
   title,
   href,
   status,
@@ -53,7 +53,7 @@ export function NavItem({
   );
 }
 
-export function PageNavItem({ page }: { page: NavItemData }) {
+export function PageNavigationItem({ page }: { page: PageNavigationItemData }) {
   const pathname = usePathname();
   const checkIsActive = (href: string) => pathname == decodeURI(href);
   const checkIsGroupCompleted = useCheckIsGroupCompleted();
@@ -62,7 +62,7 @@ export function PageNavItem({ page }: { page: NavItemData }) {
     [checkIsGroupCompleted, page],
   );
   return (
-    <NavItem
+    <NavigationItem
       title={page.title}
       href={page.href}
       status={
@@ -76,7 +76,7 @@ export function PageNavItem({ page }: { page: NavItemData }) {
   );
 }
 
-export function SubListNav({ item }: { item: NavItemData }) {
+export function NavigationGroup({ item }: { item: PageNavigationItemData }) {
   const pathname = usePathname();
   const l = useLocalizeString();
   const checkIsActive = (href: string) => pathname == decodeURI(href);
@@ -120,7 +120,7 @@ export function SubListNav({ item }: { item: NavItemData }) {
       {open && (
         <ul className="ml-7">
           {item.children?.map((subpage) => (
-            <PageNavItem key={subpage.href} page={subpage} />
+            <PageNavigationItem key={subpage.href} page={subpage} />
           ))}
         </ul>
       )}
