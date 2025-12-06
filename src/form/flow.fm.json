@@ -1,7 +1,6 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
-  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -2364,26 +2363,26 @@
           "alternate": []
         },
         {
-          "type": "If",
           "id": "nv81ol",
+          "type": "If",
           "cases": [
             {
-              "type": "IfCase",
               "id": "5lk92",
-              "block": [],
+              "type": "IfCase",
               "test": {
                 "id": "5jb4g",
                 "questionRef": {
                   "type": "AliasRef",
                   "value": "Typ"
                 },
-                "operator": "is",
                 "negated": false,
                 "type": "AnswerOptionComparison",
+                "operator": "is",
                 "comparands": [
                   "wb3w3"
                 ]
-              }
+              },
+              "block": []
             }
           ],
           "alternate": [
@@ -2485,6 +2484,68 @@
                         {
                           "id": "hlu07",
                           "type": "If",
+                          "cases": [
+                            {
+                              "id": "8r5e5",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "v3z6q",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Bisherige Mieterhöhung Grund"
+                                },
+                                "negated": false,
+                                "type": "AnswerMultiOptionComparison",
+                                "operator": "isExactly",
+                                "comparands": [
+                                  "a2giz"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "shke1",
+                                  "type": "Question",
+                                  "alias": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten",
+                                  "text": "",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "BooleanAnswer"
+                                  },
+                                  "required": true
+                                },
+                                {
+                                  "id": "bvb77",
+                                  "type": "If",
+                                  "cases": [
+                                    {
+                                      "id": "d4quj",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "mfrdog",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerBooleanComparison",
+                                        "operator": "is",
+                                        "value": true
+                                      },
+                                      "block": [
+                                        {
+                                          "id": "vum7ef",
+                                          "alias": "Result: Kappungsgrenze überschritten",
+                                          "text": "",
+                                          "type": "Exit"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "alternate": []
+                                }
+                              ]
+                            }
+                          ],
                           "alternate": [
                             {
                               "id": "ott6n",
@@ -2538,68 +2599,6 @@
                               ],
                               "alternate": []
                             }
-                          ],
-                          "cases": [
-                            {
-                              "id": "8r5e5",
-                              "type": "IfCase",
-                              "block": [
-                                {
-                                  "id": "shke1",
-                                  "type": "Question",
-                                  "alias": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten",
-                                  "text": "",
-                                  "info": null,
-                                  "answer": {
-                                    "type": "BooleanAnswer"
-                                  },
-                                  "required": true
-                                },
-                                {
-                                  "id": "bvb77",
-                                  "type": "If",
-                                  "cases": [
-                                    {
-                                      "id": "d4quj",
-                                      "type": "IfCase",
-                                      "test": {
-                                        "id": "mfrdog",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerBooleanComparison",
-                                        "operator": "is",
-                                        "value": true
-                                      },
-                                      "block": [
-                                        {
-                                          "id": "vum7ef",
-                                          "alias": "Result: Kappungsgrenze überschritten",
-                                          "text": "",
-                                          "type": "Exit"
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "alternate": []
-                                }
-                              ],
-                              "test": {
-                                "id": "v3z6q",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Bisherige Mieterhöhung Grund"
-                                },
-                                "negated": false,
-                                "type": "AnswerMultiOptionComparison",
-                                "operator": "isExactly",
-                                "comparands": [
-                                  "a2giz"
-                                ]
-                              }
-                            }
                           ]
                         }
                       ]
@@ -2621,7 +2620,6 @@
                     {
                       "id": "ppfc7",
                       "type": "If",
-                      "alternate": [],
                       "cases": [
                         {
                           "id": "j4ul6",
@@ -2646,20 +2644,33 @@
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "alternate": []
                     }
                   ]
                 }
               ]
             },
             {
-              "type": "If",
               "id": "4zh3s",
-              "alternate": [],
+              "type": "If",
               "cases": [
                 {
-                  "type": "IfCase",
                   "id": "swf23",
+                  "type": "IfCase",
+                  "test": {
+                    "id": "xx45t",
+                    "questionRef": {
+                      "type": "AliasRef",
+                      "value": "Mieterhöhung innerhalb von 3 Jahren"
+                    },
+                    "negated": false,
+                    "type": "AnswerOptionComparison",
+                    "operator": "is",
+                    "comparands": [
+                      "889i3"
+                    ]
+                  },
                   "block": [
                     {
                       "id": "udq5",
@@ -2693,7 +2704,6 @@
                         {
                           "id": "pg576",
                           "type": "If",
-                          "alternate": [],
                           "cases": [
                             {
                               "id": "6dtd9",
@@ -2704,9 +2714,9 @@
                                   "type": "AliasRef",
                                   "value": "Mieterhöhung innerhalb der letzten 15 Monaten"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "7na8k"
                                 ]
@@ -2720,26 +2730,15 @@
                                 }
                               ]
                             }
-                          ]
+                          ],
+                          "alternate": []
                         }
                       ]
                     }
-                  ],
-                  "test": {
-                    "id": "xx45t",
-                    "questionRef": {
-                      "type": "AliasRef",
-                      "value": "Mieterhöhung innerhalb von 3 Jahren"
-                    },
-                    "operator": "is",
-                    "negated": false,
-                    "type": "AnswerOptionComparison",
-                    "comparands": [
-                      "889i3"
-                    ]
-                  }
+                  ]
                 }
-              ]
+              ],
+              "alternate": []
             }
           ]
         },
@@ -13212,5 +13211,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subs": []
 }
