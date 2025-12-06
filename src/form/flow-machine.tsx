@@ -6,6 +6,10 @@ import { parseAdresse } from "~/utils";
 
 import { StepInfoByAlias } from "./flow.fm";
 import flow from "./flow.fm.json";
+import {
+  HIDDEN_QUESTIONS,
+  HIDDEN_QUESTIONS_FOR_MIETERHOEHUNG,
+} from "./hidden-questions";
 import { vertragsdatumToMietspiegelJahrMapping } from "./mappings/vertragsdatum";
 
 export type AnswerData = AnswersRecord;
@@ -301,6 +305,24 @@ export function useSchnelltestSteps() {
     );
     return schnelltest?.type == "Group" ? ungroup(schnelltest.steps) : [];
   }, [steps]);
+}
+
+export function useVisibleSchnelltestSteps() {
+  const steps = useSchnelltestSteps();
+  const answers = useAnswers();
+
+  return useMemo(() => {
+    return steps.filter(
+      (s) =>
+        !(
+          s.type === "Question" &&
+          s.alias !== null &&
+          (new Set(HIDDEN_QUESTIONS).has(s.alias) ||
+            (answers.getAliasedState().Typ === "Mieterhöhung" &&
+              new Set(HIDDEN_QUESTIONS_FOR_MIETERHOEHUNG).has(s.alias)))
+        ),
+    );
+  }, [steps, answers]);
 }
 
 export function useDetailsSteps() {
