@@ -3,14 +3,14 @@ import { useEffect, useMemo, useRef } from "react";
 
 import { useAnswers, useSchnelltestSteps } from "~/form/flow-machine";
 
-import { DetailPage } from "./detail";
 import { Layout } from "./Layout";
-import { ResultPage } from "./result";
+import { Questions } from "./questions";
+import { Result } from "./result";
 import { DetailsRouter } from "./router";
-import { SummaryPage } from "./summary/index";
+import { Summary } from "./summary";
 
 export default function DetailsPage() {
-  const route = DetailsRouter.useRoute(["Summary", "FormPage", "Result"]);
+  const route = DetailsRouter.useRoute(["Summary", "Questions", "Result"]);
 
   const location = useLocation();
 
@@ -50,13 +50,13 @@ export default function DetailsPage() {
       {(() => {
         switch (route.name) {
           case "Summary":
-            return <SummaryPage />;
+            return <Summary />;
 
-          case "FormPage":
-            return <DetailPage />;
+          case "Questions":
+            return <Questions />;
 
           case "Result":
-            return <ResultPage />;
+            return <Result />;
 
           default:
             route satisfies never;

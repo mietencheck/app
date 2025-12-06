@@ -48,7 +48,7 @@ function AnswerView({
   return answerValue as string;
 }
 
-export function SummaryPage() {
+export function Summary() {
   const answers = useAnswers();
   const steps = useVisibleSchnelltestSteps();
 

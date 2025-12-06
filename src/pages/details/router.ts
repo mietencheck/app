@@ -5,7 +5,7 @@ export const DetailsRouter = createRouter(
     Summary: "/bisherige-angaben",
     Missing: "/fehlende-angaben",
     Result: "/auswertung",
-    FormPage: "/*",
+    Questions: "/*",
   },
   { basePath: "/details" },
 );

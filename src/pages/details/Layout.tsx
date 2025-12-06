@@ -5,18 +5,18 @@ import { Header } from "~/components/Header";
 import { useDetailsSteps } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
-import { MobileNavigation } from "./partials/navigation/MobileNavigation";
+import { MobileNavigation } from "./components/MobileNavigation";
 import {
   Navigation,
   NavigationGroup,
   NavigationItem,
-  PageNavigationItem,
-} from "./partials/navigation/Navigation";
+  NavigationPageItem,
+} from "./components/Navigation";
 import {
   buildPageIndex,
   getRelNavItems,
   useMainNavItems,
-} from "./partials/navigation/utils";
+} from "./components/Navigation/utils";
 import { useIsCompleted, usePathname } from "./utils";
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -59,7 +59,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   }
                 />
               ) : (
-                <PageNavigationItem key={page.href} page={page} />
+                <NavigationPageItem key={page.href} page={page} />
               ),
             )}
           </Navigation>
