@@ -1,15 +1,13 @@
 //import { useLocalizeField } from "~/l10n";
 
-export function ExitMieterhoehungBetriebskosten() {
+export function ExitMieterhoehungIndexmieteUeberInflationsrate() {
   //const l = useLocalizeField();
 
   return (
     <>
-      <h2 className="heading-24 mb-4">
-        TODO: Mieterhöhung wahrscheinlich rechtens
-      </h2>
+      <h2 className="heading-24 mb-4">TODO: Mieterhöhung nicht rechtens.</h2>
       <div className="space-y-3 text-neutral-faded mb-6">
-        <p>Vermieter dürfen Miete erhöhen bei gestiegenen Betriebskosten.</p>
+        <p>Mieterhöhung höher als Inflationsrate.</p>
       </div>
       <div className="space-y-2 mb-6 text-neutral-faded">
         <h3 className="text-base-medium text-neutral">Was nun?</h3>

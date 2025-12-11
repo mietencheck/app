@@ -8,13 +8,14 @@ import {
   ExitHaeuser,
   ExitKeinWC,
   ExitMieterhoehungBetriebskosten,
-  ExitMieterhoehungFreiwillig,
   ExitMieterhoehungIndexmiete,
+  ExitMieterhoehungIndexmieteUeberInflationsrate,
+  ExitMieterhoehungIndexmieteWegenMietspiegel,
   ExitMieterhoehungModernisierung,
+  ExitMieterhoehungModernisierungIndexmiete,
   ExitMieterhoehungOhneBegruendung,
   ExitMieterhoehungStaffelmiete,
   ExitMieterhoehungZugestimmt,
-  ExitMieterhoehungZusaetzlichZurIndexmiete,
   ExitMieterhoehungZusaetzlichZurStaffelmiete,
   ExitMietspiegeltabelleLeer,
   ExitMietvertragZuAlt,
@@ -39,25 +40,35 @@ const Exits = {
   "Exit: Mietspiegel gilt nicht für Wohnungen ohne WC": () => <ExitKeinWC />,
   "Exit: Möblierte Wohnung": () => <ExitMoebliert />,
   "Exit: Mieterhöhung zugestimmt": () => <ExitMieterhoehungZugestimmt />,
-  "Exit: Mieterhöhung freiwillig": () => <ExitMieterhoehungFreiwillig />,
-  "Exit: Mieterhöhung Modernisierung": () => (
-    <ExitMieterhoehungModernisierung />
-  ),
+  // Mieterhöhung
   "Exit: Mieterhöhung ohne Begründung": () => (
     <ExitMieterhoehungOhneBegruendung />
   ),
-  "Exit: Mieterhöhung wegen Indexmiete": () => <ExitMieterhoehungIndexmiete />,
-  "Exit: Mieterhöhung zusätzlich zur Indexmiete": () => (
-    <ExitMieterhoehungZusaetzlichZurIndexmiete />
+  "Exit: Mieterhöhung wegen Modernisierung": () => (
+    <ExitMieterhoehungModernisierung />
+  ),
+  "Exit: Mieterhöhung wegen Indexmiete rechtens": () => (
+    <ExitMieterhoehungIndexmiete />
+  ),
+  "Exit: Mieterhöhung wegen Indexmiete über Inflationsrate hinaus": () => (
+    <ExitMieterhoehungIndexmieteUeberInflationsrate />
+  ),
+  "Exit: Mieterhöhung wegen Mietspiegel bei Indexmiete": () => (
+    <ExitMieterhoehungIndexmieteWegenMietspiegel />
+  ),
+  "Exit: Mieterhöhung wegen Modernisierung bei Indexmiete": () => (
+    <ExitMieterhoehungModernisierungIndexmiete />
   ),
   "Exit: Mieterhöhung wegen Staffelmiete": () => (
     <ExitMieterhoehungStaffelmiete />
   ),
+  "Exit: Mieterhöhung wegen Betriebskosten": () => (
+    <ExitMieterhoehungBetriebskosten />
+  ),
   "Exit: Mieterhöhung zusätzlich zur Staffelmiete": () => (
     <ExitMieterhoehungZusaetzlichZurStaffelmiete />
   ),
-  "Exit: Betriebskostenerhöhung": () => <ExitMieterhoehungBetriebskosten />,
-  "Result: Kappungsgrenze überschritten": () => (
+  "Exit: Kappungsgrenze überschritten": () => (
     <ResultKappungsgrenzeUeberschritten />
   ),
 };
