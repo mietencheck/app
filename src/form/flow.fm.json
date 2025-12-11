@@ -602,12 +602,12 @@
                                     "options": [
                                       {
                                         "id": "md03a",
-                                        "text": "Ja, die Miete wird maximal um die Inflationsrate angehoben.",
+                                        "text": "Ja, die Miete soll maximal um die Inflationsrate angehoben werden",
                                         "alias": "Ja"
                                       },
                                       {
                                         "id": "o5fcc",
-                                        "text": "Nein, die Miete soll über die Inflationsrate hinaus angehoben werden.",
+                                        "text": "Nein, die Miete soll über die Inflationsrate hinaus angehoben werden",
                                         "alias": "Nein"
                                       }
                                     ]
@@ -751,64 +751,210 @@
                       },
                       "block": [
                         {
-                          "id": "bhxey",
                           "type": "Question",
-                          "alias": "Mieterhöhung wegen Staffelmiete",
-                          "text": "Soll die Miete genau um den Betrag erhöht werden, der Mietvertrag vereinbarten wurde?",
-                          "info": "Bei einer Staffelmiete ist im Mietvertrag ein fester Betrag festgelegt, um welchen sich die Miete jedes Jahr erhöht. Du solltest diesen Betrag also in deinem Mietvertrag finden.",
+                          "id": "xglgm",
+                          "text": "Welche Grund hat der Vermieter für die Mieterhöhung angeführt?",
+                          "alias": "Mieterhöhung Grund Staffelmiete",
+                          "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
+                          "required": true,
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
                               {
-                                "id": "0q8jti",
-                                "alias": "Ja",
-                                "text": "Ja, der Vermieter hat die Miete um die im Mietvertrag angegebene Betrag erhöht."
+                                "id": "k7vmz",
+                                "text": "Staffelmiete",
+                                "alias": "Staffelmiete"
                               },
                               {
-                                "id": "k16tp",
-                                "alias": "Nein",
-                                "text": "Nein, der Vermieter will die Miete zusätzlich zum vereinbarten Betrag erhöhen."
+                                "id": "a2giz",
+                                "alias": "Mietspiegel",
+                                "text": "Mietspiegel, Vergleichsmieten oder § 558 BGB"
+                              },
+                              {
+                                "id": "808h4",
+                                "alias": "Modernisierung",
+                                "text": "Modernisierung oder bauliche Maßnahmen"
+                              },
+                              {
+                                "id": "1jbj5",
+                                "text": "Erhöhung der Betriebskosten",
+                                "alias": "Betriebskostenerhöhung"
+                              },
+                              {
+                                "id": "7oedm",
+                                "alias": "Kein Grund",
+                                "text": "Keine der Optionen"
                               }
                             ]
-                          },
-                          "required": true
+                          }
                         },
                         {
-                          "id": "n7uz7",
                           "type": "If",
+                          "id": "2dlwxk",
+                          "alternate": [
+                            {
+                              "type": "Exit",
+                              "id": "ehvf",
+                              "alias": "Exit: Mieterhöhung ohne Begründung",
+                              "text": ""
+                            }
+                          ],
                           "cases": [
                             {
-                              "id": "hwuhz",
                               "type": "IfCase",
+                              "id": "sjcv3",
                               "test": {
-                                "id": "azvce",
+                                "id": "vtkke",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung wegen Staffelmiete"
+                                  "value": "Mieterhöhung Grund Staffelmiete"
                                 },
+                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
-                                "operator": "is",
                                 "comparands": [
-                                  "0q8jti"
+                                  "k7vmz"
                                 ]
                               },
                               "block": [
                                 {
-                                  "id": "clvs5",
-                                  "alias": "Exit: Mieterhöhung wegen Staffelmiete",
-                                  "text": "Wenn eine Staffelmiete vereinbart ist, wird jede neue Rate bzw. Mieterhöhung als eine Art Neuvermietung gewertet. Gehe daher nochmal zurück zur Ersten Frage und Wähle dort \"Die Miethöhe zu Beginn des Mietvertrages.\" aus. Gib dann als Miete allerdings die Miete an, welche du jetzt neuerdings zahlen sollst.",
-                                  "type": "Exit"
+                                  "type": "Question",
+                                  "id": "09g2n",
+                                  "text": "Soll die Miete maximal um den Mietvertrag vereinbarten Vertrag angehoben werden?",
+                                  "alias": "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel",
+                                  "info": null,
+                                  "required": true,
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "4jt6j",
+                                        "text": "Ja, die Miete soll maximal um den vereinbarten Betrag angehoben werden",
+                                        "alias": "Ja"
+                                      },
+                                      {
+                                        "id": "o5b28",
+                                        "text": "Nein, die Miete soll über den vereinbarten Betrag hinaus angehoben werden",
+                                        "alias": "Nein"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "type": "If",
+                                  "id": "9ypn3",
+                                  "cases": [
+                                    {
+                                      "type": "IfCase",
+                                      "id": "s1nx3",
+                                      "test": {
+                                        "id": "qeab8",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"
+                                        },
+                                        "operator": "is",
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "comparands": [
+                                          "4jt6j"
+                                        ]
+                                      },
+                                      "block": [
+                                        {
+                                          "id": "clvs5",
+                                          "alias": "Exit: Mieterhöhung wegen Staffelmiete rechtens",
+                                          "text": "",
+                                          "type": "Exit"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "alternate": [
+                                    {
+                                      "id": "6f3phg",
+                                      "alias": "Exit: Mieterhöhung wegen Staffelmiete über Staffel hinaus",
+                                      "text": "",
+                                      "type": "Exit"
+                                    }
+                                  ]
                                 }
                               ]
-                            }
-                          ],
-                          "alternate": [
+                            },
                             {
-                              "id": "6f3phg",
-                              "alias": "Exit: Mieterhöhung zusätzlich zur Staffelmiete",
-                              "text": "Wenn eine Staffelmiete vereinbart ist, darf der Vermieter nicht zusätzlich noch die Miete aufgrund des Mietspiegels erhöhen.\nIn diesem Falle ist die zusätzliche Mieterhöhung rechtswidrig. Überprüfe noch einmal, ob es sich nicht doch um eine Mieterhöhung aufgrund der vereinbarten Staffelmiete handelt. Ein Anhaltspunkt dafür kann sein, dass Vermieter sich auf vertraglich vereinbarte Mieterhöhung beruft oder der Erhöhungsbetrag mit bereits im Mietvertrag vereinbarten Mietsteigerungen übereinstimmt.\n\nWenn du dir sicher bist, dass es sich um eine zusätzliche Mieterhöhung handelt, kannst du sie ignorieren oder der Mieterhöhung formlos widersprechen.",
-                              "type": "Exit"
+                              "type": "IfCase",
+                              "id": "2s8lk",
+                              "test": {
+                                "id": "ns6l3",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung Grund Staffelmiete"
+                                },
+                                "operator": "is",
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "comparands": [
+                                  "a2giz"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "type": "Exit",
+                                  "id": "8f9a3",
+                                  "alias": "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmiete",
+                                  "text": ""
+                                }
+                              ]
+                            },
+                            {
+                              "type": "IfCase",
+                              "id": "t4bvu",
+                              "test": {
+                                "id": "miabv",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung Grund Staffelmiete"
+                                },
+                                "operator": "is",
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "comparands": [
+                                  "808h4"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "type": "Exit",
+                                  "id": "udu4l",
+                                  "alias": "Exit: Mieterhöhung wegen Modernisierung bei Staffelmiete",
+                                  "text": ""
+                                }
+                              ]
+                            },
+                            {
+                              "type": "IfCase",
+                              "id": "3s7ie",
+                              "test": {
+                                "id": "8oxrq",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung Grund Staffelmiete"
+                                },
+                                "operator": "is",
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "comparands": [
+                                  "1jbj5"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "type": "Exit",
+                                  "id": "4l2g",
+                                  "alias": "Exit: Mieterhöhung wegen Betriebskosten",
+                                  "text": ""
+                                }
+                              ]
                             }
                           ]
                         }

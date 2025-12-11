@@ -1,12 +1,12 @@
 //import { useLocalizeField } from "~/l10n";
 
-export function ExitMieterhoehungZusaetzlichZurStaffelmiete() {
+export function ExitMieterhoehungStaffelmieteUeberStaffel() {
   //const l = useLocalizeField();
 
   return (
     <>
       <h2 className="heading-24 mb-4">
-        Die Mieterhöhung ist wahrscheinlich teilweise unzulässig{" "}
+        TODO: Die Mieterhöhung ist wahrscheinlich teilweise unzulässig{" "}
       </h2>
       <div className="space-y-3 text-neutral-faded mb-6">
         <p>

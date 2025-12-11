@@ -1,6 +1,6 @@
 //import { useLocalizeField } from "~/l10n";
 
-export function ExitMieterhoehungModernisierungIndexmiete() {
+export function ExitMieterhoehungStaffelmieteModernisierung() {
   //const l = useLocalizeField();
 
   return (
@@ -10,8 +10,7 @@ export function ExitMieterhoehungModernisierungIndexmiete() {
       </h2>
       <div className="space-y-3 text-neutral-faded mb-6">
         <p>
-          Mieterhöhung wegen Moderniersierung bei Indexmieteverträgen nicht
-          erlaubt.
+          Mieterhöhung wegen Moderniersierung bei Staffelmiete nicht erlaubt.
         </p>
       </div>
       <div className="space-y-2 mb-6 text-neutral-faded">
