@@ -14,9 +14,7 @@ export function ExitMieterhoehungIndexmiete() {
           die Miete um die jeweilige Inflationsrate zu erhöhen. In diesem Falle
           kann man nur die Miethöhe zu Beginn des Vertrages überprüfen. Falls du
           dies noch nicht getan hast, gehe noch einmal zurück und wähle bei der
-          ersten Frage "Die Miethöhe zu Beginn des Mietvertrages." und gib als
-          deine Miete an, was du zu Beginn des Mietverhältnisses ohne
-          Betriebskosten gezahlt hast.
+          ersten Frage "Die Miethöhe zu Beginn des Mietvertrages".
         </p>
       </div>
       <div className="space-y-2 mb-6 text-neutral-faded">

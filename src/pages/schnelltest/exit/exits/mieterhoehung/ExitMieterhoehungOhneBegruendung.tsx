@@ -6,7 +6,7 @@ export function ExitMieterhoehungOhneBegruendung() {
   return (
     <>
       <h2 className="heading-24 mb-4">
-        Die Mieterhöhung ist wahrscheinlich unrechtmäßig.
+        TODO: Die Mieterhöhung ist wahrscheinlich unrechtmäßig.
       </h2>
       <div className="space-y-3 text-neutral-faded mb-6">
         <p>
