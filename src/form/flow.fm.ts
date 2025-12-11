@@ -15,7 +15,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -202,7 +203,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -426,7 +428,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -729,7 +732,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
         };
     };
@@ -748,11 +752,29 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
         };
     };
-    "Mieterhöhung wegen Staffelmiete": {
+    "Mieterhöhung Grund Staffelmiete": {
+        answer: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Kaltmiete?: number;
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
+        };
+    };
+    "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel": {
         answer: "Ja" | "Nein";
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -767,9 +789,10 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
         };
     };
-    "Exit: Mieterhöhung wegen Staffelmiete": {
+    "Exit: Mieterhöhung wegen Staffelmiete rechtens": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -784,10 +807,11 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
-    "Exit: Mieterhöhung zusätzlich zur Staffelmiete": {
+    "Exit: Mieterhöhung wegen Staffelmiete über Staffel hinaus": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -802,7 +826,46 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
+        };
+    };
+    "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmiete": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Kaltmiete?: number;
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
+        };
+    };
+    "Exit: Mieterhöhung wegen Modernisierung bei Staffelmiete": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Kaltmiete?: number;
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
     "Mieterhöhung Grund": {
@@ -820,7 +883,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
     "Exit: Mieterhöhung wegen Modernisierung": {
@@ -838,7 +902,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
         };
     };
@@ -857,7 +922,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
         };
     };
@@ -876,7 +942,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
         };
@@ -896,7 +963,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1058,7 +1126,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1079,7 +1148,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1101,7 +1171,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1124,7 +1195,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1148,7 +1220,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1173,7 +1246,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1198,7 +1272,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1224,7 +1299,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1252,7 +1328,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1279,7 +1356,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1441,7 +1519,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1469,7 +1548,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1498,7 +1578,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1527,7 +1608,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1557,7 +1639,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1588,7 +1671,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1622,7 +1706,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1656,7 +1741,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1690,7 +1776,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1725,7 +1812,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1761,7 +1849,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1797,7 +1886,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1833,7 +1923,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1869,7 +1960,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1905,7 +1997,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1942,7 +2035,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -1980,7 +2074,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2019,7 +2114,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2058,7 +2154,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2097,7 +2194,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2136,7 +2234,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2175,7 +2274,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2337,7 +2437,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2499,7 +2600,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2661,7 +2763,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2703,7 +2806,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2742,7 +2846,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2782,7 +2887,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2823,7 +2929,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -2866,7 +2973,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3028,7 +3136,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3071,7 +3180,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3115,7 +3225,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3160,7 +3271,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3206,7 +3318,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3253,7 +3366,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3300,7 +3414,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3347,7 +3462,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3509,7 +3625,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3671,7 +3788,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3833,7 +3951,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3880,7 +3999,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3928,7 +4048,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -3977,7 +4098,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -4139,7 +4261,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -4189,7 +4312,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -4351,7 +4475,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -4402,7 +4527,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -4454,7 +4580,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -4507,7 +4634,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -4669,7 +4797,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -4724,7 +4853,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -4779,7 +4909,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -4941,7 +5072,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -4998,7 +5130,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5056,7 +5189,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5114,7 +5248,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5173,7 +5308,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5233,7 +5369,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5395,7 +5532,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5457,7 +5595,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5519,7 +5658,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5582,7 +5722,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5744,7 +5885,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5808,7 +5950,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5873,7 +6016,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -5940,7 +6084,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -6007,7 +6152,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -6169,7 +6315,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -6238,7 +6385,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -6308,7 +6456,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -6378,7 +6527,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -6540,7 +6690,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -6612,7 +6763,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -6684,7 +6836,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -6758,7 +6911,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -6832,7 +6986,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -6994,7 +7149,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -7070,7 +7226,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -7148,7 +7305,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -7226,7 +7384,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -7388,7 +7547,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -7466,7 +7626,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -7545,7 +7706,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -7626,7 +7788,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -7707,7 +7870,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -7789,7 +7953,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -7873,7 +8038,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -7957,7 +8123,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -8119,7 +8286,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -8204,7 +8372,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -8290,7 +8459,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -8378,7 +8548,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -8540,7 +8711,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -8628,7 +8800,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -8717,7 +8890,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -8807,7 +8981,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -8969,7 +9144,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -9061,7 +9237,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -9153,7 +9330,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -9246,7 +9424,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -9340,7 +9519,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -9502,7 +9682,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -9597,7 +9778,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -9759,7 +9941,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -9856,7 +10039,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -10018,7 +10202,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -10180,7 +10365,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -10277,7 +10463,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -10375,7 +10562,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -10474,7 +10662,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -10636,7 +10825,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -10736,7 +10926,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -10837,7 +11028,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -10939,7 +11131,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -11101,7 +11294,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -11204,7 +11398,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -11309,7 +11504,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -11414,7 +11610,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -11576,7 +11773,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -11682,7 +11880,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -11790,7 +11989,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -11952,7 +12152,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -12060,7 +12261,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -12169,7 +12371,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -12279,7 +12482,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -12390,7 +12594,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -12552,7 +12757,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -12664,7 +12870,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -12779,7 +12986,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -12893,7 +13101,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -13055,7 +13264,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -13170,7 +13380,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -13286,7 +13497,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -13448,7 +13660,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -13565,7 +13778,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -13683,7 +13897,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -13803,7 +14018,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -13923,7 +14139,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -14085,7 +14302,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -14247,7 +14465,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -14368,7 +14587,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -14490,7 +14710,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -14613,7 +14834,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -14737,7 +14959,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -14899,7 +15122,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -15024,7 +15248,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -15150,7 +15375,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -15312,7 +15538,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -15439,7 +15666,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -15567,7 +15795,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -15697,7 +15926,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -15859,7 +16089,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -15992,7 +16223,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -16125,7 +16357,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -16258,7 +16491,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -16420,7 +16654,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -16553,7 +16788,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -16689,7 +16925,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -16824,7 +17061,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -16986,7 +17224,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -17122,7 +17361,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -17260,7 +17500,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -17398,7 +17639,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -17537,7 +17779,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -17677,7 +17920,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -17839,7 +18083,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -18001,7 +18246,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -18142,7 +18388,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -18285,7 +18532,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -18429,7 +18677,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -18591,7 +18840,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -18737,7 +18987,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -18883,7 +19134,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -19029,7 +19281,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -19177,7 +19430,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -19339,7 +19593,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -19501,7 +19756,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -19649,7 +19905,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -19798,7 +20055,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -19948,7 +20206,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -20099,7 +20358,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -20261,7 +20521,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -20414,7 +20675,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -20567,7 +20829,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -20721,7 +20984,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -20876,7 +21140,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -21032,7 +21297,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -21189,7 +21455,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -21351,7 +21618,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -21509,7 +21777,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -21668,7 +21937,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -21828,7 +22098,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;
@@ -21989,7 +22260,8 @@ export type StepInfoByAlias = {
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen Staffelmiete"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
             "Aktuelle Nettokaltmiete"?: number;
             "Geforderte Nettokaltmiete"?: number;

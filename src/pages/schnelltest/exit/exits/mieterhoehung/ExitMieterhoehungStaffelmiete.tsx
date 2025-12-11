@@ -6,8 +6,8 @@ export function ExitMieterhoehungStaffelmiete() {
   return (
     <>
       <h2 className="heading-24 mb-4">
-        Du musst leider nochmal neu anfangen. Bitte lies den Text unterhalb
-        vollständig.
+        TODO: Du musst leider nochmal neu anfangen. Bitte lies den Text
+        unterhalb vollständig.
       </h2>
       <div className="space-y-3 text-neutral-faded mb-6">
         <p>

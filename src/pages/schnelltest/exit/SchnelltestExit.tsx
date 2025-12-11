@@ -9,14 +9,16 @@ import {
   ExitKeinWC,
   ExitMieterhoehungBetriebskosten,
   ExitMieterhoehungIndexmiete,
+  ExitMieterhoehungIndexmieteModernisierung,
   ExitMieterhoehungIndexmieteUeberInflationsrate,
   ExitMieterhoehungIndexmieteWegenMietspiegel,
   ExitMieterhoehungModernisierung,
-  ExitMieterhoehungModernisierungIndexmiete,
   ExitMieterhoehungOhneBegruendung,
   ExitMieterhoehungStaffelmiete,
+  ExitMieterhoehungStaffelmieteModernisierung,
+  ExitMieterhoehungStaffelmieteUeberStaffel,
+  ExitMieterhoehungStaffelmieteWegenMietspiegel,
   ExitMieterhoehungZugestimmt,
-  ExitMieterhoehungZusaetzlichZurStaffelmiete,
   ExitMietspiegeltabelleLeer,
   ExitMietvertragZuAlt,
   ExitMietvertragZuNeu,
@@ -57,16 +59,22 @@ const Exits = {
     <ExitMieterhoehungIndexmieteWegenMietspiegel />
   ),
   "Exit: Mieterhöhung wegen Modernisierung bei Indexmiete": () => (
-    <ExitMieterhoehungModernisierungIndexmiete />
+    <ExitMieterhoehungIndexmieteModernisierung />
   ),
-  "Exit: Mieterhöhung wegen Staffelmiete": () => (
+  "Exit: Mieterhöhung wegen Staffelmiete rechtens": () => (
     <ExitMieterhoehungStaffelmiete />
   ),
   "Exit: Mieterhöhung wegen Betriebskosten": () => (
     <ExitMieterhoehungBetriebskosten />
   ),
-  "Exit: Mieterhöhung zusätzlich zur Staffelmiete": () => (
-    <ExitMieterhoehungZusaetzlichZurStaffelmiete />
+  "Exit: Mieterhöhung wegen Staffelmiete über Staffel hinaus": () => (
+    <ExitMieterhoehungStaffelmieteUeberStaffel />
+  ),
+  "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmiete": () => (
+    <ExitMieterhoehungStaffelmieteWegenMietspiegel />
+  ),
+  "Exit: Mieterhöhung wegen Modernisierung bei Staffelmiete": () => (
+    <ExitMieterhoehungStaffelmieteModernisierung />
   ),
   "Exit: Kappungsgrenze überschritten": () => (
     <ResultKappungsgrenzeUeberschritten />
