@@ -1842,211 +1842,237 @@
           "note": "Diese Frage wird nicht angezeigt"
         },
         {
-          "id": "26zie",
           "type": "If",
+          "id": "nejuz",
           "cases": [
             {
-              "id": "xihob",
               "type": "IfCase",
+              "id": "j0vf3",
               "test": {
-                "id": "lsb48",
-                "type": "LogicalOperation",
-                "operator": "or",
+                "id": "mc0ref",
+                "questionRef": {
+                  "type": "AliasRef",
+                  "value": "Typ"
+                },
+                "operator": "is",
                 "negated": false,
-                "conditions": [
-                  {
-                    "id": "dx7mo",
-                    "type": "LogicalOperation",
-                    "operator": "and",
-                    "negated": false,
-                    "conditions": [
-                      {
-                        "id": "tiqyp",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Vertragsdatum"
-                        },
+                "type": "AnswerOptionComparison",
+                "comparands": [
+                  "wb3w3"
+                ]
+              },
+              "block": [
+                {
+                  "id": "26zie",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "xihob",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "lsb48",
+                        "type": "LogicalOperation",
+                        "operator": "or",
                         "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "wejo0k"
+                        "conditions": [
+                          {
+                            "id": "dx7mo",
+                            "type": "LogicalOperation",
+                            "operator": "and",
+                            "negated": false,
+                            "conditions": [
+                              {
+                                "id": "tiqyp",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Vertragsdatum"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "wejo0k"
+                                ]
+                              },
+                              {
+                                "id": "ieevt",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Baujahr"
+                                },
+                                "negated": false,
+                                "type": "AnswerNumberComparison",
+                                "operator": "gte",
+                                "comparands": [
+                                  {
+                                    "type": "NumberLiteral",
+                                    "value": 2014
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "id": "llc80h",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Baujahr"
+                            },
+                            "negated": false,
+                            "type": "AnswerNumberComparison",
+                            "operator": "gt",
+                            "comparands": [
+                              {
+                                "type": "NumberLiteral",
+                                "value": 2014
+                              }
+                            ]
+                          }
                         ]
                       },
-                      {
-                        "id": "ieevt",
+                      "block": [
+                        {
+                          "id": "8xdme",
+                          "alias": "Exit: Zu neu",
+                          "text": "",
+                          "type": "Exit"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "seaql",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "s4w6r",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Baujahr"
                         },
                         "negated": false,
                         "type": "AnswerNumberComparison",
-                        "operator": "gte",
+                        "operator": "is",
                         "comparands": [
                           {
                             "type": "NumberLiteral",
                             "value": 2014
                           }
                         ]
-                      }
-                    ]
-                  },
-                  {
-                    "id": "llc80h",
-                    "questionRef": {
-                      "type": "AliasRef",
-                      "value": "Baujahr"
-                    },
-                    "negated": false,
-                    "type": "AnswerNumberComparison",
-                    "operator": "gt",
-                    "comparands": [
-                      {
-                        "type": "NumberLiteral",
-                        "value": 2014
-                      }
-                    ]
-                  }
-                ]
-              },
-              "block": [
-                {
-                  "id": "8xdme",
-                  "alias": "Exit: Zu neu",
-                  "text": "",
-                  "type": "Exit"
-                }
-              ]
-            },
-            {
-              "id": "seaql",
-              "type": "IfCase",
-              "test": {
-                "id": "s4w6r",
-                "questionRef": {
-                  "type": "AliasRef",
-                  "value": "Baujahr"
-                },
-                "negated": false,
-                "type": "AnswerNumberComparison",
-                "operator": "is",
-                "comparands": [
-                  {
-                    "type": "NumberLiteral",
-                    "value": 2014
-                  }
-                ]
-              },
-              "block": [
-                {
-                  "id": "vwe93k",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "yermv",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "37vmr",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Dachgeschoss Ausgebaut"
-                        },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "45g3h"
-                        ]
                       },
                       "block": [
                         {
-                          "id": "iu3bt",
-                          "type": "Question",
-                          "alias": "Baujahr vor 1.10.2014",
-                          "text": "Wurde das Dachgeschoss vor dem 01.10.2014 ausgebaut?",
-                          "info": null,
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "q2aer",
-                                "alias": "Ja",
-                                "text": "Ja"
+                          "id": "vwe93k",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "yermv",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "37vmr",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Dachgeschoss Ausgebaut"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "45g3h"
+                                ]
                               },
-                              {
-                                "id": "xx5lz",
-                                "alias": "Nein",
-                                "text": "Nein"
+                              "block": [
+                                {
+                                  "id": "iu3bt",
+                                  "type": "Question",
+                                  "alias": "Baujahr vor 1.10.2014",
+                                  "text": "Wurde das Dachgeschoss vor dem 01.10.2014 ausgebaut?",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "q2aer",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "xx5lz",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "9wzd8",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "required": true
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "oa8jh",
+                              "type": "Question",
+                              "alias": "Baujahr vor 1.10.2014",
+                              "text": "Wurde das Haus, in dem sich die Wohnung befindet, vor dem 01.10.2014 erbaut?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "q2aer",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "xx5lz",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "9wzd8",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
                               },
-                              {
-                                "id": "9wzd8",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
-                              }
-                            ]
-                          },
-                          "required": true
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": [
-                    {
-                      "id": "oa8jh",
-                      "type": "Question",
-                      "alias": "Baujahr vor 1.10.2014",
-                      "text": "Wurde das Haus, in dem sich die Wohnung befindet, vor dem 01.10.2014 erbaut?",
-                      "info": null,
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "q2aer",
-                            "alias": "Ja",
-                            "text": "Ja"
-                          },
-                          {
-                            "id": "xx5lz",
-                            "alias": "Nein",
-                            "text": "Nein"
-                          },
-                          {
-                            "id": "9wzd8",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
-                          }
-                        ]
-                      },
-                      "required": true
-                    }
-                  ]
-                },
-                {
-                  "id": "1upxp",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "552mk",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "8souu",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Baujahr vor 1.10.2014"
+                              "required": true
+                            }
+                          ]
                         },
-                        "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "xx5lz"
-                        ]
-                      },
-                      "block": [
                         {
-                          "id": "wuhshh",
-                          "alias": "Exit: Zu neu",
-                          "text": "",
-                          "type": "Exit"
+                          "id": "1upxp",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "552mk",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "8souu",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Baujahr vor 1.10.2014"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "xx5lz"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "wuhshh",
+                                  "alias": "Exit: Zu neu",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": []
                         }
                       ]
                     }
