@@ -504,7 +504,6 @@
                 {
                   "id": "sokgp",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "dpott",
@@ -524,19 +523,18 @@
                       },
                       "block": [
                         {
-                          "type": "Question",
                           "id": "ka54j",
-                          "text": "Welche Grund hat der Vermieter für die Mieterhöhung angeführt?",
+                          "type": "Question",
                           "alias": "Mieterhöhung Grund Indexmiete",
+                          "text": "Welche Grund hat der Vermieter für die Mieterhöhung angeführt?",
                           "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
-                          "required": true,
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
                               {
                                 "id": "k7vmz",
-                                "text": "Indexmiete, Verbraucherpreisindex oder VPI",
-                                "alias": "Indexmiete"
+                                "alias": "Indexmiete",
+                                "text": "Indexmiete, Verbraucherpreisindex oder VPI"
                               },
                               {
                                 "id": "a2giz",
@@ -550,8 +548,8 @@
                               },
                               {
                                 "id": "1jbj5",
-                                "text": "Erhöhung der Betriebskosten",
-                                "alias": "Betriebskostenerhöhung"
+                                "alias": "Betriebskostenerhöhung",
+                                "text": "Erhöhung der Betriebskosten"
                               },
                               {
                                 "id": "7oedm",
@@ -559,76 +557,69 @@
                                 "text": "Keine der Optionen"
                               }
                             ]
-                          }
+                          },
+                          "required": true
                         },
                         {
-                          "type": "If",
                           "id": "trqbx",
-                          "alternate": [
-                            {
-                              "type": "Exit",
-                              "id": "00ezm",
-                              "alias": "Exit: Mieterhöhung ohne Begründung",
-                              "text": ""
-                            }
-                          ],
+                          "type": "If",
                           "cases": [
                             {
-                              "type": "IfCase",
                               "id": "9zixg",
+                              "type": "IfCase",
                               "test": {
                                 "id": "tkf2j",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Mieterhöhung Grund Indexmiete"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "k7vmz"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Question",
                                   "id": "08kxa",
-                                  "text": "Soll die Miete maximal um die angegebene Inflationsrate angehoben werden?",
+                                  "type": "Question",
                                   "alias": "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate",
+                                  "text": "Soll die Miete maximal um die angegebene Inflationsrate angehoben werden?",
                                   "info": null,
-                                  "required": true,
                                   "answer": {
                                     "type": "ChoiceAnswer",
                                     "options": [
                                       {
                                         "id": "md03a",
-                                        "text": "Ja, die Miete soll maximal um die Inflationsrate angehoben werden",
-                                        "alias": "Ja"
+                                        "alias": "Ja",
+                                        "text": "Ja, die Miete soll maximal um die Inflationsrate angehoben werden"
                                       },
                                       {
                                         "id": "o5fcc",
-                                        "text": "Nein, die Miete soll über die Inflationsrate hinaus angehoben werden",
-                                        "alias": "Nein"
+                                        "alias": "Nein",
+                                        "text": "Nein, die Miete soll über die Inflationsrate hinaus angehoben werden"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "required": true
                                 },
                                 {
-                                  "type": "If",
                                   "id": "yc7cs",
+                                  "type": "If",
                                   "cases": [
                                     {
-                                      "type": "IfCase",
                                       "id": "lrb9q",
+                                      "type": "IfCase",
                                       "test": {
                                         "id": "wxhf7",
                                         "questionRef": {
                                           "type": "AliasRef",
                                           "value": "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"
                                         },
-                                        "operator": "is",
                                         "negated": false,
                                         "type": "AnswerOptionComparison",
+                                        "operator": "is",
                                         "comparands": [
                                           "md03a"
                                         ]
@@ -645,89 +636,97 @@
                                   ],
                                   "alternate": [
                                     {
-                                      "type": "Exit",
                                       "id": "fc7k3",
                                       "alias": "Exit: Mieterhöhung wegen Indexmiete über Inflationsrate hinaus",
-                                      "text": ""
+                                      "text": "",
+                                      "type": "Exit"
                                     }
                                   ]
                                 }
                               ]
                             },
                             {
-                              "type": "IfCase",
                               "id": "m63za",
+                              "type": "IfCase",
                               "test": {
                                 "id": "5r13k",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Mieterhöhung Grund Indexmiete"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "a2giz"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Exit",
                                   "id": "gjsnwf",
                                   "alias": "Exit: Mieterhöhung wegen Mietspiegel bei Indexmiete",
-                                  "text": ""
+                                  "text": "",
+                                  "type": "Exit"
                                 }
                               ]
                             },
                             {
-                              "type": "IfCase",
                               "id": "awh64",
+                              "type": "IfCase",
                               "test": {
                                 "id": "wy4sl",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Mieterhöhung Grund Indexmiete"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "808h4"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Exit",
                                   "id": "2c6f8",
                                   "alias": "Exit: Mieterhöhung wegen Modernisierung bei Indexmiete",
-                                  "text": ""
+                                  "text": "",
+                                  "type": "Exit"
                                 }
                               ]
                             },
                             {
-                              "type": "IfCase",
                               "id": "ns1yt",
+                              "type": "IfCase",
                               "test": {
                                 "id": "df955",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Mieterhöhung Grund Indexmiete"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "1jbj5"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Exit",
                                   "id": "gvsv7",
                                   "alias": "Exit: Mieterhöhung wegen Betriebskosten",
-                                  "text": ""
+                                  "text": "",
+                                  "type": "Exit"
                                 }
                               ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "00ezm",
+                              "alias": "Exit: Mieterhöhung ohne Begründung",
+                              "text": "",
+                              "type": "Exit"
                             }
                           ]
                         }
@@ -751,19 +750,18 @@
                       },
                       "block": [
                         {
-                          "type": "Question",
                           "id": "xglgm",
-                          "text": "Welche Grund hat der Vermieter für die Mieterhöhung angeführt?",
+                          "type": "Question",
                           "alias": "Mieterhöhung Grund Staffelmiete",
+                          "text": "Welche Grund hat der Vermieter für die Mieterhöhung angeführt?",
                           "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
-                          "required": true,
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
                               {
                                 "id": "k7vmz",
-                                "text": "Staffelmiete",
-                                "alias": "Staffelmiete"
+                                "alias": "Staffelmiete",
+                                "text": "Staffelmiete"
                               },
                               {
                                 "id": "a2giz",
@@ -777,8 +775,8 @@
                               },
                               {
                                 "id": "1jbj5",
-                                "text": "Erhöhung der Betriebskosten",
-                                "alias": "Betriebskostenerhöhung"
+                                "alias": "Betriebskostenerhöhung",
+                                "text": "Erhöhung der Betriebskosten"
                               },
                               {
                                 "id": "7oedm",
@@ -786,76 +784,69 @@
                                 "text": "Keine der Optionen"
                               }
                             ]
-                          }
+                          },
+                          "required": true
                         },
                         {
-                          "type": "If",
                           "id": "2dlwxk",
-                          "alternate": [
-                            {
-                              "type": "Exit",
-                              "id": "ehvf",
-                              "alias": "Exit: Mieterhöhung ohne Begründung",
-                              "text": ""
-                            }
-                          ],
+                          "type": "If",
                           "cases": [
                             {
-                              "type": "IfCase",
                               "id": "sjcv3",
+                              "type": "IfCase",
                               "test": {
                                 "id": "vtkke",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Mieterhöhung Grund Staffelmiete"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "k7vmz"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Question",
                                   "id": "09g2n",
-                                  "text": "Soll die Miete maximal um den Mietvertrag vereinbarten Vertrag angehoben werden?",
+                                  "type": "Question",
                                   "alias": "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel",
+                                  "text": "Soll die Miete maximal um den Mietvertrag vereinbarten Vertrag angehoben werden?",
                                   "info": null,
-                                  "required": true,
                                   "answer": {
                                     "type": "ChoiceAnswer",
                                     "options": [
                                       {
                                         "id": "4jt6j",
-                                        "text": "Ja, die Miete soll maximal um den vereinbarten Betrag angehoben werden",
-                                        "alias": "Ja"
+                                        "alias": "Ja",
+                                        "text": "Ja, die Miete soll maximal um den vereinbarten Betrag angehoben werden"
                                       },
                                       {
                                         "id": "o5b28",
-                                        "text": "Nein, die Miete soll über den vereinbarten Betrag hinaus angehoben werden",
-                                        "alias": "Nein"
+                                        "alias": "Nein",
+                                        "text": "Nein, die Miete soll über den vereinbarten Betrag hinaus angehoben werden"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "required": true
                                 },
                                 {
-                                  "type": "If",
                                   "id": "9ypn3",
+                                  "type": "If",
                                   "cases": [
                                     {
-                                      "type": "IfCase",
                                       "id": "s1nx3",
+                                      "type": "IfCase",
                                       "test": {
                                         "id": "qeab8",
                                         "questionRef": {
                                           "type": "AliasRef",
                                           "value": "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"
                                         },
-                                        "operator": "is",
                                         "negated": false,
                                         "type": "AnswerOptionComparison",
+                                        "operator": "is",
                                         "comparands": [
                                           "4jt6j"
                                         ]
@@ -882,85 +873,94 @@
                               ]
                             },
                             {
-                              "type": "IfCase",
                               "id": "2s8lk",
+                              "type": "IfCase",
                               "test": {
                                 "id": "ns6l3",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Mieterhöhung Grund Staffelmiete"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "a2giz"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Exit",
                                   "id": "8f9a3",
                                   "alias": "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmiete",
-                                  "text": ""
+                                  "text": "",
+                                  "type": "Exit"
                                 }
                               ]
                             },
                             {
-                              "type": "IfCase",
                               "id": "t4bvu",
+                              "type": "IfCase",
                               "test": {
                                 "id": "miabv",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Mieterhöhung Grund Staffelmiete"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "808h4"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Exit",
                                   "id": "udu4l",
                                   "alias": "Exit: Mieterhöhung wegen Modernisierung bei Staffelmiete",
-                                  "text": ""
+                                  "text": "",
+                                  "type": "Exit"
                                 }
                               ]
                             },
                             {
-                              "type": "IfCase",
                               "id": "3s7ie",
+                              "type": "IfCase",
                               "test": {
                                 "id": "8oxrq",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Mieterhöhung Grund Staffelmiete"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "1jbj5"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Exit",
                                   "id": "4l2g",
                                   "alias": "Exit: Mieterhöhung wegen Betriebskosten",
-                                  "text": ""
+                                  "text": "",
+                                  "type": "Exit"
                                 }
                               ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "ehvf",
+                              "alias": "Exit: Mieterhöhung ohne Begründung",
+                              "text": "",
+                              "type": "Exit"
                             }
                           ]
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 },
                 {
                   "id": "35d19",
@@ -968,7 +968,6 @@
                   "alias": "Mieterhöhung Grund",
                   "text": "Welche Gründe für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
                   "info": null,
-                  "required": true,
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
@@ -993,12 +992,12 @@
                         "text": "Keine der Optionen"
                       }
                     ]
-                  }
+                  },
+                  "required": true
                 },
                 {
                   "id": "zylzr",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "bqfou",
@@ -1075,7 +1074,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 },
                 {
                   "id": "ez0nm",
@@ -1226,11 +1226,6 @@
                                 "text": "Modernisierung oder bauliche Maßnahmen"
                               },
                               {
-                                "id": "1jbj5",
-                                "alias": "Betriebskostenerhöhung",
-                                "text": "Erhöhung der Betriebskosten"
-                              },
-                              {
                                 "id": "e1agr",
                                 "alias": "Freiwillig Mieterhöhung",
                                 "text": "Freiwillige Mieterhöhung"
@@ -1243,60 +1238,6 @@
                         {
                           "id": "hlu07",
                           "type": "If",
-                          "alternate": [
-                            {
-                              "id": "ott6n",
-                              "type": "Question",
-                              "alias": "Summe Mieterhöhungen ohne Mietspiegel",
-                              "text": "Wie hoch sind alle Mieterhöhungen aufgrund von Modernisierung,  bauliche Maßnahmen, Erhöhung der Betriebskosten, oder freiwillige Mieterhöhung zusammen gerechnet?",
-                              "info": null,
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": true
-                            },
-                            {
-                              "id": "022ko",
-                              "type": "Question",
-                              "alias": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate",
-                              "text": "",
-                              "info": null,
-                              "answer": {
-                                "type": "BooleanAnswer"
-                              },
-                              "required": true
-                            },
-                            {
-                              "id": "qw58h",
-                              "type": "If",
-                              "cases": [
-                                {
-                                  "id": "qy8h8",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "66fxt",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerBooleanComparison",
-                                    "operator": "is",
-                                    "value": true
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "upd5x",
-                                      "alias": "Result: Kappungsgrenze überschritten",
-                                      "text": "",
-                                      "type": "Exit"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "alternate": []
-                            }
-                          ],
                           "cases": [
                             {
                               "id": "8r5e5",
@@ -1329,7 +1270,6 @@
                                 {
                                   "id": "bvb77",
                                   "type": "If",
-                                  "alternate": [],
                                   "cases": [
                                     {
                                       "id": "d4quj",
@@ -1353,6 +1293,61 @@
                                           "type": "Exit"
                                         }
                                       ]
+                                    }
+                                  ],
+                                  "alternate": []
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "ott6n",
+                              "type": "Question",
+                              "alias": "Summe Mieterhöhungen ohne Mietspiegel",
+                              "text": "Wie hoch sind alle Mieterhöhungen aufgrund von Modernisierung,  bauliche Maßnahmen, Erhöhung der Betriebskosten, oder freiwillige Mieterhöhung zusammen gerechnet?",
+                              "info": null,
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "022ko",
+                              "type": "Question",
+                              "alias": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate",
+                              "text": "",
+                              "info": null,
+                              "answer": {
+                                "type": "BooleanAnswer"
+                              },
+                              "required": true
+                            },
+                            {
+                              "id": "qw58h",
+                              "type": "If",
+                              "alternate": [],
+                              "cases": [
+                                {
+                                  "id": "qy8h8",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "66fxt",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerBooleanComparison",
+                                    "operator": "is",
+                                    "value": true
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "upd5x",
+                                      "alias": "Exit: Kappungsgrenze überschritten",
+                                      "text": "",
+                                      "type": "Exit"
                                     }
                                   ]
                                 }
@@ -2049,7 +2044,7 @@
                       "block": [
                         {
                           "id": "wuhshh",
-                          "alias": "Zu neu",
+                          "alias": "Exit: Zu neu",
                           "text": "",
                           "type": "Exit"
                         }

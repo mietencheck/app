@@ -22,7 +22,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -210,7 +210,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -435,7 +435,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -970,7 +970,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1157,7 +1157,7 @@ export type StepInfoByAlias = {
         };
     };
     "Bisherige Mieterhöhung Grund": {
-        answer: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+        answer: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
@@ -1202,7 +1202,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
         };
     };
     "Exit: Kappungsgrenze überschritten": {
@@ -1227,8 +1227,10 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
+            "Summe Mieterhöhungen ohne Mietspiegel"?: number;
+            "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
         };
     };
     "Summe Mieterhöhungen ohne Mietspiegel": {
@@ -1253,7 +1255,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
         };
     };
@@ -1279,38 +1281,9 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
-        };
-    };
-    "Result: Kappungsgrenze überschritten": {
-        answer: null;
-        state: {
-            Typ?: "Miete" | "Mieterhöhung";
-            Adresse?: string;
-            Ost?: boolean;
-            Wohnlage?: "einfach" | "mittel" | "gut";
-            Unterschrieben?: "Ja" | "Nein";
-            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
-            Kaltmiete?: number;
-            "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
-            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
-            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
-            "Aktuelle Nettokaltmiete"?: number;
-            "Geforderte Nettokaltmiete"?: number;
-            "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
-            "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
-            "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
-            "Summe Mieterhöhungen ohne Mietspiegel"?: number;
-            "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
-            "Kappungsgrenze überschritten durch aktuelle Mieterhöhung"?: boolean;
         };
     };
     "Kappungsgrenze überschritten durch aktuelle Mieterhöhung": {
@@ -1335,10 +1308,39 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
+        };
+    };
+    "Result: Kappungsgrenze überschritten": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Kaltmiete?: number;
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Aktuelle Nettokaltmiete"?: number;
+            "Geforderte Nettokaltmiete"?: number;
+            "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
+            "Nettokaltmiete vor 33 Monaten"?: number;
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
+            "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
+            "Summe Mieterhöhungen ohne Mietspiegel"?: number;
+            "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
+            "Kappungsgrenze überschritten durch aktuelle Mieterhöhung"?: boolean;
         };
     };
     Sperrfristen: {
@@ -1363,7 +1365,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1526,7 +1528,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1555,7 +1557,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1585,7 +1587,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1615,7 +1617,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1646,7 +1648,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1678,7 +1680,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1713,7 +1715,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1748,7 +1750,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1783,7 +1785,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1795,6 +1797,7 @@ export type StepInfoByAlias = {
             "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
             "Baujahr ab 1991"?: number;
             Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Baujahr vor 1.10.2014": {
@@ -1819,44 +1822,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
-            "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
-            "Summe Mieterhöhungen ohne Mietspiegel"?: number;
-            "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
-            "Kappungsgrenze überschritten durch aktuelle Mieterhöhung"?: boolean;
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
-            Qm?: number;
-            Dachgeschoss?: "Nicht sicher";
-            "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
-            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
-            "Baujahr ab 1991"?: number;
-            Baujahr?: number;
-            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
-        };
-    };
-    "Zu neu": {
-        answer: null;
-        state: {
-            Typ?: "Miete" | "Mieterhöhung";
-            Adresse?: string;
-            Ost?: boolean;
-            Wohnlage?: "einfach" | "mittel" | "gut";
-            Unterschrieben?: "Ja" | "Nein";
-            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
-            Kaltmiete?: number;
-            "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
-            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
-            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
-            "Aktuelle Nettokaltmiete"?: number;
-            "Geforderte Nettokaltmiete"?: number;
-            "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
-            "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1893,7 +1859,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1930,7 +1896,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -1967,7 +1933,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2004,7 +1970,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2042,7 +2008,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2081,7 +2047,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2121,7 +2087,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2161,7 +2127,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2201,7 +2167,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2241,7 +2207,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2281,7 +2247,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2444,7 +2410,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2607,7 +2573,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2770,7 +2736,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2813,7 +2779,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2853,7 +2819,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2894,7 +2860,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2936,7 +2902,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -2980,7 +2946,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -3143,7 +3109,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -3187,7 +3153,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -3232,7 +3198,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -3278,7 +3244,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -3325,7 +3291,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -3373,7 +3339,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -3421,7 +3387,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -3469,7 +3435,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -3632,7 +3598,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -3795,7 +3761,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -3958,7 +3924,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4006,7 +3972,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4055,7 +4021,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4105,7 +4071,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4268,7 +4234,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4319,7 +4285,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4482,7 +4448,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4534,7 +4500,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4587,7 +4553,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4641,7 +4607,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4804,7 +4770,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4860,7 +4826,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -4916,7 +4882,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5079,7 +5045,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5137,7 +5103,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5196,7 +5162,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5255,7 +5221,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5315,7 +5281,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5376,7 +5342,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5539,7 +5505,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5602,7 +5568,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5665,7 +5631,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5729,7 +5695,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5892,7 +5858,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -5957,7 +5923,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6023,7 +5989,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6091,7 +6057,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6159,7 +6125,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6322,7 +6288,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6392,7 +6358,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6463,7 +6429,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6534,7 +6500,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6697,7 +6663,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6770,7 +6736,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6843,7 +6809,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6918,7 +6884,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -6993,7 +6959,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -7156,7 +7122,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -7233,7 +7199,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -7312,7 +7278,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -7391,7 +7357,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -7554,7 +7520,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -7633,7 +7599,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -7713,7 +7679,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -7795,7 +7761,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -7877,7 +7843,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -7960,7 +7926,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -8045,7 +8011,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -8130,7 +8096,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -8293,7 +8259,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -8379,7 +8345,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -8466,7 +8432,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -8555,7 +8521,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -8718,7 +8684,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -8807,7 +8773,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -8897,7 +8863,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -8988,7 +8954,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -9151,7 +9117,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -9244,7 +9210,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -9337,7 +9303,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -9431,7 +9397,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -9526,7 +9492,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -9689,7 +9655,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -9785,7 +9751,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -9948,7 +9914,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -10046,7 +10012,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -10209,7 +10175,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -10372,7 +10338,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -10470,7 +10436,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -10569,7 +10535,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -10669,7 +10635,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -10832,7 +10798,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -10933,7 +10899,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -11035,7 +11001,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -11138,7 +11104,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -11301,7 +11267,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -11405,7 +11371,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -11511,7 +11477,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -11617,7 +11583,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -11780,7 +11746,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -11887,7 +11853,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -11996,7 +11962,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -12159,7 +12125,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -12268,7 +12234,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -12378,7 +12344,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -12489,7 +12455,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -12601,7 +12567,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -12764,7 +12730,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -12877,7 +12843,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -12993,7 +12959,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -13108,7 +13074,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -13271,7 +13237,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -13387,7 +13353,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -13504,7 +13470,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -13667,7 +13633,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -13785,7 +13751,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -13904,7 +13870,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -14025,7 +13991,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -14146,7 +14112,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -14309,7 +14275,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -14472,7 +14438,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -14594,7 +14560,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -14717,7 +14683,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -14841,7 +14807,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -14966,7 +14932,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -15129,7 +15095,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -15255,7 +15221,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -15382,7 +15348,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -15545,7 +15511,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -15673,7 +15639,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -15802,7 +15768,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -15933,7 +15899,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -16096,7 +16062,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -16230,7 +16196,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -16364,7 +16330,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -16498,7 +16464,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -16661,7 +16627,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -16795,7 +16761,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -16932,7 +16898,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -17068,7 +17034,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -17231,7 +17197,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -17368,7 +17334,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -17507,7 +17473,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -17646,7 +17612,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -17786,7 +17752,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -17927,7 +17893,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -18090,7 +18056,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -18253,7 +18219,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -18395,7 +18361,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -18539,7 +18505,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -18684,7 +18650,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -18847,7 +18813,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -18994,7 +18960,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -19141,7 +19107,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -19288,7 +19254,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -19437,7 +19403,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -19600,7 +19566,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -19763,7 +19729,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -19912,7 +19878,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -20062,7 +20028,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -20213,7 +20179,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -20365,7 +20331,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -20528,7 +20494,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -20682,7 +20648,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -20836,7 +20802,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -20991,7 +20957,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -21147,7 +21113,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -21304,7 +21270,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -21462,7 +21428,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -21625,7 +21591,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -21784,7 +21750,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -21944,7 +21910,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -22105,7 +22071,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
@@ -22267,7 +22233,7 @@ export type StepInfoByAlias = {
             "Geforderte Nettokaltmiete"?: number;
             "Mieterhöhung innerhalb von 3 Jahren"?: "Ja" | "Nein";
             "Nettokaltmiete vor 33 Monaten"?: number;
-            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig Mieterhöhung";
+            "Bisherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Freiwillig Mieterhöhung";
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"?: boolean;
             "Summe Mieterhöhungen ohne Mietspiegel"?: number;
             "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"?: boolean;
