@@ -1108,6 +1108,48 @@
               "alias": "Kappungsgrenze und Sperrfristen",
               "block": [
                 {
+                  "id": "7kd02f",
+                  "type": "Question",
+                  "alias": "Kappungsgrenze überschritten durch aktuelle Mieterhöhung",
+                  "text": "",
+                  "info": null,
+                  "answer": {
+                    "type": "BooleanAnswer"
+                  },
+                  "required": true,
+                  "note": "Ist die geforderte Miete weniger als 15% über der aktuelle Miete."
+                },
+                {
+                  "id": "ppfc7",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "j4ul6",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "yckrf",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Kappungsgrenze überschritten durch aktuelle Mieterhöhung"
+                        },
+                        "negated": false,
+                        "type": "AnswerBooleanComparison",
+                        "operator": "is",
+                        "value": true
+                      },
+                      "block": [
+                        {
+                          "id": "sdqkgj",
+                          "alias": "Result: Kappungsgrenze überschritten",
+                          "text": "",
+                          "type": "Exit"
+                        }
+                      ]
+                    }
+                  ],
+                  "alternate": []
+                },
+                {
                   "id": "b4va8",
                   "type": "Question",
                   "alias": "Mieterhöhung innerhalb von 3 Jahren",
@@ -1133,50 +1175,7 @@
                 {
                   "id": "73x6d",
                   "type": "If",
-                  "alternate": [
-                    {
-                      "id": "7kd02f",
-                      "type": "Question",
-                      "alias": "Kappungsgrenze überschritten durch aktuelle Mieterhöhung",
-                      "text": "",
-                      "info": null,
-                      "answer": {
-                        "type": "BooleanAnswer"
-                      },
-                      "required": true,
-                      "note": "Ist die geforderte Miete weniger als 15% über der aktuelle Miete."
-                    },
-                    {
-                      "id": "ppfc7",
-                      "type": "If",
-                      "cases": [
-                        {
-                          "id": "j4ul6",
-                          "type": "IfCase",
-                          "test": {
-                            "id": "yckrf",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Kappungsgrenze überschritten durch aktuelle Mieterhöhung"
-                            },
-                            "negated": false,
-                            "type": "AnswerBooleanComparison",
-                            "operator": "is",
-                            "value": true
-                          },
-                          "block": [
-                            {
-                              "id": "sdqkgj",
-                              "alias": "Result: Kappungsgrenze überschritten",
-                              "text": "",
-                              "type": "Exit"
-                            }
-                          ]
-                        }
-                      ],
-                      "alternate": []
-                    }
-                  ],
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "bsmdhg",
