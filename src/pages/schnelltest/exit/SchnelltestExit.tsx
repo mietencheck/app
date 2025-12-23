@@ -6,6 +6,7 @@ import { useLocalizeField } from "~/l10n";
 
 import {
   ExitHaeuser,
+  ExitKappungsgrenzeDurchVorherigeMietspiegelMieterhoehungenUeberschritten,
   ExitKeinWC,
   ExitMieterhoehungBetriebskosten,
   ExitMieterhoehungIndexmiete,
@@ -25,7 +26,6 @@ import {
   ExitMoebliert,
   ExitNeubauwohnung,
   ExitSozialwohnungen,
-  ResultKappungsgrenzeUeberschritten,
 } from ".";
 import { StepperType } from "..";
 
@@ -76,9 +76,10 @@ const Exits = {
   "Exit: Mieterhöhung wegen Modernisierung bei Staffelmiete": () => (
     <ExitMieterhoehungStaffelmieteModernisierung />
   ),
-  "Exit: Kappungsgrenze überschritten": () => (
-    <ResultKappungsgrenzeUeberschritten />
-  ),
+  "Exit: Kappungsgrenze durch vorherige Mietspiegel Mieterhöhungen überschritten":
+    () => (
+      <ExitKappungsgrenzeDurchVorherigeMietspiegelMieterhoehungenUeberschritten />
+    ),
 };
 
 export function SchnelltestExit({

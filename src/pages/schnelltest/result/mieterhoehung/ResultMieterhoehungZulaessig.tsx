@@ -1,7 +1,4 @@
-import {
-  getAktuelleNettokaltmiete,
-  getGeforderteNettokaltmiete,
-} from "~/form/api";
+import { getAusgangsmiete, getGeforderteNettokaltmiete } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import {
@@ -23,7 +20,7 @@ export function ResultMieterhöhungZulaessig() {
   const { worst: worstDiff, best: bestDiff } =
     useWorstBestZulaessigeHoechstmieteDiff();
   const aktuelleNettokaltmiete =
-    getAktuelleNettokaltmiete(answers, visibleQuestionAliases) || 0;
+    getAusgangsmiete(answers, visibleQuestionAliases) || 0;
   const geforderteNettokaltmiete =
     getGeforderteNettokaltmiete(answers, visibleQuestionAliases) || 0;
   const l = useLocalizeField();

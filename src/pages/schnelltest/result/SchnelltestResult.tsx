@@ -1,6 +1,6 @@
 import { Button, LinkButton } from "~/components";
 import {
-  getAktuelleNettokaltmiete,
+  getAusgangsmiete,
   getGeforderteNettokaltmiete,
   getTyp,
 } from "~/form/api";
@@ -44,7 +44,7 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
         return <ResultMieteNichtZulaessig />;
       }
     } else {
-      const aktuelleNettokaltmiete = getAktuelleNettokaltmiete(
+      const aktuelleNettokaltmiete = getAusgangsmiete(
         answers,
         visibleQuestionAliases,
       );
