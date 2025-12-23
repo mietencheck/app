@@ -2,13 +2,13 @@ import { expect } from "@playwright/test";
 
 import { createDescriptors, StepParams, StepRunner } from "../../utils/steps";
 
-export const steps = {
+export const actions = {
   gotoSchnelltest: async ({ page }: StepParams<void>) => {
     await page.goto("/schnelltest");
   },
   fillTyp: async ({ page, data }: StepParams<{ option: string }>) => {
     await expect(page.getByText("Was möchtest du überprüfen?")).toBeVisible();
-    const option = data?.option ?? "Mieterhöhung";
+    const option = data?.option ?? "Miete für aktuelle oder neue Wohnung";
     await page.locator("label").filter({ hasText: option }).click();
     await page.getByRole("button", { name: "Nächste Frage" }).click();
   },
@@ -30,44 +30,20 @@ export const steps = {
     await page.locator('[id="downshift-:rl:-input"]').fill(plz);
     await page.getByRole("button", { name: "Nächste Frage" }).click();
   },
-  fillDatumMieterhoehungsschreiben: async ({
+  fillMietvertragUnterschrieben: async ({
     page,
     data,
-  }: StepParams<{ date: string }>) => {
-    const today = new Date();
-    const date = data?.date ?? today.toISOString().slice(0, 10);
-
+  }: StepParams<{ option: string }>) => {
     await expect(
       page.getByText(
-        "An welchem Datum hast du das Schreiben zur Mieterhöhung erhalten?",
+        "Hast du den Mietvertrag für die Wohnung bereits unterschrieben?",
       ),
     ).toBeVisible();
-    await page
-      .getByRole("textbox", { name: "An welchem Datum hast du das" })
-      .fill(date);
-    await page.getByRole("button", { name: "Nächste Frage" }).click();
-  },
-  fillMieterhoehungZugestimmt: async ({
-    page,
-    data,
-  }: StepParams<{ option: "Ja" | "Nein" }>) => {
     const option = data?.option ?? "Ja";
-
-    await expect(
-      page.getByText("Hast du der Mieterhöhung bereits zugestimmt?"),
-    ).toBeVisible();
     await page.locator("label").filter({ hasText: option }).click();
     await page.getByRole("button", { name: "Nächste Frage" }).click();
   },
 } satisfies Record<string, StepRunner<any>>;
 
-export type StepName = keyof typeof steps;
-export type StepDataMap = {
-  [K in StepName]: Parameters<(typeof steps)[K]>[0]["data"];
-};
-export type StepContext<Name extends StepName> = Parameters<
-  (typeof steps)[Name]
->[0];
-export type StepRunnerByName<Name extends StepName> = (typeof steps)[Name];
-
-export const step = createDescriptors(steps);
+export type StepName = keyof typeof actions;
+export const steps = createDescriptors(actions);

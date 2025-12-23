@@ -7,8 +7,13 @@ import {
   StepRunnerByName,
   steps,
 } from "../schnelltest/mieterhoehung/steps";
+import { StepRunner } from "./steps";
 
-type StepDescriptor = (typeof step)[StepName];
+type StepDescriptor = {
+  name: string;
+  run: StepRunner<any>;
+};
+type StepDescriptorByName<Name extends StepName> = (typeof step)[Name];
 
 type FlowStep =
   | StepName
@@ -58,3 +63,11 @@ export class Flow {
     }
   }
 }
+
+export const withData = <Name extends StepName>(
+  descriptor: StepDescriptorByName<Name>,
+  data: StepContext<Name>["data"],
+): FlowStep => ({
+  name: descriptor.name,
+  data,
+});
