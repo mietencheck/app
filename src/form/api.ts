@@ -178,11 +178,11 @@ export const getNettokaltmiete = (
     : undefined;
 };
 
-export const getAktuelleNettokaltmiete = (
+export const getAusgangsmiete = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): number | undefined => {
-  const alias = "Aktuelle Nettokaltmiete";
+  const alias = "Ausgangsmiete";
   return answers[alias] && visibleQuestionAliases?.has(alias)
     ? Number(answers[alias])
     : undefined;

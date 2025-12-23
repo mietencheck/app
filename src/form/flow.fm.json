@@ -1,7 +1,6 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
-  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -1080,7 +1079,7 @@
                 {
                   "id": "ez0nm",
                   "type": "Question",
-                  "alias": "Aktuelle Nettokaltmiete",
+                  "alias": "Ausgangsmiete",
                   "text": "Wie hoch ist die bisherige Nettokaltmiete pro Monat in Euro?",
                   "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
                   "answer": {
@@ -1108,48 +1107,6 @@
               "alias": "Kappungsgrenze und Sperrfristen",
               "block": [
                 {
-                  "id": "7kd02f",
-                  "type": "Question",
-                  "alias": "Kappungsgrenze überschritten durch aktuelle Mieterhöhung",
-                  "text": "",
-                  "info": null,
-                  "answer": {
-                    "type": "BooleanAnswer"
-                  },
-                  "required": true,
-                  "note": "Ist die geforderte Miete weniger als 15% über der aktuelle Miete."
-                },
-                {
-                  "id": "ppfc7",
-                  "type": "If",
-                  "cases": [
-                    {
-                      "id": "j4ul6",
-                      "type": "IfCase",
-                      "test": {
-                        "id": "yckrf",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Kappungsgrenze überschritten durch aktuelle Mieterhöhung"
-                        },
-                        "negated": false,
-                        "type": "AnswerBooleanComparison",
-                        "operator": "is",
-                        "value": true
-                      },
-                      "block": [
-                        {
-                          "id": "sdqkgj",
-                          "alias": "Result: Kappungsgrenze überschritten",
-                          "text": "",
-                          "type": "Exit"
-                        }
-                      ]
-                    }
-                  ],
-                  "alternate": []
-                },
-                {
                   "id": "b4va8",
                   "type": "Question",
                   "alias": "Mieterhöhung innerhalb von 3 Jahren",
@@ -1175,7 +1132,6 @@
                 {
                   "id": "73x6d",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "bsmdhg",
@@ -1254,49 +1210,7 @@
                                   "a2giz"
                                 ]
                               },
-                              "block": [
-                                {
-                                  "id": "shke1",
-                                  "type": "Question",
-                                  "alias": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten",
-                                  "text": "",
-                                  "info": null,
-                                  "answer": {
-                                    "type": "BooleanAnswer"
-                                  },
-                                  "required": true
-                                },
-                                {
-                                  "id": "bvb77",
-                                  "type": "If",
-                                  "cases": [
-                                    {
-                                      "id": "d4quj",
-                                      "type": "IfCase",
-                                      "test": {
-                                        "id": "mfrdog",
-                                        "questionRef": {
-                                          "type": "AliasRef",
-                                          "value": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen in letzten 33 Monaten"
-                                        },
-                                        "negated": false,
-                                        "type": "AnswerBooleanComparison",
-                                        "operator": "is",
-                                        "value": true
-                                      },
-                                      "block": [
-                                        {
-                                          "id": "vum7ef",
-                                          "alias": "Exit: Kappungsgrenze überschritten",
-                                          "text": "",
-                                          "type": "Exit"
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "alternate": []
-                                }
-                              ]
+                              "block": []
                             }
                           ],
                           "alternate": [
@@ -1310,53 +1224,54 @@
                                 "type": "NumberAnswer"
                               },
                               "required": true
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "id": "shke1",
+                          "type": "Question",
+                          "alias": "Kappungsgrenze durch vorherige Mietspiegel Mieterhöhungen überschritten",
+                          "text": "",
+                          "info": null,
+                          "answer": {
+                            "type": "BooleanAnswer"
+                          },
+                          "required": true
+                        },
+                        {
+                          "id": "isr1s",
+                          "type": "If",
+                          "cases": [
                             {
-                              "id": "022ko",
-                              "type": "Question",
-                              "alias": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate",
-                              "text": "",
-                              "info": null,
-                              "answer": {
-                                "type": "BooleanAnswer"
+                              "id": "2th98",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "3wqo6",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Kappungsgrenze durch vorherige Mietspiegel Mieterhöhungen überschritten"
+                                },
+                                "negated": false,
+                                "type": "AnswerBooleanComparison",
+                                "operator": "is",
+                                "value": true
                               },
-                              "required": true
-                            },
-                            {
-                              "id": "qw58h",
-                              "type": "If",
-                              "alternate": [],
-                              "cases": [
+                              "block": [
                                 {
-                                  "id": "qy8h8",
-                                  "type": "IfCase",
-                                  "test": {
-                                    "id": "66fxt",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Kappungsgrenze überschritten durch Mietspiegel Mieterhöhungen ausgenommen anderer Gründe in letzten 33 Monate"
-                                    },
-                                    "negated": false,
-                                    "type": "AnswerBooleanComparison",
-                                    "operator": "is",
-                                    "value": true
-                                  },
-                                  "block": [
-                                    {
-                                      "id": "upd5x",
-                                      "alias": "Exit: Kappungsgrenze überschritten",
-                                      "text": "",
-                                      "type": "Exit"
-                                    }
-                                  ]
+                                  "id": "qnkd1i",
+                                  "alias": "Exit: Kappungsgrenze durch vorherige Mietspiegel Mieterhöhungen überschritten",
+                                  "text": "",
+                                  "type": "Exit"
                                 }
                               ]
                             }
-                          ]
+                          ],
+                          "alternate": []
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 }
               ]
             },
@@ -1841,21 +1756,21 @@
           "note": "Diese Frage wird nicht angezeigt"
         },
         {
-          "type": "If",
           "id": "nejuz",
+          "type": "If",
           "cases": [
             {
-              "type": "IfCase",
               "id": "j0vf3",
+              "type": "IfCase",
               "test": {
                 "id": "mc0ref",
                 "questionRef": {
                   "type": "AliasRef",
                   "value": "Typ"
                 },
-                "operator": "is",
                 "negated": false,
                 "type": "AnswerOptionComparison",
+                "operator": "is",
                 "comparands": [
                   "wb3w3"
                 ]
@@ -13457,5 +13372,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subs": []
 }

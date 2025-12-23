@@ -26,6 +26,14 @@ export function SchnelltestQuestion({
   const answers = useAnswers();
   const l = useLocalizeField();
 
+  // FOO
+  const nettokaltmieteVor33Monaten =
+    answers.getAliasedState()["Nettokaltmiete vor 33 Monaten"];
+
+  const ausgangsmiete = answers.getAliasedState()["Ausgangsmiete"];
+  console.log("nettokaltmieteVor33Monaten", nettokaltmieteVor33Monaten);
+  console.log("ausgangsmiete", ausgangsmiete);
+
   const seenEstimator = useEstimatorSeen();
   const { best: bestDiff } = useWorstBestZulaessigeHoechstmieteDiff();
   const showDetailsLinks = seenEstimator && bestDiff > 0;
