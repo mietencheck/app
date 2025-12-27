@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -1996,7 +1997,36 @@
               ]
             }
           ],
-          "alternate": []
+          "alternate": [
+            {
+              "type": "If",
+              "id": "m4gk7",
+              "alternate": [],
+              "cases": [
+                {
+                  "type": "IfCase",
+                  "id": "yush7",
+                  "block": [],
+                  "test": {
+                    "id": "6tc2j",
+                    "questionRef": {
+                      "type": "AliasRef",
+                      "value": "Baujahr"
+                    },
+                    "operator": "gte",
+                    "negated": false,
+                    "type": "AnswerNumberComparison",
+                    "comparands": [
+                      {
+                        "type": "StringLiteral",
+                        "value": "2018"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
         },
         {
           "id": "nhn6k",
@@ -13372,6 +13402,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }
