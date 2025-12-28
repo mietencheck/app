@@ -139,27 +139,21 @@ function buildKappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung(
 function buildKappungsgrenzeDurchVorherigeMietspiegelMieterhoehungenUeberschritten(
   answers: AnswerMachine,
 ) {
+  const ausgangsmiete = answers.getWithOptionAlias("Ausgangsmiete");
   const nettokaltmieteVor33Monaten = answers.getWithOptionAlias(
     "Nettokaltmiete vor 33 Monaten",
   );
-  const ausgangsmiete = answers.getWithOptionAlias("Ausgangsmiete");
 
   const summeMieterhoehungenOhneMietspiegel =
     answers.getWithOptionAlias("Summe Mieterhöhungen ohne Mietspiegel") || 0;
 
-  if (
-    !nettokaltmieteVor33Monaten ||
-    !ausgangsmiete ||
-    !summeMieterhoehungenOhneMietspiegel
-  ) {
+  if (!nettokaltmieteVor33Monaten || !ausgangsmiete) {
     return false;
   }
 
   const nachKappungsgrenzeZulaessigeMiete =
     Number(nettokaltmieteVor33Monaten) * 1.15 +
     Number(summeMieterhoehungenOhneMietspiegel);
-
-  debugger;
 
   if (Number(nachKappungsgrenzeZulaessigeMiete) >= Number(ausgangsmiete)) {
     return false;
