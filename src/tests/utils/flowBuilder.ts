@@ -4,7 +4,7 @@ import { StepRunner } from "./steps";
 
 type FlowStep<Data = void> = {
   step: StepRunner<Data>;
-  data?: Data;
+  data: Data;
 };
 
 export class Flow {
@@ -12,7 +12,7 @@ export class Flow {
 
   constructor(private page: Page) {}
 
-  use<Data = void>(step: StepRunner<Data>, data?: Data): this {
+  use<Data = void>(step: StepRunner<Data>, data: Data): this {
     this.sequence.push({ step, data });
     return this;
   }

@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -962,6 +963,28 @@
                   "alternate": []
                 },
                 {
+                  "id": "ez0nm",
+                  "type": "Question",
+                  "alias": "Ausgangsmiete",
+                  "text": "Wie hoch ist die aktuelle Nettokaltmiete pro Monat?",
+                  "info": "Wichtig: Die Nettokaltmiete ist etwas anderes als die \"normale\" Kaltmiete. Sie enthält keine Betriebskosten, wie z.B. Kosten für Heizung oder Wasser. Du findest den Betrag in deinem Mietvertrag.",
+                  "answer": {
+                    "type": "NumberAnswer"
+                  },
+                  "required": true
+                },
+                {
+                  "id": "587d",
+                  "type": "Question",
+                  "alias": "Geforderte Nettokaltmiete",
+                  "text": "Wie hoch ist die  Nettokaltmiete pro Monat, welche der Vermieter zukünftig fordert?",
+                  "info": "Diese Information solltest du im Schreiben zur Mieterhöhung finden.",
+                  "answer": {
+                    "type": "NumberAnswer"
+                  },
+                  "required": true
+                },
+                {
                   "id": "35d19",
                   "type": "Question",
                   "alias": "Mieterhöhung Grund",
@@ -1075,28 +1098,6 @@
                     }
                   ],
                   "alternate": []
-                },
-                {
-                  "id": "ez0nm",
-                  "type": "Question",
-                  "alias": "Ausgangsmiete",
-                  "text": "Wie hoch ist die bisherige Nettokaltmiete pro Monat in Euro?",
-                  "info": "Wichtig: Die Nettokaltmiete ist unterschiedlich zur \"normalen\" Kaltmiete. Falls du dir nicht sicher bist, schaue den Wert am besten in deinem Mietvertrag nach. Alternativ, kannst du den Wert auch erstmal schätzen und später korrigieren.",
-                  "answer": {
-                    "type": "NumberAnswer"
-                  },
-                  "required": true
-                },
-                {
-                  "id": "587d",
-                  "type": "Question",
-                  "alias": "Geforderte Nettokaltmiete",
-                  "text": "Wie hoch ist   Nettokaltmiete pro Monat, welche der Vermieter zukünftig fordert?",
-                  "info": "Diese Information findest du im Schreiben zur Mieterhöhung.",
-                  "answer": {
-                    "type": "NumberAnswer"
-                  },
-                  "required": true
                 }
               ]
             },
@@ -1110,8 +1111,8 @@
                   "id": "b4va8",
                   "type": "Question",
                   "alias": "Mieterhöhung innerhalb von 3 Jahren",
-                  "text": "Ist die Miete seit dem $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ bereits schon einmal erhöht worden?",
-                  "info": "Falls es bei dir knapp ist: Es zählt hier das Datum an dem die vorherige Mieterhöhung in Kraft getreten ist, nicht das Datum an dem du Mieterhöhung erhalten hast.",
+                  "text": "Wurde die Miete seit dem $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ bereits schon einmal erhöht?",
+                  "info": "Beachte: Es zählt hier das Datum an dem die vorherige Mieterhöhung in Kraft getreten ist, nicht das Datum an dem du Mieterhöhung erhalten hast.",
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
@@ -1132,6 +1133,7 @@
                 {
                   "id": "73x6d",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "bsmdhg",
@@ -1151,11 +1153,22 @@
                       },
                       "block": [
                         {
+                          "type": "Question",
+                          "id": "3uaz8",
+                          "text": "Gib Mieterhöhungen an",
+                          "alias": "FOO",
+                          "info": null,
+                          "answer": {
+                            "type": "NumberAnswer"
+                          },
+                          "required": true
+                        },
+                        {
                           "id": "z45vj",
                           "type": "Question",
                           "alias": "Nettokaltmiete vor 33 Monaten",
                           "text": "Wie hoch war deine Nettokaltmiete im $MONAT_MIETERHOEHUNG_MINUS_33_MONATE$?",
-                          "info": "Um dies rauszufinden kannst du z.B. in deine Bankauszüge gucken.  Dabei darfst du aber nicht vergessen die Betriebskosten von dem Betrag abzuziehen.",
+                          "info": "Wir benötigen diesen Wert, um zu prüfen, ob die Kappungsgrenze eingehalten wurde.\nUm den richtigen Wert zu finden, schaue bitte in den Mietvertrag, der zu diesem Zeitpunkt gültig war.",
                           "answer": {
                             "type": "NumberAnswer"
                           },
@@ -1165,8 +1178,8 @@
                           "id": "3i26a",
                           "type": "Question",
                           "alias": "Bisherige Mieterhöhung Grund",
-                          "text": "Welche Begründungen wurden in der Mieterhöhung bzw. den Mieterhöhungen angegeben?",
-                          "info": "Du solltest die Begründung in der jeweiligen Mieterhöhung finden. Falls mehrere Begründungen angebgeben wurden, wähle bitte alle aus.",
+                          "text": "Welche Gründe hat der Vermieter  in den bisherigen Mieterhöhungen seit dem $MONAT_MIETERHOEHUNG_MINUS_33_MONATE$ angeführt?",
+                          "info": "Du solltest die Begründung in der jeweiligen Mieterhöhung finden. Falls mehrere Begründungen angegeben wurden, wähle alle genannten aus. Beachte: Der Grund für die aktuelle Mieterhöhung zählt nicht dazu.",
                           "answer": {
                             "type": "MultiChoiceAnswer",
                             "options": [
@@ -1193,6 +1206,19 @@
                         {
                           "id": "hlu07",
                           "type": "If",
+                          "alternate": [
+                            {
+                              "id": "ott6n",
+                              "type": "Question",
+                              "alias": "Summe Mieterhöhungen ohne Mietspiegel",
+                              "text": "Wie hoch sind alle Mieterhöhungen aufgrund von Modernisierung,  bauliche Maßnahmen oder freiwillige Mieterhöhung zusammen gerechnet?",
+                              "info": null,
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": true
+                            }
+                          ],
                           "cases": [
                             {
                               "id": "8r5e5",
@@ -1211,19 +1237,6 @@
                                 ]
                               },
                               "block": []
-                            }
-                          ],
-                          "alternate": [
-                            {
-                              "id": "ott6n",
-                              "type": "Question",
-                              "alias": "Summe Mieterhöhungen ohne Mietspiegel",
-                              "text": "Wie hoch sind alle Mieterhöhungen aufgrund von Modernisierung,  bauliche Maßnahmen, Erhöhung der Betriebskosten, oder freiwillige Mieterhöhung zusammen gerechnet?",
-                              "info": null,
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": true
                             }
                           ]
                         },
@@ -1270,8 +1283,7 @@
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 }
               ]
             },
@@ -13372,6 +13384,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }

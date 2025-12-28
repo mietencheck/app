@@ -52,4 +52,11 @@ export const questionTextVars: Partial<
       });
     },
   },
+  "Bisherige Mieterhöhung Grund": {
+    MONAT_MIETERHOEHUNG_MINUS_33_MONATE: (a) => {
+      const date = new Date(a.get(["Datum Mieterhöhungsschreiben"]) as string);
+      date.setMonth(date.getMonth() - 33);
+      return date.toLocaleDateString("de-DE");
+    },
+  },
 };

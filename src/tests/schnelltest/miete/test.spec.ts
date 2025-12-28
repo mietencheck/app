@@ -50,10 +50,14 @@ const fillMietvertragUnterschrieben = async ({
 test.describe("Schnelltest aktuelle Miete", () => {
   test("Exit: Foo", async ({ page }) => {
     await new Flow(page)
-      .use(gotoSchnelltest)
-      .use(fillTyp)
-      .use(fillAdresse)
-      .use(fillMietvertragUnterschrieben)
+      .use(gotoSchnelltest, undefined)
+      .use(fillTyp, { option: "Miete für aktuelle oder neue Wohnung" })
+      .use(fillAdresse, {
+        strasse: "Weichselstraße",
+        hausnummer: "7",
+        plz: "12043",
+      })
+      .use(fillMietvertragUnterschrieben, { option: "Ja" })
       .run();
 
     //await expect(page.getByText("")).toBeVisible();
