@@ -93,7 +93,7 @@
     "@cloudflare/workers-types": "^4.20241127.0",
     "@playwright/test": "^1.57.0",
     "dts-dom": "^3.7.0",
-    "wrangler": "^3.91.0"
+    "wrangler": "^4.54.0"
   },
   "lint-staged": {
     "*.(ts|tsx|js|json)": "prettier --write"
