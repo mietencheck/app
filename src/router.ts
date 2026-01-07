@@ -10,4 +10,6 @@ export const AppRouter = createRouter({
   Beratung: "/beratung/*",
   PDFs: "/pdfs",
   Error: "/error",
+  Blog: "/blog",
+  BlogPost: "/blog/:slug",
 });

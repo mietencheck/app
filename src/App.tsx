@@ -14,6 +14,12 @@ import { ContinueSessionModal, SESSION_PARAM, useSyncAnswers } from "./session";
 
 const DetailsPage = React.lazy(() => import("~/pages/details"));
 
+const BlogPage = React.lazy(() =>
+  import("./pages/blog").then((module) => ({ default: module.BlogPage })),
+);
+
+const BlogPostPage = React.lazy(() => import("~/pages/blog/post"));
+
 function parseJSONOrUseDirectly(value: unknown) {
   try {
     return JSON.parse(value as string);
@@ -51,9 +57,11 @@ function Router() {
     "Details",
     "Beratung",
     "Error",
+    "Blog",
+    "BlogPost",
   ]);
 
-  if (!route) return null;
+  if (!route) return <div>Route not found: {window.location.pathname}</div>;
   switch (route.name) {
     case "Landing":
       return <LandingPage />;
@@ -71,6 +79,22 @@ function Router() {
       return <ImpressumPage />;
     case "Error":
       throw new Error("in der Hose");
+    case "Blog":
+      return (
+        <Suspense
+          fallback={<div className="p-10 text-center">Lade Blog...</div>}
+        >
+          <BlogPage />
+        </Suspense>
+      );
+    case "BlogPost":
+      return (
+        <Suspense
+          fallback={<div className="p-10 text-center">Lade Artikel...</div>}
+        >
+          <BlogPostPage slug={route.params.slug} />
+        </Suspense>
+      );
     default:
       route satisfies never;
   }
