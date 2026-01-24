@@ -10,4 +10,6 @@ export * from "./ExitMieterhoehungIndexmieteUeberInflationsrate";
 export * from "./ExitMieterhoehungIndexmieteWegenMietspiegel";
 export * from "./ExitMieterhoehungStaffelmieteWegenMietspiegel";
 export * from "./ExitMieterhoehungStaffelmieteModernisierung";
-export * from "./ExitKappungsgrenzeDurchVorherigeMietspiegelMieterhoehungenUeberschritten";
+export * from "./ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten";
+export * from "./ExitKappungsgrenzeUeberschritten";
+export * from "./ExitSperrfirstNichtEingehalten";

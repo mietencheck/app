@@ -25,35 +25,21 @@ export const questionTextVars: Partial<
   >
 > = {
   "Mieterhöhung innerhalb der letzten 15 Monaten": {
-    VON: (a) => {
+    DATUM_MIETERHOEHUNG_MINUS_15_MONATE: (a) => {
       const date = new Date(a.get(["Datum Mieterhöhungsschreiben"]) as string);
       date.setMonth(date.getMonth() - 15);
       return date.toLocaleDateString("de-DE");
     },
-    BIS: (a) =>
-      new Date(
-        a.get(["Datum Mieterhöhungsschreiben"]) as string,
-      ).toLocaleDateString("de-DE"),
   },
-  "Mieterhöhung innerhalb von 3 Jahren": {
+  "Mieterhöhung in letzten 33 Monaten": {
     DATUM_MIETERHOEHUNG_MINUS_33_MONATE: (a) => {
       const date = new Date(a.get(["Datum Mieterhöhungsschreiben"]) as string);
       date.setMonth(date.getMonth() - 33);
       return date.toLocaleDateString("de-DE");
     },
   },
-  "Nettokaltmiete vor 33 Monaten": {
-    MONAT_MIETERHOEHUNG_MINUS_33_MONATE: (a) => {
-      const date = new Date(a.get(["Datum Mieterhöhungsschreiben"]) as string);
-      date.setMonth(date.getMonth() - 33);
-      return date.toLocaleDateString("de-DE", {
-        month: "long",
-        year: "numeric",
-      });
-    },
-  },
-  "Bisherige Mieterhöhung Grund": {
-    MONAT_MIETERHOEHUNG_MINUS_33_MONATE: (a) => {
+  "Kappungsgrenze überschritten": {
+    DATUM_MIETERHOEHUNG_MINUS_33_MONATE: (a) => {
       const date = new Date(a.get(["Datum Mieterhöhungsschreiben"]) as string);
       date.setMonth(date.getMonth() - 33);
       return date.toLocaleDateString("de-DE");

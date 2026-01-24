@@ -33,6 +33,7 @@ export function Node({ step }: { step: Step }) {
           />
           {step.info && (
             <FormDescription
+              alias={step.alias}
               description={step.info}
               className="text-base text-neutral-faded mt-1.5"
             />

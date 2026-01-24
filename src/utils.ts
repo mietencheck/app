@@ -40,6 +40,13 @@ export const formatEuro = (n: number) =>
     ...({ trailingZeroDisplay: "stripIfInteger" } as object),
   }).format(n);
 
+export const formatPercent = (n: number) =>
+  new Intl.NumberFormat("de-DE", {
+    style: "percent",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 1,
+  }).format(n);
+
 export const formatDate = (n: string) =>
   new Date(n).toLocaleDateString("de-DE");
 

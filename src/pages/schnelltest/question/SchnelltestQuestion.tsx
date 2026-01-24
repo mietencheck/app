@@ -43,6 +43,7 @@ export function SchnelltestQuestion({
       />
       {step.info && (
         <FormDescription
+          alias={step.alias}
           description={step.info}
           className="text-base text-neutral-faded mt-3"
         />

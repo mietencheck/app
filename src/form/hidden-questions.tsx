@@ -3,5 +3,5 @@ export const HIDDEN_QUESTIONS = ["Ost", "Wohnlage", "Baujahr"];
 export const HIDDEN_QUESTIONS_FOR_MIETERHOEHUNG = [
   "Vertragsdatum",
   "Datum Eintritt Mieterhöhung",
-  "Kappungsgrenze durch vorherige Mietspiegel Mieterhöhungen überschritten",
+  "Kappungsgrenze durch aktuelle Mieterhöhung überschritten",
 ];

@@ -963,33 +963,11 @@
                   "alternate": []
                 },
                 {
-                  "id": "ez0nm",
-                  "type": "Question",
-                  "alias": "Ausgangsmiete",
-                  "text": "Wie hoch ist die aktuelle Nettokaltmiete pro Monat?",
-                  "info": "Wichtig: Die Nettokaltmiete ist etwas anderes als die \"normale\" Kaltmiete. Sie enthält keine Betriebskosten, wie z.B. Kosten für Heizung oder Wasser. Du findest den Betrag in deinem Mietvertrag.",
-                  "answer": {
-                    "type": "NumberAnswer"
-                  },
-                  "required": true
-                },
-                {
-                  "id": "587d",
-                  "type": "Question",
-                  "alias": "Geforderte Nettokaltmiete",
-                  "text": "Wie hoch ist die  Nettokaltmiete pro Monat, welche der Vermieter zukünftig fordert?",
-                  "info": "Diese Information solltest du im Schreiben zur Mieterhöhung finden.",
-                  "answer": {
-                    "type": "NumberAnswer"
-                  },
-                  "required": true
-                },
-                {
                   "id": "35d19",
                   "type": "Question",
                   "alias": "Mieterhöhung Grund",
-                  "text": "Welche Gründe für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
-                  "info": null,
+                  "text": "Welche Grund für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
+                  "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
@@ -1098,6 +1076,28 @@
                     }
                   ],
                   "alternate": []
+                },
+                {
+                  "id": "ez0nm",
+                  "type": "Question",
+                  "alias": "Ausgangsmiete",
+                  "text": "Wie hoch ist die aktuelle Nettokaltmiete pro Monat?",
+                  "info": "Wichtig: Die Nettokaltmiete ist etwas anderes als die \"normale\" Kaltmiete. Sie enthält keine Betriebskosten, wie z.B. Kosten für Heizung oder Wasser. Du findest den Betrag in deinem Mietvertrag.",
+                  "answer": {
+                    "type": "NumberAnswer"
+                  },
+                  "required": true
+                },
+                {
+                  "id": "587d",
+                  "type": "Question",
+                  "alias": "Geforderte Nettokaltmiete",
+                  "text": "Wie hoch ist die  Nettokaltmiete pro Monat, welche der Vermieter zukünftig fordert?",
+                  "info": "Diese Information solltest du im Schreiben zur Mieterhöhung finden.",
+                  "answer": {
+                    "type": "NumberAnswer"
+                  },
+                  "required": true
                 }
               ]
             },
@@ -1108,178 +1108,156 @@
               "alias": "Kappungsgrenze und Sperrfristen",
               "block": [
                 {
-                  "id": "b4va8",
                   "type": "Question",
-                  "alias": "Mieterhöhung innerhalb von 3 Jahren",
-                  "text": "Wurde die Miete seit dem $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ bereits schon einmal erhöht?",
-                  "info": "Beachte: Es zählt hier das Datum an dem die vorherige Mieterhöhung in Kraft getreten ist, nicht das Datum an dem du Mieterhöhung erhalten hast.",
+                  "id": "fnzn6",
+                  "text": "",
+                  "alias": "Kappungsgrenze durch aktuelle Mieterhöhung überschritten",
+                  "info": null,
+                  "required": true,
+                  "answer": {
+                    "type": "BooleanAnswer"
+                  }
+                },
+                {
+                  "type": "If",
+                  "id": "q4nlyh",
+                  "alternate": [],
+                  "cases": [
+                    {
+                      "type": "IfCase",
+                      "id": "cokbv",
+                      "test": {
+                        "type": "AnswerBooleanComparison",
+                        "operator": "is",
+                        "value": true,
+                        "id": "0s24g",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"
+                        },
+                        "negated": false
+                      },
+                      "block": [
+                        {
+                          "type": "Exit",
+                          "id": "p3uir",
+                          "alias": "Exit: Kappungsgrenze durch aktuelle Mieterhöhung überschritten",
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "Question",
+                  "id": "knmz2k",
+                  "text": "Wurde die Miete seit dem $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ schon einmal erhöht?",
+                  "alias": "Mieterhöhung in letzten 33 Monaten",
+                  "info": null,
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
                       {
-                        "id": "889i3",
-                        "alias": "Ja",
-                        "text": "Ja, die Miete wurde in dieser Zeit bereits erhöht"
+                        "id": "ggo2s",
+                        "text": "Ja",
+                        "alias": "Ja"
                       },
                       {
-                        "id": "6ft55",
-                        "alias": "Nein",
-                        "text": "Nein, die Miete wurde in dieser Zeit noch nicht erhöht"
+                        "id": "b8nwa",
+                        "text": "Nein",
+                        "alias": "Nein"
+                      },
+                      {
+                        "id": "whpa6",
+                        "text": "Ich bin mir nicht sicher",
+                        "alias": "Nicht sicher"
                       }
                     ]
                   },
                   "required": true
                 },
                 {
-                  "id": "73x6d",
                   "type": "If",
+                  "id": "hu6h5",
                   "alternate": [],
                   "cases": [
                     {
-                      "id": "bsmdhg",
                       "type": "IfCase",
+                      "id": "pnio6",
                       "test": {
-                        "id": "stjwo",
+                        "id": "i2o8h",
                         "questionRef": {
                           "type": "AliasRef",
-                          "value": "Mieterhöhung innerhalb von 3 Jahren"
+                          "value": "Mieterhöhung in letzten 33 Monaten"
                         },
+                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
-                        "operator": "is",
                         "comparands": [
-                          "889i3"
+                          "ggo2s",
+                          "whpa6"
                         ]
                       },
                       "block": [
                         {
+                          "id": "aohxx",
                           "type": "Question",
-                          "id": "3uaz8",
-                          "text": "Gib Mieterhöhungen an",
-                          "alias": "FOO",
-                          "info": null,
+                          "alias": "Kappungsgrenze überschritten",
+                          "text": "Wird die gesetzliche Kappungsgrenze durch die Mieterhöhung überschritten?  ",
+                          "info": "Dies ist der Fall, wenn die geforderte Nettokaltmiete im Vergleich zur Nettokaltmiete am $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ um mehr als 15% gestiegen ist. Wichtig: Erhöhungen wegen Modernisierungen oder gestiegenen Betriebskosten zählen nicht zur Kappungsgrenze und dürfen bei der Berechnung nicht mitgezählt werden.",
                           "answer": {
-                            "type": "NumberAnswer"
-                          },
-                          "required": true
-                        },
-                        {
-                          "id": "z45vj",
-                          "type": "Question",
-                          "alias": "Nettokaltmiete vor 33 Monaten",
-                          "text": "Wie hoch war deine Nettokaltmiete im $MONAT_MIETERHOEHUNG_MINUS_33_MONATE$?",
-                          "info": "Wir benötigen diesen Wert, um zu prüfen, ob die Kappungsgrenze eingehalten wurde.\nUm den richtigen Wert zu finden, schaue bitte in den Mietvertrag, der zu diesem Zeitpunkt gültig war.",
-                          "answer": {
-                            "type": "NumberAnswer"
-                          },
-                          "required": true
-                        },
-                        {
-                          "id": "3i26a",
-                          "type": "Question",
-                          "alias": "Bisherige Mieterhöhung Grund",
-                          "text": "Welche Gründe hat der Vermieter  in den bisherigen Mieterhöhungen seit dem $MONAT_MIETERHOEHUNG_MINUS_33_MONATE$ angeführt?",
-                          "info": "Du solltest die Begründung in der jeweiligen Mieterhöhung finden. Falls mehrere Begründungen angegeben wurden, wähle alle genannten aus. Beachte: Der Grund für die aktuelle Mieterhöhung zählt nicht dazu.",
-                          "answer": {
-                            "type": "MultiChoiceAnswer",
+                            "type": "ChoiceAnswer",
                             "options": [
                               {
-                                "id": "a2giz",
-                                "alias": "Mietspiegel",
-                                "text": "Mietspiegel, Vergleichsmieten oder § 558 BGB"
+                                "id": "ggo2s",
+                                "text": "Ja",
+                                "alias": "Ja"
                               },
                               {
-                                "id": "808h4",
-                                "alias": "Modernisierung",
-                                "text": "Modernisierung oder bauliche Maßnahmen"
+                                "id": "b8nwa",
+                                "text": "Nein",
+                                "alias": "Nein"
                               },
                               {
-                                "id": "e1agr",
-                                "alias": "Freiwillig Mieterhöhung",
-                                "text": "Freiwillige Mieterhöhung"
+                                "id": "whpa6",
+                                "text": "Ich bin mir nicht sicher",
+                                "alias": "Nicht sicher"
                               }
                             ]
                           },
-                          "required": true,
-                          "note": "\n\nVor 3 Jahren: 100€\n\nVor 2 Jahren:\nModerniersierung: 50€\n\nHeute:\nMieterhöhung um 15€\n\n100€ + 50€\n150€ + 15% = 172.5€\n\n\n100€ + 15€ + 50€ = 165€\n"
-                        },
-                        {
-                          "id": "hlu07",
-                          "type": "If",
-                          "alternate": [
-                            {
-                              "id": "ott6n",
-                              "type": "Question",
-                              "alias": "Summe Mieterhöhungen ohne Mietspiegel",
-                              "text": "Wie hoch sind alle Mieterhöhungen aufgrund von Modernisierung,  bauliche Maßnahmen oder freiwillige Mieterhöhung zusammen gerechnet?",
-                              "info": null,
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": true
-                            }
-                          ],
-                          "cases": [
-                            {
-                              "id": "8r5e5",
-                              "type": "IfCase",
-                              "test": {
-                                "id": "v3z6q",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Bisherige Mieterhöhung Grund"
-                                },
-                                "negated": false,
-                                "type": "AnswerMultiOptionComparison",
-                                "operator": "isExactly",
-                                "comparands": [
-                                  "a2giz"
-                                ]
-                              },
-                              "block": []
-                            }
-                          ]
-                        },
-                        {
-                          "id": "shke1",
-                          "type": "Question",
-                          "alias": "Kappungsgrenze durch vorherige Mietspiegel Mieterhöhungen überschritten",
-                          "text": "",
-                          "info": null,
-                          "answer": {
-                            "type": "BooleanAnswer"
-                          },
                           "required": true
                         },
                         {
-                          "id": "isr1s",
                           "type": "If",
+                          "id": "fvuje",
+                          "alternate": [],
                           "cases": [
                             {
-                              "id": "2th98",
                               "type": "IfCase",
+                              "id": "x6g41k",
                               "test": {
-                                "id": "3wqo6",
+                                "id": "hnpeni",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Kappungsgrenze durch vorherige Mietspiegel Mieterhöhungen überschritten"
+                                  "value": "Kappungsgrenze überschritten"
                                 },
-                                "negated": false,
-                                "type": "AnswerBooleanComparison",
                                 "operator": "is",
-                                "value": true
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "comparands": [
+                                  "ggo2s"
+                                ]
                               },
                               "block": [
                                 {
-                                  "id": "qnkd1i",
-                                  "alias": "Exit: Kappungsgrenze durch vorherige Mietspiegel Mieterhöhungen überschritten",
-                                  "text": "",
-                                  "type": "Exit"
+                                  "type": "Exit",
+                                  "id": "6o4f1",
+                                  "alias": "Exit: Kappungsgrenze überschritten",
+                                  "text": ""
                                 }
                               ]
                             }
-                          ],
-                          "alternate": []
+                          ]
                         }
                       ]
                     }
@@ -1288,37 +1266,39 @@
               ]
             },
             {
-              "id": "4zh3s",
-              "type": "If",
-              "cases": [
+              "id": "udq5",
+              "type": "Group",
+              "category": null,
+              "alias": "Sperrfristen",
+              "block": [
                 {
-                  "id": "swf23",
-                  "type": "IfCase",
-                  "test": {
-                    "id": "xx45t",
-                    "questionRef": {
-                      "type": "AliasRef",
-                      "value": "Mieterhöhung innerhalb von 3 Jahren"
-                    },
-                    "negated": false,
-                    "type": "AnswerOptionComparison",
-                    "operator": "is",
-                    "comparands": [
-                      "889i3"
-                    ]
-                  },
-                  "block": [
+                  "type": "If",
+                  "id": "h7ngdj",
+                  "alternate": [],
+                  "cases": [
                     {
-                      "id": "udq5",
-                      "type": "Group",
-                      "category": null,
-                      "alias": "Sperrfristen",
+                      "type": "IfCase",
+                      "id": "xglyn",
+                      "test": {
+                        "id": "p7e6g",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Mieterhöhung in letzten 33 Monaten"
+                        },
+                        "operator": "is",
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "comparands": [
+                          "ggo2s",
+                          "whpa6"
+                        ]
+                      },
                       "block": [
                         {
                           "id": "28yusg",
                           "type": "Question",
                           "alias": "Mieterhöhung innerhalb der letzten 15 Monaten",
-                          "text": "Hast du seit dem $VON$ bereits eine Mieterhöhung mit Bezug auf Mietspiegel, Vergleichsmieten oder § 558 BGB erhalten?",
+                          "text": "Gab es seit dem $DATUM_MIETERHOEHUNG_MINUS_15_MONATE$  bereits eine Mieterhöhung, die mit dem Mietspiegel, Vergleichsmieten oder § 558 BGB begründet wurde?",
                           "info": null,
                           "answer": {
                             "type": "ChoiceAnswer",
@@ -1373,8 +1353,7 @@
                     }
                   ]
                 }
-              ],
-              "alternate": []
+              ]
             }
           ]
         },
