@@ -110,7 +110,7 @@ function buildBaujahr(answers: AnswerMachine) {
   }
 }
 
-function buildKappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung(
+function buildKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten(
   answers: AnswerMachine,
 ) {
   const ausgangsmiete = answers.getWithOptionAlias("Ausgangsmiete");
@@ -128,32 +128,6 @@ function buildKappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung(
     Number(nachKappungsgrenzeZulaessigeMiete) >=
     Number(geforderteNettokaltmiete)
   ) {
-    return false;
-  } else {
-    return true;
-  }
-}
-
-function buildKappungsgrenzeDurchVorherigeMietspiegelMieterhoehungenUeberschritten(
-  answers: AnswerMachine,
-) {
-  const ausgangsmiete = answers.getWithOptionAlias("Ausgangsmiete");
-  const nettokaltmieteVor33Monaten = answers.getWithOptionAlias(
-    "Nettokaltmiete vor 33 Monaten",
-  );
-
-  const summeMieterhoehungenOhneMietspiegel =
-    answers.getWithOptionAlias("Summe Mieterhöhungen ohne Mietspiegel") || 0;
-
-  if (!nettokaltmieteVor33Monaten || !ausgangsmiete) {
-    return false;
-  }
-
-  const nachKappungsgrenzeZulaessigeMiete =
-    Number(nettokaltmieteVor33Monaten) * 1.15 +
-    Number(summeMieterhoehungenOhneMietspiegel);
-
-  if (Number(nachKappungsgrenzeZulaessigeMiete) >= Number(ausgangsmiete)) {
     return false;
   } else {
     return true;
@@ -181,14 +155,8 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
     const vertragsdatum = buildVertragsdatum(bareAnswers);
     const lageInfo = buildLageInfo(bareAnswers);
     const baujahr = buildBaujahr(bareAnswers);
-
-    // Mieterhoehungen
-    const kappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung =
-      buildKappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung(bareAnswers);
-    const kappungsgrenzeDurchVorherigeMietspiegelMieterhoehungenUeberschritten =
-      buildKappungsgrenzeDurchVorherigeMietspiegelMieterhoehungenUeberschritten(
-        bareAnswers,
-      );
+    const kappungsgrenzeDurchAktuelleMieterhoehungUeberschritten =
+      buildKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten(bareAnswers);
 
     const value = {
       ...storedAnswers,
@@ -196,10 +164,8 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
       Wohnlage: lageInfo?.wohnlage ?? null,
       Baujahr: baujahr || null,
       Vertragsdatum: vertragsdatum || null,
-      "Kappungsgrenze überschritten durch aktuelle Mieterhöhung":
-        kappungsgrenzeUeberschrittenDurchAktuelleMieterhoehung,
-      "Kappungsgrenze durch vorherige Mietspiegel Mieterhöhungen überschritten":
-        kappungsgrenzeDurchVorherigeMietspiegelMieterhoehungenUeberschritten,
+      "Kappungsgrenze durch aktuelle Mieterhöhung überschritten":
+        kappungsgrenzeDurchAktuelleMieterhoehungUeberschritten || null,
     };
     postMessageToFloma("Answers", { value });
     return flowMachine.answers(value, setStoredAnswers);

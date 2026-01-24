@@ -198,16 +198,6 @@ export const getGeforderteNettokaltmiete = (
     : undefined;
 };
 
-export const getNettokaltmieteVor33Monaten = (
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
-): number | undefined => {
-  const alias = "Nettokaltmiete vor 33 Monaten";
-  return answers[alias] && visibleQuestionAliases?.has(alias)
-    ? Number(answers[alias])
-    : undefined;
-};
-
 export const getAusstattung = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
