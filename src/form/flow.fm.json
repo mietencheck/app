@@ -1304,14 +1304,19 @@
                             "type": "ChoiceAnswer",
                             "options": [
                               {
-                                "id": "7na8k",
-                                "alias": "Ja",
-                                "text": "Ja"
+                                "id": "ggo2s",
+                                "text": "Ja",
+                                "alias": "Ja"
                               },
                               {
-                                "id": "nrr2e",
-                                "alias": "Nein",
-                                "text": "Nein"
+                                "id": "b8nwa",
+                                "text": "Nein",
+                                "alias": "Nein"
+                              },
+                              {
+                                "id": "whpa6",
+                                "text": "Ich bin mir nicht sicher",
+                                "alias": "Nicht sicher"
                               }
                             ]
                           },
@@ -1320,10 +1325,19 @@
                         {
                           "id": "pg576",
                           "type": "If",
+                          "alternate": [],
                           "cases": [
                             {
                               "id": "6dtd9",
                               "type": "IfCase",
+                              "block": [
+                                {
+                                  "id": "3moz9h",
+                                  "alias": "Exit: Sperrfristen nicht eingehalten",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ],
                               "test": {
                                 "id": "fecq1",
                                 "questionRef": {
@@ -1334,20 +1348,11 @@
                                 "type": "AnswerOptionComparison",
                                 "operator": "is",
                                 "comparands": [
-                                  "7na8k"
+                                  "ggo2s"
                                 ]
-                              },
-                              "block": [
-                                {
-                                  "id": "3moz9h",
-                                  "alias": "Exit: Sperrfristen nicht eingehalten",
-                                  "text": "",
-                                  "type": "Exit"
-                                }
-                              ]
+                              }
                             }
-                          ],
-                          "alternate": []
+                          ]
                         }
                       ]
                     }
