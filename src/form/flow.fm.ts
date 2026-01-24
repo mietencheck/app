@@ -23,7 +23,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -207,7 +207,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -428,7 +428,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -959,7 +959,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1235,7 +1235,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1372,7 +1372,7 @@ export type StepInfoByAlias = {
         };
     };
     "Mieterhöhung innerhalb der letzten 15 Monaten": {
-        answer: "Ja" | "Nein";
+        answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
@@ -1419,7 +1419,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     Qm: {
@@ -1445,7 +1445,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     Dachgeschoss: {
@@ -1471,7 +1471,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
         };
     };
@@ -1498,7 +1498,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
         };
@@ -1526,7 +1526,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1557,7 +1557,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1588,7 +1588,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1619,7 +1619,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1652,7 +1652,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1685,7 +1685,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1718,7 +1718,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1751,7 +1751,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1784,7 +1784,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1818,7 +1818,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1853,7 +1853,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1889,7 +1889,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1925,7 +1925,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1961,7 +1961,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1997,7 +1997,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2033,7 +2033,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2192,7 +2192,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2351,7 +2351,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2510,7 +2510,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2549,7 +2549,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2585,7 +2585,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2622,7 +2622,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2660,7 +2660,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2700,7 +2700,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2859,7 +2859,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2899,7 +2899,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2940,7 +2940,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2982,7 +2982,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3025,7 +3025,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3069,7 +3069,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3113,7 +3113,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3157,7 +3157,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3316,7 +3316,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3475,7 +3475,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3634,7 +3634,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3678,7 +3678,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3723,7 +3723,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3769,7 +3769,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3928,7 +3928,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3975,7 +3975,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4134,7 +4134,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4182,7 +4182,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4231,7 +4231,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4281,7 +4281,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4440,7 +4440,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4492,7 +4492,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4544,7 +4544,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4703,7 +4703,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4757,7 +4757,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4812,7 +4812,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4867,7 +4867,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4923,7 +4923,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4980,7 +4980,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5139,7 +5139,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5198,7 +5198,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5257,7 +5257,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5317,7 +5317,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5476,7 +5476,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5537,7 +5537,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5599,7 +5599,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5663,7 +5663,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5727,7 +5727,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5886,7 +5886,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5952,7 +5952,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6019,7 +6019,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6086,7 +6086,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6245,7 +6245,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6314,7 +6314,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6383,7 +6383,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6454,7 +6454,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6525,7 +6525,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6684,7 +6684,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6757,7 +6757,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6832,7 +6832,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6907,7 +6907,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7066,7 +7066,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7141,7 +7141,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7217,7 +7217,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7295,7 +7295,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7373,7 +7373,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7452,7 +7452,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7533,7 +7533,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7614,7 +7614,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7773,7 +7773,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7855,7 +7855,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7938,7 +7938,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8023,7 +8023,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8182,7 +8182,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8267,7 +8267,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8353,7 +8353,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8440,7 +8440,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8599,7 +8599,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8688,7 +8688,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8777,7 +8777,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8867,7 +8867,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8958,7 +8958,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9117,7 +9117,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9209,7 +9209,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9368,7 +9368,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9462,7 +9462,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9621,7 +9621,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9780,7 +9780,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9874,7 +9874,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9969,7 +9969,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10065,7 +10065,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10224,7 +10224,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10321,7 +10321,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10419,7 +10419,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10518,7 +10518,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10677,7 +10677,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10777,7 +10777,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10879,7 +10879,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10981,7 +10981,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11140,7 +11140,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11243,7 +11243,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11348,7 +11348,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11507,7 +11507,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11612,7 +11612,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11718,7 +11718,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11825,7 +11825,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11933,7 +11933,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12092,7 +12092,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12201,7 +12201,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12313,7 +12313,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12424,7 +12424,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12583,7 +12583,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12695,7 +12695,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12808,7 +12808,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12967,7 +12967,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13081,7 +13081,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13196,7 +13196,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13313,7 +13313,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13430,7 +13430,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13589,7 +13589,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13748,7 +13748,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13866,7 +13866,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13985,7 +13985,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14105,7 +14105,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14226,7 +14226,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14385,7 +14385,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14507,7 +14507,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14630,7 +14630,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14789,7 +14789,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14913,7 +14913,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15038,7 +15038,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15165,7 +15165,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15324,7 +15324,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15454,7 +15454,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15584,7 +15584,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15714,7 +15714,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15873,7 +15873,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16003,7 +16003,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16136,7 +16136,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16268,7 +16268,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16427,7 +16427,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16560,7 +16560,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16695,7 +16695,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16830,7 +16830,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16966,7 +16966,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17103,7 +17103,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17262,7 +17262,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17421,7 +17421,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17559,7 +17559,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17699,7 +17699,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17840,7 +17840,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17999,7 +17999,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18142,7 +18142,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18285,7 +18285,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18428,7 +18428,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18573,7 +18573,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18732,7 +18732,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18891,7 +18891,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19036,7 +19036,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19182,7 +19182,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19329,7 +19329,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19477,7 +19477,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19636,7 +19636,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19786,7 +19786,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19936,7 +19936,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20087,7 +20087,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20239,7 +20239,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20392,7 +20392,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20546,7 +20546,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20705,7 +20705,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20860,7 +20860,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21016,7 +21016,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21173,7 +21173,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21331,7 +21331,7 @@ export type StepInfoByAlias = {
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
             Dachgeschoss?: "Nicht sicher";
             "Dachgeschoss Ausgebaut"?: "Ja" | "Nein" | "Nicht sicher";
