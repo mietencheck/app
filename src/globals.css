@@ -237,6 +237,10 @@ body {
     @apply text-xl/[132%] font-600;
   }
 
+  .title-22 {
+    @apply text-[22px]/[132%] font-600;
+  }
+
   .title-24 {
     @apply text-2xl/[132%] font-600;
   }
