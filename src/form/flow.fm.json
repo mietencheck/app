@@ -1,7 +1,6 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
-  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -1108,91 +1107,90 @@
               "alias": "Kappungsgrenze und Sperrfristen",
               "block": [
                 {
-                  "type": "Question",
                   "id": "fnzn6",
-                  "text": "",
+                  "type": "Question",
                   "alias": "Kappungsgrenze durch aktuelle Mieterhöhung überschritten",
+                  "text": "",
                   "info": null,
-                  "required": true,
                   "answer": {
                     "type": "BooleanAnswer"
-                  }
+                  },
+                  "required": true
                 },
                 {
-                  "type": "If",
                   "id": "q4nlyh",
-                  "alternate": [],
+                  "type": "If",
                   "cases": [
                     {
-                      "type": "IfCase",
                       "id": "cokbv",
+                      "type": "IfCase",
                       "test": {
-                        "type": "AnswerBooleanComparison",
-                        "operator": "is",
-                        "value": true,
                         "id": "0s24g",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"
                         },
-                        "negated": false
+                        "negated": false,
+                        "type": "AnswerBooleanComparison",
+                        "operator": "is",
+                        "value": true
                       },
                       "block": [
                         {
-                          "type": "Exit",
                           "id": "p3uir",
                           "alias": "Exit: Kappungsgrenze durch aktuelle Mieterhöhung überschritten",
-                          "text": ""
+                          "text": "",
+                          "type": "Exit"
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 },
                 {
-                  "type": "Question",
                   "id": "knmz2k",
-                  "text": "Wurde die Miete seit dem $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ schon einmal erhöht?",
+                  "type": "Question",
                   "alias": "Mieterhöhung in letzten 33 Monaten",
+                  "text": "Wurde die Miete seit dem $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ schon einmal erhöht?",
                   "info": null,
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
                       {
                         "id": "ggo2s",
-                        "text": "Ja",
-                        "alias": "Ja"
+                        "alias": "Ja",
+                        "text": "Ja"
                       },
                       {
                         "id": "b8nwa",
-                        "text": "Nein",
-                        "alias": "Nein"
+                        "alias": "Nein",
+                        "text": "Nein"
                       },
                       {
                         "id": "whpa6",
-                        "text": "Ich bin mir nicht sicher",
-                        "alias": "Nicht sicher"
+                        "alias": "Nicht sicher",
+                        "text": "Ich bin mir nicht sicher"
                       }
                     ]
                   },
                   "required": true
                 },
                 {
-                  "type": "If",
                   "id": "hu6h5",
-                  "alternate": [],
+                  "type": "If",
                   "cases": [
                     {
-                      "type": "IfCase",
                       "id": "pnio6",
+                      "type": "IfCase",
                       "test": {
                         "id": "i2o8h",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Mieterhöhung in letzten 33 Monaten"
                         },
-                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
+                        "operator": "is",
                         "comparands": [
                           "ggo2s",
                           "whpa6"
@@ -1210,58 +1208,59 @@
                             "options": [
                               {
                                 "id": "ggo2s",
-                                "text": "Ja",
-                                "alias": "Ja"
+                                "alias": "Ja",
+                                "text": "Ja"
                               },
                               {
                                 "id": "b8nwa",
-                                "text": "Nein",
-                                "alias": "Nein"
+                                "alias": "Nein",
+                                "text": "Nein"
                               },
                               {
                                 "id": "whpa6",
-                                "text": "Ich bin mir nicht sicher",
-                                "alias": "Nicht sicher"
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
                               }
                             ]
                           },
                           "required": true
                         },
                         {
-                          "type": "If",
                           "id": "fvuje",
-                          "alternate": [],
+                          "type": "If",
                           "cases": [
                             {
-                              "type": "IfCase",
                               "id": "x6g41k",
+                              "type": "IfCase",
                               "test": {
                                 "id": "hnpeni",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Kappungsgrenze überschritten"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "ggo2s"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Exit",
                                   "id": "6o4f1",
                                   "alias": "Exit: Kappungsgrenze überschritten",
-                                  "text": ""
+                                  "text": "",
+                                  "type": "Exit"
                                 }
                               ]
                             }
-                          ]
+                          ],
+                          "alternate": []
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 }
               ]
             },
@@ -1272,22 +1271,21 @@
               "alias": "Sperrfristen",
               "block": [
                 {
-                  "type": "If",
                   "id": "h7ngdj",
-                  "alternate": [],
+                  "type": "If",
                   "cases": [
                     {
-                      "type": "IfCase",
                       "id": "xglyn",
+                      "type": "IfCase",
                       "test": {
                         "id": "p7e6g",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Mieterhöhung in letzten 33 Monaten"
                         },
-                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
+                        "operator": "is",
                         "comparands": [
                           "ggo2s",
                           "whpa6"
@@ -1305,18 +1303,18 @@
                             "options": [
                               {
                                 "id": "ggo2s",
-                                "text": "Ja",
-                                "alias": "Ja"
+                                "alias": "Ja",
+                                "text": "Ja"
                               },
                               {
                                 "id": "b8nwa",
-                                "text": "Nein",
-                                "alias": "Nein"
+                                "alias": "Nein",
+                                "text": "Nein"
                               },
                               {
                                 "id": "whpa6",
-                                "text": "Ich bin mir nicht sicher",
-                                "alias": "Nicht sicher"
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
                               }
                             ]
                           },
@@ -1325,19 +1323,10 @@
                         {
                           "id": "pg576",
                           "type": "If",
-                          "alternate": [],
                           "cases": [
                             {
                               "id": "6dtd9",
                               "type": "IfCase",
-                              "block": [
-                                {
-                                  "id": "3moz9h",
-                                  "alias": "Exit: Sperrfristen nicht eingehalten",
-                                  "text": "",
-                                  "type": "Exit"
-                                }
-                              ],
                               "test": {
                                 "id": "fecq1",
                                 "questionRef": {
@@ -1350,13 +1339,23 @@
                                 "comparands": [
                                   "ggo2s"
                                 ]
-                              }
+                              },
+                              "block": [
+                                {
+                                  "id": "3moz9h",
+                                  "alias": "Exit: Sperrfristen nicht eingehalten",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
                             }
-                          ]
+                          ],
+                          "alternate": []
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 }
               ]
             }
@@ -13368,5 +13367,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subs": []
 }
