@@ -2,6 +2,7 @@
 export * from "./Accordion/Accordion";
 export * from "./Button/Button";
 export * from "./CheckboxGroup/CheckboxGroup";
+export * from "./DatePicker/DatePicker";
 export * from "./FeedbackButton/FeedbackButton";
 export * from "./Form/FormDescription";
 export * from "./Form/FormField";

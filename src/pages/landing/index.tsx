@@ -20,7 +20,7 @@ export default function LandingPage() {
           <h1 className="mx-auto max-w-[600px] title-52 sm:title-56 md:title-64 lg:title-72 text-yellow-11 mb-12">
             {l("Ganz Berlin zahlt zu viel Miete.")}
           </h1>
-          <div className="mx-auto inline-flex flex-col gap-2 items-center  text-purple-11 transform -rotate-6">
+          <div className="mx-auto inline-flex flex-col gap-2 items-center text-purple-11 transform -rotate-6">
             <span className="hidden sm:inline-block title-40 md:title-44 px-4 py-3 bg-yellow-9">
               {l("Kannst du deine senken?")}
             </span>

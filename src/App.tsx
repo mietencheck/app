@@ -7,6 +7,7 @@ import LandingPage from "~/pages/landing";
 import { DatenschutzPage } from "~/pages/landing/datenschutz";
 import { ImpressumPage } from "~/pages/landing/impressum";
 import { UeberUnsPage } from "~/pages/landing/ueber-uns";
+import KappungsgrenzePage from "~/pages/rechner/kappungsgrenze";
 import { SchnelltestPage } from "~/pages/schnelltest";
 
 import { AppRouter } from "./router";
@@ -50,6 +51,7 @@ function Router() {
     "Schnelltest",
     "Details",
     "Beratung",
+    "RechnerKappungsgrenze",
     "Error",
   ]);
 
@@ -63,6 +65,8 @@ function Router() {
       return <DetailsPage />;
     case "Beratung":
       return <BeratungPage />;
+    case "RechnerKappungsgrenze":
+      return <KappungsgrenzePage />;
     case "UeberUns":
       return <UeberUnsPage />;
     case "Datenschutz":
