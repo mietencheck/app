@@ -9,5 +9,6 @@ export const AppRouter = createRouter({
   Details: "/details/*",
   Beratung: "/beratung/*",
   PDFs: "/pdfs",
+  RechnerKappungsgrenze: "/rechner/kappungsgrenze",
   Error: "/error",
 });

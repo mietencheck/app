@@ -6,7 +6,7 @@ import { Button as AriaButton, type ButtonProps } from "react-aria-components";
 import { mergeRefs } from "react-merge-refs";
 
 export const buttonVariants = cva(
-  "flex gap-1.5 font-450 rounded focus-visible:outline-none focus-visible:3 focus-visible:ring-primary focus-visible:border-primary-solid",
+  "flex gap-1.5 font-450 rounded text-left focus-visible:outline-none focus-visible:3 focus-visible:ring-primary focus-visible:border-primary-solid",
   {
     variants: {
       color: {
@@ -119,7 +119,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonVariantProps>(
         style={{ ...props.style, touchAction: "none" }}
       >
         {iconStart}
-        <span className="block flex-grow text-left">{children}</span>
+        <span className="block flex-grow">{children}</span>
         {iconEnd}
       </AriaButton>
     );
