@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -503,6 +504,7 @@
                 {
                   "id": "sokgp",
                   "type": "If",
+                  "alternate": [],
                   "cases": [
                     {
                       "id": "dpott",
@@ -527,6 +529,7 @@
                           "alias": "Mieterhöhung Grund Indexmiete",
                           "text": "Welche Grund hat der Vermieter für die Mieterhöhung angeführt?",
                           "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
+                          "required": true,
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -548,7 +551,7 @@
                               {
                                 "id": "1jbj5",
                                 "alias": "Betriebskostenerhöhung",
-                                "text": "Erhöhung der Betriebskosten"
+                                "text": "Gestiegene Betriebskosten"
                               },
                               {
                                 "id": "7oedm",
@@ -556,8 +559,7 @@
                                 "text": "Keine der Optionen"
                               }
                             ]
-                          },
-                          "required": true
+                          }
                         },
                         {
                           "id": "trqbx",
@@ -754,6 +756,7 @@
                           "alias": "Mieterhöhung Grund Staffelmiete",
                           "text": "Welche Grund hat der Vermieter für die Mieterhöhung angeführt?",
                           "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
+                          "required": true,
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -765,17 +768,17 @@
                               {
                                 "id": "a2giz",
                                 "alias": "Mietspiegel",
-                                "text": "Mietspiegel, Vergleichsmieten oder § 558 BGB"
+                                "text": "Mietspiegel bzw. Vergleichsmieten (§ 558 BGB)"
                               },
                               {
                                 "id": "808h4",
                                 "alias": "Modernisierung",
-                                "text": "Modernisierung oder bauliche Maßnahmen"
+                                "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
                               },
                               {
                                 "id": "1jbj5",
                                 "alias": "Betriebskostenerhöhung",
-                                "text": "Erhöhung der Betriebskosten"
+                                "text": "Gestiegene Betriebskosten (§ 560 BGB)"
                               },
                               {
                                 "id": "7oedm",
@@ -783,12 +786,19 @@
                                 "text": "Keine der Optionen"
                               }
                             ]
-                          },
-                          "required": true
+                          }
                         },
                         {
                           "id": "2dlwxk",
                           "type": "If",
+                          "alternate": [
+                            {
+                              "id": "ehvf",
+                              "alias": "Exit: Mieterhöhung ohne Begründung",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ],
                           "cases": [
                             {
                               "id": "sjcv3",
@@ -940,26 +950,17 @@
                               "block": [
                                 {
                                   "id": "4l2g",
-                                  "alias": "Exit: Mieterhöhung wegen Betriebskosten",
+                                  "alias": "Exit: Mieterhöhung wegen Betriebskosten bei Staffelmiete",
                                   "text": "",
                                   "type": "Exit"
                                 }
                               ]
                             }
-                          ],
-                          "alternate": [
-                            {
-                              "id": "ehvf",
-                              "alias": "Exit: Mieterhöhung ohne Begründung",
-                              "text": "",
-                              "type": "Exit"
-                            }
                           ]
                         }
                       ]
                     }
-                  ],
-                  "alternate": []
+                  ]
                 },
                 {
                   "id": "35d19",
@@ -13367,6 +13368,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }

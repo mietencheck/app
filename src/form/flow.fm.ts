@@ -856,6 +856,25 @@ export type StepInfoByAlias = {
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
+    "Exit: Mieterhöhung wegen Betriebskosten bei Staffelmiete": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Kaltmiete?: number;
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
+            "Mieterhöhung Grund Staffelmiete"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
+        };
+    };
     "Mieterhöhung Grund": {
         answer: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Kein Grund";
         state: {

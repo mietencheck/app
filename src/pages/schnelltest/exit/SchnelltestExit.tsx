@@ -17,6 +17,7 @@ import {
   ExitMieterhoehungModernisierung,
   ExitMieterhoehungOhneBegruendung,
   ExitMieterhoehungStaffelmiete,
+  ExitMieterhoehungStaffelmieteBetriebskosten,
   ExitMieterhoehungStaffelmieteModernisierung,
   ExitMieterhoehungStaffelmieteUeberStaffel,
   ExitMieterhoehungStaffelmieteWegenMietspiegel,
@@ -74,6 +75,9 @@ const Exits = {
   ),
   "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmiete": () => (
     <ExitMieterhoehungStaffelmieteWegenMietspiegel />
+  ),
+  "Exit: Mieterhöhung wegen Betriebskosten bei Staffelmiete": () => (
+    <ExitMieterhoehungStaffelmieteBetriebskosten />
   ),
   "Exit: Mieterhöhung wegen Modernisierung bei Staffelmiete": () => (
     <ExitMieterhoehungStaffelmieteModernisierung />
