@@ -9,6 +9,7 @@ export * from "./ExitMieterhoehungIndexmieteModernisierung";
 export * from "./ExitMieterhoehungIndexmieteUeberInflationsrate";
 export * from "./ExitMieterhoehungIndexmieteWegenMietspiegel";
 export * from "./ExitMieterhoehungStaffelmieteWegenMietspiegel";
+export * from "./ExitMieterhoehungStaffelmieteBetriebskosten";
 export * from "./ExitMieterhoehungStaffelmieteModernisierung";
 export * from "./ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten";
 export * from "./ExitKappungsgrenzeUeberschritten";

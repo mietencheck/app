@@ -6,33 +6,64 @@ export function ExitMieterhoehungStaffelmieteModernisierung() {
   return (
     <>
       <h2 className="heading-24 mb-4">
-        Die Mieterhöhung ist wahrscheinlich nicht rechtens.
+        Die Mieterhöhung ist wahrscheinlich nicht zulässig.
       </h2>
       <div className="space-y-3 text-neutral-faded mb-6">
         <p>
-          Wenn eine Staffelmiete im Mietvertrag vereinbart ist, dann sind
-          Mieterhöhungen aufgrund von § 559 nicht rechtmäßig. Nur bei Austausch
-          der Heizanlage (§ 559e) könnte die Mieterhöhung rechtmäßig sein.
+          Du hast angegeben, dass in deinem Mietvertrag eine Staffelmiete
+          vereinbart ist. Mieterhöhungen wegen Modernisierungen oder baulicher
+          Maßnahmen (§ 559 BGB) sind in Staffelmietverträgen nicht erlaubt. Da
+          dein Vermieter die Mieterhöhung genau damit begründet hat, ist sie
+          deswegen wahrscheinlich nicht rechtens.
         </p>
         <p>
-          Das heißt: Wenn du dir sicher bist, dass eine Staffelmiete in deinem
-          Mietvertrag vereinbart ist, dann darf der Vermieter (der ja eh schon
-          immer mehr Geld bekommt, wenn eine neue Staffel anfängt) die Miete
-          nicht nach § 559 wegen Modernisierungen oder baulichen Maßnahmen an
-          deinem Haus erhöhen. ACHTUNG: Wenn der Vermieter die Heizanlage
-          ausgetauscht hat, dann kann er theoretisch gem. § 559e die Miete
-          erhöhen. Hier gibt es aber besondere Maßgaben zur Berechnung, da lohnt
-          es sich vielleicht sich bei einem der Mietervereine beraten zu lassen.
+          Wichtig: Es gibt eine Ausnahme beim Einbau oder Austausch der
+          Heizanlage (§ 559e BGB). In diesem Fall kann unter bestimmten
+          Voraussetzungen ein Teil der Kosten auf die Miete umgelegt werden.
+          Weitere Informationen dazu, findest du{" "}
+          <a className="underline" href="">
+            hier
+          </a>
+          .
         </p>
       </div>
       <div className="space-y-2 mb-6 text-neutral-faded">
         <h3 className="text-base-medium text-neutral">Was nun?</h3>
+        <p>Bitte überprüfe zunächst, ob deine Angaben stimmen:</p>
+        <ol className="list-outside list-decimal space-y-1.5 ps-8">
+          <li className="">Im Mietvertrag ist eine Staffelmiete vereinbart.</li>
+          <li>
+            Die Mieterhöhung ist mit Modernisierungen oder baulicher Maßnahmen
+            begründet (§ 559 BGB).
+          </li>
+          <li>
+            Die Mieterhöhung erwähnt nicht den Einbau oder Austausch einer
+            Heizanlage (§ 559e BGB).
+          </li>
+        </ol>
         <p>
-          Wenn in deinem Mietvertrag eine Staffelmiete vereinbart ist, dann
-          kannst du Mieterhöhungen nach § 559, die deine Miete wegen
-          Modernisierungen oder baulichen Maßnahmen erhöhen wollen, ignorieren.
-          Bei einer Mieterhöhung aufgrund der Aufstellung einer neuen Heizanlage
-          (§ 559e), kann der Vermieter einen Teil auf die Mieter umlegen.
+          Wenn dies der Fall ist, dann ist die Mieterhöhung ist wahrscheinlich
+          nicht zulässig. Wie du in diesem Fall weiter vorgehen solltest,
+          erklären wir in{" "}
+          <a className="underline" href="">
+            diesem Artikel
+          </a>
+          .
+        </p>
+      </div>
+      <div className="space-y-2 mb-6 text-neutral-faded">
+        <h3 className="text-base-medium text-neutral">Disclamer</h3>
+        <p>
+          Bitte denk dran, dass dies keine rechtliche Beratung ist. Wenn du
+          Fragen oder Unklarheiten hast, wende dich bitte an eine
+          Mietrechtsexpertin.
+        </p>
+        <p>
+          Deine Optionen hierfür erklären wir{" "}
+          <a className="underline" href="">
+            hier
+          </a>
+          .
         </p>
       </div>
     </>
