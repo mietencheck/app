@@ -5,17 +5,13 @@ export function ExitSperrfristenNichtEingehalten() {
 
   return (
     <>
-      <h2 className="heading-24 mb-4">
+      <h2>
         Die Mieterhöhung ist nicht rechtmäßig, da die Sperrfrist nicht
         eingehalten wurde.
       </h2>
-      <div className="space-y-3 text-neutral-faded mb-6">
-        <p>TODO</p>
-      </div>
-      <div className="space-y-2 mb-6 text-neutral-faded">
-        <h3 className="text-base-medium text-neutral">Was nun?</h3>
-        <p></p>
-      </div>
+      <p>TODO</p>
+      <h3>Was nun?</h3>
+      <p></p>
     </>
   );
 }

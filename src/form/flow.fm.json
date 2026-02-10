@@ -502,6 +502,55 @@
                   "required": true
                 },
                 {
+                  "type": "If",
+                  "id": "stoxy",
+                  "alternate": [],
+                  "cases": [
+                    {
+                      "type": "IfCase",
+                      "id": "uxl3k",
+                      "test": {
+                        "id": "ffd0m",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Mietart"
+                        },
+                        "operator": "is",
+                        "negated": false,
+                        "type": "AnswerOptionComparison",
+                        "comparands": [
+                          "8dx4p"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "type": "Question",
+                          "id": "m53kn",
+                          "text": "Befindest du dich aktuell noch in dem Zeitraum mit vereinbarten Mietstaffeln?",
+                          "alias": "Staffelmietvertrag aktiv",
+                          "info": "Das ist der Fall, wenn im Mietvertrag noch eine weitere Mietstaffel in der Zukunft festgelegt ist.",
+                          "required": true,
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "ggo2s",
+                                "text": "Ja",
+                                "alias": "Ja"
+                              },
+                              {
+                                "id": "b8nwa",
+                                "text": "Nein",
+                                "alias": "Nein"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                   "id": "sokgp",
                   "type": "If",
                   "alternate": [],
@@ -527,7 +576,7 @@
                           "id": "ka54j",
                           "type": "Question",
                           "alias": "Mieterhöhung Grund Indexmiete",
-                          "text": "Welche Grund hat der Vermieter für die Mieterhöhung angeführt?",
+                          "text": "Welche Grund für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
                           "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
                           "required": true,
                           "answer": {
@@ -541,17 +590,17 @@
                               {
                                 "id": "a2giz",
                                 "alias": "Mietspiegel",
-                                "text": "Mietspiegel, Vergleichsmieten oder § 558 BGB"
+                                "text": "Mietspiegel oder Vergleichsmieten (§ 558 BGB)"
                               },
                               {
                                 "id": "808h4",
                                 "alias": "Modernisierung",
-                                "text": "Modernisierung oder bauliche Maßnahmen"
+                                "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
                               },
                               {
                                 "id": "1jbj5",
                                 "alias": "Betriebskostenerhöhung",
-                                "text": "Gestiegene Betriebskosten"
+                                "text": "Gestiegene Betriebskosten (§ 560 BGB)"
                               },
                               {
                                 "id": "7oedm",
@@ -564,6 +613,14 @@
                         {
                           "id": "trqbx",
                           "type": "If",
+                          "alternate": [
+                            {
+                              "id": "00ezm",
+                              "alias": "Exit: Mieterhöhung ohne Begründung",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ],
                           "cases": [
                             {
                               "id": "9zixg",
@@ -715,19 +772,11 @@
                               "block": [
                                 {
                                   "id": "gvsv7",
-                                  "alias": "Exit: Mieterhöhung wegen Betriebskosten",
+                                  "alias": "Exit: Mieterhöhung wegen Betriebskosten bei Indexmiete",
                                   "text": "",
                                   "type": "Exit"
                                 }
                               ]
-                            }
-                          ],
-                          "alternate": [
-                            {
-                              "id": "00ezm",
-                              "alias": "Exit: Mieterhöhung ohne Begründung",
-                              "text": "",
-                              "type": "Exit"
                             }
                           ]
                         }
@@ -737,16 +786,37 @@
                       "id": "6cadj",
                       "type": "IfCase",
                       "test": {
-                        "id": "474z8",
-                        "questionRef": {
-                          "type": "AliasRef",
-                          "value": "Mietart"
-                        },
+                        "type": "LogicalOperation",
+                        "id": "ymxq8",
+                        "operator": "and",
                         "negated": false,
-                        "type": "AnswerOptionComparison",
-                        "operator": "is",
-                        "comparands": [
-                          "8dx4p"
+                        "conditions": [
+                          {
+                            "id": "474z8",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Mietart"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "8dx4p"
+                            ]
+                          },
+                          {
+                            "id": "474z8",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Staffelmietvertrag aktiv"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "ggo2s"
+                            ]
+                          }
                         ]
                       },
                       "block": [
@@ -754,7 +824,7 @@
                           "id": "xglgm",
                           "type": "Question",
                           "alias": "Mieterhöhung Grund Staffelmiete",
-                          "text": "Welche Grund hat der Vermieter für die Mieterhöhung angeführt?",
+                          "text": "Welche Grund für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
                           "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
                           "required": true,
                           "answer": {
@@ -768,7 +838,7 @@
                               {
                                 "id": "a2giz",
                                 "alias": "Mietspiegel",
-                                "text": "Mietspiegel bzw. Vergleichsmieten (§ 558 BGB)"
+                                "text": "Mietspiegel oder Vergleichsmieten (§ 558 BGB)"
                               },
                               {
                                 "id": "808h4",
@@ -791,14 +861,6 @@
                         {
                           "id": "2dlwxk",
                           "type": "If",
-                          "alternate": [
-                            {
-                              "id": "ehvf",
-                              "alias": "Exit: Mieterhöhung ohne Begründung",
-                              "text": "",
-                              "type": "Exit"
-                            }
-                          ],
                           "cases": [
                             {
                               "id": "sjcv3",
@@ -956,6 +1018,14 @@
                                 }
                               ]
                             }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "ehvf",
+                              "alias": "Exit: Mieterhöhung ohne Begründung",
+                              "text": "",
+                              "type": "Exit"
+                            }
                           ]
                         }
                       ]
@@ -968,23 +1038,24 @@
                   "alias": "Mieterhöhung Grund",
                   "text": "Welche Grund für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
                   "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
+                  "required": true,
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
                       {
                         "id": "a2giz",
                         "alias": "Mietspiegel",
-                        "text": "Mietspiegel, Vergleichsmieten oder § 558 BGB"
+                        "text": "Mietspiegel oder Vergleichsmieten (§ 558 BGB)"
                       },
                       {
                         "id": "808h4",
                         "alias": "Modernisierung",
-                        "text": "Modernisierung oder bauliche Maßnahmen"
+                        "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
                       },
                       {
                         "id": "1jbj5",
                         "alias": "Betriebskostenerhöhung",
-                        "text": "Erhöhung der Betriebskosten"
+                        "text": "Gestiegene Betriebskosten (§ 560 BGB)"
                       },
                       {
                         "id": "7oedm",
@@ -992,8 +1063,7 @@
                         "text": "Keine der Optionen"
                       }
                     ]
-                  },
-                  "required": true
+                  }
                 },
                 {
                   "id": "zylzr",
