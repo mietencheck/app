@@ -12,7 +12,7 @@ import { useStoredAnswers } from "~/form/flow-machine";
 import { useLocalizeField, useLocalizeString } from "./l10n";
 import { parseAdresse } from "./utils";
 
-const fetch = fetchWithRetry(window.fetch);
+const fetch = fetchWithRetry(globalThis.fetch as typeof fetch);
 
 export const useStoredSession = () =>
   useLocalStorage<{ hash: string | null; pii: boolean }>("session", {

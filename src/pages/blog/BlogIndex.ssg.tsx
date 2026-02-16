@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 
 import { AppRouter } from "~/router";
 import client from "~/sanityClient";
-
-import { Layout } from "../landing/layout";
 
 interface Post {
   title: string;
@@ -12,34 +10,25 @@ interface Post {
   imageUrl?: string;
 }
 
-export function BlogPage() {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [loading, setLoading] = useState(true);
+// Runs at build time for '/blog'
+export async function loader() {
+  const posts = await client.fetch<Post[]>(
+    `*[_type == "post"] {
+      title,
+      "slug": slug.current,
+      subtitle,
+      "imageUrl": mainImage.asset->url
+    }`,
+  );
+  return posts;
+}
 
-  useEffect(() => {
-    client
-      .fetch<Post[]>(
-        `*[_type == "post"] {
-          title,
-          "slug": slug.current,
-          subtitle,
-          "imageUrl": mainImage.asset->url
-        }`,
-      )
-      .then((data: Post[]) => {
-        setPosts(data);
-        setLoading(false);
-      })
-      .catch((err: unknown) => {
-        console.error("Sanity error:", err);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) return <div className="p-10 text-center">Lade Blog...</div>;
+// Layout-free content component used by vite-react-ssg routes
+export function BlogIndexContent() {
+  const posts = useLoaderData() as Post[];
 
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section>
         <div className="container pt-16 pb-20 space-y-20 sm:space-y-24 text-purple-11">
@@ -83,7 +72,6 @@ export function BlogPage() {
       </section>
 
       {/* All Articles Section */}
-      {/* All Articles Section */}
       <section>
         <div className="container py-20 space-y-20">
           {/* Section Title */}
@@ -126,8 +114,11 @@ export function BlogPage() {
           )}
         </div>
       </section>
-    </Layout>
+    </>
   );
 }
 
-export default BlogPage;
+// Default export keeps the same API if used elsewhere
+export default function BlogIndexPage() {
+  return <BlogIndexContent />;
+}
