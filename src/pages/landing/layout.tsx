@@ -2,7 +2,7 @@ import { Menu } from "lucide-react";
 import React from "react";
 
 import { IconButton } from "~/components";
-import { useLocaleState, useLocalizeField } from "~/l10n";
+import { useLocalizeField } from "~/l10n";
 import { AppRouter } from "~/router";
 
 import { LanguageSelect } from "../../components/Header/LanguageSelect";
@@ -10,7 +10,7 @@ import { LanguageSelect } from "../../components/Header/LanguageSelect";
 export function Layout({ children }: { children: React.ReactNode }) {
   const [menu, setMenu] = React.useState(false);
   const l = useLocalizeField();
-  const { locale } = useLocaleState();
+
   return (
     <>
       <header
