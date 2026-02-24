@@ -1,4 +1,3 @@
-import React from "react";
 import type { RouteRecord } from "vite-react-ssg";
 
 import { App } from "./App";
@@ -18,18 +17,22 @@ export const routes: RouteRecord[] = [
   {
     path: "/blog",
     element: (
-      <Layout>
-        <BlogIndexContent />
-      </Layout>
+      <Providers>
+        <Layout>
+          <BlogIndexContent />
+        </Layout>
+      </Providers>
     ),
     loader: blogIndexLoader,
   },
   {
     path: "/blog/:slug",
     element: (
-      <Layout>
-        <BlogPostContent />
-      </Layout>
+      <Providers>
+        <Layout>
+          <BlogPostContent />
+        </Layout>
+      </Providers>
     ),
     loader: blogPostLoader,
     getStaticPaths: async () => {

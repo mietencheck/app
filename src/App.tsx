@@ -9,16 +9,12 @@ import { ImpressumPage } from "~/pages/landing/impressum";
 import { UeberUnsPage } from "~/pages/landing/ueber-uns";
 import { SchnelltestPage } from "~/pages/schnelltest";
 
+import { BlogIndexContent } from "./pages/blog/BlogIndex.ssg";
+import { BlogPostContent } from "./pages/blog/BlogPost.ssg";
 import { AppRouter } from "./router";
 import { ContinueSessionModal, SESSION_PARAM, useSyncAnswers } from "./session";
 
 const DetailsPage = React.lazy(() => import("~/pages/details"));
-
-const BlogPage = React.lazy(() =>
-  import("./pages/blog").then((module) => ({ default: module.BlogPage })),
-);
-
-const BlogPostPage = React.lazy(() => import("~/pages/blog/post"));
 
 function parseJSONOrUseDirectly(value: unknown) {
   try {
@@ -84,7 +80,7 @@ function Router() {
         <Suspense
           fallback={<div className="p-10 text-center">Lade Blog...</div>}
         >
-          <BlogPage />
+          <BlogIndexContent />
         </Suspense>
       );
     case "BlogPost":
@@ -92,7 +88,7 @@ function Router() {
         <Suspense
           fallback={<div className="p-10 text-center">Lade Artikel...</div>}
         >
-          <BlogPostPage slug={route.params.slug} />
+          <BlogPostContent />
         </Suspense>
       );
     default:
