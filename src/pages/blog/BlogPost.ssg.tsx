@@ -2,12 +2,17 @@ import { PortableText, PortableTextComponents } from "@portabletext/react";
 import { ReactNode } from "react";
 import { useLoaderData, type LoaderFunctionArgs } from "react-router-dom";
 
+import { useLocaleState } from "~/l10n";
 import { AppRouter } from "~/router";
 import client from "~/sanityClient";
 
 interface PostData {
-  title: string;
-  body: any[];
+  titleDe: string;
+  titleEn: string;
+  subtitleDe: string;
+  subtitleEn: string;
+  bodyDe: any[];
+  bodyEn: any[];
   publishedAt: string;
   imageUrl?: string;
 }
@@ -40,9 +45,19 @@ export async function loader({ params }: LoaderFunctionArgs) {
   const slug = params.slug!;
   const post = await client.fetch<PostData>(
     `*[_type == "post" && slug.current == $slug][0]{
-      title,
+      "titleDe": title.de,
+      "titleEn": title.en,
       "imageUrl": mainImage.asset->url,
-      body[]{
+      "bodyDe": body.de[]{
+        ...,
+        markDefs[]{
+          ...,
+          _type == "internalLink" => {
+            "reference": reference->{ "slug": slug.current }
+          }
+        }
+      },
+      "bodyEn": body.en[]{
         ...,
         markDefs[]{
           ...,
@@ -56,16 +71,19 @@ export async function loader({ params }: LoaderFunctionArgs) {
     { slug },
   );
 
-  if (!post) {
-    throw new Response("Not Found", { status: 404 });
-  }
-
+  if (!post) throw new Response("Not Found", { status: 404 });
   return post;
 }
 
 // Layout-free content component used by vite-react-ssg routes
 export function BlogPostContent() {
   const post = useLoaderData() as PostData;
+  const { locale } = useLocaleState();
+
+  const title = locale === "en" && post.titleEn ? post.titleEn : post.titleDe;
+  const subtitle =
+    locale === "en" && post.subtitleEn ? post.subtitleEn : post.subtitleDe;
+  const body = locale === "en" && post.bodyEn ? post.bodyEn : post.bodyDe;
 
   return (
     <article>
@@ -79,8 +97,13 @@ export function BlogPostContent() {
             Ratgeber
           </a>
           <h1 className="title-36 sm:title-40 md:title-48 lg:title-56 text-yellow-9 text-center max-w-[768px] mx-auto">
-            {post.title}
+            {title}
           </h1>
+          {subtitle && (
+            <h2 className="text-lg-book text-purple-11 text-center max-w-[768px] mx-auto">
+              {subtitle}
+            </h2>
+          )}
         </div>
       </div>
 
@@ -90,16 +113,13 @@ export function BlogPostContent() {
           <img
             className="w-full aspect-[8/5] object-cover max-w-[768px]"
             src={post.imageUrl}
-            alt={post.title}
+            alt={title}
           />
         )}
 
         <div className="prose prose-purple w-full max-w-[560px] py-16">
-          {post.body ? (
-            <PortableText
-              value={post.body}
-              components={portableTextComponents}
-            />
+          {body ? (
+            <PortableText value={body} components={portableTextComponents} />
           ) : (
             <p>Dieser Artikel hat noch keinen Inhalt.</p>
           )}

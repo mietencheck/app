@@ -5,25 +5,54 @@ export default defineType({
   title: 'Post',
   type: 'document',
   fields: [
+    // Localized title
     defineField({
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'de',
+          title: 'Title (DE)',
+          type: 'string',
+        }),
+        defineField({
+          name: 'en',
+          title: 'Title (EN)',
+          type: 'string',
+        }),
+      ],
     }),
+
+    // localized subtitle
     defineField({
       name: 'subtitle',
       title: 'Subtitle',
-      type: 'string',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'de',
+          title: 'Subtitle (DE)',
+          type: 'string',
+        }),
+        defineField({
+          name: 'en',
+          title: 'Subtitle (EN)',
+          type: 'string',
+        }),
+      ],
     }),
+
     defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: (doc) => doc?.title?.de,
         maxLength: 96,
       },
     }),
+
     defineField({
       name: 'author',
       title: 'Author',
@@ -49,16 +78,29 @@ export default defineType({
       title: 'Published at',
       type: 'datetime',
     }),
+
     defineField({
       name: 'body',
       title: 'Body',
-      type: 'blockContent',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'de',
+          title: 'Body (DE)',
+          type: 'blockContent',
+        }),
+        defineField({
+          name: 'en',
+          title: 'Body (EN)',
+          type: 'blockContent',
+        }),
+      ],
     }),
   ],
 
   preview: {
     select: {
-      title: 'title',
+      title: 'title.de',
       author: 'author.name',
       media: 'mainImage',
     },
