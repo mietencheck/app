@@ -67,21 +67,19 @@ export default function LandingPage() {
                 </span>
               </div>
             </a>
-            <a href="/schnelltest">
-              <div className="px-4 py-6 sm:p-8 bg-purple-3 text-purple-11">
-                <h3 className="title-24 lg:title-28 mb-3">
-                  {l("Mieterhöhung überprüfen")}
-                </h3>
-                <p className="text-lg-book mb-6">
-                  {l(
-                    "Hast du eine Mieterhöhung bekommen? Finde heraus, ob die Erhöhung rechtens ist.",
-                  )}
-                </p>
-                <span className="inline-block px-4 py-3 text-base-book bg-purple-9 text-white rounded-full hover:bg-purple-10">
-                  {l("Jetzt checken")}
-                </span>
-              </div>
-            </a>
+            <div className="px-4 py-6 sm:p-8 bg-purple-3 text-purple-11">
+              <h3 className="title-24 lg:title-28 mb-3">
+                {l("Mieterhöhung überprüfen")}
+              </h3>
+              <p className="text-lg-book mb-6">
+                {l(
+                  "Hast du eine Mieterhöhung bekommen? Finde heraus, ob die Erhöhung rechtens ist.",
+                )}
+              </p>
+              <span className="inline-block px-4 py-3 text-base-book bg-purple-9 text-white rounded-full opacity-50 cursor-not-allowed">
+                {l("Bald verfügbar")}
+              </span>
+            </div>
           </div>
         </div>
       </section>
