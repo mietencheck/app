@@ -5,7 +5,9 @@ import { useAnswers } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
 import {
+  ExitAusgangsmieteNichtAnfechtbarWegenMietspiegelerhoehung,
   ExitHaeuser,
+  ExitIndexmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung,
   ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten,
   ExitKappungsgrenzeUeberschritten,
   ExitKeinWC,
@@ -30,8 +32,10 @@ import {
   ExitNeubauwohnung,
   ExitSozialwohnungen,
   ExitSperrfristenNichtEingehalten,
+  ExitStaffelmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung,
 } from ".";
 import { StepperType } from "..";
+import { ExitAusgangsmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung } from "./exits/miete/ExitAusgangsmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung";
 
 const Exits = {
   Mietspiegel2024: () => <ExitMietvertragZuNeu />,
@@ -46,6 +50,19 @@ const Exits = {
   "Exit: Mietspiegel gilt nicht für Wohnungen ohne WC": () => <ExitKeinWC />,
   "Exit: Möblierte Wohnung": () => <ExitMoebliert />,
   "Exit: Mieterhöhung zugestimmt": () => <ExitMieterhoehungZugestimmt />,
+
+  /* Miete */
+  "Exit: Ausgangsmiete nicht anfechtbar wegen Mietspiegelerhöhung": () => (
+    <ExitAusgangsmieteNichtAnfechtbarWegenMietspiegelerhoehung />
+  ),
+  "Exit: Ausgangsmiete nicht anfechtbar wegen freiwilliger Mieterhöhung":
+    () => <ExitAusgangsmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung />,
+  "Exit: Indexmiete nicht anfechtbar wegen freiwilliger Mieterhöhung": () => (
+    <ExitIndexmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung />
+  ),
+  "Exit: Staffelmiete nicht anfechtbar wegen freiwilliger Mieterhöhung": () => (
+    <ExitStaffelmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung />
+  ),
 
   /* Mieterhöhung */
   "Exit: Mieterhöhung ohne Begründung": () => (

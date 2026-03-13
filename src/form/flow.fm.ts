@@ -11,6 +11,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -196,6 +198,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -365,6 +369,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
         };
     };
@@ -390,6 +396,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
@@ -418,6 +426,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -567,6 +577,20 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
+    "Ausgangsmiete Mieterhöhung Grund": {
+        answer: "Ja" | "Nein";
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+        };
+    };
     "Datum Mieterhöhungsschreiben": {
         answer: Date;
         state: {
@@ -578,6 +602,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
         };
     };
     "Mieterhöhung zugestimmt": {
@@ -591,6 +617,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
         };
     };
@@ -605,6 +633,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
@@ -620,6 +650,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
@@ -635,6 +667,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -651,6 +685,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -668,6 +704,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -686,6 +724,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -704,6 +744,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -722,6 +764,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -740,6 +784,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -758,6 +804,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -779,6 +827,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -797,6 +847,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -816,6 +868,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -836,6 +890,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -856,6 +912,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -876,6 +934,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -896,6 +956,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -916,6 +978,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -936,6 +1000,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -957,6 +1023,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -978,6 +1046,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -999,6 +1069,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1021,6 +1093,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1181,6 +1255,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1204,6 +1280,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1228,6 +1306,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1252,6 +1332,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1277,6 +1359,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1303,6 +1387,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1463,6 +1549,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1489,6 +1577,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1516,6 +1606,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1543,6 +1635,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1571,6 +1665,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1600,6 +1696,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1632,6 +1730,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1664,6 +1764,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1696,6 +1798,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1730,6 +1834,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1764,6 +1870,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1798,6 +1906,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1832,6 +1942,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1866,6 +1978,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1901,6 +2015,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1937,6 +2053,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -1974,6 +2092,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2011,6 +2131,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2048,6 +2170,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2085,6 +2209,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2122,6 +2248,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2282,6 +2410,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2442,6 +2572,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2602,6 +2734,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2642,6 +2776,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2679,6 +2815,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2717,6 +2855,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2756,6 +2896,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2797,6 +2939,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2957,6 +3101,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -2998,6 +3144,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3040,6 +3188,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3083,6 +3233,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3127,6 +3279,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3172,6 +3326,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3217,6 +3373,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3262,6 +3420,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3422,6 +3582,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3582,6 +3744,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3742,6 +3906,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3787,6 +3953,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3833,6 +4001,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -3880,6 +4050,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4040,6 +4212,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4088,6 +4262,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4248,6 +4424,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4297,6 +4475,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4347,6 +4527,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4398,6 +4580,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4558,6 +4742,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4611,6 +4797,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4664,6 +4852,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4824,6 +5014,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4879,6 +5071,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4935,6 +5129,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -4991,6 +5187,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -5048,6 +5246,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -5106,6 +5306,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -5266,6 +5468,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -5326,6 +5530,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -5386,6 +5592,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -5447,6 +5655,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -5607,6 +5817,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -5669,6 +5881,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -5732,6 +5946,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -5797,6 +6013,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -5862,6 +6080,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6022,6 +6242,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6089,6 +6311,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6157,6 +6381,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6225,6 +6451,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6385,6 +6613,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6455,6 +6685,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6525,6 +6757,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6597,6 +6831,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6669,6 +6905,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6829,6 +7067,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6903,6 +7143,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -6979,6 +7221,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -7055,6 +7299,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -7215,6 +7461,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -7291,6 +7539,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -7368,6 +7618,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -7447,6 +7699,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -7526,6 +7780,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -7606,6 +7862,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -7688,6 +7946,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -7770,6 +8030,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -7930,6 +8192,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -8013,6 +8277,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -8097,6 +8363,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -8183,6 +8451,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -8343,6 +8613,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -8429,6 +8701,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -8516,6 +8790,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -8604,6 +8880,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -8764,6 +9042,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -8854,6 +9134,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -8944,6 +9226,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -9035,6 +9319,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -9127,6 +9413,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -9287,6 +9575,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -9380,6 +9670,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -9540,6 +9832,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -9635,6 +9929,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -9795,6 +10091,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -9955,6 +10253,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -10050,6 +10350,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -10146,6 +10448,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -10243,6 +10547,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -10403,6 +10709,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -10501,6 +10809,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -10600,6 +10910,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -10700,6 +11012,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -10860,6 +11174,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -10961,6 +11277,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -11064,6 +11382,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -11167,6 +11487,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -11327,6 +11649,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -11431,6 +11755,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -11537,6 +11863,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -11697,6 +12025,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -11803,6 +12133,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -11910,6 +12242,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -12018,6 +12352,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -12127,6 +12463,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -12287,6 +12625,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -12397,6 +12737,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -12510,6 +12852,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -12622,6 +12966,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -12782,6 +13128,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -12895,6 +13243,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -13009,6 +13359,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -13169,6 +13521,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -13284,6 +13638,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -13400,6 +13756,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -13518,6 +13876,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -13636,6 +13996,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -13796,6 +14158,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -13956,6 +14320,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -14075,6 +14441,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -14195,6 +14563,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -14316,6 +14686,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -14438,6 +14810,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -14598,6 +14972,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -14721,6 +15097,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -14845,6 +15223,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -15005,6 +15385,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -15130,6 +15512,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -15256,6 +15640,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -15384,6 +15770,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -15544,6 +15932,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -15675,6 +16065,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -15806,6 +16198,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -15937,6 +16331,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -16097,6 +16493,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -16228,6 +16626,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -16362,6 +16762,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -16495,6 +16897,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -16655,6 +17059,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -16789,6 +17195,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -16925,6 +17333,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -17061,6 +17471,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -17198,6 +17610,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -17336,6 +17750,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -17496,6 +17912,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -17656,6 +18074,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -17795,6 +18215,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -17936,6 +18358,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -18078,6 +18502,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -18238,6 +18664,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -18382,6 +18810,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -18526,6 +18956,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -18670,6 +19102,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -18816,6 +19250,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -18976,6 +19412,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -19136,6 +19574,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -19282,6 +19722,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -19429,6 +19871,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -19577,6 +20021,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -19726,6 +20172,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -19886,6 +20334,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -20037,6 +20487,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -20188,6 +20640,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -20340,6 +20794,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -20493,6 +20949,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -20647,6 +21105,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -20802,6 +21262,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -20962,6 +21424,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -21118,6 +21582,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -21275,6 +21741,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -21433,6 +21901,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
@@ -21592,6 +22062,8 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Kaltmiete?: number;
+            "Mieterhöhung"?: "Ja" | "Nein";
+            "Ausgangsmiete Mieterhöhung Grund"?: "Ja" | "Nein";
             "Datum Mieterhöhungsschreiben"?: Date;
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
