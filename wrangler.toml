@@ -3,7 +3,8 @@ main = "./src/worker.ts"
 compatibility_date = "2026-03-12"
 
 [[routes]]
-pattern = "mietencheck.de"
+pattern = "mietencheck.de/*"
+zone_name = "mietencheck.de"
 custom_domain = true
 
 [assets]
