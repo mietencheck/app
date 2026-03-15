@@ -2,6 +2,10 @@ name = "mietenbremse"
 main = "./src/worker.ts"
 compatibility_date = "2026-03-12"
 
+[[routes]]
+pattern = "mietencheck.de"
+custom_domain = true
+
 [assets]
 not_found_handling = "single-page-application"
 
