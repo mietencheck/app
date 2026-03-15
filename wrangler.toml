@@ -5,6 +5,7 @@ compatibility_date = "2026-03-12"
 [[routes]]
 pattern = "mietencheck.de"
 custom_domain = true
+override_existing_dns_record = true
 
 [assets]
 not_found_handling = "single-page-application"
