@@ -1,5 +1,7 @@
+import { getWorstBestPreisspanne } from "./calculation/preisspanne";
 import { getWorstBestZulaessigeHoechstmiete } from "./calculation/zulaessigeHoechstmiete";
-import type { FinalAnswers } from "./form/flow-machine";
+import { evaluateFlowMachine } from "./form/flow-machine-evaluation";
+import { FinalAnswers } from "./form/flow-machine-runtime";
 
 interface Env {
   ASSETS: Fetcher;
@@ -13,6 +15,10 @@ interface SessionRow {
 interface ZulaessigeHoechstmieteRequestBody {
   answers: FinalAnswers;
   visibleQuestionAliases: string[];
+}
+
+interface FlowMachineRequestBody {
+  answers?: Record<string, unknown>;
 }
 
 const HTML_ACCEPT_RE = /\btext\/html\b/i;
@@ -117,6 +123,44 @@ async function handleZulaessigeHoechstmiete(request: Request) {
   }
 }
 
+const isObjectRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
+async function handleFlowMachine(request: Request) {
+  if (request.method !== "POST") {
+    return methodNotAllowed();
+  }
+
+  try {
+    const body = (await request.json()) as
+      | FlowMachineRequestBody
+      | Record<string, unknown>;
+    const submittedAnswers =
+      isObjectRecord(body) && isObjectRecord(body.answers)
+        ? body.answers
+        : isObjectRecord(body)
+          ? body
+          : null;
+
+    if (!submittedAnswers) {
+      return json({ error: "Invalid request data" }, { status: 400 });
+    }
+
+    const evaluation = evaluateFlowMachine(submittedAnswers);
+    const preisspanne = getWorstBestPreisspanne(
+      evaluation.answers as FinalAnswers,
+      new Set(evaluation.visibleQuestionAliases),
+    );
+
+    return json({
+      ...evaluation,
+      preisspanne: preisspanne ?? null,
+    });
+  } catch {
+    return json({ error: "Invalid request data" }, { status: 400 });
+  }
+}
+
 async function handleSentryEnvelope(request: Request) {
   if (request.method !== "POST" || !request.body) {
     return methodNotAllowed();
@@ -172,6 +216,10 @@ export default {
 
     if (pathname === "/zulaessige-hoechstmiete") {
       return handleZulaessigeHoechstmiete(request);
+    }
+
+    if (pathname === "/api/miete") {
+      return handleFlowMachine(request);
     }
 
     if (pathname === "/sentry") {
