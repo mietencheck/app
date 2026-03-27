@@ -13,7 +13,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -202,7 +202,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -375,7 +375,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -395,7 +395,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -453,7 +453,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -605,7 +605,7 @@ export type StepInfoByAlias = {
         };
     };
     "Mieterhöhung Grund Indexmiete": {
-        answer: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+        answer: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
@@ -632,7 +632,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
     "Mieterhöhung Grund Staffelmiete": {
@@ -648,7 +648,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
     "Exit: Staffelmiete nicht anfechtbar wegen freiwilliger Mieterhöhung": {
@@ -664,7 +664,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
@@ -681,7 +681,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
@@ -698,7 +698,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
@@ -716,7 +716,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
@@ -734,7 +734,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
@@ -752,7 +752,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -771,7 +771,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -791,7 +791,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -811,7 +811,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -832,7 +832,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -854,7 +854,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -877,7 +877,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -900,7 +900,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -923,7 +923,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -946,7 +946,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -969,7 +969,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -995,7 +995,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1018,7 +1018,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1042,7 +1042,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1067,7 +1067,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1092,7 +1092,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1117,7 +1117,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1142,7 +1142,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1167,7 +1167,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1192,7 +1192,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1218,7 +1218,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1244,7 +1244,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1270,7 +1270,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1297,7 +1297,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1461,7 +1461,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1489,7 +1489,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1518,7 +1518,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1547,7 +1547,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1577,7 +1577,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1608,7 +1608,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1772,7 +1772,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1803,7 +1803,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1835,7 +1835,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1867,7 +1867,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1900,7 +1900,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1936,7 +1936,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -1972,7 +1972,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2008,7 +2008,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2046,7 +2046,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2084,7 +2084,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2122,7 +2122,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2160,7 +2160,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2198,7 +2198,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2237,7 +2237,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2277,7 +2277,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2318,7 +2318,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2359,7 +2359,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2400,7 +2400,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2441,7 +2441,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2482,7 +2482,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2646,7 +2646,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2810,7 +2810,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -2974,7 +2974,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3018,7 +3018,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3059,7 +3059,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3101,7 +3101,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3144,7 +3144,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3189,7 +3189,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3353,7 +3353,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3398,7 +3398,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3444,7 +3444,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3491,7 +3491,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3539,7 +3539,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3588,7 +3588,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3637,7 +3637,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3686,7 +3686,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -3850,7 +3850,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -4014,7 +4014,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -4178,7 +4178,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -4227,7 +4227,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -4277,7 +4277,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -4328,7 +4328,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -4492,7 +4492,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -4544,7 +4544,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -4708,7 +4708,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -4761,7 +4761,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -4815,7 +4815,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -4870,7 +4870,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5034,7 +5034,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5091,7 +5091,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5148,7 +5148,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5312,7 +5312,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5371,7 +5371,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5431,7 +5431,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5491,7 +5491,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5552,7 +5552,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5614,7 +5614,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5778,7 +5778,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5842,7 +5842,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5906,7 +5906,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -5971,7 +5971,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -6135,7 +6135,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -6201,7 +6201,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -6268,7 +6268,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -6337,7 +6337,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -6406,7 +6406,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -6570,7 +6570,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -6641,7 +6641,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -6713,7 +6713,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -6785,7 +6785,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -6949,7 +6949,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -7023,7 +7023,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -7097,7 +7097,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -7173,7 +7173,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -7249,7 +7249,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -7413,7 +7413,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -7491,7 +7491,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -7571,7 +7571,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -7651,7 +7651,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -7815,7 +7815,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -7895,7 +7895,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -7976,7 +7976,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -8059,7 +8059,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -8142,7 +8142,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -8226,7 +8226,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -8312,7 +8312,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -8398,7 +8398,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -8562,7 +8562,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -8649,7 +8649,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -8737,7 +8737,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -8827,7 +8827,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -8991,7 +8991,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -9081,7 +9081,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -9172,7 +9172,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -9264,7 +9264,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -9428,7 +9428,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -9522,7 +9522,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -9616,7 +9616,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -9711,7 +9711,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -9807,7 +9807,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -9971,7 +9971,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -10068,7 +10068,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -10232,7 +10232,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -10331,7 +10331,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -10495,7 +10495,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -10659,7 +10659,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -10758,7 +10758,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -10858,7 +10858,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -10959,7 +10959,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -11123,7 +11123,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -11225,7 +11225,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -11328,7 +11328,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -11432,7 +11432,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -11596,7 +11596,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -11701,7 +11701,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -11808,7 +11808,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -11915,7 +11915,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -12079,7 +12079,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -12187,7 +12187,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -12297,7 +12297,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -12461,7 +12461,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -12571,7 +12571,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -12682,7 +12682,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -12794,7 +12794,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -12907,7 +12907,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -13071,7 +13071,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -13185,7 +13185,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -13302,7 +13302,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -13418,7 +13418,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -13582,7 +13582,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -13699,7 +13699,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -13817,7 +13817,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -13981,7 +13981,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -14100,7 +14100,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -14220,7 +14220,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -14342,7 +14342,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -14464,7 +14464,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -14628,7 +14628,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -14792,7 +14792,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -14915,7 +14915,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -15039,7 +15039,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -15164,7 +15164,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -15290,7 +15290,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -15454,7 +15454,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -15581,7 +15581,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -15709,7 +15709,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -15873,7 +15873,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -16002,7 +16002,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -16132,7 +16132,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -16264,7 +16264,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -16428,7 +16428,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -16563,7 +16563,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -16698,7 +16698,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -16833,7 +16833,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -16997,7 +16997,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -17132,7 +17132,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -17270,7 +17270,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -17407,7 +17407,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -17571,7 +17571,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -17709,7 +17709,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -17849,7 +17849,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -17989,7 +17989,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -18130,7 +18130,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -18272,7 +18272,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -18436,7 +18436,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -18600,7 +18600,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -18743,7 +18743,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -18888,7 +18888,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -19034,7 +19034,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -19198,7 +19198,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -19346,7 +19346,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -19494,7 +19494,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -19642,7 +19642,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -19792,7 +19792,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -19956,7 +19956,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -20120,7 +20120,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -20270,7 +20270,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -20421,7 +20421,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -20573,7 +20573,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -20726,7 +20726,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -20890,7 +20890,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -21045,7 +21045,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -21200,7 +21200,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -21356,7 +21356,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -21513,7 +21513,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -21671,7 +21671,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -21830,7 +21830,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -21994,7 +21994,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -22154,7 +22154,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -22315,7 +22315,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -22477,7 +22477,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
@@ -22640,7 +22640,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Kaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
-            "Mieterhöhung Grund Indexmiete"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;

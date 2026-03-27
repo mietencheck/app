@@ -7,7 +7,6 @@ export * from "./ExitSozialwohnungen";
 export * from "./ExitMoebliert";
 export * from "./ExitKeinWC";
 export * from "./ExitMietvertragZuAlt";
-export * from "./ExitMietvertragZuNeu";
 export * from "./ExitMietspiegeltabelleLeer";
 export * from "./ExitNeubauwohnung";
 export * from "./mieterhoehung";

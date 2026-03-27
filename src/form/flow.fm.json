@@ -1694,7 +1694,7 @@
                                       "type": "Question",
                                       "alias": "Kaltmiete",
                                       "text": "Wie hoch war die Nettokaltmiete bei Abschluss des Mietvertrages?",
-                                      "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Sie enthält keine Betriebskosten, wie z.B. Kosten Heizung und Warmwasser. Du findest diesen Wert in deinem Mietvertrag.",
+                                      "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Du findest diesen Wert in deinem Mietvertrag. Ansonsten  kannst du den Betrag erstmal schätzen (ca. 70% der Warmmiete).",
                                       "answer": {
                                         "type": "NumberAnswer"
                                       },
@@ -1745,7 +1745,7 @@
                                               "type": "Question",
                                               "alias": "Kaltmiete",
                                               "text": "Auf welchen Betrag ist die Nettokaltmiete mit der neusten Mietstaffel gestiegen?",
-                                              "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Sie enthält keine Betriebskosten, wie z.B. Kosten Heizung und Warmwasser. Du findest diesen Wert in deinem Mietvertrag.",
+                                              "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Du findest diesen Wert in deinem Mietvertrag. Ansonsten  kannst du den Betrag erstmal schätzen (ca. 70% der Warmmiete).",
                                               "answer": {
                                                 "type": "NumberAnswer"
                                               },
@@ -1760,7 +1760,7 @@
                                           "type": "Question",
                                           "alias": "Kaltmiete",
                                           "text": "Wie hoch war die Nettokaltmiete bei Abschluss des Mietvertrages?",
-                                          "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Sie enthält keine Betriebskosten, wie z.B. Kosten Heizung und Warmwasser. Du findest diesen Wert in deinem Mietvertrag.",
+                                          "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Du findest diesen Wert in deinem Mietvertrag. Ansonsten  kannst du den Betrag erstmal schätzen (ca. 70% der Warmmiete).",
                                           "answer": {
                                             "type": "NumberAnswer"
                                           },
@@ -1777,7 +1777,7 @@
                                   "type": "Question",
                                   "alias": "Kaltmiete",
                                   "text": "Wie hoch war die Nettokaltmiete bei Abschluss des Mietvertrages?",
-                                  "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Sie enthält keine Betriebskosten, wie z.B. Kosten Heizung und Warmwasser. Du findest diesen Wert in deinem Mietvertrag.",
+                                  "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Du findest diesen Wert in deinem Mietvertrag. Ansonsten  kannst du den Betrag erstmal schätzen (ca. 70% der Warmmiete).",
                                   "answer": {
                                     "type": "NumberAnswer"
                                   },
@@ -1794,7 +1794,7 @@
                           "type": "Question",
                           "alias": "Kaltmiete",
                           "text": "Wie hoch ist die vorgesehene Nettokaltmiete?",
-                          "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Sie enthält keine Betriebskosten, wie z.B. Kosten Heizung und Warmwasser. Du findest diesen Wert in deinem Mietvertrag.",
+                          "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Du findest diesen Wert in deinem Mietvertrag. Ansonsten  kannst du den Betrag erstmal schätzen (ca. 70% der Warmmiete).",
                           "answer": {
                             "type": "NumberAnswer"
                           },
@@ -1832,7 +1832,7 @@
                                   "id": "xlvbb",
                                   "type": "Question",
                                   "alias": "Mieterhöhung",
-                                  "text": "Hat der Vermieter seit Abschluss des Mietvertrages bereits erfolgreich eine Mieterhöhung durchgesetzt?",
+                                  "text": "Hat der Vermieter seit Abschluss des Mietvertrages mindestens eine Mieterhöhung erfolgreich durchgesetzt?",
                                   "info": null,
                                   "answer": {
                                     "type": "ChoiceAnswer",
@@ -2000,7 +2000,7 @@
                                       "id": "aofdh",
                                       "type": "Question",
                                       "alias": "Mieterhöhung",
-                                      "text": "Hat der Vermieter seit Abschluss des Mietvertrages mindestens eine Mieterhöhung erfolgreich durchgesetzt?",
+                                      "text": "Hat der Vermieter abgesehen von der Indexmiete mindestens eine andere Mieterhöhung erfolgreich durchgesetzt?",
                                       "info": null,
                                       "answer": {
                                         "type": "ChoiceAnswer",
@@ -2022,6 +2022,7 @@
                                     {
                                       "id": "mfape",
                                       "type": "If",
+                                      "alternate": [],
                                       "cases": [
                                         {
                                           "id": "td20z",
@@ -2046,14 +2047,10 @@
                                               "alias": "Mieterhöhung Grund Indexmiete",
                                               "text": "Wie wurden die Mieterhöhung begründet?",
                                               "info": "Beachte: Falls die Miete mehrfach erhöht wurde, wähle alle angegebenen Gründe aus.",
+                                              "required": true,
                                               "answer": {
                                                 "type": "MultiChoiceAnswer",
                                                 "options": [
-                                                  {
-                                                    "id": "k7vmz",
-                                                    "alias": "Indexmiete",
-                                                    "text": "Indexmiete, Verbraucherpreisindex oder VPI (§ 557b BGB)"
-                                                  },
                                                   {
                                                     "id": "808h4",
                                                     "alias": "Modernisierung",
@@ -2075,16 +2072,24 @@
                                                     "text": "Andere Begründung"
                                                   }
                                                 ]
-                                              },
-                                              "required": true
+                                              }
                                             },
                                             {
                                               "id": "8g6w6h",
                                               "type": "If",
+                                              "alternate": [],
                                               "cases": [
                                                 {
                                                   "id": "d87xm",
                                                   "type": "IfCase",
+                                                  "block": [
+                                                    {
+                                                      "id": "jofrvi",
+                                                      "alias": "Exit: Indexmiete nicht anfechtbar wegen freiwilliger Mieterhöhung",
+                                                      "text": "",
+                                                      "type": "Exit"
+                                                    }
+                                                  ],
                                                   "test": {
                                                     "id": "9rnw3",
                                                     "questionRef": {
@@ -2095,27 +2100,16 @@
                                                     "type": "AnswerMultiOptionComparison",
                                                     "operator": "is",
                                                     "comparands": [
-                                                      "k7vmz",
                                                       "808h4",
                                                       "1jbj5"
                                                     ]
-                                                  },
-                                                  "block": [
-                                                    {
-                                                      "id": "jofrvi",
-                                                      "alias": "Exit: Indexmiete nicht anfechtbar wegen freiwilliger Mieterhöhung",
-                                                      "text": "",
-                                                      "type": "Exit"
-                                                    }
-                                                  ]
+                                                  }
                                                 }
-                                              ],
-                                              "alternate": []
+                                              ]
                                             }
                                           ]
                                         }
-                                      ],
-                                      "alternate": []
+                                      ]
                                     }
                                   ]
                                 },
@@ -2137,93 +2131,169 @@
                                   },
                                   "block": [
                                     {
-                                      "id": "bbkix",
-                                      "type": "Question",
-                                      "alias": "Mieterhöhung",
-                                      "text": "Hat der Vermieter seit der neusten Mietstaffel Erhöhung mindestens eine andere Mieterhöhung erfolgreich durchgesetzt?",
-                                      "info": null,
-                                      "answer": {
-                                        "type": "ChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "9pjj1",
-                                            "alias": "Ja",
-                                            "text": "Ja"
-                                          },
-                                          {
-                                            "id": "3vq3gh",
-                                            "alias": "Nein",
-                                            "text": "Nein"
-                                          }
-                                        ]
-                                      },
-                                      "required": true
-                                    },
-                                    {
-                                      "id": "q3vzy",
-                                      "type": "Question",
-                                      "alias": "Mieterhöhung Grund Staffelmiete",
-                                      "text": "Wie wurden die Mieterhöhung begründet?",
-                                      "info": "Beachte: Falls die Miete mehrfach erhöht wurde, wähle alle angegebenen Gründe an.",
-                                      "answer": {
-                                        "type": "MultiChoiceAnswer",
-                                        "options": [
-                                          {
-                                            "id": "808h4",
-                                            "alias": "Modernisierung",
-                                            "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
-                                          },
-                                          {
-                                            "id": "1jbj5",
-                                            "alias": "Betriebskostenerhöhung",
-                                            "text": "Gestiegene Betriebskosten (§ 560 BGB)"
-                                          },
-                                          {
-                                            "id": "qkdhx",
-                                            "alias": "Freiwillig",
-                                            "text": "Freiwillige Mieterhöhung (§ 557 BGB)"
-                                          },
-                                          {
-                                            "id": "7oedm",
-                                            "alias": "Kein Grund",
-                                            "text": "Andere Begründung"
-                                          }
-                                        ]
-                                      },
-                                      "required": true
-                                    },
-                                    {
-                                      "id": "0flyn",
                                       "type": "If",
+                                      "id": "wmmsv",
                                       "cases": [
                                         {
-                                          "id": "y3esv",
                                           "type": "IfCase",
+                                          "id": "y8093",
                                           "test": {
-                                            "id": "qenby",
+                                            "id": "ph6gq",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Mieterhöhung Grund Staffelmiete"
+                                              "value": "Neue Mietstaffel seit Vertragsabschluss"
                                             },
-                                            "negated": true,
-                                            "type": "AnswerMultiOptionComparison",
                                             "operator": "is",
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
                                             "comparands": [
-                                              "808h4",
-                                              "1jbj5"
+                                              "7hl5h"
                                             ]
                                           },
                                           "block": [
                                             {
-                                              "id": "0uznh",
-                                              "alias": "Exit: Staffelmiete nicht anfechtbar wegen freiwilliger Mieterhöhung",
-                                              "text": "",
-                                              "type": "Exit"
+                                              "id": "e280m",
+                                              "type": "Question",
+                                              "alias": "Mieterhöhung",
+                                              "text": "Hat der Vermieter seit der neusten Mietstaffel Erhöhung mindestens eine andere Mieterhöhung erfolgreich durchgesetzt?",
+                                              "info": null,
+                                              "answer": {
+                                                "type": "ChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "9pjj1",
+                                                    "alias": "Ja",
+                                                    "text": "Ja"
+                                                  },
+                                                  {
+                                                    "id": "3vq3gh",
+                                                    "alias": "Nein",
+                                                    "text": "Nein"
+                                                  }
+                                                ]
+                                              },
+                                              "required": true
                                             }
                                           ]
                                         }
                                       ],
-                                      "alternate": []
+                                      "alternate": [
+                                        {
+                                          "id": "bbkix",
+                                          "type": "Question",
+                                          "alias": "Mieterhöhung",
+                                          "text": "Hat der Vermieter seit Abschluss des Mietvertrages mindestens eine Mieterhöhung erfolgreich durchgesetzt?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "9pjj1",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "3vq3gh",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              }
+                                            ]
+                                          },
+                                          "required": true
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "If",
+                                      "id": "s46vy",
+                                      "alternate": [],
+                                      "cases": [
+                                        {
+                                          "type": "IfCase",
+                                          "id": "6g2uk",
+                                          "block": [
+                                            {
+                                              "id": "q3vzy",
+                                              "type": "Question",
+                                              "alias": "Mieterhöhung Grund Staffelmiete",
+                                              "text": "Wie wurden die Mieterhöhung begründet?",
+                                              "info": "Beachte: Falls die Miete mehrfach erhöht wurde, wähle alle angegebenen Gründe an.",
+                                              "answer": {
+                                                "type": "MultiChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "808h4",
+                                                    "alias": "Modernisierung",
+                                                    "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
+                                                  },
+                                                  {
+                                                    "id": "1jbj5",
+                                                    "alias": "Betriebskostenerhöhung",
+                                                    "text": "Gestiegene Betriebskosten (§ 560 BGB)"
+                                                  },
+                                                  {
+                                                    "id": "qkdhx",
+                                                    "alias": "Freiwillig",
+                                                    "text": "Freiwillige Mieterhöhung (§ 557 BGB)"
+                                                  },
+                                                  {
+                                                    "id": "7oedm",
+                                                    "alias": "Kein Grund",
+                                                    "text": "Andere Begründung"
+                                                  }
+                                                ]
+                                              },
+                                              "required": true
+                                            },
+                                            {
+                                              "id": "0flyn",
+                                              "type": "If",
+                                              "cases": [
+                                                {
+                                                  "id": "y3esv",
+                                                  "type": "IfCase",
+                                                  "test": {
+                                                    "id": "qenby",
+                                                    "questionRef": {
+                                                      "type": "AliasRef",
+                                                      "value": "Mieterhöhung Grund Staffelmiete"
+                                                    },
+                                                    "negated": true,
+                                                    "type": "AnswerMultiOptionComparison",
+                                                    "operator": "is",
+                                                    "comparands": [
+                                                      "808h4",
+                                                      "1jbj5"
+                                                    ]
+                                                  },
+                                                  "block": [
+                                                    {
+                                                      "id": "0uznh",
+                                                      "alias": "Exit: Staffelmiete nicht anfechtbar wegen freiwilliger Mieterhöhung",
+                                                      "text": "",
+                                                      "type": "Exit"
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "alternate": []
+                                            }
+                                          ],
+                                          "test": {
+                                            "id": "9mnx7",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Mieterhöhung"
+                                            },
+                                            "operator": "is",
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "comparands": [
+                                              "9pjj1"
+                                            ]
+                                          }
+                                        }
+                                      ]
                                     }
                                   ]
                                 }

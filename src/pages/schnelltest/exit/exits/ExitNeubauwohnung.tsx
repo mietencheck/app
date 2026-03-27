@@ -2,8 +2,6 @@ import { getMietspiegeljahr } from "~/form/api";
 import { useAnswers } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
-import { WerdeAktiv } from "../../partials";
-
 export function ExitNeubauwohnung() {
   const l = useLocalizeField();
   const answers = useAnswers().getAliasedState();
@@ -23,7 +21,6 @@ export function ExitNeubauwohnung() {
         <h3 className="text-base-medium text-neutral">{l("Was nun?")}</h3>
         <p>{l("Was nun? Text")}</p>
       </div>
-      <WerdeAktiv />
     </>
   );
 }
