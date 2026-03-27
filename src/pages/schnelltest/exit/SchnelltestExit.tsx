@@ -27,7 +27,6 @@ import {
   ExitMieterhoehungZugestimmt,
   ExitMietspiegeltabelleLeer,
   ExitMietvertragZuAlt,
-  ExitMietvertragZuNeu,
   ExitMoebliert,
   ExitNeubauwohnung,
   ExitSozialwohnungen,
@@ -38,7 +37,6 @@ import { StepperType } from "..";
 import { ExitAusgangsmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung } from "./exits/miete/ExitAusgangsmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung";
 
 const Exits = {
-  Mietspiegel2024: () => <ExitMietvertragZuNeu />,
   "Exit: Mietvertrag zu alt": () => <ExitMietvertragZuAlt />,
   "Exit: Mietspiegeltabelle Leer": () => <ExitMietspiegeltabelleLeer />,
   "Exit: Zu neu": () => <ExitNeubauwohnung />,
