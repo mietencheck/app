@@ -5,43 +5,37 @@ export default defineType({
   title: 'Post',
   type: 'document',
   fields: [
-    // Localized title
+    defineField({
+      name: 'translationGroup',
+      title: 'Translation group',
+      type: 'string',
+      hidden: true,
+      readOnly: true,
+    }),
+    defineField({
+      name: 'language',
+      title: 'Language',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'German', value: 'de'},
+          {title: 'English', value: 'en'},
+        ],
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+
     defineField({
       name: 'title',
       title: 'Title',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'de',
-          title: 'Title (DE)',
-          type: 'string',
-          validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-          name: 'en',
-          title: 'Title (EN)',
-          type: 'string',
-        }),
-      ],
+      type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
 
-    // localized subtitle
     defineField({
       name: 'subtitle',
       title: 'Subtitle',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'de',
-          title: 'Subtitle (DE)',
-          type: 'string',
-        }),
-        defineField({
-          name: 'en',
-          title: 'Subtitle (EN)',
-          type: 'string',
-        }),
-      ],
+      type: 'string',
     }),
 
     defineField({
@@ -49,9 +43,10 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: (doc: any) => doc?.title?.de,
+        source: 'title',
         maxLength: 96,
       },
+      validation: (Rule) => Rule.required(),
     }),
 
     defineField({
@@ -60,6 +55,7 @@ export default defineType({
       type: 'reference',
       to: {type: 'author'},
     }),
+
     defineField({
       name: 'mainImage',
       title: 'Main image',
@@ -68,12 +64,15 @@ export default defineType({
         hotspot: true,
       },
     }),
+
     defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array',
       of: [{type: 'reference', to: {type: 'category'}}],
+      initialValue: [],
     }),
+
     defineField({
       name: 'publishedAt',
       title: 'Published at',
@@ -83,32 +82,27 @@ export default defineType({
     defineField({
       name: 'body',
       title: 'Body',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'de',
-          title: 'Body (DE)',
-          type: 'blockContent',
-          validation: (Rule) => Rule.required(),
-        }),
-        defineField({
-          name: 'en',
-          title: 'Body (EN)',
-          type: 'blockContent',
-        }),
-      ],
+      type: 'blockContent',
+      validation: (Rule) => Rule.required(),
     }),
   ],
 
   preview: {
     select: {
-      title: 'title.de',
+      title: 'title',
+      language: 'language',
       author: 'author.name',
       media: 'mainImage',
     },
     prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
+      const {language, author, title, media} = selection
+      const langLabel = language ? `[${language.toUpperCase()}]` : '[??]'
+      const subtitleParts = [author ? `by ${author}` : null].filter(Boolean)
+      return {
+        title: `${langLabel} ${title ?? ''}`.trim(),
+        subtitle: subtitleParts.join(' '),
+        media,
+      }
     },
   },
 })

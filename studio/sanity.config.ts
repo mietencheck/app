@@ -18,7 +18,7 @@ export default defineConfig({
         {id: 'de', title: 'German'},
         {id: 'en', title: 'English'},
       ],
-      schemaTypes: ['post_v2'],
+      schemaTypes: ['post'],
       languageField: 'language',
       allowCreateMetaDoc: true,
     }),

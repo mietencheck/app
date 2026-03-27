@@ -42,7 +42,7 @@ const portableTextComponents: PortableTextComponents = {
   },
 };
 
-const POST_QUERY = `*[_type == "post_v2" && language == $lang && slug.current == $slug][0]{
+const POST_QUERY = `*[_type == "post" && language == $lang && slug.current == $slug][0]{
   "title": title,
   "subtitle": subtitle,
   "imageUrl": mainImage.asset->url,
@@ -60,7 +60,7 @@ const POST_QUERY = `*[_type == "post_v2" && language == $lang && slug.current ==
   },
   publishedAt,
   "siblingSlug": *[
-    _type == "post_v2" &&
+    _type == "post" &&
     translationGroup == ^.translationGroup &&
     language != $lang &&
     defined(slug.current)

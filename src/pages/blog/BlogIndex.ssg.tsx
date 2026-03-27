@@ -20,7 +20,7 @@ interface Post {
 }
 
 const INDEX_QUERY = `*[
-  _type == "post_v2" &&
+  _type == "post" &&
   language == $lang &&
   !(_id match "drafts.*") &&
   defined(slug.current)
