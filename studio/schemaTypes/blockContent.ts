@@ -63,7 +63,7 @@ export default defineType({
                 title: 'Reference',
                 name: 'reference',
                 type: 'reference',
-                to: [{type: 'post'}],
+                to: [{type: 'post'}, {type: 'post_v2'}],
               },
             ],
           },

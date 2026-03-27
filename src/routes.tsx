@@ -3,19 +3,20 @@ import type { RouteRecord } from "vite-react-ssg";
 import { App } from "./App";
 import {
   BlogIndexContent,
-  loader as blogIndexLoader,
+  loaderDe as blogIndexLoaderDe,
+  loaderEn as blogIndexLoaderEn,
 } from "./pages/blog/BlogIndex.ssg";
 import {
   BlogPostContent,
-  loader as blogPostLoader,
+  loaderDe as blogPostLoaderDe,
+  loaderEn as blogPostLoaderEn,
 } from "./pages/blog/BlogPost.ssg";
 import { Layout } from "./pages/landing/layout";
 import { Providers } from "./provider";
-import client from "./sanityClient";
 
 export const routes: RouteRecord[] = [
   {
-    path: "/blog",
+    path: "/de/blog",
     element: (
       <Providers>
         <Layout>
@@ -23,10 +24,23 @@ export const routes: RouteRecord[] = [
         </Layout>
       </Providers>
     ),
-    loader: blogIndexLoader,
+    loader: blogIndexLoaderDe,
   },
   {
-    path: "/blog/:slug",
+    path: "/en/blog",
+    element: (
+      <Providers>
+        <Layout>
+          <BlogIndexContent />
+        </Layout>
+      </Providers>
+    ),
+    loader: blogIndexLoaderEn,
+  },
+
+  // new localized post routes
+  {
+    path: "/de/blog/:slug",
     element: (
       <Providers>
         <Layout>
@@ -34,14 +48,32 @@ export const routes: RouteRecord[] = [
         </Layout>
       </Providers>
     ),
-    loader: blogPostLoader,
-    getStaticPaths: async () => {
-      const slugs: string[] = await client.fetch(
-        `*[_type == "post" && defined(slug.current)].slug.current`,
-      );
-      return slugs.map((slug) => `blog/${slug}`);
-    },
+    loader: blogPostLoaderDe,
+    // getStaticPaths: async () => {
+    //   const slugs: string[] = await client.fetch(
+    //     `*[_type == "post_v2" && language == "de" && defined(slug.current)].slug.current`,
+    //   );
+    //   return slugs.map((slug) => `de/blog/${slug}`);
+    // },
   },
+  {
+    path: "/en/blog/:slug",
+    element: (
+      <Providers>
+        <Layout>
+          <BlogPostContent />
+        </Layout>
+      </Providers>
+    ),
+    loader: blogPostLoaderEn,
+    // getStaticPaths: async () => {
+    //   const slugs: string[] = await client.fetch(
+    //     `*[_type == "post_v2" && language == "en" && defined(slug.current)].slug.current`,
+    //   );
+    //   return slugs.map((slug) => `en/blog/${slug}`);
+    // },
+  },
+
   {
     path: "/*",
     element: (

@@ -2,13 +2,14 @@ import { Menu } from "lucide-react";
 import React from "react";
 
 import { IconButton } from "~/components";
-import { useLocalizeField } from "~/l10n";
+import { useLocaleState, useLocalizeField } from "~/l10n";
 import { AppRouter } from "~/router";
 
 import { LanguageSelect } from "../../components/Header/LanguageSelect";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [menu, setMenu] = React.useState(false);
+  const { locale } = useLocaleState();
   const l = useLocalizeField();
 
   return (
@@ -36,7 +37,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <nav className="hidden sm:flex gap-8 items-center">
               <div className="space-x-6">
                 <a
-                  href={AppRouter.Blog()}
+                  href={
+                    locale === "en" ? AppRouter.BlogEn() : AppRouter.BlogDe()
+                  }
                   className="text-base-medium text-yellow-11 hover:underline"
                 >
                   {l("Ratgeber")}
@@ -64,7 +67,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           className={`${menu ? "flex" : "hidden"} container flex-col items-center text-center pb-4 space-y-1`}
         >
           <a
-            href={AppRouter.Blog()}
+            href={locale === "en" ? AppRouter.BlogEn() : AppRouter.BlogDe()}
             className="block py-3 text-base-medium text-yellow-11 hover:underline"
           >
             {l("Ratgeber")}
@@ -108,7 +111,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             {[
               {
                 label: l("Ratgeber"),
-                href: AppRouter.Blog(),
+                href: locale === "en" ? AppRouter.BlogEn() : AppRouter.BlogDe(),
               },
               { label: l("Über Uns"), href: "/ueber-uns" },
               {

@@ -15,6 +15,7 @@ export default defineType({
           name: 'de',
           title: 'Title (DE)',
           type: 'string',
+          validation: (Rule) => Rule.required(),
         }),
         defineField({
           name: 'en',
@@ -48,7 +49,7 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: (doc) => doc?.title?.de,
+        source: (doc: any) => doc?.title?.de,
         maxLength: 96,
       },
     }),
@@ -88,6 +89,7 @@ export default defineType({
           name: 'de',
           title: 'Body (DE)',
           type: 'blockContent',
+          validation: (Rule) => Rule.required(),
         }),
         defineField({
           name: 'en',

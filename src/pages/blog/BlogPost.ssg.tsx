@@ -1,20 +1,17 @@
 import { PortableText, PortableTextComponents } from "@portabletext/react";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { useLoaderData, type LoaderFunctionArgs } from "react-router-dom";
 
-import { useLocaleState } from "~/l10n";
 import { AppRouter } from "~/router";
 import client from "~/sanityClient";
 
 interface PostData {
-  titleDe: string;
-  titleEn: string;
-  subtitleDe: string;
-  subtitleEn: string;
-  bodyDe: any[];
-  bodyEn: any[];
-  publishedAt: string;
+  title: string;
+  subtitle?: string;
+  body: any[];
+  publishedAt?: string;
   imageUrl?: string;
+  siblingSlug?: string; // slug of the translated sibling
 }
 
 const portableTextComponents: PortableTextComponents = {
@@ -23,14 +20,19 @@ const portableTextComponents: PortableTextComponents = {
       value,
       children,
     }: {
-      value?: { reference?: { slug?: string } };
+      value?: { reference?: { slug?: string; language?: "de" | "en" } };
       children: ReactNode;
     }) => {
       const slug = value?.reference?.slug;
+      const lang = value?.reference?.language ?? "de";
       if (!slug) return <>{children}</>;
       return (
         <a
-          href={AppRouter.BlogPost({ slug })}
+          href={
+            lang === "en"
+              ? AppRouter.BlogPostEn({ slug })
+              : AppRouter.BlogPostDe({ slug })
+          }
           className="text-blue-600 hover:underline"
         >
           {children}
@@ -40,50 +42,63 @@ const portableTextComponents: PortableTextComponents = {
   },
 };
 
-// Loader runs at build time (and on server in dev) for `/blog/:slug`
-export async function loader({ params }: LoaderFunctionArgs) {
-  const slug = params.slug!;
-  const post = await client.fetch<PostData>(
-    `*[_type == "post" && slug.current == $slug][0]{
-      "titleDe": title.de,
-      "titleEn": title.en,
-      "imageUrl": mainImage.asset->url,
-      "bodyDe": body.de[]{
-        ...,
-        markDefs[]{
-          ...,
-          _type == "internalLink" => {
-            "reference": reference->{ "slug": slug.current }
-          }
+const POST_QUERY = `*[_type == "post_v2" && language == $lang && slug.current == $slug][0]{
+  "title": title,
+  "subtitle": subtitle,
+  "imageUrl": mainImage.asset->url,
+  "body": body[]{
+    ...,
+    markDefs[]{
+      ...,
+      _type == "internalLink" => {
+        "reference": reference->{
+          "slug": slug.current,
+          language
         }
-      },
-      "bodyEn": body.en[]{
-        ...,
-        markDefs[]{
-          ...,
-          _type == "internalLink" => {
-            "reference": reference->{ "slug": slug.current }
-          }
-        }
-      },
-      publishedAt
-    }`,
-    { slug },
-  );
+      }
+    }
+  },
+  publishedAt,
+  "siblingSlug": *[
+    _type == "post_v2" &&
+    translationGroup == ^.translationGroup &&
+    language != $lang &&
+    defined(slug.current)
+  ][0].slug.current
+}`;
 
+async function loadPost(slug: string, lang: "de" | "en") {
+  const post = await client.fetch<PostData>(POST_QUERY, { slug, lang });
   if (!post) throw new Response("Not Found", { status: 404 });
   return post;
+}
+
+export async function loaderDe({ params }: LoaderFunctionArgs) {
+  return loadPost(params.slug!, "de");
+}
+
+export async function loaderEn({ params }: LoaderFunctionArgs) {
+  return loadPost(params.slug!, "en");
 }
 
 // Layout-free content component used by vite-react-ssg routes
 export function BlogPostContent() {
   const post = useLoaderData() as PostData;
-  const { locale } = useLocaleState();
 
-  const title = locale === "en" && post.titleEn ? post.titleEn : post.titleDe;
-  const subtitle =
-    locale === "en" && post.subtitleEn ? post.subtitleEn : post.subtitleDe;
-  const body = locale === "en" && post.bodyEn ? post.bodyEn : post.bodyDe;
+  const pathname =
+    typeof window !== "undefined" ? window.location.pathname : "/de/blog";
+  const isEn = pathname.startsWith("/en/");
+
+  const title = post.title;
+  const subtitle = post.subtitle;
+  const body = post.body;
+
+  useEffect(() => {
+    (window as any).__BLOG_SIBLING_SLUG__ = post.siblingSlug ?? null;
+    return () => {
+      (window as any).__BLOG_SIBLING_SLUG__ = null;
+    };
+  }, [post.siblingSlug]);
 
   return (
     <article>
@@ -91,7 +106,7 @@ export function BlogPostContent() {
       <div className="flex flex-col items-center bg-purple-9 pt-12 pb-40 md:pb-48">
         <div className="container text-center">
           <a
-            href={AppRouter.Blog()}
+            href={isEn ? AppRouter.BlogEn() : AppRouter.BlogDe()}
             className="inline-block text-lg-medium text-yellow-9 text-center mb-5 sm:mb-6"
           >
             Ratgeber

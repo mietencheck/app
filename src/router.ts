@@ -12,4 +12,8 @@ export const AppRouter = createRouter({
   Error: "/error",
   Blog: "/blog",
   BlogPost: "/blog/:slug",
+  BlogDe: "/de/blog",
+  BlogEn: "/en/blog",
+  BlogPostDe: "/de/blog/:slug",
+  BlogPostEn: "/en/blog/:slug",
 });

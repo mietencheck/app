@@ -9,8 +9,8 @@ import { ImpressumPage } from "~/pages/landing/impressum";
 import { UeberUnsPage } from "~/pages/landing/ueber-uns";
 import { SchnelltestPage } from "~/pages/schnelltest";
 
-import { BlogIndexContent } from "./pages/blog/BlogIndex.ssg";
-import { BlogPostContent } from "./pages/blog/BlogPost.ssg";
+// import { BlogIndexContent } from "./pages/blog/BlogIndex.ssg";
+// import { BlogPostContent } from "./pages/blog/BlogPost.ssg";
 import { AppRouter } from "./router";
 import { ContinueSessionModal, SESSION_PARAM, useSyncAnswers } from "./session";
 
@@ -53,8 +53,8 @@ function Router() {
     "Details",
     "Beratung",
     "Error",
-    "Blog",
-    "BlogPost",
+    // "Blog",
+    // "BlogPost",
   ]);
 
   if (!route) return <div>Route not found: {window.location.pathname}</div>;
@@ -75,22 +75,22 @@ function Router() {
       return <ImpressumPage />;
     case "Error":
       throw new Error("in der Hose");
-    case "Blog":
-      return (
-        <Suspense
-          fallback={<div className="p-10 text-center">Lade Blog...</div>}
-        >
-          <BlogIndexContent />
-        </Suspense>
-      );
-    case "BlogPost":
-      return (
-        <Suspense
-          fallback={<div className="p-10 text-center">Lade Artikel...</div>}
-        >
-          <BlogPostContent />
-        </Suspense>
-      );
+    // case "Blog":
+    //   return (
+    //     <Suspense
+    //       fallback={<div className="p-10 text-center">Lade Blog...</div>}
+    //     >
+    //       <BlogIndexContent />
+    //     </Suspense>
+    //   );
+    // case "BlogPost":
+    //   return (
+    //     <Suspense
+    //       fallback={<div className="p-10 text-center">Lade Artikel...</div>}
+    //     >
+    //       <BlogPostContent />
+    //     </Suspense>
+    //   );
     default:
       route satisfies never;
   }

@@ -1,37 +1,63 @@
 import { useLoaderData } from "react-router-dom";
 
-import { useLocaleState, useLocalizeField } from "~/l10n";
+import { useLocalizeField } from "~/l10n";
 import { AppRouter } from "~/router";
 import client from "~/sanityClient";
 
+function isEnglishPath(pathname: string): boolean {
+  return pathname.startsWith("/en/");
+}
+
+const FEATURED_SLUG = {
+  de: "was-ist-die-mietpreisbremse",
+} as const;
+
 interface Post {
-  titleDe: string;
-  titleEn?: string;
+  title: string;
   slug: string;
-  subtitleDe?: string;
-  subtitleEn?: string;
+  subtitle?: string;
   imageUrl?: string;
 }
 
-// Runs at build time for '/blog'
-export async function loader() {
-  const posts = await client.fetch<Post[]>(
-    `*[_type == "post"] {
-      "titleDe": title.de,
-      "titleEn": title.en,
-      "slug": slug.current,
-      "subtitleDe": subtitle.de,
-      "subtitleEn": subtitle.en,
-      "imageUrl": mainImage.asset->url
-    }`,
+const INDEX_QUERY = `*[
+  _type == "post_v2" &&
+  language == $lang &&
+  !(_id match "drafts.*") &&
+  defined(slug.current)
+] | order(_updatedAt desc) {
+  "_id": _id,
+  "title": title,
+  "slug": slug.current,
+  "subtitle": subtitle,
+  "imageUrl": mainImage.asset->url
+}`;
+
+export async function loaderDe() {
+  const data = await client.fetch<Post[]>(INDEX_QUERY, { lang: "de" });
+  console.log(
+    "loaderDe",
+    data.length,
+    data.map((d: any) => d._id),
   );
-  return posts;
+  return data;
+}
+
+export async function loaderEn() {
+  const data = await client.fetch<Post[]>(INDEX_QUERY, { lang: "en" });
+  console.log(
+    "loaderEn",
+    data.length,
+    data.map((d: any) => d._id),
+  );
+  return data;
 }
 
 // Layout-free content component used by vite-react-ssg routes
 export function BlogIndexContent() {
+  const pathname =
+    typeof window !== "undefined" ? window.location.pathname : "/de/blog";
+  const isEn = isEnglishPath(pathname);
   const l = useLocalizeField();
-  const { locale } = useLocaleState();
   const posts = useLoaderData() as Post[];
 
   return (
@@ -54,7 +80,11 @@ export function BlogIndexContent() {
           <div className="max-w-[960px] mx-auto space-y-16">
             <a
               className="flex flex-col justify-between gap-6 md:flex-row md:gap-10"
-              href={AppRouter.BlogPost({ slug: "was-ist-die-mietpreisbremse" })}
+              href={
+                isEn
+                  ? AppRouter.BlogEn()
+                  : AppRouter.BlogPostDe({ slug: FEATURED_SLUG.de })
+              }
             >
               <div className="w-full lg:pr-4">
                 <img
@@ -91,23 +121,26 @@ export function BlogIndexContent() {
           {posts.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-16">
               {posts.map((post) => {
-                const title =
-                  locale === "en" && post.titleEn ? post.titleEn : post.titleDe;
-                const subtitle =
-                  locale === "en" && post.subtitleEn
-                    ? post.subtitleEn
-                    : post.subtitleDe;
+                const title = post.title;
+                const subtitle = post.subtitle;
+                const fallbackUrl =
+                  "/images/blog/beratung-durch-mieterverein.png";
+                const imageSrc = post.imageUrl || fallbackUrl;
 
                 return (
                   <a
                     key={post.slug}
-                    href={AppRouter.BlogPost({ slug: post.slug })}
+                    href={
+                      isEn
+                        ? AppRouter.BlogPostEn({ slug: post.slug })
+                        : AppRouter.BlogPostDe({ slug: post.slug })
+                    }
                   >
                     <article className="flex flex-wrap justify-between">
-                      {post.imageUrl && (
+                      {imageSrc && (
                         <img
                           className="w-full aspect-[8/5] object-cover mb-6"
-                          src={post.imageUrl}
+                          src={imageSrc}
                           alt={title}
                         />
                       )}
