@@ -2,7 +2,7 @@ import { default as FlexSearch } from "flexsearch";
 import memoize from "memoizerific";
 import sanitize from "sanitize-filename";
 
-import strassen from "~/../public/strassenverzeichnis/strassen.json";
+import strassen from "~/strassenverzeichnis/strassen.json";
 
 import type {
   AdresseWithLage,

@@ -4,7 +4,7 @@ import { evaluateFlowMachine } from "./form/flow-machine-evaluation";
 import { FinalAnswers } from "./form/flow-machine-runtime";
 
 interface Env {
-  ASSETS: Fetcher;
+  ASSETS?: Fetcher;
   DB?: D1Database;
 }
 
@@ -185,6 +185,10 @@ async function handleSentryEnvelope(request: Request) {
 }
 
 async function serveAsset(request: Request, env: Env) {
+  if (!env.ASSETS) {
+    return fetch(request);
+  }
+
   const response = await env.ASSETS.fetch(request);
   if (response.status !== 404 || !isHtmlNavigationRequest(request)) {
     return response;
