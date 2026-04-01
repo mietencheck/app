@@ -1,6 +1,5 @@
 import { useLocalizeField } from "~/l10n";
-
-import { Layout } from "./layout";
+import { Layout } from "~/pages/layout";
 
 export function UeberUnsPage() {
   const l = useLocalizeField();

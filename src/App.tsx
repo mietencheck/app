@@ -2,12 +2,11 @@ import * as Sentry from "@sentry/react";
 import React, { Suspense, useCallback, useEffect, useMemo } from "react";
 import { Dialog } from "react-aria-components";
 
-import { BeratungPage } from "~/pages/beratung";
+import { DatenschutzPage } from "~/pages/datenschutz";
+import { ImpressumPage } from "~/pages/impressum";
 import LandingPage from "~/pages/landing";
-import { DatenschutzPage } from "~/pages/landing/datenschutz";
-import { ImpressumPage } from "~/pages/landing/impressum";
-import { UeberUnsPage } from "~/pages/landing/ueber-uns";
 import { SchnelltestPage } from "~/pages/schnelltest";
+import { UeberUnsPage } from "~/pages/ueber-uns";
 
 // import { BlogIndexContent } from "./pages/blog/BlogIndex.ssg";
 // import { BlogPostContent } from "./pages/blog/BlogPost.ssg";
@@ -51,10 +50,7 @@ function Router() {
     "Impressum",
     "Schnelltest",
     "Details",
-    "Beratung",
     "Error",
-    // "Blog",
-    // "BlogPost",
   ]);
 
   if (!route) return <div>Route not found: {window.location.pathname}</div>;
@@ -65,8 +61,6 @@ function Router() {
       return <SchnelltestPage />;
     case "Details":
       return <DetailsPage />;
-    case "Beratung":
-      return <BeratungPage />;
     case "UeberUns":
       return <UeberUnsPage />;
     case "Datenschutz":
@@ -75,22 +69,6 @@ function Router() {
       return <ImpressumPage />;
     case "Error":
       throw new Error("in der Hose");
-    // case "Blog":
-    //   return (
-    //     <Suspense
-    //       fallback={<div className="p-10 text-center">Lade Blog...</div>}
-    //     >
-    //       <BlogIndexContent />
-    //     </Suspense>
-    //   );
-    // case "BlogPost":
-    //   return (
-    //     <Suspense
-    //       fallback={<div className="p-10 text-center">Lade Artikel...</div>}
-    //     >
-    //       <BlogPostContent />
-    //     </Suspense>
-    //   );
     default:
       route satisfies never;
   }

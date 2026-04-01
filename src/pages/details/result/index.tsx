@@ -206,7 +206,7 @@ export function ResultPage() {
                     className="block text-base-book underline mt-4 text-neutral"
                     href={
                       locale == "de"
-                        ? "https://blog.mietencheck.de/de/2024-05-28-kostenlose-beratung-beim-berliner-mieterverein-oder-einer-anderen-mieterinnenvereinigung/"
+                        ? "/de/blog/kostenlose-beratung-beim-berliner-mieterverein-oder-einer-anderen-mieter-innenvereinigung"
                         : "https://blog.mietencheck.de/en/2024-05-28-kostenlose-beratung-beim-berliner-mieterverein-oder-einer-anderen-mieterinnenvereinigung/"
                     }
                     target="_blank"

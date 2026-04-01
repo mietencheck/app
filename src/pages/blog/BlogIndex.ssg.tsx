@@ -34,21 +34,11 @@ const INDEX_QUERY = `*[
 
 export async function loaderDe() {
   const data = await client.fetch<Post[]>(INDEX_QUERY, { lang: "de" });
-  console.log(
-    "loaderDe",
-    data.length,
-    data.map((d: any) => d._id),
-  );
   return data;
 }
 
 export async function loaderEn() {
   const data = await client.fetch<Post[]>(INDEX_QUERY, { lang: "en" });
-  console.log(
-    "loaderEn",
-    data.length,
-    data.map((d: any) => d._id),
-  );
   return data;
 }
 
