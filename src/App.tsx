@@ -102,7 +102,10 @@ export function App() {
   useLocalStorageInSentryContext();
 
   const sessionHashInURL = useMemo(
-    () => new URLSearchParams(location.search).get(SESSION_PARAM),
+    () =>
+      typeof window === "undefined"
+        ? null
+        : new URLSearchParams(window.location.search).get(SESSION_PARAM),
     [],
   );
 
