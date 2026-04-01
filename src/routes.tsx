@@ -11,7 +11,7 @@ import {
   loaderDe as blogPostLoaderDe,
   loaderEn as blogPostLoaderEn,
 } from "./pages/blog/BlogPost.ssg";
-import { Layout } from "./pages/landing/layout";
+import { Layout } from "./pages/layout";
 import { Providers } from "./provider";
 import client from "./sanityClient";
 

@@ -5,7 +5,7 @@ import { IconButton } from "~/components";
 import { useLocaleState, useLocalizeField } from "~/l10n";
 import { AppRouter } from "~/router";
 
-import { LanguageSelect } from "../../components/Header/LanguageSelect";
+import { LanguageSelect } from "../components/Header/LanguageSelect";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [menu, setMenu] = React.useState(false);
@@ -133,7 +133,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <a href="https://dwenteignen.de/" target="_blank">
             <img
-              src="images/dwe-logo-yellow.svg"
+              src="/images/dwe-logo-yellow.svg"
               alt="Deutsche Wohnen & Co Enteignen Logo"
               className="h-16"
             />

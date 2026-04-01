@@ -5,8 +5,7 @@ import {
   AccordionTrigger,
 } from "~/components";
 import { useLocaleState, useLocalizeField } from "~/l10n";
-
-import { Layout } from "./layout";
+import { Layout } from "~/pages/layout";
 
 export default function LandingPage() {
   const l = useLocalizeField();
@@ -40,7 +39,7 @@ export default function LandingPage() {
           </p>
           <a href="https://dwenteignen.de/" target="_blank">
             <img
-              src="images/dwe-logo.svg"
+              src="/images/dwe-logo.svg"
               alt="Deutsche Wohnen & Co Enteignen Logo"
             />
           </a>
