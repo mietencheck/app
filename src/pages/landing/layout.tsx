@@ -133,7 +133,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
           <a href="https://dwenteignen.de/" target="_blank">
             <img
-              src="/images/dwe-logo-yellow.svg"
+              src="images/dwe-logo-yellow.svg"
               alt="Deutsche Wohnen & Co Enteignen Logo"
               className="h-16"
             />
@@ -149,7 +149,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </a>
             <a
               className="text-base-medium text-yellow-11 hover:underline"
-              href="/impressum"
+              href="impressum"
             >
               {l("Impressum")}
             </a>

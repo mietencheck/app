@@ -4,12 +4,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "~/components";
-import { useLocalizeField } from "~/l10n";
+import { useLocaleState, useLocalizeField } from "~/l10n";
 
 import { Layout } from "./layout";
 
 export default function LandingPage() {
   const l = useLocalizeField();
+
+  const { locale } = useLocaleState();
 
   return (
     <Layout>
@@ -38,7 +40,7 @@ export default function LandingPage() {
           </p>
           <a href="https://dwenteignen.de/" target="_blank">
             <img
-              src="/images/dwe-logo.svg"
+              src="images/dwe-logo.svg"
               alt="Deutsche Wohnen & Co Enteignen Logo"
             />
           </a>
@@ -93,6 +95,8 @@ export default function LandingPage() {
           <div className="mx-auto max-w-screen-lg space-y-16 sm:space-y-12">
             {[
               {
+                image: "images/landing/so-funktionierts-01.jpg",
+                imageEn: "images/landing/so-funktionierts-01-en.jpg",
                 alt: l("Screenshot einer Prognose"),
                 number: "1",
                 title: l("Mach den Schnell-Test"),
@@ -101,6 +105,8 @@ export default function LandingPage() {
                 ),
               },
               {
+                image: "images/landing/so-funktionierts-02.jpg",
+                imageEn: "images/landing/so-funktionierts-02-en.jpg",
                 alt: l("Screenshot einer Frage"),
                 number: "2",
                 title: l(
@@ -111,6 +117,8 @@ export default function LandingPage() {
                 ),
               },
               {
+                image: "images/landing/so-funktionierts-03.jpg",
+                imageEn: "images/landing/so-funktionierts-03-en.jpg",
                 alt: l("Screenshot eines Resultates"),
                 number: "3",
                 title: l("Setze dein Recht auf eine günstigere Miete durch"),
@@ -124,9 +132,9 @@ export default function LandingPage() {
                 className="flex flex-col gap-6 md:flex-row md:gap-10"
               >
                 <div className="w-full lg:pr-4">
-                  <div
-                    className="w-full aspect-[8/5] bg-purple-3"
-                    aria-label={item.alt}
+                  <img
+                    src={locale == "de" ? item.image : item.imageEn}
+                    alt={item.alt}
                   />
                 </div>
                 <div className="w-full flex flex-col justify-center text-purple-11">
@@ -151,9 +159,9 @@ export default function LandingPage() {
 
           <div className="flex flex-col gap-10 sm:flex-row">
             <div className="w-full lg:pr-4">
-              <div
-                className="w-full aspect-[8/5] bg-purple-3"
-                aria-label="Bild von zwei Aktiviten*innen"
+              <img
+                src={"images/landing/wer-wir-sind.jpg"}
+                alt="Bild von zwei Aktiviten*innen"
               />
             </div>
             <div className="w-full flex flex-col justify-center text-purple-11">
