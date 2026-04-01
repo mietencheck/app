@@ -59,6 +59,8 @@ export function BlogIndexContent() {
   const isEn = isEnglishPath(pathname);
   const l = useLocalizeField();
   const posts = useLoaderData() as Post[];
+  const featuredPost =
+    posts.find((post) => post.slug === FEATURED_SLUG.de) ?? posts[0];
 
   return (
     <>
@@ -87,11 +89,15 @@ export function BlogIndexContent() {
               }
             >
               <div className="w-full lg:pr-4">
-                <img
-                  className="w-full aspect-[8/5] object-cover"
-                  src="/images/blog/mietpreisbremse-faq.png"
-                  alt="Was ist die Mietpreisbremse?"
-                />
+                {featuredPost?.imageUrl ? (
+                  <img
+                    className="w-full aspect-[8/5] object-cover"
+                    src={featuredPost.imageUrl}
+                    alt={featuredPost.title}
+                  />
+                ) : (
+                  <div className="w-full aspect-[8/5] bg-purple-3" />
+                )}
               </div>
               <div className="w-full flex flex-col justify-center">
                 <h3 className="title-24 mb-3 md:title-28">
@@ -123,9 +129,7 @@ export function BlogIndexContent() {
               {posts.map((post) => {
                 const title = post.title;
                 const subtitle = post.subtitle;
-                const fallbackUrl =
-                  "/images/blog/beratung-durch-mieterverein.png";
-                const imageSrc = post.imageUrl || fallbackUrl;
+                const imageSrc = post.imageUrl;
 
                 return (
                   <a
