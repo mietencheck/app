@@ -13,6 +13,19 @@ import {
 } from "./pages/blog/BlogPost.ssg";
 import { Layout } from "./pages/landing/layout";
 import { Providers } from "./provider";
+import client from "./sanityClient";
+
+async function getBlogPostPaths(lang: "de" | "en") {
+  const slugs = await client.fetch<string[]>(
+    `*[_type == "post" && language == $lang && defined(slug.current)].slug.current`,
+    { lang },
+  );
+  return slugs
+    .filter(
+      (slug): slug is string => typeof slug === "string" && slug.length > 0,
+    )
+    .map((slug) => `/${lang}/blog/${slug}`);
+}
 
 export const routes: RouteRecord[] = [
   {
@@ -57,12 +70,7 @@ export const routes: RouteRecord[] = [
       </Providers>
     ),
     loader: blogPostLoaderDe,
-    // getStaticPaths: async () => {
-    //   const slugs: string[] = await client.fetch(
-    //     `*[_type == "post_v2" && language == "de" && defined(slug.current)].slug.current`,
-    //   );
-    //   return slugs.map((slug) => `de/blog/${slug}`);
-    // },
+    getStaticPaths: async () => getBlogPostPaths("de"),
   },
   {
     path: "/en/blog/:slug",
@@ -74,12 +82,7 @@ export const routes: RouteRecord[] = [
       </Providers>
     ),
     loader: blogPostLoaderEn,
-    // getStaticPaths: async () => {
-    //   const slugs: string[] = await client.fetch(
-    //     `*[_type == "post_v2" && language == "en" && defined(slug.current)].slug.current`,
-    //   );
-    //   return slugs.map((slug) => `en/blog/${slug}`);
-    // },
+    getStaticPaths: async () => getBlogPostPaths("en"),
   },
 
   {

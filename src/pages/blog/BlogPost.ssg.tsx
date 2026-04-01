@@ -83,11 +83,25 @@ export async function loaderEn({ params }: LoaderFunctionArgs) {
 
 // Layout-free content component used by vite-react-ssg routes
 export function BlogPostContent() {
-  const post = useLoaderData() as PostData;
+  const post = useLoaderData() as PostData | undefined;
 
   const pathname =
     typeof window !== "undefined" ? window.location.pathname : "/de/blog";
   const isEn = pathname.startsWith("/en/");
+
+  if (!post) {
+    return (
+      <article className="container py-24 text-center">
+        <h1 className="title-32 mb-6">Artikel nicht gefunden</h1>
+        <a
+          href={isEn ? AppRouter.BlogEn() : AppRouter.BlogDe()}
+          className="text-blue-600 hover:underline"
+        >
+          Zurueck zur Uebersicht
+        </a>
+      </article>
+    );
+  }
 
   const title = post.title;
   const subtitle = post.subtitle;
