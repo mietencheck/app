@@ -12,6 +12,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
+    "types": ["@cloudflare/workers-types", "vite/client"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
@@ -20,7 +21,6 @@
     }
   },
   "include": ["src", "scripts"],
-  "exclude": ["functions/**/*"],
   "references": [
     {
       "path": "./tsconfig.node.json"
