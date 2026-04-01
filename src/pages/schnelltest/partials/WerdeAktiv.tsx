@@ -27,8 +27,8 @@ export function WerdeAktiv() {
             className="underline"
             href={
               locale == "de"
-                ? "https://blog.mietencheck.de/de/2024-05-28-was-du-tun-kannst/"
-                : "https://blog.mietencheck.de/en/2024-05-28-was-du-tun-kannst/"
+                ? "/de/blog/was-du-tun-kannst"
+                : "/en/blog/how-you-can-get-involved"
             }
             target="_blank"
           >
@@ -48,8 +48,8 @@ export function WerdeAktiv() {
             className="underline"
             href={
               locale == "de"
-                ? "https://blog.mietencheck.de/de/2024-05-28-was-du-tun-kannst/"
-                : "https://blog.mietencheck.de/en/2024-05-28-was-du-tun-kannst/"
+                ? "/de/blog/was-du-tun-kannst"
+                : "/en/blog/how-you-can-get-involved"
             }
             target="_blank"
           >
@@ -65,8 +65,8 @@ export function WerdeAktiv() {
             className="underline"
             href={
               locale == "de"
-                ? "https://blog.mietencheck.de/de/2024-05-28-was-du-tun-kannst/"
-                : "https://blog.mietencheck.de/en/2024-05-28-was-du-tun-kannst/"
+                ? "/de/blog/was-du-tun-kannst"
+                : "/en/blog/how-you-can-get-involved"
             }
             target="_blank"
           >

@@ -206,8 +206,8 @@ export function ResultPage() {
                     className="block text-base-book underline mt-4 text-neutral"
                     href={
                       locale == "de"
-                        ? "/de/blog/kostenlose-beratung-beim-berliner-mieterverein-oder-einer-anderen-mieter-innenvereinigung"
-                        : "https://blog.mietencheck.de/en/2024-05-28-kostenlose-beratung-beim-berliner-mieterverein-oder-einer-anderen-mieterinnenvereinigung/"
+                        ? "/de/blog/kostenlose-beratung-beim-berliner-mieterverein-oder-anderen-mieter-innenvereinigungen"
+                        : "/en/blog/free-advice-from-the-berlin-tenants-association-or-other-tenants-associations"
                     }
                     target="_blank"
                   >
@@ -229,8 +229,8 @@ export function ResultPage() {
                     className="block text-base-book underline mt-4 text-neutral"
                     href={
                       locale == "de"
-                        ? "https://blog.mietencheck.de/de/2024-05-28-kostenlose-beratung-bei-einem-berliner-bezirke/"
-                        : "https://blog.mietencheck.de/en/2024-05-30-berlin-districts-free-tenant-counselling/"
+                        ? "/de/blog/kostenlose-beratung-in-den-berliner-bezirken"
+                        : "/en/blog/berlin-districts-free-tenant-counselling"
                     }
                     target="_blank"
                   >
@@ -252,8 +252,8 @@ export function ResultPage() {
                     className="block text-base-book underline mt-4 text-neutral"
                     href={
                       locale == "de"
-                        ? "https://blog.mietencheck.de/de/2024-05-28-kostenpflichtige-beratung-durch-rechtsanwaltin/"
-                        : "https://blog.mietencheck.de/en/2024-05-30-getting-a-lawyer-on-board/"
+                        ? "/de/blog/kostenpflichtige-beratung-durch-rechtsanwaelt-in"
+                        : "/en/blog/paid-legal-consultation-with-an-attorney"
                     }
                     target="_blank"
                   >
@@ -306,8 +306,8 @@ export function ResultPage() {
                 className="underline"
                 href={
                   locale == "de"
-                    ? "https://blog.mietencheck.de/de/2024-05-28-was-du-tun-kannst/"
-                    : "https://blog.mietencheck.de/en/2024-05-28-was-du-tun-kannst/"
+                    ? "/de/blog/was-du-tun-kannst"
+                    : "/en/blog/how-you-can-get-involved"
                 }
                 target="_blank"
               >
@@ -327,8 +327,8 @@ export function ResultPage() {
                 className="underline"
                 href={
                   locale == "de"
-                    ? "https://blog.mietencheck.de/de/2024-05-28-was-du-tun-kannst/"
-                    : "https://blog.mietencheck.de/en/2024-05-28-was-du-tun-kannst/"
+                    ? "/de/blog/was-du-tun-kannst"
+                    : "/en/blog/how-you-can-get-involved"
                 }
                 target="_blank"
               >
@@ -346,8 +346,8 @@ export function ResultPage() {
                 className="underline"
                 href={
                   locale == "de"
-                    ? "https://blog.mietencheck.de/de/2024-05-28-was-du-tun-kannst/"
-                    : "https://blog.mietencheck.de/en/2024-05-28-was-du-tun-kannst/"
+                    ? "/de/blog/was-du-tun-kannst"
+                    : "/en/blog/how-you-can-get-involved"
                 }
                 target="_blank"
               >
