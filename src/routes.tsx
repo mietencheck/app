@@ -16,6 +16,14 @@ import { Providers } from "./provider";
 
 export const routes: RouteRecord[] = [
   {
+    path: "/",
+    element: (
+      <Providers>
+        <App />
+      </Providers>
+    ),
+  },
+  {
     path: "/de/blog",
     element: (
       <Providers>
