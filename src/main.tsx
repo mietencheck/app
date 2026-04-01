@@ -1,9 +1,7 @@
 import * as Sentry from "@sentry/react";
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { ViteReactSSG } from "vite-react-ssg";
 
-import { App } from "./App";
-import { Providers } from "./provider";
+import routes from "./routes";
 
 import "./globals.css";
 
@@ -14,10 +12,4 @@ Sentry.init({
   enabled: process.env.NODE_ENV !== "development",
 });
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <Providers>
-      <App />
-    </Providers>
-  </React.StrictMode>,
-);
+export const createRoot = ViteReactSSG({ routes });

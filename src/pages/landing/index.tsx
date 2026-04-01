@@ -127,7 +127,10 @@ export default function LandingPage() {
                 ),
               },
             ].map((item) => (
-              <div className="flex flex-col gap-6 md:flex-row md:gap-10">
+              <div
+                key={item.number}
+                className="flex flex-col gap-6 md:flex-row md:gap-10"
+              >
                 <div className="w-full lg:pr-4">
                   <img
                     src={locale == "de" ? item.image : item.imageEn}
