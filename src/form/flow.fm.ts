@@ -11,7 +11,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -200,7 +200,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -373,7 +373,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -393,7 +393,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -426,7 +426,7 @@ export type StepInfoByAlias = {
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
         };
     };
-    Kaltmiete: {
+    Nettokaltmiete: {
         answer: number;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -437,7 +437,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
         };
     };
     "Mieterhöhung": {
@@ -451,7 +451,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -615,7 +615,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
         };
     };
@@ -630,7 +630,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
@@ -646,7 +646,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
@@ -662,7 +662,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -679,7 +679,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -696,7 +696,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -714,7 +714,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -732,7 +732,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -750,7 +750,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -769,7 +769,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -789,7 +789,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -809,7 +809,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -830,7 +830,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -852,7 +852,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -875,7 +875,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -898,7 +898,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -921,7 +921,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -944,7 +944,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -967,7 +967,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -993,7 +993,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1016,7 +1016,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1040,7 +1040,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1065,7 +1065,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1090,7 +1090,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1115,7 +1115,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1140,7 +1140,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1165,7 +1165,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1190,7 +1190,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1216,7 +1216,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1242,7 +1242,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1268,7 +1268,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1295,7 +1295,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1459,7 +1459,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1487,7 +1487,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1516,7 +1516,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1545,7 +1545,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1575,7 +1575,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1606,7 +1606,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1770,7 +1770,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1801,7 +1801,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1833,7 +1833,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1865,7 +1865,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1898,7 +1898,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1934,7 +1934,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -1970,7 +1970,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2006,7 +2006,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2044,7 +2044,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2082,7 +2082,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2120,7 +2120,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2158,7 +2158,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2196,7 +2196,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2235,7 +2235,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2275,7 +2275,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2316,7 +2316,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2357,7 +2357,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2398,7 +2398,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2439,7 +2439,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2480,7 +2480,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2644,7 +2644,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2808,7 +2808,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -2972,7 +2972,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3016,7 +3016,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3057,7 +3057,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3099,7 +3099,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3142,7 +3142,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3187,7 +3187,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3351,7 +3351,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3396,7 +3396,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3442,7 +3442,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3489,7 +3489,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3537,7 +3537,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3586,7 +3586,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3635,7 +3635,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3684,7 +3684,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -3848,7 +3848,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -4012,7 +4012,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -4176,7 +4176,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -4225,7 +4225,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -4275,7 +4275,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -4326,7 +4326,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -4490,7 +4490,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -4542,7 +4542,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -4706,7 +4706,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -4759,7 +4759,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -4813,7 +4813,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -4868,7 +4868,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5032,7 +5032,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5089,7 +5089,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5146,7 +5146,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5310,7 +5310,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5369,7 +5369,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5429,7 +5429,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5489,7 +5489,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5550,7 +5550,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5612,7 +5612,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5776,7 +5776,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5840,7 +5840,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5904,7 +5904,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -5969,7 +5969,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -6133,7 +6133,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -6199,7 +6199,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -6266,7 +6266,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -6335,7 +6335,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -6404,7 +6404,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -6568,7 +6568,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -6639,7 +6639,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -6711,7 +6711,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -6783,7 +6783,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -6947,7 +6947,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -7021,7 +7021,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -7095,7 +7095,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -7171,7 +7171,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -7247,7 +7247,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -7411,7 +7411,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -7489,7 +7489,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -7569,7 +7569,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -7649,7 +7649,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -7813,7 +7813,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -7893,7 +7893,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -7974,7 +7974,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -8057,7 +8057,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -8140,7 +8140,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -8224,7 +8224,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -8310,7 +8310,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -8396,7 +8396,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -8560,7 +8560,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -8647,7 +8647,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -8735,7 +8735,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -8825,7 +8825,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -8989,7 +8989,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -9079,7 +9079,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -9170,7 +9170,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -9262,7 +9262,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -9426,7 +9426,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -9520,7 +9520,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -9614,7 +9614,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -9709,7 +9709,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -9805,7 +9805,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -9969,7 +9969,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -10066,7 +10066,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -10230,7 +10230,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -10329,7 +10329,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -10493,7 +10493,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -10657,7 +10657,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -10756,7 +10756,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -10856,7 +10856,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -10957,7 +10957,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -11121,7 +11121,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -11223,7 +11223,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -11326,7 +11326,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -11430,7 +11430,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -11594,7 +11594,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -11699,7 +11699,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -11806,7 +11806,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -11913,7 +11913,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -12077,7 +12077,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -12185,7 +12185,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -12295,7 +12295,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -12459,7 +12459,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -12569,7 +12569,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -12680,7 +12680,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -12792,7 +12792,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -12905,7 +12905,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -13069,7 +13069,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -13183,7 +13183,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -13300,7 +13300,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -13416,7 +13416,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -13580,7 +13580,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -13697,7 +13697,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -13815,7 +13815,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -13979,7 +13979,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -14098,7 +14098,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -14218,7 +14218,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -14340,7 +14340,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -14462,7 +14462,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -14626,7 +14626,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -14790,7 +14790,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -14913,7 +14913,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -15037,7 +15037,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -15162,7 +15162,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -15288,7 +15288,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -15452,7 +15452,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -15579,7 +15579,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -15707,7 +15707,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -15871,7 +15871,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -16000,7 +16000,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -16130,7 +16130,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -16262,7 +16262,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -16426,7 +16426,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -16561,7 +16561,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -16696,7 +16696,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -16831,7 +16831,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -16995,7 +16995,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -17130,7 +17130,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -17268,7 +17268,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -17405,7 +17405,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -17569,7 +17569,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -17707,7 +17707,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -17847,7 +17847,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -17987,7 +17987,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -18128,7 +18128,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -18270,7 +18270,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -18434,7 +18434,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -18598,7 +18598,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -18741,7 +18741,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -18886,7 +18886,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -19032,7 +19032,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -19196,7 +19196,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -19344,7 +19344,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -19492,7 +19492,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -19640,7 +19640,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -19790,7 +19790,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -19954,7 +19954,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -20118,7 +20118,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -20268,7 +20268,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -20419,7 +20419,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -20571,7 +20571,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -20724,7 +20724,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -20888,7 +20888,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -21043,7 +21043,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -21198,7 +21198,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -21354,7 +21354,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -21511,7 +21511,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -21669,7 +21669,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -21828,7 +21828,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -21992,7 +21992,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -22152,7 +22152,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -22313,7 +22313,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -22475,7 +22475,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
@@ -22638,7 +22638,7 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Kaltmiete?: number;
+            Nettokaltmiete?: number;
             "Mieterhöhung"?: "Ja" | "Nein";
             "Mieterhöhung Grund Indexmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung Grund Staffelmiete"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
