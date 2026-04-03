@@ -21,7 +21,9 @@ import {
   ExitMieterhoehungModernisierung,
   ExitMieterhoehungStaffelmiete,
   ExitMieterhoehungStaffelmieteBetriebskosten,
+  ExitMieterhoehungStaffelmieteFreiwillig,
   ExitMieterhoehungStaffelmieteModernisierung,
+  ExitMieterhoehungStaffelmieteOhneBegründung,
   ExitMieterhoehungStaffelmieteUeberStaffel,
   ExitMieterhoehungStaffelmieteWegenMietspiegel,
   ExitMieterhoehungZugestimmt,
@@ -85,15 +87,15 @@ const Exits = {
   "Exit: Mieterhöhung wegen Mietspiegel bei Indexmiete": () => (
     <ExitMieterhoehungIndexmieteWegenMietspiegel />
   ),
+  "Exit: Mieterhöhung wegen Betriebskosten bei Indexmiete": () => (
+    <ExitMieterhoehungIndexmieteBetriebskosten />
+  ),
   "Exit: Mieterhöhung wegen Modernisierung bei Indexmiete": () => (
     <ExitMieterhoehungIndexmieteModernisierung />
   ),
   /* Mieterhöhung -> Staffelmiete */
   "Exit: Mieterhöhung wegen Staffelmiete rechtens": () => (
     <ExitMieterhoehungStaffelmiete />
-  ),
-  "Exit: Mieterhöhung wegen Betriebskosten bei Indexmiete": () => (
-    <ExitMieterhoehungIndexmieteBetriebskosten />
   ),
   "Exit: Mieterhöhung wegen Staffelmiete über Staffel hinaus": () => (
     <ExitMieterhoehungStaffelmieteUeberStaffel />
@@ -106,6 +108,12 @@ const Exits = {
   ),
   "Exit: Mieterhöhung wegen Modernisierung bei Staffelmiete": () => (
     <ExitMieterhoehungStaffelmieteModernisierung />
+  ),
+  "Exit: Freiwillige Mieterhöhung bei Staffelmiete": () => (
+    <ExitMieterhoehungStaffelmieteFreiwillig />
+  ),
+  "Exit: Mieterhöhung ohne Begründung bei Staffelmiete": () => (
+    <ExitMieterhoehungStaffelmieteOhneBegründung />
   ),
   /* Mieterhöhung -> Kappungsgrenze */
   "Exit: Kappungsgrenze überschritten": () => (
@@ -129,7 +137,7 @@ export function SchnelltestExit({
   return (
     <>
       <p className="text-base text-neutral-faded mb-2">{l("Ergebnis")}</p>
-      <div className="space-y-3 text-gray-11 [&_h2]:heading-24 [&_h2]:text-gray-12 [&_h2]:pb-3 [&_h3]:text-gray-12 [&_h3]:heading-16 [&_h3]:pt-3 [&_ol]:list-outside [&_ol]:list-decimal [&_ol]:space-y-1.5 [&_ol]:ps-8 [&_li]:pl-1 [&_a]:underline">
+      <div className="space-y-3 text-gray-11 [&_h2]:heading-22 [&_h2]:text-gray-12 [&_h2]:pb-2 [&_h3]:text-gray-12 [&_h3]:heading-16 [&_h3]:pt-3 [&_ol]:list-outside [&_ol]:list-decimal [&_ol]:space-y-1.5 [&_ol]:ps-8 [&_li]:pl-1 [&_a]:underline">
         {step.alias in Exits
           ? React.createElement(Exits[step.alias as keyof typeof Exits], {
               state: answers.state as never,
