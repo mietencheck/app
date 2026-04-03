@@ -9,6 +9,8 @@ export * from "./indexmiete/Modernisierung";
 export * from "./indexmiete/ExitMieterhoehungIndexmieteUeberInflationsrate";
 export * from "./indexmiete/Mietspiegel";
 export * from "./indexmiete/Betriebskosten";
+export * from "./indexmiete/Freiwillig";
+export * from "./indexmiete/OhneBegruendung";
 
 export * from "./kappungsgrenze/ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten";
 export * from "./kappungsgrenze/ExitKappungsgrenzeUeberschritten";
@@ -18,3 +20,5 @@ export * from "./staffelmiete/ExitMieterhoehungStaffelmieteUeberStaffel";
 export * from "./staffelmiete/Mietspiegel";
 export * from "./staffelmiete/Betriebskosten";
 export * from "./staffelmiete/Modernisierung";
+export * from "./staffelmiete/Freiwillig";
+export * from "./staffelmiete/OhneBegruendung";
