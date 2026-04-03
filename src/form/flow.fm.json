@@ -1425,128 +1425,6 @@
                 {
                   "id": "sokgp",
                   "type": "If",
-                  "alternate": [
-                    {
-                      "id": "g7bkf",
-                      "type": "Question",
-                      "alias": "Mieterhöhung Grund",
-                      "text": "Welche Grund für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
-                      "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
-                      "required": true,
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "a2giz",
-                            "alias": "Mietspiegel",
-                            "text": "Mietspiegel oder Vergleichsmieten (§ 558 BGB)"
-                          },
-                          {
-                            "id": "808h4",
-                            "alias": "Modernisierung",
-                            "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
-                          },
-                          {
-                            "id": "1jbj5",
-                            "alias": "Betriebskostenerhöhung",
-                            "text": "Gestiegene Betriebskosten (§ 560 BGB)"
-                          },
-                          {
-                            "id": "m27qm",
-                            "text": "Freiwillige Mieterhöhung (§ 557 BGB)",
-                            "alias": "Freiwillig"
-                          },
-                          {
-                            "id": "7oedm",
-                            "alias": "Kein Grund",
-                            "text": "Keine der Optionen"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "id": "zylzr",
-                      "type": "If",
-                      "alternate": [],
-                      "cases": [
-                        {
-                          "id": "bqfou",
-                          "type": "IfCase",
-                          "block": [
-                            {
-                              "id": "9pxsr",
-                              "alias": "Exit: Mieterhöhung wegen Modernisierung",
-                              "text": "",
-                              "type": "Exit"
-                            }
-                          ],
-                          "test": {
-                            "id": "om9t2",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Mieterhöhung Grund"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "808h4"
-                            ]
-                          }
-                        },
-                        {
-                          "id": "jqeqhg",
-                          "type": "IfCase",
-                          "block": [
-                            {
-                              "id": "apzwj",
-                              "alias": "Exit: Mieterhöhung wegen Betriebskosten",
-                              "text": "",
-                              "type": "Exit"
-                            }
-                          ],
-                          "test": {
-                            "id": "k2aix",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Mieterhöhung Grund"
-                            },
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "operator": "is",
-                            "comparands": [
-                              "1jbj5"
-                            ]
-                          }
-                        },
-                        {
-                          "id": "r9cby",
-                          "type": "IfCase",
-                          "block": [
-                            {
-                              "id": "x1vd9",
-                              "alias": "Exit: Mieterhöhung ohne Begründung",
-                              "text": "",
-                              "type": "Exit"
-                            }
-                          ],
-                          "test": {
-                            "id": "csnmc",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Mieterhöhung Grund"
-                            },
-                            "operator": "is",
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "comparands": [
-                              "a2giz"
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ],
                   "cases": [
                     {
                       "id": "dpott",
@@ -2078,6 +1956,153 @@
                                   "text": ""
                                 }
                               ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "alternate": [
+                    {
+                      "id": "g7bkf",
+                      "type": "Question",
+                      "alias": "Mieterhöhung Grund",
+                      "text": "Welche Grund für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
+                      "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
+                      "required": true,
+                      "answer": {
+                        "type": "ChoiceAnswer",
+                        "options": [
+                          {
+                            "id": "a2giz",
+                            "alias": "Mietspiegel",
+                            "text": "Mietspiegel oder Vergleichsmieten (§ 558 BGB)"
+                          },
+                          {
+                            "id": "808h4",
+                            "alias": "Modernisierung",
+                            "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
+                          },
+                          {
+                            "id": "1jbj5",
+                            "alias": "Betriebskostenerhöhung",
+                            "text": "Gestiegene Betriebskosten (§ 560 BGB)"
+                          },
+                          {
+                            "id": "m27qm",
+                            "text": "Freiwillige Mieterhöhung (§ 557 BGB)",
+                            "alias": "Freiwillig"
+                          },
+                          {
+                            "id": "7oedm",
+                            "alias": "Kein Grund",
+                            "text": "Keine der Optionen"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "zylzr",
+                      "type": "If",
+                      "alternate": [],
+                      "cases": [
+                        {
+                          "id": "bqfou",
+                          "type": "IfCase",
+                          "block": [
+                            {
+                              "id": "9pxsr",
+                              "alias": "Exit: Mieterhöhung wegen Modernisierung",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ],
+                          "test": {
+                            "id": "om9t2",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Mieterhöhung Grund"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "808h4"
+                            ]
+                          }
+                        },
+                        {
+                          "id": "jqeqhg",
+                          "type": "IfCase",
+                          "block": [
+                            {
+                              "id": "apzwj",
+                              "alias": "Exit: Mieterhöhung wegen Betriebskosten",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ],
+                          "test": {
+                            "id": "k2aix",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Mieterhöhung Grund"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "1jbj5"
+                            ]
+                          }
+                        },
+                        {
+                          "type": "IfCase",
+                          "id": "0flrn",
+                          "test": {
+                            "id": "1safu",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Mieterhöhung Grund"
+                            },
+                            "operator": "is",
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "comparands": [
+                              "m27qm"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "type": "Exit",
+                              "id": "om8o5",
+                              "alias": "Exit: Freiwillige Mieterhöhung",
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "type": "IfCase",
+                          "id": "27s6pi",
+                          "test": {
+                            "id": "f37iv",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Mieterhöhung Grund"
+                            },
+                            "operator": "is",
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "comparands": [
+                              "7oedm"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "type": "Exit",
+                              "id": "8hdzy",
+                              "alias": "Exit: Mieterhöhung ohne Begründung",
+                              "text": ""
                             }
                           ]
                         }

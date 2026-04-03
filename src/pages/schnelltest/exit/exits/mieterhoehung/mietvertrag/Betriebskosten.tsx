@@ -1,10 +1,6 @@
-//import { useLocalizeField } from "~/l10n";
-
 import Disclaimer from "~/pages/schnelltest/partials/Disclaimer";
 
 export function ExitMieterhoehungBetriebskosten() {
-  //const l = useLocalizeField();
-
   return (
     <>
       <h2>Die Mieterhöhung ist wahrscheinlich zulässig.</h2>
@@ -37,10 +33,6 @@ export function ExitMieterhoehungBetriebskosten() {
         Wenn das zutrifft, ist die Mieterhöhung wahrscheinlich zulässig. Du
         solltest die gefordete Miete also ab dem vereinbarten Zeitpunkt
         bezahlen.
-      </p>
-      <p>
-        Wenn du Fragen hast oder unsicher bist, wende dich mit diesem Ergebnis
-        an eine <a href="TODO">Mietberatung</a>.
       </p>
       <Disclaimer />
     </>

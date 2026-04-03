@@ -1,10 +1,6 @@
-//import { useLocalizeField } from "~/l10n";
-
 import Disclaimer from "~/pages/schnelltest/partials/Disclaimer";
 
-export function ExitMieterhoehungStaffelmieteOhneBegründung() {
-  //const l = useLocalizeField();
-
+export function ExitMieterhoehungFreiwillig() {
   return (
     <>
       <h2>Du musst der Mieterhöhung wahrscheinlich nicht zustimmen.</h2>

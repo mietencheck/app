@@ -1318,6 +1318,32 @@ export type StepInfoByAlias = {
             "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
+    "Exit: Freiwillige Mieterhöhung": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Ost?: boolean;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Unterschrieben?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
+            Nettokaltmiete?: number;
+            "Vorherige Mieterhöhung"?: "Ja" | "Nein";
+            "Vorherige Mieterhöhung Grund (Indexmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
+            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
+            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+        };
+    };
     "Exit: Mieterhöhung ohne Begründung": {
         answer: null;
         state: {

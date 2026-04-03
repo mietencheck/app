@@ -1,8 +1,4 @@
-//import { useLocalizeField } from "~/l10n";
-
 export function ExitMieterhoehungModernisierung() {
-  //const l = useLocalizeField();
-
   return (
     <>
       <h2>
