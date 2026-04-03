@@ -1,6 +1,6 @@
 //import { useLocalizeField } from "~/l10n";
 
-export function ExitMieterhoehungKeineBegruendung() {
+export function ExitMieterhoehungOhneBegruendung() {
   //const l = useLocalizeField();
 
   return (
