@@ -172,7 +172,7 @@ export const getNettokaltmiete = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ): number | undefined => {
-  const alias = "Kaltmiete";
+  const alias = "Nettokaltmiete";
   return answers[alias] && visibleQuestionAliases?.has(alias)
     ? Number(answers[alias])
     : undefined;
