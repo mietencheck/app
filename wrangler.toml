@@ -1,9 +1,5 @@
 name = "mietencheck"
 compatibility_date = "2024-03-20"
-main = "src/main.tsx"
-
-[assets]
-directory = "./dist"
 
 [[d1_databases]]
 binding = "DB"

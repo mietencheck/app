@@ -17,8 +17,7 @@
     "lint": "eslint .",
     "format": "prettier . --write",
     "build": "vite build",
-    "preview": "vite preview",
-    "pages:deploy": "wrangler pages deploy dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@cloudflare/pages-plugin-sentry": "^1.1.4",
