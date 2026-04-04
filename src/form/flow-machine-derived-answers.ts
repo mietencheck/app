@@ -1,4 +1,4 @@
-import { AnswersRecord } from "flow-machine";
+import type { AnswerData } from "flow-machine";
 
 import { parseAdresse } from "~/utils";
 
@@ -25,7 +25,7 @@ export function buildLageInfo(answers: AnswerMachine) {
       ? "2024"
       : vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum];
 
-  const addresse = answers.get("Adresse");
+  const addresse = answers.get(["Adresse"]);
   const lage =
     (addresse && typeof addresse == "string" && parseAdresse(addresse).lage) ||
     null;
@@ -47,22 +47,21 @@ export function buildBaujahr(answers: AnswerMachine) {
     : constructionYearBoundaries?.[1];
 }
 
-export function applyDerivedAnswers(state: AnswersRecord): AnswersRecord {
+export function applyDerivedAnswers(state: AnswerData): AnswerData {
   const bareAnswers = flowMachine.answers(state);
   const vertragsdatum = buildVertragsdatum(bareAnswers);
   const lageInfo = buildLageInfo(bareAnswers);
   const baujahr = buildBaujahr(bareAnswers);
 
+  const baujahrFromState = bareAnswers.get(["Baujahr"]);
   return {
     ...bareAnswers.state,
-    Ost: lageInfo?.ost ?? bareAnswers.get("Ost") ?? null,
+    Ost: lageInfo?.ost ?? bareAnswers.get(["Ost"]) ?? null,
     Wohnlage:
       lageInfo?.wohnlage ?? bareAnswers.getWithOptionAlias("Wohnlage") ?? null,
     Baujahr:
-      (baujahr ? Number(baujahr) : undefined) ??
-      (typeof bareAnswers.get("Baujahr") === "number"
-        ? bareAnswers.get("Baujahr")
-        : null),
+      (baujahr ? Number(baujahr) : null) ??
+      (typeof baujahrFromState === "number" ? baujahrFromState : null),
     Vertragsdatum:
       vertragsdatum ?? bareAnswers.getWithOptionAlias("Vertragsdatum") ?? null,
   };

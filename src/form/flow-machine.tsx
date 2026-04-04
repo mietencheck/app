@@ -1,4 +1,4 @@
-import { AnswersRecord, FlowMachine, Steps } from "flow-machine";
+import { AnswerData, FlowMachine, Steps } from "flow-machine";
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
@@ -12,7 +12,7 @@ import {
 } from "./hidden-questions";
 import { vertragsdatumToMietspiegelJahrMapping } from "./mappings/vertragsdatum";
 
-export type AnswerData = AnswersRecord;
+export type { AnswerData };
 
 export type EstimateAnswers = StepInfoByAlias["Einschätzung"]["state"];
 export type FinalAnswers = StepInfoByAlias["Auswertung"]["state"];

@@ -1,4 +1,4 @@
-import { AnswersRecord, Question, Steps, ungroup } from "flow-machine";
+import { AnswerData, Question, Steps, ungroup } from "flow-machine";
 
 import { applyDerivedAnswers } from "./flow-machine-derived-answers";
 import {
@@ -160,12 +160,12 @@ export function normalizeFlowMachineInput(
       questionAlias,
       normalizeAnswerValue(questionAlias, value, issues),
     ]),
-  ) as AnswersRecord;
+  ) as AnswerData;
 
   return { state, issues };
 }
 
-export function serializeFlowMachineState(state: AnswersRecord) {
+export function serializeFlowMachineState(state: AnswerData) {
   return Object.fromEntries(
     Object.entries(state).map(([questionAlias, value]) => [
       questionAlias,
@@ -186,7 +186,7 @@ function getVisibleQuestionAliasesFromSteps(steps: Steps) {
 
 export function getVisibleQuestionAliases(answers: FinalAnswers) {
   return getVisibleQuestionAliasesFromSteps(
-    flowMachine.run(flowMachine.answers(answers as AnswersRecord).state),
+    flowMachine.run(flowMachine.answers(answers as AnswerData).state),
   );
 }
 
