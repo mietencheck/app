@@ -17,7 +17,6 @@
     "lint": "eslint .",
     "format": "prettier . --write",
     "build": "vite build",
-    "pages:deploy": "vite build && wrangler pages deploy dist",
     "preview": "vite preview"
   },
   "dependencies": {
