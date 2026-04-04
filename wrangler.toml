@@ -10,9 +10,6 @@ custom_domain = true
 directory = "./dist/client"
 not_found_handling = "single-page-application"
 
-# Vite output; use `wrangler pages deploy dist`, not `wrangler versions upload` (Workers bundle).
-pages_build_output_dir = "dist"
-
 [[d1_databases]]
 binding = "DB"
 database_name = "mietenbremse"
