@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import useSWRImmutable from "swr/immutable";
 import { useLocalStorage } from "usehooks-ts";
 
-import DE from "../public/locales/de.json";
+import DE from "./locales/de.json";
 
 export type Locale = "de" | "en";
 
