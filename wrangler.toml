@@ -1,5 +1,6 @@
 name = "mietencheck"
 compatibility_date = "2024-03-20"
+directory = "./dist"
 
 [[d1_databases]]
 binding = "DB"
