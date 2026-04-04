@@ -1,6 +1,8 @@
 name = "mietencheck"
-main = "src/main.tsx"
 compatibility_date = "2024-03-20"
+
+# Vite output; use `wrangler pages deploy dist`, not `wrangler versions upload` (Workers bundle).
+pages_build_output_dir = "dist"
 
 [[d1_databases]]
 binding = "DB"
