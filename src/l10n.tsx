@@ -2,7 +2,7 @@ import { useCallback, useContext } from "react";
 import { entries } from "remeda";
 import sha1 from "sync-sha1";
 
-import { L10nContext } from "./L10nContext";
+import { L10nContext, Locale } from "./L10nContext";
 import DE from "./locales/de.json";
 
 export { DE };
