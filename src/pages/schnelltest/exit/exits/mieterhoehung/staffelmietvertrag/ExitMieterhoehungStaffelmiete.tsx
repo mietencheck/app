@@ -5,10 +5,8 @@ export function ExitMieterhoehungStaffelmiete() {
 
   return (
     <>
-      <h2>
-        Um deine Miete zu prüfen musst du leider nochmal neu anfangen. Bitte
-        lies den Text unterhalb vollständig.
-      </h2>
+      <h2>.</h2>
+      <p>Bitte lies den Text unterhalb vollständig.</p>
       <p>
         Ist eine Staffelmiete im Mietvertrag vereinbart, so gilt jede neue
         Staffel (also der neue Wert, sinngemäß als Beispiel: „Ab 01.05.25 sind

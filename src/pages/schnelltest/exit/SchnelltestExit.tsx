@@ -13,12 +13,13 @@ import {
   ExitKeinWC,
   ExitMieterhoehungBetriebskosten,
   ExitMieterhoehungFreiwillig,
-  ExitMieterhoehungIndexmiete,
   ExitMieterhoehungIndexmieteBetriebskosten,
   ExitMieterhoehungIndexmieteFreiwillig,
   ExitMieterhoehungIndexmieteModernisierung,
   ExitMieterhoehungIndexmieteOhneBegruendung,
+  ExitMieterhoehungIndexmieteStaffelmiete,
   ExitMieterhoehungIndexmieteUeberInflationsrate,
+  ExitMieterhoehungIndexmieteUnterInflationsrate,
   ExitMieterhoehungIndexmieteWegenMietspiegel,
   ExitMieterhoehungModernisierung,
   ExitMieterhoehungOhneBegruendung,
@@ -82,20 +83,23 @@ const Exits = {
   ),
   "Exit: Freiwillige Mieterhöhung": () => <ExitMieterhoehungFreiwillig />,
   /* Mieterhöhung -> Indexmiete */
+  "Exit: Mieterhöhung wegen Mietspiegel bei Indexmiete": () => (
+    <ExitMieterhoehungIndexmieteWegenMietspiegel />
+  ),
   "Exit: Mieterhöhung wegen Indexmiete rechtens": () => (
-    <ExitMieterhoehungIndexmiete />
+    <ExitMieterhoehungIndexmieteUnterInflationsrate />
   ),
   "Exit: Mieterhöhung wegen Indexmiete über Inflationsrate hinaus": () => (
     <ExitMieterhoehungIndexmieteUeberInflationsrate />
   ),
-  "Exit: Mieterhöhung wegen Mietspiegel bei Indexmiete": () => (
-    <ExitMieterhoehungIndexmieteWegenMietspiegel />
-  ),
-  "Exit: Mieterhöhung wegen Betriebskosten bei Indexmiete": () => (
-    <ExitMieterhoehungIndexmieteBetriebskosten />
+  "Exit: Staffelmieterhöhung bei Indexmiete": () => (
+    <ExitMieterhoehungIndexmieteStaffelmiete />
   ),
   "Exit: Mieterhöhung wegen Modernisierung bei Indexmiete": () => (
     <ExitMieterhoehungIndexmieteModernisierung />
+  ),
+  "Exit: Mieterhöhung wegen Betriebskosten bei Indexmiete": () => (
+    <ExitMieterhoehungIndexmieteBetriebskosten />
   ),
   "Exit: Freiwillige Mieterhöhung bei Indexmiete": () => (
     <ExitMieterhoehungIndexmieteFreiwillig />

@@ -44,22 +44,10 @@
           "required": true
         },
         {
-          "id": "qwlyh",
-          "type": "Question",
-          "alias": "Ost",
-          "text": "",
-          "info": null,
-          "answer": {
-            "type": "BooleanAnswer"
-          },
-          "required": false,
-          "note": "Diese Frage wird nicht angezeigt"
-        },
-        {
           "id": "k6fty",
           "type": "Question",
           "alias": "Wohnlage",
-          "text": "",
+          "text": "[Hidden Question]",
           "info": null,
           "answer": {
             "type": "ChoiceAnswer",
@@ -80,6 +68,18 @@
                 "text": "gut"
               }
             ]
+          },
+          "required": false,
+          "note": "Diese Frage wird nicht angezeigt"
+        },
+        {
+          "id": "qwlyh",
+          "type": "Question",
+          "alias": "Ost",
+          "text": "[Hidden Question]",
+          "info": null,
+          "answer": {
+            "type": "BooleanAnswer"
           },
           "required": false,
           "note": "Diese Frage wird nicht angezeigt"
@@ -721,7 +721,6 @@
                     {
                       "id": "xtskl",
                       "type": "If",
-                      "alternate": [],
                       "cases": [
                         {
                           "id": "xmxp2k",
@@ -787,7 +786,6 @@
                                     {
                                       "id": "mfape",
                                       "type": "If",
-                                      "alternate": [],
                                       "cases": [
                                         {
                                           "id": "td20z",
@@ -874,7 +872,8 @@
                                             }
                                           ]
                                         }
-                                      ]
+                                      ],
+                                      "alternate": []
                                     }
                                   ]
                                 },
@@ -971,7 +970,6 @@
                                     {
                                       "id": "s46vy",
                                       "type": "If",
-                                      "alternate": [],
                                       "cases": [
                                         {
                                           "id": "6g2uk",
@@ -1058,7 +1056,8 @@
                                             }
                                           ]
                                         }
-                                      ]
+                                      ],
+                                      "alternate": []
                                     }
                                   ]
                                 }
@@ -1090,7 +1089,6 @@
                                 {
                                   "id": "jxj3r",
                                   "type": "If",
-                                  "alternate": [],
                                   "cases": [
                                     {
                                       "id": "9iiq7h",
@@ -1211,13 +1209,15 @@
                                         }
                                       ]
                                     }
-                                  ]
+                                  ],
+                                  "alternate": []
                                 }
                               ]
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "alternate": []
                     }
                   ]
                 }
@@ -1285,6 +1285,54 @@
                         "id": "ve0tek",
                         "alias": ">2024",
                         "text": "Ab 01.09.2023"
+                      }
+                    ]
+                  },
+                  "required": true
+                },
+                {
+                  "id": "gbo6w",
+                  "type": "Question",
+                  "alias": "Mieterhöhung Grund (Neu)",
+                  "text": "Welcher Grund für die Mieterhöhung ist im Schreiben  angegeben?",
+                  "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
+                  "answer": {
+                    "type": "ChoiceAnswer",
+                    "options": [
+                      {
+                        "id": "a2giz",
+                        "alias": "Mietspiegel",
+                        "text": "Mietspiegel oder Vergleichsmieten (§ 558 BGB)"
+                      },
+                      {
+                        "id": "bkyug",
+                        "alias": "Staffelmiete",
+                        "text": "Staffelmiete (§ 557a BGB)"
+                      },
+                      {
+                        "id": "k7vmz",
+                        "alias": "Indexmiete",
+                        "text": "Indexmiete, Verbraucherpreisindex oder VPI (§ 557b BGB)"
+                      },
+                      {
+                        "id": "808h4",
+                        "alias": "Modernisierung",
+                        "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
+                      },
+                      {
+                        "id": "1jbj5",
+                        "alias": "Betriebskosten",
+                        "text": "Gestiegene Betriebskosten (§ 560 BGB)"
+                      },
+                      {
+                        "id": "0jaa7",
+                        "alias": "Freiwillig",
+                        "text": "Freiwillige Mieterhöhung (§ 557 BGB)"
+                      },
+                      {
+                        "id": "7oedm",
+                        "alias": "Kein Grund",
+                        "text": "Keine der Optionen"
                       }
                     ]
                   },
@@ -1376,7 +1424,6 @@
                 {
                   "id": "stoxy",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "uxl3k",
@@ -1420,7 +1467,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 },
                 {
                   "id": "sokgp",
@@ -1444,55 +1492,50 @@
                       },
                       "block": [
                         {
-                          "id": "ka54j",
-                          "type": "Question",
-                          "alias": "Mieterhöhung Grund (Indexmiete)",
-                          "text": "Welche Grund für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
-                          "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "k7vmz",
-                                "alias": "Indexmiete",
-                                "text": "Indexmiete, Verbraucherpreisindex oder VPI (§ 557b BGB)"
-                              },
-                              {
-                                "id": "a2giz",
-                                "alias": "Mietspiegel",
-                                "text": "Mietspiegel oder Vergleichsmieten (§ 558 BGB)"
-                              },
-                              {
-                                "id": "808h4",
-                                "alias": "Modernisierung",
-                                "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
-                              },
-                              {
-                                "id": "1jbj5",
-                                "alias": "Betriebskostenerhöhung",
-                                "text": "Gestiegene Betriebskosten (§ 560 BGB)"
-                              },
-                              {
-                                "id": "0jaa7",
-                                "alias": "Freiwillig",
-                                "text": "Freiwillige Mieterhöhung (§ 557 BGB)"
-                              },
-                              {
-                                "id": "7oedm",
-                                "alias": "Kein Grund",
-                                "text": "Keine der Optionen"
-                              }
-                            ]
-                          },
-                          "required": true
-                        },
-                        {
                           "id": "trqbx",
                           "type": "If",
                           "cases": [
                             {
+                              "id": "m63za",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "5r13k",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung Grund (Neu)"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "a2giz"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "gjsnwf",
+                                  "alias": "Exit: Mieterhöhung wegen Mietspiegel bei Indexmiete",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
+                            },
+                            {
                               "id": "9zixg",
                               "type": "IfCase",
+                              "test": {
+                                "id": "tkf2j",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung Grund (Neu)"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "k7vmz"
+                                ]
+                              },
                               "block": [
                                 {
                                   "id": "08kxa",
@@ -1556,49 +1599,49 @@
                                     }
                                   ]
                                 }
-                              ],
-                              "test": {
-                                "id": "tkf2j",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Indexmiete)"
-                                },
-                                "operator": "is",
-                                "negated": false,
-                                "type": "AnswerMultiOptionComparison",
-                                "comparands": [
-                                  "k7vmz"
-                                ]
-                              }
+                              ]
                             },
                             {
-                              "id": "m63za",
+                              "id": "wns4u",
                               "type": "IfCase",
+                              "test": {
+                                "id": "fh3m9",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung Grund (Neu)"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "bkyug"
+                                ]
+                              },
                               "block": [
                                 {
-                                  "id": "gjsnwf",
-                                  "alias": "Exit: Mieterhöhung wegen Mietspiegel bei Indexmiete",
+                                  "id": "ppuq2",
+                                  "alias": "Exit: Staffelmieterhöhung bei Indexmiete",
                                   "text": "",
                                   "type": "Exit"
                                 }
-                              ],
-                              "test": {
-                                "id": "5r13k",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Indexmiete)"
-                                },
-                                "operator": "is",
-                                "negated": false,
-                                "type": "AnswerMultiOptionComparison",
-                                "comparands": [
-                                  "a2giz"
-                                ]
-                              }
+                              ]
                             },
                             {
                               "id": "awh64",
                               "type": "IfCase",
+                              "test": {
+                                "id": "wy4sl",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung Grund (Neu)"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "808h4"
+                                ]
+                              },
                               "block": [
                                 {
                                   "id": "2c6f8",
@@ -1606,24 +1649,24 @@
                                   "text": "",
                                   "type": "Exit"
                                 }
-                              ],
-                              "test": {
-                                "id": "wy4sl",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Indexmiete)"
-                                },
-                                "operator": "is",
-                                "negated": false,
-                                "type": "AnswerMultiOptionComparison",
-                                "comparands": [
-                                  "808h4"
-                                ]
-                              }
+                              ]
                             },
                             {
                               "id": "ns1yt",
                               "type": "IfCase",
+                              "test": {
+                                "id": "df955",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung Grund (Neu)"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "1jbj5"
+                                ]
+                              },
                               "block": [
                                 {
                                   "id": "gvsv7",
@@ -1631,43 +1674,30 @@
                                   "text": "",
                                   "type": "Exit"
                                 }
-                              ],
-                              "test": {
-                                "id": "df955",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Indexmiete)"
-                                },
-                                "operator": "is",
-                                "negated": false,
-                                "type": "AnswerMultiOptionComparison",
-                                "comparands": [
-                                  "1jbj5"
-                                ]
-                              }
+                              ]
                             },
                             {
-                              "type": "IfCase",
                               "id": "2qswq",
+                              "type": "IfCase",
                               "test": {
                                 "id": "aj7w4",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Indexmiete)"
+                                  "value": "Mieterhöhung Grund (Neu)"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
                                   "0jaa7"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Exit",
                                   "id": "o12ki",
                                   "alias": "Exit: Freiwillige Mieterhöhung bei Indexmiete",
-                                  "text": ""
+                                  "text": "",
+                                  "type": "Exit"
                                 }
                               ]
                             }
@@ -1722,63 +1752,75 @@
                       },
                       "block": [
                         {
-                          "id": "xglgm",
-                          "type": "Question",
-                          "alias": "Mieterhöhung Grund (Staffelmiete)",
-                          "text": "Welche Grund für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
-                          "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
-                          "required": true,
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "k7vmz",
-                                "alias": "Staffelmiete",
-                                "text": "Staffelmiete"
-                              },
-                              {
-                                "id": "a2giz",
-                                "alias": "Mietspiegel",
-                                "text": "Mietspiegel oder Vergleichsmieten (§ 558 BGB)"
-                              },
-                              {
-                                "id": "808h4",
-                                "alias": "Modernisierung",
-                                "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
-                              },
-                              {
-                                "id": "1jbj5",
-                                "alias": "Betriebskostenerhöhung",
-                                "text": "Gestiegene Betriebskosten (§ 560 BGB)"
-                              },
-                              {
-                                "id": "w3ek1",
-                                "text": "Freiwillige Mieterhöhung (§ 557 BGB)",
-                                "alias": "Freiwillig"
-                              },
-                              {
-                                "id": "7oedm",
-                                "alias": "Kein Grund",
-                                "text": "Keine der Optionen"
-                              }
-                            ]
-                          }
-                        },
-                        {
                           "id": "2dlwxk",
                           "type": "If",
-                          "alternate": [
-                            {
-                              "id": "ehvf",
-                              "alias": "Exit: Mieterhöhung ohne Begründung bei Staffelmiete",
-                              "text": "",
-                              "type": "Exit"
-                            }
-                          ],
                           "cases": [
+                            {
+                              "id": "2s8lk",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "ns6l3",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung Grund (Neu)"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "a2giz"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "8f9a3",
+                                  "alias": "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmiete",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
+                            },
+                            {
+                              "id": "ntxyy",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "18ko9l",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung Grund (Neu)"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "k7vmz"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "gyk28g",
+                                  "alias": "Exit: Indexmieterhöhung bei Staffelmiete",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
+                            },
                             {
                               "id": "sjcv3",
                               "type": "IfCase",
+                              "test": {
+                                "id": "vtkke",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Mieterhöhung Grund (Neu)"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "bkyug"
+                                ]
+                              },
                               "block": [
                                 {
                                   "id": "09g2n",
@@ -1825,7 +1867,7 @@
                                       },
                                       "block": [
                                         {
-                                          "id": "clvs5",
+                                          "id": "r9xfp",
                                           "alias": "Exit: Mieterhöhung wegen Staffelmiete rechtens",
                                           "text": "",
                                           "type": "Exit"
@@ -1842,62 +1884,16 @@
                                     }
                                   ]
                                 }
-                              ],
-                              "test": {
-                                "id": "vtkke",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Staffelmiete)"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "k7vmz"
-                                ]
-                              }
-                            },
-                            {
-                              "id": "2s8lk",
-                              "type": "IfCase",
-                              "block": [
-                                {
-                                  "id": "8f9a3",
-                                  "alias": "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmiete",
-                                  "text": "",
-                                  "type": "Exit"
-                                }
-                              ],
-                              "test": {
-                                "id": "ns6l3",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Staffelmiete)"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "a2giz"
-                                ]
-                              }
+                              ]
                             },
                             {
                               "id": "t4bvu",
                               "type": "IfCase",
-                              "block": [
-                                {
-                                  "id": "udu4l",
-                                  "alias": "Exit: Mieterhöhung wegen Modernisierung bei Staffelmiete",
-                                  "text": "",
-                                  "type": "Exit"
-                                }
-                              ],
                               "test": {
                                 "id": "miabv",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Staffelmiete)"
+                                  "value": "Mieterhöhung Grund (Neu)"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1905,24 +1901,24 @@
                                 "comparands": [
                                   "808h4"
                                 ]
-                              }
+                              },
+                              "block": [
+                                {
+                                  "id": "udu4l",
+                                  "alias": "Exit: Mieterhöhung wegen Modernisierung bei Staffelmiete",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
                             },
                             {
                               "id": "3s7ie",
                               "type": "IfCase",
-                              "block": [
-                                {
-                                  "id": "4l2g",
-                                  "alias": "Exit: Mieterhöhung wegen Betriebskosten bei Staffelmiete",
-                                  "text": "",
-                                  "type": "Exit"
-                                }
-                              ],
                               "test": {
                                 "id": "8oxrq",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Staffelmiete)"
+                                  "value": "Mieterhöhung Grund (Neu)"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1930,32 +1926,48 @@
                                 "comparands": [
                                   "1jbj5"
                                 ]
-                              }
+                              },
+                              "block": [
+                                {
+                                  "id": "4l2g",
+                                  "alias": "Exit: Mieterhöhung wegen Betriebskosten bei Staffelmiete",
+                                  "text": "",
+                                  "type": "Exit"
+                                }
+                              ]
                             },
                             {
-                              "type": "IfCase",
                               "id": "o18nhj",
+                              "type": "IfCase",
                               "test": {
                                 "id": "poqzu",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Staffelmiete)"
+                                  "value": "Mieterhöhung Grund (Neu)"
                                 },
-                                "operator": "is",
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
+                                "operator": "is",
                                 "comparands": [
-                                  "w3ek1"
+                                  "0jaa7"
                                 ]
                               },
                               "block": [
                                 {
-                                  "type": "Exit",
                                   "id": "v2rh9",
                                   "alias": "Exit: Freiwillige Mieterhöhung bei Staffelmiete",
-                                  "text": ""
+                                  "text": "",
+                                  "type": "Exit"
                                 }
                               ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "ehvf",
+                              "alias": "Exit: Mieterhöhung ohne Begründung bei Staffelmiete",
+                              "text": "",
+                              "type": "Exit"
                             }
                           ]
                         }
@@ -1964,64 +1976,67 @@
                   ],
                   "alternate": [
                     {
-                      "id": "g7bkf",
-                      "type": "Question",
-                      "alias": "Mieterhöhung Grund",
-                      "text": "Welche Grund für die Mieterhöhung hat der Vermieter im Schreiben angeführt?",
-                      "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
-                      "required": true,
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "a2giz",
-                            "alias": "Mietspiegel",
-                            "text": "Mietspiegel oder Vergleichsmieten (§ 558 BGB)"
-                          },
-                          {
-                            "id": "808h4",
-                            "alias": "Modernisierung",
-                            "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
-                          },
-                          {
-                            "id": "1jbj5",
-                            "alias": "Betriebskostenerhöhung",
-                            "text": "Gestiegene Betriebskosten (§ 560 BGB)"
-                          },
-                          {
-                            "id": "m27qm",
-                            "text": "Freiwillige Mieterhöhung (§ 557 BGB)",
-                            "alias": "Freiwillig"
-                          },
-                          {
-                            "id": "7oedm",
-                            "alias": "Kein Grund",
-                            "text": "Keine der Optionen"
-                          }
-                        ]
-                      }
-                    },
-                    {
                       "id": "zylzr",
                       "type": "If",
-                      "alternate": [],
                       "cases": [
                         {
-                          "id": "bqfou",
+                          "id": "s8jc",
                           "type": "IfCase",
+                          "test": {
+                            "id": "sw2ks",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Mieterhöhung Grund (Neu)"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "k7vmz"
+                            ]
+                          },
                           "block": [
                             {
-                              "id": "9pxsr",
-                              "alias": "Exit: Mieterhöhung wegen Modernisierung",
+                              "id": "7c1zn",
+                              "alias": "Exit: TODO",
                               "text": "",
                               "type": "Exit"
                             }
-                          ],
+                          ]
+                        },
+                        {
+                          "id": "wx20d",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "21v4hg",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Mieterhöhung Grund (Neu)"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "bkyug"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "pbzfn",
+                              "alias": "Exit: TODO",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "bqfou",
+                          "type": "IfCase",
                           "test": {
                             "id": "om9t2",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Mieterhöhung Grund"
+                              "value": "Mieterhöhung Grund (Neu)"
                             },
                             "negated": false,
                             "type": "AnswerOptionComparison",
@@ -2029,24 +2044,24 @@
                             "comparands": [
                               "808h4"
                             ]
-                          }
+                          },
+                          "block": [
+                            {
+                              "id": "9pxsr",
+                              "alias": "Exit: Mieterhöhung wegen Modernisierung",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ]
                         },
                         {
                           "id": "jqeqhg",
                           "type": "IfCase",
-                          "block": [
-                            {
-                              "id": "apzwj",
-                              "alias": "Exit: Mieterhöhung wegen Betriebskosten",
-                              "text": "",
-                              "type": "Exit"
-                            }
-                          ],
                           "test": {
                             "id": "k2aix",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Mieterhöhung Grund"
+                              "value": "Mieterhöhung Grund (Neu)"
                             },
                             "negated": false,
                             "type": "AnswerOptionComparison",
@@ -2054,59 +2069,68 @@
                             "comparands": [
                               "1jbj5"
                             ]
-                          }
-                        },
-                        {
-                          "type": "IfCase",
-                          "id": "0flrn",
-                          "test": {
-                            "id": "1safu",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Mieterhöhung Grund"
-                            },
-                            "operator": "is",
-                            "negated": false,
-                            "type": "AnswerOptionComparison",
-                            "comparands": [
-                              "m27qm"
-                            ]
                           },
                           "block": [
                             {
-                              "type": "Exit",
-                              "id": "om8o5",
-                              "alias": "Exit: Freiwillige Mieterhöhung",
-                              "text": ""
+                              "id": "apzwj",
+                              "alias": "Exit: Mieterhöhung wegen Betriebskosten",
+                              "text": "",
+                              "type": "Exit"
                             }
                           ]
                         },
                         {
+                          "id": "0flrn",
                           "type": "IfCase",
+                          "test": {
+                            "id": "1safu",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Mieterhöhung Grund (Neu)"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "0jaa7"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "om8o5",
+                              "alias": "Exit: Freiwillige Mieterhöhung",
+                              "text": "",
+                              "type": "Exit"
+                            }
+                          ]
+                        },
+                        {
                           "id": "27s6pi",
+                          "type": "IfCase",
                           "test": {
                             "id": "f37iv",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Mieterhöhung Grund"
+                              "value": "Mieterhöhung Grund (Neu)"
                             },
-                            "operator": "is",
                             "negated": false,
                             "type": "AnswerOptionComparison",
+                            "operator": "is",
                             "comparands": [
                               "7oedm"
                             ]
                           },
                           "block": [
                             {
-                              "type": "Exit",
                               "id": "8hdzy",
                               "alias": "Exit: Mieterhöhung ohne Begründung",
-                              "text": ""
+                              "text": "",
+                              "type": "Exit"
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "alternate": []
                     }
                   ]
                 },
@@ -2144,12 +2168,13 @@
                   "id": "fnzn6",
                   "type": "Question",
                   "alias": "Kappungsgrenze durch aktuelle Mieterhöhung überschritten",
-                  "text": "",
+                  "text": "[Hidden Question]",
                   "info": null,
                   "answer": {
                     "type": "BooleanAnswer"
                   },
-                  "required": true
+                  "required": true,
+                  "note": ""
                 },
                 {
                   "id": "q4nlyh",
@@ -2185,7 +2210,7 @@
                   "id": "knmz2k",
                   "type": "Question",
                   "alias": "Mieterhöhung in letzten 33 Monaten",
-                  "text": "Wurde die Miete seit dem $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ schon einmal erhöht?",
+                  "text": "Hat der Vermieter seit dem $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ mindestens eine Mieterhöhung erfolgreich durchgesetzt?",
                   "info": null,
                   "answer": {
                     "type": "ChoiceAnswer",
@@ -2199,11 +2224,6 @@
                         "id": "b8nwa",
                         "alias": "Nein",
                         "text": "Nein"
-                      },
-                      {
-                        "id": "whpa6",
-                        "alias": "Nicht sicher",
-                        "text": "Ich bin mir nicht sicher"
                       }
                     ]
                   },
@@ -2226,8 +2246,7 @@
                         "type": "AnswerOptionComparison",
                         "operator": "is",
                         "comparands": [
-                          "ggo2s",
-                          "whpa6"
+                          "ggo2s"
                         ]
                       },
                       "block": [
@@ -2235,8 +2254,8 @@
                           "id": "aohxx",
                           "type": "Question",
                           "alias": "Kappungsgrenze überschritten",
-                          "text": "Wird die gesetzliche Kappungsgrenze durch die Mieterhöhung überschritten?  ",
-                          "info": "Dies ist der Fall, wenn die geforderte Nettokaltmiete im Vergleich zur Nettokaltmiete am $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ um mehr als 15% gestiegen ist. Wichtig: Erhöhungen wegen Modernisierungen oder gestiegenen Betriebskosten zählen nicht zur Kappungsgrenze und dürfen bei der Berechnung nicht mitgezählt werden.",
+                          "text": "Überschreiten die Mieterhöhungen seit dem $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$ die gesetzliche Kappungsgrenze? ",
+                          "info": "Dies ist der Fall, wenn die neue geforderte Nettokaltmiete mindestens 15% höher ist als die Nettokaltmiete am $DATUM_MIETERHOEHUNG_MINUS_33_MONATE$. Erhöhungen wegen Modernisierungen zählen nicht zur Kappungsgrenze und dürfen bei der Berechnung nicht mitgezählt werden.",
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [

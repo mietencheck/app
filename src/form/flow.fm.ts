@@ -5,8 +5,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -17,17 +17,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -174,19 +172,19 @@ export type StepInfoByAlias = {
             Typ?: "Miete" | "Mieterhöhung";
         };
     };
-    Ost: {
-        answer: boolean;
-        state: {
-            Typ?: "Miete" | "Mieterhöhung";
-            Adresse?: string;
-        };
-    };
     Wohnlage: {
         answer: "einfach" | "mittel" | "gut";
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
+        };
+    };
+    Ost: {
+        answer: boolean;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Wohnlage?: "einfach" | "mittel" | "gut";
         };
     };
     Miete: {
@@ -194,8 +192,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -206,17 +204,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -358,8 +354,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
         };
     };
     Mietart: {
@@ -367,8 +363,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -379,6 +375,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
     };
@@ -387,8 +384,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -406,8 +403,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -418,8 +415,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -431,8 +428,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -445,8 +442,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -462,8 +459,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -477,8 +474,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -493,8 +490,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -509,8 +506,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -526,8 +523,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -543,8 +540,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -561,8 +558,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -579,8 +576,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -591,17 +588,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -743,8 +738,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -754,6 +749,25 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Indexmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+        };
+    };
+    "Mieterhöhung Grund (Neu)": {
+        answer: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
+            Unterschrieben?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
+            Nettokaltmiete?: number;
+            "Vorherige Mieterhöhung"?: "Ja" | "Nein";
+            "Vorherige Mieterhöhung Grund (Indexmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Datum Mieterhöhungsschreiben"?: Date;
         };
     };
     "Mieterhöhung zugestimmt": {
@@ -761,8 +775,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -773,6 +787,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
         };
     };
     "Exit: Mieterhöhung zugestimmt": {
@@ -780,8 +795,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -792,6 +807,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
     };
@@ -800,8 +816,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -812,16 +828,17 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
     };
-    "Mieterhöhung Grund (Indexmiete)": {
-        answer: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+    "Exit: Mieterhöhung wegen Mietspiegel bei Indexmiete": {
+        answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -832,6 +849,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
         };
@@ -841,8 +859,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -853,9 +871,9 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
     "Exit: Mieterhöhung wegen Indexmiete rechtens": {
@@ -863,8 +881,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -875,9 +893,9 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
         };
     };
@@ -886,8 +904,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -898,19 +916,19 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
         };
     };
-    "Exit: Mieterhöhung wegen Mietspiegel bei Indexmiete": {
+    "Exit: Staffelmieterhöhung bei Indexmiete": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -921,9 +939,9 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
         };
     };
@@ -932,8 +950,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -944,9 +962,9 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
         };
     };
@@ -955,8 +973,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -967,9 +985,9 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
         };
     };
@@ -978,8 +996,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -990,9 +1008,9 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
         };
     };
@@ -1001,8 +1019,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1013,19 +1031,19 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
         };
     };
-    "Mieterhöhung Grund (Staffelmiete)": {
-        answer: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+    "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmiete": {
+        answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1036,9 +1054,32 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
+        };
+    };
+    "Exit: Indexmieterhöhung bei Staffelmiete": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
+            Unterschrieben?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
+            Nettokaltmiete?: number;
+            "Vorherige Mieterhöhung"?: "Ja" | "Nein";
+            "Vorherige Mieterhöhung Grund (Indexmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
         };
     };
@@ -1047,8 +1088,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1059,11 +1100,10 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
     "Exit: Mieterhöhung wegen Staffelmiete rechtens": {
@@ -1071,8 +1111,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1083,11 +1123,10 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
@@ -1096,8 +1135,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1108,36 +1147,10 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
-            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-        };
-    };
-    "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmiete": {
-        answer: null;
-        state: {
-            Typ?: "Miete" | "Mieterhöhung";
-            Adresse?: string;
-            Ost?: boolean;
-            Wohnlage?: "einfach" | "mittel" | "gut";
-            Unterschrieben?: "Ja" | "Nein";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
-            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Nettokaltmiete?: number;
-            "Vorherige Mieterhöhung"?: "Ja" | "Nein";
-            "Vorherige Mieterhöhung Grund (Indexmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
-            "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
-            "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
-            "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
-            "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
-            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
@@ -1146,8 +1159,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1158,11 +1171,10 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
@@ -1171,8 +1183,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1183,11 +1195,10 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
@@ -1196,8 +1207,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1208,11 +1219,10 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
@@ -1221,8 +1231,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1233,21 +1243,20 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
-    "Mieterhöhung Grund": {
-        answer: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+    "Exit: TODO": {
+        answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1258,11 +1267,10 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
@@ -1271,8 +1279,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1283,13 +1291,11 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
     "Exit: Mieterhöhung wegen Betriebskosten": {
@@ -1297,8 +1303,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1309,13 +1315,11 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
     "Exit: Freiwillige Mieterhöhung": {
@@ -1323,8 +1327,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1335,13 +1339,11 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
     "Exit: Mieterhöhung ohne Begründung": {
@@ -1349,8 +1351,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1361,13 +1363,11 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
     Ausgangsmiete: {
@@ -1375,8 +1375,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1387,13 +1387,11 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
     "Geforderte Nettokaltmiete": {
@@ -1401,8 +1399,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1413,13 +1411,11 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
         };
     };
@@ -1428,8 +1424,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1440,17 +1436,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -1592,8 +1586,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1604,13 +1598,11 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
         };
@@ -1620,8 +1612,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1632,25 +1624,23 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
         };
     };
     "Mieterhöhung in letzten 33 Monaten": {
-        answer: "Ja" | "Nein" | "Nicht sicher";
+        answer: "Ja" | "Nein";
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1661,13 +1651,11 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
@@ -1678,8 +1666,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1690,17 +1678,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
         };
     };
     "Exit: Kappungsgrenze überschritten": {
@@ -1708,8 +1694,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1720,17 +1706,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -1739,8 +1723,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1751,17 +1735,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -1903,8 +1885,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1915,17 +1897,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -1934,8 +1914,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1946,17 +1926,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -1966,8 +1944,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -1978,17 +1956,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -1998,8 +1974,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2010,17 +1986,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2031,8 +2005,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2043,17 +2017,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2067,8 +2039,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2079,17 +2051,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2103,8 +2073,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2115,17 +2085,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2139,8 +2107,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2151,17 +2119,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2177,8 +2143,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2189,17 +2155,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2215,8 +2179,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2227,17 +2191,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2253,8 +2215,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2265,17 +2227,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2291,8 +2251,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2303,17 +2263,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2329,8 +2287,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2341,17 +2299,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2368,8 +2324,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2380,17 +2336,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2408,8 +2362,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2420,17 +2374,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2449,8 +2401,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2461,17 +2413,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2490,8 +2440,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2502,17 +2452,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2531,8 +2479,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2543,17 +2491,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2572,8 +2518,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2584,17 +2530,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2613,8 +2557,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2625,17 +2569,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2777,8 +2719,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2789,17 +2731,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -2941,8 +2881,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -2953,17 +2893,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3105,8 +3043,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3117,17 +3055,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3149,8 +3085,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3161,17 +3097,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3190,8 +3124,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3202,17 +3136,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3232,8 +3164,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3244,17 +3176,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3275,8 +3205,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3287,17 +3217,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3320,8 +3248,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3332,17 +3260,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3484,8 +3410,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3496,17 +3422,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3529,8 +3453,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3541,17 +3465,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3575,8 +3497,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3587,17 +3509,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3622,8 +3542,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3634,17 +3554,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3670,8 +3588,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3682,17 +3600,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3719,8 +3635,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3731,17 +3647,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3768,8 +3682,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3780,17 +3694,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3817,8 +3729,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3829,17 +3741,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -3981,8 +3891,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -3993,17 +3903,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -4145,8 +4053,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -4157,17 +4065,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -4309,8 +4215,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -4321,17 +4227,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -4358,8 +4262,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -4370,17 +4274,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -4408,8 +4310,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -4420,17 +4322,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -4459,8 +4359,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -4471,17 +4371,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -4623,8 +4521,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -4635,17 +4533,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -4675,8 +4571,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -4687,17 +4583,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -4839,8 +4733,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -4851,17 +4745,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -4892,8 +4784,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -4904,17 +4796,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -4946,8 +4836,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -4958,17 +4848,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5001,8 +4889,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5013,17 +4901,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5165,8 +5051,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5177,17 +5063,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5222,8 +5106,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5234,17 +5118,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5279,8 +5161,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5291,17 +5173,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5443,8 +5323,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5455,17 +5335,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5502,8 +5380,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5514,17 +5392,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5562,8 +5438,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5574,17 +5450,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5622,8 +5496,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5634,17 +5508,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5683,8 +5555,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5695,17 +5567,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5745,8 +5615,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5757,17 +5627,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5909,8 +5777,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5921,17 +5789,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -5973,8 +5839,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -5985,17 +5851,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -6037,8 +5901,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -6049,17 +5913,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -6102,8 +5964,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -6114,17 +5976,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -6266,8 +6126,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -6278,17 +6138,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -6332,8 +6190,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -6344,17 +6202,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -6399,8 +6255,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -6411,17 +6267,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -6468,8 +6322,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -6480,17 +6334,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -6537,8 +6389,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -6549,17 +6401,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -6701,8 +6551,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -6713,17 +6563,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -6772,8 +6620,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -6784,17 +6632,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -6844,8 +6690,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -6856,17 +6702,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -6916,8 +6760,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -6928,17 +6772,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -7080,8 +6922,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -7092,17 +6934,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -7154,8 +6994,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -7166,17 +7006,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -7228,8 +7066,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -7240,17 +7078,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -7304,8 +7140,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -7316,17 +7152,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -7380,8 +7214,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -7392,17 +7226,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -7544,8 +7376,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -7556,17 +7388,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -7622,8 +7452,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -7634,17 +7464,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -7702,8 +7530,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -7714,17 +7542,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -7782,8 +7608,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -7794,17 +7620,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -7946,8 +7770,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -7958,17 +7782,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -8026,8 +7848,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -8038,17 +7860,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -8107,8 +7927,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -8119,17 +7939,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -8190,8 +8008,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -8202,17 +8020,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -8273,8 +8089,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -8285,17 +8101,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -8357,8 +8171,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -8369,17 +8183,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -8443,8 +8255,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -8455,17 +8267,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -8529,8 +8339,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -8541,17 +8351,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -8693,8 +8501,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -8705,17 +8513,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -8780,8 +8586,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -8792,17 +8598,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -8868,8 +8672,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -8880,17 +8684,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -8958,8 +8760,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -8970,17 +8772,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -9122,8 +8922,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -9134,17 +8934,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -9212,8 +9010,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -9224,17 +9022,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -9303,8 +9099,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -9315,17 +9111,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -9395,8 +9189,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -9407,17 +9201,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -9559,8 +9351,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -9571,17 +9363,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -9653,8 +9443,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -9665,17 +9455,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -9747,8 +9535,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -9759,17 +9547,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -9842,8 +9628,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -9854,17 +9640,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -9938,8 +9722,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -9950,17 +9734,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -10102,8 +9884,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -10114,17 +9896,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -10199,8 +9979,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -10211,17 +9991,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -10363,8 +10141,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -10375,17 +10153,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -10462,8 +10238,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -10474,17 +10250,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -10626,8 +10400,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -10638,17 +10412,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -10790,8 +10562,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -10802,17 +10574,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -10889,8 +10659,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -10901,17 +10671,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -10989,8 +10757,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -11001,17 +10769,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -11090,8 +10856,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -11102,17 +10868,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -11254,8 +11018,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -11266,17 +11030,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -11356,8 +11118,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -11368,17 +11130,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -11459,8 +11219,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -11471,17 +11231,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -11563,8 +11321,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -11575,17 +11333,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -11727,8 +11483,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -11739,17 +11495,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -11832,8 +11586,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -11844,17 +11598,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -11939,8 +11691,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -11951,17 +11703,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -12046,8 +11796,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -12058,17 +11808,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -12210,8 +11958,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -12222,17 +11970,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -12318,8 +12064,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -12330,17 +12076,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -12428,8 +12172,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -12440,17 +12184,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -12592,8 +12334,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -12604,17 +12346,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -12702,8 +12442,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -12714,17 +12454,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -12813,8 +12551,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -12825,17 +12563,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -12925,8 +12661,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -12937,17 +12673,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -13038,8 +12772,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -13050,17 +12784,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -13202,8 +12934,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -13214,17 +12946,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -13316,8 +13046,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -13328,17 +13058,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -13433,8 +13161,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -13445,17 +13173,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -13549,8 +13275,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -13561,17 +13287,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -13713,8 +13437,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -13725,17 +13449,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -13830,8 +13552,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -13842,17 +13564,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -13948,8 +13668,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -13960,17 +13680,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -14112,8 +13830,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -14124,17 +13842,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -14231,8 +13947,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -14243,17 +13959,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -14351,8 +14065,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -14363,17 +14077,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -14473,8 +14185,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -14485,17 +14197,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -14595,8 +14305,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -14607,17 +14317,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -14759,8 +14467,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -14771,17 +14479,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -14923,8 +14629,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -14935,17 +14641,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -15046,8 +14750,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -15058,17 +14762,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -15170,8 +14872,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -15182,17 +14884,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -15295,8 +14995,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -15307,17 +15007,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -15421,8 +15119,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -15433,17 +15131,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -15585,8 +15281,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -15597,17 +15293,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -15712,8 +15406,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -15724,17 +15418,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -15840,8 +15532,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -15852,17 +15544,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -16004,8 +15694,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -16016,17 +15706,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -16133,8 +15821,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -16145,17 +15833,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -16263,8 +15949,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -16275,17 +15961,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -16395,8 +16079,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -16407,17 +16091,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -16559,8 +16241,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -16571,17 +16253,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -16694,8 +16374,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -16706,17 +16386,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -16829,8 +16507,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -16841,17 +16519,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -16964,8 +16640,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -16976,17 +16652,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -17128,8 +16802,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -17140,17 +16814,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -17263,8 +16935,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -17275,17 +16947,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -17401,8 +17071,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -17413,17 +17083,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -17538,8 +17206,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -17550,17 +17218,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -17702,8 +17368,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -17714,17 +17380,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -17840,8 +17504,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -17852,17 +17516,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -17980,8 +17642,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -17992,17 +17654,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -18120,8 +17780,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -18132,17 +17792,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -18261,8 +17919,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -18273,17 +17931,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -18403,8 +18059,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -18415,17 +18071,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -18567,8 +18221,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -18579,17 +18233,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -18731,8 +18383,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -18743,17 +18395,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -18874,8 +18524,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -18886,17 +18536,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -19019,8 +18667,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -19031,17 +18679,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -19165,8 +18811,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -19177,17 +18823,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -19329,8 +18973,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -19341,17 +18985,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -19477,8 +19119,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -19489,17 +19131,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -19625,8 +19265,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -19637,17 +19277,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -19773,8 +19411,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -19785,17 +19423,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -19923,8 +19559,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -19935,17 +19571,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -20087,8 +19721,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -20099,17 +19733,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -20251,8 +19883,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -20263,17 +19895,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -20401,8 +20031,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -20413,17 +20043,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -20552,8 +20180,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -20564,17 +20192,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -20704,8 +20330,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -20716,17 +20342,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -20857,8 +20481,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -20869,17 +20493,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -21021,8 +20643,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -21033,17 +20655,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -21176,8 +20796,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -21188,17 +20808,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -21331,8 +20949,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -21343,17 +20961,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -21487,8 +21103,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -21499,17 +21115,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -21644,8 +21258,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -21656,17 +21270,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -21802,8 +21414,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -21814,17 +21426,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -21961,8 +21571,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -21973,17 +21583,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -22125,8 +21733,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -22137,17 +21745,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -22285,8 +21891,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -22297,17 +21903,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -22446,8 +22050,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -22458,17 +22062,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -22608,8 +22210,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -22620,17 +22222,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
@@ -22771,8 +22371,8 @@ export type StepInfoByAlias = {
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
-            Ost?: boolean;
             Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
             Unterschrieben?: "Ja" | "Nein";
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
@@ -22783,17 +22383,15 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung Grund (Staffelmiete)"?: "Staffelmiete" | "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            "Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
-            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
             "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
             "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
             Qm?: number;
