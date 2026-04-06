@@ -1,6 +1,6 @@
 //import { useLocalizeField } from "~/l10n";
 
-import { getAusgangsmiete, getGeforderteNettokaltmiete } from "~/form/api";
+import { getGeforderteNettokaltmiete, getNettokaltmiete } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { formatEuro, formatPercent } from "~/utils";
 
@@ -9,7 +9,8 @@ export function ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  const ausgangsmiete = getAusgangsmiete(answers, visibleQuestionAliases) || 0;
+  const nettokaltmiete =
+    getNettokaltmiete(answers, visibleQuestionAliases) || 0;
   const geforderteNettokaltmiete =
     getGeforderteNettokaltmiete(answers, visibleQuestionAliases) || 0;
 
@@ -26,10 +27,10 @@ export function ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten() {
         </p>
         <p>
           Du hast angegeben, dass der Vermieter deine aktuelle Nettokaltmiete
-          von {formatEuro(ausgangsmiete)} auf{" "}
+          von {formatEuro(nettokaltmiete)} auf{" "}
           {formatEuro(geforderteNettokaltmiete)} erhöhen will. Dies entspricht
           einer Steigerung von{" "}
-          {formatPercent(geforderteNettokaltmiete / ausgangsmiete - 1)}. Die
+          {formatPercent(geforderteNettokaltmiete / nettokaltmiete - 1)}. Die
           Kappungsgrenze ist somit überschritten.
         </p>
         <p>

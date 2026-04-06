@@ -1,7 +1,6 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
-  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -1171,7 +1170,7 @@
                                               "block": [
                                                 {
                                                   "id": "kqon5",
-                                                  "alias": "Exit: Ausgangsmiete nicht anfechtbar wegen Mietspiegelerhöhung",
+                                                  "alias": "Exit: Nettokaltmiete nicht anfechtbar wegen Mietspiegelerhöhung",
                                                   "text": "",
                                                   "type": "Exit"
                                                 }
@@ -1198,7 +1197,7 @@
                                               "block": [
                                                 {
                                                   "id": "lc8g3",
-                                                  "alias": "Exit: Ausgangsmiete nicht anfechtbar wegen freiwilliger Mieterhöhung",
+                                                  "alias": "Exit: Nettokaltmiete nicht anfechtbar wegen freiwilliger Mieterhöhung",
                                                   "text": "",
                                                   "type": "Exit"
                                                 }
@@ -2137,7 +2136,7 @@
                 {
                   "id": "ez0nm",
                   "type": "Question",
-                  "alias": "Ausgangsmiete",
+                  "alias": "Nettokaltmiete",
                   "text": "Wie hoch ist die aktuelle Nettokaltmiete pro Monat?",
                   "info": "Wichtig: Die Nettokaltmiete ist etwas anderes als die \"normale\" Kaltmiete. Sie enthält keine Betriebskosten, wie z.B. Kosten für Heizung oder Wasser. Du findest den Betrag in deinem Mietvertrag.",
                   "answer": {
@@ -14280,5 +14279,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subs": []
 }

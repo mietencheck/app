@@ -21,7 +21,7 @@ const iconButtonVariants = cva(
       },
       size: {
         default: "px-4 py-3",
-        sm: "px-3 py-2",
+        sm: "px-2 py-2",
         unstyled: "",
       },
     },
@@ -42,7 +42,7 @@ const iconButtonVariants = cva(
         color: "neutral",
         variant: "ghost",
         class:
-          "bg-transparent text-neutral-faded border-transparent hover:bg-neutral-hover hover:text-neutral hover:border-neutral-hover active:bg-neutral-active focus-visible:bg-transparent",
+          "bg-transparent text-neutral-faded border-transparent hover:bg-neutral-hover hover:text-neutral hover:border-transparent active:bg-neutral-active focus-visible:bg-transparent",
       },
 
       {

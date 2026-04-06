@@ -1,6 +1,6 @@
 //import { useLocalizeField } from "~/l10n";
 
-export function ExitAusgangsmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung() {
+export function ExitNettokaltmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung() {
   //const l = useLocalizeField();
 
   return (

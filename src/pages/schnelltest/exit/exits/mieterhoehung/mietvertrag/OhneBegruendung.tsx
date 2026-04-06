@@ -16,7 +16,7 @@ export function ExitMieterhoehungOhneBegruendung() {
       </p>
       <p>
         Falls dies nicht der Fall ist, erfüllt die Mieterhöhung nicht den
-        rechtlichen Vorraussetzungen und ist somit unrechtmäßig.
+        rechtlichen Voraussetzungen und ist somit unrechtmäßig.
       </p>
       <h3>Was nun?</h3>
       <p>

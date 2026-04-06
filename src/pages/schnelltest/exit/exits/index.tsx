@@ -1,5 +1,5 @@
-export * from "./miete/ExitAusgangsmieteNichtAnfechtbarWegenMietspiegelerhoehung";
-export * from "./miete/ExitAusgangsmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung";
+export * from "./miete/NettokaltmieteNichtAnfechtbarWegenMietspiegelerhoehung";
+export * from "./miete/ExitNettokaltmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung";
 export * from "./miete/ExitIndexmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung";
 export * from "./miete/ExitStaffelmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung";
 export * from "./ExitHaeuser";

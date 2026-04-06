@@ -22,7 +22,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -209,7 +208,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -435,6 +433,16 @@ export type StepInfoByAlias = {
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
             Nettokaltmiete?: number;
+            "Vorherige Mieterhöhung"?: "Ja" | "Nein";
+            "Vorherige Mieterhöhung Grund (Indexmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
+            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
     "Vorherige Mieterhöhung": {
@@ -535,7 +543,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
-    "Exit: Ausgangsmiete nicht anfechtbar wegen Mietspiegelerhöhung": {
+    "Exit: Nettokaltmiete nicht anfechtbar wegen Mietspiegelerhöhung": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -553,7 +561,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
-    "Exit: Ausgangsmiete nicht anfechtbar wegen freiwilliger Mieterhöhung": {
+    "Exit: Nettokaltmiete nicht anfechtbar wegen freiwilliger Mieterhöhung": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -593,7 +601,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -1370,30 +1377,6 @@ export type StepInfoByAlias = {
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
-    Ausgangsmiete: {
-        answer: number;
-        state: {
-            Typ?: "Miete" | "Mieterhöhung";
-            Adresse?: string;
-            Wohnlage?: "einfach" | "mittel" | "gut";
-            Ost?: boolean;
-            Unterschrieben?: "Ja" | "Nein";
-            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
-            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
-            "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
-            Nettokaltmiete?: number;
-            "Vorherige Mieterhöhung"?: "Ja" | "Nein";
-            "Vorherige Mieterhöhung Grund (Indexmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
-            "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
-            "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
-            "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
-            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
-            "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
-            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
-            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-        };
-    };
     "Geforderte Nettokaltmiete": {
         answer: number;
         state: {
@@ -1416,7 +1399,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
         };
     };
     "Kappungsgrenze und Sperrfristen": {
@@ -1441,7 +1423,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -1603,7 +1584,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
         };
     };
@@ -1629,7 +1609,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
         };
@@ -1656,7 +1635,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
         };
@@ -1683,7 +1661,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -1711,7 +1688,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -1740,7 +1716,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -1902,7 +1877,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -1931,7 +1905,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -1961,7 +1934,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -1991,7 +1963,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2022,7 +1993,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2056,7 +2026,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2090,7 +2059,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2124,7 +2092,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2160,7 +2127,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2196,7 +2162,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2232,7 +2197,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2268,7 +2232,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2304,7 +2267,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2341,7 +2303,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2379,7 +2340,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2418,7 +2378,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2457,7 +2416,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2496,7 +2454,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2535,7 +2492,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2574,7 +2530,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2736,7 +2691,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -2898,7 +2852,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3060,7 +3013,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3102,7 +3054,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3141,7 +3092,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3181,7 +3131,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3222,7 +3171,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3265,7 +3213,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3427,7 +3374,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3470,7 +3416,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3514,7 +3459,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3559,7 +3503,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3605,7 +3548,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3652,7 +3594,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3699,7 +3640,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3746,7 +3686,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -3908,7 +3847,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -4070,7 +4008,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -4232,7 +4169,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -4279,7 +4215,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -4327,7 +4262,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -4376,7 +4310,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -4538,7 +4471,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -4588,7 +4520,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -4750,7 +4681,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -4801,7 +4731,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -4853,7 +4782,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -4906,7 +4834,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5068,7 +4995,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5123,7 +5049,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5178,7 +5103,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5340,7 +5264,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5397,7 +5320,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5455,7 +5377,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5513,7 +5434,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5572,7 +5492,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5632,7 +5551,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5794,7 +5712,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5856,7 +5773,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5918,7 +5834,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -5981,7 +5896,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -6143,7 +6057,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -6207,7 +6120,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -6272,7 +6184,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -6339,7 +6250,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -6406,7 +6316,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -6568,7 +6477,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -6637,7 +6545,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -6707,7 +6614,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -6777,7 +6683,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -6939,7 +6844,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -7011,7 +6915,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -7083,7 +6986,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -7157,7 +7059,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -7231,7 +7132,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -7393,7 +7293,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -7469,7 +7368,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -7547,7 +7445,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -7625,7 +7522,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -7787,7 +7683,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -7865,7 +7760,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -7944,7 +7838,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -8025,7 +7918,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -8106,7 +7998,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -8188,7 +8079,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -8272,7 +8162,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -8356,7 +8245,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -8518,7 +8406,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -8603,7 +8490,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -8689,7 +8575,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -8777,7 +8662,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -8939,7 +8823,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -9027,7 +8910,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -9116,7 +8998,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -9206,7 +9087,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -9368,7 +9248,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -9460,7 +9339,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -9552,7 +9430,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -9645,7 +9522,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -9739,7 +9615,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -9901,7 +9776,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -9996,7 +9870,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -10158,7 +10031,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -10255,7 +10127,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -10417,7 +10288,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -10579,7 +10449,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -10676,7 +10545,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -10774,7 +10642,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -10873,7 +10740,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -11035,7 +10901,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -11135,7 +11000,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -11236,7 +11100,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -11338,7 +11201,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -11500,7 +11362,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -11603,7 +11464,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -11708,7 +11568,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -11813,7 +11672,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -11975,7 +11833,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -12081,7 +11938,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -12189,7 +12045,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -12351,7 +12206,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -12459,7 +12313,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -12568,7 +12421,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -12678,7 +12530,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -12789,7 +12640,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -12951,7 +12801,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -13063,7 +12912,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -13178,7 +13026,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -13292,7 +13139,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -13454,7 +13300,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -13569,7 +13414,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -13685,7 +13529,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -13847,7 +13690,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -13964,7 +13806,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -14082,7 +13923,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -14202,7 +14042,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -14322,7 +14161,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -14484,7 +14322,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -14646,7 +14483,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -14767,7 +14603,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -14889,7 +14724,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -15012,7 +14846,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -15136,7 +14969,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -15298,7 +15130,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -15423,7 +15254,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -15549,7 +15379,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -15711,7 +15540,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -15838,7 +15666,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -15966,7 +15793,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -16096,7 +15922,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -16258,7 +16083,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -16391,7 +16215,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -16524,7 +16347,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -16657,7 +16479,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -16819,7 +16640,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -16952,7 +16772,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -17088,7 +16907,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -17223,7 +17041,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -17385,7 +17202,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -17521,7 +17337,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -17659,7 +17474,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -17797,7 +17611,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -17936,7 +17749,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -18076,7 +17888,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -18238,7 +18049,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -18400,7 +18210,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -18541,7 +18350,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -18684,7 +18492,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -18828,7 +18635,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -18990,7 +18796,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -19136,7 +18941,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -19282,7 +19086,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -19428,7 +19231,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -19576,7 +19378,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -19738,7 +19539,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -19900,7 +19700,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -20048,7 +19847,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -20197,7 +19995,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -20347,7 +20144,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -20498,7 +20294,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -20660,7 +20455,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -20813,7 +20607,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -20966,7 +20759,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -21120,7 +20912,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -21275,7 +21066,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -21431,7 +21221,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -21588,7 +21377,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -21750,7 +21538,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -21908,7 +21695,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -22067,7 +21853,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -22227,7 +22012,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
@@ -22388,7 +22172,6 @@ export type StepInfoByAlias = {
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
-            Ausgangsmiete?: number;
             "Geforderte Nettokaltmiete"?: number;
             "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
             "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";

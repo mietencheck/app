@@ -149,7 +149,7 @@
 }
 
 body {
-  @apply font-body font-400 text-gray-12 antialiased;
+  @apply font-body font-400 text-gray-12 antialiased underline-offset-2;
 }
 
 @layer components {
@@ -291,6 +291,38 @@ body {
 
   .title-72 {
     @apply text-14xl/[110%] font-600 text-pretty;
+  }
+
+  .typography > h1 {
+    @apply mt-8 mb-6 heading-22 text-gray-12;
+  }
+  .typography > h2 {
+    @apply mt-6 mb-4 heading-18 text-gray-12;
+  }
+  .typography > h3 {
+    @apply mt-6 heading-16 text-gray-12;
+  }
+  .typography > p {
+    @apply my-2 text-gray-11;
+  }
+  .typography > ol {
+    @apply list-outside list-decimal space-y-1.5 ps-8;
+  }
+  .typography > ol > li,
+  .typography > ul > li {
+    @apply pl-1 text-gray-11;
+  }
+  .typography a {
+    @apply underline;
+  }
+  .typography > hr {
+    @apply my-12;
+  }
+  .typography > :first-child {
+    @apply mt-0;
+  }
+  .typography > :last-child {
+    @apply mb-0;
   }
 
   .bg-gradient-dashed {

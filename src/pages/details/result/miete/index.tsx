@@ -176,7 +176,7 @@ export function ResultMiete() {
                 <AccordionTrigger className="text-left">
                   {l("Beratung durch Mieterverein Titel")}
                 </AccordionTrigger>
-                <AccordionContent>
+                <AccordionContent className="pt-3 pb-5 pl-7">
                   <div className="space-y-2 text-neutral-faded">
                     <p>{l("Beratung durch Mieterverein Text 1")}</p>
                     <p>{l("Beratung durch Mieterverein Text 2")}</p>
@@ -200,7 +200,7 @@ export function ResultMiete() {
                 <AccordionTrigger className="text-left">
                   {l("Beratung durch Bezirke Titel")}
                 </AccordionTrigger>
-                <AccordionContent>
+                <AccordionContent className="pt-3 pb-5 pl-7">
                   <div className="space-y-2 text-neutral-faded">
                     <p>{l("Beratung durch Bezirke Text 1")}</p>
                     <p>{l("Beratung durch Bezirke Text 2")}</p>
@@ -223,7 +223,7 @@ export function ResultMiete() {
                 <AccordionTrigger className="text-left">
                   {l("Beratung durch Rechtsanwalt Titel")}
                 </AccordionTrigger>
-                <AccordionContent>
+                <AccordionContent className="pt-3 pb-5 pl-7">
                   <div className="space-y-2 text-neutral-faded">
                     <p>{l("Beratung durch Rechtsanwalt Text 1")}</p>
                     <p>{l("Beratung durch Rechtsanwalt Text 2")}</p>
@@ -246,7 +246,7 @@ export function ResultMiete() {
                 <AccordionTrigger className="text-left">
                   {l("Beratung durch Drittanbieter Titel")}
                 </AccordionTrigger>
-                <AccordionContent>
+                <AccordionContent className="pt-3 pb-5 pl-7">
                   <div className="space-y-2 text-neutral-faded">
                     <p>{l("Beratung durch Drittanbieter Text 1")}</p>
                     <p>{l("Beratung durch Drittanbieter Text 2")}</p>
@@ -276,7 +276,7 @@ export function ResultMiete() {
             <AccordionTrigger>
               {l("Informiere deine Nachbar*innen Titel")}
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="pt-3 pb-5 pl-7">
               <p className="text-neutral-faded mb-2">
                 {l("Informiere deine Nachbar*innen Text 1")}
               </p>
@@ -300,7 +300,7 @@ export function ResultMiete() {
             <AccordionTrigger>
               {l("Schaffe ein Bewusstsein für die Mietenkrise Titel")}
             </AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="pt-3 pb-5 pl-7">
               <p className="text-neutral-faded mb-2">
                 {l("Schaffe ein Bewusstsein für die Mietenkrise Text")}
               </p>
@@ -319,7 +319,7 @@ export function ResultMiete() {
           </AccordionItem>
           <AccordionItem value="item-3">
             <AccordionTrigger>{l("Engagiere dich Titel")}</AccordionTrigger>
-            <AccordionContent>
+            <AccordionContent className="pt-3 pb-5 pl-7">
               <p className="text-neutral-faded mb-2">
                 {l("Engagiere dich Text")}
               </p>

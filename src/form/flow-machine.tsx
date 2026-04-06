@@ -115,16 +115,16 @@ function buildBaujahr(answers: AnswerMachine) {
 function buildKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten(
   answers: AnswerMachine,
 ) {
-  const ausgangsmiete = answers.getWithOptionAlias("Ausgangsmiete");
+  const nettokaltmiete = answers.getWithOptionAlias("Nettokaltmiete");
   const geforderteNettokaltmiete = answers.getWithOptionAlias(
     "Geforderte Nettokaltmiete",
   );
 
-  if (!ausgangsmiete || !geforderteNettokaltmiete) {
+  if (!nettokaltmiete || !geforderteNettokaltmiete) {
     return false;
   }
 
-  const nachKappungsgrenzeZulaessigeMiete = Number(ausgangsmiete) * 1.15;
+  const nachKappungsgrenzeZulaessigeMiete = Number(nettokaltmiete) * 1.15;
 
   if (
     Number(nachKappungsgrenzeZulaessigeMiete) >=

@@ -4,6 +4,7 @@ import { useLocalizeField } from "~/l10n";
 
 import { useIsCompleted } from "../utils";
 import { ResultMiete } from "./miete";
+import { ResultMieterhoehung } from "./mieterhoehung";
 
 export function Result() {
   const answers = useAnswers().getAliasedState();
@@ -33,6 +34,6 @@ export function Result() {
   if (typ == "Miete") {
     return <ResultMiete />;
   } else {
-    return "Ergebnis Mieterhöhung";
+    return <ResultMieterhoehung />;
   }
 }

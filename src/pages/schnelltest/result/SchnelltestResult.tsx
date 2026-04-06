@@ -1,7 +1,7 @@
 import { Button, LinkButton } from "~/components";
 import {
-  getAusgangsmiete,
   getGeforderteNettokaltmiete,
+  getNettokaltmiete,
   getTyp,
 } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
@@ -44,10 +44,7 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
         return <ResultMieteNichtZulaessig />;
       }
     } else {
-      const aktuelleNettokaltmiete = getAusgangsmiete(
-        answers,
-        visibleQuestionAliases,
-      );
+      const nettokaltmiete = getNettokaltmiete(answers, visibleQuestionAliases);
       const geforderteNettokaltmiete = getGeforderteNettokaltmiete(
         answers,
         visibleQuestionAliases,
@@ -57,7 +54,7 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
         worst: worstZulaessigeHoechstmiete,
       } = useWorstBestZulaessigeHoechstmiete();
 
-      if (!aktuelleNettokaltmiete || !geforderteNettokaltmiete) {
+      if (!nettokaltmiete || !geforderteNettokaltmiete) {
         return (
           <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
             <h2 className="heading-24 mb-4">
@@ -96,7 +93,7 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
         showContinueToDetailsButton = true;
         return <ResultMieterhoehungPotentiellUnzulaessig />;
       } else {
-        if (aktuelleNettokaltmiete < worstZulaessigeHoechstmiete) {
+        if (nettokaltmiete < worstZulaessigeHoechstmiete) {
           /*
             Die geforderte Miete liegt über der schlecht-möglichsten zulässigen Höchstmiete.
             -> Die Mieterhöhung ist deswegen auf jeden Fall in ihrer Höhe unzulässig.

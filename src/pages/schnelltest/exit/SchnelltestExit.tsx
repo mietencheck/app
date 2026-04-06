@@ -5,7 +5,6 @@ import { useAnswers } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
 import {
-  ExitAusgangsmieteNichtAnfechtbarWegenMietspiegelerhoehung,
   ExitHaeuser,
   ExitIndexmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung,
   ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten,
@@ -34,13 +33,14 @@ import {
   ExitMietspiegeltabelleLeer,
   ExitMietvertragZuAlt,
   ExitMoebliert,
+  ExitNettokaltmieteNichtAnfechtbarWegenMietspiegelerhoehung,
   ExitNeubauwohnung,
   ExitSozialwohnungen,
   ExitSperrfristenNichtEingehalten,
   ExitStaffelmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung,
 } from ".";
 import { StepperType } from "..";
-import { ExitAusgangsmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung } from "./exits/miete/ExitAusgangsmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung";
+import { ExitNettokaltmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung } from "./exits/miete/ExitNettokaltmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung";
 
 const Exits = {
   "Exit: Mietvertrag zu alt": () => <ExitMietvertragZuAlt />,
@@ -56,11 +56,11 @@ const Exits = {
   "Exit: Mieterhöhung zugestimmt": () => <ExitMieterhoehungZugestimmt />,
 
   /* Miete */
-  "Exit: Ausgangsmiete nicht anfechtbar wegen Mietspiegelerhöhung": () => (
-    <ExitAusgangsmieteNichtAnfechtbarWegenMietspiegelerhoehung />
+  "Exit: Nettokaltmiete nicht anfechtbar wegen Mietspiegelerhöhung": () => (
+    <ExitNettokaltmieteNichtAnfechtbarWegenMietspiegelerhoehung />
   ),
-  "Exit: Ausgangsmiete nicht anfechtbar wegen freiwilliger Mieterhöhung":
-    () => <ExitAusgangsmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung />,
+  "Exit: Nettokaltmiete nicht anfechtbar wegen freiwilliger Mieterhöhung":
+    () => <ExitNettokaltmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung />,
   "Exit: Indexmiete nicht anfechtbar wegen freiwilliger Mieterhöhung": () => (
     <ExitIndexmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung />
   ),

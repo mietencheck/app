@@ -1,4 +1,4 @@
-import { getAusgangsmiete, getGeforderteNettokaltmiete } from "~/form/api";
+import { getGeforderteNettokaltmiete, getNettokaltmiete } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import {
@@ -6,8 +6,6 @@ import {
   useWorstBestZulaessigeHoechstmieteDiff,
 } from "~/pages/details/utils";
 import { formatEuro } from "~/utils";
-
-import { WerdeAktiv } from "../../partials";
 
 export function ResultMieterhöhungZulaessig() {
   const answers = useAnswers().getAliasedState();
@@ -19,8 +17,8 @@ export function ResultMieterhöhungZulaessig() {
   } = useWorstBestZulaessigeHoechstmiete();
   const { worst: worstDiff, best: bestDiff } =
     useWorstBestZulaessigeHoechstmieteDiff();
-  const aktuelleNettokaltmiete =
-    getAusgangsmiete(answers, visibleQuestionAliases) || 0;
+  const nettokaltmiete =
+    getNettokaltmiete(answers, visibleQuestionAliases) || 0;
   const geforderteNettokaltmiete =
     getGeforderteNettokaltmiete(answers, visibleQuestionAliases) || 0;
   const l = useLocalizeField();
@@ -32,8 +30,7 @@ export function ResultMieterhöhungZulaessig() {
       </h2>
       <div className="text-neutral-faded space-y-2 mb-6">
         <p className="text-neutral-faded">
-          Der Vermieter möchte die Miete von{" "}
-          {formatEuro(aktuelleNettokaltmiete)} auf{" "}
+          Der Vermieter möchte die Miete von {formatEuro(nettokaltmiete)} auf{" "}
           {formatEuro(geforderteNettokaltmiete)} erhöhen.{" "}
           {worstDiff == bestDiff
             ? l("Ergebnis zulässige Höchstmiete", {
@@ -49,14 +46,6 @@ export function ResultMieterhöhungZulaessig() {
           und ist somit wahrscheinlich rechtens.
         </p>
       </div>
-      <div className="space-y-2 mb-6 text-neutral-faded">
-        <h3 className="text-base-medium text-neutral">{l("Was nun?")}</h3>
-        <p>
-          Auch wenn die Mieterhöhung zulässig ist, kannst du dich trotzdem für
-          bezahlbare Mieten einsetzen.
-        </p>
-      </div>
-      <WerdeAktiv />
     </>
   );
 }

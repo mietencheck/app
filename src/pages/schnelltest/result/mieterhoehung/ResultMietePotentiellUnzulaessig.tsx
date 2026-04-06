@@ -1,4 +1,4 @@
-import { getAusgangsmiete, getGeforderteNettokaltmiete } from "~/form/api";
+import { getGeforderteNettokaltmiete, getNettokaltmiete } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import {
@@ -11,8 +11,8 @@ export function ResultMieterhoehungPotentiellUnzulaessig() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  const aktuelleNettokaltmiete =
-    getAusgangsmiete(answers, visibleQuestionAliases) || 0;
+  const nettokaltmiete =
+    getNettokaltmiete(answers, visibleQuestionAliases) || 0;
   const geforderteNettokaltmiete =
     getGeforderteNettokaltmiete(answers, visibleQuestionAliases) || 0;
 
@@ -29,16 +29,15 @@ export function ResultMieterhoehungPotentiellUnzulaessig() {
     <>
       <h2 className="heading-24 mb-8">
         Die Mieterhöhung könnte bis zu{" "}
-        {aktuelleNettokaltmiete > bestZulaessigeHoechstmiete
-          ? formatEuro(geforderteNettokaltmiete - aktuelleNettokaltmiete)
+        {nettokaltmiete > bestZulaessigeHoechstmiete
+          ? formatEuro(geforderteNettokaltmiete - nettokaltmiete)
           : formatEuro(geforderteNettokaltmiete - bestZulaessigeHoechstmiete)}
-        {} zu hoch und damit unzulässig sein.
+        zu hoch und damit unzulässig sein.
       </h2>
       <h3 className="text-base-medium mb-2">{l("Was bedeutet das?")}</h3>
       <div className="text-neutral-faded space-y-2 mb-6">
         <p>
-          Der Vermieter möchte die Miete von{" "}
-          {formatEuro(aktuelleNettokaltmiete)} auf{" "}
+          Der Vermieter möchte die Miete von {formatEuro(nettokaltmiete)} auf{" "}
           {formatEuro(geforderteNettokaltmiete)} erhöhen.{" "}
           {worstDiff == bestDiff
             ? l("Ergebnis zulässige Höchstmiete", {
