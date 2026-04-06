@@ -51,7 +51,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   title={page.title}
                   href={page.href}
                   status={
-                    pathname == "/details/auswertung"
+                    pathname == "/fragebogen/auswertung"
                       ? "active"
                       : isCompleted
                         ? "completed"
@@ -75,7 +75,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         >
           <header className="space-y-2 print:hidden mb-2">
             <p className="text-base text-gray-11">
-              {pathname.includes("/details/auswertung")
+              {pathname.includes("/fragebogen/auswertung")
                 ? l("Ergebnis")
                 : `${l("Step")} ${pageIndex}`}
             </p>

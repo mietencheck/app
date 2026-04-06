@@ -1,7 +1,7 @@
 import { Button } from "~/components";
 import { getGeforderteNettokaltmiete, getNettokaltmiete } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
-import { useWorstBestZulaessigeHoechstmiete } from "~/pages/details/utils";
+import { useWorstBestZulaessigeHoechstmiete } from "~/pages/fragebogen/utils";
 
 import { ResultMieterhoehungChecks } from "./partials/checks";
 import {

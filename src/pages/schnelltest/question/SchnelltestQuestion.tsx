@@ -9,8 +9,8 @@ import { AdresseForm } from "~/components/AdresseForm/AdresseForm";
 import { InputControl } from "~/components/Input/InputControl";
 import { postMessageToFloma, useAnswers } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
-import { DetailsRouter } from "~/pages/details/router";
-import { useWorstBestZulaessigeHoechstmieteDiff } from "~/pages/details/utils";
+import { DetailsRouter } from "~/pages/fragebogen/router";
+import { useWorstBestZulaessigeHoechstmieteDiff } from "~/pages/fragebogen/utils";
 
 import { StepperType } from "..";
 import { useEstimatorSeen } from "../utils";

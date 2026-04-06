@@ -2,7 +2,7 @@ import { useLocalizeField } from "~/l10n";
 import {
   useWorstBestZulaessigeHoechstmiete,
   useWorstBestZulaessigeHoechstmieteDiff,
-} from "~/pages/details/utils";
+} from "~/pages/fragebogen/utils";
 import { formatEuro } from "~/utils";
 
 import { WerdeAktiv } from "../../partials";

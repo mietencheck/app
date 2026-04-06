@@ -7,5 +7,5 @@ export const DetailsRouter = createRouter(
     Result: "/auswertung",
     Questions: "/*",
   },
-  { basePath: "/details" },
+  { basePath: "/fragebogen" },
 );

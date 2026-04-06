@@ -13,7 +13,7 @@ import { UeberUnsPage } from "~/pages/ueber-uns";
 import { AppRouter } from "./router";
 import { ContinueSessionModal, SESSION_PARAM, useSyncAnswers } from "./session";
 
-const DetailsPage = React.lazy(() => import("~/pages/details"));
+const DetailsPage = React.lazy(() => import("~/pages/fragebogen"));
 
 function parseJSONOrUseDirectly(value: unknown) {
   try {

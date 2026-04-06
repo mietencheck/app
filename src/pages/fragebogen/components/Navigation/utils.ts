@@ -22,7 +22,7 @@ export function useMainNavItems(
       mainSteps
         .filter((s): s is Group => s.type == "Group" && s.category == "Page")
         .map((group) => {
-          const href = "/details/" + getSlugForAlias(group.alias ?? "");
+          const href = "/fragebogen/" + getSlugForAlias(group.alias ?? "");
           return {
             title: group.alias ?? "",
             href: href,

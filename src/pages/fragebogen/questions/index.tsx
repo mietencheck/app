@@ -70,7 +70,9 @@ export function Node({ step }: { step: Step }) {
       return (
         <div key={step.alias} className="flex gap-12 flex-col">
           {step.alias && <h2 className="heading-24">{l(step.alias)}</h2>}
-          {step.steps?.map((child) => <Node key={child.id} step={child} />)}
+          {step.steps?.map((child) => (
+            <Node key={child.id} step={child} />
+          ))}
         </div>
       );
 

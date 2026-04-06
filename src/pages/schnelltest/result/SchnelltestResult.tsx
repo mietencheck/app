@@ -6,11 +6,11 @@ import {
 } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
-import { DetailsRouter } from "~/pages/details/router";
+import { DetailsRouter } from "~/pages/fragebogen/router";
 import {
   useWorstBestZulaessigeHoechstmiete,
   useWorstBestZulaessigeHoechstmieteDiff,
-} from "~/pages/details/utils";
+} from "~/pages/fragebogen/utils";
 
 import { StepperType } from "..";
 import { useMarkEstimatorSeen } from "../utils";
