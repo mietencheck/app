@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import useSWRImmutable from "swr/immutable";
 import { useLocalStorage } from "usehooks-ts";
 
-import DE from "./locales/de.json";
+import DE from "../public/locales/de.json";
 
 export type Locale = "de" | "en";
 
@@ -32,7 +32,6 @@ export const L10nContext = React.createContext<{
 }>({ locale: "de", setLocale: () => {}, glossary: {} });
 export function L10nPovider({ children }: { children: React.ReactNode }) {
   const [locale, setLocale] = useLocalStorage<Locale>("locale", "de");
-
   const { data: localization } = useSWRImmutable(
     locale == "de" ? null : `/locales/${locale}.json`,
     (url) => fetch(url).then((res) => res.json() as Promise<Localization>),

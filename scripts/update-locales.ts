@@ -5,8 +5,8 @@ import { FlowRoot, traverse } from "flow-machine";
 
 import { hash } from "~/l10n";
 
+import DE from "../public/locales/de.json";
 import flow from "../src/form/flow.fm.json";
-import DE from "../src/locales/de.json";
 
 export async function updateLocales() {
   const stringByHash = new Map<string, string>();
@@ -37,7 +37,7 @@ export async function updateLocales() {
     }
   });
 
-  const localesPath = path.join("public", "locales");
+  const localesPath = path.join("src", "locales");
   const locales = fs
     .readdirSync(localesPath)
     .filter((f) => f.endsWith(".json") && f !== "de.json")
