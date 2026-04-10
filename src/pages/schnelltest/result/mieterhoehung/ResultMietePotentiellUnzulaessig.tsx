@@ -31,7 +31,9 @@ export function ResultMieterhoehungPotentiellUnzulaessig() {
         Die Mieterhöhung könnte bis zu{" "}
         {nettokaltmiete > bestZulaessigeHoechstmiete
           ? formatEuro(geforderteNettokaltmiete - nettokaltmiete)
-          : formatEuro(geforderteNettokaltmiete - bestZulaessigeHoechstmiete)}
+          : formatEuro(
+              geforderteNettokaltmiete - bestZulaessigeHoechstmiete,
+            )}{" "}
         zu hoch und damit unzulässig sein.
       </h2>
       <h3 className="text-base-medium mb-2">{l("Was bedeutet das?")}</h3>
@@ -52,7 +54,6 @@ export function ResultMieterhoehungPotentiellUnzulaessig() {
           Die Mieterhöhung könnte dementsprechend über der zulässigen
           Höchstmiete liegen und somit in ihrer Höhe unzulässig sein.
         </p>
-        <p>{l("Bitte beachte, dass dieses Ergebnis nur vorläufig ist.")}</p>
       </div>
 
       <h3 className="text-base-medium mb-2">{l("Was nun?")}</h3>

@@ -1,19 +1,10 @@
-import {
-  Button,
-  FormDescription,
-  FormField,
-  FormLabel,
-  LinkButton,
-} from "~/components";
+import { Button, FormDescription, FormField, FormLabel } from "~/components";
 import { AdresseForm } from "~/components/AdresseForm/AdresseForm";
 import { InputControl } from "~/components/Input/InputControl";
 import { postMessageToFloma, useAnswers } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
-import { DetailsRouter } from "~/pages/fragebogen/router";
-import { useWorstBestZulaessigeHoechstmieteDiff } from "~/pages/fragebogen/utils";
 
 import { StepperType } from "..";
-import { useEstimatorSeen } from "../utils";
 
 export function SchnelltestQuestion({
   step,
@@ -25,10 +16,6 @@ export function SchnelltestQuestion({
 }) {
   const answers = useAnswers();
   const l = useLocalizeField();
-
-  const seenEstimator = useEstimatorSeen();
-  const { best: bestDiff } = useWorstBestZulaessigeHoechstmieteDiff();
-  const showDetailsLinks = seenEstimator && bestDiff > 0;
 
   return (
     <FormField>
@@ -74,21 +61,9 @@ export function SchnelltestQuestion({
       </div>
       <div className="flex flex-row flex-wrap justify-center gap-3 mt-10">
         {stepper.back && <Button onPress={stepper.back}>{l("Back")}</Button>}
-        <Button
-          {...(showDetailsLinks ? {} : { color: "primary", variant: "solid" })}
-          type="submit"
-        >
+        <Button color="primary" variant="solid" type="submit">
           {l("next_question")}
         </Button>
-        {showDetailsLinks && (
-          <LinkButton
-            color="primary"
-            variant="solid"
-            to={DetailsRouter.Summary()}
-          >
-            {l("go_to_details")}
-          </LinkButton>
-        )}
       </div>
     </FormField>
   );
