@@ -17,7 +17,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -203,7 +203,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -373,7 +373,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
     };
@@ -438,7 +438,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -596,7 +596,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -758,8 +758,8 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
         };
     };
-    "Mieterhöhung Grund (Neu)": {
-        answer: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+    "Mieterhöhung Grund": {
+        answer: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
@@ -794,7 +794,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
         };
     };
     "Exit: Mieterhöhung zugestimmt": {
@@ -814,7 +814,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
     };
@@ -835,7 +835,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
         };
     };
@@ -856,7 +856,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
         };
@@ -878,7 +878,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
         };
@@ -900,7 +900,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -923,7 +923,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -946,7 +946,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -969,7 +969,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -992,7 +992,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1015,13 +1015,13 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
         };
     };
-    "Exit: Mieterhöhung ohne Begründung bei Indexmiete": {
+    "Exit: Mieterhöhung andere Begründung bei Indexmiete": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -1038,7 +1038,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1061,7 +1061,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1084,7 +1084,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1107,7 +1107,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1130,7 +1130,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1154,7 +1154,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1178,7 +1178,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1202,7 +1202,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1226,14 +1226,14 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
-    "Exit: Mieterhöhung ohne Begründung bei Staffelmiete": {
+    "Exit: Mieterhöhung andere Begründung bei Staffelmiete": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -1250,7 +1250,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1274,7 +1274,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1298,7 +1298,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1322,7 +1322,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1346,14 +1346,14 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
         };
     };
-    "Exit: Mieterhöhung ohne Begründung": {
+    "Exit: Mieterhöhung andere Begründung": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -1370,7 +1370,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1394,7 +1394,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1418,7 +1418,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1579,7 +1579,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1604,7 +1604,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1630,7 +1630,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1656,7 +1656,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1683,7 +1683,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1711,7 +1711,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1872,7 +1872,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1900,7 +1900,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1929,7 +1929,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1958,7 +1958,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -1988,7 +1988,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2021,7 +2021,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2054,7 +2054,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2087,7 +2087,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2122,7 +2122,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2157,7 +2157,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2192,7 +2192,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2227,7 +2227,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2262,7 +2262,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2298,7 +2298,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2335,7 +2335,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2373,7 +2373,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2411,7 +2411,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2449,7 +2449,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2487,7 +2487,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2525,7 +2525,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2686,7 +2686,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -2847,7 +2847,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3008,7 +3008,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3049,7 +3049,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3087,7 +3087,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3126,7 +3126,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3166,7 +3166,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3208,7 +3208,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3369,7 +3369,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3411,7 +3411,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3454,7 +3454,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3498,7 +3498,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3543,7 +3543,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3589,7 +3589,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3635,7 +3635,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3681,7 +3681,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -3842,7 +3842,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4003,7 +4003,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4164,7 +4164,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4210,7 +4210,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4257,7 +4257,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4305,7 +4305,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4466,7 +4466,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4515,7 +4515,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4676,7 +4676,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4726,7 +4726,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4777,7 +4777,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4829,7 +4829,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -4990,7 +4990,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5044,7 +5044,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5098,7 +5098,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5259,7 +5259,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5315,7 +5315,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5372,7 +5372,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5429,7 +5429,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5487,7 +5487,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5546,7 +5546,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5707,7 +5707,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5768,7 +5768,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5829,7 +5829,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -5891,7 +5891,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6052,7 +6052,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6115,7 +6115,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6179,7 +6179,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6245,7 +6245,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6311,7 +6311,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6472,7 +6472,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6540,7 +6540,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6609,7 +6609,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6678,7 +6678,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6839,7 +6839,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6910,7 +6910,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -6981,7 +6981,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -7054,7 +7054,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -7127,7 +7127,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -7288,7 +7288,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -7363,7 +7363,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -7440,7 +7440,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -7517,7 +7517,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -7678,7 +7678,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -7755,7 +7755,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -7833,7 +7833,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -7913,7 +7913,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -7993,7 +7993,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -8074,7 +8074,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -8157,7 +8157,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -8240,7 +8240,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -8401,7 +8401,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -8485,7 +8485,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -8570,7 +8570,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -8657,7 +8657,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -8818,7 +8818,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -8905,7 +8905,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -8993,7 +8993,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -9082,7 +9082,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -9243,7 +9243,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -9334,7 +9334,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -9425,7 +9425,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -9517,7 +9517,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -9610,7 +9610,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -9771,7 +9771,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -9865,7 +9865,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -10026,7 +10026,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -10122,7 +10122,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -10283,7 +10283,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -10444,7 +10444,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -10540,7 +10540,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -10637,7 +10637,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -10735,7 +10735,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -10896,7 +10896,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -10995,7 +10995,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -11095,7 +11095,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -11196,7 +11196,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -11357,7 +11357,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -11459,7 +11459,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -11563,7 +11563,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -11667,7 +11667,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -11828,7 +11828,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -11933,7 +11933,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -12040,7 +12040,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -12201,7 +12201,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -12308,7 +12308,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -12416,7 +12416,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -12525,7 +12525,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -12635,7 +12635,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -12796,7 +12796,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -12907,7 +12907,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -13021,7 +13021,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -13134,7 +13134,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -13295,7 +13295,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -13409,7 +13409,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -13524,7 +13524,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -13685,7 +13685,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -13801,7 +13801,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -13918,7 +13918,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -14037,7 +14037,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -14156,7 +14156,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -14317,7 +14317,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -14478,7 +14478,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -14598,7 +14598,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -14719,7 +14719,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -14841,7 +14841,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -14964,7 +14964,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -15125,7 +15125,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -15249,7 +15249,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -15374,7 +15374,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -15535,7 +15535,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -15661,7 +15661,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -15788,7 +15788,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -15917,7 +15917,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -16078,7 +16078,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -16210,7 +16210,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -16342,7 +16342,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -16474,7 +16474,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -16635,7 +16635,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -16767,7 +16767,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -16902,7 +16902,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -17036,7 +17036,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -17197,7 +17197,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -17332,7 +17332,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -17469,7 +17469,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -17606,7 +17606,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -17744,7 +17744,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -17883,7 +17883,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -18044,7 +18044,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -18205,7 +18205,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -18345,7 +18345,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -18487,7 +18487,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -18630,7 +18630,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -18791,7 +18791,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -18936,7 +18936,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -19081,7 +19081,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -19226,7 +19226,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -19373,7 +19373,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -19534,7 +19534,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -19695,7 +19695,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -19842,7 +19842,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -19990,7 +19990,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -20139,7 +20139,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -20289,7 +20289,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -20450,7 +20450,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -20602,7 +20602,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -20754,7 +20754,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -20907,7 +20907,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -21061,7 +21061,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -21216,7 +21216,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -21372,7 +21372,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -21533,7 +21533,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -21690,7 +21690,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -21848,7 +21848,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -22007,7 +22007,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
@@ -22167,7 +22167,7 @@ export type StepInfoByAlias = {
             "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Kein Grund";
             "Datum Mieterhöhungsschreiben"?: Date;
-            "Mieterhöhung Grund (Neu)"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Kein Grund";
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
             "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
             "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
             "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";

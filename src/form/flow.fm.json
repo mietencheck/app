@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -1292,9 +1293,10 @@
                 {
                   "id": "gbo6w",
                   "type": "Question",
-                  "alias": "Mieterhöhung Grund (Neu)",
+                  "alias": "Mieterhöhung Grund",
                   "text": "Welcher Grund für die Mieterhöhung ist im Schreiben  angegeben?",
                   "info": "Beachte: Falls mehrere Gründe angegeben sind, überprüfe bitte jeden Grund einzeln.",
+                  "required": true,
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
@@ -1326,16 +1328,15 @@
                       {
                         "id": "0jaa7",
                         "alias": "Freiwillig",
-                        "text": "Freiwillige Mieterhöhung (§ 557 BGB)"
+                        "text": "Freiwillige Mieterhöhung (§ 557 BGB) oder keine Begründung"
                       },
                       {
                         "id": "7oedm",
-                        "alias": "Kein Grund",
+                        "alias": "Anderer Grund",
                         "text": "Keine der Optionen"
                       }
                     ]
-                  },
-                  "required": true
+                  }
                 },
                 {
                   "id": "p897el",
@@ -1501,7 +1502,7 @@
                                 "id": "5r13k",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1526,7 +1527,7 @@
                                 "id": "tkf2j",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1607,7 +1608,7 @@
                                 "id": "fh3m9",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1632,7 +1633,7 @@
                                 "id": "wy4sl",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1657,7 +1658,7 @@
                                 "id": "df955",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1682,7 +1683,7 @@
                                 "id": "aj7w4",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1704,7 +1705,7 @@
                           "alternate": [
                             {
                               "id": "00ezm",
-                              "alias": "Exit: Mieterhöhung ohne Begründung bei Indexmiete",
+                              "alias": "Exit: Mieterhöhung andere Begründung bei Indexmiete",
                               "text": "",
                               "type": "Exit"
                             }
@@ -1761,7 +1762,7 @@
                                 "id": "ns6l3",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1786,7 +1787,7 @@
                                 "id": "18ko9l",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1811,7 +1812,7 @@
                                 "id": "vtkke",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1892,7 +1893,7 @@
                                 "id": "miabv",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1917,7 +1918,7 @@
                                 "id": "8oxrq",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1942,7 +1943,7 @@
                                 "id": "poqzu",
                                 "questionRef": {
                                   "type": "AliasRef",
-                                  "value": "Mieterhöhung Grund (Neu)"
+                                  "value": "Mieterhöhung Grund"
                                 },
                                 "negated": false,
                                 "type": "AnswerOptionComparison",
@@ -1964,7 +1965,7 @@
                           "alternate": [
                             {
                               "id": "ehvf",
-                              "alias": "Exit: Mieterhöhung ohne Begründung bei Staffelmiete",
+                              "alias": "Exit: Mieterhöhung andere Begründung bei Staffelmiete",
                               "text": "",
                               "type": "Exit"
                             }
@@ -1977,6 +1978,7 @@
                     {
                       "id": "zylzr",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "s8jc",
@@ -1985,7 +1987,7 @@
                             "id": "sw2ks",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Mieterhöhung Grund (Neu)"
+                              "value": "Mieterhöhung Grund"
                             },
                             "negated": false,
                             "type": "AnswerOptionComparison",
@@ -2010,7 +2012,7 @@
                             "id": "21v4hg",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Mieterhöhung Grund (Neu)"
+                              "value": "Mieterhöhung Grund"
                             },
                             "negated": false,
                             "type": "AnswerOptionComparison",
@@ -2035,7 +2037,7 @@
                             "id": "om9t2",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Mieterhöhung Grund (Neu)"
+                              "value": "Mieterhöhung Grund"
                             },
                             "negated": false,
                             "type": "AnswerOptionComparison",
@@ -2060,7 +2062,7 @@
                             "id": "k2aix",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Mieterhöhung Grund (Neu)"
+                              "value": "Mieterhöhung Grund"
                             },
                             "negated": false,
                             "type": "AnswerOptionComparison",
@@ -2085,7 +2087,7 @@
                             "id": "1safu",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Mieterhöhung Grund (Neu)"
+                              "value": "Mieterhöhung Grund"
                             },
                             "negated": false,
                             "type": "AnswerOptionComparison",
@@ -2110,7 +2112,7 @@
                             "id": "f37iv",
                             "questionRef": {
                               "type": "AliasRef",
-                              "value": "Mieterhöhung Grund (Neu)"
+                              "value": "Mieterhöhung Grund"
                             },
                             "negated": false,
                             "type": "AnswerOptionComparison",
@@ -2122,14 +2124,13 @@
                           "block": [
                             {
                               "id": "8hdzy",
-                              "alias": "Exit: Mieterhöhung ohne Begründung",
+                              "alias": "Exit: Mieterhöhung andere Begründung",
                               "text": "",
                               "type": "Exit"
                             }
                           ]
                         }
-                      ],
-                      "alternate": []
+                      ]
                     }
                   ]
                 },
@@ -14279,6 +14280,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }

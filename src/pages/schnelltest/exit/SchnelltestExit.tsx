@@ -12,10 +12,10 @@ import {
   ExitKeinWC,
   ExitMieterhoehungBetriebskosten,
   ExitMieterhoehungFreiwillig,
+  ExitMieterhoehungIndexmieteAndereBegruendung,
   ExitMieterhoehungIndexmieteBetriebskosten,
   ExitMieterhoehungIndexmieteFreiwillig,
   ExitMieterhoehungIndexmieteModernisierung,
-  ExitMieterhoehungIndexmieteOhneBegruendung,
   ExitMieterhoehungIndexmieteStaffelmiete,
   ExitMieterhoehungIndexmieteUeberInflationsrate,
   ExitMieterhoehungIndexmieteUnterInflationsrate,
@@ -23,10 +23,10 @@ import {
   ExitMieterhoehungModernisierung,
   ExitMieterhoehungOhneBegruendung,
   ExitMieterhoehungStaffelmiete,
+  ExitMieterhoehungStaffelmieteAndereBegruendung,
   ExitMieterhoehungStaffelmieteBetriebskosten,
   ExitMieterhoehungStaffelmieteFreiwillig,
   ExitMieterhoehungStaffelmieteModernisierung,
-  ExitMieterhoehungStaffelmieteOhneBegruendung,
   ExitMieterhoehungStaffelmieteUeberStaffel,
   ExitMieterhoehungStaffelmieteWegenMietspiegel,
   ExitMieterhoehungZugestimmt,
@@ -78,7 +78,7 @@ const Exits = {
   "Exit: Mieterhöhung wegen Betriebskosten": () => (
     <ExitMieterhoehungBetriebskosten />
   ),
-  "Exit: Mieterhöhung ohne Begründung": () => (
+  "Exit: Mieterhöhung andere Begründung": () => (
     <ExitMieterhoehungOhneBegruendung />
   ),
   "Exit: Freiwillige Mieterhöhung": () => <ExitMieterhoehungFreiwillig />,
@@ -104,8 +104,8 @@ const Exits = {
   "Exit: Freiwillige Mieterhöhung bei Indexmiete": () => (
     <ExitMieterhoehungIndexmieteFreiwillig />
   ),
-  "Exit: Mieterhöhung ohne Begründung bei Indexmiete": () => (
-    <ExitMieterhoehungIndexmieteOhneBegruendung />
+  "Exit: Mieterhöhung andere Begründung bei Indexmiete": () => (
+    <ExitMieterhoehungIndexmieteAndereBegruendung />
   ),
   /* Mieterhöhung -> Staffelmiete */
   "Exit: Mieterhöhung wegen Staffelmiete rechtens": () => (
@@ -126,8 +126,8 @@ const Exits = {
   "Exit: Freiwillige Mieterhöhung bei Staffelmiete": () => (
     <ExitMieterhoehungStaffelmieteFreiwillig />
   ),
-  "Exit: Mieterhöhung ohne Begründung bei Staffelmiete": () => (
-    <ExitMieterhoehungStaffelmieteOhneBegruendung />
+  "Exit: Mieterhöhung andere Begründung bei Staffelmiete": () => (
+    <ExitMieterhoehungStaffelmieteAndereBegruendung />
   ),
   /* Mieterhöhung -> Kappungsgrenze */
   "Exit: Kappungsgrenze überschritten": () => (

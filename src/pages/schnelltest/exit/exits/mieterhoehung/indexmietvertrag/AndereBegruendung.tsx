@@ -1,6 +1,6 @@
 import Disclaimer from "~/pages/schnelltest/partials/Disclaimer";
 
-export function ExitMieterhoehungIndexmieteOhneBegruendung() {
+export function ExitMieterhoehungIndexmieteAndereBegruendung() {
   return (
     <>
       <h2>Du musst der Mieterhöhung wahrscheinlich nicht zustimmen.</h2>
