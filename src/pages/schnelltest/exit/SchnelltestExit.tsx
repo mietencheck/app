@@ -6,7 +6,8 @@ import { useLocalizeField } from "~/l10n";
 
 import {
   ExitHaeuser,
-  ExitIndexmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung,
+  ExitIndexmietvertragVorherigeMieterhoehungAndererGrund,
+  ExitIndexmietvertragVorherigeMieterhoehungFreiwillig,
   ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten,
   ExitKappungsgrenzeUeberschritten,
   ExitKeinWC,
@@ -31,21 +32,22 @@ import {
   ExitMieterhoehungStaffelmieteWegenMietspiegel,
   ExitMieterhoehungZugestimmt,
   ExitMietspiegeltabelleLeer,
+  ExitMietvertragVorherigeMieterhoehungAndererGrund,
   ExitMietvertragZuAlt,
   ExitMoebliert,
-  ExitNettokaltmieteNichtAnfechtbarWegenMietspiegelerhoehung,
   ExitNeubauwohnung,
   ExitSozialwohnungen,
   ExitSperrfristenNichtEingehalten,
-  ExitStaffelmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung,
+  ExitStaffelmietvertragVorherigeMieterhoehungAndererGrund,
+  ExitStaffelmietvertragVorherigeMieterhoehungFreiwillig,
 } from ".";
 import { StepperType } from "..";
-import { ExitNettokaltmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung } from "./exits/miete/ExitNettokaltmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung";
+import { ExitMietvertragVorherigeMieterhoehungFreiwillig } from "./exits/miete/mietvertrag/VorherigeMieterhoehungFreiwillig";
 
 const Exits = {
   "Exit: Mietvertrag zu alt": () => <ExitMietvertragZuAlt />,
   "Exit: Mietspiegeltabelle Leer": () => <ExitMietspiegeltabelleLeer />,
-  "Exit: Zu neu": () => <ExitNeubauwohnung />,
+  "Exit: Neubauwohnung": () => <ExitNeubauwohnung />,
   "Exit: Mietpreisbremse gilt nicht für Sozialwohnungen": () => (
     <ExitSozialwohnungen />
   ),
@@ -56,16 +58,23 @@ const Exits = {
   "Exit: Mieterhöhung zugestimmt": () => <ExitMieterhoehungZugestimmt />,
 
   /* Miete */
-  "Exit: Nettokaltmiete nicht anfechtbar wegen Mietspiegelerhöhung": () => (
-    <ExitNettokaltmieteNichtAnfechtbarWegenMietspiegelerhoehung />
+  "Exit: Vorherige Mieterhöhung (Freiwillig)": () => (
+    <ExitMietvertragVorherigeMieterhoehungFreiwillig />
   ),
-  "Exit: Nettokaltmiete nicht anfechtbar wegen freiwilliger Mieterhöhung":
-    () => <ExitNettokaltmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung />,
-  "Exit: Indexmiete nicht anfechtbar wegen freiwilliger Mieterhöhung": () => (
-    <ExitIndexmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung />
+  "Exit: Vorherige Mieterhöhung (Anderer Grund)": () => (
+    <ExitMietvertragVorherigeMieterhoehungAndererGrund />
   ),
-  "Exit: Staffelmiete nicht anfechtbar wegen freiwilliger Mieterhöhung": () => (
-    <ExitStaffelmieteNichtAnfechtbarWegenFreiwilligerMieterhoehung />
+  "Exit: Vorherige Mieterhöhung bei Staffelmiete (Freiwillig)": () => (
+    <ExitStaffelmietvertragVorherigeMieterhoehungFreiwillig />
+  ),
+  "Exit: Vorherige Mieterhöhung bei Staffelmiete (Anderer Grund)": () => (
+    <ExitStaffelmietvertragVorherigeMieterhoehungAndererGrund />
+  ),
+  "Exit: Vorherige Mieterhöhung bei Indexmiete (Freiwillig)": () => (
+    <ExitIndexmietvertragVorherigeMieterhoehungFreiwillig />
+  ),
+  "Exit: Vorherige Mieterhöhung bei Indexmiete (Anderer Grund)": () => (
+    <ExitIndexmietvertragVorherigeMieterhoehungAndererGrund />
   ),
 
   /* Mieterhöhung */

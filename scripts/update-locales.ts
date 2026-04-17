@@ -37,7 +37,7 @@ export async function updateLocales() {
     }
   });
 
-  const localesPath = path.join("src", "locales");
+  const localesPath = path.join("public", "locales");
   const locales = fs
     .readdirSync(localesPath)
     .filter((f) => f.endsWith(".json") && f !== "de.json")
