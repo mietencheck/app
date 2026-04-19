@@ -637,7 +637,7 @@
                               "block": [
                                 {
                                   "id": "8f9a3",
-                                  "alias": "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmiete",
+                                  "alias": "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmietvertrag",
                                   "text": "",
                                   "type": "Exit"
                                 }
@@ -662,7 +662,7 @@
                               "block": [
                                 {
                                   "id": "gyk28g",
-                                  "alias": "Exit: Indexmieterhöhung bei Staffelmiete",
+                                  "alias": "Exit: Mieterhöhung wegen Indexmiete bei Staffelmietvertrag",
                                   "text": "",
                                   "type": "Exit"
                                 }
@@ -768,7 +768,7 @@
                               "block": [
                                 {
                                   "id": "udu4l",
-                                  "alias": "Exit: Mieterhöhung wegen Modernisierung bei Staffelmiete",
+                                  "alias": "Exit: Mieterhöhung wegen Modernisierung bei Staffelmietvertrag",
                                   "text": "",
                                   "type": "Exit"
                                 }
@@ -793,7 +793,7 @@
                               "block": [
                                 {
                                   "id": "4l2g",
-                                  "alias": "Exit: Mieterhöhung wegen Betriebskosten bei Staffelmiete",
+                                  "alias": "Exit: Mieterhöhung wegen Betriebskosten bei Staffelmietvertrag",
                                   "text": "",
                                   "type": "Exit"
                                 }
@@ -1409,6 +1409,7 @@
                     {
                       "id": "knhg9",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "0gu8e",
@@ -1430,6 +1431,56 @@
                             {
                               "id": "0a7wh",
                               "type": "If",
+                              "alternate": [
+                                {
+                                  "id": "qp1m7",
+                                  "type": "Question",
+                                  "alias": "Vertragsdatum",
+                                  "text": "Wann hast du den Mietvertrag unterschrieben?",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "08tnb",
+                                        "alias": "<2015",
+                                        "text": "Vor 01.06.2015"
+                                      },
+                                      {
+                                        "id": "wejo0k",
+                                        "alias": "2015-2016",
+                                        "text": "Zwischen 01.06.2015 und 31.08.2016"
+                                      },
+                                      {
+                                        "id": "7np1",
+                                        "alias": "2016-2018",
+                                        "text": "Zwischen 01.09.2016 und 31.08.2018"
+                                      },
+                                      {
+                                        "id": "m2jo",
+                                        "alias": "2018-2020",
+                                        "text": "Zwischen 01.09.2018 und 31.08.2020"
+                                      },
+                                      {
+                                        "id": "4obam",
+                                        "alias": "2020-2022",
+                                        "text": "Zwischen 01.09.2020 und 31.08.2022"
+                                      },
+                                      {
+                                        "id": "oqyrs",
+                                        "alias": "2022-2024",
+                                        "text": "Zwischen 01.09.2022 und 31.08.2023"
+                                      },
+                                      {
+                                        "id": "ve0tek",
+                                        "alias": ">2024",
+                                        "text": "Ab 01.09.2023"
+                                      }
+                                    ]
+                                  },
+                                  "required": true
+                                }
+                              ],
                               "cases": [
                                 {
                                   "id": "0ya0n",
@@ -1453,7 +1504,7 @@
                                       "type": "Question",
                                       "alias": "Vertragsdatum",
                                       "text": "Wann hast du den Mietvertrag unterschrieben?",
-                                      "info": "Wenn du dir nicht sicher bist, kannst du das Datum auch erstmal schätzen und später korrigieren.",
+                                      "info": null,
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -1563,8 +1614,8 @@
                                               "id": "fl3gm",
                                               "type": "Question",
                                               "alias": "Vertragsdatum",
-                                              "text": "Wann ist die neuste Mietstaffel in Kraft getreten? ",
-                                              "info": "Wenn seit Abschluss des Mietvertrages noch keine neue Mietstaffel in Kraft getreten ist, wähle das Datum an dem du den  Mietvertrag unterschrieben hast.",
+                                              "text": "Wann ist die letzte Mietstaffel in Kraft getreten? ",
+                                              "info": "Du findest diese Information in deinem Mietvertrag.",
                                               "answer": {
                                                 "type": "ChoiceAnswer",
                                                 "options": [
@@ -1616,7 +1667,7 @@
                                           "type": "Question",
                                           "alias": "Vertragsdatum",
                                           "text": "Wann hast du den Mietvertrag unterschrieben?",
-                                          "info": "Wenn du dir nicht sicher bist, kannst du das Datum auch erstmal schätzen und später korrigieren.",
+                                          "info": null,
                                           "answer": {
                                             "type": "ChoiceAnswer",
                                             "options": [
@@ -1663,56 +1714,6 @@
                                     }
                                   ]
                                 }
-                              ],
-                              "alternate": [
-                                {
-                                  "id": "qp1m7",
-                                  "type": "Question",
-                                  "alias": "Vertragsdatum",
-                                  "text": "Wann hast du den Mietvertrag unterschrieben?",
-                                  "info": "Wenn du dir nicht sicher bist, kannst du das Datum auch erstmal schätzen und später korrigieren.",
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "08tnb",
-                                        "alias": "<2015",
-                                        "text": "Vor 01.06.2015"
-                                      },
-                                      {
-                                        "id": "wejo0k",
-                                        "alias": "2015-2016",
-                                        "text": "Zwischen 01.06.2015 und 31.08.2016"
-                                      },
-                                      {
-                                        "id": "7np1",
-                                        "alias": "2016-2018",
-                                        "text": "Zwischen 01.09.2016 und 31.08.2018"
-                                      },
-                                      {
-                                        "id": "m2jo",
-                                        "alias": "2018-2020",
-                                        "text": "Zwischen 01.09.2018 und 31.08.2020"
-                                      },
-                                      {
-                                        "id": "4obam",
-                                        "alias": "2020-2022",
-                                        "text": "Zwischen 01.09.2020 und 31.08.2022"
-                                      },
-                                      {
-                                        "id": "oqyrs",
-                                        "alias": "2022-2024",
-                                        "text": "Zwischen 01.09.2022 und 31.08.2023"
-                                      },
-                                      {
-                                        "id": "ve0tek",
-                                        "alias": ">2024",
-                                        "text": "Ab 01.09.2023"
-                                      }
-                                    ]
-                                  },
-                                  "required": true
-                                }
                               ]
                             },
                             {
@@ -1749,12 +1750,24 @@
                             }
                           ]
                         }
-                      ],
-                      "alternate": []
+                      ]
                     },
                     {
                       "id": "swbz3",
                       "type": "If",
+                      "alternate": [
+                        {
+                          "id": "ysmlo",
+                          "type": "Question",
+                          "alias": "Nettokaltmiete",
+                          "text": "Wie hoch ist die vorgesehene Nettokaltmiete?",
+                          "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Sie beinhaltet keine Betriebskosten, wie z.B. Heizung oder Wasser. Du findest diesen Wert in deinem Mietvertrag.",
+                          "answer": {
+                            "type": "NumberAnswer"
+                          },
+                          "required": true
+                        }
+                      ],
                       "cases": [
                         {
                           "id": "zq5he",
@@ -1776,6 +1789,19 @@
                             {
                               "id": "j27fb",
                               "type": "If",
+                              "alternate": [
+                                {
+                                  "id": "ee4a3",
+                                  "type": "Question",
+                                  "alias": "Nettokaltmiete",
+                                  "text": "Wie hoch war die Nettokaltmiete bei Abschluss des Mietvertrages?",
+                                  "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Sie beinhaltet keine Betriebskosten, wie z.B. Heizung oder Wasser. Du findest diesen Wert in deinem Mietvertrag.",
+                                  "answer": {
+                                    "type": "NumberAnswer"
+                                  },
+                                  "required": true
+                                }
+                              ],
                               "cases": [
                                 {
                                   "id": "fxig5",
@@ -1799,7 +1825,7 @@
                                       "type": "Question",
                                       "alias": "Nettokaltmiete",
                                       "text": "Wie hoch war die Nettokaltmiete bei Abschluss des Mietvertrages?",
-                                      "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Du findest diesen Wert in deinem Mietvertrag. Ansonsten  kannst du den Betrag erstmal schätzen (ca. 70% der Warmmiete).",
+                                      "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Sie beinhaltet keine Betriebskosten, wie z.B. Heizung oder Wasser. Du findest diesen Wert in deinem Mietvertrag.",
                                       "answer": {
                                         "type": "NumberAnswer"
                                       },
@@ -1827,6 +1853,19 @@
                                     {
                                       "id": "xewaw",
                                       "type": "If",
+                                      "alternate": [
+                                        {
+                                          "id": "6ng88h",
+                                          "type": "Question",
+                                          "alias": "Nettokaltmiete",
+                                          "text": "Wie hoch war die Nettokaltmiete bei Abschluss des Mietvertrages?",
+                                          "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Sie beinhaltet keine Betriebskosten, wie z.B. Heizung oder Wasser. Du findest diesen Wert in deinem Mietvertrag.",
+                                          "answer": {
+                                            "type": "NumberAnswer"
+                                          },
+                                          "required": true
+                                        }
+                                      ],
                                       "cases": [
                                         {
                                           "id": "g9bc5f",
@@ -1849,8 +1888,8 @@
                                               "id": "bfllsl",
                                               "type": "Question",
                                               "alias": "Nettokaltmiete",
-                                              "text": "Auf welchen Betrag ist die Nettokaltmiete mit der neusten Mietstaffel gestiegen?",
-                                              "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Du findest diesen Wert in deinem Mietvertrag. Ansonsten  kannst du den Betrag erstmal schätzen (ca. 70% der Warmmiete).",
+                                              "text": "Auf welchen Betrag ist die Nettokaltmiete mit der letzten Mietstaffel gestiegen?",
+                                              "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Sie beinhaltet keine Betriebskosten, wie z.B. Heizung oder Wasser. Du findest diesen Wert in deinem Mietvertrag.",
                                               "answer": {
                                                 "type": "NumberAnswer"
                                               },
@@ -1858,52 +1897,13 @@
                                             }
                                           ]
                                         }
-                                      ],
-                                      "alternate": [
-                                        {
-                                          "id": "6ng88h",
-                                          "type": "Question",
-                                          "alias": "Nettokaltmiete",
-                                          "text": "Wie hoch war die Nettokaltmiete bei Abschluss des Mietvertrages?",
-                                          "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Du findest diesen Wert in deinem Mietvertrag. Ansonsten  kannst du den Betrag erstmal schätzen (ca. 70% der Warmmiete).",
-                                          "answer": {
-                                            "type": "NumberAnswer"
-                                          },
-                                          "required": true
-                                        }
                                       ]
                                     }
                                   ]
                                 }
-                              ],
-                              "alternate": [
-                                {
-                                  "id": "ee4a3",
-                                  "type": "Question",
-                                  "alias": "Nettokaltmiete",
-                                  "text": "Wie hoch war die Nettokaltmiete bei Abschluss des Mietvertrages?",
-                                  "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Du findest diesen Wert in deinem Mietvertrag. Ansonsten  kannst du den Betrag erstmal schätzen (ca. 70% der Warmmiete).",
-                                  "answer": {
-                                    "type": "NumberAnswer"
-                                  },
-                                  "required": true
-                                }
                               ]
                             }
                           ]
-                        }
-                      ],
-                      "alternate": [
-                        {
-                          "id": "ysmlo",
-                          "type": "Question",
-                          "alias": "Nettokaltmiete",
-                          "text": "Wie hoch ist die vorgesehene Nettokaltmiete?",
-                          "info": "Wichtig: Die Nettokaltmiete  ist unterschiedlich zur \"normalen\" Kaltmiete. Du findest diesen Wert in deinem Mietvertrag. Ansonsten  kannst du den Betrag erstmal schätzen (ca. 70% der Warmmiete).",
-                          "answer": {
-                            "type": "NumberAnswer"
-                          },
-                          "required": true
                         }
                       ]
                     },
@@ -1937,7 +1937,7 @@
                                   "id": "xlvbb",
                                   "type": "Question",
                                   "alias": "Vorherige Mieterhöhung",
-                                  "text": "Hat der Vermieter seit Abschluss des Mietvertrages mindestens eine Mieterhöhung erfolgreich durchgesetzt?",
+                                  "text": "Hat sich deine Miete seit Abschluss des Mietvertrages mindestens einmal erhöht?",
                                   "info": null,
                                   "answer": {
                                     "type": "ChoiceAnswer",
@@ -1959,7 +1959,6 @@
                                 {
                                   "id": "jxj3r",
                                   "type": "If",
-                                  "alternate": [],
                                   "cases": [
                                     {
                                       "id": "9iiq7h",
@@ -1984,7 +1983,6 @@
                                           "alias": "Vorherige Mieterhöhung Grund",
                                           "text": "Wie wurden die Mieterhöhungen begründet?",
                                           "info": "Beachte: Falls die Miete mehrfach erhöht wurde, wähle alle angegebenen Gründe an.",
-                                          "required": true,
                                           "answer": {
                                             "type": "ChoiceAnswer",
                                             "options": [
@@ -2014,12 +2012,12 @@
                                                 "text": "Andere Begründung"
                                               }
                                             ]
-                                          }
+                                          },
+                                          "required": true
                                         },
                                         {
                                           "id": "xgpjs",
                                           "type": "If",
-                                          "alternate": [],
                                           "cases": [
                                             {
                                               "id": "2os37",
@@ -2047,35 +2045,37 @@
                                               ]
                                             },
                                             {
-                                              "type": "IfCase",
                                               "id": "pilcd",
+                                              "type": "IfCase",
                                               "test": {
                                                 "id": "gp6pvj",
                                                 "questionRef": {
                                                   "type": "AliasRef",
                                                   "value": "Vorherige Mieterhöhung Grund"
                                                 },
-                                                "operator": "is",
                                                 "negated": false,
                                                 "type": "AnswerMultiOptionComparison",
+                                                "operator": "is",
                                                 "comparands": [
                                                   "7oedm"
                                                 ]
                                               },
                                               "block": [
                                                 {
-                                                  "type": "Exit",
                                                   "id": "dfoox",
                                                   "alias": "Exit: Vorherige Mieterhöhung (Anderer Grund)",
-                                                  "text": ""
+                                                  "text": "",
+                                                  "type": "Exit"
                                                 }
                                               ]
                                             }
-                                          ]
+                                          ],
+                                          "alternate": []
                                         }
                                       ]
                                     }
-                                  ]
+                                  ],
+                                  "alternate": []
                                 }
                               ],
                               "cases": [
@@ -2100,8 +2100,8 @@
                                       "id": "aofdh",
                                       "type": "Question",
                                       "alias": "Vorherige Mieterhöhung",
-                                      "text": "Hat dein Vermieter seit Abschluss des Mietvertrages mindestens eine andere Mieterhöhung erfolgreich durchgesetzt?",
-                                      "info": "Beachte: Mieterhöhung bezüglich der Indexmiete zählen hier nicht dazu.",
+                                      "text": "Hat sich deine Miete seit Abschluss des Mietvertrages mindestens einmal erhöht?",
+                                      "info": null,
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -2152,6 +2152,11 @@
                                                 "type": "ChoiceAnswer",
                                                 "options": [
                                                   {
+                                                    "id": "b2t6n",
+                                                    "text": "Indexmiete, Verbraucherpreisindex oder VPI (§ 557b BGB)",
+                                                    "alias": "Indexmiete"
+                                                  },
+                                                  {
                                                     "id": "808h4",
                                                     "alias": "Modernisierung",
                                                     "text": "Modernisierung oder bauliche Maßnahmen (§ 559 BGB)"
@@ -2177,7 +2182,6 @@
                                             {
                                               "id": "8g6w6h",
                                               "type": "If",
-                                              "alternate": [],
                                               "cases": [
                                                 {
                                                   "id": "d87xm",
@@ -2205,31 +2209,32 @@
                                                   ]
                                                 },
                                                 {
-                                                  "type": "IfCase",
                                                   "id": "ifqvl",
+                                                  "type": "IfCase",
                                                   "test": {
                                                     "id": "4h8q9j",
                                                     "questionRef": {
                                                       "type": "AliasRef",
                                                       "value": "Vorherige Mieterhöhung Grund (Indexmiete)"
                                                     },
-                                                    "operator": "is",
                                                     "negated": false,
                                                     "type": "AnswerMultiOptionComparison",
+                                                    "operator": "is",
                                                     "comparands": [
                                                       "7oedm"
                                                     ]
                                                   },
                                                   "block": [
                                                     {
-                                                      "type": "Exit",
                                                       "id": "b1mq1",
                                                       "alias": "Exit: Vorherige Mieterhöhung bei Indexmiete (Anderer Grund)",
-                                                      "text": ""
+                                                      "text": "",
+                                                      "type": "Exit"
                                                     }
                                                   ]
                                                 }
-                                              ]
+                                              ],
+                                              "alternate": []
                                             }
                                           ]
                                         }
@@ -2262,7 +2267,7 @@
                                           "id": "bbkix",
                                           "type": "Question",
                                           "alias": "Vorherige Mieterhöhung",
-                                          "text": "Hat der Vermieter seit Abschluss des Mietvertrages mindestens eine Mieterhöhung erfolgreich durchgesetzt?",
+                                          "text": "Hat sich deine Miete seit Abschluss des Mietvertrages mindestens einmal erhöht?",
                                           "info": null,
                                           "answer": {
                                             "type": "ChoiceAnswer",
@@ -2304,7 +2309,7 @@
                                               "id": "e280m",
                                               "type": "Question",
                                               "alias": "Vorherige Mieterhöhung",
-                                              "text": "Hat der Vermieter seit Eintreten der letzten Mietstaffel mindestens eine andere Mieterhöhung erfolgreich durchgesetzt?",
+                                              "text": "Hat sich deine Miete seit Beginn der letzten Mietstaffel mindestens einmal erhöht?",
                                               "info": null,
                                               "answer": {
                                                 "type": "ChoiceAnswer",
@@ -2330,7 +2335,6 @@
                                     {
                                       "id": "s46vy",
                                       "type": "If",
-                                      "alternate": [],
                                       "cases": [
                                         {
                                           "id": "6g2uk",
@@ -2355,7 +2359,6 @@
                                               "alias": "Vorherige Mieterhöhung Grund (Staffelmiete)",
                                               "text": "Wie wurden die Mieterhöhung begründet?",
                                               "info": "Beachte: Falls die Miete mehrfach erhöht wurde, wähle alle angegebenen Gründe an.",
-                                              "required": true,
                                               "answer": {
                                                 "type": "ChoiceAnswer",
                                                 "options": [
@@ -2380,12 +2383,12 @@
                                                     "text": "Andere Begründung"
                                                   }
                                                 ]
-                                              }
+                                              },
+                                              "required": true
                                             },
                                             {
                                               "id": "0flyn",
                                               "type": "If",
-                                              "alternate": [],
                                               "cases": [
                                                 {
                                                   "id": "y3esv",
@@ -2413,35 +2416,37 @@
                                                   ]
                                                 },
                                                 {
-                                                  "type": "IfCase",
                                                   "id": "anrqeg",
+                                                  "type": "IfCase",
                                                   "test": {
                                                     "id": "v0lpgg",
                                                     "questionRef": {
                                                       "type": "AliasRef",
                                                       "value": "Vorherige Mieterhöhung Grund (Staffelmiete)"
                                                     },
-                                                    "operator": "is",
                                                     "negated": false,
                                                     "type": "AnswerOptionComparison",
+                                                    "operator": "is",
                                                     "comparands": [
                                                       "7oedm"
                                                     ]
                                                   },
                                                   "block": [
                                                     {
-                                                      "type": "Exit",
                                                       "id": "elylr",
                                                       "alias": "Exit: Vorherige Mieterhöhung bei Staffelmiete (Anderer Grund)",
-                                                      "text": ""
+                                                      "text": "",
+                                                      "type": "Exit"
                                                     }
                                                   ]
                                                 }
-                                              ]
+                                              ],
+                                              "alternate": []
                                             }
                                           ]
                                         }
-                                      ]
+                                      ],
+                                      "alternate": []
                                     }
                                   ]
                                 }
@@ -2709,7 +2714,6 @@
         {
           "id": "nejuz",
           "type": "If",
-          "alternate": [],
           "cases": [
             {
               "id": "j0vf3",
@@ -2731,69 +2735,23 @@
                 {
                   "id": "26zie",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "xihob",
                       "type": "IfCase",
                       "test": {
-                        "id": "lsb48",
-                        "type": "LogicalOperation",
-                        "operator": "or",
+                        "id": "llc80h",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Baujahr"
+                        },
                         "negated": false,
-                        "conditions": [
+                        "type": "AnswerNumberComparison",
+                        "operator": "gt",
+                        "comparands": [
                           {
-                            "id": "dx7mo",
-                            "type": "LogicalOperation",
-                            "operator": "and",
-                            "negated": false,
-                            "conditions": [
-                              {
-                                "id": "tiqyp",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Vertragsdatum"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "wejo0k"
-                                ]
-                              },
-                              {
-                                "id": "ieevt",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
-                                },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gte",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2014
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "id": "llc80h",
-                            "questionRef": {
-                              "type": "AliasRef",
-                              "value": "Baujahr"
-                            },
-                            "negated": false,
-                            "type": "AnswerNumberComparison",
-                            "operator": "gt",
-                            "comparands": [
-                              {
-                                "type": "NumberLiteral",
-                                "value": 2014
-                              }
-                            ]
+                            "type": "NumberLiteral",
+                            "value": 2014
                           }
                         ]
                       },
@@ -2829,40 +2787,23 @@
                         {
                           "id": "vwe93k",
                           "type": "If",
-                          "alternate": [
-                            {
-                              "id": "oa8jh",
-                              "type": "Question",
-                              "alias": "Baujahr vor 1.10.2014",
-                              "text": "Wurde das Haus, in dem sich die Wohnung befindet, vor dem 01.10.2014 erbaut?",
-                              "info": null,
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "q2aer",
-                                    "alias": "Ja",
-                                    "text": "Ja"
-                                  },
-                                  {
-                                    "id": "xx5lz",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  },
-                                  {
-                                    "id": "9wzd8",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": true
-                            }
-                          ],
                           "cases": [
                             {
                               "id": "yermv",
                               "type": "IfCase",
+                              "test": {
+                                "id": "37vmr",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Dachgeschoss"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "uiajj"
+                                ]
+                              },
                               "block": [
                                 {
                                   "id": "iu3bt",
@@ -2892,20 +2833,37 @@
                                   },
                                   "required": true
                                 }
-                              ],
-                              "test": {
-                                "id": "37vmr",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Dachgeschoss"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "uiajj"
+                              ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "id": "oa8jh",
+                              "type": "Question",
+                              "alias": "Baujahr vor 1.10.2014",
+                              "text": "Wurde das Haus, in dem sich die Wohnung befindet, vor dem 01.10.2014 erbaut?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "q2aer",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "xx5lz",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "9wzd8",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
                                 ]
-                              }
+                              },
+                              "required": true
                             }
                           ]
                         },
@@ -2932,7 +2890,7 @@
                               "block": [
                                 {
                                   "id": "wuhshh",
-                                  "alias": "Exit: Zu neu",
+                                  "alias": "Exit: Neubauwohnung",
                                   "text": "",
                                   "type": "Exit"
                                 }
@@ -2943,11 +2901,13 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 }
               ]
             }
-          ]
+          ],
+          "alternate": []
         },
         {
           "id": "nhn6k",
@@ -3266,7 +3226,7 @@
                       "block": [
                         {
                           "id": "rrp6g",
-                          "alias": "Exit: Mietspiegeltabelle Leer",
+                          "alias": "Exit: Mietspiegel Tabelle Leer",
                           "text": "",
                           "type": "Exit"
                         }
@@ -3437,7 +3397,7 @@
                       "block": [
                         {
                           "id": "piqre",
-                          "alias": "Mietspiegeltabelle Leer",
+                          "alias": "Exit: Mietspiegel Tabelle Leer",
                           "text": "",
                           "type": "Exit"
                         }
@@ -3610,7 +3570,7 @@
                       "block": [
                         {
                           "id": "6o6x3",
-                          "alias": "Mietspiegeltabelle Leer",
+                          "alias": "Exit: Mietspiegel Tabelle Leer",
                           "text": "",
                           "type": "Exit"
                         }
@@ -3770,7 +3730,7 @@
               "block": [
                 {
                   "id": "z5pz1g",
-                  "alias": "Exit: Mietpreisbremse gilt nicht für Sozialwohnungen",
+                  "alias": "Exit: Sozialwohnung",
                   "text": "",
                   "type": "Exit"
                 }
@@ -3795,7 +3755,7 @@
               "block": [
                 {
                   "id": "a0enbl",
-                  "alias": "Exit: Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser",
+                  "alias": "Exit: Ein-/Zweifamilienhäuser oder Reihenhäuser",
                   "text": "",
                   "type": "Exit"
                 }
@@ -3820,7 +3780,7 @@
               "block": [
                 {
                   "id": "4jl5a",
-                  "alias": "Exit: Mietspiegel gilt nicht für Wohnungen ohne WC",
+                  "alias": "Exit: Wohnung ohne WC",
                   "text": "",
                   "type": "Exit"
                 }

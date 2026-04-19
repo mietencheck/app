@@ -2,7 +2,7 @@
 
 import Disclaimer from "~/pages/schnelltest/partials/Disclaimer";
 
-export function ExitMieterhoehungStaffelmieteAndereBegruendung() {
+export function ExitMieterhoehungStaffelmietvertragAndereBegruendung() {
   //const l = useLocalizeField();
 
   return (

@@ -5,12 +5,10 @@ import { useAnswers } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
 import {
-  ExitHaeuser,
   ExitIndexmietvertragVorherigeMieterhoehungAndererGrund,
   ExitIndexmietvertragVorherigeMieterhoehungFreiwillig,
   ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten,
   ExitKappungsgrenzeUeberschritten,
-  ExitKeinWC,
   ExitMieterhoehungBetriebskosten,
   ExitMieterhoehungFreiwillig,
   ExitMieterhoehungIndexmieteAndereBegruendung,
@@ -24,37 +22,37 @@ import {
   ExitMieterhoehungModernisierung,
   ExitMieterhoehungOhneBegruendung,
   ExitMieterhoehungStaffelmiete,
-  ExitMieterhoehungStaffelmieteAndereBegruendung,
-  ExitMieterhoehungStaffelmieteBetriebskosten,
-  ExitMieterhoehungStaffelmieteFreiwillig,
-  ExitMieterhoehungStaffelmieteModernisierung,
   ExitMieterhoehungStaffelmieteUeberStaffel,
-  ExitMieterhoehungStaffelmieteWegenMietspiegel,
+  ExitMieterhoehungStaffelmietvertragAndereBegruendung,
+  ExitMieterhoehungStaffelmietvertragBetriebskosten,
+  ExitMieterhoehungStaffelmietvertragFreiwillig,
+  ExitMieterhoehungStaffelmietvertragIndexmiete,
+  ExitMieterhoehungStaffelmietvertragMietspiegel,
+  ExitMieterhoehungStaffelmietvertragModernisierung,
   ExitMieterhoehungZugestimmt,
-  ExitMietspiegeltabelleLeer,
+  ExitMietspiegelTabelleLeer,
   ExitMietvertragVorherigeMieterhoehungAndererGrund,
   ExitMietvertragZuAlt,
-  ExitMoebliert,
+  ExitMoeblierteWohnung,
   ExitNeubauwohnung,
-  ExitSozialwohnungen,
+  ExitReihenhaus,
+  ExitSozialwohnung,
   ExitSperrfristenNichtEingehalten,
   ExitStaffelmietvertragVorherigeMieterhoehungAndererGrund,
   ExitStaffelmietvertragVorherigeMieterhoehungFreiwillig,
+  ExitWohnungOhneWC,
 } from ".";
 import { StepperType } from "..";
 import { ExitMietvertragVorherigeMieterhoehungFreiwillig } from "./exits/miete/mietvertrag/VorherigeMieterhoehungFreiwillig";
 
 const Exits = {
   "Exit: Mietvertrag zu alt": () => <ExitMietvertragZuAlt />,
-  "Exit: Mietspiegeltabelle Leer": () => <ExitMietspiegeltabelleLeer />,
+  "Exit: Mietspiegel Tabelle Leer": () => <ExitMietspiegelTabelleLeer />,
   "Exit: Neubauwohnung": () => <ExitNeubauwohnung />,
-  "Exit: Mietpreisbremse gilt nicht für Sozialwohnungen": () => (
-    <ExitSozialwohnungen />
-  ),
-  "Exit: Mietspiegel gilt nicht für Ein-/Zweifamilienhäuser oder Reihenhäuser":
-    () => <ExitHaeuser />,
-  "Exit: Mietspiegel gilt nicht für Wohnungen ohne WC": () => <ExitKeinWC />,
-  "Exit: Möblierte Wohnung": () => <ExitMoebliert />,
+  "Exit: Sozialwohnung": () => <ExitSozialwohnung />,
+  "Exit: Ein-/Zweifamilienhäuser oder Reihenhäuser": () => <ExitReihenhaus />,
+  "Exit: Wohnung ohne WC": () => <ExitWohnungOhneWC />,
+  "Exit: Möblierte Wohnung": () => <ExitMoeblierteWohnung />,
   "Exit: Mieterhöhung zugestimmt": () => <ExitMieterhoehungZugestimmt />,
 
   /* Miete */
@@ -123,20 +121,23 @@ const Exits = {
   "Exit: Mieterhöhung wegen Staffelmiete über Staffel hinaus": () => (
     <ExitMieterhoehungStaffelmieteUeberStaffel />
   ),
-  "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmiete": () => (
-    <ExitMieterhoehungStaffelmieteWegenMietspiegel />
+  "Exit: Mieterhöhung wegen Mietspiegel bei Staffelmietvertrag": () => (
+    <ExitMieterhoehungStaffelmietvertragMietspiegel />
   ),
-  "Exit: Mieterhöhung wegen Betriebskosten bei Staffelmiete": () => (
-    <ExitMieterhoehungStaffelmieteBetriebskosten />
+  "Exit: Mieterhöhung wegen Indexmiete bei Staffelmietvertrag": () => (
+    <ExitMieterhoehungStaffelmietvertragIndexmiete />
   ),
-  "Exit: Mieterhöhung wegen Modernisierung bei Staffelmiete": () => (
-    <ExitMieterhoehungStaffelmieteModernisierung />
+  "Exit: Mieterhöhung wegen Modernisierung bei Staffelmietvertrag": () => (
+    <ExitMieterhoehungStaffelmietvertragModernisierung />
+  ),
+  "Exit: Mieterhöhung wegen Betriebskosten bei Staffelmietvertrag": () => (
+    <ExitMieterhoehungStaffelmietvertragBetriebskosten />
   ),
   "Exit: Freiwillige Mieterhöhung bei Staffelmiete": () => (
-    <ExitMieterhoehungStaffelmieteFreiwillig />
+    <ExitMieterhoehungStaffelmietvertragFreiwillig />
   ),
   "Exit: Mieterhöhung andere Begründung bei Staffelmiete": () => (
-    <ExitMieterhoehungStaffelmieteAndereBegruendung />
+    <ExitMieterhoehungStaffelmietvertragAndereBegruendung />
   ),
   /* Mieterhöhung -> Kappungsgrenze */
   "Exit: Kappungsgrenze überschritten": () => (

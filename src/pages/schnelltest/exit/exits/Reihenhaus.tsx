@@ -1,14 +1,14 @@
 import { useInlineLocale } from "~/l10n";
 
-export function ExitKeinWC() {
+export function ExitReihenhaus() {
   const l = useInlineLocale();
 
   return (
     <>
       <h2 className="heading-24 mb-4">
         {l({
-          de: "Leider enthält der Berliner Mietspiegel keine Werte für Wohnungen ohne WC",
-          en: "Unfortunately, the rent index does not contain any values for apartments without a toilet.",
+          de: "Leider enthält der Berliner Mietspiegel keine Werte für Ein- und Zweifamilienhäuser sowie Reihenhäusern.",
+          en: "Unfortunately, the rent index does not contain any values for detached and semi-detached houses or terraced houses.",
         })}
       </h2>
       <div className="space-y-3 text-neutral-faded">

@@ -1,6 +1,6 @@
 import { useInlineLocale } from "~/l10n";
 
-export function ExitMoebliert() {
+export function ExitMoeblierteWohnung() {
   const l = useInlineLocale();
 
   return (

@@ -1,6 +1,6 @@
 import { useInlineLocale } from "~/l10n";
 
-export function ExitMietspiegeltabelleLeer() {
+export function ExitMietspiegelTabelleLeer() {
   const l = useInlineLocale();
 
   return (
