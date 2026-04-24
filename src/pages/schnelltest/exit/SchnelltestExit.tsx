@@ -30,7 +30,7 @@ import {
   ExitMieterhoehungStaffelmietvertragMietspiegel,
   ExitMieterhoehungStaffelmietvertragModernisierung,
   ExitMieterhoehungZugestimmt,
-  ExitMietspiegelTabelleLeer,
+  ExitMietspiegelFeldLeer,
   ExitMietvertragVorherigeMieterhoehungAndererGrund,
   ExitMietvertragZuAlt,
   ExitMoeblierteWohnung,
@@ -47,7 +47,7 @@ import { ExitMietvertragVorherigeMieterhoehungFreiwillig } from "./exits/miete/m
 
 const Exits = {
   "Exit: Mietvertrag zu alt": () => <ExitMietvertragZuAlt />,
-  "Exit: Mietspiegel Tabelle Leer": () => <ExitMietspiegelTabelleLeer />,
+  "Exit: Mietspiegel Feld Leer": () => <ExitMietspiegelFeldLeer />,
   "Exit: Neubauwohnung": () => <ExitNeubauwohnung />,
   "Exit: Sozialwohnung": () => <ExitSozialwohnung />,
   "Exit: Ein-/Zweifamilienhäuser oder Reihenhäuser": () => <ExitReihenhaus />,
