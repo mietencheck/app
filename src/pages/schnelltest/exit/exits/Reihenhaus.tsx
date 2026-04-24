@@ -1,24 +1,33 @@
-import { useInlineLocale } from "~/l10n";
+import Disclaimer from "../../partials/Disclaimer";
 
 export function ExitReihenhaus() {
-  const l = useInlineLocale();
-
   return (
     <>
-      <h2 className="heading-24 mb-4">
-        {l({
-          de: "Leider enthält der Berliner Mietspiegel keine Werte für Ein- und Zweifamilienhäuser sowie Reihenhäusern.",
-          en: "Unfortunately, the rent index does not contain any values for detached and semi-detached houses or terraced houses.",
-        })}
+      <h2>
+        Wir können die Höhe der Miete deiner Wohnung leider nicht bewertet.
       </h2>
-      <div className="space-y-3 text-neutral-faded">
-        <p>
-          {l({
-            de: "Dies bedeutet jedoch nicht, dass die Mietpreisbremse nicht für deine Wohnung gilt. Wir empfehlen dir, mit einem*r Rechtsanwält*in oder Mietrechtsexperten*in deinen konkreten Fall zu besprechen.",
-            en: "However, this does not mean that the Rent Control Act (Mietpreisbremse) does not apply to your apartment. We recommend that you discuss your specific case with a lawyer or tenancy law expert.",
-          })}
-        </p>
-      </div>
+      <p>
+        Wir haben geprüft, ob die Höhe deiner Miete den gesetzlichen Vorgaben
+        der Mietpreisbremse entspricht. Du hast angegeben, dass du in einem
+        Einfamilienhaus, Zweifamilienhaus oder Reihenhaus wohnst.
+      </p>
+      <p>
+        Die zulässige Miethöhe wird in Berlin üblicherweise anhand des Berliner
+        Mietspiegels bestimmt. Dieser enthält jedoch keine Angaben für
+        Einfamilienhäuser, Zweifamilienhäuser oder Reihenhäuser. Wir können die
+        Miethöhe für deine Wohnung daher nicht bewerten.
+      </p>
+      <p>
+        Wichtig: Das bedeutet nicht, dass die Mietpreisbremse in deinem Fall
+        nicht gilt. Dein Fall ist lediglich etwas komplizierter.
+      </p>
+      <h3>Was nun?</h3>
+      <p>
+        Wir empfehlen dir, deinen konkreten Fall rechtlich prüfen zu lassen. Du
+        findest <a href="[TODO]">hier</a> einen Artikel, wo du dies am besten
+        tun kannst.
+      </p>
+      <Disclaimer />
     </>
   );
 }

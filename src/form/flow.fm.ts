@@ -2173,7 +2173,7 @@ export type StepInfoByAlias = {
             "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
-    "Exit: Mietspiegel Tabelle Leer": {
+    "Exit: Mietspiegel Feld Leer": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -2355,6 +2355,44 @@ export type StepInfoByAlias = {
         };
     };
     "Exit: Ein-/Zweifamilienhäuser oder Reihenhäuser": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
+            Unterschrieben?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | ">2024";
+            "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
+            Nettokaltmiete?: number;
+            "Vorherige Mieterhöhung"?: "Ja" | "Nein";
+            "Vorherige Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Anderer Grund";
+            "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Anderer Grund";
+            "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Anderer Grund";
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
+            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
+            "Geforderte Nettokaltmiete"?: number;
+            "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
+            "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+        };
+    };
+    "Exit: Ein-/Zweifamilienhäuser oder Reihenhäuser bei Mieterhöhung": {
         answer: null;
         state: {
             Typ?: "Miete" | "Mieterhöhung";
