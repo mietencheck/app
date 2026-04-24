@@ -162,7 +162,7 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
 
     const value = {
       ...storedAnswers,
-      //Typ: "Miete",
+      Typ: "Miete",
       Ost: lageInfo?.ost ?? null,
       Wohnlage: lageInfo?.wohnlage ?? null,
       Baujahr: baujahr || null,
