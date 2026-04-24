@@ -4,7 +4,7 @@ export function ExitReihenhaus() {
   return (
     <>
       <h2>
-        Wir können die Höhe der Miete deiner Wohnung leider nicht bewertet.
+        Wir können die Höhe der Miete deiner Wohnung leider nicht bewerten.
       </h2>
       <p>
         Wir haben geprüft, ob die Höhe deiner Miete den gesetzlichen Vorgaben
