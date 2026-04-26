@@ -29,7 +29,7 @@ for (const { wohnlage, ost, ...a } of addressen) {
 
 const streets = Object.keys(grouped);
 await Deno.writeTextFile(
-  "../public/strassenverzeichnis/strassen.json",
+  "../src/strassenverzeichnis/strassen.json",
   JSON.stringify(streets),
 );
 

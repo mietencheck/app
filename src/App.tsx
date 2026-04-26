@@ -2,6 +2,7 @@ import * as Sentry from "@sentry/react";
 import React, { Suspense, useCallback, useEffect, useMemo } from "react";
 import { Dialog } from "react-aria-components";
 
+import { BeratungPage } from "~/pages/beratung";
 import { DatenschutzPage } from "~/pages/datenschutz";
 import { ImpressumPage } from "~/pages/impressum";
 import LandingPage from "~/pages/landing";
@@ -13,7 +14,7 @@ import { UeberUnsPage } from "~/pages/ueber-uns";
 import { AppRouter } from "./router";
 import { ContinueSessionModal, SESSION_PARAM, useSyncAnswers } from "./session";
 
-const DetailsPage = React.lazy(() => import("~/pages/details"));
+const DetailsPage = React.lazy(() => import("~/pages/fragebogen"));
 
 function parseJSONOrUseDirectly(value: unknown) {
   try {
@@ -46,6 +47,7 @@ function Router() {
   const route = AppRouter.useRoute([
     "Landing",
     "UeberUns",
+    "Beratung",
     "Datenschutz",
     "Impressum",
     "Schnelltest",
@@ -63,6 +65,8 @@ function Router() {
       return <DetailsPage />;
     case "UeberUns":
       return <UeberUnsPage />;
+    case "Beratung":
+      return <BeratungPage />;
     case "Datenschutz":
       return <DatenschutzPage />;
     case "Impressum":

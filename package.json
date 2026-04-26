@@ -26,7 +26,8 @@
     "deploy": "vite build && pnpm exec wrangler deploy"
   },
   "dependencies": {
-    "@cloudflare/vite-plugin": "^1.28.0",
+    "@base-ui/react": "^1.4.1",
+    "@cloudflare/vite-plugin": "^1.31.2",
     "@floating-ui/react-dom": "^2.1.8",
     "@formspark/use-formspark": "^0.1.42",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
@@ -68,7 +69,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "fetch-retry": "^6.0.0",
     "flexsearch": "^0.7.43",
-    "flow-machine": "^0.6.3",
+    "flow-machine": "^0.8.0",
     "html2pdf.js": "^0.10.2",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
@@ -98,11 +99,11 @@
     "vitest": "2.1.8"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260313.1",
+    "@cloudflare/workers-types": "^4.20260410.1",
     "dts-dom": "^3.7.0",
     "react-router-dom": "^6.30.0",
     "vite-react-ssg": "^0.9.0",
-    "wrangler": "^4.73.0"
+    "wrangler": "^4.81.1"
   },
   "lint-staged": {
     "*.(ts|tsx|js|json)": "prettier --write"

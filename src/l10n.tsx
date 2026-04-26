@@ -2,8 +2,8 @@ import { useCallback, useContext } from "react";
 import { entries } from "remeda";
 import sha1 from "sync-sha1";
 
-import { L10nContext } from "./L10nContext";
-import DE from "./locales/de.json";
+import DE from "../public/locales/de.json";
+import { L10nContext, type Locale } from "./L10nContext";
 
 export { DE };
 
@@ -12,6 +12,12 @@ export function hash(text: string): string {
 }
 
 export const useLocaleState = () => useContext(L10nContext);
+export type { Locale };
+
+export function useInlineLocale() {
+  const { locale } = useLocaleState();
+  return useCallback((text: Record<Locale, string>) => text[locale], [locale]);
+}
 
 export function useLocalizeField() {
   const { locale, localization: localizations } = useLocaleState();

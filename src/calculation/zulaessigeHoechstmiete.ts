@@ -1,28 +1,32 @@
-import { getWohnflaeche } from "~/form/api";
-import { FinalAnswers } from "~/form/flow-machine";
-
 import { getWorstBestOrtsueblicheVergleichsmiete } from "./ortsueblicheVergleichsmiete";
+import { CalculationContext } from "./types";
 
 export function getWorstBestZulaessigeHoechstmiete(
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
+  ctx: CalculationContext,
 ): { worst: number; best: number } | undefined {
-  const wohnflaeche = getWohnflaeche(answers, visibleQuestionAliases);
-  const ortsueblicheVergleichsmiete = getWorstBestOrtsueblicheVergleichsmiete(
-    answers,
-    visibleQuestionAliases,
-  );
+  const { typ, wohnflaeche } = ctx;
+  const ortsueblicheVergleichsmiete =
+    getWorstBestOrtsueblicheVergleichsmiete(ctx);
 
   if (!wohnflaeche || !ortsueblicheVergleichsmiete) {
     return undefined;
   }
 
-  return {
-    worst: Number(
-      (ortsueblicheVergleichsmiete.worst * wohnflaeche * 1.1).toFixed(2),
-    ),
-    best: Number(
-      (ortsueblicheVergleichsmiete.best * wohnflaeche * 1.1).toFixed(2),
-    ),
-  };
+  if (typ == "Miete") {
+    return {
+      worst: Number(
+        (ortsueblicheVergleichsmiete.worst * wohnflaeche * 1.1).toFixed(2),
+      ),
+      best: Number(
+        (ortsueblicheVergleichsmiete.best * wohnflaeche * 1.1).toFixed(2),
+      ),
+    };
+  } else {
+    return {
+      worst: Number(
+        (ortsueblicheVergleichsmiete.worst * wohnflaeche).toFixed(2),
+      ),
+      best: Number((ortsueblicheVergleichsmiete.best * wohnflaeche).toFixed(2)),
+    };
+  }
 }

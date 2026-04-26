@@ -1,36 +1,20 @@
-import {
-  getAusstattung,
-  getBaujahrSpanne,
-  getMietspiegeljahr,
-} from "~/form/api";
-import { FinalAnswers } from "~/form/flow-machine";
 import { ausstattungsAbzuegeByYear } from "~/mietspiegel/ausstattungsAbzuege";
 
+import { AusstattungState, CalculationContext } from "./types";
+
 /**
- * Calculates the worst and best possible Ausstattungsabzug ('facility discount') based on the provided answers.
+ * Calculates the worst and best possible Ausstattungsabzug ('facility discount') for the given calculation context.
  */
 export function getWorstBestAusstattungsAbzug(
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
+  ctx: CalculationContext,
 ): { worst: number; best: number } | undefined {
-  const mietspiegelJahr = getMietspiegeljahr(answers);
-  const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
-  const ausstattung = getAusstattung(answers, visibleQuestionAliases);
-
-  if (
-    !mietspiegelJahr ||
-    !baujahrSpanne ||
-    !ausstattung.sammelheizung ||
-    !ausstattung.bad
-  ) {
-    return undefined;
-  }
+  const { mietspiegeljahr, baujahrSpanne, ausstattung } = ctx;
 
   const ausstattungsAbzuege =
     ausstattungsAbzuegeByYear[
-      mietspiegelJahr as keyof typeof ausstattungsAbzuegeByYear
+      mietspiegeljahr as keyof typeof ausstattungsAbzuegeByYear
     ][
-      baujahrSpanne as keyof (typeof ausstattungsAbzuegeByYear)[typeof mietspiegelJahr]
+      baujahrSpanne as keyof (typeof ausstattungsAbzuegeByYear)[typeof mietspiegeljahr]
     ];
 
   if (!ausstattungsAbzuege) {
@@ -40,8 +24,8 @@ export function getWorstBestAusstattungsAbzug(
     };
   }
 
-  const isChecked = (m: "Ja" | "Nein" | "Nicht sicher") => m == "Nein";
-  const isMaybeOrChecked = (m: "Ja" | "Nein" | "Nicht sicher") =>
+  const isChecked = (m: AusstattungState) => m == "Nein";
+  const isMaybeOrChecked = (m: AusstattungState) =>
     m == "Nein" || m == "Nicht sicher";
 
   const best =

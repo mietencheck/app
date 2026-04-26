@@ -76,7 +76,7 @@ export default function LandingPage() {
                   "Hast du eine Mieterhöhung bekommen? Finde heraus, ob die Erhöhung rechtens ist.",
                 )}
               </p>
-              <span className="inline-block px-4 py-3 text-base-book bg-purple-9 text-white rounded-full opacity-50">
+              <span className="inline-block px-4 py-3 text-base-book bg-purple-9 text-white rounded-full opacity-50 cursor-not-allowed">
                 {l("Bald verfügbar")}
               </span>
             </div>

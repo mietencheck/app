@@ -1,8 +1,9 @@
+import { Step } from "flow-machine";
 import React, { useEffect, useMemo } from "react";
 import useLocalStorageState from "use-local-storage-state";
 
 import { Header } from "~/components/Header";
-import { useSchnelltestSteps } from "~/form/flow-machine";
+import { useVisibleSchnelltestSteps } from "~/form/flow-machine";
 
 import { SchnelltestExit } from "./exit";
 import { SchnelltestQuestion } from "./question";
@@ -32,19 +33,31 @@ function useStepper(count: number) {
   return { index, set: setIndex, back, forward };
 }
 
+type NodeType = {
+  step: Step | undefined;
+  stepper: StepperType;
+};
+
+function Node({ step, stepper }: NodeType) {
+  if (!step) {
+    return <SchnelltestResult stepper={stepper} />;
+  }
+
+  switch (step.type) {
+    case "Info": {
+      return <SchnelltestResult stepper={stepper} />;
+    }
+    case "Exit": {
+      return <SchnelltestExit step={step} stepper={stepper} />;
+    }
+    case "Question": {
+      return <SchnelltestQuestion step={step} stepper={stepper} />;
+    }
+  }
+}
+
 export function SchnelltestPage() {
-  let steps = useSchnelltestSteps();
-  steps = useMemo(
-    () =>
-      steps.filter(
-        (s) =>
-          !(
-            s.type == "Question" &&
-            (s.alias == "Ost" || s.alias == "Wohnlage" || s.alias == "Baujahr")
-          ),
-      ),
-    [steps],
-  );
+  const steps = useVisibleSchnelltestSteps();
 
   const stepper = useStepper(steps.length);
   const step = steps.at(stepper.index);
@@ -66,16 +79,6 @@ export function SchnelltestPage() {
     }
   }, [setStepIndex, steps]);
 
-  const renderContent = () => {
-    if (!step || step.type == "Info") {
-      return <SchnelltestResult stepper={stepper} />;
-    } else if (step.type == "Exit") {
-      return <SchnelltestExit step={step} stepper={stepper} />;
-    } else {
-      return <SchnelltestQuestion step={step} stepper={stepper} />;
-    }
-  };
-
   return (
     <>
       <Header />
@@ -87,7 +90,7 @@ export function SchnelltestPage() {
               stepper.forward?.();
             }}
           >
-            {renderContent()}
+            <Node step={step} stepper={stepper} />
           </form>
         </div>
       </main>

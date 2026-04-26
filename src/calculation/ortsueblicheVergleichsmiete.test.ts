@@ -1,12 +1,13 @@
 import { expect, test } from "vitest";
 
+import { getWorstBestOrtsueblicheVergleichsmiete } from "~/calculation/ortsueblicheVergleichsmiete";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 
 import {
   MERKMAL_RESET_ANSWERS,
   SONDERMERKMAL_RESET_ANSWERS,
 } from "../form/mappings/answer-reset";
-import { getWorstBestOrtsueblicheVergleichsmiete } from "./ortsueblicheVergleichsmiete";
 
 test.each([
   ...[
@@ -149,6 +150,7 @@ test.each([
     return {
       description: description,
       answers: {
+        Typ: "Miete",
         Vertragsdatum: "2015-2016",
         Unterschrieben: "Ja",
         Baujahr: 1918,
@@ -166,8 +168,7 @@ test.each([
 ])("getWorstBestOrtsueblicheVergleichsmiete(%o)", ({ answers, result }) => {
   expect(
     getWorstBestOrtsueblicheVergleichsmiete(
-      answers,
-      getVisibleQuestionAliases(answers),
+      answersToCalculationContext(answers, getVisibleQuestionAliases(answers))!,
     ),
   ).toEqual(result);
 });

@@ -1,5 +1,6 @@
 import { getWorstBestPreisspanne } from "./calculation/preisspanne";
 import { getWorstBestZulaessigeHoechstmiete } from "./calculation/zulaessigeHoechstmiete";
+import { answersToCalculationContext } from "./form/calculation-context";
 import { evaluateFlowMachine } from "./form/flow-machine-evaluation";
 import { FinalAnswers } from "./form/flow-machine-runtime";
 
@@ -112,12 +113,13 @@ async function handleZulaessigeHoechstmiete(request: Request) {
     const { answers, visibleQuestionAliases } =
       (await request.json()) as ZulaessigeHoechstmieteRequestBody;
 
-    const result = getWorstBestZulaessigeHoechstmiete(
+    const ctx = answersToCalculationContext(
       answers,
       new Set(visibleQuestionAliases),
     );
+    const result = ctx ? getWorstBestZulaessigeHoechstmiete(ctx) : undefined;
 
-    return json(result ?? "foo");
+    return json(result ?? null);
   } catch {
     return json({ error: "Invalid request data" }, { status: 400 });
   }
@@ -147,10 +149,11 @@ async function handleFlowMachine(request: Request) {
     }
 
     const evaluation = evaluateFlowMachine(submittedAnswers);
-    const preisspanne = getWorstBestPreisspanne(
+    const ctx = answersToCalculationContext(
       evaluation.answers as FinalAnswers,
       new Set(evaluation.visibleQuestionAliases),
     );
+    const preisspanne = ctx ? getWorstBestPreisspanne(ctx) : undefined;
 
     return json({
       ...evaluation,

@@ -1,12 +1,12 @@
 import { expect, test } from "vitest";
 
+import { getWorstBestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
-
 import {
   MERKMAL_RESET_ANSWERS,
   SONDERMERKMAL_RESET_ANSWERS,
-} from "../form/mappings/answer-reset";
-import { getWorstBestZulaessigeHoechstmiete } from "./zulaessigeHoechstmiete";
+} from "~/form/mappings/answer-reset";
 
 test.each([
   ...[
@@ -341,6 +341,7 @@ test.each([
   ].map(({ answers, result }) => {
     return {
       answers: {
+        Typ: "Miete",
         Unterschrieben: answers.Unterschrieben || "Ja",
         "Wohnung hat Sammelheizung": "Ja",
         "Badezimmer in Wohnung": "Ja",
@@ -354,8 +355,7 @@ test.each([
 ])("getWorstBestZulaessigeHoechstmiete(%o)", ({ answers, result }) => {
   expect(
     getWorstBestZulaessigeHoechstmiete(
-      answers,
-      getVisibleQuestionAliases(answers),
+      answersToCalculationContext(answers, getVisibleQuestionAliases(answers))!,
     ),
   ).toEqual(result);
 });

@@ -1,21 +1,22 @@
-import {
-  AnswersRecord,
-  AnswerValueType,
-  FlowMachine,
-  Steps,
-} from "flow-machine";
-import React, {
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { AnswerData, FlowMachine, Steps } from "flow-machine";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
-import { applyDerivedAnswers } from "./flow-machine-derived-answers";
-import { flowMachine } from "./flow-machine-runtime";
+import { parseAdresse } from "~/utils";
+
+import {
+  AnswerMachine,
+  FinalAnswers,
+  flowMachine,
+} from "./flow-machine-runtime";
 import { StepInfoByAlias } from "./flow.fm";
+import {
+  HIDDEN_QUESTIONS,
+  HIDDEN_QUESTIONS_FOR_MIETERHOEHUNG,
+} from "./hidden-questions";
+import { vertragsdatumToMietspiegelJahrMapping } from "./mappings/vertragsdatum";
+
+export type { AnswerData };
 
 const noop = () => {};
 
@@ -63,24 +64,84 @@ export function useFlowMachine() {
   return previewFM ?? flowMachine;
 }
 
-type AnswerMachine = ReturnType<typeof flowMachine.answers>;
+function buildVertragsdatum(answers: AnswerMachine) {
+  const typ = answers.getWithOptionAlias("Typ");
+
+  if (typ == "Mieterhöhung") {
+    return ">2024";
+  } else {
+    const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
+
+    if (unterschrieben == "Nein") {
+      return ">2024";
+    }
+    return answers.getWithOptionAlias("Vertragsdatum");
+  }
+}
+
+function buildLageInfo(answers: AnswerMachine) {
+  const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
+  const vertragsdatum = buildVertragsdatum(answers);
+
+  const mietspieglJahr =
+    unterschrieben == "Nein"
+      ? "2024" // If contract is not signed, use newest Mietspiegel
+      : vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum];
+
+  const addresse = answers.get(["Adresse"]);
+  const lage =
+    (addresse && typeof addresse == "string" && parseAdresse(addresse).lage) ||
+    null;
+  return (mietspieglJahr && lage?.[mietspieglJahr]) ?? null;
+}
+
+function buildBaujahr(answers: AnswerMachine) {
+  const baujahrSpanne = answers.getWithOptionAlias("Baujahr vor 1991");
+  const baujahr = answers.getWithOptionAlias("Baujahr ab 1991");
+
+  if (baujahrSpanne == "1991-") {
+    return baujahr;
+  } else {
+    const constructionYearBoundaries = baujahrSpanne?.split("-");
+    return constructionYearBoundaries?.[0] !== ""
+      ? constructionYearBoundaries?.[0]
+      : constructionYearBoundaries[1];
+  }
+}
+
+function buildKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten(
+  answers: AnswerMachine,
+) {
+  const nettokaltmiete = answers.getWithOptionAlias("Nettokaltmiete");
+  const geforderteNettokaltmiete = answers.getWithOptionAlias(
+    "Geforderte Nettokaltmiete",
+  );
+
+  if (!nettokaltmiete || !geforderteNettokaltmiete) {
+    return false;
+  }
+
+  const nachKappungsgrenzeZulaessigeMiete = Number(nettokaltmiete) * 1.15;
+
+  if (
+    Number(nachKappungsgrenzeZulaessigeMiete) >=
+    Number(geforderteNettokaltmiete)
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 const AnswersContext = React.createContext<AnswerMachine>(
   flowMachine.answers({}),
 );
 
 export const useStoredAnswers = () =>
-  useLocalStorage<AnswersRecord>("mb-flow", {});
+  useLocalStorage<AnswerData>("mb-flow", {});
 
 export function AnswersProvider({ children }: { children: React.ReactNode }) {
   const [storedAnswers, setStoredAnswers] = useStoredAnswers();
-
-  const setKV = useCallback(
-    (key: string, value: AnswerValueType) => {
-      return setStoredAnswers((state) => ({ ...state, [key]: value }));
-    },
-    [setStoredAnswers],
-  );
 
   const flowMachine = useFlowMachine();
 
@@ -90,10 +151,25 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
   );
 
   const answersValue = useMemo(() => {
-    const value = applyDerivedAnswers(storedAnswers);
+    const vertragsdatum = buildVertragsdatum(bareAnswers);
+    const lageInfo = buildLageInfo(bareAnswers);
+    const baujahr = buildBaujahr(bareAnswers);
+    const kappungsgrenzeDurchAktuelleMieterhoehungUeberschritten =
+      buildKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten(bareAnswers);
+
+    const value = {
+      ...storedAnswers,
+      Typ: "Miete",
+      Ost: lageInfo?.ost ?? null,
+      Wohnlage: lageInfo?.wohnlage ?? null,
+      Baujahr: baujahr || null,
+      Vertragsdatum: vertragsdatum || null,
+      "Kappungsgrenze durch aktuelle Mieterhöhung überschritten":
+        kappungsgrenzeDurchAktuelleMieterhoehungUeberschritten || null,
+    };
     postMessageToFloma("Answers", { value });
-    return flowMachine.answers(value, setKV);
-  }, [bareAnswers, flowMachine, setKV, storedAnswers]);
+    return flowMachine.answers(value, setStoredAnswers);
+  }, [bareAnswers, flowMachine, storedAnswers, setStoredAnswers]);
   return (
     <AnswersContext.Provider value={answersValue}>
       {children}
@@ -149,6 +225,24 @@ export function useSchnelltestSteps() {
   }, [steps]);
 }
 
+export function useVisibleSchnelltestSteps() {
+  const steps = useSchnelltestSteps();
+  const answers = useAnswers();
+
+  return useMemo(() => {
+    return steps.filter(
+      (s) =>
+        !(
+          s.type === "Question" &&
+          s.alias !== null &&
+          (new Set(HIDDEN_QUESTIONS).has(s.alias) ||
+            (answers.getAliasedState().Typ === "Mieterhöhung" &&
+              new Set(HIDDEN_QUESTIONS_FOR_MIETERHOEHUNG).has(s.alias)))
+        ),
+    );
+  }, [steps, answers]);
+}
+
 export function useDetailsSteps() {
   const steps = useSteps();
   return useMemo(() => {
@@ -161,6 +255,16 @@ export function useDetailsSteps() {
 export type MainSteps = ReturnType<typeof useDetailsSteps>;
 
 export * from "./flow.fm";
-export * from "./flow-machine-runtime";
-export * from "./flow-machine-derived-answers";
-export * from "./flow-machine-evaluation";
+export { flowMachine } from "./flow-machine-runtime";
+export type { FinalAnswers, EstimateAnswers } from "./flow-machine-runtime";
+
+export function getVisibleQuestionAliases(answers: FinalAnswers) {
+  const steps = ungroup(
+    flowMachine.run(flowMachine.answers(answers).state as never),
+  );
+  return new Set(
+    steps
+      .map((s) => (s.type == "Question" ? s.alias : null))
+      .filter((s): s is string => Boolean(s)),
+  );
+}
