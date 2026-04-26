@@ -14,6 +14,7 @@ describe("/api/miete", () => {
       new Request("https://example.com/api/miete", {
         method: "POST",
         body: JSON.stringify({
+          Typ: "Miete",
           Unterschrieben: "Ja",
           Vertragsdatum: "2022-2024",
           Ost: false,
@@ -55,6 +56,7 @@ describe("/api/miete", () => {
         method: "POST",
         body: JSON.stringify({
           answers: {
+            Typ: "Miete",
             Unterschrieben: "Nein",
             Ost: false,
             Wohnlage: "einfach",

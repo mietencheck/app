@@ -11,17 +11,21 @@ export function ResultMieterhöhungZulaessig() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  const {
-    worst: worstZulaessigeHoechstmiete,
-    best: bestZulaessigeHoechstmiete,
-  } = useWorstBestZulaessigeHoechstmiete();
-  const { worst: worstDiff, best: bestDiff } =
-    useWorstBestZulaessigeHoechstmieteDiff();
+  const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
+  const zulaessigeHoechstmieteDiff = useWorstBestZulaessigeHoechstmieteDiff();
   const nettokaltmiete =
     getNettokaltmiete(answers, visibleQuestionAliases) || 0;
   const geforderteNettokaltmiete =
     getGeforderteNettokaltmiete(answers, visibleQuestionAliases) || 0;
   const l = useLocalizeField();
+  if (!zulaessigeHoechstmiete || !zulaessigeHoechstmieteDiff) {
+    return null;
+  }
+  const {
+    worst: worstZulaessigeHoechstmiete,
+    best: bestZulaessigeHoechstmiete,
+  } = zulaessigeHoechstmiete;
+  const { worst: worstDiff, best: bestDiff } = zulaessigeHoechstmieteDiff;
 
   return (
     <>

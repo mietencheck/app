@@ -12,7 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "~/components";
-import { getSondermerkmalStates } from "~/form/api";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField, useLocalizeString } from "~/l10n";
 import { sondermerkmale } from "~/mietspiegel/sondermerkmale";
@@ -26,19 +26,15 @@ export function SondermerkmaleTable() {
   const lField = useLocalizeField();
   const lString = useLocalizeString();
 
+  const ctx = answersToCalculationContext(answers, visibleQuestionAliases);
+  if (!ctx) {
+    return null;
+  }
+
   const aufschlagBySondermerkmal =
-    getWorstBestSondermerkmalModifierBySondermerkmal(
-      answers,
-      visibleQuestionAliases,
-    );
-  const sondermerkmalAufschlag = getWorstBestSondermerkmalModifier(
-    answers,
-    visibleQuestionAliases,
-  );
-  const sondermerkmalState = getSondermerkmalStates(
-    answers,
-    visibleQuestionAliases,
-  );
+    getWorstBestSondermerkmalModifierBySondermerkmal(ctx);
+  const sondermerkmalAufschlag = getWorstBestSondermerkmalModifier(ctx);
+  const sondermerkmalState = ctx.sondermerkmale;
 
   if (!aufschlagBySondermerkmal) {
     return;

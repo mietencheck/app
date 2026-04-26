@@ -24,18 +24,34 @@ import {
 } from "../partials/modal";
 
 export function ResultMiete() {
-  const {
-    worst: worstZulaessigeHoechstmiete,
-    best: bestZulaessigeHoechstmiete,
-  } = useWorstBestZulaessigeHoechstmiete();
-  const { worst: worstDiff, best: bestDiff } =
-    useWorstBestZulaessigeHoechstmieteDiff();
+  const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
+  const zulaessigeHoechstmieteDiff = useWorstBestZulaessigeHoechstmieteDiff();
 
   const [showDetails, setShowDetails] = useState(false);
   const [showSessionModal, setShowSessionModal] = useState(false);
 
   const l = useLocalizeField();
   const { locale } = useLocaleState();
+
+  if (!zulaessigeHoechstmiete || !zulaessigeHoechstmieteDiff) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
+        <h2 className="heading-24 mb-4">
+          Fehler beim Berechnen des Ergebnisses
+        </h2>
+        <p className="text-neutral-faded mb-4">
+          Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten. Bitte
+          klick unten auf "Neu anfangen".
+        </p>
+      </div>
+    );
+  }
+
+  const {
+    worst: worstZulaessigeHoechstmiete,
+    best: bestZulaessigeHoechstmiete,
+  } = zulaessigeHoechstmiete;
+  const { worst: worstDiff, best: bestDiff } = zulaessigeHoechstmieteDiff;
 
   return (
     <>

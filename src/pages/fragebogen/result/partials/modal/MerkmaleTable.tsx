@@ -9,7 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from "~/components";
-import { getMerkmalStatesByGruppe } from "~/form/api";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import { MerkmalGruppe } from "~/mietspiegel/types";
@@ -19,14 +19,13 @@ export function MerkmaleTable() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  const merkmalStatesByGruppe = getMerkmalStatesByGruppe(
-    answers,
-    visibleQuestionAliases,
-  );
-  const merkmalStateTotalByGruppe = getWorstBestMerkmalStateByMerkmalGruppe(
-    answers,
-    visibleQuestionAliases,
-  );
+  const ctx = answersToCalculationContext(answers, visibleQuestionAliases);
+  if (!ctx) {
+    return null;
+  }
+  const merkmalStatesByGruppe = ctx.merkmale;
+  const merkmalStateTotalByGruppe =
+    getWorstBestMerkmalStateByMerkmalGruppe(ctx);
 
   return (
     <div className="flex flex-col gap-12">

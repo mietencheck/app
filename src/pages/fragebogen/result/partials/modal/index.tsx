@@ -2,6 +2,7 @@ import { getWorstBestAusstattungsAbzug } from "~/calculation/ausstattungsAbzug";
 import { IconButton, Tab, TabList, TabPanel, Tabs } from "~/components";
 import { CloseIcon } from "~/components/Icons/Close";
 import { getMietspiegeljahr } from "~/form/api";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
@@ -26,10 +27,10 @@ export function AuswertungTabPanel() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  const ausstattungsAbzug = getWorstBestAusstattungsAbzug(
-    answers,
-    visibleQuestionAliases,
-  );
+  const ctx = answersToCalculationContext(answers, visibleQuestionAliases);
+  const ausstattungsAbzug = ctx
+    ? getWorstBestAusstattungsAbzug(ctx)
+    : undefined;
 
   return (
     <>

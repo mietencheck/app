@@ -1,6 +1,7 @@
 import { expect, test } from "vitest";
 
 import { getWorstBestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import {
   MERKMAL_RESET_ANSWERS,
@@ -354,8 +355,7 @@ test.each([
 ])("getWorstBestZulaessigeHoechstmiete(%o)", ({ answers, result }) => {
   expect(
     getWorstBestZulaessigeHoechstmiete(
-      answers,
-      getVisibleQuestionAliases(answers),
+      answersToCalculationContext(answers, getVisibleQuestionAliases(answers))!,
     ),
   ).toEqual(result);
 });

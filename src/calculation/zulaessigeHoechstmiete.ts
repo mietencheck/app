@@ -1,20 +1,14 @@
-import { getTyp, getWohnflaeche } from "~/form/api";
-import { FinalAnswers } from "~/form/flow-machine";
-
 import { getWorstBestOrtsueblicheVergleichsmiete } from "./ortsueblicheVergleichsmiete";
+import { CalculationContext } from "./types";
 
 export function getWorstBestZulaessigeHoechstmiete(
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
+  ctx: CalculationContext,
 ): { worst: number; best: number } | undefined {
-  const typ = getTyp(answers, visibleQuestionAliases);
-  const wohnflaeche = getWohnflaeche(answers, visibleQuestionAliases);
-  const ortsueblicheVergleichsmiete = getWorstBestOrtsueblicheVergleichsmiete(
-    answers,
-    visibleQuestionAliases,
-  );
+  const { typ, wohnflaeche } = ctx;
+  const ortsueblicheVergleichsmiete =
+    getWorstBestOrtsueblicheVergleichsmiete(ctx);
 
-  if (!typ || !wohnflaeche || !ortsueblicheVergleichsmiete) {
+  if (!wohnflaeche || !ortsueblicheVergleichsmiete) {
     return undefined;
   }
 

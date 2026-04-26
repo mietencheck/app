@@ -1,27 +1,21 @@
-import { getMerkmalStatesByGruppe } from "~/form/api";
-import { FinalAnswers } from "~/form/flow-machine";
 import { MerkmalStateList } from "~/form/utils/mapMerkmalStateToMerkmalGruppen";
 import { MerkmalGruppe } from "~/mietspiegel/types";
+
+import { CalculationContext } from "./types";
 
 const countMerkmaleWithValues = (obj: MerkmalStateList, values: string[]) =>
   Object.values(obj).filter((value) => (value ? values.includes(value) : false))
     .length;
 
 export const getWorstBestMerkmalStateByMerkmalGruppe = (
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
+  ctx: CalculationContext,
 ): {
   [key in MerkmalGruppe]: {
     worst: number;
     best: number;
   };
 } => {
-  const merkmalStatesByGruppe = getMerkmalStatesByGruppe(
-    answers,
-    visibleQuestionAliases,
-  );
-
-  return Object.entries(merkmalStatesByGruppe).reduce(
+  return Object.entries(ctx.merkmale).reduce(
     (result, [merkmalGruppe, merkmale]) => {
       result[merkmalGruppe as MerkmalGruppe] = {
         worst:
@@ -43,8 +37,7 @@ export const getWorstBestMerkmalStateByMerkmalGruppe = (
 };
 
 export const getWorstBestMerkmalStateByMerkmalGrupppeInPercent = (
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
+  ctx: CalculationContext,
 ): {
   [key in MerkmalGruppe]: {
     worst: number;
@@ -52,7 +45,7 @@ export const getWorstBestMerkmalStateByMerkmalGrupppeInPercent = (
   };
 } => {
   const worstBestMerkmalStateByMerkmalGruppe =
-    getWorstBestMerkmalStateByMerkmalGruppe(answers, visibleQuestionAliases);
+    getWorstBestMerkmalStateByMerkmalGruppe(ctx);
 
   return Object.entries(worstBestMerkmalStateByMerkmalGruppe).reduce(
     (result, [merkmalGruppe, total]) => {
@@ -67,14 +60,13 @@ export const getWorstBestMerkmalStateByMerkmalGrupppeInPercent = (
 };
 
 export const getWorstBestSpanneneinordnungInPercent = (
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
+  ctx: CalculationContext,
 ): {
   worst: number;
   best: number;
 } => {
   const worstBestMerkmalStateByMerkmalGruppe =
-    getWorstBestMerkmalStateByMerkmalGruppe(answers, visibleQuestionAliases);
+    getWorstBestMerkmalStateByMerkmalGruppe(ctx);
 
   const calcSpanneneinordnung = (
     result: number,

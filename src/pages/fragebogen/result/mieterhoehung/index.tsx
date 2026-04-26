@@ -19,10 +19,7 @@ export function ResultMieterhoehung() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  const {
-    worst: worstZulaessigeHoechstmiete,
-    best: bestZulaessigeHoechstmiete,
-  } = useWorstBestZulaessigeHoechstmiete();
+  const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
 
   const nettokaltmiete = getNettokaltmiete(answers, visibleQuestionAliases);
   const geforderteNettokaltmiete = getGeforderteNettokaltmiete(
@@ -30,7 +27,7 @@ export function ResultMieterhoehung() {
     visibleQuestionAliases,
   );
 
-  if (!nettokaltmiete || !geforderteNettokaltmiete) {
+  if (!nettokaltmiete || !geforderteNettokaltmiete || !zulaessigeHoechstmiete) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
         <h2 className="heading-24 mb-4">
@@ -43,6 +40,11 @@ export function ResultMieterhoehung() {
       </div>
     );
   }
+
+  const {
+    worst: worstZulaessigeHoechstmiete,
+    best: bestZulaessigeHoechstmiete,
+  } = zulaessigeHoechstmiete;
 
   let result: ResultMieterhoehungTypes;
 

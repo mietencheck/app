@@ -1,5 +1,6 @@
 import { expect, test } from "vitest";
 
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import { Preisspanne } from "~/mietspiegel/types";
 
@@ -45,6 +46,7 @@ test.each([
   ].map(({ description, answers, preisspanne }) => ({
     description: description,
     answers: {
+      Typ: "Miete",
       Ost: false,
       Wohnlage: "einfach",
       Unterschrieben: "Ja",
@@ -58,7 +60,9 @@ test.each([
   })),
 ])("getWorstBestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
-    getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
+    getWorstBestPreisspanne(
+      answersToCalculationContext(answers, getVisibleQuestionAliases(answers))!,
+    ),
   ).toEqual({
     worst: preisspanne,
     best: preisspanne,
@@ -77,6 +81,7 @@ test.each([
     { Baujahr: 2003, preisspanne: [11.74, 9.81, 15.28] },
   ].map(({ Baujahr, preisspanne }) => ({
     answers: {
+      Typ: "Miete",
       Ost: false,
       Wohnlage: "einfach",
       Unterschrieben: "Ja",
@@ -90,7 +95,9 @@ test.each([
   })),
 ])("getWorstBestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
-    getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
+    getWorstBestPreisspanne(
+      answersToCalculationContext(answers, getVisibleQuestionAliases(answers))!,
+    ),
   ).toEqual({
     best: preisspanne,
     worst: preisspanne,
@@ -108,6 +115,7 @@ test.each([
     { qm: 90, preisspanne: [6.64, 5.1, 9.74] },
   ].map(({ qm, preisspanne }) => ({
     answers: {
+      Typ: "Miete",
       Ost: false,
       Wohnlage: "einfach",
       Unterschrieben: "Ja",
@@ -121,7 +129,9 @@ test.each([
   })),
 ])("getWorstBestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
-    getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
+    getWorstBestPreisspanne(
+      answersToCalculationContext(answers, getVisibleQuestionAliases(answers))!,
+    ),
   ).toEqual({
     best: preisspanne,
     worst: preisspanne,
@@ -136,6 +146,7 @@ test.each([
     { wohnlage: "gut", preisspanne: [12.19, 6.97, 15.17] },
   ].map(({ wohnlage, preisspanne }) => ({
     answers: {
+      Typ: "Miete",
       Ost: false,
       Wohnlage: wohnlage,
       Unterschrieben: "Ja",
@@ -149,7 +160,9 @@ test.each([
   })),
 ])("getWorstBestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
-    getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
+    getWorstBestPreisspanne(
+      answersToCalculationContext(answers, getVisibleQuestionAliases(answers))!,
+    ),
   ).toEqual({
     best: preisspanne,
     worst: preisspanne,
@@ -233,6 +246,7 @@ test.each([
     },
   ].map(({ sammelheizung, bad, preisspanne }) => ({
     answers: {
+      Typ: "Miete",
       Ost: false,
       Wohnlage: "einfach",
       Unterschrieben: "Ja",
@@ -246,6 +260,8 @@ test.each([
   })),
 ])("getWorstBestPreisspanne(%o)", ({ answers, preisspanne }) => {
   expect(
-    getWorstBestPreisspanne(answers, getVisibleQuestionAliases(answers)),
+    getWorstBestPreisspanne(
+      answersToCalculationContext(answers, getVisibleQuestionAliases(answers))!,
+    ),
   ).toEqual(preisspanne);
 });

@@ -15,7 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from "~/components";
-import { getMietspiegeljahr } from "~/form/api";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import { formatEuro } from "~/utils";
@@ -25,23 +25,19 @@ export function OrtsüblicheVergleichsmieteTable() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
-  const preisspanne = getWorstBestPreisspanne(
-    answers,
-    visibleQuestionAliases,
-  ) || {
+  const ctx = answersToCalculationContext(answers, visibleQuestionAliases);
+  if (!ctx) {
+    return null;
+  }
+
+  const preisspanne = getWorstBestPreisspanne(ctx) || {
     best: [0, 0, 0],
     worst: [0, 0, 0],
   };
 
-  const spanneneinordung = getWorstBestSpanneneinordnungInPercent(
-    answers,
-    visibleQuestionAliases,
-  );
+  const spanneneinordung = getWorstBestSpanneneinordnungInPercent(ctx);
 
-  const sondermerkmalAufschlag = getWorstBestSondermerkmalModifier(
-    answers,
-    visibleQuestionAliases,
-  );
+  const sondermerkmalAufschlag = getWorstBestSondermerkmalModifier(ctx);
 
   const merkmalsgruppenInEuro = {
     worst: calcMerkmalsgruppenValueInEuro(
@@ -57,8 +53,7 @@ export function OrtsüblicheVergleichsmieteTable() {
   };
 
   const ortsueblicheVergleichsmiete = getWorstBestOrtsueblicheVergleichsmiete(
-    answers,
-    visibleQuestionAliases,
+    ctx,
   ) || {
     best: 0,
     worst: 0,
@@ -69,7 +64,7 @@ export function OrtsüblicheVergleichsmieteTable() {
     ortsueblicheVergleichsmiete.worst >= upper &&
     merkmalsgruppenInEuro.worst !== upper - avg;
 
-  const mietspiegeljahr = getMietspiegeljahr(answers);
+  const mietspiegeljahr = ctx.mietspiegeljahr;
 
   const rows = [
     {

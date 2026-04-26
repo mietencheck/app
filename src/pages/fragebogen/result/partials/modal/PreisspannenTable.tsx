@@ -9,6 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from "~/components";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import { formatEuro } from "~/utils";
@@ -18,11 +19,13 @@ export function PreisspannenTable() {
   const visibleQuestionAliases = useVisibleQuestionAliases();
   const l = useLocalizeField();
 
+  const ctx = answersToCalculationContext(answers, visibleQuestionAliases);
+  if (!ctx) {
+    return null;
+  }
+
   const { best: bestPreisspanne, worst: worstPreisspanne } =
-    getWorstBestPreisspanne(answers, visibleQuestionAliases) || {
-      best: [0, 0, 0],
-      worst: [0, 0, 0],
-    };
+    getWorstBestPreisspanne(ctx) || { best: [0, 0, 0], worst: [0, 0, 0] };
 
   const rows = [
     {

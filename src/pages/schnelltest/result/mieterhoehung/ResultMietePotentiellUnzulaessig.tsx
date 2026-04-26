@@ -16,14 +16,17 @@ export function ResultMieterhoehungPotentiellUnzulaessig() {
   const geforderteNettokaltmiete =
     getGeforderteNettokaltmiete(answers, visibleQuestionAliases) || 0;
 
+  const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
+  const zulaessigeHoechstmieteDiff = useWorstBestZulaessigeHoechstmieteDiff();
+  const l = useLocalizeField();
+  if (!zulaessigeHoechstmiete || !zulaessigeHoechstmieteDiff) {
+    return null;
+  }
   const {
     worst: worstZulaessigeHoechstmiete,
     best: bestZulaessigeHoechstmiete,
-  } = useWorstBestZulaessigeHoechstmiete();
-
-  const { worst: worstDiff, best: bestDiff } =
-    useWorstBestZulaessigeHoechstmieteDiff();
-  const l = useLocalizeField();
+  } = zulaessigeHoechstmiete;
+  const { worst: worstDiff, best: bestDiff } = zulaessigeHoechstmieteDiff;
 
   return (
     <>

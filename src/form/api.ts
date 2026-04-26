@@ -3,9 +3,12 @@ import { entries, fromEntries } from "remeda";
 import { FinalAnswers } from "~/form/flow-machine";
 import { merkmaleByYear } from "~/mietspiegel/merkmale";
 import { parseAdresse } from "~/utils";
+import {
+  getSelectedWohnflaecheSpanne,
+  getWohnflaecheSpanneOptions,
+} from "~/utils/wohnflaecheSpanne";
 
 import { baujahrSpannenByMietspiegeljahr } from "../mietspiegel/baujahrSpannen";
-import { preisspannenByMietspiegeljahr } from "../mietspiegel/preisspannen";
 import { Mietspiegeljahr } from "../mietspiegel/types";
 import {
   AnswerMerkmalStateMapping,
@@ -95,25 +98,13 @@ export const getWohnflaecheSpanne = (
   const wohnlage = getWohnlage(answers, visibleQuestionAliases);
   const wohnflaeche = getWohnflaeche(answers, visibleQuestionAliases);
 
-  if (mietspiegeljahr && baujahrSpanne && wohnlage && wohnflaeche) {
-    const wohnflaecheRanges = Object.keys(
-      preisspannenByMietspiegeljahr[
-        mietspiegeljahr as keyof typeof preisspannenByMietspiegeljahr
-      ][
-        baujahrSpanne as keyof (typeof preisspannenByMietspiegeljahr)[typeof mietspiegeljahr]
-      ][wohnlage],
-    );
-
-    return wohnflaecheRanges.find((livingSpaceRange) => {
-      const livingSpaceLimits = livingSpaceRange.split("-");
-      return (
-        wohnflaeche >= Number(livingSpaceLimits[0]) &&
-        (wohnflaeche < Number(livingSpaceLimits[1]) ||
-          livingSpaceLimits[1] === "")
-      );
-    });
-  }
-  return undefined;
+  if (wohnflaeche === undefined || Number.isNaN(wohnflaeche)) return undefined;
+  const wohnflaecheSpanneOptions = getWohnflaecheSpanneOptions(
+    mietspiegeljahr,
+    baujahrSpanne,
+    wohnlage,
+  );
+  return getSelectedWohnflaecheSpanne(wohnflaeche, wohnflaecheSpanneOptions);
 };
 
 export const getVertragsart = (

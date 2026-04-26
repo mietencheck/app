@@ -1,5 +1,6 @@
 import { expect, test } from "vitest";
 
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import { MERKMAL_RESET_ANSWERS } from "~/form/mappings/answer-reset";
 import { MerkmalGruppe } from "~/mietspiegel/types";
@@ -98,6 +99,12 @@ const cases = [
       Typ: "Miete",
       Unterschrieben: "Ja",
       Vertragsdatum: "2022-2024",
+      Baujahr: 1918,
+      Ost: false,
+      Wohnlage: "einfach",
+      Qm: 50,
+      "Wohnung hat Sammelheizung": "Ja",
+      "Badezimmer in Wohnung": "Ja",
       ...MERKMAL_RESET_ANSWERS,
       ...answers,
     } as FinalAnswers,
@@ -145,8 +152,10 @@ test.each(cases)(
   ({ answers, result }) => {
     expect(
       getWorstBestMerkmalStateByMerkmalGruppe(
-        answers,
-        getVisibleQuestionAliases(answers),
+        answersToCalculationContext(
+          answers,
+          getVisibleQuestionAliases(answers),
+        )!,
       ),
     ).toEqual(result.merkmalStateByMerkmalGruppe);
   },
@@ -157,8 +166,10 @@ test.each(cases)(
   ({ answers, result }) => {
     expect(
       getWorstBestMerkmalStateByMerkmalGrupppeInPercent(
-        answers,
-        getVisibleQuestionAliases(answers),
+        answersToCalculationContext(
+          answers,
+          getVisibleQuestionAliases(answers),
+        )!,
       ),
     ).toEqual(result.merkmalStateByMerkmalGrupppeInPercent);
   },
@@ -169,8 +180,10 @@ test.each(cases)(
   ({ answers, result }) => {
     expect(
       getWorstBestSpanneneinordnungInPercent(
-        answers,
-        getVisibleQuestionAliases(answers),
+        answersToCalculationContext(
+          answers,
+          getVisibleQuestionAliases(answers),
+        )!,
       ),
     ).toEqual(result.spanneneinordnungInPercent);
   },

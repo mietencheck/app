@@ -1,15 +1,11 @@
-import {
-  getBaujahrSpanne,
-  getMietspiegeljahr,
-  getSondermerkmalStates,
-} from "~/form/api";
-import { FinalAnswers } from "~/form/flow-machine";
 import { sondermerkmaleModifierByMietspiegeljahr } from "~/mietspiegel/sondermerkmale";
 import {
   BaujahrSpanneInMietspiegeljahr,
   Mietspiegeljahr,
   Sondermerkmal,
 } from "~/mietspiegel/types";
+
+import { CalculationContext } from "./types";
 
 const calcSondermerkmalModifier = (
   mietspiegeljahr: Mietspiegeljahr | undefined,
@@ -33,8 +29,7 @@ const calcSondermerkmalModifier = (
 };
 
 export const getWorstBestSondermerkmalModifierBySondermerkmal = (
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
+  ctx: CalculationContext,
 ):
   | {
       [key in Sondermerkmal]: {
@@ -43,19 +38,13 @@ export const getWorstBestSondermerkmalModifierBySondermerkmal = (
       };
     }
   | undefined => {
-  const mietspiegeljahr = getMietspiegeljahr(answers);
-  const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
+  const { mietspiegeljahr, baujahrSpanne, sondermerkmale } = ctx;
 
-  const sondermerkmalStates = getSondermerkmalStates(
-    answers,
-    visibleQuestionAliases,
-  );
-
-  if (!sondermerkmalStates) {
+  if (!sondermerkmale) {
     return undefined;
   }
 
-  return Object.entries(sondermerkmalStates).reduce(
+  return Object.entries(sondermerkmale).reduce(
     (result, [sondermerkmal, state]) => {
       const modifier = calcSondermerkmalModifier(
         mietspiegeljahr,
@@ -86,18 +75,12 @@ export const getWorstBestSondermerkmalModifierBySondermerkmal = (
   );
 };
 
-export function getWorstBestSondermerkmalModifier(
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
-): {
+export function getWorstBestSondermerkmalModifier(ctx: CalculationContext): {
   worst: number;
   best: number;
 } {
   const modifierBySondermerkmal =
-    getWorstBestSondermerkmalModifierBySondermerkmal(
-      answers,
-      visibleQuestionAliases,
-    );
+    getWorstBestSondermerkmalModifierBySondermerkmal(ctx);
 
   if (!modifierBySondermerkmal) {
     return {

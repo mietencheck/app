@@ -5,6 +5,7 @@ import { useLocalStorage } from "usehooks-ts";
 
 import { getWorstBestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
 import { getNettokaltmiete } from "~/form/api";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import {
   useAnswers,
   useDetailsSteps,
@@ -75,34 +76,38 @@ export function useIsCompleted() {
   );
 }
 
-export function useWorstBestZulaessigeHoechstmiete(): {
-  worst: number;
-  best: number;
-} {
+export function useWorstBestZulaessigeHoechstmiete():
+  | {
+      worst: number;
+      best: number;
+    }
+  | undefined {
   const answers = useAnswers();
-  const visibleQuestionAlises = useVisibleQuestionAliases();
-  return useMemo(
-    () =>
-      getWorstBestZulaessigeHoechstmiete(
-        answers.getAliasedState(),
-        visibleQuestionAlises,
-      ) ?? {
-        worst: 0,
-        best: 0,
-      },
-    [answers, visibleQuestionAlises],
-  );
+  const visibleQuestionAliases = useVisibleQuestionAliases();
+  return useMemo(() => {
+    const ctx = answersToCalculationContext(
+      answers.getAliasedState(),
+      visibleQuestionAliases,
+    );
+    return ctx ? getWorstBestZulaessigeHoechstmiete(ctx) : undefined;
+  }, [answers, visibleQuestionAliases]);
 }
 
-export function useWorstBestZulaessigeHoechstmieteDiff(): {
-  worst: number;
-  best: number;
-} {
+export function useWorstBestZulaessigeHoechstmieteDiff():
+  | {
+      worst: number;
+      best: number;
+    }
+  | undefined {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAlises = useVisibleQuestionAliases();
 
   const nettokaltmiete = getNettokaltmiete(answers, visibleQuestionAlises);
   const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
+
+  if (nettokaltmiete === undefined || !zulaessigeHoechstmiete) {
+    return undefined;
+  }
 
   return {
     worst: Number(

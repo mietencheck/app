@@ -34,8 +34,23 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
 
   const renderResult = () => {
     if (typ === "Miete") {
-      const { best: bestZulaessigeHoechstmieteDiff } =
+      const zulaessigeHoechstmieteDiff =
         useWorstBestZulaessigeHoechstmieteDiff();
+      if (!zulaessigeHoechstmieteDiff) {
+        return (
+          <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
+            <h2 className="heading-24 mb-4">
+              Fehler beim Berechnen des Ergebnisses
+            </h2>
+            <p className="text-neutral-faded mb-4">
+              Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten.
+              Bitte klick unten auf "Neu anfangen".
+            </p>
+          </div>
+        );
+      }
+      const { best: bestZulaessigeHoechstmieteDiff } =
+        zulaessigeHoechstmieteDiff;
 
       if (bestZulaessigeHoechstmieteDiff < 0) {
         return <ResultMieteZulaessig />;
@@ -49,12 +64,13 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
         answers,
         visibleQuestionAliases,
       );
-      const {
-        best: bestZulaessigeHoechstmiete,
-        worst: worstZulaessigeHoechstmiete,
-      } = useWorstBestZulaessigeHoechstmiete();
+      const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
 
-      if (!nettokaltmiete || !geforderteNettokaltmiete) {
+      if (
+        !nettokaltmiete ||
+        !geforderteNettokaltmiete ||
+        !zulaessigeHoechstmiete
+      ) {
         return (
           <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
             <h2 className="heading-24 mb-4">
@@ -67,6 +83,10 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
           </div>
         );
       }
+      const {
+        best: bestZulaessigeHoechstmiete,
+        worst: worstZulaessigeHoechstmiete,
+      } = zulaessigeHoechstmiete;
 
       if (geforderteNettokaltmiete < bestZulaessigeHoechstmiete) {
         /*

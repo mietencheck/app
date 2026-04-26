@@ -3,6 +3,7 @@ import { createRouter } from "@swan-io/chicane";
 export const AppRouter = createRouter({
   Landing: "/",
   UeberUns: "/ueber-uns",
+  Beratung: "/beratung",
   Datenschutz: "/datenschutz",
   Impressum: "/impressum",
   Schnelltest: "/schnelltest",

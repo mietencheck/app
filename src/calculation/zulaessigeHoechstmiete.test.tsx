@@ -1,5 +1,6 @@
 import { expect, test } from "vitest";
 
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 
 import {
@@ -51,8 +52,7 @@ test.each([
 ])("getWorstBestZulaessigeHoechstmiete(%o)", ({ answers, result }) => {
   expect(
     getWorstBestZulaessigeHoechstmiete(
-      answers,
-      getVisibleQuestionAliases(answers),
+      answersToCalculationContext(answers, getVisibleQuestionAliases(answers))!,
     ),
   ).toEqual(result);
 });

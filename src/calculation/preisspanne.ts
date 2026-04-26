@@ -1,41 +1,19 @@
-import {
-  getBaujahrSpanne,
-  getMietspiegeljahr,
-  getWohnflaecheSpanne,
-  getWohnlage,
-} from "~/form/api";
-import { FinalAnswers } from "~/form/flow-machine";
 import { preisspannenByMietspiegeljahr } from "~/mietspiegel/preisspannen";
 import { Preisspanne } from "~/mietspiegel/types";
 
 import { getWorstBestAusstattungsAbzug } from "./ausstattungsAbzug";
+import { CalculationContext } from "./types";
 
 /**
- *  Calculates the worst and best applicable Preisspanne ('rent bracket') based on the provided answers.
+ *  Calculates the worst and best applicable Preisspanne ('rent bracket') for the given calculation context.
  */
 export function getWorstBestPreisspanne(
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
+  ctx: CalculationContext,
 ): { worst: Preisspanne; best: Preisspanne } | undefined {
-  const mietspiegeljahr = getMietspiegeljahr(answers);
-  const baujahrSpanne = getBaujahrSpanne(answers, visibleQuestionAliases);
-  const wohnflaecheSpanne = getWohnflaecheSpanne(
-    answers,
-    visibleQuestionAliases,
-  );
-  const wohnlage = getWohnlage(answers, visibleQuestionAliases);
-  const worstBestAusstattungsAbzug = getWorstBestAusstattungsAbzug(
-    answers,
-    visibleQuestionAliases,
-  );
+  const { mietspiegeljahr, baujahrSpanne, wohnlage, wohnflaecheSpanne } = ctx;
+  const worstBestAusstattungsAbzug = getWorstBestAusstattungsAbzug(ctx);
 
-  if (
-    !mietspiegeljahr ||
-    !baujahrSpanne ||
-    !wohnlage ||
-    !wohnflaecheSpanne ||
-    !worstBestAusstattungsAbzug
-  ) {
+  if (!worstBestAusstattungsAbzug) {
     return undefined;
   }
 

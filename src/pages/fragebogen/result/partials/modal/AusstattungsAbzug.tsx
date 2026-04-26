@@ -7,6 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from "~/components";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import { formatEuro } from "~/utils";
@@ -16,11 +17,13 @@ export function AusstattungsAbzugTable() {
   const visibleQuestionAliases = useVisibleQuestionAliases();
   const l = useLocalizeField();
 
+  const ctx = answersToCalculationContext(answers, visibleQuestionAliases);
+  if (!ctx) {
+    return null;
+  }
+
   const { worst: worstAusstattungsAbzug, best: bestAusstattungsAbzug } =
-    getWorstBestAusstattungsAbzug(answers, visibleQuestionAliases) || {
-      worst: 0,
-      best: 0,
-    };
+    getWorstBestAusstattungsAbzug(ctx) || { worst: 0, best: 0 };
 
   return (
     <Table>

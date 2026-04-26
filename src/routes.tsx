@@ -37,6 +37,14 @@ export const routes: RouteRecord[] = [
     ),
   },
   {
+    path: "/beratung",
+    element: (
+      <Providers>
+        <App />
+      </Providers>
+    ),
+  },
+  {
     path: "/de/blog",
     element: (
       <Providers>

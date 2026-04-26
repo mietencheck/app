@@ -10,7 +10,7 @@ import {
   TableHeader,
   TableRow,
 } from "~/components";
-import { getWohnflaeche } from "~/form/api";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import { formatEuro } from "~/utils";
@@ -20,22 +20,24 @@ export function ZulaessigeHoechstmieteTable() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
+  const ctx = answersToCalculationContext(answers, visibleQuestionAliases);
+  if (!ctx) {
+    return null;
+  }
+
   const { worst: worstVergleichsmietePerQm, best: bestVergleichsmietePerQm } =
-    getWorstBestOrtsueblicheVergleichsmiete(
-      answers,
-      visibleQuestionAliases,
-    ) ?? {
+    getWorstBestOrtsueblicheVergleichsmiete(ctx) ?? {
       worst: 0,
       best: 0,
     };
 
   const { best: bestHöchstmiete, worst: worstHöchstmiete } =
-    getWorstBestZulaessigeHoechstmiete(answers, visibleQuestionAliases) ?? {
+    getWorstBestZulaessigeHoechstmiete(ctx) ?? {
       best: 0,
       worst: 0,
     };
 
-  const wohnflaeche = getWohnflaeche(answers, visibleQuestionAliases);
+  const wohnflaeche = ctx.wohnflaeche;
 
   const rows = [
     {

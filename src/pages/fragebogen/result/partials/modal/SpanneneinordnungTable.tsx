@@ -12,6 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "~/components";
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 import { MerkmalGruppe } from "~/mietspiegel/types";
@@ -28,14 +29,16 @@ export function SpanneneinordungTable() {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
 
+  const ctx = answersToCalculationContext(answers, visibleQuestionAliases);
+  if (!ctx) {
+    return null;
+  }
+
   const { worst: worstSpanneneinordung, best: bestSpanneneinordung } =
-    getWorstBestSpanneneinordnungInPercent(answers, visibleQuestionAliases);
+    getWorstBestSpanneneinordnungInPercent(ctx);
 
   const worstBestMerkmalStateByGrupppeInPercent =
-    getWorstBestMerkmalStateByMerkmalGrupppeInPercent(
-      answers,
-      visibleQuestionAliases,
-    );
+    getWorstBestMerkmalStateByMerkmalGrupppeInPercent(ctx);
 
   if (worstSpanneneinordung == bestSpanneneinordung) {
     return (

@@ -1,5 +1,6 @@
 import { expect, test } from "vitest";
 
+import { answersToCalculationContext } from "~/form/calculation-context";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import { SONDERMERKMAL_RESET_ANSWERS } from "~/form/mappings/answer-reset";
 
@@ -119,10 +120,15 @@ test.each([
       answers: {
         ...{
           ...SONDERMERKMAL_RESET_ANSWERS,
+          Typ: "Miete",
           Unterschrieben: "Ja",
           Vertragsdatum: "2015-2016",
           Baujahr: 1918,
           Ost: false,
+          Wohnlage: "einfach",
+          Qm: 50,
+          "Wohnung hat Sammelheizung": "Ja",
+          "Badezimmer in Wohnung": "Ja",
         },
         ...answers,
       } as FinalAnswers,
@@ -135,8 +141,7 @@ test.each([
 ])("getWorstBestSondermerkmalModifier(%o)", ({ answers, result }) => {
   expect(
     getWorstBestSondermerkmalModifier(
-      answers,
-      getVisibleQuestionAliases(answers),
+      answersToCalculationContext(answers, getVisibleQuestionAliases(answers))!,
     ),
   ).toEqual(result);
 });

@@ -1,7 +1,8 @@
 import { getWorstBestPreisspanne } from "~/calculation/preisspanne";
 import { getWorstBestSondermerkmalModifier } from "~/calculation/sondermerkmale";
 import { getWorstBestSpanneneinordnungInPercent } from "~/calculation/spanneneinordnung";
-import { FinalAnswers } from "~/form/flow-machine";
+
+import { CalculationContext } from "./types";
 
 export const calcMerkmalsgruppenValueInEuro = (
   preisspanne: [number, number, number],
@@ -50,18 +51,11 @@ const calcOrtsueblicheVergleichsmiete = (
 };
 
 export function getWorstBestOrtsueblicheVergleichsmiete(
-  answers: FinalAnswers,
-  visibleQuestionAliases: Set<string>,
+  ctx: CalculationContext,
 ): { worst: number; best: number } | undefined {
-  const preisspanne = getWorstBestPreisspanne(answers, visibleQuestionAliases);
-  const spanneneinordnung = getWorstBestSpanneneinordnungInPercent(
-    answers,
-    visibleQuestionAliases,
-  );
-  const sondermerkmalModifier = getWorstBestSondermerkmalModifier(
-    answers,
-    visibleQuestionAliases,
-  );
+  const preisspanne = getWorstBestPreisspanne(ctx);
+  const spanneneinordnung = getWorstBestSpanneneinordnungInPercent(ctx);
+  const sondermerkmalModifier = getWorstBestSondermerkmalModifier(ctx);
 
   if (!preisspanne) {
     return undefined;
