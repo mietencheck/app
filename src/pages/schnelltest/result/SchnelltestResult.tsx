@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 import { Button, LinkButton } from "~/components";
 import {
   getGeforderteNettokaltmiete,
@@ -23,6 +25,8 @@ import { ResultMieterhöhungZulaessig } from "./mieterhoehung/ResultMieterhoehun
 export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
+  const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
+  const zulaessigeHoechstmieteDiff = useWorstBestZulaessigeHoechstmieteDiff();
 
   const typ = getTyp(answers, visibleQuestionAliases);
 
@@ -30,59 +34,42 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
 
   useMarkEstimatorSeen();
 
-  let showContinueToDetailsButton = false;
+  const errorState = (
+    <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
+      <h2 className="heading-24 mb-4">Fehler beim Berechnen des Ergebnisses</h2>
+      <p className="text-neutral-faded mb-4">
+        Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten. Bitte
+        klick unten auf "Neu anfangen".
+      </p>
+    </div>
+  );
 
-  const renderResult = () => {
-    if (typ === "Miete") {
-      const zulaessigeHoechstmieteDiff =
-        useWorstBestZulaessigeHoechstmieteDiff();
-      if (!zulaessigeHoechstmieteDiff) {
-        return (
-          <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
-            <h2 className="heading-24 mb-4">
-              Fehler beim Berechnen des Ergebnisses
-            </h2>
-            <p className="text-neutral-faded mb-4">
-              Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten.
-              Bitte klick unten auf "Neu anfangen".
-            </p>
-          </div>
-        );
-      }
+  let showContinueToDetailsButton = false;
+  let resultContent: ReactNode = errorState;
+
+  if (typ === "Miete") {
+    if (zulaessigeHoechstmieteDiff) {
       const { best: bestZulaessigeHoechstmieteDiff } =
         zulaessigeHoechstmieteDiff;
 
       if (bestZulaessigeHoechstmieteDiff < 0) {
-        return <ResultMieteZulaessig />;
+        // Die aktuelle Miete liegt im (oder unter dem) zulässigen Bereich.
+        resultContent = <ResultMieteZulaessig />;
       } else {
+        // Die aktuelle Miete liegt über dem zulässigen Bereich;
+        // daher Weiterleitung zum vollständigen Fragebogen anbieten.
         showContinueToDetailsButton = true;
-        return <ResultMieteNichtZulaessig />;
+        resultContent = <ResultMieteNichtZulaessig />;
       }
-    } else {
-      const nettokaltmiete = getNettokaltmiete(answers, visibleQuestionAliases);
-      const geforderteNettokaltmiete = getGeforderteNettokaltmiete(
-        answers,
-        visibleQuestionAliases,
-      );
-      const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
+    }
+  } else {
+    const nettokaltmiete = getNettokaltmiete(answers, visibleQuestionAliases);
+    const geforderteNettokaltmiete = getGeforderteNettokaltmiete(
+      answers,
+      visibleQuestionAliases,
+    );
 
-      if (
-        !nettokaltmiete ||
-        !geforderteNettokaltmiete ||
-        !zulaessigeHoechstmiete
-      ) {
-        return (
-          <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
-            <h2 className="heading-24 mb-4">
-              Fehler beim Berechnen des Ergebnisses
-            </h2>
-            <p className="text-neutral-faded mb-4">
-              Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten.
-              Bitte klick unten auf "Neu anfangen".
-            </p>
-          </div>
-        );
-      }
+    if (nettokaltmiete && geforderteNettokaltmiete && zulaessigeHoechstmiete) {
       const {
         best: bestZulaessigeHoechstmiete,
         worst: worstZulaessigeHoechstmiete,
@@ -90,65 +77,49 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
 
       if (geforderteNettokaltmiete < bestZulaessigeHoechstmiete) {
         /*
-          Die geforderte Miete liegt unter der best-möglichsten zulässigen Höchstmiete.
-          -> Die Mieterhöhung ist deswegen zulässig.
-
-          Beispiel:
-          - Aktuelle Miete: 400€
-          - Geforderte Miete: 450€
-          - zulässigeHöchstmiete: { best: 500, worst: 1000}
-         */
-        return <ResultMieterhöhungZulaessig />;
+          Fall 1:
+          Die geforderte Nettokaltmiete liegt unter der niedrigsten möglichen
+          zulässigen Höchstmiete.
+          -> Die Mieterhöhung ist voraussichtlich zulässig.
+        */
+        resultContent = <ResultMieterhöhungZulaessig />;
       } else if (geforderteNettokaltmiete < worstZulaessigeHoechstmiete) {
-        /* 
-          Die geforderte Miete liegt über der best-möglichsten zulässigen Höchstmiete, aber unter der schlecht-möglichsten zulässigen Höchstmiete.
-          -> Die Mieterhöhung könnte deswegen in ihrer Höhe unzulässig sein.
-          -> Der Fragebogen muss komplett ausgefüllt werden.
-
-          Beispiel
-          - Aktuelle Miete: 700€
-          - Gefordert Miete: 750€
-          - zulässigeHöchstmiete: { best: 500, worst: 1000}
+        /*
+          Fall 2:
+          Die geforderte Nettokaltmiete liegt zwischen niedrigster möglicher und
+          höchster möglicher zulässiger Höchstmiete.
+          -> Die Erhöhung könnte unzulässig sein (abhängig von Details).
+          -> Weiter zum vollständigen Fragebogen anbieten.
         */
         showContinueToDetailsButton = true;
-        return <ResultMieterhoehungPotentiellUnzulaessig />;
+        resultContent = <ResultMieterhoehungPotentiellUnzulaessig />;
+      } else if (nettokaltmiete < worstZulaessigeHoechstmiete) {
+        /*
+          Fall 3:
+          Die geforderte Nettokaltmiete liegt über der höchsten möglichen
+          zulässigen Höchstmiete, die aktuelle Nettokaltmiete aber noch darunter.
+          -> Die geforderte Erhöhung könnte zu hoch sein, die exakte rechtliche
+             Bewertung hängt von weiteren Details ab.
+          -> Weiter zum vollständigen Fragebogen anbieten.
+        */
+        showContinueToDetailsButton = true;
+        resultContent = <ResultMieterhoehungPotentiellUnzulaessig />;
       } else {
-        if (nettokaltmiete < worstZulaessigeHoechstmiete) {
-          /*
-            Die geforderte Miete liegt über der schlecht-möglichsten zulässigen Höchstmiete.
-            -> Die Mieterhöhung ist deswegen auf jeden Fall in ihrer Höhe unzulässig.
-            
-            Die aktuelle Miete liegt jedoch unter der schlecht-möglichsten zulässigen Höchstmiete.
-            -> Die Miete könnte also bis zur schlecht-möglichsten zulässigen Höchstmiete erhöht werden.
-            -> Der Fragebogen muss komplett ausgefüllt werden.
-
-            Beispiel:
-            - Aktuelle Miete: 900€
-            - Gefordert Miete: 1100€
-            - zulässigeHöchstmiete: { best: 500, worst: 1000}
-          */
-          showContinueToDetailsButton = true;
-          return <ResultMieterhoehungPotentiellUnzulaessig />;
-        } else {
-          /*
-            Die aktuelle und die geforderte Miete liegt beide über der schlecht-möglichsten zulässigen Höchstmiete.
-            -> Die Mieterhöhung ist somit komplett unzulässig.
-
-            Beispiel:
-            - Aktuelle Miete: 1100€
-            - Gefordert Miete: 1200€
-            - zulässigeHöchstmiete: { best: 500, worst: 1000}
-          */
-          return <ResultMieterhoehungNichtZulaessig />;
-        }
+        /*
+          Fall 4:
+          Sowohl aktuelle als auch geforderte Nettokaltmiete liegen über der
+          höchsten möglichen zulässigen Höchstmiete.
+          -> Eine weitere Erhöhung ist voraussichtlich unzulässig.
+        */
+        resultContent = <ResultMieterhoehungNichtZulaessig />;
       }
     }
-  };
+  }
 
   return (
     <>
       <p className="text-base text-neutral-faded mb-2">{l("Prediction")}</p>
-      {renderResult()}
+      {resultContent}
 
       <div className="flex flex-row flex-wrap justify-center gap-3 mt-10">
         {stepper.back && <Button onPress={stepper.back}>{l("Back")}</Button>}

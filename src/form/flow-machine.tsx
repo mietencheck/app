@@ -4,8 +4,12 @@ import { useLocalStorage } from "usehooks-ts";
 
 import { parseAdresse } from "~/utils";
 
+import {
+  AnswerMachine,
+  FinalAnswers,
+  flowMachine,
+} from "./flow-machine-runtime";
 import { StepInfoByAlias } from "./flow.fm";
-import flow from "./flow.fm.json";
 import {
   HIDDEN_QUESTIONS,
   HIDDEN_QUESTIONS_FOR_MIETERHOEHUNG,
@@ -14,12 +18,7 @@ import { vertragsdatumToMietspiegelJahrMapping } from "./mappings/vertragsdatum"
 
 export type { AnswerData };
 
-export type EstimateAnswers = StepInfoByAlias["Einschätzung"]["state"];
-export type FinalAnswers = StepInfoByAlias["Auswertung"]["state"];
-
 const noop = () => {};
-
-export const flowMachine = new FlowMachine<StepInfoByAlias>(flow);
 
 const IS_FRAMED = typeof window !== "undefined" && window.parent !== window;
 
@@ -64,8 +63,6 @@ export function useFlowMachine() {
   const previewFM = usePreviewFlowMachine();
   return previewFM ?? flowMachine;
 }
-
-type AnswerMachine = ReturnType<typeof flowMachine.answers>;
 
 function buildVertragsdatum(answers: AnswerMachine) {
   const typ = answers.getWithOptionAlias("Typ");
@@ -258,6 +255,8 @@ export function useDetailsSteps() {
 export type MainSteps = ReturnType<typeof useDetailsSteps>;
 
 export * from "./flow.fm";
+export { flowMachine } from "./flow-machine-runtime";
+export type { FinalAnswers, EstimateAnswers } from "./flow-machine-runtime";
 
 export function getVisibleQuestionAliases(answers: FinalAnswers) {
   const steps = ungroup(
