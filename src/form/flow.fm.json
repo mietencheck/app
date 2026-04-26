@@ -1,7 +1,6 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
-  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -2912,7 +2911,6 @@
         {
           "id": "nhn6k",
           "type": "If",
-          "alternate": [],
           "cases": [
             {
               "id": "drq0aj",
@@ -2934,7 +2932,6 @@
                 {
                   "id": "3wc2a",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "i9tpif",
@@ -3234,7 +3231,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 }
               ]
             },
@@ -3258,7 +3256,6 @@
                 {
                   "id": "i7kls",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "yli9u",
@@ -3405,7 +3402,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 }
               ]
             },
@@ -3431,7 +3429,6 @@
                 {
                   "id": "l1wqb",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "gcrvt",
@@ -3578,11 +3575,13 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 }
               ]
             }
-          ]
+          ],
+          "alternate": []
         },
         {
           "id": "i2nl3",
@@ -3710,7 +3709,6 @@
         {
           "id": "yoc33",
           "type": "If",
-          "alternate": [],
           "cases": [
             {
               "id": "hzpedl",
@@ -3730,29 +3728,21 @@
               },
               "block": [
                 {
-                  "type": "If",
                   "id": "86xo",
-                  "alternate": [
-                    {
-                      "type": "Exit",
-                      "id": "6g45o",
-                      "alias": "Exit: Sozialwohnung bei Mieterhöhung [TODO]",
-                      "text": ""
-                    }
-                  ],
+                  "type": "If",
                   "cases": [
                     {
-                      "type": "IfCase",
                       "id": "2bmcp",
+                      "type": "IfCase",
                       "test": {
                         "id": "twtco",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Typ"
                         },
-                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
+                        "operator": "is",
                         "comparands": [
                           "wb3w3"
                         ]
@@ -3765,6 +3755,14 @@
                           "type": "Exit"
                         }
                       ]
+                    }
+                  ],
+                  "alternate": [
+                    {
+                      "id": "6g45o",
+                      "alias": "Exit: Sozialwohnung bei Mieterhöhung [TODO]",
+                      "text": "",
+                      "type": "Exit"
                     }
                   ]
                 }
@@ -3788,21 +3786,21 @@
               },
               "block": [
                 {
-                  "type": "If",
                   "id": "ytfq8",
+                  "type": "If",
                   "cases": [
                     {
-                      "type": "IfCase",
                       "id": "ka1s2h",
+                      "type": "IfCase",
                       "test": {
                         "id": "hatho",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Typ"
                         },
-                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
+                        "operator": "is",
                         "comparands": [
                           "wb3w3"
                         ]
@@ -3819,10 +3817,10 @@
                   ],
                   "alternate": [
                     {
-                      "type": "Exit",
                       "id": "98jmti",
                       "alias": "Exit: Ein-/Zweifamilienhäuser oder Reihenhäuser bei Mieterhöhung [TODO]",
-                      "text": ""
+                      "text": "",
+                      "type": "Exit"
                     }
                   ]
                 }
@@ -3846,29 +3844,21 @@
               },
               "block": [
                 {
-                  "type": "If",
                   "id": "sg3s5",
-                  "alternate": [
-                    {
-                      "type": "Exit",
-                      "id": "xexdbl",
-                      "alias": "Exit: Wohnung ohne WC bei Mieterhöhung [TODO]",
-                      "text": ""
-                    }
-                  ],
+                  "type": "If",
                   "cases": [
                     {
-                      "type": "IfCase",
                       "id": "lq2rn",
+                      "type": "IfCase",
                       "test": {
                         "id": "z6fbm",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Typ"
                         },
-                        "operator": "is",
                         "negated": false,
                         "type": "AnswerOptionComparison",
+                        "operator": "is",
                         "comparands": [
                           "wb3w3"
                         ]
@@ -3881,6 +3871,14 @@
                           "type": "Exit"
                         }
                       ]
+                    }
+                  ],
+                  "alternate": [
+                    {
+                      "id": "xexdbl",
+                      "alias": "Exit: Wohnung ohne WC bei Mieterhöhung [TODO]",
+                      "text": "",
+                      "type": "Exit"
                     }
                   ]
                 }
@@ -3911,7 +3909,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "alternate": []
         },
         {
           "id": "y8fot",
@@ -14382,5 +14381,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subs": []
 }
