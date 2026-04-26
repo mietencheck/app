@@ -34,13 +34,8 @@ export function ExitReihenhaus() {
       <h3>{l({ de: "Was nun?", en: "What now?" })}</h3>
       <p>
         {l({
-          de: "Wir empfehlen dir, deinen konkreten Fall rechtlich prüfen zu lassen. Du findest ",
-          en: "We recommend having your specific case reviewed legally. You can find ",
-        })}
-        <a href="[TODO]">{l({ de: "hier", en: "here" })}</a>
-        {l({
-          de: " einen Artikel, wo du dies am besten tun kannst.",
-          en: " an article on the best way to do this.",
+          de: "Wir empfehlen dir, deinen konkreten Fall rechtlich prüfen zu lassen.",
+          en: "We recommend having your specific case reviewed legally.",
         })}
       </p>
       <Disclaimer />
