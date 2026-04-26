@@ -1,7 +1,7 @@
 import { useLocation } from "@swan-io/chicane";
 import { useEffect, useMemo, useRef } from "react";
 
-import { useAnswers, useSchnelltestSteps } from "~/form/flow-machine";
+import { useAnswers, useVisibleSchnelltestSteps } from "~/form/flow-machine";
 
 import { Layout } from "./Layout";
 import { Questions } from "./questions";
@@ -15,7 +15,7 @@ export default function DetailsPage() {
   const location = useLocation();
 
   const answers = useAnswers();
-  const schnelltestSteps = useSchnelltestSteps();
+  const schnelltestSteps = useVisibleSchnelltestSteps();
   const isDoneWithStart = useMemo(
     () =>
       schnelltestSteps.every(
@@ -29,7 +29,7 @@ export default function DetailsPage() {
     if (!isDoneWithStart) {
       window.location.href = "/";
     }
-  }, [answers, isDoneWithStart, schnelltestSteps]);
+  }, [isDoneWithStart]);
 
   const prevLocationRef = useRef(location.path);
   useEffect(() => {
