@@ -15,6 +15,25 @@ import { evaluationAnswersToBeratungRecord } from "./flow-data";
 
 const FOLDER_FRAGEBOGEN = "/fragebogen";
 
+function lawOrgaCreateErrorMessage(error: unknown): string {
+  if (error instanceof ApiError) {
+    if (error.status === 400) {
+      return "Ungültige Kontaktdaten. Bitte alle Felder ausfüllen.";
+    }
+    if (error.status === 401 || error.status === 403) {
+      return "Law-&-Orga-Anfrage wurde abgelehnt (Zugriff). Bitte Backend-Konfiguration prüfen.";
+    }
+    if (error.status === 404) {
+      return "Law-&-Orga-Endpunkt unter der konfigurierten API-Adresse nicht gefunden.";
+    }
+    if (error.status >= 500 && error.status < 600) {
+      return "Law-&-Orga-Server hat einen Fehler gemeldet. Bitte später erneut versuchen.";
+    }
+    return `Law & Orga konnte keinen Datensatz anlegen (HTTP ${error.status}). Bitte später erneut versuchen.`;
+  }
+  return "Keine Verbindung zum Mietencheck-Backend (Netzwerk oder CORS). Bitte später erneut versuchen.";
+}
+
 export function EintragenPage() {
   const [storedAnswers] = useStoredAnswers();
   const [firstname, setFirstname] = useState("");
@@ -89,13 +108,7 @@ export function EintragenPage() {
         }
       }
     } catch (outer) {
-      if (outer instanceof ApiError && outer.status === 400) {
-        setError("Ungültige Kontaktdaten. Bitte alle Felder ausfüllen.");
-      } else {
-        setError(
-          "Law & Orga konnte keinen Datensatz anlegen. Bitte später erneut versuchen.",
-        );
-      }
+      setError(lawOrgaCreateErrorMessage(outer));
     } finally {
       setPending(false);
     }
