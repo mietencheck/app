@@ -2,10 +2,14 @@ import * as Sentry from "@sentry/react";
 import React, { Suspense, useCallback, useEffect, useMemo } from "react";
 import { Dialog } from "react-aria-components";
 
-import { BeratungPage } from "~/pages/beratung";
+import { RequireAuth } from "~/auth/RequireAuth";
+import { BeratungListPage } from "~/pages/beratung";
+import { BeratungDetailPage } from "~/pages/beratung/[id]";
 import { DatenschutzPage } from "~/pages/datenschutz";
+import { EintragenPage } from "~/pages/eintragen";
 import { ImpressumPage } from "~/pages/impressum";
 import LandingPage from "~/pages/landing";
+import { LoginPage } from "~/pages/login";
 import { SchnelltestPage } from "~/pages/schnelltest";
 import { UeberUnsPage } from "~/pages/ueber-uns";
 
@@ -45,9 +49,12 @@ function useLocalStorageInSentryContext() {
 
 function Router() {
   const route = AppRouter.useRoute([
-    "Landing",
-    "UeberUns",
+    "BeratungDetail",
     "Beratung",
+    "Landing",
+    "Login",
+    "Eintragen",
+    "UeberUns",
     "Datenschutz",
     "Impressum",
     "Schnelltest",
@@ -59,6 +66,10 @@ function Router() {
   switch (route.name) {
     case "Landing":
       return <LandingPage />;
+    case "Login":
+      return <LoginPage />;
+    case "Eintragen":
+      return <EintragenPage />;
     case "Schnelltest":
       return <SchnelltestPage />;
     case "Details":
@@ -66,7 +77,17 @@ function Router() {
     case "UeberUns":
       return <UeberUnsPage />;
     case "Beratung":
-      return <BeratungPage />;
+      return (
+        <RequireAuth>
+          <BeratungListPage />
+        </RequireAuth>
+      );
+    case "BeratungDetail":
+      return (
+        <RequireAuth>
+          <BeratungDetailPage mietenFlowId={route.params.id} />
+        </RequireAuth>
+      );
     case "Datenschutz":
       return <DatenschutzPage />;
     case "Impressum":

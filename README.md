@@ -16,6 +16,25 @@ pnpm dev
 The app now runs through Vite's Cloudflare Workers integration, so the browser
 app and Worker routes are served together during development.
 
+### Mietencheck admin backend (Beratung / Eintragen)
+
+With **`pnpm dev`**, traffic goes through the Cloudflare Worker (Miniflare), so
+Vite’s **`server.proxy`** does not apply. The Worker forwards **`/api-mietencheck`**
+to your Nest API instead (`src/worker.ts`, origin via **`MIETENCHECK_API_ORIGIN`**
+in `wrangler.toml`, default `http://127.0.0.1:3000`). Start the backend on that
+port or override the var.
+
+For production builds, set **`VITE_MIETENCHECK_API_BASE_URL`** to your deployed
+API origin (no trailing slash). Copy [`.env.example`](.env.example) to `.env` or
+`.env.production` and set the variable there (Vite only exposes `VITE_*` at build
+time).
+
+**Production Worker:** browser requests to `/api-mietencheck` are proxied by
+[`src/worker.ts`](src/worker.ts). Set **`MIETENCHECK_API_ORIGIN`** on the Worker
+to that same API origin (Wrangler `--var`, `[env.*.vars]`, or dashboard). The
+value in [`wrangler.toml`](wrangler.toml) is for local development; deploying
+without overriding it would leave the edge proxy pointing at localhost.
+
 ## API
 
 ### `POST /api/miete`
@@ -99,11 +118,7 @@ Response-Body:
     "Wohnung hat Sammelheizung": "Ja",
     "Badezimmer in Wohnung": "Ja"
   },
-  "visibleQuestionAliases": [
-    "Adresse",
-    "Ost",
-    "Wohnlage"
-  ],
+  "visibleQuestionAliases": ["Adresse", "Ost", "Wohnlage"],
   "steps": [],
   "issues": [],
   "preisspanne": {

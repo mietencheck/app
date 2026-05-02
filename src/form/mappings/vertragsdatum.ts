@@ -13,3 +13,8 @@ export const vertragsdatumToMietspiegelJahrMapping = {
   NonNullable<FinalAnswers["Vertragsdatum"]>,
   Mietspiegeljahr | undefined
 >;
+
+/** Allowed persisted `vertragsdatum` strings (same keys as the mapping). */
+export const VERTRAGSDATUM_KEYS = new Set(
+  Object.keys(vertragsdatumToMietspiegelJahrMapping),
+);
