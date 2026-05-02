@@ -11,8 +11,7 @@ export type MietenFlowDocument = {
   folder_uuid: string;
   datasheet_uuid: string;
   lawAndOrgaURL: string;
-  /** New rows: {@link BeratungRecord}. Legacy: questionnaire answer map. */
-  flowData: BeratungRecord | Record<string, unknown>;
+  flowData: BeratungRecord;
   createdAt?: string;
   updatedAt?: string;
 };
