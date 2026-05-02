@@ -1,7 +1,10 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  /** Base URL of the Mietencheck Nest backend (no trailing slash). Omit in dev to use the Vite proxy at `/api-mietencheck`. */
+  /**
+   * Optional. If set, the browser calls this Nest origin (CORS required).
+   * If omitted, requests use same-origin `/api-mietencheck` (Cloudflare Worker proxy).
+   */
   readonly VITE_MIETENCHECK_API_BASE_URL?: string;
 }
 

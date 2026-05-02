@@ -24,16 +24,15 @@ to your Nest API instead (`src/worker.ts`, origin via **`MIETENCHECK_API_ORIGIN`
 in `wrangler.toml`, default `http://127.0.0.1:3000`). Start the backend on that
 port or override the var.
 
-For production builds, set **`VITE_MIETENCHECK_API_BASE_URL`** to your deployed
-API origin (no trailing slash). Copy [`.env.example`](.env.example) to `.env` or
-`.env.production` and set the variable there (Vite only exposes `VITE_*` at build
-time).
+**Production (recommended):** leave **`VITE_MIETENCHECK_API_BASE_URL`** unset so
+the browser calls same-origin **`/api-mietencheck`** and avoids CORS. The Worker
+proxies those requests — set **`MIETENCHECK_API_ORIGIN`** on the deployed Worker
+to your real Nest URL (Wrangler `--var`, `[env.*.vars]`, or dashboard). The
+[`wrangler.toml`](wrangler.toml) default is for local dev only.
 
-**Production Worker:** browser requests to `/api-mietencheck` are proxied by
-[`src/worker.ts`](src/worker.ts). Set **`MIETENCHECK_API_ORIGIN`** on the Worker
-to that same API origin (Wrangler `--var`, `[env.*.vars]`, or dashboard). The
-value in [`wrangler.toml`](wrangler.toml) is for local development; deploying
-without overriding it would leave the edge proxy pointing at localhost.
+**Direct API from the browser:** only then set **`VITE_MIETENCHECK_API_BASE_URL`**
+to the Nest origin (no trailing slash); Nest must allow CORS for your site’s
+origin. Build-time env: `.env.production` or your CI vars for `VITE_*`.
 
 ## API
 
