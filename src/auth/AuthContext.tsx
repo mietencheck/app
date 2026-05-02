@@ -27,27 +27,39 @@ type AuthContextValue = {
 
 const AuthContext = createContext<AuthContextValue | null>(null);
 
+function getSessionStorage(): Storage | null {
+  if (typeof window === "undefined") return null;
+  try {
+    return window.sessionStorage;
+  } catch {
+    return null;
+  }
+}
+
 function readExpiresAt(): number | null {
-  const raw = sessionStorage.getItem(STORAGE_EXPIRES_AT);
+  const store = getSessionStorage();
+  if (!store) return null;
+  const raw = store.getItem(STORAGE_EXPIRES_AT);
   if (raw == null) return null;
   const n = Number(raw);
   return Number.isFinite(n) ? n : null;
 }
 
 function readTokenFromStorage(): string | null {
-  return sessionStorage.getItem(STORAGE_TOKEN);
+  return getSessionStorage()?.getItem(STORAGE_TOKEN) ?? null;
 }
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [version, setVersion] = useState(0);
 
   const getValidToken = useCallback((): string | null => {
+    const store = getSessionStorage();
     const token = readTokenFromStorage();
     const exp = readExpiresAt();
     if (!token || exp == null || Date.now() >= exp) {
-      if (token) {
-        sessionStorage.removeItem(STORAGE_TOKEN);
-        sessionStorage.removeItem(STORAGE_EXPIRES_AT);
+      if (token && store) {
+        store.removeItem(STORAGE_TOKEN);
+        store.removeItem(STORAGE_EXPIRES_AT);
         setVersion((v) => v + 1);
       }
       return null;
@@ -56,18 +68,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const logout = useCallback(() => {
-    sessionStorage.removeItem(STORAGE_TOKEN);
-    sessionStorage.removeItem(STORAGE_EXPIRES_AT);
+    const store = getSessionStorage();
+    if (store) {
+      store.removeItem(STORAGE_TOKEN);
+      store.removeItem(STORAGE_EXPIRES_AT);
+    }
     setVersion((v) => v + 1);
   }, []);
 
   const login = useCallback(async (email: string, password: string) => {
     const { access_token } = await postAuthLogin({ email, password });
-    sessionStorage.setItem(STORAGE_TOKEN, access_token);
-    sessionStorage.setItem(
-      STORAGE_EXPIRES_AT,
-      String(Date.now() + TOKEN_TTL_MS),
-    );
+    const store = getSessionStorage();
+    if (!store) return;
+    store.setItem(STORAGE_TOKEN, access_token);
+    store.setItem(STORAGE_EXPIRES_AT, String(Date.now() + TOKEN_TTL_MS));
     setVersion((v) => v + 1);
   }, []);
 
