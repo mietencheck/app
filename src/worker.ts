@@ -7,6 +7,46 @@ import { FinalAnswers } from "./form/flow-machine-runtime";
 interface Env {
   ASSETS?: Fetcher;
   DB?: D1Database;
+  /** Optional; defaults to local Nest in dev. Used to proxy `/api-mietencheck/*`. */
+  MIETENCHECK_API_ORIGIN?: string;
+}
+
+const MIETENCHECK_PROXY_PREFIX = "/api-mietencheck";
+
+function mietencheckBackendPath(pathname: string): string {
+  if (!pathname.startsWith(MIETENCHECK_PROXY_PREFIX)) {
+    return pathname;
+  }
+  const rest = pathname.slice(MIETENCHECK_PROXY_PREFIX.length);
+  if (rest === "" || rest === "/") {
+    return "/";
+  }
+  return rest.startsWith("/") ? rest : `/${rest}`;
+}
+
+/**
+ * Dev apps call `/api-mietencheck` (same origin). Vite `server.proxy` does not run
+ * when requests go through Miniflare — forward here to the Nest backend.
+ */
+async function proxyMietencheckBackend(request: Request, env: Env) {
+  const incoming = new URL(request.url);
+  const origin =
+    env.MIETENCHECK_API_ORIGIN?.replace(/\/$/, "") ?? "http://127.0.0.1:3000";
+
+  const path = mietencheckBackendPath(incoming.pathname);
+  const targetUrl = new URL(path + incoming.search, `${origin}/`);
+
+  const headers = new Headers(request.headers);
+  headers.delete("host");
+
+  return fetch(targetUrl, {
+    method: request.method,
+    headers,
+    body:
+      request.method !== "GET" && request.method !== "HEAD"
+        ? request.body
+        : undefined,
+  });
 }
 
 interface SessionRow {
@@ -231,6 +271,13 @@ export default {
 
     if (pathname === "/sentry") {
       return handleSentryEnvelope(request);
+    }
+
+    if (
+      pathname === MIETENCHECK_PROXY_PREFIX ||
+      pathname.startsWith(`${MIETENCHECK_PROXY_PREFIX}/`)
+    ) {
+      return proxyMietencheckBackend(request, env);
     }
 
     return serveAsset(request, env);

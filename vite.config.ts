@@ -36,4 +36,14 @@ export default defineConfig({
   build: {
     sourcemap: true,
   },
+
+  server: {
+    proxy: {
+      "/api-mietencheck": {
+        target: "http://localhost:3000",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-mietencheck/, ""),
+      },
+    },
+  },
 });
