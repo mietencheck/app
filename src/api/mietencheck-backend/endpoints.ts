@@ -11,7 +11,7 @@ export async function postAuthLogin(body: {
   email: string;
   password: string;
 }): Promise<LoginResponse> {
-  return mietencheckJson<LoginResponse>("/auth/login", {
+  return mietencheckJson<LoginResponse>("/auth/login/", {
     method: "POST",
     body: JSON.stringify(body),
   });
