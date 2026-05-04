@@ -1,6 +1,10 @@
 import { ReactNode, useEffect, useMemo, useState } from "react";
 
-import { ApiError, getMietenFlows } from "~/api/mietencheck-backend";
+import {
+  ApiError,
+  getMietenFlows,
+  putMietenFlow,
+} from "~/api/mietencheck-backend";
 import { useAuth } from "~/auth/AuthContext";
 import { getWorstBestAusstattungsAbzug } from "~/calculation/ausstattungsAbzug";
 import {
@@ -15,6 +19,7 @@ import {
 } from "~/calculation/spanneneinordnung";
 import { getWorstBestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
 import {
+  Button,
   CheckIcon,
   CloseIcon,
   HelpCircleIcon,
@@ -97,6 +102,11 @@ const subgroupLabels: Record<SubgroupKey, string> = {
 const sondermerkmalLabels = sondermerkmale as Record<string, string>;
 
 type ResultRow = { name: string; best: string; worst: string };
+type FlowMeta = {
+  folder_uuid: string;
+  datasheet_uuid: string;
+  lawAndOrgaURL: string;
+};
 
 export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
   const { getValidToken, logout } = useAuth();
@@ -104,7 +114,11 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
     null,
   );
   const [state, setState] = useState<MerkmaleByGruppe | null>(null);
+  const [flowMeta, setFlowMeta] = useState<FlowMeta | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const [saveError, setSaveError] = useState<string | null>(null);
+  const [saveMessage, setSaveMessage] = useState<string | null>(null);
+  const [savePending, setSavePending] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -113,8 +127,11 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
       const token = getValidToken();
       if (!token) return;
       setLoadError(null);
+      setSaveError(null);
+      setSaveMessage(null);
       setBeratungRecord(null);
       setState(null);
+      setFlowMeta(null);
 
       try {
         const flows = await getMietenFlows(token);
@@ -134,6 +151,11 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
         const recordCopy = structuredClone(record);
         setBeratungRecord(recordCopy);
         setState(structuredClone(recordCopy.merkmale));
+        setFlowMeta({
+          folder_uuid: flow.folder_uuid,
+          datasheet_uuid: flow.datasheet_uuid,
+          lawAndOrgaURL: flow.lawAndOrgaURL,
+        });
       } catch (e) {
         if (e instanceof ApiError && e.status === 401) {
           logout();
@@ -312,6 +334,43 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
     );
   };
 
+  const onSave = async () => {
+    if (!beratungRecord || !state || !flowMeta) return;
+    const token = getValidToken();
+    if (!token) return;
+
+    setSavePending(true);
+    setSaveError(null);
+    setSaveMessage(null);
+
+    try {
+      await putMietenFlow(token, {
+        folder_uuid: flowMeta.folder_uuid,
+        datasheet_uuid: flowMeta.datasheet_uuid,
+        lawAndOrgaURL: flowMeta.lawAndOrgaURL,
+        flowData: {
+          ...beratungRecord,
+          merkmale: state,
+        },
+      });
+      setSaveMessage("Änderungen wurden gespeichert.");
+    } catch (e) {
+      if (e instanceof ApiError && e.status === 401) {
+        logout();
+        return;
+      }
+      if (e instanceof ApiError && e.status === 400) {
+        setSaveError("Ungültige Daten. Bitte Eingaben prüfen.");
+      } else if (e instanceof ApiError && e.status === 404) {
+        setSaveError("Datensatz nicht gefunden.");
+      } else {
+        setSaveError("Speichern fehlgeschlagen. Bitte erneut versuchen.");
+      }
+    } finally {
+      setSavePending(false);
+    }
+  };
+
   if (loadError) {
     return (
       <Layout>
@@ -335,8 +394,22 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
   }
 
   return (
-    <Layout>
+    <Layout
+      headerTrailing={
+        <Button size="sm" isDisabled={savePending} onPress={onSave}>
+          {savePending ? "Speichere…" : "Speichern"}
+        </Button>
+      }
+    >
       <BeratungDetailHeading />
+      {(saveError || saveMessage) && (
+        <p
+          className={`mb-6 text-sm ${saveError ? "text-red-10" : "text-green-11"}`}
+          role={saveError ? "alert" : "status"}
+        >
+          {saveError ?? saveMessage}
+        </p>
+      )}
       <div className="flex flex-col gap-12">
         <section className="flex flex-col gap-4">
           <h2 className="heading-22">Angaben</h2>
@@ -427,6 +500,36 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
             </div>
           </div>
         </section>
+        {sondermerkmalOptions.length > 0 && (
+          <section className="flex flex-col gap-4">
+            <h2 className="heading-22">Sondermerkmale</h2>
+            <div className="rounded border border-gray-6">
+              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 bg-gray-1 px-4 py-2 text-neutral-faded">
+                <span>Merkmal</span>
+                <span>Bewertung</span>
+              </div>
+              {sondermerkmalOptions.map((merkmal) => (
+                <div
+                  key={merkmal}
+                  className="flex items-start gap-6 border-t border-gray-6 px-4 py-3"
+                >
+                  <p className="w-full">
+                    {sondermerkmalLabels[merkmal] ?? merkmal}
+                  </p>
+                  <SegmentedControl
+                    className="shrink-0"
+                    aria-label={merkmal}
+                    options={merkmalOptions}
+                    value={
+                      beratungRecord.sondermerkmale[merkmal] ?? "unchecked"
+                    }
+                    onValueChange={(next) => setSondermerkmal(merkmal, next)}
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
         {Object.entries(state).map(([gruppe, sub]) => (
           <section key={gruppe} className="flex flex-col gap-4">
             <h2 className="heading-22">{gruppe}</h2>
@@ -467,36 +570,6 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
             </div>
           </section>
         ))}
-        {sondermerkmalOptions.length > 0 && (
-          <section className="flex flex-col gap-4">
-            <h2 className="heading-22">Sondermerkmale</h2>
-            <div className="rounded border border-gray-6">
-              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 bg-gray-1 px-4 py-2 text-neutral-faded">
-                <span>Merkmal</span>
-                <span>Bewertung</span>
-              </div>
-              {sondermerkmalOptions.map((merkmal) => (
-                <div
-                  key={merkmal}
-                  className="flex items-start gap-6 border-t border-gray-6 px-4 py-3"
-                >
-                  <p className="w-full">
-                    {sondermerkmalLabels[merkmal] ?? merkmal}
-                  </p>
-                  <SegmentedControl
-                    className="shrink-0"
-                    aria-label={merkmal}
-                    options={merkmalOptions}
-                    value={
-                      beratungRecord.sondermerkmale[merkmal] ?? "unchecked"
-                    }
-                    onValueChange={(next) => setSondermerkmal(merkmal, next)}
-                  />
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
         <section className="max-w-2xl">
           <h2 className="heading-22">Auswertung</h2>
           {!resultData ? (

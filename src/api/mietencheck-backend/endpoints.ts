@@ -44,11 +44,37 @@ export async function postMietenFlow(body: {
   });
 }
 
+export async function putMietenFlow(
+  token: string,
+  body: {
+    folder_uuid: string;
+    datasheet_uuid: string;
+    lawAndOrgaURL: string;
+    flowData: BeratungRecord;
+  },
+): Promise<MietenFlowDocument> {
+  return mietencheckJson<MietenFlowDocument>("/mieten-flow", {
+    method: "PUT",
+    token,
+    body: JSON.stringify(body),
+  });
+}
+
 export async function getMietenFlows(
   token: string,
 ): Promise<MietenFlowDocument[]> {
   return mietencheckJson<MietenFlowDocument[]>("/mieten-flow", {
     method: "GET",
+    token,
+  });
+}
+
+export async function deleteMietenFlow(
+  token: string,
+  id: string,
+): Promise<void> {
+  return mietencheckJson<void>(`/mieten-flow/${encodeURIComponent(id)}`, {
+    method: "DELETE",
     token,
   });
 }
