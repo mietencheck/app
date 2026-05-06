@@ -17,10 +17,10 @@ export function WerdeAktiv() {
           {l("Informiere deine Nachbar*innen Titel")}
         </AccordionTrigger>
         <AccordionContent>
-          <p className="text-neutral-faded mb-2">
+          <p className="text-gray-11 mb-2">
             {l("Informiere deine Nachbar*innen Text 1")}
           </p>
-          <p className="text-neutral-faded mb-4">
+          <p className="text-gray-11 mb-4">
             {l("Informiere deine Nachbar*innen Text 2")}
           </p>
           <a
@@ -41,7 +41,7 @@ export function WerdeAktiv() {
           {l("Schaffe ein Bewusstsein für die Mietenkrise Titel")}
         </AccordionTrigger>
         <AccordionContent>
-          <p className="text-neutral-faded mb-2">
+          <p className="text-gray-11 mb-2">
             {l("Schaffe ein Bewusstsein für die Mietenkrise Text")}
           </p>
           <a
@@ -60,7 +60,7 @@ export function WerdeAktiv() {
       <AccordionItem value="item-3">
         <AccordionTrigger>{l("Engagiere dich Titel")}</AccordionTrigger>
         <AccordionContent>
-          <p className="text-neutral-faded mb-2">{l("Engagiere dich Text")}</p>
+          <p className="text-gray-11 mb-2">{l("Engagiere dich Text")}</p>
           <a
             className="underline"
             href={

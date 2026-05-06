@@ -11,7 +11,7 @@ export function ExitSozialwohnung() {
           en: "Unfortunately, the Rent Control Act (Mietpreisbremse) does not apply to social housing.",
         })}
       </h2>
-      <div className="space-y-3 text-neutral-faded">
+      <div className="space-y-3 text-gray-11">
         <p>
           {l({
             de: "Leider können wir dir an dieser Stelle nicht weiter helfen.",

@@ -94,7 +94,7 @@ function DeleteMietenFlowRowAction({
         Löschen
       </Button>
       <ModalDialog className="flex flex-col">
-        <header className="border-b border-neutral-subtle px-4 sm:px-6 py-3 flex flex-row justify-between items-center">
+        <header className="border-b border-gray-6 px-4 sm:px-6 py-3 flex flex-row justify-between items-center">
           <h2 className="title-16">Eintrag löschen?</h2>
           <IconButton
             size="sm"
@@ -106,7 +106,7 @@ function DeleteMietenFlowRowAction({
           </IconButton>
         </header>
         <div className="flex flex-col p-4 sm:p-6">
-          <p className="text-base text-neutral-faded mb-3">
+          <p className="text-base text-gray-11 mb-3">
             Dieser gespeicherte Mietencheck wird unwiderruflich gelöscht.
           </p>
           {deleteError && (
@@ -115,7 +115,7 @@ function DeleteMietenFlowRowAction({
             </p>
           )}
         </div>
-        <div className="px-4 sm:px-6 py-3 border-t border-neutral-subtle flex flex-row gap-2 justify-between">
+        <div className="px-4 sm:px-6 py-3 border-t border-gray-6 flex flex-row gap-2 justify-between">
           <Button onPress={() => setIsOpen(false)} isDisabled={isDeleting}>
             Abbrechen
           </Button>
@@ -202,7 +202,7 @@ function CreateMietenFlowAction() {
         Neu
       </Button>
       <ModalDialog className="flex flex-col">
-        <header className="border-b border-neutral-subtle px-4 sm:px-6 py-3 flex flex-row justify-between items-center">
+        <header className="border-b border-gray-6 px-4 sm:px-6 py-3 flex flex-row justify-between items-center">
           <h2 className="title-16">Neuen Mietencheck anlegen</h2>
           <IconButton
             size="sm"
@@ -273,7 +273,7 @@ function CreateMietenFlowAction() {
               {createError}
             </p>
           )}
-          <div className="pt-2 border-t border-neutral-subtle flex flex-row justify-between gap-2">
+          <div className="pt-2 border-t border-gray-6 flex flex-row justify-between gap-2">
             <Button onPress={() => setIsOpen(false)} isDisabled={createPending}>
               Abbrechen
             </Button>
@@ -335,9 +335,9 @@ export function BeratungListPage() {
         </p>
       )}
       {!rows ? (
-        <p className="text-sm text-neutral-faded">Lade Einträge…</p>
+        <p className="text-sm text-gray-11">Lade Einträge…</p>
       ) : rows.length === 0 ? (
-        <p className="text-sm text-neutral-faded">Noch keine Einträge.</p>
+        <p className="text-sm text-gray-11">Noch keine Einträge.</p>
       ) : (
         <Table>
           <TableHeader>
@@ -354,7 +354,7 @@ export function BeratungListPage() {
                 <TableCell className="pr-3">
                   <Link
                     href={AppRouter.BeratungDetail({ id: r._id })}
-                    className="text-primary-solid underline truncate block"
+                    className="text-purple-11-solid underline truncate block"
                     title={r._id}
                   >
                     {r._id}
@@ -366,7 +366,7 @@ export function BeratungListPage() {
                     href={r.lawAndOrgaURL}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-primary-solid underline text-sm truncate block"
+                    className="text-purple-11-solid underline text-sm truncate block"
                     title={r.lawAndOrgaURL}
                   >
                     {r.lawAndOrgaURL}

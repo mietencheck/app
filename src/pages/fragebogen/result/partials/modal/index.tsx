@@ -109,7 +109,7 @@ export function AuswertungsModal({ onClose }: { onClose: () => void }) {
         </IconButton>
       </header>
       <Tabs>
-        <TabList className="px-4 sm:px-6 border-b border-neutral-subtle -mb-[1px] print:hidden">
+        <TabList className="px-4 sm:px-6 border-b border-gray-6 -mb-[1px] print:hidden">
           <Tab id="auswertung">{l("Details")}</Tab>
           <Tab id="merkmale">{l("Merkmale")}</Tab>
           {mietspiegljahr == "2015" && (

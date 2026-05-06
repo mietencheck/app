@@ -160,7 +160,7 @@ export function SchnelltestExit({
 
   return (
     <>
-      <p className="text-base text-neutral-faded mb-2">{l("Ergebnis")}</p>
+      <p className="text-base text-gray-11 mb-2">{l("Ergebnis")}</p>
       <div className="space-y-3 text-gray-11 [&_h2]:heading-22 [&_h2]:text-gray-12 [&_h2]:pb-2 [&_h3]:text-gray-12 [&_h3]:heading-16 [&_h3]:pt-3 [&_ol]:list-outside [&_ol]:list-decimal [&_ol]:space-y-1.5 [&_ol]:ps-8 [&_li]:pl-1 [&_a]:underline">
         {step.alias in Exits
           ? React.createElement(Exits[step.alias as keyof typeof Exits], {

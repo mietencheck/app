@@ -11,7 +11,7 @@ export function ExitMietvertragVorherigeMieterhoehungAndererGrund() {
           en: "Previous rent increase (other reason)",
         })}
       </h2>
-      <div className="space-y-3 text-neutral-faded">
+      <div className="space-y-3 text-gray-11">
         <p>
           {l({
             de: "Du hast angegeben, dass eine vorherige Mieterhoehung aus einem anderen Grund erfolgt ist. Dieser Fall wird aktuell noch nicht automatisch ausgewertet. Bitte lass deinen konkreten Fall rechtlich pruefen.",

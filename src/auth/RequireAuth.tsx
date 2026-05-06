@@ -18,7 +18,7 @@ export function RequireAuth({ children }: { children: ReactNode }) {
   if (!token) {
     return (
       <main className="container py-8">
-        <p className="text-sm text-neutral-faded">Weiterleitung…</p>
+        <p className="text-sm text-gray-11">Weiterleitung…</p>
       </main>
     );
   }

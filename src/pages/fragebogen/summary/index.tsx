@@ -82,7 +82,7 @@ export function Summary() {
                     : {},
                 )}
               </p>
-              <p className="text-neutral-faded flex flex-row justify-between">
+              <p className="text-gray-11 flex flex-row justify-between">
                 <AnswerView
                   question={q}
                   answerValue={

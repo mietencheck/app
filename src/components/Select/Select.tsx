@@ -19,7 +19,7 @@ export function Select<T extends object>({
       <Button
         width="full"
         iconEnd={
-          <ChevronDownIcon className="text-neutral-faded hover:text-neutral" />
+          <ChevronDownIcon className="text-gray-11 hover:text-gray-12" />
         }
       >
         <AriaSelectValue />

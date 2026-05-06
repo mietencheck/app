@@ -11,7 +11,7 @@ import {
 import { CheckIcon } from "../Icons/Check";
 
 export const LIST_BOX_CLASS_NAME =
-  "w-full min-w-[160px] max-h-[inherit] overflow-auto space-y-0.5 p-1 bg-white border border-neutral rounded shadow focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-primary focus-visible:border-primary-solid";
+  "w-full min-w-[160px] max-h-[inherit] overflow-auto space-y-0.5 p-1 bg-white border border-gray-7 rounded shadow focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-purple-5 focus-visible:border-purple-9";
 export function ListBox<T extends object>({
   children,
   ...props
@@ -37,7 +37,7 @@ export function ListBox<T extends object>({
 export const LISTBOX_ITEM_CLASS_NAME = cx(
   "border border-transparent rounded-sm px-3 py-2",
   "group flex gap-1.5",
-  "hover:bg-primary-solid hover:text-on-primary active:bg-primary-solid active:text-on-primary focus-visible:outline-none focus-visible:bg-primary-solid focus-visible:text-on-primary",
+  "hover:bg-purple-9 hover:text-white active:bg-purple-9 active:text-white focus-visible:outline-none focus-visible:bg-purple-9 focus-visible:text-white",
 );
 export function ListBoxItem({
   children,
@@ -52,7 +52,7 @@ export function ListBoxItem({
           {renderProps.isSelected ? (
             <CheckIcon
               aria-hidden="true"
-              className="text-neutral-faded group-hover:text-on-primary group-active:text-on-primary group-focus-visible:text-on-primary"
+              className="text-gray-11 group-hover:text-white group-active:text-white group-focus-visible:text-white"
             />
           ) : (
             <span className="w-5" />

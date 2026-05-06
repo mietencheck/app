@@ -45,7 +45,7 @@ export function LoginPage() {
     <Layout>
       <div className="container max-w-md py-16">
         <h1 className="heading-22 mb-2">Anmelden</h1>
-        <p className="text-base text-neutral-faded mb-8">
+        <p className="text-base text-gray-11 mb-8">
           Zugang für interne Beratungstools.
         </p>
         <form onSubmit={onSubmit} className="space-y-6">

@@ -150,7 +150,7 @@ export function SondermerkmaleTable() {
                     </TableCell>
                   </TableRow>
                   <TableRow className="sm:hidden print:hidden border-b-0">
-                    <TableCell className="text-neutral-faded pb-0">
+                    <TableCell className="text-gray-11 pb-0">
                       {lField("Niedrigste Miete")}
                     </TableCell>
                     <TableCell className="w-40 text-right pb-0">
@@ -158,7 +158,7 @@ export function SondermerkmaleTable() {
                     </TableCell>
                   </TableRow>
                   <TableRow className="sm:hidden print:hidden">
-                    <TableCell className="text-neutral-faded ">
+                    <TableCell className="text-gray-11 ">
                       {lField("Höchste Miete")}
                     </TableCell>
                     <TableCell className="w-40 text-right">
@@ -186,7 +186,7 @@ export function SondermerkmaleTable() {
             </TableCell>
           </TableRow>
           <TableRow className="sm:hidden print:hidden">
-            <TableCell className="text-neutral-faded">
+            <TableCell className="text-gray-11">
               {lField("Niedrigste Miete")}
             </TableCell>
             <TableCell className="w-40 text-right text-sm-book">
@@ -194,7 +194,7 @@ export function SondermerkmaleTable() {
             </TableCell>
           </TableRow>
           <TableRow className="sm:hidden print:hidden border-b-0">
-            <TableCell className="text-neutral-faded pb-0">
+            <TableCell className="text-gray-11 pb-0">
               {lField("Höchste Miete")}
             </TableCell>
             <TableCell className="w-40 text-right pb-0 text-sm-book">

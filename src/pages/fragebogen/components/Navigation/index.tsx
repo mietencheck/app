@@ -37,7 +37,7 @@ export function NavigationItem({
           "border border-transparent rounded px-3 py-1.5",
           "flex items-center gap-2",
           "hover:bg-gray-2 focus-visible:outline-none focus-visible:ring-3",
-          "focus-visible:ring-purple-7/50 focus-visible:border-primary-solid",
+          "focus-visible:ring-purple-7/50 focus-visible:border-purple-9",
         )}
       >
         <StatusIcon status={status} />

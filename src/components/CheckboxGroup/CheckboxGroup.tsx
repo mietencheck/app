@@ -11,9 +11,9 @@ const checkboxButton = cva(
   {
     variants: {
       isSelected: {
-        true: "bg-primary-solid border-primary-solid hover:bg-primary-solid-hover hover:border-primary-solid-hover",
+        true: "bg-purple-9 border-purple-9 hover:bg-purple-10 hover:border-purple-10",
         false:
-          "bg-white border-neutral hover:bg-page-faded hover:border-neutral-hover group-hover:border-neutral-hover",
+          "bg-white border-gray-7 hover:bg-gray-1 hover:border-gray-8 group-hover:border-gray-8",
       },
     },
   },
@@ -52,11 +52,11 @@ const checkbox = cva(
   {
     variants: {
       isSelected: {
-        true: "bg-primary border-primary hover:border-primary-hover",
-        false: "bg-white border-neutral hover:border-neutral-hover",
+        true: "bg-purple-3 border-purple-7 hover:border-purple-8",
+        false: "bg-white border-gray-7 hover:border-gray-8",
       },
       isFocusVisible: {
-        true: "ring-3 ring-primary border-primary-solid hover:border-primary-solid-hover",
+        true: "ring-3 ring-purple-5 border-purple-9 hover:border-purple-10",
       },
     },
   },

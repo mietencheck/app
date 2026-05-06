@@ -29,7 +29,7 @@ export const FeedbackButton = ({ question }: { question: Question }) => {
         {l("not_understand")}
       </Button>
       <ModalDialog className="flex flex-col">
-        <header className="border-b border-neutral-subtle px-4 sm:px-6 py-3 flex flex-row justify-between items-center">
+        <header className="border-b border-gray-6 px-4 sm:px-6 py-3 flex flex-row justify-between items-center">
           <h2 className="title-16">{l("not_understand")}</h2>
           <IconButton
             size="sm"
@@ -52,7 +52,7 @@ export const FeedbackButton = ({ question }: { question: Question }) => {
             onChange={(e) => setMessage(e.target.value)}
           />
         </div>
-        <div className="px-4 sm:px-6 py-3 border-t border-neutral-subtle flex flex-row gap-2 justify-between">
+        <div className="px-4 sm:px-6 py-3 border-t border-gray-6 flex flex-row gap-2 justify-between">
           <Button onPress={() => setIsOpen(false)}>Abbrechen</Button>
           <Button
             variant="solid"

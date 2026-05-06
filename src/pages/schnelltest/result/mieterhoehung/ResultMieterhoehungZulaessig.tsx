@@ -32,8 +32,8 @@ export function ResultMieterhöhungZulaessig() {
       <h2 className="heading-24 mb-6">
         Die Mieterhöhung ist leider wahrscheinlich zulässig.
       </h2>
-      <div className="text-neutral-faded space-y-2 mb-6">
-        <p className="text-neutral-faded">
+      <div className="text-gray-11 space-y-2 mb-6">
+        <p className="text-gray-11">
           Der Vermieter möchte die Miete von {formatEuro(nettokaltmiete)} auf{" "}
           {formatEuro(geforderteNettokaltmiete)} erhöhen.{" "}
           {worstDiff == bestDiff

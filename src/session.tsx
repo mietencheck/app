@@ -89,13 +89,13 @@ export function SaveSessionModal({ onClose }: { onClose: () => void }) {
         <h1 className="heading-18 mb-4">
           {l("Fortschritt Speichern Modal Titel")}
         </h1>
-        <p className="mb-3 text-neutral-faded">
+        <p className="mb-3 text-gray-11">
           {l("Fortschritt Speichern Modal Text 1")}
         </p>
-        <p className="mb-3 text-neutral-faded">
+        <p className="mb-3 text-gray-11">
           {l("Fortschritt Speichern Modal Text 2")}
         </p>
-        <p className="mb-8 text-neutral-faded">
+        <p className="mb-8 text-gray-11">
           {l("Fortschritt Speichern Modal Text 3")}
         </p>
 

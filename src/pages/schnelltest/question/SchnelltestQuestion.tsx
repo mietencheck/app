@@ -19,7 +19,7 @@ export function SchnelltestQuestion({
 
   return (
     <FormField>
-      <h2 className="text-base text-neutral-faded mb-2">
+      <h2 className="text-base text-gray-11 mb-2">
         {l("question")} {stepper.index + 1}
       </h2>
       <FormLabel
@@ -32,7 +32,7 @@ export function SchnelltestQuestion({
         <FormDescription
           alias={step.alias}
           description={step.info}
-          className="text-base text-neutral-faded mt-3"
+          className="text-base text-gray-11 mt-3"
         />
       )}
       <div className="mt-6">

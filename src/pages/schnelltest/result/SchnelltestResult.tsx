@@ -37,7 +37,7 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
   const errorState = (
     <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
       <h2 className="heading-24 mb-4">Fehler beim Berechnen des Ergebnisses</h2>
-      <p className="text-neutral-faded mb-4">
+      <p className="text-gray-11 mb-4">
         Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten. Bitte
         klick unten auf "Neu anfangen".
       </p>
@@ -118,7 +118,7 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
 
   return (
     <>
-      <p className="text-base text-neutral-faded mb-2">{l("Prediction")}</p>
+      <p className="text-base text-gray-11 mb-2">{l("Prediction")}</p>
       {resultContent}
 
       <div className="flex flex-row flex-wrap justify-center gap-3 mt-10">

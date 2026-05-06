@@ -33,7 +33,7 @@ export function ResultMieterhoehung() {
         <h2 className="heading-24 mb-4">
           Fehler beim Berechnen des Ergebnisses
         </h2>
-        <p className="text-neutral-faded mb-4">
+        <p className="text-gray-11 mb-4">
           Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten. Bitte
           klick unten auf "Neu anfangen".
         </p>
