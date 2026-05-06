@@ -1,3 +1,4 @@
+import { pushUnsafe } from "@swan-io/chicane";
 import { useEffect, useState } from "react";
 import { DialogTrigger } from "react-aria-components";
 
@@ -5,11 +6,15 @@ import {
   ApiError,
   deleteMietenFlow,
   getMietenFlows,
+  postLawOrgaCreateRecord,
+  postMietenFlow,
 } from "~/api/mietencheck-backend";
 import { useAuth } from "~/auth/AuthContext";
 import {
   Button,
+  FormField,
   IconButton,
+  Label,
   Link,
   ModalDialog,
   Table,
@@ -18,11 +23,32 @@ import {
   TableHead,
   TableHeader,
   TableRow,
+  TextField,
 } from "~/components";
 import { CloseIcon } from "~/components/Icons/Close";
 import { AppRouter } from "~/router";
 
 import { Layout } from "./Layout";
+import { getDefaultBeratungRecord } from "./mock-data";
+
+function lawOrgaCreateErrorMessage(error: unknown): string {
+  if (error instanceof ApiError) {
+    if (error.status === 400) {
+      return "Ungültige Kontaktdaten. Bitte alle Felder ausfüllen.";
+    }
+    if (error.status === 401 || error.status === 403) {
+      return "Law-&-Orga-Anfrage wurde abgelehnt (Zugriff). Bitte Backend-Konfiguration prüfen.";
+    }
+    if (error.status === 404) {
+      return "Law-&-Orga-Endpunkt unter der konfigurierten API-Adresse nicht gefunden.";
+    }
+    if (error.status >= 500 && error.status < 600) {
+      return "Law-&-Orga-Server hat einen Fehler gemeldet. Bitte später erneut versuchen.";
+    }
+    return `Law & Orga konnte keinen Datensatz anlegen (HTTP ${error.status}). Bitte später erneut versuchen.`;
+  }
+  return "Keine Verbindung zum Mietencheck-Backend (Netzwerk oder CORS). Bitte später erneut versuchen.";
+}
 
 function DeleteMietenFlowRowAction({
   flowId,
@@ -107,6 +133,165 @@ function DeleteMietenFlowRowAction({
   );
 }
 
+function CreateMietenFlowAction() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [tel, setTel] = useState("");
+  const [createError, setCreateError] = useState<string | null>(null);
+  const [createPending, setCreatePending] = useState(false);
+
+  const resetForm = () => {
+    setFirstname("");
+    setLastname("");
+    setEmail("");
+    setTel("");
+    setCreateError(null);
+    setCreatePending(false);
+  };
+
+  const handleCreateNew = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setCreateError(null);
+    setCreatePending(true);
+    try {
+      const lo = await postLawOrgaCreateRecord({
+        firstname: firstname.trim(),
+        lastname: lastname.trim(),
+        email: email.trim(),
+        tel: tel.trim(),
+      });
+      try {
+        const id = await postMietenFlow({
+          folder_uuid: lo.folder_uuid,
+          datasheet_uuid: lo.datasheet_uuid,
+          lawAndOrgaURL: lo.lawAndOrgaURL,
+          flowData: getDefaultBeratungRecord(),
+        });
+        pushUnsafe(AppRouter.BeratungDetail({ id }));
+      } catch (inner) {
+        if (inner instanceof ApiError && inner.status === 409) {
+          setCreateError(
+            "Dieser Law-&-Orga-Eintrag wurde bereits gespeichert (Konflikt).",
+          );
+        } else if (inner instanceof ApiError && inner.status === 400) {
+          setCreateError("Ungültige Daten. Bitte Eingaben prüfen.");
+        } else {
+          setCreateError(
+            "Die Mietencheck-Daten konnten nicht gespeichert werden. Bitte später erneut versuchen.",
+          );
+        }
+      }
+    } catch (outer) {
+      setCreateError(lawOrgaCreateErrorMessage(outer));
+    } finally {
+      setCreatePending(false);
+    }
+  };
+
+  return (
+    <DialogTrigger
+      isOpen={isOpen}
+      onOpenChange={(open) => {
+        setIsOpen(open);
+        if (!open) resetForm();
+      }}
+    >
+      <Button size="sm" onPress={() => setIsOpen(true)}>
+        Neu
+      </Button>
+      <ModalDialog className="flex flex-col">
+        <header className="border-b border-neutral-subtle px-4 sm:px-6 py-3 flex flex-row justify-between items-center">
+          <h2 className="title-16">Neuen Mietencheck anlegen</h2>
+          <IconButton
+            size="sm"
+            variant="ghost"
+            isDisabled={createPending}
+            onPress={() => setIsOpen(false)}
+          >
+            <CloseIcon />
+          </IconButton>
+        </header>
+        <form onSubmit={handleCreateNew} className="p-4 sm:p-6 space-y-4">
+          <FormField>
+            <Label htmlFor="beratung-firstname" className="mb-1.5">
+              Vorname
+            </Label>
+            <TextField
+              id="beratung-firstname"
+              name="firstname"
+              autoComplete="given-name"
+              isRequired
+              value={firstname}
+              onChange={setFirstname}
+            />
+          </FormField>
+          <FormField>
+            <Label htmlFor="beratung-lastname" className="mb-1.5">
+              Nachname
+            </Label>
+            <TextField
+              id="beratung-lastname"
+              name="lastname"
+              autoComplete="family-name"
+              isRequired
+              value={lastname}
+              onChange={setLastname}
+            />
+          </FormField>
+          <FormField>
+            <Label htmlFor="beratung-email" className="mb-1.5">
+              E-Mail
+            </Label>
+            <TextField
+              id="beratung-email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              isRequired
+              value={email}
+              onChange={setEmail}
+            />
+          </FormField>
+          <FormField>
+            <Label htmlFor="beratung-tel" className="mb-1.5">
+              Telefon
+            </Label>
+            <TextField
+              id="beratung-tel"
+              name="tel"
+              type="tel"
+              autoComplete="tel"
+              isRequired
+              value={tel}
+              onChange={setTel}
+            />
+          </FormField>
+          {createError && (
+            <p className="text-sm text-red-10" role="alert">
+              {createError}
+            </p>
+          )}
+          <div className="pt-2 border-t border-neutral-subtle flex flex-row justify-between gap-2">
+            <Button onPress={() => setIsOpen(false)} isDisabled={createPending}>
+              Abbrechen
+            </Button>
+            <Button
+              type="submit"
+              color="primary"
+              variant="solid"
+              isDisabled={createPending}
+            >
+              {createPending ? "Wird angelegt…" : "Anlegen"}
+            </Button>
+          </div>
+        </form>
+      </ModalDialog>
+    </DialogTrigger>
+  );
+}
+
 export function BeratungListPage() {
   const { getValidToken, logout } = useAuth();
   const [rows, setRows] = useState<Awaited<
@@ -141,7 +326,7 @@ export function BeratungListPage() {
   };
 
   return (
-    <Layout>
+    <Layout headerTrailing={<CreateMietenFlowAction />}>
       <h1 className="heading-22 mb-8">Gespeicherte Mietenchecks</h1>
 
       {error && (
@@ -149,7 +334,6 @@ export function BeratungListPage() {
           {error}
         </p>
       )}
-
       {!rows ? (
         <p className="text-sm text-neutral-faded">Lade Einträge…</p>
       ) : rows.length === 0 ? (

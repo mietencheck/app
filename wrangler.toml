@@ -7,7 +7,7 @@ compatibility_date = "2026-03-12"
 #   wrangler deploy --var MIETENCHECK_API_ORIGIN:https://api.example.com
 # or use [env.production.vars] / dashboard overrides so the Worker does not call 127.0.0.1.
 [vars]
-MIETENCHECK_API_ORIGIN = "http://127.0.0.1:3000"
+MIETENCHECK_API_ORIGIN = "https://api.mietencheck.de"
 
 [[routes]]
 pattern = "mietencheck.de"

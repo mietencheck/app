@@ -160,6 +160,7 @@ export function AnswersProvider({ children }: { children: React.ReactNode }) {
     const value = {
       ...storedAnswers,
       Typ: "Miete",
+      "Vorherige Mieterhöhung": "Nein",
       Ost: lageInfo?.ost ?? null,
       Wohnlage: lageInfo?.wohnlage ?? null,
       Baujahr: baujahr || null,
