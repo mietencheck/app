@@ -49,6 +49,7 @@ export function parseStoredFlowDataAsBeratungRecord(
   if (sonder != null && typeof sonder !== "object") return null;
 
   return {
+    typ: "Miete",
     vertragsdatum: flowData.vertragsdatum as BeratungRecord["vertragsdatum"],
     wohnflaeche: flowData.wohnflaeche,
     baujahrSpanne: flowData.baujahrSpanne,
