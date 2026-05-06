@@ -1,8 +1,8 @@
 import { BeratungRecord } from "./types";
 
-const MOCK_BERATUNG_RECORD: BeratungRecord = {
+const DEFAULT_BERATUNG_RECORD: BeratungRecord = {
   vertragsdatum: ">2024",
-  wohnflaeche: 58,
+  wohnflaeche: 100,
   baujahrSpanne: "-1918",
   wohnlage: "mittel",
   ausstattung: {
@@ -135,7 +135,6 @@ const MOCK_BERATUNG_RECORD: BeratungRecord = {
   },
 };
 
-export async function loadMockBeratungRecord(): Promise<BeratungRecord> {
-  await new Promise((resolve) => setTimeout(resolve, 250));
-  return structuredClone(MOCK_BERATUNG_RECORD);
+export function getDefaultBeratungRecord(): BeratungRecord {
+  return structuredClone(DEFAULT_BERATUNG_RECORD);
 }
