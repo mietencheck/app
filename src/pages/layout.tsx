@@ -44,12 +44,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 >
                   {l("Ratgeber")}
                 </a>
-                <a
-                  href="/ueber-uns"
-                  className="text-base-medium text-yellow-11 hover:underline"
-                >
-                  {l("Über Uns")}
-                </a>
               </div>
               <div className="flex gap-3">
                 <LanguageSelect variant="yellow" />
@@ -71,12 +65,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
             className="block py-3 text-base-medium text-yellow-11 hover:underline"
           >
             {l("Ratgeber")}
-          </a>
-          <a
-            href="/ueber-uns"
-            className="block py-3 text-base-medium text-yellow-11 hover:underline"
-          >
-            {l("Über Uns")}
           </a>
           <div className="w-full py-3">
             <a
@@ -113,7 +101,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 label: l("Ratgeber"),
                 href: locale === "en" ? AppRouter.BlogEn() : AppRouter.BlogDe(),
               },
-              { label: l("Über Uns"), href: "/ueber-uns" },
               {
                 label: l("Mitmachen"),
                 href: "https://dwenteignen.de/mitmachen",

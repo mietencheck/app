@@ -150,38 +150,6 @@ export default function LandingPage() {
       </section>
       <section>
         <div className="container py-20 space-y-20 sm:py-24 sm:space-y-24">
-          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-purple-11 text-center">
-            <span className="inline-block px-4 py-3 transform -rotate-6 bg-yellow-9 text-purple-11">
-              {l("Über Uns")}
-            </span>
-          </h2>
-
-          <div className="flex flex-col gap-10 sm:flex-row">
-            <div className="w-full lg:pr-4">
-              <img
-                src={"images/landing/wer-wir-sind.jpg"}
-                alt="Bild von zwei Aktiviten*innen"
-              />
-            </div>
-            <div className="w-full flex flex-col justify-center text-purple-11">
-              <h3 className="title-28 md:title-32 mb-4 md:mb-6">
-                {l(
-                  "Wir sind Berliner Mieter*innen und haben den Mietenwahnsinn satt!",
-                )}
-              </h3>
-              <p className="text-lg-book mb-8">{l("Über Uns Text")}</p>
-              <a
-                className="inline-block w-fit px-4 py-3 bg-purple-9 text-white text-base-book rounded-full hover:bg-purple-10"
-                href="/ueber-uns"
-              >
-                {l("Mehr erfahren")}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="container py-20 space-y-20 sm:py-24 sm:space-y-24">
           <h2 className="flex flex-col items-center gap-y-2 title-36 sm:title-40 md:title-44 lg:title-48 text-purple-11 text-center transform -rotate-6">
             <span className="hidden sm:inline-block w-fit px-4 py-3 bg-yellow-9 text-purple-11">
               {l("Häufig gestellte Fragen")}
@@ -212,7 +180,7 @@ export default function LandingPage() {
                     <AccordionTrigger className="text-left heading-20 [&>svg]:text-purple-11 [&>svg]:h-7 [&>svg]:w-7">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base-book space-y-2">
+                    <AccordionContent className="text-base-book space-y-2 pt-2 pl-[38px]">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -233,7 +201,7 @@ export default function LandingPage() {
                     <AccordionTrigger className="text-left heading-20 [&>svg]:text-purple-11 [&>svg]:h-7 [&>svg]:w-7">
                       {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base-book space-y-2">
+                    <AccordionContent className="text-base-book space-y-2 pt-2 pl-[38px]">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>

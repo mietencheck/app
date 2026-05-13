@@ -2,7 +2,6 @@ import { createRouter } from "@swan-io/chicane";
 
 export const AppRouter = createRouter({
   Landing: "/",
-  UeberUns: "/ueber-uns",
   Login: "/login",
   Eintragen: "/eintragen",
   BeratungDetail: "/beratung/:id",
