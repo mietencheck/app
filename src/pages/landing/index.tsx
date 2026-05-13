@@ -4,38 +4,34 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "~/components";
-import { useLocaleState, useLocalizeField } from "~/l10n";
+import { useInlineLocale } from "~/l10n";
 import { Layout } from "~/pages/layout";
 
 export default function LandingPage() {
-  const l = useLocalizeField();
-
-  const { locale } = useLocaleState();
+  const l = useInlineLocale();
 
   return (
     <Layout>
       <section className="bg-purple-9">
         <div className="container pt-14 pb-36 text-center">
-          <h1 className="mx-auto max-w-[600px] title-52 sm:title-56 md:title-64 lg:title-72 text-yellow-11 mb-12">
-            {l("Ganz Berlin zahlt zu viel Miete.")}
+          <h1 className="mx-auto max-w-[600px] title-52 sm:title-56 md:title-64 lg:title-56 text-white mb-12">
+            {l({
+              de: "Check deine Miete! Kostenlos und sicher.",
+              en: "",
+            })}
           </h1>
-          <div className="mx-auto inline-flex flex-col gap-2 items-center  text-purple-11 transform -rotate-6">
-            <span className="hidden sm:inline-block title-40 md:title-44 px-4 py-3 bg-yellow-9">
-              {l("Kannst du deine senken?")}
-            </span>
-            <span className="inline-block w-fit sm:hidden title-36 px-4 py-3 bg-yellow-9">
-              {l("Kannst du")}
-            </span>
-            <span className="inline-block w-fit sm:hidden title-36 px-4 py-3 bg-yellow-9">
-              {l("deine senken?")}
-            </span>
-          </div>
+          <p className="text-lg text-white max-w-[600px] mx-auto">
+            {l({
+              de: "Überprüfe jetzt, ob deine Miete oder die bevorstehende Mieterhöhung rechtmäßig ist. Erhalte eine erste Einschätzung in weniger als 5 Minuten.",
+              en: "",
+            })}
+          </p>
         </div>
       </section>
       <section className="bg-yellow-11">
         <div className="container py-8 flex gap-10 items-center justify-center">
           <p className="text-base-medium text-purple-11">
-            {l("Eine Initiative von")}
+            {l({ de: "Eine Initiative von", en: "An initiative by" })}
           </p>
           <a href="https://dwenteignen.de/" target="_blank">
             <img
@@ -48,36 +44,42 @@ export default function LandingPage() {
       <section>
         <div className="container py-20 space-y-20 sm:py-24 sm:space-y-24">
           <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-purple-11 text-center">
-            {l("Check jetzt deine Miete!")} <br className="hidden sm:block" />{" "}
-            {l("Kostenlos und sicher.")}
+            {l({ de: "Check jetzt deine Miete!", en: "Check your rent now" })}{" "}
+            <br className="hidden sm:block" />{" "}
+            {l({ de: "Kostenlos und sicher.", en: "Free and secure." })}
           </h2>
           <div className="flex flex-col sm:flex-row gap-10">
             <a href="/schnelltest">
               <div className="p-6 sm:p-8 bg-purple-3 text-purple-11">
                 <h3 className="title-24 lg:title-28 mb-3">
-                  {l("Miete überprüfen")}
+                  {l({ de: "Miete überprüfen", en: "Check your rent" })}
                 </h3>
                 <p className="text-lg-book mb-6">
-                  {l(
-                    "Finde heraus, ob du für deine aktuelle oder neue Wohnung zu viel Miete zahlst.",
-                  )}
+                  {l({
+                    de: "Finde heraus, ob du für deine aktuelle oder neue Wohnung zu viel Miete zahlst.",
+                    en: "Find out if you are paying too much rent for your current or new apartment.",
+                  })}
                 </p>
                 <span className="inline-block px-4 py-3 text-base-book bg-purple-9 text-white rounded-full hover:bg-purple-10">
-                  {l("Jetzt checken")}
+                  {l({ de: "Jetzt checken", en: "Take the test" })}
                 </span>
               </div>
             </a>
             <div className="px-4 py-6 sm:p-8 bg-purple-3 text-purple-11">
               <h3 className="title-24 lg:title-28 mb-3">
-                {l("Mieterhöhung überprüfen")}
+                {l({
+                  de: "Mieterhöhung überprüfen",
+                  en: "Check rent increase",
+                })}
               </h3>
               <p className="text-lg-book mb-6">
-                {l(
-                  "Hast du eine Mieterhöhung bekommen? Finde heraus, ob die Erhöhung rechtens ist.",
-                )}
+                {l({
+                  de: "Hast du eine Mieterhöhung bekommen? Finde heraus, ob die Erhöhung rechtens ist.",
+                  en: "Have you received a rent increase? Find out if the increase is legal.",
+                })}
               </p>
               <span className="inline-block px-4 py-3 text-base-book bg-purple-9 text-white rounded-full opacity-50 cursor-not-allowed">
-                {l("Bald verfügbar")}
+                {l({ de: "Bald verfügbar", en: "Coming soon" })}
               </span>
             </div>
           </div>
@@ -87,43 +89,62 @@ export default function LandingPage() {
         <div className="container py-20 space-y-20 sm:py-24 sm:space-y-24">
           <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-purple-11 text-center">
             <span className="inline-block px-4 py-3 transform -rotate-6 bg-yellow-9 text-purple-11">
-              {l("So funktioniert's")}
+              {l({ de: "So funktioniert's", en: "How it works" })}
             </span>
           </h2>
 
           <div className="mx-auto max-w-screen-lg space-y-16 sm:space-y-12">
             {[
               {
-                image: "images/landing/so-funktionierts-01.jpg",
+                imageDe: "images/landing/so-funktionierts-01.jpg",
                 imageEn: "images/landing/so-funktionierts-01-en.jpg",
-                alt: l("Screenshot einer Prognose"),
+                alt: {
+                  de: "Screenshot einer Prognose",
+                  en: "Screenshot of a prediction",
+                },
                 number: "1",
-                title: l("Mach den Schnell-Test"),
-                description: l(
-                  "Finde in 5 Minuten heraus, ob du die Miete für deine aktuelle oder neue Wohnung potentiell höher als erlaubt ist.",
-                ),
+                title: {
+                  de: "Mach den Schnell-Test",
+                  en: "Take the quick test",
+                },
+                description: {
+                  de: "Finde in 5 Minuten heraus, ob du die Miete für deine aktuelle oder neue Wohnung potentiell höher als erlaubt ist.",
+                  en: "Find out in 5 minutes whether the rent for your current or new apartment is potentially higher than allowed.",
+                },
               },
               {
-                image: "images/landing/so-funktionierts-02.jpg",
+                imageDe: "images/landing/so-funktionierts-02.jpg",
                 imageEn: "images/landing/so-funktionierts-02-en.jpg",
-                alt: l("Screenshot einer Frage"),
+                alt: {
+                  de: "Screenshot einer Frage",
+                  en: "Screenshot of a question",
+                },
                 number: "2",
-                title: l(
-                  "Ermittle die zulässige Höchstmiete für deine Wohnung",
-                ),
-                description: l(
-                  "Fülle unseren Fragebogen aus und finde ganz einfach heraus, wie hoch die Miete für deine Wohnung maximal sein darf.",
-                ),
+                title: {
+                  de: "Ermittle die zulässige Höchstmiete für deine Wohnung",
+                  en: "Determine the maximum permissible rent for your apartment",
+                },
+                description: {
+                  de: "Fülle unseren Fragebogen aus und finde ganz einfach heraus, wie hoch die Miete für deine Wohnung maximal sein darf.",
+                  en: "Fill out our questionnaire and easily find out how high the maximum rent for your apartment can be.",
+                },
               },
               {
-                image: "images/landing/so-funktionierts-03.jpg",
+                imageDe: "images/landing/so-funktionierts-03.jpg",
                 imageEn: "images/landing/so-funktionierts-03-en.jpg",
-                alt: l("Screenshot eines Resultates"),
+                alt: {
+                  de: "Screenshot eines Resultates",
+                  en: "Screenshot of a result",
+                },
                 number: "3",
-                title: l("Setze dein Recht auf eine günstigere Miete durch"),
-                description: l(
-                  "Wir zeigen dir deine Möglichkeiten, wie du dein Recht auf eine günstigere Miete am besten durchsetzen kannst.",
-                ),
+                title: {
+                  de: "Setze dein Recht auf eine günstigere Miete durch",
+                  en: "Enforce your right to a cheaper rent",
+                },
+                description: {
+                  de: "Wir zeigen dir deine Möglichkeiten, wie du dein Recht auf eine günstigere Miete am besten durchsetzen kannst.",
+                  en: "We will show you your options for how you can best enforce your right to a cheaper rent.",
+                },
               },
             ].map((item) => (
               <div
@@ -132,16 +153,16 @@ export default function LandingPage() {
               >
                 <div className="w-full lg:pr-4">
                   <img
-                    src={locale == "de" ? item.image : item.imageEn}
-                    alt={item.alt}
+                    src={l({ de: item.imageDe, en: item.imageEn })}
+                    alt={l(item.alt)}
                   />
                 </div>
                 <div className="w-full flex flex-col justify-center text-purple-11">
                   <span className="flex items-center justify-center h-6 w-6 mb-4 border-2 border-purple-9 text-lg-medium text-center rounded-full">
                     {item.number}
                   </span>
-                  <h3 className="title-24 mb-2">{item.title}</h3>
-                  <p className="text-lg-book">{item.description}</p>
+                  <h3 className="title-24 mb-2">{l(item.title)}</h3>
+                  <p className="text-lg-book">{l(item.description)}</p>
                 </div>
               </div>
             ))}
@@ -152,13 +173,16 @@ export default function LandingPage() {
         <div className="container py-20 space-y-20 sm:py-24 sm:space-y-24">
           <h2 className="flex flex-col items-center gap-y-2 title-36 sm:title-40 md:title-44 lg:title-48 text-purple-11 text-center transform -rotate-6">
             <span className="hidden sm:inline-block w-fit px-4 py-3 bg-yellow-9 text-purple-11">
-              {l("Häufig gestellte Fragen")}
+              {l({
+                de: "Häufig gestellte Fragen",
+                en: "Frequently asked questions",
+              })}
             </span>
             <span className="inline-block sm:hidden w-fit px-4 py-3 bg-yellow-9 text-purple-11">
-              {l("Häufig gestellte")}
+              {l({ de: "Häufig gestellte", en: "Frequently asked" })}
             </span>
             <span className="inline-block sm:hidden w-fit px-4 py-3 bg-yellow-9 text-purple-11">
-              {l("Fragen")}
+              {l({ de: "Fragen", en: "questions" })}
             </span>
           </h2>
 
@@ -167,21 +191,93 @@ export default function LandingPage() {
               <h3 className="title-28 md:title-32 mb-8">Mietpreisbremse</h3>
               <Accordion type="single" collapsible className="gap-4">
                 {[
-                  { question: l("FAQ 1 Frage"), answer: l("FAQ 1 Antwort") },
-                  { question: l("FAQ 2 Frage"), answer: l("FAQ 2 Antwort") },
-                  { question: l("FAQ 3 Frage"), answer: l("FAQ 3 Antwort") },
-                  { question: l("FAQ 4 Frage"), answer: l("FAQ 4 Antwort") },
-                  { question: l("FAQ 5 Frage"), answer: l("FAQ 5 Antwort") },
-                  { question: l("FAQ 6 Frage"), answer: l("FAQ 6 Antwort") },
-                  { question: l("FAQ 7 Frage"), answer: l("FAQ 7 Antwort") },
-                  { question: l("FAQ 8 Frage"), answer: l("FAQ 8 Antwort") },
+                  {
+                    question: {
+                      de: "Was ist die Mietpreisbremse?",
+                      en: "What is the Rent Control Act?",
+                    },
+                    answer: {
+                      de: "Die Mietpreisbremse ist ein Gesetz, das den rasanten Anstieg der Mietpreise bremsen soll. Die Mietpreisbremse soll einerseits verhindern, dass neue Mietverträge mit zu hohen Mietpreisen abgeschlossen werden und andererseits ermöglichen, dass zu hohe Mieten gesenkt werden.",
+                      en: "The Rent Control Act is a law designed to slow down the rapid rise in rents. On the one hand, the rent freeze is intended to prevent new rental agreements being concluded with excessively high rents and, on the other, to enable excessively high rents to be reduced.",
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Was bringt die Mietpreisbremse?",
+                      en: "What are the benefits of the Rent Control Act?",
+                    },
+                    answer: {
+                      de: "Ziehst Du erfolgreich die Mietpreisbremse, musst Du zukünftig deutlich weniger Miete bezahlen und kannst die zu viel bezahlte Miete zurückverlangen. Außerdem gilt: Wenn viele Menschen erfolgreich ihre Miete senken, wird auch der Mietspiegel niedrig gehalten. Das ist wichtig, weil der Mietspiegel der Maßstab für die zulässigen Miethöhen ist.",
+                      en: "If you successfully apply the rent freeze, you will have to pay significantly less rent in future and can reclaim the rent you have paid in excess. In addition, if many people successfully reduce their rent, the rent index will also be kept low. This is important because the rent index is the benchmark for permissible rent levels. ",
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Gilt die Mietpreisbremse in ganz Berlin?",
+                      en: "Does the Rent Control apply throughout Berlin?",
+                    },
+                    answer: {
+                      de: "Die Mietpreisbremse gilt seit 2015 in ganz Berlin, denn die Mieten steigen überall sehr schnell und bezahlbarer Wohnraum ist kaum zu finden. Alle gesetzlichen Kriterien zur Bestimmung eines „angespannten Wohnungsmarktes“ sind in ganz Berlin erfüllt.",
+                      en: "The Rent Control Act has been applied throughout Berlin since 2015, because rents are rising very quickly everywhere and affordable housing is hard to find. All legal criteria for determining a “tight housing market” are met throughout Berlin.",
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Gilt die Mietpreisbremse für alle Wohnungen?",
+                      en: "Does the Rent Control apply to all apartments?",
+                    },
+                    answer: {
+                      de: "Leider nein, es gibt ein paar Ausnahmen. Ob du die Mietpreisbremse ziehen kannst, findest du mit unserem Rechner heraus!",
+                      en: "Unfortunately no, there are a few exceptions. Use our calculator to find out whether you can apply the Rent Control! ",
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Wie hoch darf die zulässige Miete sein?",
+                      en: "How high can the permitted rent be?",
+                    },
+                    answer: {
+                      de: "Die zulässige Miete richtet sich nach der ortsüblichen Vergleichsmiete. Diese wird in Berlin in der Regel nach dem Mietspiegel bestimmt. Zudem gibt es weitere Faktoren, die die zulässige Miethöhe beeinflussen können. Insbesondere durchgeführte Modernisierungsmaßnahmen können die zulässige Miete erhöhen.",
+                      en: "The permissible rent is based on the local comparative rent. In Berlin, this is usually determined according to the rent index. There are also other factors that can influence the permissible rent. In particular, modernization measures carried out can increase the permissible rent.",
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Was ist der Mietspiegel?",
+                      en: "What is the rent index?",
+                    },
+                    answer: {
+                      de: "Der Mietspiegel weist aus, wie hoch die Miete in den unterschiedlichen Berliner Gegenden sein darf. Um das festzulegen orientiert er sich an dem Durchschnitt der schon bestehenden Mieten in den jeweiligen Gegenden.",
+                      en: "The rent index shows how high the rent may be in the different areas of Berlin. To determine this, it is based on the average of existing rents in the respective areas.",
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Was mache ich, wenn meine Miete zu hoch ist?",
+                      en: "What do I do if my rent is too high?",
+                    },
+                    answer: {
+                      de: "Mieter*innen müssen einen Verstoß gegen die Mietpreisbremse rügen. Hierzu solltest Du Deinem*r Vermieter*in schriftlich die ermittelte zulässige Miethöhe mitteilen. Dein*e Vermieter*in muss dir die Auskünfte geben, die für die Prüfung der zulässigen Miethöhe benötigt werden, wenn du ihn*sie dazu aufforderst. Ausführliche Informationen zu Deinen Handlungsoptionen findest du in unserem Ratgeber.",
+                      en: "Tenants must report a violation of the rent freeze. To do this, you should inform your landlord in writing of the determined permissible rent level. Your landlord must provide you with the information required to check the permissible rent level if you ask him/her to do so. You can find detailed information in our guide.",
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Kann ich nach der Rüge einfach weniger Miete bezahlten?",
+                      en: "Can I simply pay less rent after the complaint?",
+                    },
+                    answer: {
+                      de: "Nein, das solltest Du auf keinen Fall tun! Es ist nicht auszuschließen, dass Du Dich bei der Berechnung der zulässigen Miete geirrt hast oder ein Gericht zu einer unvorhersehbaren Rechtsauffassung gelangt. In diesem Fall könntest Du schnell in einen Zahlungsverzug kommen. Dieser kann im schlimmsten Fall zu einer Kündigung durch Deine*n Vermieter*in führen.",
+                      en: "No, you should never do that! It cannot be ruled out that you have made a mistake in calculating the permissible rent or that a court has come to an unforeseeable legal conclusion. In this case, you could quickly fall into arrears. In the worst case scenario, this could lead to your landlord giving you notice to quit.",
+                    },
+                  },
                 ].map((item, i) => (
-                  <AccordionItem key={i} value={`item-${i}`}>
+                  <AccordionItem key={i} value={`mpb-${i}`}>
                     <AccordionTrigger className="text-left heading-20 [&>svg]:text-purple-11 [&>svg]:h-7 [&>svg]:w-7">
-                      {item.question}
+                      {l(item.question)}
                     </AccordionTrigger>
                     <AccordionContent className="text-base-book space-y-2 pt-2 pl-[38px]">
-                      {item.answer}
+                      {l(item.answer)}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
@@ -191,18 +287,63 @@ export default function LandingPage() {
               <h3 className="title-28 md:title-32 mb-8">mietencheck.de</h3>
               <Accordion type="single" collapsible className="gap-4">
                 {[
-                  { question: l("FAQ 9 Frage"), answer: l("FAQ 9 Antwort") },
-                  { question: l("FAQ 10 Frage"), answer: l("FAQ 10 Antwort") },
-                  { question: l("FAQ 11 Frage"), answer: l("FAQ 11 Antwort") },
-                  { question: l("FAQ 12 Frage"), answer: l("FAQ 12 Antwort") },
-                  { question: l("FAQ 13 Frage"), answer: l("FAQ 13 Antwort") },
+                  {
+                    question: {
+                      de: "Wer sind wir?",
+                      en: "Who are we?",
+                    },
+                    answer: {
+                      de: "Wir sind die Kampagne Deutsche Wohnen & Co enteignen. Wir wollen bezahlbaren Wohnraum für alle. Bei unserem Volksentscheid im Jahr 2021 haben 59,1 % der Berliner*innen für die Vergesellschaftung großer Wohnungskonzerne gestimmt. Da der Berliner Senat die Umsetzung des Volksentscheids blockiert, planen wir einen Gesetzes-Volksentscheid. Die Umsetzung eines erfolgreichen Gesetzes-Volksentscheids wäre verbindlich.",
+                      en: "We are the campaign to expropriate Deutsche Wohnen & Co. We want affordable housing for everyone. In our referendum in 2021, 59.1% of Berliners voted for the socialization of large housing companies. Since the Berlin Senate is blocking the implementation of the referendum, we are planning a legislative referendum. The implementation of a successful legislative referendum would be binding.",
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Ist das wirklich kostenlos?",
+                      en: "Is it really free?",
+                    },
+                    answer: {
+                      de: "Ja, unser Rechner ist wirklich kostenlos",
+                      en: "Yes, our calculator is really free",
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Warum macht ihr das?",
+                      en: "Why are you doing this?",
+                    },
+                    answer: {
+                      de: "Wir wollen, dass möglichst viele Mieter*innen die Mietpreisbremse ziehen. Denn wir wollen bezahlbaren Wohnraum für alle Berliner*innen.",
+                      en: "We want as many tenants as possible to use the rent cap. Because we want affordable housing for all Berliners.",
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Was passiert mit meinen Daten?",
+                      en: "What happens to my data?",
+                    },
+                    answer: {
+                      de: "Die Antworten zu den einzelnen Merkmalen des Mietenchecks bzw. Mietspiegels werden auf unseren Servern gespeichert. Dabei werden allerdings keine personenbezogenen Daten gespeichert, insbesondere erfolgt die Speicherung also ohne die angegebenen Adressdaten der Nutzer*innen. Adressdaten der Nutzer*innen werden ausschließlich dann auf unseren Servern gespeichert, wenn die Nutzer*innen sich einen Link zur späteren Weiterbeantwortung des Mietenchecks - gegebenenfalls auf einem anderen Gerät - zuschicken lassen und dabei explizit in die Speicherung ihrer Adressdaten zu diesem Zweck eingewilligt haben.",
+                      en: "The answers to the individual features of the rent check or rent index are stored on our servers. However, no personal data is stored in this process; in particular the storage takes place without the specified address data of the users. Users' address data is only stored on our servers if the users have a link sent to them for later answering the rent check - possibly on another device - and have explicitly consented to the storage of their address data for this purpose.",
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Kann ich euch unterstützen?",
+                      en: "Can I support you?",
+                    },
+                    answer: {
+                      de: "Ja! Hier findest du alle Möglichkeiten zum Mitmachen: https://dwenteignen.de/mitmachen",
+                      en: "Yes! Here you can find all the options for getting involved: https://dwenteignen.de/mitmachen",
+                    },
+                  },
                 ].map((item, i) => (
-                  <AccordionItem key={i} value={`item-${i}`}>
+                  <AccordionItem key={i} value={`mc-${i}`}>
                     <AccordionTrigger className="text-left heading-20 [&>svg]:text-purple-11 [&>svg]:h-7 [&>svg]:w-7">
-                      {item.question}
+                      {l(item.question)}
                     </AccordionTrigger>
                     <AccordionContent className="text-base-book space-y-2 pt-2 pl-[38px]">
-                      {item.answer}
+                      {l(item.answer)}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
