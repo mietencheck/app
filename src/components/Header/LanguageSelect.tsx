@@ -55,7 +55,7 @@ export function LanguageSelect({ variant = "neutral" }: LanguageSelectProps) {
     variant == "neutral"
       ? cx("relative flex items-center", buttonVariants())
       : cx(
-          "relative rounded-full !px-3 border-2 border-yellow-9 text-yellow-11 rounded-full sm:rounded-none",
+          "relative px-2.5 border-1.5 border-yellow-9 text-yellow-11 sm:rounded-none",
           "flex items-center",
           buttonVariants({ color: "unstyled", variant: "unstyled" }),
         );

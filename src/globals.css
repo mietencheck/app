@@ -12,13 +12,6 @@
 
   @font-face {
     font-family: "Ronzino";
-    font-weight: 450;
-    src: url(/fonts/Ronzino-Regular.woff2) format("woff2");
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Ronzino";
     font-weight: 500;
     src: url(/fonts/Ronzino-Medium.woff2) format("woff2");
     font-display: swap;
@@ -110,47 +103,31 @@ body {
 
 @layer components {
   .text-sm {
-    @apply text-sm/[20px] tracking-wide font-400;
-  }
-
-  .text-sm-book {
-    @apply text-sm/[20px] tracking-wide font-450;
+    @apply text-sm/[20px] font-400;
   }
 
   .text-sm-medium {
-    @apply text-sm/[20px] tracking-wide font-500;
+    @apply text-sm/[20px] font-500;
   }
 
   .text-base {
-    @apply text-base/[24px] tracking-wide font-400;
-  }
-
-  .text-base-book {
-    @apply text-base/[24px] tracking-wide font-450;
+    @apply text-base/[24px] font-400;
   }
 
   .text-base-medium {
-    @apply text-base/[24px] tracking-wide font-500;
+    @apply text-base/[24px] font-500;
   }
 
   .text-lg {
-    @apply text-lg/[27px] tracking-wide font-400;
-  }
-
-  .text-lg-book {
-    @apply text-lg/[27px] tracking-wide font-450;
+    @apply text-lg/[27px] font-400;
   }
 
   .text-lg-medium {
-    @apply text-lg/[27px] tracking-wide font-500;
+    @apply text-lg/[27px] font-500;
   }
 
   .text-xl {
-    @apply text-xl/[30px] tracking-wide font-400;
-  }
-
-  .text-xl-book {
-    @apply text-xl/[30px] tracking-wide font-450;
+    @apply text-xl/[30px] font-400;
   }
 
   .text-xl-medium {
@@ -222,19 +199,19 @@ body {
   }
 
   .title-48 {
-    @apply text-8xl/[120%] font-600 text-pretty;
+    @apply text-8xl/[110%] tracking-[-0.48px] font-600 text-pretty;
   }
 
   .title-52 {
-    @apply text-9xl/[110%] font-600 text-pretty;
+    @apply text-9xl/[100%] tracking-[-0.52px] font-600 text-pretty;
   }
 
   .title-56 {
-    @apply text-10xl/[110%] font-600 text-pretty;
+    @apply text-10xl/[100%] tracking-[-0.56px] font-600 text-pretty;
   }
 
   .title-60 {
-    @apply text-11xl/[110%] font-600 text-pretty;
+    @apply text-11xl/[100%] tracking-[-0.60px] font-600 text-pretty;
   }
 
   .title-64 {
@@ -242,11 +219,11 @@ body {
   }
 
   .title-68 {
-    @apply text-13xl/[100%] font-600 text-pretty;
+    @apply text-13xl/[100%] tracking-[-0.68px] font-600 text-pretty;
   }
 
   .title-72 {
-    @apply text-14xl/[100%] font-600 text-pretty;
+    @apply text-14xl/[100%] tracking-[-0.72px] font-600 text-pretty;
   }
 
   .typography > h1 {

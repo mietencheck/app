@@ -44,15 +44,13 @@ export function AuswertungTabPanel() {
         <div className="px-4 py-3 space-y-2 bg-gray-2 border-l-2 border-gray-6 text-gray-11 text-sm">
           <p>{l("Bester/Schlechtester Fall Erklärung Text 1")}</p>
           <p>
-            <span className="text-sm-book text-gray-12">
+            <span className="text-sm text-gray-12">
               {l("Niedrigste Miete")}:
             </span>{" "}
             {l("Bester/Schlechtester Fall Erklärung Text 2")}
           </p>
           <p>
-            <span className="text-sm-book text-gray-12">
-              {l("Höchste Miete")}
-            </span>{" "}
+            <span className="text-sm text-gray-12">{l("Höchste Miete")}</span>{" "}
             {l("Bester/Schlechtester Fall Erklärung Text 3")}
           </p>
         </div>

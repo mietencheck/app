@@ -129,7 +129,7 @@ export function BlogPostContent() {
             {title}
           </h1>
           {subtitle && (
-            <h2 className="text-lg-book text-purple-11 text-center max-w-[768px] mx-auto">
+            <h2 className="text-lg text-purple-11 text-center max-w-[768px] mx-auto">
               {subtitle}
             </h2>
           )}

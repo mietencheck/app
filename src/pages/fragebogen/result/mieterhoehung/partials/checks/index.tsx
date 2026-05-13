@@ -37,7 +37,7 @@ function CheckAccordionItem({
     >
       <AccordionTrigger className="w-full px-3 py-2 hover:bg-gray-1 hover:no-underline flex-row-reverse justify-between [&[data-state=closed]>svg]:rotate-0 [&[data-state=open]>svg]:rotate-180">
         <div className="flex-grow text-left">
-          <h4 className="text-base-book mb-0.5">{title}</h4>
+          <h4 className="text-base mb-0.5">{title}</h4>
           <p className="text-base text-gray-11">{subtitle}</p>
         </div>
         <div className="flex justify-center items-center h-[24px]">{icon}</div>

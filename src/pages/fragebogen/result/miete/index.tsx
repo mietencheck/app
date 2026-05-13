@@ -103,7 +103,7 @@ export function ResultMiete() {
 
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
-          <h3 className="text-base-book">{l("Was bedeutet das?")}</h3>
+          <h3 className="text-base">{l("Was bedeutet das?")}</h3>
           <p className="text-base text-gray-11">
             {worstDiff == bestDiff
               ? l("Ergebnis zulässige Höchstmiete", {
@@ -153,9 +153,7 @@ export function ResultMiete() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="text-base-book">
-            {l("Speicher dein Ergebnis Titel")}
-          </h3>
+          <h3 className="text-base">{l("Speicher dein Ergebnis Titel")}</h3>
           <p className="text-base text-gray-11">
             {l("Speicher dein Ergebnis Text 1")}
           </p>
@@ -200,7 +198,7 @@ export function ResultMiete() {
                     <p>{l("Beratung durch Mieterverein Text 4")}</p>
                   </div>
                   <a
-                    className="block text-base-book underline mt-4 text-gray-12"
+                    className="block text-base underline mt-4 text-gray-12"
                     href={
                       locale == "de"
                         ? "https://blog.mietencheck.de/de/2024-05-28-kostenlose-beratung-beim-berliner-mieterverein-oder-einer-anderen-mieterinnenvereinigung/"
@@ -223,7 +221,7 @@ export function ResultMiete() {
                     <p>{l("Beratung durch Bezirke Text 3")}</p>
                   </div>
                   <a
-                    className="block text-base-book underline mt-4 text-gray-12"
+                    className="block text-base underline mt-4 text-gray-12"
                     href={
                       locale == "de"
                         ? "https://blog.mietencheck.de/de/2024-05-28-kostenlose-beratung-bei-einem-berliner-bezirke/"
@@ -246,7 +244,7 @@ export function ResultMiete() {
                     <p>{l("Beratung durch Rechtsanwalt Text 3")}</p>
                   </div>
                   <a
-                    className="block text-base-book underline mt-4 text-gray-12"
+                    className="block text-base underline mt-4 text-gray-12"
                     href={
                       locale == "de"
                         ? "https://blog.mietencheck.de/de/2024-05-28-kostenpflichtige-beratung-durch-rechtsanwaltin/"

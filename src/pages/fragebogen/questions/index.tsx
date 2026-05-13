@@ -29,7 +29,7 @@ export function Node({ step }: { step: Step }) {
             htmlFor={step.id}
             alias={step.alias}
             label={step.text}
-            className="text-lg-book"
+            className="text-lg"
           />
           {step.info && (
             <FormDescription

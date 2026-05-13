@@ -61,7 +61,7 @@ export function BlogIndexContent() {
                 {l("Ratgeber")}
               </span>
             </h2>
-            <p className="text-xl-book text-purple-11 max-w-xl text-center mx-auto">
+            <p className="text-xl text-purple-11 max-w-xl text-center mx-auto">
               {l("alles was du wissen musst über die Mietpreisbremse")}
             </p>
           </div>
@@ -87,8 +87,8 @@ export function BlogIndexContent() {
                 <h3 className="title-24 mb-3 md:title-28">
                   {l("FAQ 1 Frage")}
                 </h3>
-                <p className="text-lg-book mb-8">FAQ</p>
-                <span className="bg-purple-9 text-base-book rounded-full text-white px-4 py-3 self-start hover:bg-purple-10">
+                <p className="text-lg mb-8">FAQ</p>
+                <span className="bg-purple-9 text-base text-white px-4 py-3 self-start hover:bg-purple-10">
                   {l("Artikel Lesen")}
                 </span>
               </div>
@@ -136,7 +136,7 @@ export function BlogIndexContent() {
                       )}
                       <div className="w-full text-purple-11">
                         <h3 className="title-22 mb-3">{title}</h3>
-                        {subtitle && <p className="text-lg-book">{subtitle}</p>}
+                        {subtitle && <p className="text-lg">{subtitle}</p>}
                       </div>
                     </article>
                   </a>

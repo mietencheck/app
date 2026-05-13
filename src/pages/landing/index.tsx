@@ -13,15 +13,12 @@ export default function LandingPage() {
   return (
     <Layout>
       <section className="bg-purple-9">
-        <div className="container grid grid-cols-12 gap-12 py-24 text-center">
-          <div className="col-start-3 col-span-8">
-            <h1 className="title-52 sm:title-56 md:title-64 lg:title-64 text-white mb-8">
-              {l({
-                de: "Check deine Miete! Kostenlos und sicher.",
-                en: "",
-              })}
+        <div className="container sm:grid sm:grid-cols-12 gap-12 py-24 text-center">
+          <div className="sm:col-span-12 xl:col-start-3 xl:col-span-8">
+            <h1 className="title-48 sm:title-56 md:title-60 lg:title-64 text-white mb-8">
+              Wir setzen dein Recht auf faire Mieten durch!
             </h1>
-            <p className="text-xl text-white mb-20">
+            <p className="text-xl text-white mb-16">
               {l({
                 de: "Überprüfe jetzt, ob deine Miete oder die bevorstehende Mieterhöhung rechtmäßig ist. Erhalte eine erste Einschätzung in weniger als 5 Minuten.",
                 en: "",
@@ -29,7 +26,7 @@ export default function LandingPage() {
             </p>
             <a
               href="/schnelltest"
-              className="bg-red-9 text-white text-lg px-4 py-3 inline-block"
+              className="bg-red-9 font-[500] text-white text-lg px-4 py-3 inline-block"
             >
               {l({
                 de: "Jetzt Miete checken",
@@ -45,48 +42,52 @@ export default function LandingPage() {
             {l({ de: "Eine Initiative der", en: "An initiative by" })}
           </p>
           <a href="https://mietenlawclinic.de/" target="_blank">
-            <img src="/images/milc-logo.svg" alt="Mieten Law Clinic e.V." />
+            <img
+              src="/images/milc-logo.svg"
+              className="h-[40px]"
+              alt="Mieten Law Clinic e.V."
+            />
           </a>
         </div>
       </section>
       <section>
         <div className="container py-20 space-y-20 sm:py-24 sm:space-y-24">
-          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-purple-11 text-center">
+          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-center">
             {l({ de: "Check jetzt deine Miete!", en: "Check your rent now" })}{" "}
             <br className="hidden sm:block" />{" "}
             {l({ de: "Kostenlos und sicher.", en: "Free and secure." })}
           </h2>
           <div className="flex flex-col sm:flex-row gap-10">
             <a href="/schnelltest">
-              <div className="p-6 sm:p-8 bg-purple-3 text-purple-11">
+              <div className="p-6 sm:p-8 bg-purple-3">
                 <h3 className="title-24 lg:title-28 mb-3">
                   {l({ de: "Miete überprüfen", en: "Check your rent" })}
                 </h3>
-                <p className="text-lg-book mb-6">
+                <p className="text-lg mb-6 text-gray-11">
                   {l({
                     de: "Finde heraus, ob du für deine aktuelle oder neue Wohnung zu viel Miete zahlst.",
                     en: "Find out if you are paying too much rent for your current or new apartment.",
                   })}
                 </p>
-                <span className="inline-block px-4 py-3 text-base-book bg-purple-9 text-white rounded-full hover:bg-purple-10">
+                <span className="inline-block px-4 py-3 text-base bg-purple-9 text-white hover:bg-purple-10">
                   {l({ de: "Jetzt checken", en: "Take the test" })}
                 </span>
               </div>
             </a>
-            <div className="px-4 py-6 sm:p-8 bg-purple-3 text-purple-11">
+            <div className="px-4 py-6 sm:p-8 bg-red-3 text-gray-1">
               <h3 className="title-24 lg:title-28 mb-3">
                 {l({
                   de: "Mieterhöhung überprüfen",
                   en: "Check rent increase",
                 })}
               </h3>
-              <p className="text-lg-book mb-6">
+              <p className="text-lg mb-6 text-gray-11">
                 {l({
                   de: "Hast du eine Mieterhöhung bekommen? Finde heraus, ob die Erhöhung rechtens ist.",
                   en: "Have you received a rent increase? Find out if the increase is legal.",
                 })}
               </p>
-              <span className="inline-block px-4 py-3 text-base-book bg-purple-9 text-white rounded-full opacity-50 cursor-not-allowed">
+              <span className="inline-block px-4 py-3 text-base bg-red-9 text-white opacity-50 cursor-not-allowed">
                 {l({ de: "Bald verfügbar", en: "Coming soon" })}
               </span>
             </div>
@@ -95,10 +96,8 @@ export default function LandingPage() {
       </section>
       <section>
         <div className="container py-20 space-y-20 sm:py-24 sm:space-y-24">
-          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-purple-11 text-center">
-            <span className="inline-block px-4 py-3 transform -rotate-6 bg-yellow-9 text-purple-11">
-              {l({ de: "So funktioniert's", en: "How it works" })}
-            </span>
+          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-gray-12 text-center">
+            {l({ de: "So funktioniert's", en: "How it works" })}
           </h2>
 
           <div className="mx-auto max-w-screen-lg space-y-16 sm:space-y-12">
@@ -166,11 +165,13 @@ export default function LandingPage() {
                   />
                 </div>
                 <div className="w-full flex flex-col justify-center text-purple-11">
-                  <span className="flex items-center justify-center h-6 w-6 mb-4 border-2 border-purple-9 text-lg-medium text-center rounded-full">
-                    {item.number}
-                  </span>
-                  <h3 className="title-24 mb-2">{l(item.title)}</h3>
-                  <p className="text-lg-book">{l(item.description)}</p>
+                  <div className="flex items-center justify-center h-6 w-6 mb-4 bg-purple-9 text-white text-lg-medium text-center rounded-full">
+                    <span className="w-6 text-center">{item.number}</span>
+                  </div>
+                  <h3 className="title-24 mb-2 text-gray-12">
+                    {l(item.title)}
+                  </h3>
+                  <p className="text-lg text-gray-11">{l(item.description)}</p>
                 </div>
               </div>
             ))}
@@ -179,19 +180,11 @@ export default function LandingPage() {
       </section>
       <section>
         <div className="container py-20 space-y-20 sm:py-24 sm:space-y-24">
-          <h2 className="flex flex-col items-center gap-y-2 title-36 sm:title-40 md:title-44 lg:title-48 text-purple-11 text-center transform -rotate-6">
-            <span className="hidden sm:inline-block w-fit px-4 py-3 bg-yellow-9 text-purple-11">
-              {l({
-                de: "Häufig gestellte Fragen",
-                en: "Frequently asked questions",
-              })}
-            </span>
-            <span className="inline-block sm:hidden w-fit px-4 py-3 bg-yellow-9 text-purple-11">
-              {l({ de: "Häufig gestellte", en: "Frequently asked" })}
-            </span>
-            <span className="inline-block sm:hidden w-fit px-4 py-3 bg-yellow-9 text-purple-11">
-              {l({ de: "Fragen", en: "questions" })}
-            </span>
+          <h2 className="flex flex-col items-center gap-y-2 title-36 sm:title-40 md:title-44 lg:title-48 text-center">
+            {l({
+              de: "Häufig gestellte Fragen",
+              en: "Frequently asked questions",
+            })}
           </h2>
 
           <div className="flex flex-col gap-10 md:flex-row text-purple-11">
@@ -284,7 +277,7 @@ export default function LandingPage() {
                     <AccordionTrigger className="text-left heading-20 [&>svg]:text-purple-11 [&>svg]:h-7 [&>svg]:w-7">
                       {l(item.question)}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base-book space-y-2 pt-2 pl-[38px]">
+                    <AccordionContent className="text-base space-y-2 pt-2 pl-[38px]">
                       {l(item.answer)}
                     </AccordionContent>
                   </AccordionItem>
@@ -350,7 +343,7 @@ export default function LandingPage() {
                     <AccordionTrigger className="text-left heading-20 [&>svg]:text-purple-11 [&>svg]:h-7 [&>svg]:w-7">
                       {l(item.question)}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base-book space-y-2 pt-2 pl-[38px]">
+                    <AccordionContent className="text-base space-y-2 pt-2 pl-[38px]">
                       {l(item.answer)}
                     </AccordionContent>
                   </AccordionItem>

@@ -19,7 +19,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       >
         <div className="container flex justify-between items-center gap-8 py-4">
           <a href="/" className="title-16 text-yellow-11">
-            mietencheck.de
+            <img src="/images/mietencheck-logo.svg" alt="Mietencheck Logo" />
           </a>
           <div className="flex flex-row gap-4 sm:gap-8">
             <div className="flex gap-6 items-center sm:hidden">
@@ -40,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   href={
                     locale === "en" ? AppRouter.BlogEn() : AppRouter.BlogDe()
                   }
-                  className="text-base-medium text-yellow-11 hover:underline"
+                  className="text-base-medium text-gray-12 hover:underline"
                 >
                   {l("Ratgeber")}
                 </a>
@@ -48,7 +48,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <div className="flex gap-3">
                 <LanguageSelect variant="yellow" />
                 <a
-                  className="inline-block px-3 py-3 bg-yellow-9 text-purple-11 text-base-medium border-2 border-yellow-9 rounded-full hover:bg-yellow-10 hover:border-yellow-10"
+                  className="inline-block px-2.5 py-1.5 bg-black text-white text-base-medium border border-black hover:bg-gray-12 hover:border-gray-12"
                   href="/schnelltest"
                 >
                   {l("Miete checken")}
@@ -85,7 +85,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               {l("Kostenlos und sicher.")}
             </h2>
             <a
-              className="inline-block px-5 py-3 bg-purple-9 text-yellow-11 text-xl-book rounded-full hover:bg-purple-10"
+              className="inline-block px-5 py-3 bg-purple-9 text-yellow-11 text-xl rounded-full hover:bg-purple-10"
               href="/schnelltest"
             >
               {l("Miete checken")}
@@ -110,7 +110,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             ].map((item) => (
               <a
                 key={item.label}
-                className="inline-block flex-shrink-0 px-4 py-2.5 bg-yellow-9 text-purple-11 text-base-book rounded-full hover:bg-yellow-10 sm:text-lg-book"
+                className="inline-block flex-shrink-0 px-4 py-2.5 bg-yellow-9 text-purple-11 text-base rounded-full hover:bg-yellow-10 sm:text-lg"
                 target={item.target ? item.target : ""}
                 href={item.href}
               >

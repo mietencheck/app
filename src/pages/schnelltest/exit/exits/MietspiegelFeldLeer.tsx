@@ -18,7 +18,7 @@ export function ExitMietspiegelFeldLeer() {
             en: "Unfortunately, there are some cases in every Berlin rent index for which no local comparative rent is given. This is because there was not enough data available to calculate a statistically reliable local comparative rent.",
           })}
         </p>
-        <p className="text-base-book">
+        <p className="text-base">
           {l({
             de: "Dies bedeutet jedoch nicht, dass die Mietpreisbremse nicht für deine Wohnung gilt!",
             en: "However, this does not mean that the Rent Control Act (Mietpreisbremse) does not apply to your apartment!",

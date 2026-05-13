@@ -6,7 +6,7 @@ import { Button as AriaButton, type ButtonProps } from "react-aria-components";
 import { mergeRefs } from "react-merge-refs";
 
 export const buttonVariants = cva(
-  "flex gap-1.5 font-450 rounded focus-visible:outline-none focus-visible:3 focus-visible:ring-purple-5 focus-visible:border-purple-9",
+  "flex gap-1.5 font-500 focus-visible:outline-none focus-visible:3 focus-visible:ring-purple-5 focus-visible:border-purple-9",
   {
     variants: {
       color: {
