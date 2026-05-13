@@ -15,7 +15,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <header
-        className={`sticky left-0 right-0 top-0 ${menu ? "bg-purple-10" : "bg-purple-9"}  z-50`}
+        className={`sticky left-0 right-0 top-0 ${menu ? "bg-purple-10" : "bg-white"}  z-50`}
       >
         <div className="container flex justify-between items-center gap-8 py-4">
           <a href="/" className="title-16 text-yellow-11">

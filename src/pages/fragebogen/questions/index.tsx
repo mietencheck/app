@@ -60,7 +60,7 @@ export function Node({ step }: { step: Step }) {
 
     case "Info":
       return (
-        <div className="px-4 py-3 bg-amber-2 border-l-2 border-amber-6 text-amber-11">
+        <div className="px-4 py-3 bg-yellow-2 border-l-2 border-yellow-6 text-yellow-11">
           {l(step.alias)}
         </div>
       );

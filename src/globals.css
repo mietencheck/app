@@ -20,7 +20,7 @@
   @font-face {
     font-family: "Ronzino";
     font-weight: 500;
-    src: url(/fonts/Ronzino-Regular.woff2) format("woff2");
+    src: url(/fonts/Ronzino-Medium.woff2) format("woff2");
     font-display: swap;
   }
 
@@ -68,37 +68,35 @@
     --color-purple-11: oklch(51.1% 0.2613 295.5);
     --color-purple-12: oklch(31.6% 0.1619 295.5);
 
+    --color-blue-1: oklch(99.2% 0.0037 237.4);
+    --color-blue-2: oklch(98.1% 0.0091 237.4);
+    --color-blue-3: oklch(95.9% 0.0247 237.4);
+    --color-blue-4: oklch(93.4% 0.0404 237.4);
+    --color-blue-5: oklch(90.2% 0.0541 237.4);
+    --color-blue-6: oklch(86.1% 0.0674 237.4);
+    --color-blue-7: oklch(80.6% 0.0849 237.4);
+    --color-blue-8: oklch(73% 0.1156 237.4);
+    --color-blue-9: oklch(66.6% 0.1463 237.4);
+    --color-blue-10: oklch(62.7% 0.1381 237.4);
+    --color-blue-11: oklch(54.6% 0.1463 237.4);
+    --color-blue-12: oklch(32.9% 0.0655 237.4);
+
+    --color-red-1: oklch(99.4% 0.0041 29.23);
+    --color-red-2: oklch(98.4% 0.0098 29.23);
+    --color-red-3: oklch(95.5% 0.0288 29.23);
+    --color-red-4: oklch(92.7% 0.0625 29.23);
+    --color-red-5: oklch(89.3% 0.0828 29.23);
+    --color-red-6: oklch(85.4% 0.1012 29.23);
+    --color-red-7: oklch(80.4% 0.1234 29.23);
+    --color-red-8: oklch(74.2% 0.1553 29.23);
+    --color-red-9: oklch(62.8% 0.2577 29.23);
+    --color-red-10: oklch(58.7% 0.2599 29.23);
+    --color-red-11: oklch(56.4% 0.2577 29.23);
+    --color-red-12: oklch(34.4% 0.1158 29.23);
+
     --color-yellow-9: #fdd817;
     --color-yellow-10: #f0cc0f;
     --color-yellow-11: #fdd817;
-  }
-
-  :root[data-theme="old"] {
-    --color-gray-1: #f7f7f7;
-    --color-gray-2: #f2f2f2;
-    --color-gray-3: #ededed;
-    --color-gray-4: #e8e8e8;
-    --color-gray-5: #e3e3e3;
-    --color-gray-6: #e2e2e2;
-    --color-gray-7: #c7c7c7;
-    --color-gray-8: #b2b2b2;
-    --color-gray-9: #8f8f8f;
-    --color-gray-10: #858585;
-    --color-gray-11: #6f6f6f;
-    --color-gray-12: #171717;
-
-    --color-purple-1: #fefcfe;
-    --color-purple-2: #fdfaff;
-    --color-purple-3: #f9f1fe;
-    --color-purple-4: #f3e7fc;
-    --color-purple-5: #eddbf9;
-    --color-purple-6: #e3ccf4;
-    --color-purple-7: #c094e5;
-    --color-purple-8: #ac74dc;
-    --color-purple-9: #8e4ec6;
-    --color-purple-10: #8445bc;
-    --color-purple-11: #793aaf;
-    --color-purple-12: #2b0e44;
   }
 }
 
@@ -112,47 +110,47 @@ body {
 
 @layer components {
   .text-sm {
-    @apply text-sm/[20px] font-400;
+    @apply text-sm/[20px] tracking-wide font-400;
   }
 
   .text-sm-book {
-    @apply text-sm/[20px] font-450;
+    @apply text-sm/[20px] tracking-wide font-450;
   }
 
   .text-sm-medium {
-    @apply text-sm/[20px] font-500;
+    @apply text-sm/[20px] tracking-wide font-500;
   }
 
   .text-base {
-    @apply text-base/[24px] font-400;
+    @apply text-base/[24px] tracking-wide font-400;
   }
 
   .text-base-book {
-    @apply text-base/[24px] font-450;
+    @apply text-base/[24px] tracking-wide font-450;
   }
 
   .text-base-medium {
-    @apply text-base/[24px] font-500;
+    @apply text-base/[24px] tracking-wide font-500;
   }
 
   .text-lg {
-    @apply text-lg/[27px] font-400;
+    @apply text-lg/[27px] tracking-wide font-400;
   }
 
   .text-lg-book {
-    @apply text-lg/[27px] font-450;
+    @apply text-lg/[27px] tracking-wide font-450;
   }
 
   .text-lg-medium {
-    @apply text-lg/[27px] font-500;
+    @apply text-lg/[27px] tracking-wide font-500;
   }
 
   .text-xl {
-    @apply text-xl/[30px] font-400;
+    @apply text-xl/[30px] tracking-wide font-400;
   }
 
   .text-xl-book {
-    @apply text-xl/[30px] font-450;
+    @apply text-xl/[30px] tracking-wide font-450;
   }
 
   .text-xl-medium {
@@ -240,15 +238,15 @@ body {
   }
 
   .title-64 {
-    @apply text-12xl/[110%] font-600 text-pretty;
+    @apply text-12xl/[100%] tracking-[-0.64px] font-600 text-pretty;
   }
 
   .title-68 {
-    @apply text-13xl/[110%] font-600 text-pretty;
+    @apply text-13xl/[100%] font-600 text-pretty;
   }
 
   .title-72 {
-    @apply text-14xl/[110%] font-600 text-pretty;
+    @apply text-14xl/[100%] font-600 text-pretty;
   }
 
   .typography > h1 {

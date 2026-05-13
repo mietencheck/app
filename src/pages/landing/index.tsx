@@ -13,31 +13,39 @@ export default function LandingPage() {
   return (
     <Layout>
       <section className="bg-purple-9">
-        <div className="container pt-14 pb-36 text-center">
-          <h1 className="mx-auto max-w-[600px] title-52 sm:title-56 md:title-64 lg:title-56 text-white mb-12">
-            {l({
-              de: "Check deine Miete! Kostenlos und sicher.",
-              en: "",
-            })}
-          </h1>
-          <p className="text-lg text-white max-w-[600px] mx-auto">
-            {l({
-              de: "Überprüfe jetzt, ob deine Miete oder die bevorstehende Mieterhöhung rechtmäßig ist. Erhalte eine erste Einschätzung in weniger als 5 Minuten.",
-              en: "",
-            })}
-          </p>
+        <div className="container grid grid-cols-12 gap-12 py-24 text-center">
+          <div className="col-start-3 col-span-8">
+            <h1 className="title-52 sm:title-56 md:title-64 lg:title-64 text-white mb-8">
+              {l({
+                de: "Check deine Miete! Kostenlos und sicher.",
+                en: "",
+              })}
+            </h1>
+            <p className="text-xl text-white mb-20">
+              {l({
+                de: "Überprüfe jetzt, ob deine Miete oder die bevorstehende Mieterhöhung rechtmäßig ist. Erhalte eine erste Einschätzung in weniger als 5 Minuten.",
+                en: "",
+              })}
+            </p>
+            <a
+              href="/schnelltest"
+              className="bg-red-9 text-white text-lg px-4 py-3 inline-block"
+            >
+              {l({
+                de: "Jetzt Miete checken",
+                en: "",
+              })}
+            </a>
+          </div>
         </div>
       </section>
-      <section className="bg-yellow-11">
+      <section className="bg-blue-8">
         <div className="container py-8 flex gap-10 items-center justify-center">
-          <p className="text-base-medium text-purple-11">
-            {l({ de: "Eine Initiative von", en: "An initiative by" })}
+          <p className="text-base-medium text-white">
+            {l({ de: "Eine Initiative der", en: "An initiative by" })}
           </p>
-          <a href="https://dwenteignen.de/" target="_blank">
-            <img
-              src="/images/dwe-logo.svg"
-              alt="Deutsche Wohnen & Co Enteignen Logo"
-            />
+          <a href="https://mietenlawclinic.de/" target="_blank">
+            <img src="/images/milc-logo.svg" alt="Mieten Law Clinic e.V." />
           </a>
         </div>
       </section>
