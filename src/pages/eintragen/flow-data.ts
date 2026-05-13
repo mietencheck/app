@@ -54,6 +54,7 @@ export function evaluationAnswersToBeratungRecord(
   const sonderRaw = getSondermerkmalStates(answers, visible);
 
   const record: BeratungRecord = {
+    typ: "Miete",
     vertragsdatum: vd as BeratungRecord["vertragsdatum"],
     wohnflaeche,
     baujahrSpanne,

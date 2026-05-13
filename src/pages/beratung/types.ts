@@ -13,6 +13,7 @@ export type MerkmaleByGruppe = Record<
 export type WorstBest = { worst: number; best: number };
 
 export type BeratungRecord = {
+  typ: "Miete" | "Mieterhöhung";
   vertragsdatum: keyof typeof vertragsdatumToMietspiegelJahrMapping;
   wohnflaeche: number;
   baujahrSpanne: string;
