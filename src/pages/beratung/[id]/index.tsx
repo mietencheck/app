@@ -64,7 +64,7 @@ function BeratungDetailHeading() {
     <div className="mb-8">
       <Link
         href={AppRouter.Beratung()}
-        className="text-sm font-450 text-primary-solid underline"
+        className="text-sm font-450 text-purple-11-solid underline"
       >
         Zur Übersicht
       </Link>
@@ -386,7 +386,7 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
     return (
       <Layout>
         <BeratungDetailHeading />
-        <p className="text-sm text-neutral-faded">
+        <p className="text-sm text-gray-11">
           Lade Beratungsdaten aus dem Backend…
         </p>
       </Layout>
@@ -415,7 +415,7 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
           <h2 className="heading-22">Angaben</h2>
           <div className="flex flex-col gap-4 rounded-lg border border-gray-6 rounded bg-white p-4">
             <div>
-              <dt className="text-neutral-faded">Vertragsdatum</dt>
+              <dt className="text-gray-11">Vertragsdatum</dt>
               <dd>
                 <Select
                   aria-label="Vertragsdatum"
@@ -436,7 +436,7 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
               </dd>
             </div>
             <div>
-              <dt className="text-neutral-faded">Baujahr Spanne</dt>
+              <dt className="text-gray-11">Baujahr Spanne</dt>
               <dd>
                 <Select
                   aria-label="Baujahr Spanne"
@@ -455,7 +455,7 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
               </dd>
             </div>
             <div>
-              <dt className="text-neutral-faded">Wohnflaeche Spanne</dt>
+              <dt className="text-gray-11">Wohnflaeche Spanne</dt>
               <dd>
                 <NumberInput
                   aria-label="Wohnflaeche in qm"
@@ -466,14 +466,14 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
                     setWohnflaeche(parsed);
                   }}
                 />
-                <p className="mt-1 text-xs text-neutral-faded">
+                <p className="mt-1 text-xs text-gray-11">
                   Erkannte Spanne:{" "}
                   {selectedWohnflaecheSpanne ?? "keine passende Spanne"}
                 </p>
               </dd>
             </div>
             <div>
-              <dt className="text-neutral-faded">Wohnlage</dt>
+              <dt className="text-gray-11">Wohnlage</dt>
               <dd>
                 <Select
                   aria-label="Wohnlage"
@@ -492,7 +492,7 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
               </dd>
             </div>
             <div>
-              <dt className="text-neutral-faded">Ausstattung</dt>
+              <dt className="text-gray-11">Ausstattung</dt>
               <dd>
                 Sammelheizung: {beratungRecord.ausstattung.sammelheizung}, Bad:{" "}
                 {beratungRecord.ausstattung.bad}
@@ -504,7 +504,7 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
           <section className="flex flex-col gap-4">
             <h2 className="heading-22">Sondermerkmale</h2>
             <div className="rounded border border-gray-6">
-              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 bg-gray-1 px-4 py-2 text-neutral-faded">
+              <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 bg-gray-1 px-4 py-2 text-gray-11">
                 <span>Merkmal</span>
                 <span>Bewertung</span>
               </div>
@@ -542,7 +542,7 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
                   <h3 className="px-4 py-4 border-b border-gray-6 text-base-medium">
                     {subgroupLabels[subKey]}
                   </h3>
-                  <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 bg-gray-1 px-4 py-2 text-neutral-faded">
+                  <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 bg-gray-1 px-4 py-2 text-gray-11">
                     <span>Merkmal</span>
                     <span>Bewertung</span>
                   </div>
@@ -573,7 +573,7 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
         <section className="max-w-2xl">
           <h2 className="heading-22">Auswertung</h2>
           {!resultData ? (
-            <p className="mt-2 text-neutral-faded">Nicht berechenbar</p>
+            <p className="mt-2 text-gray-11">Nicht berechenbar</p>
           ) : (
             <div className="mt-4 flex flex-col gap-8 rounded border border-gray-6 bg-white p-4">
               {resultData.ausstattungsAbzug.best !==

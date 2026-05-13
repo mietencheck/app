@@ -23,7 +23,7 @@ export function Result() {
             {l("Fragebogen nicht vollständig ausgefüllt Titel")}
           </h2>
 
-          <div className="text-neutral-faded">
+          <div className="text-gray-11">
             {l("Fragebogen nicht vollständig ausgefüllt Text")}
           </div>
         </div>

@@ -58,7 +58,7 @@ export function SpanneneinordungTable() {
                   <TableCell className="w-40 text-right">
                     <Percent value={percent.best} />{" "}
                     {location.hash == "#debug" && (
-                      <span className="text-neutral-faded">{percent.best}</span>
+                      <span className="text-gray-11">{percent.best}</span>
                     )}
                   </TableCell>
                 </TableRow>
@@ -108,7 +108,7 @@ export function SpanneneinordungTable() {
                 </TableCell>
               </TableRow>
               <TableRow className="sm:hidden border-b-0">
-                <TableCell className="text-neutral-faded pb-0">
+                <TableCell className="text-gray-11 pb-0">
                   {l("Niedrigste Miete")}
                 </TableCell>
                 <TableCell className="w-40 text-right pb-0">
@@ -116,7 +116,7 @@ export function SpanneneinordungTable() {
                 </TableCell>
               </TableRow>
               <TableRow className="sm:hidden">
-                <TableCell className="text-neutral-faded">
+                <TableCell className="text-gray-11">
                   {l("Höchste Miete")}
                 </TableCell>
                 <TableCell className="w-40 text-right">
@@ -142,7 +142,7 @@ export function SpanneneinordungTable() {
           </TableCell>
         </TableRow>
         <TableRow className="sm:hidden border-b-0">
-          <TableCell className="text-neutral-faded pb-0">
+          <TableCell className="text-gray-11 pb-0">
             {l("Niedrigste Miete")}
           </TableCell>
           <TableCell className="w-40 text-right pb-0">
@@ -150,9 +150,7 @@ export function SpanneneinordungTable() {
           </TableCell>
         </TableRow>
         <TableRow className="sm:hidden">
-          <TableCell className="text-neutral-faded">
-            {l("Höchste Miete")}
-          </TableCell>
+          <TableCell className="text-gray-11">{l("Höchste Miete")}</TableCell>
           <TableCell className="w-40 text-right">
             <Percent value={worstSpanneneinordung} />
           </TableCell>

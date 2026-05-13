@@ -20,7 +20,7 @@ export function ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten() {
         Die Mieterhöhung ist in ihrer Höhe nicht rechtmäßig, da die
         Kappungsgrenze überschritten wurde.
       </h2>
-      <div className="space-y-3 text-neutral-faded mb-6">
+      <div className="space-y-3 text-gray-11 mb-6">
         <p>
           Vermieter dürfen die Miete innerhalb von drei Jahren insgesamt um
           maximal 15 Prozent erhöhen. Dies ist die sogenannte Kappungsgrenze.
@@ -39,9 +39,9 @@ export function ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten() {
         </p>
       </div>
 
-      <div className="space-y-2 mb-6 text-neutral-faded">
-        <h3 className="text-base-medium text-neutral">Was nun?</h3>
-        <div className="space-y-3 text-neutral-faded mb-6">
+      <div className="space-y-2 mb-6 text-gray-11">
+        <h3 className="text-base-medium text-gray-12">Was nun?</h3>
+        <div className="space-y-3 text-gray-11 mb-6">
           <p>
             Du musst der Mieterhöhung nicht zustimmen. Wir empfehlen dir deinen
             Vermieter auf diese Tatsache hinzuweisen.

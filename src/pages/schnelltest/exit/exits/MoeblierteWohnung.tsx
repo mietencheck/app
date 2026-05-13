@@ -11,7 +11,7 @@ export function ExitMoeblierteWohnung() {
           en: "Unfortunately, furnished apartments are a special case and we cannot help you with that.",
         })}
       </h2>
-      <div className="space-y-3 text-neutral-faded">
+      <div className="space-y-3 text-gray-11">
         <p>
           {l({
             de: "Leider ist die Rechtsprechung bei möblierten Wohnungen nicht einheitlich. Wir empfehlen dir, deinen Fall mit einem*r Mietrechtsexperten*in zu besprechen.",

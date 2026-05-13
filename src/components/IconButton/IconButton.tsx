@@ -5,7 +5,7 @@ import { Button as AriaButton, type ButtonProps } from "react-aria-components";
 import { mergeRefs } from "react-merge-refs";
 
 const iconButtonVariants = cva(
-  "flex gap-1.5 font-450 rounded focus-visible:outline-none focus-visible:3 focus-visible:ring-primary focus-visible:border-primary-solid",
+  "flex gap-1.5 font-450 rounded focus-visible:outline-none focus-visible:3 focus-visible:ring-purple-5 focus-visible:border-purple-9",
   {
     variants: {
       color: {
@@ -30,38 +30,38 @@ const iconButtonVariants = cva(
         color: "neutral",
         variant: "solid",
         class:
-          "bg-neutral-solid text-on-neutral border-neutral-solid hover:bg-neutral-solid-hover hover:border-neutral-solid-hover active:bg-neutral-solid-active focus-visible:bg-neutral-solid",
+          "bg-gray-9 text-white border-gray-9 hover:bg-gray-10 hover:border-gray-10 active:bg-gray-11 focus-visible:bg-gray-9",
       },
       {
         color: "neutral",
         variant: "outline",
         class:
-          "bg-white border-neutral hover:bg-neutral-hover hover:border-neutral-hover active:bg-neutral-active focus-visible:bg-white focus-visible:ring-3 focus-visible:ring-primary",
+          "bg-white border-gray-7 hover:bg-gray-4 hover:border-gray-8 active:bg-gray-5 focus-visible:bg-white focus-visible:ring-3 focus-visible:ring-purple-5",
       },
       {
         color: "neutral",
         variant: "ghost",
         class:
-          "bg-transparent text-neutral-faded border-transparent hover:bg-neutral-hover hover:text-neutral hover:border-transparent active:bg-neutral-active focus-visible:bg-transparent",
+          "bg-transparent text-gray-11 border-transparent hover:bg-gray-4 hover:text-gray-12 hover:border-transparent active:bg-gray-5 focus-visible:bg-transparent",
       },
 
       {
         color: "primary",
         variant: "solid",
         class:
-          "bg-primary-solid text-on-primary border-primary-solid hover:bg-primary-solid-hover hover:border-primary-solid-hover active:bg-primary-solid-active focus-visible:bg-primary-solid focus-visible:ring-3 focus-visible:ring-primary",
+          "bg-purple-9 text-white border-purple-9 hover:bg-purple-10 hover:border-purple-10 active:bg-purple-11 focus-visible:bg-purple-9 focus-visible:ring-3 focus-visible:ring-purple-5",
       },
       {
         color: "primary",
         variant: "outline",
         class:
-          "bg-white border-primary text-primary hover:bg-primary-hover hover:border-primary-hover active:bg-primary-active focus-visible:bg-white focus-visible:ring-3 focus-visible:ring-primary",
+          "bg-white border-purple-7 text-purple-11 hover:bg-purple-4 hover:border-purple-8 active:bg-purple-5 focus-visible:bg-white focus-visible:ring-3 focus-visible:ring-purple-5",
       },
       {
         color: "primary",
         variant: "ghost",
         class:
-          "text-primary bg-transparent border-transparent hover:bg-primary-hover hover:border-primary-hover active:bg-primary-active focus-visible:bg-white",
+          "text-purple-11 bg-transparent border-transparent hover:bg-purple-4 hover:border-purple-8 active:bg-purple-5 focus-visible:bg-white",
       },
     ],
     defaultVariants: {

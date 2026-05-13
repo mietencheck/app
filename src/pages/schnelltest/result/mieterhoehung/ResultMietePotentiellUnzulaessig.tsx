@@ -40,7 +40,7 @@ export function ResultMieterhoehungPotentiellUnzulaessig() {
         zu hoch und damit unzulässig sein.
       </h2>
       <h3 className="text-base-medium mb-2">{l("Was bedeutet das?")}</h3>
-      <div className="text-neutral-faded space-y-2 mb-6">
+      <div className="text-gray-11 space-y-2 mb-6">
         <p>
           Der Vermieter möchte die Miete von {formatEuro(nettokaltmiete)} auf{" "}
           {formatEuro(geforderteNettokaltmiete)} erhöhen.{" "}
@@ -60,7 +60,7 @@ export function ResultMieterhoehungPotentiellUnzulaessig() {
       </div>
 
       <h3 className="text-base-medium mb-2">{l("Was nun?")}</h3>
-      <div className="text-neutral-faded space-y-2 mb-6">
+      <div className="text-gray-11 space-y-2 mb-6">
         <p>
           Um einen genauen Wert für die zulässige Höchstmiete zu berechnen,
           musst du den vollständigen Fragebogen zu der Wohnung beantworten. Dies

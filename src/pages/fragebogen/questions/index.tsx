@@ -35,7 +35,7 @@ export function Node({ step }: { step: Step }) {
             <FormDescription
               alias={step.alias}
               description={step.info}
-              className="text-base text-neutral-faded mt-1.5"
+              className="text-base text-gray-11 mt-1.5"
             />
           )}
           <div className="mt-4">

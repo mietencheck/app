@@ -77,8 +77,8 @@ function ComboBox<Item>({
           className={[
             "flex w-full px-4 py-3 font-450 bg-white border border-gray-7",
             "rounded shadow hover:border-gray-8 focus-within:ring-3",
-            "focus-within:ring-primary focus-within:border-primary-solid",
-            "focus-within:hover:border-primary-solid",
+            "focus-within:ring-purple-5 focus-within:border-purple-9",
+            "focus-within:hover:border-purple-9",
           ].join(" ")}
         >
           <input

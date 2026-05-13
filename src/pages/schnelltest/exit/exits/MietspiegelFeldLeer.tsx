@@ -12,7 +12,7 @@ export function ExitMietspiegelFeldLeer() {
         })}
       </h2>
       <div className="space-y-3">
-        <p className="text-neutral-faded">
+        <p className="text-gray-11">
           {l({
             de: "Leider gibt es in jedem Berliner Mietspiegel einige Fälle, für welche keine ortsübliche Vergleichsmiete angegeben ist. Dies liegt daran, dass nicht genügend Daten vorlagen, um hier eine statistisch sichere ortsübliche Vergleichsmiete zu berechnen.",
             en: "Unfortunately, there are some cases in every Berlin rent index for which no local comparative rent is given. This is because there was not enough data available to calculate a statistically reliable local comparative rent.",
@@ -24,7 +24,7 @@ export function ExitMietspiegelFeldLeer() {
             en: "However, this does not mean that the Rent Control Act (Mietpreisbremse) does not apply to your apartment!",
           })}
         </p>
-        <p className="text-neutral-faded">
+        <p className="text-gray-11">
           {l({
             de: "Wir empfehlen dir, mit einem*r Rechtsanwält*in oder Mietrechtsexperten*in zu sprechen, um dich für deinen konkreten Fall beraten zu lassen.",
             en: "We recommend that you speak to a lawyer or tenancy law expert for advice on your specific case.",

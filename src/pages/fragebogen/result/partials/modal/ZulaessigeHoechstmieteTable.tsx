@@ -117,13 +117,13 @@ export function ZulaessigeHoechstmieteTable() {
               </TableCell>
             </TableRow>
             <TableRow className="sm:hidden border-b-0">
-              <TableCell className="text-neutral-faded pb-0">
+              <TableCell className="text-gray-11 pb-0">
                 {l("Niedrigste Miete")}
               </TableCell>
               <TableCell className="w-40 text-right pb-0">{best}</TableCell>
             </TableRow>
             <TableRow className="sm:hidden">
-              <TableCell className="text-neutral-faded">
+              <TableCell className="text-gray-11">
                 {l("Höchste Miete")}
               </TableCell>
               <TableCell className="w-40 text-right">{worst}</TableCell>

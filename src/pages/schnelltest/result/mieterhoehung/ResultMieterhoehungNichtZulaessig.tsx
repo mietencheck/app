@@ -34,7 +34,7 @@ export function ResultMieterhoehungNichtZulaessig() {
         Die Mieterhöhung ist wahrscheinlich nicht zulässig.
       </h2>
       <h3 className="text-base-medium mb-2">{l("Was bedeutet das?")}</h3>
-      <div className="text-neutral-faded space-y-2 mb-6">
+      <div className="text-gray-11 space-y-2 mb-6">
         <p>
           Der Vermieter möchte die Miete von {formatEuro(nettokaltmiete)} auf{" "}
           {formatEuro(geforderteNettokaltmiete)} erhöhen.{" "}
@@ -54,7 +54,7 @@ export function ResultMieterhoehungNichtZulaessig() {
       </div>
 
       <h3 className="text-base-medium mb-2">{l("Was nun?")}</h3>
-      <p className="text-neutral-faded mb-6">TODO</p>
+      <p className="text-gray-11 mb-6">TODO</p>
     </>
   );
 }

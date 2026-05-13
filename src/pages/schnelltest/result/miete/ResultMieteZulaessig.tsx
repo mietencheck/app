@@ -25,8 +25,8 @@ export function ResultMieteZulaessig() {
       <h2 className="heading-24 mb-6">
         {l("Leider ist deine Miete im Rahmen des Mietspiegels.")}
       </h2>
-      <div className="text-neutral-faded space-y-2 mb-6">
-        <p className="text-neutral-faded">
+      <div className="text-gray-11 space-y-2 mb-6">
+        <p className="text-gray-11">
           {worstDiff == bestDiff
             ? l("Ergebnis zulässige Höchstmiete", {
                 MIETE: formatEuro(bestZulaessigeHoechstmiete),
@@ -42,8 +42,8 @@ export function ResultMieteZulaessig() {
           )}
         </p>
       </div>
-      <div className="space-y-2 mb-6 text-neutral-faded">
-        <h3 className="text-base-medium text-neutral">{l("Was nun?")}</h3>
+      <div className="space-y-2 mb-6 text-gray-11">
+        <h3 className="text-base-medium text-gray-12">{l("Was nun?")}</h3>
         <p>
           {l(
             "Auch wenn die Mietpreisbremse für die Wohnung nicht gilt, kannst du dich trotzdem für bezahlbare Mieten einsetzen.",

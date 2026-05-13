@@ -8,7 +8,7 @@ const statusIconVariants = cva(
   {
     variants: {
       status: {
-        default: "bg-page-faded border border-neutral",
+        default: "bg-gray-1 border border-gray-7",
         active: "bg-green-2 border border-green-7 text-green-11",
         completed: "bg-green-9 border border-green-9 text-white",
       },

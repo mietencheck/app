@@ -31,8 +31,8 @@ const tabStyles = cva(
   {
     variants: {
       isSelected: {
-        false: "text-neutral-faded border-transparent hover:text-neutral ",
-        true: "text-neutral border-primary-solid hover:border-primary-solid-hover",
+        false: "text-gray-11 border-transparent hover:text-gray-12 ",
+        true: "text-gray-12 border-purple-9 hover:border-purple-10",
       },
     },
   },

@@ -67,13 +67,20 @@ export function useCheckIsGroupCompleted() {
 export function useIsCompleted() {
   const answers = useAnswers();
   const steps = useSteps();
-  return useMemo(
+
+  ungroup(steps)
+    .filter((s) => s.type == "Question")
+    .every((q) => console.log(q));
+  //ungroup(steps).filter((s) => s.type == "Question").every((q) => console.log(answers.get([q.alias || q.id])))
+  const foo = useMemo(
     () =>
       ungroup(steps)
         .filter((s) => s.type == "Question")
         .every((q) => typeof answers.get([q.alias || q.id]) !== "undefined"),
     [answers, steps],
   );
+
+  return foo;
 }
 
 export function useWorstBestZulaessigeHoechstmiete():

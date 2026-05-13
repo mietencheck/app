@@ -15,7 +15,7 @@ export const Input = React.forwardRef<
       className={
         className +
         " " +
-        "w-full px-4 py-3 bg-white border border-neutral rounded shadow hover:border-neutral-hover focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-primary focus-visible:border-primary-solid"
+        "w-full px-4 py-3 bg-white border border-gray-7 rounded shadow hover:border-gray-8 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-purple-5 focus-visible:border-purple-9"
       }
       {...props}
     />

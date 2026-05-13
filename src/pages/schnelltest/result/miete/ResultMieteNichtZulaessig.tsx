@@ -31,7 +31,7 @@ export function ResultMieteNichtZulaessig() {
             })}
       </h2>
       <h3 className="text-base-medium mb-2">{l("Was bedeutet das?")}</h3>
-      <div className="text-neutral-faded space-y-2 mb-6">
+      <div className="text-gray-11 space-y-2 mb-6">
         <p>
           {worstDiff == bestDiff
             ? l("Ergebnis zulässige Höchstmiete", {
@@ -49,7 +49,7 @@ export function ResultMieteNichtZulaessig() {
       </div>
 
       <h3 className="text-base-medium mb-2">{l("Was nun?")}</h3>
-      <p className="text-neutral-faded mb-6">{l("Schnelltest Was Nun Text")}</p>
+      <p className="text-gray-11 mb-6">{l("Schnelltest Was Nun Text")}</p>
     </>
   );
 }

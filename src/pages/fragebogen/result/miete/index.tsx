@@ -39,7 +39,7 @@ export function ResultMiete() {
         <h2 className="heading-24 mb-4">
           Fehler beim Berechnen des Ergebnisses
         </h2>
-        <p className="text-neutral-faded mb-4">
+        <p className="text-gray-11 mb-4">
           Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten. Bitte
           klick unten auf "Neu anfangen".
         </p>
@@ -70,7 +70,7 @@ export function ResultMiete() {
                   })}
           </h2>
 
-          <p className="text-base text-neutral-faded">
+          <p className="text-base text-gray-11">
             {worstDiff == bestDiff
               ? l("Ergebnis zulässige Höchstmiete", {
                   MIETE: formatEuro(bestZulaessigeHoechstmiete),
@@ -104,7 +104,7 @@ export function ResultMiete() {
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <h3 className="text-base-book">{l("Was bedeutet das?")}</h3>
-          <p className="text-base text-neutral-faded">
+          <p className="text-base text-gray-11">
             {worstDiff == bestDiff
               ? l("Ergebnis zulässige Höchstmiete", {
                   MIETE: formatEuro(bestZulaessigeHoechstmiete),
@@ -117,7 +117,7 @@ export function ResultMiete() {
               ? l("Ergebnis Mietpreisbremse nicht möglich")
               : l("Ergebnis Mietpreisbremse möglich")}
           </p>
-          <p className="text-base text-neutral-faded mb-4">
+          <p className="text-base text-gray-11 mb-4">
             {l("Ergebnis Auswertung im Detail ansehen")}
           </p>
           <div className="flex flex-wrap gap-3">
@@ -156,10 +156,10 @@ export function ResultMiete() {
           <h3 className="text-base-book">
             {l("Speicher dein Ergebnis Titel")}
           </h3>
-          <p className="text-base text-neutral-faded">
+          <p className="text-base text-gray-11">
             {l("Speicher dein Ergebnis Text 1")}
           </p>
-          <p className="text-base text-neutral-faded mb-4">
+          <p className="text-base text-gray-11 mb-4">
             {l("Speicher dein Ergebnis Text 2")}
           </p>
           <DialogTrigger
@@ -181,7 +181,7 @@ export function ResultMiete() {
         <>
           <div>
             <h2 className="heading-20 mb-4">{l("Was kann ich jetzt tun?")}</h2>
-            <p className="text-base text-neutral-faded mb-8">
+            <p className="text-base text-gray-11 mb-8">
               {l(
                 "Du kannst dich gegen deine zu hohe Miete wehren! Damit sparst du nicht nur jeden Monat Geld, sondern tust auch etwas gegen steigende Mieten in unserer Stadt!",
               )}
@@ -193,14 +193,14 @@ export function ResultMiete() {
                   {l("Beratung durch Mieterverein Titel")}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
-                  <div className="space-y-2 text-neutral-faded">
+                  <div className="space-y-2 text-gray-11">
                     <p>{l("Beratung durch Mieterverein Text 1")}</p>
                     <p>{l("Beratung durch Mieterverein Text 2")}</p>
                     <p>{l("Beratung durch Mieterverein Text 3")}</p>
                     <p>{l("Beratung durch Mieterverein Text 4")}</p>
                   </div>
                   <a
-                    className="block text-base-book underline mt-4 text-neutral"
+                    className="block text-base-book underline mt-4 text-gray-12"
                     href={
                       locale == "de"
                         ? "https://blog.mietencheck.de/de/2024-05-28-kostenlose-beratung-beim-berliner-mieterverein-oder-einer-anderen-mieterinnenvereinigung/"
@@ -217,13 +217,13 @@ export function ResultMiete() {
                   {l("Beratung durch Bezirke Titel")}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
-                  <div className="space-y-2 text-neutral-faded">
+                  <div className="space-y-2 text-gray-11">
                     <p>{l("Beratung durch Bezirke Text 1")}</p>
                     <p>{l("Beratung durch Bezirke Text 2")}</p>
                     <p>{l("Beratung durch Bezirke Text 3")}</p>
                   </div>
                   <a
-                    className="block text-base-book underline mt-4 text-neutral"
+                    className="block text-base-book underline mt-4 text-gray-12"
                     href={
                       locale == "de"
                         ? "https://blog.mietencheck.de/de/2024-05-28-kostenlose-beratung-bei-einem-berliner-bezirke/"
@@ -240,13 +240,13 @@ export function ResultMiete() {
                   {l("Beratung durch Rechtsanwalt Titel")}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
-                  <div className="space-y-2 text-neutral-faded">
+                  <div className="space-y-2 text-gray-11">
                     <p>{l("Beratung durch Rechtsanwalt Text 1")}</p>
                     <p>{l("Beratung durch Rechtsanwalt Text 2")}</p>
                     <p>{l("Beratung durch Rechtsanwalt Text 3")}</p>
                   </div>
                   <a
-                    className="block text-base-book underline mt-4 text-neutral"
+                    className="block text-base-book underline mt-4 text-gray-12"
                     href={
                       locale == "de"
                         ? "https://blog.mietencheck.de/de/2024-05-28-kostenpflichtige-beratung-durch-rechtsanwaltin/"
@@ -263,7 +263,7 @@ export function ResultMiete() {
                   {l("Beratung durch Drittanbieter Titel")}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
-                  <div className="space-y-2 text-neutral-faded">
+                  <div className="space-y-2 text-gray-11">
                     <p>{l("Beratung durch Drittanbieter Text 1")}</p>
                     <p>{l("Beratung durch Drittanbieter Text 2")}</p>
                     <p>{l("Beratung durch Drittanbieter Text 3")}</p>
@@ -281,7 +281,7 @@ export function ResultMiete() {
         <h2 className="heading-20 mb-4">
           {l("Wie kann ich mich für bezahlbare Mieten einsetzen?")}
         </h2>
-        <p className="text-base text-neutral-faded mb-8">
+        <p className="text-base text-gray-11 mb-8">
           {l(
             "Egal, ob du dich entscheidest, gegen deine zu hohe Miete vorzugehen oder nicht - du bist nicht alleine! Wir sind stärker, wenn wir uns zusammentun:",
           )}
@@ -293,10 +293,10 @@ export function ResultMiete() {
               {l("Informiere deine Nachbar*innen Titel")}
             </AccordionTrigger>
             <AccordionContent className="pt-3 pb-5 pl-7">
-              <p className="text-neutral-faded mb-2">
+              <p className="text-gray-11 mb-2">
                 {l("Informiere deine Nachbar*innen Text 1")}
               </p>
-              <p className="text-neutral-faded mb-4">
+              <p className="text-gray-11 mb-4">
                 {l("Informiere deine Nachbar*innen Text 2")}
               </p>
               <a
@@ -317,7 +317,7 @@ export function ResultMiete() {
               {l("Schaffe ein Bewusstsein für die Mietenkrise Titel")}
             </AccordionTrigger>
             <AccordionContent className="pt-3 pb-5 pl-7">
-              <p className="text-neutral-faded mb-2">
+              <p className="text-gray-11 mb-2">
                 {l("Schaffe ein Bewusstsein für die Mietenkrise Text")}
               </p>
               <a
@@ -336,9 +336,7 @@ export function ResultMiete() {
           <AccordionItem value="item-3">
             <AccordionTrigger>{l("Engagiere dich Titel")}</AccordionTrigger>
             <AccordionContent className="pt-3 pb-5 pl-7">
-              <p className="text-neutral-faded mb-2">
-                {l("Engagiere dich Text")}
-              </p>
+              <p className="text-gray-11 mb-2">{l("Engagiere dich Text")}</p>
               <a
                 className="underline"
                 href={

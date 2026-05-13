@@ -119,13 +119,13 @@ export function EintragenPage() {
       <Layout>
         <div className="container max-w-lg py-16">
           <h1 className="heading-22 text-purple-11 mb-4">Gespeichert</h1>
-          <p className="text-base text-neutral-faded mb-6">
+          <p className="text-base text-gray-11 mb-6">
             Deine Angaben und der Fragebogen wurden übernommen.
           </p>
-          <p className="text-sm text-neutral-faded mb-8">ID: {successId}</p>
+          <p className="text-sm text-gray-11 mb-8">ID: {successId}</p>
           <Link
             href={AppRouter.Landing()}
-            className="text-primary-solid underline"
+            className="text-purple-11-solid underline"
           >
             Zur Startseite
           </Link>
@@ -138,7 +138,7 @@ export function EintragenPage() {
     <Layout>
       <div className="container max-w-lg py-16">
         <h1 className="heading-22 text-purple-11 mb-2">Daten eintragen</h1>
-        <p className="text-base text-neutral-faded mb-8">
+        <p className="text-base text-gray-11 mb-8">
           Kontaktdaten für Law & Orga. Es wird ein Datensatz angelegt und dein
           ausgefüllter Fragebogen gespeichert.
         </p>
@@ -150,7 +150,7 @@ export function EintragenPage() {
             </p>
             <Link
               href={FOLDER_FRAGEBOGEN}
-              className="text-primary-solid underline font-medium"
+              className="text-purple-11-solid underline font-medium"
             >
               Zum Fragebogen
             </Link>
@@ -166,7 +166,7 @@ export function EintragenPage() {
             </p>
             <Link
               href={FOLDER_FRAGEBOGEN}
-              className="text-primary-solid underline font-medium"
+              className="text-purple-11-solid underline font-medium"
             >
               Fragebogen fortsetzen
             </Link>
