@@ -4,31 +4,38 @@
 
 @layer base {
   @font-face {
-    font-family: "Suisse Intl";
+    font-family: "Ronzino";
     font-weight: 400;
-    src: url(/fonts/SuisseIntl-Regular-WebXL.woff2) format("woff2");
-    display: swap;
+    src: url(/fonts/Ronzino-Regular.woff2) format("woff2");
+    font-display: swap;
   }
 
   @font-face {
-    font-family: "Suisse Intl";
+    font-family: "Ronzino";
     font-weight: 450;
-    src: url(/fonts/SuisseIntl-Book-WebXL.woff2) format("woff2");
-    display: swap;
+    src: url(/fonts/Ronzino-Regular.woff2) format("woff2");
+    font-display: swap;
   }
 
   @font-face {
-    font-family: "Suisse Intl";
+    font-family: "Ronzino";
     font-weight: 500;
-    src: url(/fonts/SuisseIntl-Medium-WebXL.woff2) format("woff2");
-    display: swap;
+    src: url(/fonts/Ronzino-Regular.woff2) format("woff2");
+    font-display: swap;
   }
 
   @font-face {
-    font-family: "Suisse Intl";
+    font-family: "Ronzino";
     font-weight: 600;
-    src: url(/fonts/SuisseIntl-SemiBold-WebXL.woff2) format("woff2");
-    display: swap;
+    src: url(/fonts/Ronzino-Bold.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Ronzino";
+    font-weight: 700;
+    src: url(/fonts/Ronzino-Bold.woff2) format("woff2");
+    font-display: swap;
   }
 
   :root {

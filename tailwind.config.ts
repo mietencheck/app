@@ -22,8 +22,8 @@ export default {
       },
     },
     fontFamily: {
-      body: ["Suisse Intl"],
-      display: ["Suisse Intl"],
+      body: ["Ronzino"],
+      display: ["Ronzino"],
     },
     fontSize: {
       sm: "0.875rem",
