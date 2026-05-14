@@ -1,20 +1,21 @@
-import cx from "classnames";
-import { ChevronDownIcon, LanguagesIcon } from "lucide-react";
-import { entries } from "remeda";
+"use client";
 
-import { buttonVariants } from "~/components";
+import { useMemo } from "react";
+
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "~/components";
 import { useLocaleState, useLocalizeField } from "~/l10n";
 import type { Locale } from "~/L10nContext";
-
-type LanguageSelectProps = {
-  variant?: "yellow" | "neutral";
-};
 
 function switchBlogPath(
   pathname: string,
   nextLocale: "de" | "en",
 ): string | null {
-  // Blog index pages — simple prefix swap is fine
   if (
     pathname === "/de/blog" ||
     pathname === "/en/blog" ||
@@ -23,18 +24,16 @@ function switchBlogPath(
     return `/${nextLocale}/blog`;
   }
 
-  // Blog post pages — use the sibling slug if available
   const postMatch = pathname.match(/^\/(de|en)\/blog\/(.+)$/);
   if (postMatch) {
-    const siblingSlug = (window as any).__BLOG_SIBLING_SLUG__;
+    const siblingSlug = (window as Window & { __BLOG_SIBLING_SLUG__?: string })
+      .__BLOG_SIBLING_SLUG__;
     if (siblingSlug) {
       return `/${nextLocale}/blog/${siblingSlug}`;
     }
-    // No translation exists — fall back to blog index
     return `/${nextLocale}/blog`;
   }
 
-  // Legacy /blog/:slug route
   if (pathname.startsWith("/blog/")) {
     return `/${nextLocale}/blog`;
   }
@@ -42,55 +41,47 @@ function switchBlogPath(
   return null;
 }
 
-export function LanguageSelect({ variant = "neutral" }: LanguageSelectProps) {
+const localeCodes: Locale[] = ["de", "en"];
+
+export function LanguageSelect() {
   const { locale, setLocale } = useLocaleState();
   const l = useLocalizeField();
 
-  const languages = {
-    de: l("German"),
-    en: l("English"),
-  };
-
-  const classNames =
-    variant == "neutral"
-      ? cx("relative flex items-center", buttonVariants())
-      : cx(
-          "relative px-2.5 border-1.5 border-yellow-9 text-yellow-11 sm:rounded-none",
-          "flex items-center",
-          buttonVariants({ color: "unstyled", variant: "unstyled" }),
-        );
+  const items = useMemo(
+    () => ({
+      de: l("German"),
+      en: l("English"),
+    }),
+    [l],
+  );
 
   return (
-    <div className={classNames}>
-      <LanguagesIcon
-        className="md:hidden flex items-center justify-center"
-        width={20}
-        height={20}
-        strokeWidth={2}
-      />
-      <select
-        className="absolute left-0 top-0 w-full h-full opacity-0"
-        value={locale}
-        onChange={({ target }) => {
-          const nextLocale = target.value as Locale;
-          setLocale(nextLocale);
-          const nextBlogPath = switchBlogPath(
-            window.location.pathname,
-            nextLocale,
-          );
-          if (nextBlogPath && nextBlogPath !== window.location.pathname) {
-            window.location.pathname = nextBlogPath;
-          }
-        }}
-      >
-        {entries(languages).map(([value, label]) => (
-          <option key={value} value={value}>
-            {label}
-          </option>
+    <Select
+      value={locale}
+      onValueChange={(v) => {
+        if (v !== "de" && v !== "en") return;
+        const nextLocale = v;
+        setLocale(nextLocale);
+        const nextBlogPath = switchBlogPath(
+          window.location.pathname,
+          nextLocale,
+        );
+        if (nextBlogPath && nextBlogPath !== window.location.pathname) {
+          window.location.pathname = nextBlogPath;
+        }
+      }}
+      items={items}
+    >
+      <SelectTrigger aria-label={l("Language")}>
+        <SelectValue placeholder={l("Language")} />
+      </SelectTrigger>
+      <SelectContent>
+        {localeCodes.map((code) => (
+          <SelectItem key={code} value={code} label={items[code]}>
+            {items[code]}
+          </SelectItem>
         ))}
-      </select>
-      <div className="hidden md:block">{languages[locale]}</div>
-      <ChevronDownIcon size={20} />
-    </div>
+      </SelectContent>
+    </Select>
   );
 }

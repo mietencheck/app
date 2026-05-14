@@ -6,7 +6,10 @@ import {
   NumberInput,
   RadioGroup,
   Select,
-  SelectOption,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from "~/components";
 import { useLocalizeField, useLocalizeString } from "~/l10n";
 
@@ -44,25 +47,35 @@ export function InputControl({
           />
         );
       }
+      const items = Object.fromEntries(
+        answer.options.map((o) => [o.id, l(o.text)] as const),
+      );
+
       return (
         <Select
-          id={id}
-          autoFocus={autoFocus}
-          className="w-full"
-          selectedKey={value || ""}
-          onSelectionChange={onChange as never}
-          aria-labelledby={`${id}-label`}
-          placeholder={lField("Bitte auswählen...")}
-          isRequired
+          value={value || null}
+          onValueChange={(v) => onChange(v ?? "")}
+          required
+          items={items}
         >
-          {answer.options.map((o) => {
-            const text = l(o.text);
-            return (
-              <SelectOption key={o.id} id={o.id} textValue={text}>
-                {text}
-              </SelectOption>
-            );
-          })}
+          <SelectTrigger
+            id={id}
+            autoFocus={autoFocus}
+            className="w-full"
+            aria-labelledby={`${id}-label`}
+          >
+            <SelectValue placeholder={lField("Bitte auswählen...")} />
+          </SelectTrigger>
+          <SelectContent>
+            {answer.options.map((o) => {
+              const text = l(o.text);
+              return (
+                <SelectItem key={o.id} value={o.id} label={text}>
+                  {text}
+                </SelectItem>
+              );
+            })}
+          </SelectContent>
         </Select>
       );
     }

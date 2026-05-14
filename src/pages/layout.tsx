@@ -23,7 +23,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </a>
           <div className="flex flex-row gap-4 sm:gap-8">
             <div className="flex gap-6 items-center sm:hidden">
-              <LanguageSelect variant="yellow" />
+              <LanguageSelect />
               <IconButton
                 onPress={() => setMenu(!menu)}
                 color="unstyled"
@@ -46,7 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 </a>
               </div>
               <div className="flex gap-3">
-                <LanguageSelect variant="yellow" />
+                <LanguageSelect />
                 <a
                   className="inline-block px-2.5 py-1.5 bg-black text-white text-base-medium border border-black hover:bg-gray-12 hover:border-gray-12"
                   href="/schnelltest"

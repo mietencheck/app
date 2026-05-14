@@ -27,7 +27,10 @@ import {
   NumberInput,
   SegmentedControl,
   Select,
-  SelectOption,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
   Table,
   TableBody,
   TableCell,
@@ -191,6 +194,24 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
   const baujahrSpanneOptions = useMemo(() => {
     return getBaujahrSpanneOptions(mietspiegeljahr);
   }, [mietspiegeljahr]);
+
+  const vertragsdatumItems = useMemo(
+    () => Object.fromEntries(vertragsdatumOptions.map((o) => [o, o] as const)),
+    [],
+  );
+
+  const baujahrSpanneItems = useMemo(
+    () => Object.fromEntries(baujahrSpanneOptions.map((o) => [o, o] as const)),
+    [baujahrSpanneOptions],
+  );
+
+  const wohnlageItems = useMemo(
+    () =>
+      Object.fromEntries(
+        wohnlageOptions.map((o) => [o.value, o.label] as const),
+      ),
+    [],
+  );
 
   useEffect(() => {
     if (!beratungRecord || baujahrSpanneOptions.length === 0) return;
@@ -418,20 +439,24 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
               <dt className="text-gray-11">Vertragsdatum</dt>
               <dd>
                 <Select
-                  aria-label="Vertragsdatum"
-                  value={beratungRecord.vertragsdatum}
-                  placeholder="Vertragsdatum auswählen"
-                  onChange={(selected) => {
+                  value={beratungRecord.vertragsdatum || null}
+                  onValueChange={(v) =>
                     setVertragsdatum(
-                      String(selected) as BeratungRecord["vertragsdatum"],
-                    );
-                  }}
+                      String(v ?? "") as BeratungRecord["vertragsdatum"],
+                    )
+                  }
+                  items={vertragsdatumItems}
                 >
-                  {vertragsdatumOptions.map((option) => (
-                    <SelectOption id={option} key={option}>
-                      {option}
-                    </SelectOption>
-                  ))}
+                  <SelectTrigger className="w-full" aria-label="Vertragsdatum">
+                    <SelectValue placeholder="Vertragsdatum auswählen" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {vertragsdatumOptions.map((option) => (
+                      <SelectItem key={option} value={option} label={option}>
+                        {option}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
                 </Select>
               </dd>
             </div>
@@ -439,18 +464,20 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
               <dt className="text-gray-11">Baujahr Spanne</dt>
               <dd>
                 <Select
-                  aria-label="Baujahr Spanne"
-                  value={beratungRecord.baujahrSpanne}
-                  placeholder="Baujahr Spanne auswählen"
-                  onChange={(selected) => {
-                    setBaujahrSpanne(String(selected));
-                  }}
+                  value={beratungRecord.baujahrSpanne || null}
+                  onValueChange={(v) => setBaujahrSpanne(String(v ?? ""))}
+                  items={baujahrSpanneItems}
                 >
-                  {baujahrSpanneOptions.map((option) => (
-                    <SelectOption id={option} key={option}>
-                      {option}
-                    </SelectOption>
-                  ))}
+                  <SelectTrigger className="w-full" aria-label="Baujahr Spanne">
+                    <SelectValue placeholder="Baujahr Spanne auswählen" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {baujahrSpanneOptions.map((option) => (
+                      <SelectItem key={option} value={option} label={option}>
+                        {option}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
                 </Select>
               </dd>
             </div>
@@ -476,18 +503,26 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
               <dt className="text-gray-11">Wohnlage</dt>
               <dd>
                 <Select
-                  aria-label="Wohnlage"
-                  value={beratungRecord.wohnlage}
-                  placeholder="Wohnlage auswählen"
-                  onChange={(selected) => {
-                    setWohnlage(String(selected) as BeratungRecord["wohnlage"]);
-                  }}
+                  value={beratungRecord.wohnlage || null}
+                  onValueChange={(v) =>
+                    setWohnlage(String(v ?? "") as BeratungRecord["wohnlage"])
+                  }
+                  items={wohnlageItems}
                 >
-                  {wohnlageOptions.map((option) => (
-                    <SelectOption id={option.value} key={option.value}>
-                      {option.label}
-                    </SelectOption>
-                  ))}
+                  <SelectTrigger className="w-full" aria-label="Wohnlage">
+                    <SelectValue placeholder="Wohnlage auswählen" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {wohnlageOptions.map((option) => (
+                      <SelectItem
+                        key={option.value}
+                        value={option.value}
+                        label={option.label}
+                      >
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
                 </Select>
               </dd>
             </div>

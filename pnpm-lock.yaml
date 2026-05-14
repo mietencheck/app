@@ -104,6 +104,9 @@ dependencies:
   classnames:
     specifier: ^2.5.1
     version: 2.5.1
+  clsx:
+    specifier: ^2.1.1
+    version: 2.1.1
   csv:
     specifier: ^6.4.1
     version: 6.4.1
@@ -194,6 +197,9 @@ dependencies:
   sync-sha1:
     specifier: ^1.0.1
     version: 1.0.1
+  tailwind-merge:
+    specifier: ^3.6.0
+    version: 3.6.0
   tailwindcss:
     specifier: ^3.4.15
     version: 3.4.15
@@ -8917,6 +8923,10 @@ packages:
     resolution: {integrity: sha512-1ZuuBoVoGmb8r+fjCLl5SHcrYcrmEHeDQxTdbWZgbK9vmRHeCcnqOtKZm49Qgw0H4f+JBqCPQgDpTx88EwH1/w==}
     dependencies:
       string-encode: 0.2.2
+    dev: false
+
+  /tailwind-merge@3.6.0:
+    resolution: {integrity: sha512-uxL7qAVQriqRQPAyK3pj66VqskWqoZ37PW94jwOTwNfq/z9oyu1V+eqrZqtR2+fCiXdYOZe/Modt8GtvqNzu+w==}
     dev: false
 
   /tailwindcss@3.4.15:
