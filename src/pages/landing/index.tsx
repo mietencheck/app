@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "~/components";
+import { Link } from "~/components/Link/Link";
 import { useInlineLocale } from "~/l10n";
 import { Layout } from "~/pages/layout";
 
@@ -24,15 +25,18 @@ export default function LandingPage() {
                 en: "",
               })}
             </p>
-            <a
+            <Link
               href="/schnelltest"
-              className="bg-red-9 font-[500] text-white text-lg px-4 py-3 inline-block"
+              size={"lg"}
+              color={"red"}
+              variant={"solid"}
+              className="text-lg"
             >
               {l({
                 de: "Jetzt Miete checken",
                 en: "",
               })}
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -89,7 +89,9 @@ export function ResultMieterhoehung() {
         <h2>Was wir geprüft haben</h2>
         <ResultMieterhoehungChecks result={result} />
         <div className="mt-6">
-          <Button size="sm">Gesamte Auswertung ansehen</Button>
+          <Button variant="outline" color="gray" size="sm" type="button">
+            Gesamte Auswertung ansehen
+          </Button>
         </div>
         <hr />
         <h2>Ergebnis speichern</h2>
@@ -104,10 +106,12 @@ export function ResultMieterhoehung() {
           du dir das Ergebnis auch als PDF herunterladen.
         </p>
         <div className="mt-6 flex gap-3">
-          <Button color="primary" variant="solid" size="sm">
+          <Button variant="solid" size="sm" type="button">
             Ergebnis speichern
           </Button>
-          <Button size="sm">Auswertung als PDF herunterladen</Button>
+          <Button variant="outline" color="gray" size="sm" type="button">
+            Auswertung als PDF herunterladen
+          </Button>
         </div>
         <hr />
         <h2>Disclaimer</h2>

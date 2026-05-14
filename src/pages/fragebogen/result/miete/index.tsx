@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { DialogTrigger } from "react-aria-components";
 
 import {
   Accordion,
@@ -7,10 +6,12 @@ import {
   AccordionItem,
   AccordionTrigger,
   Button,
-  ModalDialog,
+  Dialog,
+  DialogContent,
+  DialogTrigger,
 } from "~/components";
 import { useLocaleState, useLocalizeField } from "~/l10n";
-import { SaveSessionModal } from "~/session";
+import { SaveSessionDialog } from "~/session";
 import { formatEuro } from "~/utils";
 
 import {
@@ -18,7 +19,7 @@ import {
   useWorstBestZulaessigeHoechstmieteDiff,
 } from "../../utils";
 import {
-  AuswertungsModal,
+  AuswertungsDialog,
   AuswertungTabPanel,
   MerkmalTabPanel,
 } from "../partials/modal";
@@ -121,19 +122,31 @@ export function ResultMiete() {
             {l("Ergebnis Auswertung im Detail ansehen")}
           </p>
           <div className="flex flex-wrap gap-3">
-            <DialogTrigger isOpen={showDetails} onOpenChange={setShowDetails}>
-              <Button size="sm" className="w-fit">
-                {l("Auswertung ansehen")}
-              </Button>
-              <ModalDialog>
-                <AuswertungsModal onClose={() => setShowDetails(false)} />
-              </ModalDialog>
-            </DialogTrigger>
+            <Dialog open={showDetails} onOpenChange={setShowDetails}>
+              <DialogTrigger
+                nativeButton={false}
+                render={
+                  <Button
+                    variant="outline"
+                    color="gray"
+                    size="sm"
+                    type="button"
+                  >
+                    {l("Auswertung ansehen")}
+                  </Button>
+                }
+              />
+              <DialogContent className="max-h-[85vh] max-w-2xl overflow-auto">
+                <AuswertungsDialog />
+              </DialogContent>
+            </Dialog>
             <Button
-              color="neutral"
+              variant="outline"
+              color="gray"
               size="sm"
+              type="button"
               className="w-fit"
-              onPress={() => {
+              onClick={() => {
                 const element = document.getElementById("print");
                 const clonedElement = element?.cloneNode(true) as HTMLElement;
                 clonedElement.style.display = "block";
@@ -160,17 +173,25 @@ export function ResultMiete() {
           <p className="text-base text-gray-11 mb-4">
             {l("Speicher dein Ergebnis Text 2")}
           </p>
-          <DialogTrigger
-            isOpen={showSessionModal}
-            onOpenChange={setShowSessionModal}
-          >
-            <Button color="primary" variant="solid" size="sm" className="w-fit">
-              {l("Ergebnis speichern")}
-            </Button>
-            <ModalDialog>
-              <SaveSessionModal onClose={() => setShowSessionModal(false)} />
-            </ModalDialog>
-          </DialogTrigger>
+          <Dialog open={showSessionModal} onOpenChange={setShowSessionModal}>
+            <DialogTrigger
+              nativeButton={false}
+              render={
+                <Button
+                  variant="solid"
+                  color="purple"
+                  size="sm"
+                  type="button"
+                  className="w-fit"
+                >
+                  {l("Ergebnis speichern")}
+                </Button>
+              }
+            />
+            <DialogContent className="max-w-xl">
+              <SaveSessionDialog onClose={() => setShowSessionModal(false)} />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
 

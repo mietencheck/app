@@ -1,15 +1,22 @@
 import { useFormspark } from "@formspark/use-formspark";
 import { Question } from "flow-machine";
 import { useState } from "react";
-import { DialogTrigger } from "react-aria-components";
 import { pick } from "remeda";
 
-import { IconButton, TextArea } from "~/components";
+import {
+  Button,
+  Dialog,
+  DialogBody,
+  DialogClose,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  Label,
+  TextArea,
+} from "~/components";
 import { useLocaleState, useLocalizeField, useLocalizeString } from "~/l10n";
-
-import { Button } from "..";
-import { CloseIcon } from "../Icons/Close";
-import { ModalDialog } from "../Modal/ModalDialog";
 
 export const FeedbackButton = ({ question }: { question: Question }) => {
   const { locale } = useLocaleState();
@@ -20,44 +27,49 @@ export const FeedbackButton = ({ question }: { question: Question }) => {
   const [message, setMessage] = useState("");
   const [submit] = useFormspark({ formId: "wQqxaUVcM" });
   return (
-    <DialogTrigger isOpen={isOpen}>
-      <Button
-        variant="inline"
-        className="!font-400 underline"
-        onPress={() => setIsOpen(true)}
-      >
-        {l("not_understand")}
-      </Button>
-      <ModalDialog className="flex flex-col">
-        <header className="border-b border-gray-6 px-4 sm:px-6 py-3 flex flex-row justify-between items-center">
-          <h2 className="title-16">{l("not_understand")}</h2>
-          <IconButton
-            size="sm"
-            variant="ghost"
-            onPress={() => setIsOpen(false)}
+    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <DialogTrigger
+        render={
+          <Button
+            variant="link"
+            color="gray"
+            type="button"
+            className="decoration-1 font-normal"
           >
-            <CloseIcon />
-          </IconButton>
-        </header>
-        <div className="flex flex-col p-4 sm:p-6">
-          <label htmlFor="reason" className="text-base mb-3">
+            {l("not_understand")}
+          </Button>
+        }
+      />
+      <DialogContent className="max-w-xl">
+        <DialogHeader>
+          <DialogTitle>{l("not_understand")}</DialogTitle>
+        </DialogHeader>
+        <DialogBody>
+          <Label htmlFor="reason">
             Was hast du an der Frage "{lString(question.text)}" nicht
             verstanden?
-          </label>
+          </Label>
           <TextArea
             id="reason"
             rows={5}
-            placeholder="..."
+            placeholder=""
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-        </div>
-        <div className="px-4 sm:px-6 py-3 border-t border-gray-6 flex flex-row gap-2 justify-between">
-          <Button onPress={() => setIsOpen(false)}>Abbrechen</Button>
+        </DialogBody>
+        <DialogFooter>
+          <DialogClose
+            render={
+              <Button variant="light" type="button">
+                Abbrechen
+              </Button>
+            }
+          />
           <Button
             variant="solid"
-            color="primary"
-            onPress={() => {
+            color="purple"
+            type="button"
+            onClick={() => {
               submit({
                 message,
                 locale,
@@ -68,8 +80,8 @@ export const FeedbackButton = ({ question }: { question: Question }) => {
           >
             Absenden
           </Button>
-        </div>
-      </ModalDialog>
-    </DialogTrigger>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   );
 };

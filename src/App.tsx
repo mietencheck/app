@@ -15,7 +15,11 @@ import { SchnelltestPage } from "~/pages/schnelltest";
 // import { BlogIndexContent } from "./pages/blog/BlogIndex.ssg";
 // import { BlogPostContent } from "./pages/blog/BlogPost.ssg";
 import { AppRouter } from "./router";
-import { ContinueSessionModal, SESSION_PARAM, useSyncAnswers } from "./session";
+import {
+  ContinueSessionDialog,
+  SESSION_PARAM,
+  useSyncAnswers,
+} from "./session";
 
 const DetailsPage = React.lazy(() => import("~/pages/fragebogen"));
 
@@ -111,7 +115,7 @@ export function App() {
   if (sessionHashInURL) {
     return (
       <Dialog>
-        <ContinueSessionModal hash={sessionHashInURL} />
+        <ContinueSessionDialog hash={sessionHashInURL} />
       </Dialog>
     );
   }

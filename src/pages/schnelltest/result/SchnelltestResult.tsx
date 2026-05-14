@@ -122,20 +122,25 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
       {resultContent}
 
       <div className="flex flex-row flex-wrap justify-center gap-3 mt-10">
-        {stepper.back && <Button onPress={stepper.back}>{l("Back")}</Button>}
-        {showContinueToDetailsButton ? (
-          <LinkButton
-            color="primary"
-            variant="solid"
-            to={DetailsRouter.Summary()}
+        {stepper.back && (
+          <Button
+            variant="outline"
+            color="gray"
+            type="button"
+            onClick={stepper.back}
           >
+            {l("Back")}
+          </Button>
+        )}
+        {showContinueToDetailsButton ? (
+          <LinkButton variant="solid" to={DetailsRouter.Summary()}>
             {l("go_to_details")}
           </LinkButton>
         ) : (
           <Button
-            color="primary"
             variant="solid"
-            onPress={() => {
+            type="button"
+            onClick={() => {
               localStorage.clear();
               location.reload();
             }}

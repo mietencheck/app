@@ -21,7 +21,13 @@ export function Layout({
           </a>
           <div className="flex items-center gap-2">
             {headerTrailing}
-            <Button size="sm" onPress={logout}>
+            <Button
+              variant="outline"
+              color="gray"
+              size="sm"
+              type="button"
+              onClick={logout}
+            >
               Abmelden
             </Button>
           </div>

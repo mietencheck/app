@@ -83,12 +83,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex flex-col gap-8 mb-12">{children}</div>
           <div className="flex justify-end gap-4 print:hidden">
             {relNav.previous && (
-              <LinkButton color="neutral" to={relNav.previous.href}>
+              <LinkButton color="gray" to={relNav.previous.href}>
                 {l("Back")}
               </LinkButton>
             )}
             {relNav.next && (
-              <Button color="primary" variant="solid" type="submit">
+              <Button variant="solid" type="submit">
                 {l("Next step")}
               </Button>
             )}

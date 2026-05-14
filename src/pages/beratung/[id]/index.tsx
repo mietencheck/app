@@ -23,7 +23,7 @@ import {
   CheckIcon,
   CloseIcon,
   HelpCircleIcon,
-  Link,
+  LinkOld,
   NumberInput,
   SegmentedControl,
   Select,
@@ -65,12 +65,12 @@ import {
 function BeratungDetailHeading() {
   return (
     <div className="mb-8">
-      <Link
+      <LinkOld
         href={AppRouter.Beratung()}
         className="text-sm font-450 text-purple-11-solid underline"
       >
         Zur Übersicht
-      </Link>
+      </LinkOld>
       <h1 className="heading-22 text-purple-11 mt-2">Beratung</h1>
     </div>
   );
@@ -417,7 +417,14 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
   return (
     <Layout
       headerTrailing={
-        <Button size="sm" isDisabled={savePending} onPress={onSave}>
+        <Button
+          size="sm"
+          disabled={savePending}
+          type="button"
+          variant="outline"
+          color="gray"
+          onClick={onSave}
+        >
           {savePending ? "Speichere…" : "Speichern"}
         </Button>
       }
@@ -711,11 +718,11 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
                           <TableCell>{gruppe}</TableCell>
                           <TableCell className="w-40 text-right">
                             {value.best > 0 ? "+" : ""}
-                            {value.best * 100}%
+                            {Math.round(value.best * 100)}%
                           </TableCell>
                           <TableCell className="w-40 text-right">
                             {value.worst > 0 ? "+" : ""}
-                            {value.worst * 100}%
+                            {Math.round(value.worst * 100)}%
                           </TableCell>
                         </TableRow>
                       ),
@@ -724,11 +731,11 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
                       <TableCell className="text-sm-medium">Gesamt</TableCell>
                       <TableCell className="w-40 text-right">
                         {resultData.spanneneinordnung.best > 0 ? "+" : ""}
-                        {resultData.spanneneinordnung.best * 100}%
+                        {Math.round(resultData.spanneneinordnung.best * 100)}%
                       </TableCell>
                       <TableCell className="w-40 text-right">
                         {resultData.spanneneinordnung.worst > 0 ? "+" : ""}
-                        {resultData.spanneneinordnung.worst * 100}%
+                        {Math.round(resultData.spanneneinordnung.worst * 100)}%
                       </TableCell>
                     </TableRow>
                   </TableBody>
@@ -772,8 +779,8 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
                           : []),
                         {
                           name: "Merkmalsgruppen (in Prozent)",
-                          best: `${resultData.spanneneinordnung.best * 100}%`,
-                          worst: `${resultData.spanneneinordnung.worst * 100}%`,
+                          best: `${Math.round(resultData.spanneneinordnung.best * 100)}%`,
+                          worst: `${Math.round(resultData.spanneneinordnung.worst * 100)}%`,
                         },
                         {
                           name: "Merkmalsgruppen (pro m²)",

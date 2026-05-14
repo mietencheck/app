@@ -1,9 +1,8 @@
 import { ReactNode, useState } from "react";
-import { DialogTrigger } from "react-aria-components";
 
-import { Button, ModalDialog } from "~/components";
+import { Button, Dialog, DialogContent, DialogTrigger } from "~/components";
 import { useLocalizeField } from "~/l10n";
-import { SaveSessionModal } from "~/session";
+import { SaveSessionDialog } from "~/session";
 
 import { LanguageSelect } from "./LanguageSelect";
 
@@ -19,20 +18,22 @@ export function Header({ children }: { children?: ReactNode }) {
           </a>
           <div className="flex gap-3">
             <LanguageSelect />
-            <DialogTrigger
-              isOpen={showSessionModal}
-              onOpenChange={setShowSessionModal}
-            >
-              <Button color="neutral">
-                <span className="hidden sm:block">
-                  {l("Fortschritt speichern")}
-                </span>
-                <span className="sm:hidden">{l("Speichern")}</span>
-              </Button>
-              <ModalDialog>
-                <SaveSessionModal onClose={() => setShowSessionModal(false)} />
-              </ModalDialog>
-            </DialogTrigger>
+            <Dialog open={showSessionModal} onOpenChange={setShowSessionModal}>
+              <DialogTrigger
+                nativeButton={false}
+                render={
+                  <Button variant="outline" color="gray" type="button">
+                    <span className="hidden sm:block">
+                      {l("Fortschritt speichern")}
+                    </span>
+                    <span className="sm:hidden">{l("Speichern")}</span>
+                  </Button>
+                }
+              />
+              <DialogContent className="max-w-xl">
+                <SaveSessionDialog onClose={() => setShowSessionModal(false)} />
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
         {children}

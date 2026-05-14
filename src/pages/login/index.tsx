@@ -82,12 +82,7 @@ export function LoginPage() {
               {error}
             </p>
           )}
-          <Button
-            type="submit"
-            color="primary"
-            variant="solid"
-            isDisabled={pending}
-          >
+          <Button type="submit" variant="solid" disabled={pending}>
             {pending ? "…" : "Anmelden"}
           </Button>
         </form>

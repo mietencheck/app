@@ -1,7 +1,10 @@
 /* eslint-disable react-refresh/only-export-components */
 export * from "./Accordion/Accordion";
-export * from "./Button/Button";
 export * from "./CheckboxGroup/CheckboxGroup";
+export { Button, buttonVariants } from "./Button/Button";
+export { ButtonOld } from "./ButtonOld/Button";
+export * from "./LinkButton/LinkButton";
+export * from "./Dialog/Dialog";
 export * from "./FeedbackButton/FeedbackButton";
 export * from "./Form/FormDescription";
 export * from "./Form/FormField";
@@ -13,7 +16,7 @@ export * from "./Input/NumberInput";
 export * from "./Input/TextInput";
 export * from "./Input/InputControl";
 export * from "./Label/Label";
-export * from "./Link/Link";
+export * from "./LinkOld/Link";
 export * from "./ListBox/ListBox";
 export * from "./Modal/ModalDialog";
 export * from "./RadioGroup/RadioGroup";

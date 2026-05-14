@@ -17,6 +17,7 @@ export default {
     colors: {
       white: "var(--color-white)",
       black: "var(--color-black)",
+      transparent: "rgba(0,0,0,0)",
       blue: {
         "1": "var(--color-blue-1)",
         "2": "var(--color-blue-2)",
@@ -148,12 +149,9 @@ export default {
       "14xl": "4.5rem",
     },
     fontWeight: {
-      "400": "400",
-      "450": "450",
-      "500": "500",
-      "550": "550",
-      "600": "600",
-      "700": "700",
+      normal: "400",
+      medium: "500",
+      bold: "600",
     },
     extend: {
       ringWidth: {

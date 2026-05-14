@@ -5,7 +5,7 @@ import {
   postLawOrgaCreateRecord,
   postMietenFlow,
 } from "~/api/mietencheck-backend";
-import { Button, FormField, Label, Link, TextField } from "~/components";
+import { Button, FormField, Label, LinkOld, TextField } from "~/components";
 import { useStoredAnswers } from "~/form/flow-machine";
 import { evaluateFlowMachine } from "~/form/flow-machine-evaluation";
 import { Layout } from "~/pages/layout";
@@ -123,12 +123,12 @@ export function EintragenPage() {
             Deine Angaben und der Fragebogen wurden übernommen.
           </p>
           <p className="text-sm text-gray-11 mb-8">ID: {successId}</p>
-          <Link
+          <LinkOld
             href={AppRouter.Landing()}
             className="text-purple-11-solid underline"
           >
             Zur Startseite
-          </Link>
+          </LinkOld>
         </div>
       </Layout>
     );
@@ -148,12 +148,12 @@ export function EintragenPage() {
             <p className="text-sm text-purple-11 mb-3">
               Es sind noch keine Fragebogen-Antworten vorhanden.
             </p>
-            <Link
+            <LinkOld
               href={FOLDER_FRAGEBOGEN}
               className="text-purple-11-solid underline font-medium"
             >
               Zum Fragebogen
-            </Link>
+            </LinkOld>
           </div>
         )}
 
@@ -164,12 +164,12 @@ export function EintragenPage() {
               (z.&nbsp;B. Vertragsdatum, Fläche, Lage). Ohne diese können wir
               die Daten in der Beratung nicht darstellen.
             </p>
-            <Link
+            <LinkOld
               href={FOLDER_FRAGEBOGEN}
               className="text-purple-11-solid underline font-medium"
             >
               Fragebogen fortsetzen
-            </Link>
+            </LinkOld>
           </div>
         )}
 
@@ -235,9 +235,8 @@ export function EintragenPage() {
           )}
           <Button
             type="submit"
-            color="primary"
             variant="solid"
-            isDisabled={pending || !canSubmit}
+            disabled={pending || !canSubmit}
           >
             {pending ? "…" : "Absenden"}
           </Button>

@@ -217,132 +217,132 @@
 }
 
 body {
-  @apply font-body font-400 text-gray-12 antialiased underline-offset-2;
+  @apply font-body text-gray-12 antialiased underline-offset-2;
 }
 
 @layer components {
   .text-sm {
-    @apply text-sm/[20px] font-400;
+    @apply text-sm/[20px];
   }
 
   .text-sm-medium {
-    @apply text-sm/[20px] font-500;
+    @apply text-sm/[20px] font-medium;
   }
 
   .text-base {
-    @apply text-base/[24px] font-400;
+    @apply text-base/[24px];
   }
 
   .text-base-medium {
-    @apply text-base/[24px] font-500;
+    @apply text-base/[24px] font-medium;
   }
 
   .text-lg {
-    @apply text-lg/[27px] font-400;
+    @apply text-lg/[27px];
   }
 
   .text-lg-medium {
-    @apply text-lg/[27px] font-500;
+    @apply text-lg/[27px] font-medium;
   }
 
   .text-xl {
-    @apply text-xl/[30px] font-400;
+    @apply text-xl/[30px];
   }
 
   .text-xl-medium {
-    @apply text-xl/[30px] font-500;
+    @apply text-xl/[30px] font-medium;
   }
 
   .heading-16 {
-    @apply text-base/[22px] font-500 text-pretty;
+    @apply text-base/[22px] font-medium text-pretty;
   }
 
   .heading-18 {
-    @apply text-lg/[24px] font-500 text-pretty;
+    @apply text-lg/[24px] font-medium text-pretty;
   }
 
   .heading-20 {
-    @apply text-xl/[28px] font-500 text-pretty;
+    @apply text-xl/[28px] font-medium text-pretty;
   }
 
   .heading-22 {
-    @apply text-[22px]/[30px] font-500 text-pretty;
+    @apply text-[22px]/[30px] font-medium text-pretty;
   }
 
   .heading-24 {
-    @apply text-2xl/[32px] font-500 text-pretty;
+    @apply text-2xl/[32px] font-medium text-pretty;
   }
 
   .heading-28 {
-    @apply text-3xl/[34px] font-500 text-pretty;
+    @apply text-3xl/[34px] font-medium text-pretty;
   }
 
   .title-16 {
-    @apply text-base/[132%] font-600 text-pretty;
+    @apply text-base/[132%] font-bold text-pretty;
   }
 
   .title-18 {
-    @apply text-lg/[132%] font-600 text-pretty;
+    @apply text-lg/[132%] font-bold text-pretty;
   }
 
   .title-20 {
-    @apply text-xl/[132%] font-600 text-pretty;
+    @apply text-xl/[132%] font-bold text-pretty;
   }
 
   .title-22 {
-    @apply text-[22px]/[132%] font-600;
+    @apply text-[22px]/[132%] font-bold;
   }
 
   .title-24 {
-    @apply text-2xl/[132%] font-600 text-pretty;
+    @apply text-2xl/[132%] font-bold text-pretty;
   }
 
   .title-28 {
-    @apply text-3xl/[132%] font-600 text-pretty;
+    @apply text-3xl/[132%] font-bold text-pretty;
   }
 
   .title-32 {
-    @apply text-4xl/[120%] font-600 text-pretty;
+    @apply text-4xl/[120%] font-bold text-pretty;
   }
 
   .title-36 {
-    @apply text-5xl/[120%] font-600 text-pretty;
+    @apply text-5xl/[120%] font-bold text-pretty;
   }
 
   .title-40 {
-    @apply text-6xl/[120%] font-600 text-pretty;
+    @apply text-6xl/[120%] font-bold text-pretty;
   }
 
   .title-44 {
-    @apply text-7xl/[120%] font-600 text-pretty;
+    @apply text-7xl/[120%] font-bold text-pretty;
   }
 
   .title-48 {
-    @apply text-8xl/[110%] tracking-[-0.48px] font-600 text-pretty;
+    @apply text-8xl/[110%] tracking-[-0.48px] font-bold text-pretty;
   }
 
   .title-52 {
-    @apply text-9xl/[100%] tracking-[-0.52px] font-600 text-pretty;
+    @apply text-9xl/[100%] tracking-[-0.52px] font-bold text-pretty;
   }
 
   .title-56 {
-    @apply text-10xl/[100%] tracking-[-0.56px] font-600 text-pretty;
+    @apply text-10xl/[100%] tracking-[-0.56px] font-bold text-pretty;
   }
 
   .title-60 {
-    @apply text-11xl/[100%] tracking-[-0.60px] font-600 text-pretty;
+    @apply text-11xl/[100%] tracking-[-0.60px] font-bold text-pretty;
   }
 
   .title-64 {
-    @apply text-12xl/[100%] tracking-[-0.64px] font-600 text-pretty;
+    @apply text-12xl/[100%] tracking-[-0.64px] font-bold text-pretty;
   }
 
   .title-68 {
-    @apply text-13xl/[100%] tracking-[-0.68px] font-600 text-pretty;
+    @apply text-13xl/[100%] tracking-[-0.68px] font-bold text-pretty;
   }
 
   .title-72 {
-    @apply text-14xl/[100%] tracking-[-0.72px] font-600 text-pretty;
+    @apply text-14xl/[100%] tracking-[-0.72px] font-bold text-pretty;
   }
 
   .typography > h1 {
