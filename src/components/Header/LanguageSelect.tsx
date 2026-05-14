@@ -72,7 +72,7 @@ export function LanguageSelect() {
       }}
       items={items}
     >
-      <SelectTrigger aria-label={l("Language")}>
+      <SelectTrigger aria-label={l("Language")} className="font-medium">
         <SelectValue placeholder={l("Language")} />
       </SelectTrigger>
       <SelectContent>

@@ -1,7 +1,7 @@
 import { Menu } from "lucide-react";
 import React from "react";
 
-import { IconButton } from "~/components";
+import { IconButton, Link } from "~/components";
 import { useLocaleState, useLocalizeField } from "~/l10n";
 import { AppRouter } from "~/router";
 
@@ -36,23 +36,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
             <nav className="hidden sm:flex gap-8 items-center">
               <div className="space-x-6">
-                <a
+                <Link
                   href={
                     locale === "en" ? AppRouter.BlogEn() : AppRouter.BlogDe()
                   }
-                  className="text-base-medium text-gray-12 hover:underline"
+                  variant="ghost"
                 >
                   {l("Ratgeber")}
-                </a>
+                </Link>
               </div>
               <div className="flex gap-3">
                 <LanguageSelect />
-                <a
-                  className="inline-block px-2.5 py-1.5 bg-black text-white text-base-medium border border-black hover:bg-gray-12 hover:border-gray-12"
-                  href="/schnelltest"
-                >
+                <Link href="/schnelltest" variant="outline">
                   {l("Miete checken")}
-                </a>
+                </Link>
               </div>
             </nav>
           </div>
@@ -67,12 +64,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
             {l("Ratgeber")}
           </a>
           <div className="w-full py-3">
-            <a
-              className="block px-3 py-2.5 bg-yellow-9 text-purple-11 text-base-medium border-2 border-yellow-9 rounded-full hover:bg-yellow-10 hover:border-yellow-10"
-              href="/schnelltest"
-            >
+            <Link href="/schnelltest" variant="outline">
               {l("Miete checken")}
-            </a>
+            </Link>
           </div>
         </div>
       </header>

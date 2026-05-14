@@ -36,7 +36,7 @@ function SelectTrigger({
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       className={cn(
-        "flex w-fit items-center justify-between gap-1.5 border border-gray-7 bg-white px-4 py-3 whitespace-nowrap transition-colors outline-none select-none",
+        "flex w-fit items-center justify-between gap-1.5 px-3.5 py-2.5 bg-white border border-gray-7 whitespace-nowrap transition-colors outline-none select-none",
         "hover:border-gray-8",
         "focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-gray-5 focus-visible:border-gray-9",
         "disabled:cursor-not-allowed disabled:opacity-50",
@@ -50,9 +50,7 @@ function SelectTrigger({
     >
       {children}
       <SelectPrimitive.Icon
-        render={
-          <ChevronDownIcon className="pointer-events-none size-4 text-gray-11" />
-        }
+        render={<ChevronDownIcon className="pointer-events-none size-4" />}
       />
     </SelectPrimitive.Trigger>
   );

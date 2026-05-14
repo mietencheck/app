@@ -22,7 +22,7 @@ export function Header({ children }: { children?: ReactNode }) {
               <DialogTrigger
                 nativeButton={false}
                 render={
-                  <Button variant="outline" color="gray" type="button">
+                  <Button variant="solid">
                     <span className="hidden sm:block">
                       {l("Fortschritt speichern")}
                     </span>

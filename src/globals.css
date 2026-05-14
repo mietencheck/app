@@ -258,15 +258,15 @@ body {
   }
 
   .heading-18 {
-    @apply text-lg/[24px] font-medium text-pretty;
+    @apply text-lg/[133%] font-medium text-pretty;
   }
 
   .heading-20 {
-    @apply text-xl/[28px] font-medium text-pretty;
+    @apply text-xl/[133%] font-medium text-pretty;
   }
 
   .heading-22 {
-    @apply text-[22px]/[30px] font-medium text-pretty;
+    @apply text-[22px]/[133%] font-medium text-pretty;
   }
 
   .heading-24 {

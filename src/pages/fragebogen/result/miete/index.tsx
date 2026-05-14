@@ -126,12 +126,7 @@ export function ResultMiete() {
               <DialogTrigger
                 nativeButton={false}
                 render={
-                  <Button
-                    variant="outline"
-                    color="gray"
-                    size="sm"
-                    type="button"
-                  >
+                  <Button variant="outline" color="gray" type="button">
                     {l("Auswertung ansehen")}
                   </Button>
                 }
@@ -143,9 +138,6 @@ export function ResultMiete() {
             <Button
               variant="outline"
               color="gray"
-              size="sm"
-              type="button"
-              className="w-fit"
               onClick={() => {
                 const element = document.getElementById("print");
                 const clonedElement = element?.cloneNode(true) as HTMLElement;
@@ -177,15 +169,7 @@ export function ResultMiete() {
             <DialogTrigger
               nativeButton={false}
               render={
-                <Button
-                  variant="solid"
-                  color="purple"
-                  size="sm"
-                  type="button"
-                  className="w-fit"
-                >
-                  {l("Ergebnis speichern")}
-                </Button>
+                <Button className="w-fit">{l("Ergebnis speichern")}</Button>
               }
             />
             <DialogContent className="max-w-xl">

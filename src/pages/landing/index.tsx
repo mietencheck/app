@@ -43,7 +43,7 @@ export default function LandingPage() {
       <section className="bg-blue-8">
         <div className="container py-8 flex gap-10 items-center justify-center">
           <p className="text-base-medium text-white">
-            {l({ de: "Eine Initiative der", en: "An initiative by" })}
+            {l({ de: "Ein Projekt der", en: "A project of" })}
           </p>
           <a href="https://mietenlawclinic.de/" target="_blank">
             <img

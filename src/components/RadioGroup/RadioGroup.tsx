@@ -10,7 +10,7 @@ const radioButton = cva(
   {
     variants: {
       isSelected: {
-        true: "bg-purple-9 border-purple-9 hover:bg-purple-10 hover:border-purple-10",
+        true: "bg-gray-9 border-gray-9 hover:bg-gray-10 hover:border-gray-10",
         false:
           "bg-white border-gray-7 hover:bg-gray-1 hover:border-gray-8 group-hover:border-gray-8",
       },
@@ -33,15 +33,15 @@ function RadioButton(props: RadioButtonProps) {
 }
 
 const radio = cva(
-  "flex px-4 py-3 gap-2 border rounded shadow-sm group cursor-pointer",
+  "flex px-3.5 py-2.5 gap-2 border shadow-sm group cursor-pointer",
   {
     variants: {
       isSelected: {
-        true: "bg-purple-3 border-purple-7 hover:border-purple-8",
+        true: "bg-gray-3 border-gray-7 hover:border-gray-8",
         false: "bg-white border-gray-7 hover:border-gray-8",
       },
       isFocusVisible: {
-        true: "ring-3 ring-purple-5 border-purple-9 hover:border-purple-10",
+        true: "ring-3 ring-gray-5 border-gray-7 hover:border-gray-8",
       },
     },
   },

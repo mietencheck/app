@@ -67,7 +67,6 @@ export const FeedbackButton = ({ question }: { question: Question }) => {
           />
           <Button
             variant="solid"
-            color="purple"
             type="button"
             onClick={() => {
               submit({

@@ -15,6 +15,7 @@ export * from "./Input/NumberInput";
 export * from "./Input/TextInput";
 export * from "./Input/InputControl";
 export * from "./Label/Label";
+export * from "./Link/Link";
 export * from "./LinkOld/Link";
 export * from "./ListBox/ListBox";
 export * from "./Modal/ModalDialog";
