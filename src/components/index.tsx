@@ -1,8 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 export * from "./Accordion/Accordion";
 export * from "./CheckboxGroup/CheckboxGroup";
-export { Button, buttonVariants } from "./Button/Button";
-export { ButtonOld } from "./ButtonOld/Button";
+export * from "./Button/Button";
 export * from "./LinkButton/LinkButton";
 export * from "./Dialog/Dialog";
 export * from "./FeedbackButton/FeedbackButton";
