@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import { Button, LinkButton } from "~/components";
+import { Button, Link } from "~/components";
 import {
   getGeforderteNettokaltmiete,
   getNettokaltmiete,
@@ -133,9 +133,9 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
           </Button>
         )}
         {showContinueToDetailsButton ? (
-          <LinkButton variant="solid" to={DetailsRouter.Summary()}>
+          <Link variant="solid" href={DetailsRouter.Summary()}>
             {l("go_to_details")}
-          </LinkButton>
+          </Link>
         ) : (
           <Button
             variant="solid"

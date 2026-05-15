@@ -206,11 +206,7 @@ function CreateMietenFlowAction() {
     >
       <DialogTrigger
         nativeButton={false}
-        render={
-          <Button variant="outline" color="gray" size="sm" type="button">
-            Neu
-          </Button>
-        }
+        render={<Button>Fall erstellen</Button>}
       />
       <DialogContent className="max-w-lg">
         {/* Form inside portal: wrapping DialogContent would leave controls outside <form> in the DOM. */}

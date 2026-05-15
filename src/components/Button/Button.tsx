@@ -28,8 +28,8 @@ const buttonVariants = cva(
         sm: "gap-1.5 px-2.5 py-1.5 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5",
         base: "gap-1.5 px-3.5 py-2.5 has-data-[icon=inline-end]:pr-2.5 has-data-[icon=inline-start]:pl-2.5",
         lg: "gap-1.5 px-[18px] py-3.5 has-data-[icon=inline-end]:pr-3.5 has-data-[icon=inline-start]:pl-3.5",
-        icon: "h-[42px] w-[42px]",
-        "icon-sm": "h-[34px] w-[34px]",
+        icon: "h-[46px] w-[46px]",
+        "icon-sm": "h-[38px] w-[38px]",
       },
     },
     defaultVariants: {
