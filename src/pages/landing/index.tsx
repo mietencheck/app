@@ -17,12 +17,15 @@ export default function LandingPage() {
         <div className="container sm:grid sm:grid-cols-12 gap-12 py-24 text-center">
           <div className="sm:col-span-12 xl:col-start-3 xl:col-span-8">
             <h1 className="title-48 sm:title-56 md:title-60 lg:title-64 text-white mb-8">
-              Wir setzen dein Recht auf faire Mieten durch!
+              {l({
+                de: "Wir setzen dein Recht auf faire Mieten durch!",
+                en: "We stand up for your right to fair rent!",
+              })}
             </h1>
             <p className="text-xl text-white mb-16">
               {l({
                 de: "Überprüfe jetzt, ob deine Miete oder die bevorstehende Mieterhöhung rechtmäßig ist. Erhalte eine erste Einschätzung in weniger als 5 Minuten.",
-                en: "",
+                en: "Check now whether your rent or an upcoming rent increase is legal. Get an initial assessment in less than 5 minutes.",
               })}
             </p>
             <Link
@@ -34,7 +37,7 @@ export default function LandingPage() {
             >
               {l({
                 de: "Jetzt Miete checken",
-                en: "",
+                en: "Check your rent now",
               })}
             </Link>
           </div>
@@ -191,7 +194,9 @@ export default function LandingPage() {
 
           <div className="flex flex-col gap-10 md:flex-row">
             <div className="w-full">
-              <h3 className="title-28 md:title-32 mb-8">Mietpreisbremse</h3>
+              <h3 className="title-28 md:title-32 mb-8">
+                {l({ de: "Mietpreisbremse", en: "Rent Control Act" })}
+              </h3>
               <Accordion type="single" collapsible className="gap-4">
                 {[
                   {
@@ -287,7 +292,9 @@ export default function LandingPage() {
               </Accordion>
             </div>
             <div className="w-full">
-              <h3 className="title-28 md:title-32 mb-8">mietencheck.de</h3>
+              <h3 className="title-28 md:title-32 mb-8">
+                {l({ de: "mietencheck.de", en: "mietencheck.de" })}
+              </h3>
               <Accordion type="single" collapsible className="gap-4">
                 {[
                   {
