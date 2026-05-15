@@ -23,7 +23,7 @@ import {
   CheckIcon,
   CloseIcon,
   HelpCircleIcon,
-  LinkOld,
+  Link,
   NumberInput,
   SegmentedControl,
   Select,
@@ -65,13 +65,10 @@ import {
 function BeratungDetailHeading() {
   return (
     <div className="mb-8">
-      <LinkOld
-        href={AppRouter.Beratung()}
-        className="text-sm font-450 text-purple-11-solid underline"
-      >
+      <Link href={AppRouter.Beratung()} className="text-gray-11">
         Zur Übersicht
-      </LinkOld>
-      <h1 className="heading-22 text-purple-11 mt-2">Beratung</h1>
+      </Link>
+      <h1 className="heading-28 mt-3">Beratung</h1>
     </div>
   );
 }
@@ -417,14 +414,7 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
   return (
     <Layout
       headerTrailing={
-        <Button
-          size="sm"
-          disabled={savePending}
-          type="button"
-          variant="outline"
-          color="gray"
-          onClick={onSave}
-        >
+        <Button size="sm" disabled={savePending} onClick={onSave}>
           {savePending ? "Speichere…" : "Speichern"}
         </Button>
       }

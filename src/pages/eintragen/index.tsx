@@ -5,7 +5,7 @@ import {
   postLawOrgaCreateRecord,
   postMietenFlow,
 } from "~/api/mietencheck-backend";
-import { Button, FormField, Label, LinkOld, TextField } from "~/components";
+import { Button, FormField, Label, Link, TextField } from "~/components";
 import { useStoredAnswers } from "~/form/flow-machine";
 import { evaluateFlowMachine } from "~/form/flow-machine-evaluation";
 import { Layout } from "~/pages/layout";
@@ -118,17 +118,12 @@ export function EintragenPage() {
     return (
       <Layout>
         <div className="container max-w-lg py-16">
-          <h1 className="heading-22 text-purple-11 mb-4">Gespeichert</h1>
+          <h1 className="heading-22 mb-4">Gespeichert</h1>
           <p className="text-base text-gray-11 mb-6">
             Deine Angaben und der Fragebogen wurden übernommen.
           </p>
-          <p className="text-sm text-gray-11 mb-8">ID: {successId}</p>
-          <LinkOld
-            href={AppRouter.Landing()}
-            className="text-purple-11-solid underline"
-          >
-            Zur Startseite
-          </LinkOld>
+          <p className="text-gray-11 mb-8">ID: {successId}</p>
+          <Link href={AppRouter.Landing()}>Zur Startseite</Link>
         </div>
       </Layout>
     );
@@ -137,39 +132,29 @@ export function EintragenPage() {
   return (
     <Layout>
       <div className="container max-w-lg py-16">
-        <h1 className="heading-22 text-purple-11 mb-2">Daten eintragen</h1>
+        <h1 className="heading-22 mb-2">Daten eintragen</h1>
         <p className="text-base text-gray-11 mb-8">
           Kontaktdaten für Law & Orga. Es wird ein Datensatz angelegt und dein
           ausgefüllter Fragebogen gespeichert.
         </p>
 
         {!hasAnswers && (
-          <div className="mb-8 p-4 rounded-lg border border-yellow-9 bg-yellow-3">
-            <p className="text-sm text-purple-11 mb-3">
+          <div className="mb-8 p-4 rounded-lg bg-red-3 text-red-11">
+            <p className="mb-3">
               Es sind noch keine Fragebogen-Antworten vorhanden.
             </p>
-            <LinkOld
-              href={FOLDER_FRAGEBOGEN}
-              className="text-purple-11-solid underline font-medium"
-            >
-              Zum Fragebogen
-            </LinkOld>
+            <Link href={FOLDER_FRAGEBOGEN}>Zum Fragebogen</Link>
           </div>
         )}
 
         {hasAnswers && !beratungReady && (
-          <div className="mb-8 p-4 rounded-lg border border-yellow-9 bg-yellow-3">
-            <p className="text-sm text-purple-11 mb-3">
+          <div className="mb-8 p-4 rounded-lg bg-red-3 text-red-11">
+            <p className="mb-3">
               Es fehlen noch Angaben für eine vollständige Auswertung
               (z.&nbsp;B. Vertragsdatum, Fläche, Lage). Ohne diese können wir
               die Daten in der Beratung nicht darstellen.
             </p>
-            <LinkOld
-              href={FOLDER_FRAGEBOGEN}
-              className="text-purple-11-solid underline font-medium"
-            >
-              Fragebogen fortsetzen
-            </LinkOld>
+            <Link href={FOLDER_FRAGEBOGEN}>Fragebogen fortsetzen</Link>
           </div>
         )}
 
@@ -229,7 +214,7 @@ export function EintragenPage() {
             />
           </FormField>
           {error && (
-            <p className="text-sm text-red-10" role="alert">
+            <p className="text-red-10" role="alert">
               {error}
             </p>
           )}

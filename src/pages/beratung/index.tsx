@@ -21,7 +21,7 @@ import {
   DialogTrigger,
   FormField,
   Label,
-  LinkOld,
+  Link,
   Table,
   TableBody,
   TableCell,
@@ -354,13 +354,13 @@ export function BeratungListPage() {
             {rows.map((r) => (
               <TableRow key={r._id}>
                 <TableCell className="pr-3">
-                  <LinkOld
+                  <Link
                     href={AppRouter.BeratungDetail({ id: r._id })}
-                    className="text-purple-11-solid underline truncate block"
                     title={r._id}
+                    className="font-normal underline"
                   >
                     {r._id}
-                  </LinkOld>
+                  </Link>
                 </TableCell>
 
                 <TableCell className="px-3 max-w-md">
