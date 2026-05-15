@@ -2,6 +2,9 @@ name = "mietencheck"
 main = "./src/worker.ts"
 compatibility_date = "2026-03-12"
 
+workers_dev = false
+preview_urls = true
+
 # Used by worker proxy for `/api-mietencheck` → Nest (see src/worker.ts).
 # Local default only: for production, set the real API origin per environment, e.g.
 #   wrangler deploy --var MIETENCHECK_API_ORIGIN:https://api.example.com
