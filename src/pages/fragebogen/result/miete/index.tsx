@@ -104,7 +104,7 @@ export function ResultMiete() {
 
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
-          <h3 className="text-base">{l("Was bedeutet das?")}</h3>
+          <h3 className="text-base-medium">{l("Was bedeutet das?")}</h3>
           <p className="text-base text-gray-11">
             {worstDiff == bestDiff
               ? l("Ergebnis zulässige Höchstmiete", {
@@ -158,7 +158,9 @@ export function ResultMiete() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="text-base">{l("Speicher dein Ergebnis Titel")}</h3>
+          <h3 className="text-base-medium">
+            {l("Speicher dein Ergebnis Titel")}
+          </h3>
           <p className="text-base text-gray-11">
             {l("Speicher dein Ergebnis Text 1")}
           </p>
@@ -179,7 +181,7 @@ export function ResultMiete() {
         </div>
       </div>
 
-      <hr className="my-8" />
+      <hr className="border-gray-6 my-8" />
       {worstDiff > 0 && (
         <>
           <div>
@@ -192,7 +194,7 @@ export function ResultMiete() {
 
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-left">
+                <AccordionTrigger className="text-left text-base-medium">
                   {l("Beratung durch Mieterverein Titel")}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
@@ -216,7 +218,7 @@ export function ResultMiete() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="text-left">
+                <AccordionTrigger className="text-left text-base-medium">
                   {l("Beratung durch Bezirke Titel")}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
@@ -239,7 +241,7 @@ export function ResultMiete() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger className="text-left">
+                <AccordionTrigger className="text-left text-base-medium">
                   {l("Beratung durch Rechtsanwalt Titel")}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
@@ -262,7 +264,7 @@ export function ResultMiete() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
-                <AccordionTrigger className="text-left">
+                <AccordionTrigger className="text-left text-base-medium">
                   {l("Beratung durch Drittanbieter Titel")}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
@@ -276,85 +278,8 @@ export function ResultMiete() {
               </AccordionItem>
             </Accordion>
           </div>
-          <hr className="my-8" />
         </>
       )}
-
-      <div>
-        <h2 className="heading-20 mb-4">
-          {l("Wie kann ich mich für bezahlbare Mieten einsetzen?")}
-        </h2>
-        <p className="text-base text-gray-11 mb-8">
-          {l(
-            "Egal, ob du dich entscheidest, gegen deine zu hohe Miete vorzugehen oder nicht - du bist nicht alleine! Wir sind stärker, wenn wir uns zusammentun:",
-          )}
-        </p>
-
-        <Accordion type="single" collapsible>
-          <AccordionItem value="item-1">
-            <AccordionTrigger>
-              {l("Informiere deine Nachbar*innen Titel")}
-            </AccordionTrigger>
-            <AccordionContent className="pt-3 pb-5 pl-7">
-              <p className="text-gray-11 mb-2">
-                {l("Informiere deine Nachbar*innen Text 1")}
-              </p>
-              <p className="text-gray-11 mb-4">
-                {l("Informiere deine Nachbar*innen Text 2")}
-              </p>
-              <a
-                className="underline"
-                href={
-                  locale == "de"
-                    ? "https://blog.mietencheck.de/de/2024-05-28-was-du-tun-kannst/"
-                    : "https://blog.mietencheck.de/en/2024-05-28-was-du-tun-kannst/"
-                }
-                target="_blank"
-              >
-                {l("Mehr Informationen")}
-              </a>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2">
-            <AccordionTrigger>
-              {l("Schaffe ein Bewusstsein für die Mietenkrise Titel")}
-            </AccordionTrigger>
-            <AccordionContent className="pt-3 pb-5 pl-7">
-              <p className="text-gray-11 mb-2">
-                {l("Schaffe ein Bewusstsein für die Mietenkrise Text")}
-              </p>
-              <a
-                className="underline"
-                href={
-                  locale == "de"
-                    ? "https://blog.mietencheck.de/de/2024-05-28-was-du-tun-kannst/"
-                    : "https://blog.mietencheck.de/en/2024-05-28-was-du-tun-kannst/"
-                }
-                target="_blank"
-              >
-                {l("Teile dein Ergebnis")}
-              </a>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3">
-            <AccordionTrigger>{l("Engagiere dich Titel")}</AccordionTrigger>
-            <AccordionContent className="pt-3 pb-5 pl-7">
-              <p className="text-gray-11 mb-2">{l("Engagiere dich Text")}</p>
-              <a
-                className="underline"
-                href={
-                  locale == "de"
-                    ? "https://blog.mietencheck.de/de/2024-05-28-was-du-tun-kannst/"
-                    : "https://blog.mietencheck.de/en/2024-05-28-was-du-tun-kannst/"
-                }
-                target="_blank"
-              >
-                {l("Mehr zu Deutsche Wohnen & Co enteignen")}
-              </a>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </div>
     </>
   );
 }
