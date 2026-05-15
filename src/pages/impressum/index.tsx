@@ -3,13 +3,15 @@ import { Layout } from "~/pages/layout";
 export function ImpressumPage() {
   return (
     <Layout>
-      <section>
-        <div className="container py-20 space-y-20 sm:py-24 sm:space-y-24">
-          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-purple-11 text-center">
-            <span className="inline-block px-4 py-3 transform -rotate-6 bg-yellow-9 text-purple-11">
-              Impressum
-            </span>
+      <section className="bg-pink-9 py-20 sm:py-24">
+        <div className="container">
+          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-center text-white">
+            Impressum
           </h2>
+        </div>
+      </section>
+      <section>
+        <div className="container py-20 space-y-20">
           <div className="prose max-w-screen-sm mx-auto">
             <h2>Postanschrift</h2>
             <p>

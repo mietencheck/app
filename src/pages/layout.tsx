@@ -34,23 +34,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Menu className="h-5 w-5" />
               </IconButton>
             </div>
-            <nav className="hidden sm:flex gap-8 items-center">
-              <div className="space-x-6">
-                <Link
-                  href={
-                    locale === "en" ? AppRouter.BlogEn() : AppRouter.BlogDe()
-                  }
-                  variant="ghost"
-                >
-                  {l("Ratgeber")}
-                </Link>
-              </div>
-              <div className="flex gap-3">
-                <LanguageSelect />
-                <Link href="/schnelltest" variant="outline">
-                  {l("Miete checken")}
-                </Link>
-              </div>
+            <nav className="hidden sm:flex gap-3 items-center">
+              <Link
+                href={locale === "en" ? AppRouter.BlogEn() : AppRouter.BlogDe()}
+                variant="ghost"
+              >
+                {l("Ratgeber")}
+              </Link>
+              <LanguageSelect />
+              <Link href="/schnelltest" variant="solid">
+                {l("Miete checken")}
+              </Link>
             </nav>
           </div>
         </div>
