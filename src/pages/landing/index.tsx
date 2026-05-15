@@ -62,23 +62,21 @@ export default function LandingPage() {
             {l({ de: "Kostenlos und sicher.", en: "Free and secure." })}
           </h2>
           <div className="flex flex-col sm:flex-row gap-10">
-            <a href="/schnelltest">
-              <div className="p-6 sm:p-8 bg-purple-3">
-                <h3 className="title-24 lg:title-28 mb-3">
-                  {l({ de: "Miete überprüfen", en: "Check your rent" })}
-                </h3>
-                <p className="text-lg mb-6 text-gray-11">
-                  {l({
-                    de: "Finde heraus, ob du für deine aktuelle oder neue Wohnung zu viel Miete zahlst.",
-                    en: "Find out if you are paying too much rent for your current or new apartment.",
-                  })}
-                </p>
-                <span className="inline-block px-4 py-3 text-base bg-purple-9 text-white hover:bg-purple-10">
-                  {l({ de: "Jetzt checken", en: "Take the test" })}
-                </span>
-              </div>
-            </a>
-            <div className="px-4 py-6 sm:p-8 bg-red-3 text-gray-1">
+            <div className="p-6 sm:p-8 bg-purple-3">
+              <h3 className="title-24 lg:title-28 mb-3">
+                {l({ de: "Miete überprüfen", en: "Check your rent" })}
+              </h3>
+              <p className="text-lg mb-6 text-gray-11">
+                {l({
+                  de: "Finde heraus, ob du für deine aktuelle oder neue Wohnung zu viel Miete zahlst.",
+                  en: "Find out if you are paying too much rent for your current or new apartment.",
+                })}
+              </p>
+              <Link color="purple" variant="solid" href="/schnelltest">
+                {l({ de: "Jetzt checken", en: "Take the test" })}
+              </Link>
+            </div>
+            <div className="p-6 sm:p-8 bg-purple-3">
               <h3 className="title-24 lg:title-28 mb-3">
                 {l({
                   de: "Mieterhöhung überprüfen",
@@ -91,9 +89,9 @@ export default function LandingPage() {
                   en: "Have you received a rent increase? Find out if the increase is legal.",
                 })}
               </p>
-              <span className="inline-block px-4 py-3 text-base bg-red-9 text-white opacity-50 cursor-not-allowed">
+              <Link color="purple" variant="solid" href="/schnelltest" disabled>
                 {l({ de: "Bald verfügbar", en: "Coming soon" })}
-              </span>
+              </Link>
             </div>
           </div>
         </div>
@@ -191,7 +189,7 @@ export default function LandingPage() {
             })}
           </h2>
 
-          <div className="flex flex-col gap-10 md:flex-row text-purple-11">
+          <div className="flex flex-col gap-10 md:flex-row">
             <div className="w-full">
               <h3 className="title-28 md:title-32 mb-8">Mietpreisbremse</h3>
               <Accordion type="single" collapsible className="gap-4">
@@ -278,10 +276,10 @@ export default function LandingPage() {
                   },
                 ].map((item, i) => (
                   <AccordionItem key={i} value={`mpb-${i}`}>
-                    <AccordionTrigger className="text-left heading-20 [&>svg]:text-purple-11 [&>svg]:h-7 [&>svg]:w-7">
+                    <AccordionTrigger className="text-left heading-20 [&>svg]:text-gray-11 [&>svg]:h-7 [&>svg]:w-7">
                       {l(item.question)}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base space-y-2 pt-2 pl-[38px]">
+                    <AccordionContent className="space-y-2 pt-2 pl-[38px] text-gray-11 text-lg">
                       {l(item.answer)}
                     </AccordionContent>
                   </AccordionItem>
@@ -344,10 +342,10 @@ export default function LandingPage() {
                   },
                 ].map((item, i) => (
                   <AccordionItem key={i} value={`mc-${i}`}>
-                    <AccordionTrigger className="text-left heading-20 [&>svg]:text-purple-11 [&>svg]:h-7 [&>svg]:w-7">
+                    <AccordionTrigger className="text-left heading-20 [&>svg]:text-gray-11 [&>svg]:h-7 [&>svg]:w-7">
                       {l(item.question)}
                     </AccordionTrigger>
-                    <AccordionContent className="text-base space-y-2 pt-2 pl-[38px]">
+                    <AccordionContent className="space-y-2 pt-2 pl-[38px] text-gray-11 text-lg">
                       {l(item.answer)}
                     </AccordionContent>
                   </AccordionItem>
