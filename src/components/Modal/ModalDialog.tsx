@@ -12,7 +12,7 @@ const OVERLAY_CLASSNAME = cx(
 );
 
 const MODAL_CLASSNAME = cx(
-  "w-full max-w-2xl max-h-full rounded-2xl bg-white overflow-auto text-left align-middle shadow rounded",
+  "w-full max-w-2xl max-h-full bg-white overflow-auto text-left align-middle",
 );
 
 export function ModalDialog({ className, ...props }: DialogProps) {

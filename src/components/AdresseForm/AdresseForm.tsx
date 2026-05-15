@@ -76,9 +76,9 @@ function ComboBox<Item>({
         <div
           className={[
             "flex w-full px-4 py-3 font-450 bg-white border border-gray-7",
-            "rounded shadow hover:border-gray-8 focus-within:ring-3",
-            "focus-within:ring-purple-5 focus-within:border-purple-9",
-            "focus-within:hover:border-purple-9",
+            "hover:border-gray-8 focus-within:ring-3",
+            "focus-within:ring-gray-5 focus-within:border-gray-9",
+            "focus-within:hover:border-gray-9",
           ].join(" ")}
         >
           <input
@@ -119,7 +119,7 @@ function ComboBox<Item>({
               <li
                 key={itemToKey(item)}
                 className={[
-                  highlightedIndex === index && "bg-purple-9 text-white",
+                  highlightedIndex === index && "bg-gray-9 text-white",
                   selectedItem === item && "",
                   LISTBOX_ITEM_CLASS_NAME,
                 ].join(" ")}

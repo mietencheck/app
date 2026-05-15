@@ -6,7 +6,7 @@ import {
 } from "react-aria-components";
 
 const radioButton = cva(
-  "flex items-center justify-center w-4 h-4 border rounded-full shadow-sm+inner",
+  "flex items-center justify-center w-4 h-4 border rounded-full",
   {
     variants: {
       isSelected: {
@@ -25,27 +25,24 @@ function RadioButton(props: RadioButtonProps) {
     <div className="flex justify-center items-center w-5 h-6">
       <div className={radioButton(props)}>
         {props.isSelected && (
-          <div className="w-[5px] h-[5px] bg-white rounded-full shadow-sm"></div>
+          <div className="w-[5px] h-[5px] bg-white rounded-full"></div>
         )}
       </div>
     </div>
   );
 }
 
-const radio = cva(
-  "flex px-3.5 py-2.5 gap-2 border shadow-sm group cursor-pointer",
-  {
-    variants: {
-      isSelected: {
-        true: "bg-gray-3 border-gray-7 hover:border-gray-8",
-        false: "bg-white border-gray-7 hover:border-gray-8",
-      },
-      isFocusVisible: {
-        true: "ring-3 ring-gray-5 border-gray-7 hover:border-gray-8",
-      },
+const radio = cva("flex px-3.5 py-2.5 gap-2 border group cursor-pointer", {
+  variants: {
+    isSelected: {
+      true: "bg-gray-3 border-gray-7 hover:border-gray-8",
+      false: "bg-white border-gray-7 hover:border-gray-8",
+    },
+    isFocusVisible: {
+      true: "ring-3 ring-gray-5 border-gray-7 hover:border-gray-8",
     },
   },
-);
+});
 
 type Option = {
   value: string;
