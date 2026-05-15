@@ -124,7 +124,7 @@ export function ResultMiete() {
           <div className="flex flex-wrap gap-3">
             <Dialog open={showDetails} onOpenChange={setShowDetails}>
               <DialogTrigger
-                nativeButton={false}
+                nativeButton
                 render={
                   <Button variant="outline" color="gray" type="button">
                     {l("Auswertung ansehen")}
@@ -169,7 +169,7 @@ export function ResultMiete() {
           </p>
           <Dialog open={showSessionModal} onOpenChange={setShowSessionModal}>
             <DialogTrigger
-              nativeButton={false}
+              nativeButton
               render={
                 <Button className="w-fit">{l("Ergebnis speichern")}</Button>
               }

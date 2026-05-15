@@ -95,7 +95,7 @@ function DeleteMietenFlowRowAction({
       }}
     >
       <DialogTrigger
-        nativeButton={false}
+        nativeButton
         render={
           <Button variant="outline" color="gray" size="sm" type="button">
             Löschen
@@ -204,10 +204,7 @@ function CreateMietenFlowAction() {
         if (!open) resetForm();
       }}
     >
-      <DialogTrigger
-        nativeButton={false}
-        render={<Button>Fall erstellen</Button>}
-      />
+      <DialogTrigger nativeButton render={<Button>Fall erstellen</Button>} />
       <DialogContent className="max-w-lg">
         {/* Form inside portal: wrapping DialogContent would leave controls outside <form> in the DOM. */}
         <form onSubmit={handleCreateNew} className="contents">

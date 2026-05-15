@@ -18,7 +18,7 @@ export function FragebogenHeader() {
           <LanguageSelect />
           <Dialog open={showSessionModal} onOpenChange={setShowSessionModal}>
             <DialogTrigger
-              nativeButton={false}
+              nativeButton
               render={
                 <Button variant="solid">
                   <span className="hidden sm:block">
