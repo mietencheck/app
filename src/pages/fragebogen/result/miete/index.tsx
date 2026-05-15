@@ -138,18 +138,44 @@ export function ResultMiete() {
             <Button
               variant="outline"
               color="gray"
+              type="button"
               onClick={() => {
                 const element = document.getElementById("print");
-                const clonedElement = element?.cloneNode(true) as HTMLElement;
-                clonedElement.style.display = "block";
-                // @ts-expect-error missing types for html2pdf.js
-                import("html2pdf.js").then(({ default: html2pdf }) => {
-                  const options = {
-                    margin: 2,
-                    filename: "Mietencheck Auswertung.pdf",
-                  };
-                  html2pdf().set(options).from(clonedElement).save();
+                if (!element) return;
+
+                // html2canvas (used by html2pdf) needs the source node to be in the document
+                // so layout and styles resolve; a detached clone often produces an empty PDF.
+                const host = document.createElement("div");
+                host.setAttribute("aria-hidden", "true");
+                Object.assign(host.style, {
+                  position: "fixed",
+                  left: "-10000px",
+                  top: "0",
+                  width: "768px",
                 });
+
+                const clone = element.cloneNode(true) as HTMLElement;
+                clone.classList.remove("hidden");
+                clone.style.display = "block";
+                host.appendChild(clone);
+                document.body.appendChild(host);
+
+                // @ts-expect-error html2pdf.js ships without TypeScript types
+                void import("html2pdf.js")
+                  .then((mod) => {
+                    const html2pdf = mod.default ?? mod;
+                    const options = {
+                      margin: 10,
+                      filename: "Mietencheck Auswertung.pdf",
+                    };
+                    return html2pdf().set(options).from(clone).save();
+                  })
+                  .catch((err) => {
+                    console.error("PDF export failed:", err);
+                  })
+                  .finally(() => {
+                    host.remove();
+                  });
               }}
             >
               {l("Auswertung als PDF herunterladen")}
