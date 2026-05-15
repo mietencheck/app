@@ -48,7 +48,10 @@ export default function LandingPage() {
           <p className="text-base-medium text-white">
             {l({ de: "Ein Projekt der", en: "A project of" })}
           </p>
-          <a href="https://mietenlawclinic.de/" target="_blank">
+          <a
+            href="https://www.jura.fu-berlin.de/fachbereich/einrichtungen/zivilrecht/lehrende/roedlf/Mieten-Law-Clinic/index.html"
+            target="_blank"
+          >
             <img
               src="/images/milc-logo.svg"
               className="h-[40px]"
