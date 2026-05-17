@@ -2,7 +2,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 import { Button, Link } from "~/components";
-import { useLocaleState, useLocalizeField } from "~/l10n";
+import { useInlineLocale, useLocaleState } from "~/l10n";
 import { AppRouter } from "~/router";
 
 import { Header } from "./Header";
@@ -14,7 +14,7 @@ const aboutHref =
 export function MarketingHeader() {
   const [menu, setMenu] = useState(false);
   const { locale } = useLocaleState();
-  const l = useLocalizeField();
+  const l = useInlineLocale();
 
   const blogHref = locale === "en" ? AppRouter.BlogEn() : AppRouter.BlogDe();
   const closeMenu = () => setMenu(false);
@@ -28,7 +28,10 @@ export function MarketingHeader() {
             className="absolute bg-white z-50 container flex flex-col gap-2 pb-6 sm:hidden"
           >
             <Link href={blogHref} variant="ghost" onClick={closeMenu}>
-              {l("Ratgeber")}
+              {l({
+                de: "Ratgeber",
+                en: "Guide",
+              })}
             </Link>
             <Link
               href={aboutHref}
@@ -36,7 +39,10 @@ export function MarketingHeader() {
               target="_blank"
               onClick={closeMenu}
             >
-              Über Uns
+              {l({
+                de: "Über Uns",
+                en: "About us",
+              })}
             </Link>
             <Link
               href="/schnelltest"
@@ -44,7 +50,10 @@ export function MarketingHeader() {
               className="mt-2"
               onClick={closeMenu}
             >
-              {l("Miete checken")}
+              {l({
+                de: "Miete checken",
+                en: "Check your rent",
+              })}
             </Link>
           </nav>
         ) : null
@@ -53,7 +62,10 @@ export function MarketingHeader() {
         <>
           <div className="flex gap-1">
             <Link href={blogHref} variant="ghost" className="hidden sm:block">
-              {l("Ratgeber")}
+              {l({
+                de: "Ratgeber",
+                en: "Guide",
+              })}
             </Link>
             <Link
               href={aboutHref}
@@ -61,7 +73,10 @@ export function MarketingHeader() {
               className="hidden sm:block"
               target="_blank"
             >
-              Über Uns
+              {l({
+                de: "Über Uns",
+                en: "About us",
+              })}
             </Link>
           </div>
 
@@ -77,7 +92,10 @@ export function MarketingHeader() {
             {menu ? <X /> : <Menu />}
           </Button>
           <Link href="/schnelltest" variant="solid" className="hidden sm:block">
-            {l("Miete checken")}
+            {l({
+              de: "Miete checken",
+              en: "Check your rent",
+            })}
           </Link>
         </>
       }

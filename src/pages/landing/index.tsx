@@ -208,8 +208,26 @@ export default function LandingPage() {
                       en: "What is the Rent Control Act?",
                     },
                     answer: {
-                      de: "Die Mietpreisbremse ist ein Gesetz, das den rasanten Anstieg der Mietpreise bremsen soll. Die Mietpreisbremse soll einerseits verhindern, dass neue Mietverträge mit zu hohen Mietpreisen abgeschlossen werden und andererseits ermöglichen, dass zu hohe Mieten gesenkt werden.",
-                      en: "The Rent Control Act is a law designed to slow down the rapid rise in rents. On the one hand, the rent freeze is intended to prevent new rental agreements being concluded with excessively high rents and, on the other, to enable excessively high rents to be reduced.",
+                      de: (
+                        <p>
+                          Die Mietpreisbremse ist ein Gesetz, das den rasanten
+                          Anstieg der Mietpreise bremsen soll. Die
+                          Mietpreisbremse soll einerseits verhindern, dass neue
+                          Mietverträge mit zu hohen Mietpreisen abgeschlossen
+                          werden und andererseits ermöglichen, dass zu hohe
+                          Mieten gesenkt werden.
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          The Rent Control Act is a law designed to slow down
+                          the rapid rise in rents. On the one hand, the rent
+                          freeze is intended to prevent new rental agreements
+                          being concluded with excessively high rents and, on
+                          the other, to enable excessively high rents to be
+                          reduced.
+                        </p>
+                      ),
                     },
                   },
                   {
@@ -218,8 +236,28 @@ export default function LandingPage() {
                       en: "What are the benefits of the Rent Control Act?",
                     },
                     answer: {
-                      de: "Ziehst Du erfolgreich die Mietpreisbremse, musst Du zukünftig deutlich weniger Miete bezahlen und kannst die zu viel bezahlte Miete zurückverlangen. Außerdem gilt: Wenn viele Menschen erfolgreich ihre Miete senken, wird auch der Mietspiegel niedrig gehalten. Das ist wichtig, weil der Mietspiegel der Maßstab für die zulässigen Miethöhen ist.",
-                      en: "If you successfully apply the rent freeze, you will have to pay significantly less rent in future and can reclaim the rent you have paid in excess. In addition, if many people successfully reduce their rent, the rent index will also be kept low. This is important because the rent index is the benchmark for permissible rent levels. ",
+                      de: (
+                        <p>
+                          Ziehst Du erfolgreich die Mietpreisbremse, musst Du
+                          zukünftig deutlich weniger Miete bezahlen und kannst
+                          die zu viel bezahlte Miete zurückverlangen. Außerdem
+                          gilt: Wenn viele Menschen erfolgreich ihre Miete
+                          senken, wird auch der Mietspiegel niedrig gehalten.
+                          Das ist wichtig, weil der Mietspiegel der Maßstab für
+                          die zulässigen Miethöhen ist.
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          If you successfully apply the rent freeze, you will
+                          have to pay significantly less rent in future and can
+                          reclaim the rent you have paid in excess. In addition,
+                          if many people successfully reduce their rent, the
+                          rent index will also be kept low. This is important
+                          because the rent index is the benchmark for
+                          permissible rent levels.
+                        </p>
+                      ),
                     },
                   },
                   {
@@ -228,8 +266,25 @@ export default function LandingPage() {
                       en: "Does the Rent Control apply throughout Berlin?",
                     },
                     answer: {
-                      de: "Die Mietpreisbremse gilt seit 2015 in ganz Berlin, denn die Mieten steigen überall sehr schnell und bezahlbarer Wohnraum ist kaum zu finden. Alle gesetzlichen Kriterien zur Bestimmung eines „angespannten Wohnungsmarktes“ sind in ganz Berlin erfüllt.",
-                      en: "The Rent Control Act has been applied throughout Berlin since 2015, because rents are rising very quickly everywhere and affordable housing is hard to find. All legal criteria for determining a “tight housing market” are met throughout Berlin.",
+                      de: (
+                        <p>
+                          Die Mietpreisbremse gilt seit 2015 in ganz Berlin,
+                          denn die Mieten steigen überall sehr schnell und
+                          bezahlbarer Wohnraum ist kaum zu finden. Alle
+                          gesetzlichen Kriterien zur Bestimmung eines
+                          „angespannten Wohnungsmarktes“ sind in ganz Berlin
+                          erfüllt.
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          The Rent Control Act has been applied throughout
+                          Berlin since 2015, because rents are rising very
+                          quickly everywhere and affordable housing is hard to
+                          find. All legal criteria for determining a “tight
+                          housing market” are met throughout Berlin.
+                        </p>
+                      ),
                     },
                   },
                   {
@@ -238,8 +293,20 @@ export default function LandingPage() {
                       en: "Does the Rent Control apply to all apartments?",
                     },
                     answer: {
-                      de: "Leider nein, es gibt ein paar Ausnahmen. Ob du die Mietpreisbremse ziehen kannst, findest du mit unserem Rechner heraus!",
-                      en: "Unfortunately no, there are a few exceptions. Use our calculator to find out whether you can apply the Rent Control! ",
+                      de: (
+                        <p>
+                          Leider nein, es gibt ein paar Ausnahmen. Ob du die
+                          Mietpreisbremse ziehen kannst, findest du mit unserem
+                          Rechner heraus!
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          Unfortunately no, there are a few exceptions. Use our
+                          calculator to find out whether you can apply the Rent
+                          Control!
+                        </p>
+                      ),
                     },
                   },
                   {
@@ -248,8 +315,27 @@ export default function LandingPage() {
                       en: "How high can the permitted rent be?",
                     },
                     answer: {
-                      de: "Die zulässige Miete richtet sich nach der ortsüblichen Vergleichsmiete. Diese wird in Berlin in der Regel nach dem Mietspiegel bestimmt. Zudem gibt es weitere Faktoren, die die zulässige Miethöhe beeinflussen können. Insbesondere durchgeführte Modernisierungsmaßnahmen können die zulässige Miete erhöhen.",
-                      en: "The permissible rent is based on the local comparative rent. In Berlin, this is usually determined according to the rent index. There are also other factors that can influence the permissible rent. In particular, modernization measures carried out can increase the permissible rent.",
+                      de: (
+                        <p>
+                          Die zulässige Miete richtet sich nach der ortsüblichen
+                          Vergleichsmiete. Diese wird in Berlin in der Regel
+                          nach dem Mietspiegel bestimmt. Zudem gibt es weitere
+                          Faktoren, die die zulässige Miethöhe beeinflussen
+                          können. Insbesondere durchgeführte
+                          Modernisierungsmaßnahmen können die zulässige Miete
+                          erhöhen.
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          The permissible rent is based on the local comparative
+                          rent. In Berlin, this is usually determined according
+                          to the rent index. There are also other factors that
+                          can influence the permissible rent. In particular,
+                          modernization measures carried out can increase the
+                          permissible rent.
+                        </p>
+                      ),
                     },
                   },
                   {
@@ -258,8 +344,22 @@ export default function LandingPage() {
                       en: "What is the rent index?",
                     },
                     answer: {
-                      de: "Der Mietspiegel weist aus, wie hoch die Miete in den unterschiedlichen Berliner Gegenden sein darf. Um das festzulegen orientiert er sich an dem Durchschnitt der schon bestehenden Mieten in den jeweiligen Gegenden.",
-                      en: "The rent index shows how high the rent may be in the different areas of Berlin. To determine this, it is based on the average of existing rents in the respective areas.",
+                      de: (
+                        <p>
+                          Der Mietspiegel weist aus, wie hoch die Miete in den
+                          unterschiedlichen Berliner Gegenden sein darf. Um das
+                          festzulegen orientiert er sich an dem Durchschnitt der
+                          schon bestehenden Mieten in den jeweiligen Gegenden.
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          The rent index shows how high the rent may be in the
+                          different areas of Berlin. To determine this, it is
+                          based on the average of existing rents in the
+                          respective areas.
+                        </p>
+                      ),
                     },
                   },
                   {
@@ -268,8 +368,28 @@ export default function LandingPage() {
                       en: "What do I do if my rent is too high?",
                     },
                     answer: {
-                      de: "Mieter*innen müssen einen Verstoß gegen die Mietpreisbremse rügen. Hierzu solltest Du Deinem*r Vermieter*in schriftlich die ermittelte zulässige Miethöhe mitteilen. Dein*e Vermieter*in muss dir die Auskünfte geben, die für die Prüfung der zulässigen Miethöhe benötigt werden, wenn du ihn*sie dazu aufforderst. Ausführliche Informationen zu Deinen Handlungsoptionen findest du in unserem Ratgeber.",
-                      en: "Tenants must report a violation of the rent freeze. To do this, you should inform your landlord in writing of the determined permissible rent level. Your landlord must provide you with the information required to check the permissible rent level if you ask him/her to do so. You can find detailed information in our guide.",
+                      de: (
+                        <p>
+                          Mieter*innen müssen einen Verstoß gegen die
+                          Mietpreisbremse rügen. Hierzu solltest Du Deinem*
+                          Vermieter*in schriftlich die ermittelte zulässige
+                          Miethöhe mitteilen. Dein*e Vermieter*in muss dir die
+                          Auskünfte geben, die für die Prüfung der zulässigen
+                          Miethöhe benötigt werden, wenn du ihn*sie dazu
+                          aufforderst. Ausführliche Informationen zu Deinen
+                          Handlungsoptionen findest du in unserem Ratgeber.
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          Tenants must report a violation of the rent freeze. To
+                          do this, you should inform your landlord in writing of
+                          the determined permissible rent level. Your landlord
+                          must provide you with the information required to
+                          check the permissible rent level if you ask him/her to
+                          do so. You can find detailed information in our guide.
+                        </p>
+                      ),
                     },
                   },
                   {
@@ -278,8 +398,28 @@ export default function LandingPage() {
                       en: "Can I simply pay less rent after the complaint?",
                     },
                     answer: {
-                      de: "Nein, das solltest Du auf keinen Fall tun! Es ist nicht auszuschließen, dass Du Dich bei der Berechnung der zulässigen Miete geirrt hast oder ein Gericht zu einer unvorhersehbaren Rechtsauffassung gelangt. In diesem Fall könntest Du schnell in einen Zahlungsverzug kommen. Dieser kann im schlimmsten Fall zu einer Kündigung durch Deine*n Vermieter*in führen.",
-                      en: "No, you should never do that! It cannot be ruled out that you have made a mistake in calculating the permissible rent or that a court has come to an unforeseeable legal conclusion. In this case, you could quickly fall into arrears. In the worst case scenario, this could lead to your landlord giving you notice to quit.",
+                      de: (
+                        <p>
+                          Nein, das solltest Du auf keinen Fall tun! Es ist
+                          nicht auszuschließen, dass Du Dich bei der Berechnung
+                          der zulässigen Miete geirrt hast oder ein Gericht zu
+                          einer unvorhersehbaren Rechtsauffassung gelangt. In
+                          diesem Fall könntest Du schnell in einen
+                          Zahlungsverzug kommen. Dieser kann im schlimmsten Fall
+                          zu einer Kündigung durch Deine*n Vermieter*in führen.
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          No, you should never do that! It cannot be ruled out
+                          that you have made a mistake in calculating the
+                          permissible rent or that a court has come to an
+                          unforeseeable legal conclusion. In this case, you
+                          could quickly fall into arrears. In the worst case
+                          scenario, this could lead to your landlord giving you
+                          notice to quit.
+                        </p>
+                      ),
                     },
                   },
                 ].map((item, i) => (
@@ -296,18 +436,212 @@ export default function LandingPage() {
             </div>
             <div className="w-full">
               <h3 className="title-28 md:title-32 mb-8">
-                {l({ de: "mietencheck.de", en: "mietencheck.de" })}
+                {l({ de: "Mieten Law Clinic", en: "Mieten Law Clinic" })}
               </h3>
               <Accordion type="single" collapsible className="gap-4">
                 {[
                   {
                     question: {
-                      de: "Wer sind wir?",
-                      en: "Who are we?",
+                      de: "Was ist die Mieten Law Clinic?",
+                      en: "What is the Mieten Law Clinic?",
                     },
                     answer: {
-                      de: "Wir sind die Kampagne Deutsche Wohnen & Co enteignen. Wir wollen bezahlbaren Wohnraum für alle. Bei unserem Volksentscheid im Jahr 2021 haben 59,1 % der Berliner*innen für die Vergesellschaftung großer Wohnungskonzerne gestimmt. Da der Berliner Senat die Umsetzung des Volksentscheids blockiert, planen wir einen Gesetzes-Volksentscheid. Die Umsetzung eines erfolgreichen Gesetzes-Volksentscheids wäre verbindlich.",
-                      en: "We are the campaign to expropriate Deutsche Wohnen & Co. We want affordable housing for everyone. In our referendum in 2021, 59.1% of Berliners voted for the socialization of large housing companies. Since the Berlin Senate is blocking the implementation of the referendum, we are planning a legislative referendum. The implementation of a successful legislative referendum would be binding.",
+                      de: (
+                        <>
+                          <p>
+                            Die Mieten Law Clinic Berlin e. V. ist eine
+                            Initiative von Personen, die rechtswissenschaftlich
+                            o. praktisch im Mietrecht aktiv sind. Wir haben uns
+                            zusammengeschlossen und die Mieten Law Clinic Berlin
+                            gegründet, um Studierenden das Mietrecht näher zu
+                            bringen und um Berliner Mietenden dabei zu helfen,
+                            ihre Mieten zu legalisieren.
+                          </p>
+                          <p>
+                            Wir bieten kostenlose Rechtsberatung für Berliner
+                            Mietende in Fragen des Mietpreisrechts. Unsere
+                            Teilnehmenden werden Expert:innen in der Einordnung
+                            von Mietwohnungen in den Berliner Mietspiegel. Sie
+                            können dich also in Bezug auf die Mietpreisbremse
+                            und in Fragen einer möglicherweise unberechtigten
+                            Mieterhöhung gem. § 558 BGB berate.
+                          </p>
+                          <p>
+                            Die Beratungen erfolgen alle unter Supervision von
+                            mietrechtlich ausgebildeten Volljurist:innen.
+                          </p>
+                        </>
+                      ),
+                      en: (
+                        <>
+                          <p>
+                            Mieten Law Clinic Berlin e. V. is an initiative of
+                            people who are academically or practically active in
+                            tenancy law. We have joined forces and founded the
+                            Mieten Law Clinic Berlin to bring tenancy law closer
+                            to students and to help Berlin tenants legalize
+                            their rents.
+                          </p>
+                          <p>
+                            We offer free legal advice for Berlin tenants on
+                            rent price law. Our participants become experts in
+                            classifying rental apartments in the Berlin rent
+                            index. They can therefore advise you on the rent
+                            freeze and on questions of a potentially unjustified
+                            rent increase pursuant to Section 558 BGB.
+                          </p>
+                          <p>
+                            All consultations are conducted under the
+                            supervision of fully qualified lawyers with training
+                            in tenancy law.
+                          </p>
+                        </>
+                      ),
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Was ist Mietencheck?",
+                      en: "What is Mietencheck?",
+                    },
+                    answer: {
+                      de: (
+                        <p>
+                          Mietencheck ist Projekt der Mieten Law Clinic. Du
+                          kannst hier kostenlos und möglichst rechtssicher eine
+                          Einschätzung erhalten, ob die Höhe deiner aktuelle
+                          Miete oder anstehende Mieterhöhung legal ist. Wir
+                          aktualisieren für dich regelmäßig das Tool mit den
+                          neuesten Mietspiegeln und Gesetzesänderungen, damit du
+                          deine Rechte checken kannst!
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          Mietencheck is a project of the Mieten Law Clinic.
+                          Here you can receive a free and legally sound
+                          assessment of whether the amount of your current rent
+                          or an upcoming rent increase is legal. We regularly
+                          update the tool with the latest rent indexes and
+                          legislative changes so you can check your rights!
+                        </p>
+                      ),
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Wie kann ich mich beraten lassen?",
+                      en: "How can I get advice?",
+                    },
+                    answer: {
+                      de: (
+                        <p>
+                          Bitte füll den Fragebagen hier auf Mietencheck
+                          komplett aus. Sollte deine Miete potentiell zu hoch
+                          sein oder die anstehende Mieterhöhung potentiell nicht
+                          zulässig, kannst du im letzten Schritt des Fragebogens
+                          eine kostenlose Beratung anfordern. Unsere
+                          Berater:innen werden sich dann so schnell wie möglich
+                          bei dir melden.
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          Please fill out the questionnaire here on Mietencheck
+                          completely. If your rent is potentially too high or
+                          the upcoming rent increase is potentially not
+                          permitted, you can request a free consultation in the
+                          last step of the questionnaire. Our advisors will get
+                          back to you as soon as possible.
+                        </p>
+                      ),
+                    },
+                  },
+                  {
+                    question: {
+                      de: "Wie verläuft eine Beratung?",
+                      en: "What does a consultation involve?",
+                    },
+                    answer: {
+                      de: (
+                        <>
+                          <p>
+                            Nachdem du eine Beratung beauftragt hast, werden
+                            unsere Berater:innen deine Angaben überprüfen. In
+                            einigen Fällen werden sie dich bezüglich Rückfragen
+                            oder benötigter Dokumente kontaktieren.
+                          </p>
+                          <p>
+                            Wenn alle notwendigen Informationen für die
+                            Einordnung deiner Wohnung in den Berliner
+                            Mietspiegel vorhanden sind, werden sie dir
+                            mitteilen, ob du zu viel Miete zahlst oder das
+                            Mieterhöhungsverlangen deines Vermieters rechtmäßig
+                            ist. Die Berater:innen beachten hier alle möglichen
+                            Besonderheiten und besprechen mit dir deine konkrete
+                            Rechtslage. Die Beratung kann entweder in Person in
+                            Berlin oder am Telefon stattfinden.
+                          </p>
+                          <p>
+                            Falls deine ursprüngliche Miete oder das
+                            Mieterhöhungsverlangen nicht legal sind, werden
+                            unsere Berater:innen dich über mögliche rechtliche
+                            Schritte informieren. Du bist aber in keiner Weise
+                            von uns dazu angehalten, diese rechtlichen Schritte
+                            einzuleiten. Die Frage der Rechtsdurchsetzung ist
+                            immer sehr sensibel und von vielen Einzelheiten in
+                            der konkreten Situation abhängig. Wir bieten dir
+                            daher an, dich mit unseren Berater:innen zu
+                            besprechen, aber letztlich liegt die Frage, ob und
+                            wie du handeln möchtest, ganz allein bei dir.
+                          </p>
+                          <p>
+                            Falls du dich dafür entscheiden solltest, deinen
+                            Vermieter zu kontaktieren und dieser nicht reagiert
+                            oder dein Recht negiert, dann können wir dich
+                            zuletzt an unser Netzwerk aus Mietrechtsanwält:innen
+                            weiter vermitteln.
+                          </p>
+                        </>
+                      ),
+                      en: (
+                        <>
+                          <p>
+                            After you have requested a consultation, our
+                            advisors will review your information. In some
+                            cases, they will contact you regarding follow-up
+                            questions or required documents.
+                          </p>
+                          <p>
+                            When all necessary information for classifying your
+                            apartment in the Berlin rent index is available,
+                            they will inform you whether you are paying too much
+                            rent or whether your landlord&apos;s rent increase
+                            request is lawful. The advisors take into account
+                            all possible special circumstances and discuss your
+                            specific legal situation with you. The consultation
+                            can take place either in person in Berlin or by
+                            phone.
+                          </p>
+                          <p>
+                            If your original rent or the rent increase request
+                            is not legal, our advisors will inform you about
+                            possible legal steps. However, you are in no way
+                            obliged by us to take these legal steps. The
+                            question of legal enforcement is always very
+                            sensitive and depends on many details in the
+                            specific situation. We therefore offer you the
+                            opportunity to discuss this with our advisors, but
+                            ultimately the question of whether and how you want
+                            to act is entirely up to you.
+                          </p>
+                          <p>
+                            If you decide to contact your landlord and they do
+                            not respond or deny your rights, we can finally
+                            refer you to our network of tenancy lawyers.
+                          </p>
+                        </>
+                      ),
                     },
                   },
                   {
@@ -316,8 +650,18 @@ export default function LandingPage() {
                       en: "Is it really free?",
                     },
                     answer: {
-                      de: "Ja, unser Rechner ist wirklich kostenlos",
-                      en: "Yes, our calculator is really free",
+                      de: (
+                        <p>
+                          Ja, sowohl unsere Rechtsberatung als auch unser
+                          Rechner ist wirklich kostenlos.
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          Yes, both our legal advice and our calculator are
+                          really free.
+                        </p>
+                      ),
                     },
                   },
                   {
@@ -326,18 +670,29 @@ export default function LandingPage() {
                       en: "Why are you doing this?",
                     },
                     answer: {
-                      de: "Wir wollen, dass möglichst viele Mieter*innen die Mietpreisbremse ziehen. Denn wir wollen bezahlbaren Wohnraum für alle Berliner*innen.",
-                      en: "We want as many tenants as possible to use the rent cap. Because we want affordable housing for all Berliners.",
-                    },
-                  },
-                  {
-                    question: {
-                      de: "Was passiert mit meinen Daten?",
-                      en: "What happens to my data?",
-                    },
-                    answer: {
-                      de: "Die Antworten zu den einzelnen Merkmalen des Mietenchecks bzw. Mietspiegels werden auf unseren Servern gespeichert. Dabei werden allerdings keine personenbezogenen Daten gespeichert, insbesondere erfolgt die Speicherung also ohne die angegebenen Adressdaten der Nutzer*innen. Adressdaten der Nutzer*innen werden ausschließlich dann auf unseren Servern gespeichert, wenn die Nutzer*innen sich einen Link zur späteren Weiterbeantwortung des Mietenchecks - gegebenenfalls auf einem anderen Gerät - zuschicken lassen und dabei explizit in die Speicherung ihrer Adressdaten zu diesem Zweck eingewilligt haben.",
-                      en: "The answers to the individual features of the rent check or rent index are stored on our servers. However, no personal data is stored in this process; in particular the storage takes place without the specified address data of the users. Users' address data is only stored on our servers if the users have a link sent to them for later answering the rent check - possibly on another device - and have explicitly consented to the storage of their address data for this purpose.",
+                      de: (
+                        <p>
+                          Wir wollen den Mietenden in Berlin dabei helfen, ihre
+                          Rechte durchzusetzen. Viele Mietende wissen nicht,
+                          dass die Miethöhe überhaupt reguliert ist und dass sie
+                          Rechte haben, die der Vermieter beachten muss. Die
+                          Rechtsdurchsetzung im Wohnraummietrecht ist für die
+                          Mieter:innen häufig mit Angst verbunden. Wir wollen
+                          Mieter:innen ermutigen und unterstützen in der
+                          Durchsetzung ihres Rechts auf eine legale Miete!
+                        </p>
+                      ),
+                      en: (
+                        <p>
+                          We want to help tenants in Berlin enforce their
+                          rights. Many tenants do not know that rent levels are
+                          regulated at all and that they have rights that the
+                          landlord must respect. Legal enforcement in
+                          residential tenancy law is often associated with fear
+                          for tenants. We want to encourage and support tenants
+                          in enforcing their right to a legal rent!
+                        </p>
+                      ),
                     },
                   },
                   {
@@ -346,8 +701,67 @@ export default function LandingPage() {
                       en: "Can I support you?",
                     },
                     answer: {
-                      de: "Ja! Hier findest du alle Möglichkeiten zum Mitmachen: https://dwenteignen.de/mitmachen",
-                      en: "Yes! Here you can find all the options for getting involved: https://dwenteignen.de/mitmachen",
+                      de: (
+                        <>
+                          <p>
+                            Ja! Du kannst uns mit einer Spende unterstützen
+                            (denn unser Netzwerk aus Mietrechtsanwält:innen und
+                            Ehrenamtlichen kostet auch Geld) oder bei uns
+                            mitmachen. Schreib uns einfach eine E-Mail an{" "}
+                            <a
+                              className="underline"
+                              href="mailto:kontakt@mietenlawclinic.de"
+                            >
+                              kontakt@mietenlawclinic.de
+                            </a>{" "}
+                            und wir laden Dich zu unserem nächsten offenen
+                            Plenum ein!
+                          </p>
+                          <p>
+                            Spenden kannst Du an unseren gemeinnützigen Verein:
+                          </p>
+                          <p>
+                            Mieten Law Clinic Berlin e. V. <br />
+                            IBAN: DE45 8306 5408 0006 8993 31 <br />
+                            BIC: GENODEF1SLR
+                          </p>
+                          <p>
+                            Bei Spenden bis zu 300 Euro im Jahr akzeptiert das
+                            Finanzamt auch den Überweisungsbeleg als Nachweis.
+                            Auf Wunsch stellen wir aber auch gesonderte
+                            Spendenbescheinigungen aus.
+                          </p>
+                        </>
+                      ),
+                      en: (
+                        <>
+                          <p>
+                            Yes! You can support us with a donation (because our
+                            network of tenancy lawyers and volunteers also costs
+                            money) or join us. Simply send us an email at{" "}
+                            <a
+                              className="underline"
+                              href="mailto:kontakt@mietenlawclinic.de"
+                            >
+                              kontakt@mietenlawclinic.de
+                            </a>{" "}
+                            and we will invite you to our next open plenary
+                            meeting!
+                          </p>
+                          <p>You can donate to our non-profit association:</p>
+                          <p>
+                            Mieten Law Clinic Berlin e. V. <br />
+                            IBAN: DE45 8306 5408 0006 8993 31 <br />
+                            BIC: GENODEF1SLR
+                          </p>
+                          <p>
+                            For donations of up to 300 euros per year, the tax
+                            office also accepts the bank transfer receipt as
+                            proof. On request, we can also issue separate
+                            donation certificates.
+                          </p>
+                        </>
+                      ),
                     },
                   },
                 ].map((item, i) => (

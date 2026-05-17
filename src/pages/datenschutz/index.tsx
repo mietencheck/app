@@ -24,18 +24,25 @@ export function DatenschutzPage() {
               Datenschutzrechtlich Verantwortlicher gem. Art. 24 und Art. 4 Nr.
               7 DSGVO ist:
             </p>
-            <p>Mietenvolksentscheid Berlin e. V.</p>
+            <p>Mieten Law Clinic Berlin e.V.</p>
             <p>
-              Email: <a href="mailto:mitmachen@dwe.de">mitmachen@dwe.de</a>
+              Email:{" "}
+              <a href="mailto:kontakt@mietenlawclinic.de">
+                kontakt@mietenlawclinic.de
+              </a>
             </p>
             <p>
               Postanschrift:
               <br />
-              Initiative Deutsche Wohnen &amp; Co enteignen
+              Mieten Law Clinic Berlin e.V.
               <br />
-              c/o Stadtteilbüro Friedrichshain
+              c/o Fachbereich Rechtswissenschaften
               <br />
-              Warschauer Str. 23, 10243 Berlin
+              Sekretariat Univ-Prof. Dr. Rödl
+              <br />
+              Van&apos;t-Hoff-Str. 8
+              <br />
+              14195 Berlin
             </p>
 
             <h2>
