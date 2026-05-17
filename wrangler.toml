@@ -16,6 +16,10 @@ MIETENCHECK_API_ORIGIN = "https://api.mietencheck.de"
 pattern = "mietencheck.de"
 custom_domain = true
 
+[[routes]]
+pattern = "www.mietencheck.de"
+custom_domain = true
+
 [assets]
 directory = "./dist/client"
 not_found_handling = "single-page-application"

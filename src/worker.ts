@@ -12,6 +12,18 @@ interface Env {
 }
 
 const MIETENCHECK_PROXY_PREFIX = "/api-mietencheck";
+const CANONICAL_HOST = "mietencheck.de";
+
+function redirectWwwToCanonical(request: Request): Response | null {
+  const url = new URL(request.url);
+  if (url.hostname !== `www.${CANONICAL_HOST}`) {
+    return null;
+  }
+
+  url.hostname = CANONICAL_HOST;
+  url.protocol = "https:";
+  return Response.redirect(url.toString(), 301);
+}
 
 function mietencheckBackendPath(pathname: string): string {
   if (!pathname.startsWith(MIETENCHECK_PROXY_PREFIX)) {
@@ -246,6 +258,11 @@ async function serveAsset(request: Request, env: Env) {
 
 export default {
   async fetch(request, env) {
+    const wwwRedirect = redirectWwwToCanonical(request);
+    if (wwwRedirect) {
+      return wwwRedirect;
+    }
+
     const { pathname } = new URL(request.url);
 
     if (pathname === "/sessions") {
