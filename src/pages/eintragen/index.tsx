@@ -5,9 +5,17 @@ import {
   postLawOrgaCreateRecord,
   postMietenFlow,
 } from "~/api/mietencheck-backend";
-import { Button, FormField, Label, Link, TextField } from "~/components";
+import {
+  Button,
+  Checkbox,
+  FormField,
+  Label,
+  Link,
+  TextField,
+} from "~/components";
 import { useStoredAnswers } from "~/form/flow-machine";
 import { evaluateFlowMachine } from "~/form/flow-machine-evaluation";
+import { useInlineLocale } from "~/l10n";
 import { Layout } from "~/pages/layout";
 import { AppRouter } from "~/router";
 
@@ -35,11 +43,13 @@ function lawOrgaCreateErrorMessage(error: unknown): string {
 }
 
 export function EintragenPage() {
+  const l = useInlineLocale();
   const [storedAnswers] = useStoredAnswers();
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [tel, setTel] = useState("");
+  const [dataProcessingConsent, setDataProcessingConsent] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [successId, setSuccessId] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
@@ -60,11 +70,20 @@ export function EintragenPage() {
     [evaluationAnswers],
   );
 
-  const canSubmit = hasAnswers && beratungReady;
+  const canSubmit = hasAnswers && beratungReady && dataProcessingConsent;
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+    if (!dataProcessingConsent) {
+      setError(
+        l({
+          de: "Bitte stimme der Datenverarbeitung zu, um das Formular abzusenden.",
+          en: "Please consent to data processing to submit the form.",
+        }),
+      );
+      return;
+    }
     if (!hasAnswers) {
       setError(
         "Bitte zuerst den Fragebogen ausfüllen, damit wir deine Daten speichern können.",
@@ -213,6 +232,17 @@ export function EintragenPage() {
               onChange={setTel}
             />
           </FormField>
+          <Checkbox
+            isSelected={dataProcessingConsent}
+            onChange={setDataProcessingConsent}
+            isRequired
+            className="flex gap-3"
+          >
+            {l({
+              de: "Hiermit stimme ich zu, dass die Mieten Law Clinic Berlin e.V. meine Daten zu Beratungszwecken verarbeiten darf.",
+              en: "I hereby agree that the Mieten Law Clinic Berlin e.V. may process my data for advisory purposes.",
+            })}
+          </Checkbox>
           {error && (
             <p className="text-red-10" role="alert">
               {error}
