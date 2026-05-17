@@ -10,8 +10,8 @@ import {
   DialogContent,
   DialogTrigger,
 } from "~/components";
-import { useLocaleState, useLocalizeField } from "~/l10n";
-import { SaveSessionDialog } from "~/session";
+import { useInlineLocale, useLocaleState } from "~/l10n";
+import { EintragenForm } from "~/pages/eintragen/EintragenForm";
 import { formatEuro } from "~/utils";
 
 import {
@@ -29,20 +29,25 @@ export function ResultMiete() {
   const zulaessigeHoechstmieteDiff = useWorstBestZulaessigeHoechstmieteDiff();
 
   const [showDetails, setShowDetails] = useState(false);
-  const [showSessionModal, setShowSessionModal] = useState(false);
+  const [showEintragen, setShowEintragen] = useState(false);
 
-  const l = useLocalizeField();
+  const l = useInlineLocale();
   const { locale } = useLocaleState();
 
   if (!zulaessigeHoechstmiete || !zulaessigeHoechstmieteDiff) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
         <h2 className="heading-24 mb-4">
-          Fehler beim Berechnen des Ergebnisses
+          {l({
+            de: "Fehler beim Berechnen des Ergebnisses",
+            en: "Error calculating the result",
+          })}
         </h2>
         <p className="text-gray-11 mb-4">
-          Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten. Bitte
-          klick unten auf "Neu anfangen".
+          {l({
+            de: 'Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten. Bitte klick unten auf "Neu anfangen".',
+            en: 'An error occurred while calculating the result. Please click "Start over" below.',
+          })}
         </p>
       </div>
     );
@@ -60,29 +65,40 @@ export function ResultMiete() {
         <div className="mb-12">
           <h2 className="heading-24 mb-4">
             {worstDiff <= 0
-              ? l("Leider ist deine Miete im Rahmen des Mietspiegels.")
+              ? l({
+                  de: "Leider ist deine Miete im Rahmen des Mietspiegels.",
+                  en: "Unfortunately, your rent is within the rent index.",
+                })
               : worstDiff == bestDiff || bestDiff < 0
-                ? l("Du zahlst X zu viel", {
-                    DIFF: formatEuro(Math.max(worstDiff, 0)),
+                ? l({
+                    de: `Du zahlst wahrscheinlich ${formatEuro(Math.max(worstDiff, 0))} zu viel Miete pro Monat.`,
+                    en: `You're probably paying ${formatEuro(Math.max(worstDiff, 0))} too much rent per month.`,
                   })
-                : l("Du zahlst zwischen X und Y zu viel", {
-                    WORSTDIFF: formatEuro(Math.max(worstDiff, 0)),
-                    BESTDIFF: formatEuro(Math.max(bestDiff, 0)),
+                : l({
+                    de: `Du zahlst wahrscheinlich zwischen ${formatEuro(Math.max(worstDiff, 0))} und ${formatEuro(Math.max(bestDiff, 0))} zu viel Miete pro Monat.`,
+                    en: `You're probably paying between ${formatEuro(Math.max(worstDiff, 0))} and ${formatEuro(Math.max(bestDiff, 0))} too much rent per month.`,
                   })}
           </h2>
 
           <p className="text-base text-gray-11">
             {worstDiff == bestDiff
-              ? l("Ergebnis zulässige Höchstmiete", {
-                  MIETE: formatEuro(bestZulaessigeHoechstmiete),
+              ? l({
+                  de: `Basierend auf deinen Angaben, haben wir für die Wohnung eine zulässige Höchstmiete von ${formatEuro(bestZulaessigeHoechstmiete)} errechnet.`,
+                  en: `Based on your information, we have calculated a maximum rent of ${formatEuro(bestZulaessigeHoechstmiete)} for the apartment.`,
                 })
-              : l("Ergebnis zulässige Höchstmiete zwischen X und Y", {
-                  LOWESTMIETE: formatEuro(bestZulaessigeHoechstmiete),
-                  HIGHESTMIETE: formatEuro(worstZulaessigeHoechstmiete),
+              : l({
+                  de: `Basierend auf deinen Angaben, haben wir für die Wohnung eine zulässige Höchstmiete zwischen ${formatEuro(bestZulaessigeHoechstmiete)} und ${formatEuro(worstZulaessigeHoechstmiete)} errechnet.`,
+                  en: `Based on your information, we have calculated a maximum permissible rent for the apartment between ${formatEuro(bestZulaessigeHoechstmiete)} and ${formatEuro(worstZulaessigeHoechstmiete)}.`,
                 })}{" "}
             {bestDiff <= 0
-              ? l("Ergebnis Mietpreisbremse nicht möglich")
-              : l("Ergebnis Mietpreisbremse möglich")}
+              ? l({
+                  de: "Dies bedeutet, dass du wahrscheinlich die Mietpreisbremse nicht verwenden kannst, um deine Miete zu senken.",
+                  en: "This means that you probably can't use the Rent Control Act to lower your rent.",
+                })
+              : l({
+                  de: "Dies bedeutet, dass du eventuell deine Miete mithilfe der Mietpreisbremse senken kannst.",
+                  en: "This means that you may be able to reduce your rent with the help of the Rent Control Act.",
+                })}
           </p>
         </div>
         <AuswertungTabPanel />
@@ -91,43 +107,59 @@ export function ResultMiete() {
 
       <h2 className="heading-24 mb-4">
         {worstDiff <= 0
-          ? l("Leider ist deine Miete im Rahmen des Mietspiegels.")
+          ? l({
+              de: "Leider ist deine Miete im Rahmen des Mietspiegels.",
+              en: "Unfortunately, your rent is within the rent index.",
+            })
           : worstDiff == bestDiff || bestDiff < 0
-            ? l("Du zahlst X zu viel", {
-                DIFF: formatEuro(Math.max(worstDiff, 0)),
+            ? l({
+                de: `Du zahlst wahrscheinlich ${formatEuro(Math.max(worstDiff, 0))} zu viel Miete pro Monat.`,
+                en: `You're probably paying ${formatEuro(Math.max(worstDiff, 0))} too much rent per month.`,
               })
-            : l("Du zahlst zwischen X und Y zu viel", {
-                WORSTDIFF: formatEuro(Math.max(worstDiff, 0)),
-                BESTDIFF: formatEuro(Math.max(bestDiff, 0)),
+            : l({
+                de: `Du zahlst wahrscheinlich zwischen ${formatEuro(Math.max(worstDiff, 0))} und ${formatEuro(Math.max(bestDiff, 0))} zu viel Miete pro Monat.`,
+                en: `You're probably paying between ${formatEuro(Math.max(worstDiff, 0))} and ${formatEuro(Math.max(bestDiff, 0))} too much rent per month.`,
               })}
       </h2>
 
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
-          <h3 className="text-base-medium">{l("Was bedeutet das?")}</h3>
+          <h3 className="text-base-medium">
+            {l({ de: "Was bedeutet das?", en: "What does that mean?" })}
+          </h3>
           <p className="text-base text-gray-11">
             {worstDiff == bestDiff
-              ? l("Ergebnis zulässige Höchstmiete", {
-                  MIETE: formatEuro(bestZulaessigeHoechstmiete),
+              ? l({
+                  de: `Basierend auf deinen Angaben, haben wir für die Wohnung eine zulässige Höchstmiete von ${formatEuro(bestZulaessigeHoechstmiete)} errechnet.`,
+                  en: `Based on your information, we have calculated a maximum rent of ${formatEuro(bestZulaessigeHoechstmiete)} for the apartment.`,
                 })
-              : l("Ergebnis zulässige Höchstmiete zwischen X und Y", {
-                  LOWESTMIETE: formatEuro(bestZulaessigeHoechstmiete),
-                  HIGHESTMIETE: formatEuro(worstZulaessigeHoechstmiete),
+              : l({
+                  de: `Basierend auf deinen Angaben, haben wir für die Wohnung eine zulässige Höchstmiete zwischen ${formatEuro(bestZulaessigeHoechstmiete)} und ${formatEuro(worstZulaessigeHoechstmiete)} errechnet.`,
+                  en: `Based on your information, we have calculated a maximum permissible rent for the apartment between ${formatEuro(bestZulaessigeHoechstmiete)} and ${formatEuro(worstZulaessigeHoechstmiete)}.`,
                 })}{" "}
             {bestDiff <= 0
-              ? l("Ergebnis Mietpreisbremse nicht möglich")
-              : l("Ergebnis Mietpreisbremse möglich")}
+              ? l({
+                  de: "Dies bedeutet, dass die Höhe deiner Miete wahrscheinlich rechtens ist.",
+                  en: "This means that the amount of your rent is probably lawful.",
+                })
+              : l({
+                  de: "Dies bedeutet, dass die Höhe deiner Miete wahrscheinlich nicht rechtens ist.",
+                  en: "This means that the amount of your rent is probably not lawful.",
+                })}
           </p>
-          <p className="text-base text-gray-11 mb-4">
-            {l("Ergebnis Auswertung im Detail ansehen")}
+          <p className="text-base text-gray-11 mb-8">
+            {l({
+              de: 'Wenn du im Detail verstehen möchtest, wie die Werte zustande gekommen bist, klicke einfach auf "Auswertung ansehen".',
+              en: 'If you want to understand in detail how the values were calculated, simply click on "View details".',
+            })}
           </p>
           <div className="flex flex-wrap gap-3">
             <Dialog open={showDetails} onOpenChange={setShowDetails}>
               <DialogTrigger
                 nativeButton
                 render={
-                  <Button variant="outline" color="gray" type="button">
-                    {l("Auswertung ansehen")}
+                  <Button variant="outline">
+                    {l({ de: "Auswertung ansehen", en: "View details" })}
                   </Button>
                 }
               />
@@ -178,57 +210,105 @@ export function ResultMiete() {
                   });
               }}
             >
-              {l("Auswertung als PDF herunterladen")}
+              {l({
+                de: "Auswertung als PDF herunterladen",
+                en: "Download details as PDF",
+              })}
             </Button>
           </div>
         </div>
-
-        <div className="flex flex-col gap-2">
-          <h3 className="text-base-medium">
-            {l("Speicher dein Ergebnis Titel")}
-          </h3>
-          <p className="text-base text-gray-11">
-            {l("Speicher dein Ergebnis Text 1")}
-          </p>
-          <p className="text-base text-gray-11 mb-4">
-            {l("Speicher dein Ergebnis Text 2")}
-          </p>
-          <Dialog open={showSessionModal} onOpenChange={setShowSessionModal}>
-            <DialogTrigger
-              nativeButton
-              render={
-                <Button className="w-fit">{l("Ergebnis speichern")}</Button>
-              }
-            />
-            <DialogContent className="max-w-xl">
-              <SaveSessionDialog onClose={() => setShowSessionModal(false)} />
-            </DialogContent>
-          </Dialog>
-        </div>
       </div>
 
-      <hr className="border-gray-6 my-8" />
       {worstDiff > 0 && (
         <>
+          <hr className="border-gray-6 my-8" />
           <div>
-            <h2 className="heading-20 mb-4">{l("Was kann ich jetzt tun?")}</h2>
+            <h2 className="heading-20 mb-4">
+              {l({
+                de: "Kostenlose Rechtsberatung der Mieten Law Clinic",
+                en: "Free legal advice from Mieten Law Clinic",
+              })}
+            </h2>
+            <p className="text-base text-gray-11 mb-3">
+              {l({
+                de: "Die Mieten Law Clinic Berlin e. V. bietet eine kostenlose Rechtsberatung für Berliner:innen in Fragen des Mietpreisrechts.  Unsere Berater:innen überprüfen deine Angaben hier auf Mietencheck, und können dich nach Einsicht weiterer Dokumente (wie z.B. dein Mietvertrag) über potentielle rechtliche Schritte für deinen Fall informieren.",
+                en: "Mieten Law Clinic Berlin e.V. offers free legal advice for Berlin residents on rent control law. Our advisors will review your information on Mietencheck and, after reviewing further documents (such as your rental agreement), can inform you about potential legal steps for your case.",
+              })}
+            </p>
             <p className="text-base text-gray-11 mb-8">
-              {l(
-                "Du kannst dich gegen deine zu hohe Miete wehren! Damit sparst du nicht nur jeden Monat Geld, sondern tust auch etwas gegen steigende Mieten in unserer Stadt!",
-              )}
+              {l({
+                de: 'Weitere Informationen zu unserem Beratungsangebot findest du in der "Häufig gestellte Fragen" Sektion auf unser Startseite.',
+                en: 'You can find more information about our advisory services in the "Frequently asked questions" section on our homepage.',
+              })}
+            </p>
+            <Dialog open={showEintragen} onOpenChange={setShowEintragen}>
+              <DialogTrigger
+                nativeButton
+                render={
+                  <Button>
+                    {l({
+                      de: "Jetzt kostenlose Beratung anfordern",
+                      en: "Request free legal advice now",
+                    })}
+                  </Button>
+                }
+              />
+              <DialogContent className="max-h-[85vh] max-w-lg overflow-auto">
+                <EintragenForm key="eintragen-dialog" layout="dialog" />
+              </DialogContent>
+            </Dialog>
+          </div>
+
+          <hr className="border-gray-6 my-8" />
+
+          <div>
+            <h2 className="heading-20 mb-4">
+              {l({
+                de: "Weitere Beratungsangebote",
+                en: "Other advisory services",
+              })}
+            </h2>
+            <p className="text-base text-gray-11 mb-8">
+              {l({
+                de: "Neben der Beratung durch die Mieten Law Clinic, gibt es natürlich auch eine Vielzahl weiterer Beratungsangebote. Hier ist eine Auswahl von Angeboten, die wir empfehlen können:",
+                en: "In addition to advice from Mieten Law Clinic, there are of course many other advisory services available. Here is a selection of services we can recommend:",
+              })}
             </p>
 
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger className="text-left text-base-medium">
-                  {l("Beratung durch Mieterverein Titel")}
+                  {l({
+                    de: "Kostenlose Beratung durch Berliner Mieter*innenvereinigung",
+                    en: "Free advice from the Berlin tenants' association",
+                  })}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
                   <div className="space-y-2 text-gray-11">
-                    <p>{l("Beratung durch Mieterverein Text 1")}</p>
-                    <p>{l("Beratung durch Mieterverein Text 2")}</p>
-                    <p>{l("Beratung durch Mieterverein Text 3")}</p>
-                    <p>{l("Beratung durch Mieterverein Text 4")}</p>
+                    <p>
+                      {l({
+                        de: "Mieter*innenvereinigung, wie z.B. der Berliner Mieterverein, bieten für ihre Mitglieder regelmäßige kostenlose Beratungen mit Rechtsanwält*innen in allen Berliner Bezirken an.",
+                        en: "Tenants' associations, such as the Berlin tenants' association, offer their members regular free consultations with lawyers in all Berlin districts.",
+                      })}
+                    </p>
+                    <p>
+                      {l({
+                        de: "Wenn du bereits Mitglied bei der Mietergemeinschaft oder dem Mieterverein warst, bevor du deinen Mietvertrag unterschrieben hast, dann übernimmt die Prozesskosten-Versicherung sogar die Kosten, sollte dein Fall vor Gericht kommen.",
+                        en: "If you were already a member of the tenants' community or the tenants' association before you signed your rental agreement, then the legal costs insurance will even cover the costs if your case goes to court.",
+                      })}
+                    </p>
+                    <p>
+                      {l({
+                        de: "Wenn du jetzt neu Mitglied wirst, dann kannst du dort in jedem Fall die kostenlosen Beratungsleistungen in Anspruch nehmen, hast aber keine Versicherung, sollte dein Fall vor Gericht gehen.",
+                        en: "If you become a new member now, then you can definitely take advantage of the free advice services there, but you have no insurance if your case goes to court.",
+                      })}
+                    </p>
+                    <p>
+                      {l({
+                        de: "Außerdem sind die Mieter*innenvereine die politische Interessenvertretung von uns Mieter*innen. Es ist also für jede*n Mieter*in sinnvoll, dort Mitglied zu werden.",
+                        en: "In addition, the tenants' associations are the political interest groups of us tenants. So it makes sense for every tenant to become a member.",
+                      })}
+                    </p>
                   </div>
                   <a
                     className="block text-base underline mt-4 text-gray-12"
@@ -239,19 +319,37 @@ export function ResultMiete() {
                     }
                     target="_blank"
                   >
-                    {l("Mehr Informationen")}
+                    {l({ de: "Mehr Informationen", en: "More information" })}
                   </a>
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
                 <AccordionTrigger className="text-left text-base-medium">
-                  {l("Beratung durch Bezirke Titel")}
+                  {l({
+                    de: "Kostenlose Mieter*innenberatung von Berliner Bezirken",
+                    en: "Free tenant advice from Berlin districts",
+                  })}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
                   <div className="space-y-2 text-gray-11">
-                    <p>{l("Beratung durch Bezirke Text 1")}</p>
-                    <p>{l("Beratung durch Bezirke Text 2")}</p>
-                    <p>{l("Beratung durch Bezirke Text 3")}</p>
+                    <p>
+                      {l({
+                        de: "Alle Berliner Bezirke haben eine Mieter*innenberatung, die Bewohner*innen kostenlos des Bezirks nutzen können. Mietrechtsexpertinnen können dich dort zu deinen Ergebnissen oder nächsten Schritten beraten.",
+                        en: "All Berlin districts have a tenant advice service that residents of the district can use free of charge. Tenancy law experts can advise you there on your results or next steps.",
+                      })}
+                    </p>
+                    <p>
+                      {l({
+                        de: "Die Bezirke bieten jedoch keine Rechtsvertretung vor Gericht an. Sollte dein*e Vermieter*in sich weigern, deine Miete zu senken, kannst du dich entscheiden, dein Recht vor Gericht einzuklagen. Dafür musst du eine*n kostenpflichtige*n Rechtsanwält*in hinzuziehen.",
+                        en: "However, the districts do not offer legal representation in court. If your landlord refuses to reduce your rent, you can decide to assert your rights in court. To do this, you must hire a lawyer for a fee.",
+                      })}
+                    </p>
+                    <p>
+                      {l({
+                        de: "Um einen Termin für eine Mietberatung zu vereinbaren, klicke auf “Mehr Informationen” für eine Übersicht zu den Beratungszeiten und -orten in deinem Bezirk.",
+                        en: 'To make an appointment for tenancy law advice, click on "More information" for an overview of the consultation times and locations in your district.',
+                      })}
+                    </p>
                   </div>
                   <a
                     className="block text-base underline mt-4 text-gray-12"
@@ -262,19 +360,37 @@ export function ResultMiete() {
                     }
                     target="_blank"
                   >
-                    {l("Mehr Informationen")}
+                    {l({ de: "Mehr Informationen", en: "More information" })}
                   </a>
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
                 <AccordionTrigger className="text-left text-base-medium">
-                  {l("Beratung durch Rechtsanwalt Titel")}
+                  {l({
+                    de: "Kostenpflichtige Beratung von Rechtsanwält*in",
+                    en: "Paid advice from a lawyer",
+                  })}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
                   <div className="space-y-2 text-gray-11">
-                    <p>{l("Beratung durch Rechtsanwalt Text 1")}</p>
-                    <p>{l("Beratung durch Rechtsanwalt Text 2")}</p>
-                    <p>{l("Beratung durch Rechtsanwalt Text 3")}</p>
+                    <p>
+                      {l({
+                        de: "Du kannst ebenfalls direkt ein*e Rechtsanwält*in beauftragen dein Ergebnis zu überprüfen und eventuelle Fragen zu beantworten. Diese Beratung ist jedoch kostenpflichtig. Dafür kannst du unter Umständen Beratungshilfe beantragen.",
+                        en: "You can also hire a lawyer directly to check your results and answer any questions you may have. However, this advice is subject to a fee. You may be able to apply for legal aid for this.",
+                      })}
+                    </p>
+                    <p>
+                      {l({
+                        de: "Zudem kannst du auch eine Rechtsanwält*in beauftragen dein Recht vor Gericht einzuklagen, sollte sich dein*e Vermieter*in weigern deine Miete zu senken. Dabei trägst du das Risiko, solltest du verlieren und keine Rechtsschutzversicherung haben, die die Kosten übernimmt.",
+                        en: "You can also hire a lawyer to enforce your rights in court if your landlord refuses to reduce your rent. You bear the risk if you lose and do not have legal protection insurance to cover the costs.",
+                      })}
+                    </p>
+                    <p>
+                      {l({
+                        de: "Wir haben für dich eine Liste mit spezialisierten Rechtsanwält*innen vorbereitet, zusammen mit einer Übersicht zu möglichen Kosten und Informationen zur Beratungshilfe.",
+                        en: "We have prepared a list of specialized lawyers for you, along with an overview of possible costs and information on legal aid.",
+                      })}
+                    </p>
                   </div>
                   <a
                     className="block text-base underline mt-4 text-gray-12"
@@ -285,24 +401,62 @@ export function ResultMiete() {
                     }
                     target="_blank"
                   >
-                    {l("Mehr Informationen")}
+                    {l({ de: "Mehr Informationen", en: "More information" })}
                   </a>
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-4">
                 <AccordionTrigger className="text-left text-base-medium">
-                  {l("Beratung durch Drittanbieter Titel")}
+                  {l({
+                    de: "Kostenpflichtige Beratung durch Dritt-Anbieter",
+                    en: "Paid advice from a third-party provider",
+                  })}
                 </AccordionTrigger>
                 <AccordionContent className="pt-3 pb-5 pl-7">
                   <div className="space-y-2 text-gray-11">
-                    <p>{l("Beratung durch Drittanbieter Text 1")}</p>
-                    <p>{l("Beratung durch Drittanbieter Text 2")}</p>
-                    <p>{l("Beratung durch Drittanbieter Text 3")}</p>
-                    <p>{l("Beratung durch Drittanbieter Text 4")}</p>
+                    <p>
+                      {l({
+                        de: "Du kannst auch einen kommerzielle Anbieter, wie z.B. Conny, beauftragen die Mietpreisbremse für dich durchzusetzen. Der Vorteil dieser kommerzielle Anbieten ist, dass sie das Kostenrisiko für dich tragen. Sollte es z.B. zu einem gerichtlichen Verfahren kommen, tragen die Anbieter die Kosten hierfür.",
+                        en: "You can also hire a commercial provider, such as Conny, to enforce the rent cap for you. The advantage of these commercial providers is that they bear the cost risk for you. If, for example, legal proceedings are initiated, the providers will bear the costs.",
+                      })}
+                    </p>
+                    <p>
+                      {l({
+                        de: "Der Nachteil dieser Anbieter ist jedoch, dass sie einen Anteil von dem Geld, das du zukünftig sparst, einbehalten. Gerade wenn du deutlich zu viel Miete zahlst, ist dieser Anteil sehr hoch.",
+                        en: "The disadvantage of these providers, however, is that they keep a portion of the money you save in the future. This portion is particularly high if you pay significantly too much rent.",
+                      })}
+                    </p>
+                    <p>
+                      {l({
+                        de: "Bei Conny gibt es zudem noch weitere Dinge zu beachten: Conny nimmt nicht alle Fälle an, in denen du zu viel Miete zahlst. Es kann in manchen Fällen auch sehr lange dauern, bis Conny deinen Fall bearbeitet.",
+                        en: "There are also other things to consider with Conny: Conny does not accept all cases in which you pay too much rent. In some cases, it can take a very long time for Conny to process your case.",
+                      })}
+                    </p>
+                    <p>
+                      {l({
+                        de: "Wichtig: Sobald du Conny beauftragt hast, kannst du dich nicht mehr entscheiden, selbständig aktiv zu werden. Conny verlangt hohe Entschädigungssummen, solltest du zu einem späteren Zeitpunkt aus dem Vertrag austreten wollen.",
+                        en: "Important: Once you have commissioned Conny, you can no longer decide to take action on your own. Conny demands high compensation amounts if you want to withdraw from the contract at a later date.",
+                      })}
+                    </p>
                   </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+          </div>
+          <hr className="border-gray-6 my-8" />
+          <div>
+            <h2 className="heading-20 mb-4">
+              {l({
+                de: "Disclaimer",
+                en: "Disclaimer",
+              })}
+            </h2>
+            <p className="text-base text-gray-11">
+              {l({
+                de: "Unser Ergebnis basiert auf deinen Angaben und ersetzt keine rechtliche Beratung. Im Einzelfall kann die rechtliche Bewertung anders ausfallen.",
+                en: "Our result is based on your information and does not replace legal advice. In individual cases, the legal assessment may differ.",
+              })}
+            </p>
           </div>
         </>
       )}
