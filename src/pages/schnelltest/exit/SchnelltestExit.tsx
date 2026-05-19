@@ -169,11 +169,20 @@ export function SchnelltestExit({
           : step.text}
       </div>
       <div className="flex flex-row flex-wrap justify-center gap-3 mt-10">
-        {stepper.back && <Button onPress={stepper.back}>{l("Back")}</Button>}
+        {stepper.back && (
+          <Button
+            variant="outline"
+            color="gray"
+            type="button"
+            onClick={stepper.back}
+          >
+            {l("Back")}
+          </Button>
+        )}
         <Button
-          color="primary"
           variant="solid"
-          onPress={() => {
+          type="button"
+          onClick={() => {
             localStorage.clear();
             location.reload();
           }}

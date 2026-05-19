@@ -27,7 +27,10 @@ import {
   NumberInput,
   SegmentedControl,
   Select,
-  SelectOption,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
   Table,
   TableBody,
   TableCell,
@@ -62,13 +65,10 @@ import {
 function BeratungDetailHeading() {
   return (
     <div className="mb-8">
-      <Link
-        href={AppRouter.Beratung()}
-        className="text-sm font-450 text-purple-11-solid underline"
-      >
+      <Link href={AppRouter.Beratung()} className="text-gray-11">
         Zur Übersicht
       </Link>
-      <h1 className="heading-22 text-purple-11 mt-2">Beratung</h1>
+      <h1 className="heading-28 mt-3">Beratung</h1>
     </div>
   );
 }
@@ -191,6 +191,24 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
   const baujahrSpanneOptions = useMemo(() => {
     return getBaujahrSpanneOptions(mietspiegeljahr);
   }, [mietspiegeljahr]);
+
+  const vertragsdatumItems = useMemo(
+    () => Object.fromEntries(vertragsdatumOptions.map((o) => [o, o] as const)),
+    [],
+  );
+
+  const baujahrSpanneItems = useMemo(
+    () => Object.fromEntries(baujahrSpanneOptions.map((o) => [o, o] as const)),
+    [baujahrSpanneOptions],
+  );
+
+  const wohnlageItems = useMemo(
+    () =>
+      Object.fromEntries(
+        wohnlageOptions.map((o) => [o.value, o.label] as const),
+      ),
+    [],
+  );
 
   useEffect(() => {
     if (!beratungRecord || baujahrSpanneOptions.length === 0) return;
@@ -396,7 +414,7 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
   return (
     <Layout
       headerTrailing={
-        <Button size="sm" isDisabled={savePending} onPress={onSave}>
+        <Button size="sm" disabled={savePending} onClick={onSave}>
           {savePending ? "Speichere…" : "Speichern"}
         </Button>
       }
@@ -418,20 +436,24 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
               <dt className="text-gray-11">Vertragsdatum</dt>
               <dd>
                 <Select
-                  aria-label="Vertragsdatum"
-                  value={beratungRecord.vertragsdatum}
-                  placeholder="Vertragsdatum auswählen"
-                  onChange={(selected) => {
+                  value={beratungRecord.vertragsdatum || null}
+                  onValueChange={(v) =>
                     setVertragsdatum(
-                      String(selected) as BeratungRecord["vertragsdatum"],
-                    );
-                  }}
+                      String(v ?? "") as BeratungRecord["vertragsdatum"],
+                    )
+                  }
+                  items={vertragsdatumItems}
                 >
-                  {vertragsdatumOptions.map((option) => (
-                    <SelectOption id={option} key={option}>
-                      {option}
-                    </SelectOption>
-                  ))}
+                  <SelectTrigger className="w-full" aria-label="Vertragsdatum">
+                    <SelectValue placeholder="Vertragsdatum auswählen" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {vertragsdatumOptions.map((option) => (
+                      <SelectItem key={option} value={option} label={option}>
+                        {option}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
                 </Select>
               </dd>
             </div>
@@ -439,18 +461,20 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
               <dt className="text-gray-11">Baujahr Spanne</dt>
               <dd>
                 <Select
-                  aria-label="Baujahr Spanne"
-                  value={beratungRecord.baujahrSpanne}
-                  placeholder="Baujahr Spanne auswählen"
-                  onChange={(selected) => {
-                    setBaujahrSpanne(String(selected));
-                  }}
+                  value={beratungRecord.baujahrSpanne || null}
+                  onValueChange={(v) => setBaujahrSpanne(String(v ?? ""))}
+                  items={baujahrSpanneItems}
                 >
-                  {baujahrSpanneOptions.map((option) => (
-                    <SelectOption id={option} key={option}>
-                      {option}
-                    </SelectOption>
-                  ))}
+                  <SelectTrigger className="w-full" aria-label="Baujahr Spanne">
+                    <SelectValue placeholder="Baujahr Spanne auswählen" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {baujahrSpanneOptions.map((option) => (
+                      <SelectItem key={option} value={option} label={option}>
+                        {option}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
                 </Select>
               </dd>
             </div>
@@ -476,18 +500,26 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
               <dt className="text-gray-11">Wohnlage</dt>
               <dd>
                 <Select
-                  aria-label="Wohnlage"
-                  value={beratungRecord.wohnlage}
-                  placeholder="Wohnlage auswählen"
-                  onChange={(selected) => {
-                    setWohnlage(String(selected) as BeratungRecord["wohnlage"]);
-                  }}
+                  value={beratungRecord.wohnlage || null}
+                  onValueChange={(v) =>
+                    setWohnlage(String(v ?? "") as BeratungRecord["wohnlage"])
+                  }
+                  items={wohnlageItems}
                 >
-                  {wohnlageOptions.map((option) => (
-                    <SelectOption id={option.value} key={option.value}>
-                      {option.label}
-                    </SelectOption>
-                  ))}
+                  <SelectTrigger className="w-full" aria-label="Wohnlage">
+                    <SelectValue placeholder="Wohnlage auswählen" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {wohnlageOptions.map((option) => (
+                      <SelectItem
+                        key={option.value}
+                        value={option.value}
+                        label={option.label}
+                      >
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
                 </Select>
               </dd>
             </div>
@@ -676,11 +708,11 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
                           <TableCell>{gruppe}</TableCell>
                           <TableCell className="w-40 text-right">
                             {value.best > 0 ? "+" : ""}
-                            {value.best * 100}%
+                            {Math.round(value.best * 100)}%
                           </TableCell>
                           <TableCell className="w-40 text-right">
                             {value.worst > 0 ? "+" : ""}
-                            {value.worst * 100}%
+                            {Math.round(value.worst * 100)}%
                           </TableCell>
                         </TableRow>
                       ),
@@ -689,11 +721,11 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
                       <TableCell className="text-sm-medium">Gesamt</TableCell>
                       <TableCell className="w-40 text-right">
                         {resultData.spanneneinordnung.best > 0 ? "+" : ""}
-                        {resultData.spanneneinordnung.best * 100}%
+                        {Math.round(resultData.spanneneinordnung.best * 100)}%
                       </TableCell>
                       <TableCell className="w-40 text-right">
                         {resultData.spanneneinordnung.worst > 0 ? "+" : ""}
-                        {resultData.spanneneinordnung.worst * 100}%
+                        {Math.round(resultData.spanneneinordnung.worst * 100)}%
                       </TableCell>
                     </TableRow>
                   </TableBody>
@@ -737,8 +769,8 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
                           : []),
                         {
                           name: "Merkmalsgruppen (in Prozent)",
-                          best: `${resultData.spanneneinordnung.best * 100}%`,
-                          worst: `${resultData.spanneneinordnung.worst * 100}%`,
+                          best: `${Math.round(resultData.spanneneinordnung.best * 100)}%`,
+                          worst: `${Math.round(resultData.spanneneinordnung.worst * 100)}%`,
                         },
                         {
                           name: "Merkmalsgruppen (pro m²)",

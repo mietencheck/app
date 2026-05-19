@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 
-import { useAuth } from "~/auth/AuthContext";
-import { Button } from "~/components";
+import { BeratungHeader } from "~/components/Header";
 
 export function Layout({
   children,
@@ -10,23 +9,9 @@ export function Layout({
   children: ReactNode;
   headerTrailing?: ReactNode;
 }) {
-  const { logout } = useAuth();
-
   return (
     <>
-      <header className="border-b border-gray-6 shadow">
-        <div className="container flex items-center justify-between py-4">
-          <a href="/beratung" className="text-base-medium">
-            Beratung
-          </a>
-          <div className="flex items-center gap-2">
-            {headerTrailing}
-            <Button size="sm" onPress={logout}>
-              Abmelden
-            </Button>
-          </div>
-        </div>
-      </header>
+      <BeratungHeader trailing={headerTrailing} />
       <main className="container py-6">{children}</main>
     </>
   );

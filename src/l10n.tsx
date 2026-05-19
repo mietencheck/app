@@ -1,4 +1,4 @@
-import { useCallback, useContext } from "react";
+import { useCallback, useContext, type ReactNode } from "react";
 import { entries } from "remeda";
 import sha1 from "sync-sha1";
 
@@ -16,7 +16,11 @@ export type { Locale };
 
 export function useInlineLocale() {
   const { locale } = useLocaleState();
-  return useCallback((text: Record<Locale, string>) => text[locale], [locale]);
+  return useCallback(
+    <T extends Record<Locale, string | ReactNode>>(text: T): T[Locale] =>
+      text[locale],
+    [locale],
+  );
 }
 
 export function useLocalizeField() {

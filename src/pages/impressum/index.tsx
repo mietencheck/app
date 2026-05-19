@@ -3,52 +3,55 @@ import { Layout } from "~/pages/layout";
 export function ImpressumPage() {
   return (
     <Layout>
-      <section>
-        <div className="container py-20 space-y-20 sm:py-24 sm:space-y-24">
-          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-purple-11 text-center">
-            <span className="inline-block px-4 py-3 transform -rotate-6 bg-yellow-9 text-purple-11">
-              Impressum
-            </span>
+      <section className="bg-pink-9 py-20 sm:py-24">
+        <div className="container">
+          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-center text-white">
+            Impressum
           </h2>
+        </div>
+      </section>
+      <section>
+        <div className="container py-20 space-y-20">
           <div className="prose max-w-screen-sm mx-auto">
-            <h2>Postanschrift</h2>
+            <h2>Angaben gemäß § 5 TMG</h2>
             <p>
-              Initiative Deutsche Wohnen &amp; Co enteignen
+              Mieten Law Clinic Berlin e.V.
               <br />
-              c/o Stadtteilbüro Friedrichshain
+              c/o Fachbereich Rechtswissenschaften
               <br />
-              Warschauer Str. 23, 10243 Berlin
+              Sekretariat Univ-Prof. Dr. Rödl
+              <br />
+              Van&apos;t-Hoff-Str. 8
+              <br />
+              14195 Berlin
             </p>
 
-            <p>
-              Diese Website ist das Ergebnis einer Zusammenarbeit zwischen
-              Deutsche Wohnen und Co enteignen, Zoff Kollektiv (
-              <a
-                href="https://zoff-kollektiv.net"
-                target="_blank"
-                rel="noopener"
-              >
-                zoff-kollektiv.net
-              </a>
-              ) und codeRat (
-              <a href="https://coderat.cc" target="_blank" rel="noopener">
-                coderat.cc
-              </a>
-              ). Das Design der Website basiert auf dem von aufsiemitgebruell (
-              <a
-                href="https://aufsiemitgebruell.de"
-                target="_blank"
-                rel="noopener"
-              >
-                aufsiemitgebruell.de
-              </a>
-              ) entwickelten Corporate Design.
-            </p>
-
-            <h2>Pressekontakt</h2>
+            <h2>Kontakt</h2>
             <p>
               E-Mail:{" "}
-              <a href="mailto:presse@dwenteignen.de">presse@dwenteignen.de</a>
+              <a href="mailto:kontakt@mietenlawclinic.de">
+                kontakt@mietenlawclinic.de
+              </a>
+            </p>
+
+            <h2>Vertreten durch</h2>
+            <p>
+              Selma Gather (Co-Vorsitzende)
+              <br />
+              Melvin Thomas (Co-Vorsitzende)
+              <br />
+              Lea Reinholz (Co-Vorsitzende)
+              <br />
+              Dörte Kleideiter (Schatzmeisterin)
+            </p>
+
+            <h2>Registereintrag</h2>
+            <p>
+              Eintragung im Vereinsregister.
+              <br />
+              Registergericht: Amtsgericht Berlin-Charlottenburg
+              <br />
+              Registernummer: VR 42370 B
             </p>
 
             <h2>Haftung für Inhalte</h2>

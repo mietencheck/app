@@ -2,7 +2,7 @@ import { Step } from "flow-machine";
 import React, { useEffect, useMemo } from "react";
 import useLocalStorageState from "use-local-storage-state";
 
-import { Header } from "~/components/Header";
+import { FragebogenHeader } from "~/components/Header";
 import { useVisibleSchnelltestSteps } from "~/form/flow-machine";
 
 import { SchnelltestExit } from "./exit";
@@ -81,7 +81,7 @@ export function SchnelltestPage() {
 
   return (
     <>
-      <Header />
+      <FragebogenHeader />
       <main className="flex v-screen justify-center items-center">
         <div className="container max-w-[600px] my-12">
           <form

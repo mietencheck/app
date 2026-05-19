@@ -91,8 +91,8 @@ export function OrtsüblicheVergleichsmieteTable() {
       : []),
     {
       name: l("Merkmalsgruppen (in Prozent)"),
-      worst: `${spanneneinordung.worst * 100}%`,
-      best: `${spanneneinordung.best * 100}%`,
+      worst: `${Math.round(spanneneinordung.worst * 100)}%`,
+      best: `${Math.round(spanneneinordung.best * 100)}%`,
     },
     {
       name: l("Merkmalsgruppen (pro m²)"),

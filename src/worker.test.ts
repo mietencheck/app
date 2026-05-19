@@ -8,6 +8,20 @@ const env = {
   },
 } as unknown as Parameters<typeof worker.fetch>[1];
 
+describe("www redirect", () => {
+  test("redirects www to apex with path and query preserved", async () => {
+    const response = await worker.fetch(
+      new Request("https://www.mietencheck.de/fragebogen?foo=bar") as never,
+      env,
+    );
+
+    expect(response.status).toBe(301);
+    expect(response.headers.get("Location")).toBe(
+      "https://mietencheck.de/fragebogen?foo=bar",
+    );
+  });
+});
+
 describe("/api/miete", () => {
   test("returns preisspanne and still handles empty-alias options", async () => {
     const response = await worker.fetch(

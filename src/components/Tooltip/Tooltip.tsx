@@ -19,7 +19,7 @@ function Floater({
   return (
     <Root
       offset={4}
-      className="max-w-xs px-3 py-2 bg-gray-12 text-sm text-white rounded"
+      className="max-w-xs px-3 py-2 bg-gray-12 text-sm text-white"
     >
       <AriaOverlayArrow>
         {(p) => (

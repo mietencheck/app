@@ -5,10 +5,17 @@ import { omit } from "remeda";
 import useSWR from "swr";
 import { useDebounceCallback, useLocalStorage } from "usehooks-ts";
 
-import { Button, TextInput } from "~/components";
+import {
+  Button,
+  DialogBody,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  TextInput,
+} from "~/components";
 import { useStoredAnswers, type AnswerData } from "~/form/flow-machine";
+import { useInlineLocale } from "~/l10n";
 
-import { useLocalizeField, useLocalizeString } from "./l10n";
 import { parseAdresse } from "./utils";
 
 const fetch = fetchWithRetry(globalThis.fetch as typeof globalThis.fetch);
@@ -79,63 +86,95 @@ export function useSyncAnswers() {
 
 export const SESSION_PARAM = "s";
 
-export function SaveSessionModal({ onClose }: { onClose: () => void }) {
+export function SaveSessionDialog({ onClose }: { onClose: () => void }) {
   const [session, setSession] = useStoredSession();
-  const l = useLocalizeField();
+  const l = useInlineLocale();
 
   if (!session.pii) {
     return (
-      <div className="p-4 sm:p-6">
-        <h1 className="heading-18 mb-4">
-          {l("Fortschritt Speichern Modal Titel")}
-        </h1>
-        <p className="mb-3 text-gray-11">
-          {l("Fortschritt Speichern Modal Text 1")}
-        </p>
-        <p className="mb-3 text-gray-11">
-          {l("Fortschritt Speichern Modal Text 2")}
-        </p>
-        <p className="mb-8 text-gray-11">
-          {l("Fortschritt Speichern Modal Text 3")}
-        </p>
-
-        <div className="flex justify-end flex-row gap-3">
-          <Button onPress={onClose}>{l("Abbrechen")}</Button>
+      <>
+        <DialogHeader>
+          <DialogTitle>
+            {l({
+              de: "Speicher deinen Fortschritt",
+              en: "Save your progress",
+            })}
+          </DialogTitle>
+        </DialogHeader>
+        <DialogBody className="text-gray-11">
+          <p>
+            {l({
+              de: "Um sicher zu stellen, dass dein Fortschritt nicht verloren geht, können wir deine Antworten auf unseren Servern für dich speichern. Du erhältst dann einen einzigartigen Link, mit dem du jederzeit und mit jedem Gerät auf deinen Fortschritt zugreifen kannst.",
+              en: "To ensure that your progress is not lost, we can save your answers on our servers for you. You will then receive a unique link that you can use to access your progress at any time and on any device.",
+            })}
+          </p>
+          <p>
+            {l({
+              de: "Hierfür benötigen wir dein Einverständnis, dass wir die angegebene Adresse speichern dürfen. Wir werden diese Daten niemals weitergeben oder für andere Zwecke benutzen.",
+              en: "To do this, we need your consent to store the address you provide. We will never pass on this data or use it for other purposes.",
+            })}
+          </p>
+          <p>
+            {l({
+              de: "Wenn du deine Addresse nicht weitergeben möchtest, kannst den Fragebogen auch jederzeit weiter ausfüllen, indem du einfach diese Seite auf dem selben Gerät wieder öffnest.",
+              en: "If you do not wish to share your address, you can continue to complete the questionnaire at any time by simply reopening this page on the same device.",
+            })}
+          </p>
+        </DialogBody>
+        <DialogFooter>
+          <Button
+            variant="outline"
+            color="gray"
+            type="button"
+            onClick={onClose}
+          >
+            {l({ de: "Abbrechen", en: "Cancel" })}
+          </Button>
           <Button
             variant="solid"
-            color="primary"
-            onPress={() => {
+            type="button"
+            onClick={() => {
               setSession({ ...session, pii: true });
             }}
           >
-            {l("Ja, speichert meine Adresse")}
+            {l({
+              de: "Ja, speichert meine Adresse",
+              en: "Yes, save my address",
+            })}
           </Button>
-        </div>
-      </div>
+        </DialogFooter>
+      </>
     );
   }
 
   const url = `${location.protocol}//${location.host}${location.pathname}?${SESSION_PARAM}=${session.hash}`;
   return (
-    <div className="p-4 sm:p-6">
-      <h1 className="heading-18 mb-4"></h1>
-      <p className="mb-4">
-        {l(
-          "Speicher dir diesen Link, oder schicke ihn dir am besten selbst als E-Mail/Chat, um mit dem Formular fortzusetzen.",
-        )}
-      </p>
-      <TextInput
-        disabled
-        className="w-full bg-gray-100 mb-6"
-        value={url}
-        onChange={() => {}}
-      />
-      <div className="flex flex-row gap-3 justify-end">
-        <Button onPress={onClose}>{l("Schließen")}</Button>
+    <>
+      <DialogHeader>
+        <DialogTitle>
+          {l({
+            de: "Speicher deinen Fortschritt",
+            en: "Save your progress",
+          })}
+        </DialogTitle>
+      </DialogHeader>
+      <DialogBody>
+        <p>
+          {l({
+            de: "Speicher dir diesen Link, oder schicke ihn dir am besten selbst als E-Mail/Chat, um mit dem Formular fortzusetzen.",
+            en: "Save this link or send it to yourself via email/chat to continue with the form.",
+          })}
+        </p>
+        <TextInput disabled value={url} onChange={() => {}} />
+      </DialogBody>
+      <DialogFooter>
+        <Button variant="outline" color="gray" type="button" onClick={onClose}>
+          {l({ de: "Schließen", en: "Close" })}
+        </Button>
         <Button
           variant="solid"
-          color="primary"
-          onPress={() => {
+          type="button"
+          onClick={() => {
             if (navigator.share as unknown) {
               navigator.share({ url });
             } else {
@@ -144,18 +183,18 @@ export function SaveSessionModal({ onClose }: { onClose: () => void }) {
           }}
         >
           {(navigator.share as unknown)
-            ? l("Link teilen")
-            : l("In die Zwischenablage kopieren")}
+            ? l({ de: "Link teilen", en: "Share link" })
+            : l({ de: "In die Zwischenablage kopieren", en: "Copy link" })}
         </Button>
-      </div>
-    </div>
+      </DialogFooter>
+    </>
   );
 }
 
-export function ContinueSessionModal({ hash }: { hash: string }) {
+export function ContinueSessionDialog({ hash }: { hash: string }) {
   const [session, setSession] = useStoredSession();
   const [storedAnswers, setStoredAnswers] = useStoredAnswers();
-  const l = useLocalizeString();
+  const l = useInlineLocale();
 
   const { data: serverSession, error } = useFetchServerSession(hash);
 
@@ -192,18 +231,37 @@ export function ContinueSessionModal({ hash }: { hash: string }) {
   if (!serverSession) return null;
 
   return (
-    <div className="border rounded-sm max-w-2xl mx-auto my-12 p-6 flex flex-col gap-4">
-      <p>{l("Session fortsetzen?")}</p>
-      <div className="self-end flex flex-row gap-2 justify-between">
-        <Button onPress={stripHashFromURL}>{l("Abbrechen")}</Button>
+    <>
+      <DialogHeader>
+        <DialogTitle>
+          {l({ de: "Sitzung überschreiben?", en: "Overwrite session?" })}
+        </DialogTitle>
+      </DialogHeader>
+      <DialogBody>
+        <p>
+          {l({
+            de: "Möchtest du deinen aktuellen Fortschritt überschreiben? Diese Aktion kann nicht rückgängig gemacht werden.",
+            en: "Do you want to overwrite your current progress? This action cannot be undone.",
+          })}
+        </p>
+      </DialogBody>
+      <DialogFooter>
+        <Button
+          variant="outline"
+          color="gray"
+          type="button"
+          onClick={stripHashFromURL}
+        >
+          {l({ de: "Abbrechen", en: "Cancel" })}
+        </Button>
         <Button
           variant="solid"
-          color="primary"
-          onPress={continueSessionFromServer}
+          type="button"
+          onClick={continueSessionFromServer}
         >
-          {l("Sitzung überschreiben")}
+          {l({ de: "Sitzung überschreiben", en: "Overwrite session" })}
         </Button>
-      </div>
-    </div>
+      </DialogFooter>
+    </>
   );
 }

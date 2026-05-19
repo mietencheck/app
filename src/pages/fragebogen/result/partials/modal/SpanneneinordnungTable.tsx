@@ -20,7 +20,7 @@ import { MerkmalGruppe } from "~/mietspiegel/types";
 export const Percent = ({ value }: { value: number }) => (
   <span>
     {value > 0 && "+"}
-    {value * 100}%
+    {Math.round(value * 100)}%
   </span>
 );
 

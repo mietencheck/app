@@ -3,13 +3,15 @@ import { Layout } from "~/pages/layout";
 export function DatenschutzPage() {
   return (
     <Layout>
-      <section>
-        <div className="container py-20 space-y-20 sm:py-24 sm:space-y-24">
-          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-purple-11 text-center">
-            <span className="inline-block px-4 py-3 transform -rotate-6 bg-yellow-9 text-purple-11">
-              Datenschutz
-            </span>
+      <section className="bg-green-9 py-20 sm:py-24">
+        <div className="container">
+          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-center text-white">
+            Datenschutz
           </h2>
+        </div>
+      </section>
+      <section>
+        <div className="container py-20 space-y-20 ">
           <div className="prose max-w-screen-sm mx-auto">
             <h2>I. Begriffsbestimmungen</h2>
             <p>
@@ -22,18 +24,25 @@ export function DatenschutzPage() {
               Datenschutzrechtlich Verantwortlicher gem. Art. 24 und Art. 4 Nr.
               7 DSGVO ist:
             </p>
-            <p>Mietenvolksentscheid Berlin e. V.</p>
+            <p>Mieten Law Clinic Berlin e.V.</p>
             <p>
-              Email: <a href="mailto:mitmachen@dwe.de">mitmachen@dwe.de</a>
+              Email:{" "}
+              <a href="mailto:kontakt@mietenlawclinic.de">
+                kontakt@mietenlawclinic.de
+              </a>
             </p>
             <p>
               Postanschrift:
               <br />
-              Initiative Deutsche Wohnen &amp; Co enteignen
+              Mieten Law Clinic Berlin e.V.
               <br />
-              c/o Stadtteilbüro Friedrichshain
+              c/o Fachbereich Rechtswissenschaften
               <br />
-              Warschauer Str. 23, 10243 Berlin
+              Sekretariat Univ-Prof. Dr. Rödl
+              <br />
+              Van&apos;t-Hoff-Str. 8
+              <br />
+              14195 Berlin
             </p>
 
             <h2>

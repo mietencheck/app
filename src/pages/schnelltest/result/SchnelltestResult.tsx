@@ -1,13 +1,13 @@
 import type { ReactNode } from "react";
 
-import { Button, LinkButton } from "~/components";
+import { Button, Link } from "~/components";
 import {
   getGeforderteNettokaltmiete,
   getNettokaltmiete,
   getTyp,
 } from "~/form/api";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
-import { useLocalizeField } from "~/l10n";
+import { useInlineLocale } from "~/l10n";
 import { DetailsRouter } from "~/pages/fragebogen/router";
 import {
   useWorstBestZulaessigeHoechstmiete,
@@ -30,16 +30,23 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
 
   const typ = getTyp(answers, visibleQuestionAliases);
 
-  const l = useLocalizeField();
+  const l = useInlineLocale();
 
   useMarkEstimatorSeen();
 
   const errorState = (
     <div className="flex flex-col items-center justify-center min-h-[40vh] text-center">
-      <h2 className="heading-24 mb-4">Fehler beim Berechnen des Ergebnisses</h2>
+      <h2 className="heading-24 mb-4">
+        {l({
+          de: "Fehler beim Berechnen des Ergebnisses",
+          en: "Error calculating the result",
+        })}
+      </h2>
       <p className="text-gray-11 mb-4">
-        Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten. Bitte
-        klick unten auf "Neu anfangen".
+        {l({
+          de: 'Es ist ein Fehler beim Berechnen des Ergebnisses aufgetreten. Bitte klick unten auf "Neu anfangen".',
+          en: 'An error occurred while calculating the result. Please click "Start over" below.',
+        })}
       </p>
     </div>
   );
@@ -118,29 +125,36 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
 
   return (
     <>
-      <p className="text-base text-gray-11 mb-2">{l("Prediction")}</p>
+      <p className="text-base text-gray-11 mb-2">
+        {l({ de: "Prognose", en: "Prediction" })}
+      </p>
       {resultContent}
 
       <div className="flex flex-row flex-wrap justify-center gap-3 mt-10">
-        {stepper.back && <Button onPress={stepper.back}>{l("Back")}</Button>}
-        {showContinueToDetailsButton ? (
-          <LinkButton
-            color="primary"
-            variant="solid"
-            to={DetailsRouter.Summary()}
+        {stepper.back && (
+          <Button
+            variant="outline"
+            color="gray"
+            type="button"
+            onClick={stepper.back}
           >
-            {l("go_to_details")}
-          </LinkButton>
+            {l({ de: "Zurück", en: "Back" })}
+          </Button>
+        )}
+        {showContinueToDetailsButton ? (
+          <Link variant="solid" href={DetailsRouter.Summary()}>
+            {l({ de: "Weiter zu den Details", en: "Go to details" })}
+          </Link>
         ) : (
           <Button
-            color="primary"
             variant="solid"
-            onPress={() => {
+            type="button"
+            onClick={() => {
               localStorage.clear();
               location.reload();
             }}
           >
-            {l("restart")}
+            {l({ de: "Neu Anfangen", en: "Restart" })}
           </Button>
         )}
       </div>

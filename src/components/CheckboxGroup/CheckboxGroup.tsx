@@ -6,18 +6,15 @@ import {
   CheckboxGroupProps,
 } from "react-aria-components";
 
-const checkboxButton = cva(
-  "flex items-center justify-center w-4 h-4 border rounded-sm shadow-sm+inner",
-  {
-    variants: {
-      isSelected: {
-        true: "bg-purple-9 border-purple-9 hover:bg-purple-10 hover:border-purple-10",
-        false:
-          "bg-white border-gray-7 hover:bg-gray-1 hover:border-gray-8 group-hover:border-gray-8",
-      },
+const checkboxButton = cva("flex items-center justify-center w-4 h-4 border", {
+  variants: {
+    isSelected: {
+      true: "bg-gray-9 border-gray-9 hover:bg-gray-10 hover:border-gray-10",
+      false:
+        "bg-white border-gray-7 hover:bg-gray-1 hover:border-gray-8 group-hover:border-gray-8",
     },
   },
-);
+});
 
 type CheckboxButtonProps = VariantProps<typeof checkboxButton>;
 
@@ -47,20 +44,17 @@ function CheckboxButton(props: CheckboxButtonProps) {
   );
 }
 
-const checkbox = cva(
-  "flex px-4 py-3 gap-2 border rounded shadow-sm group cursor-pointer",
-  {
-    variants: {
-      isSelected: {
-        true: "bg-purple-3 border-purple-7 hover:border-purple-8",
-        false: "bg-white border-gray-7 hover:border-gray-8",
-      },
-      isFocusVisible: {
-        true: "ring-3 ring-purple-5 border-purple-9 hover:border-purple-10",
-      },
+const checkbox = cva("flex px-4 py-3 gap-2 border group cursor-pointer", {
+  variants: {
+    isSelected: {
+      true: "bg-gray-3 border-gray-7 hover:border-gray-8",
+      false: "bg-white border-gray-7 hover:border-gray-8",
+    },
+    isFocusVisible: {
+      true: "ring-3 ring-gray-5 border-gray-9 hover:border-gray-10",
     },
   },
-);
+});
 
 export function Checkbox({
   children,

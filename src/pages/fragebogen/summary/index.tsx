@@ -70,7 +70,7 @@ export function Summary() {
         {questions.map((q) => (
           <div className="flex align-top justify-between p-4 gap-8" key={q.id}>
             <div>
-              <p className="text-base-book mb-1">
+              <p className="text-base mb-1">
                 {replaceWith(
                   lString(q.text),
                   q.alias && isKeyOfObject(q.alias, questionTextVars)

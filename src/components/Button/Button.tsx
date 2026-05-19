@@ -1,151 +1,103 @@
-import { Link } from "@swan-io/chicane";
-import cx from "classnames";
-import { cva, type VariantProps } from "cva";
-import React, { useRef } from "react";
-import { Button as AriaButton, type ButtonProps } from "react-aria-components";
-import { mergeRefs } from "react-merge-refs";
+import { Button as ButtonPrimitive } from "@base-ui/react/button";
+import { cva, type VariantProps } from "class-variance-authority";
+import * as React from "react";
 
-export const buttonVariants = cva(
-  "flex gap-1.5 font-450 rounded focus-visible:outline-none focus-visible:3 focus-visible:ring-purple-5 focus-visible:border-purple-9",
+import { cn } from "~/lib/utils";
+
+const buttonVariants = cva(
+  "group/button inline-flex shrink-0 items-center justify-center border border-transparent font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-gray-5 focus-visible:border-gray-9 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
-      color: {
-        neutral: "",
-        primary: "",
-        unstyled: "",
-      },
       variant: {
-        solid: "border shadow-sm+inner",
-        outline: "border shadow-sm+inner",
-        ghost: "border",
-        inline: "pt-0 pr-0 pb-0 pl-0",
-        unstyled: "",
+        solid: "text-white",
+        outline: "bg-white border-gray-9 hover:bg-gray-4",
+        light: "bg-gray-3 hover:bg-gray-4",
+        ghost: "hover:bg-gray-4",
+        link: "underline-offset-4 hover:underline focus-visible:underline",
+      },
+      color: {
+        gray: "",
+        red: "",
+        yellow: "",
+        blue: "",
+        pink: "",
+        purple: "",
+        green: "",
       },
       size: {
-        default: "px-4 py-3",
-        sm: "px-3 py-2",
+        sm: "gap-1.5 px-2.5 py-1.5 has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5",
+        base: "gap-1.5 px-3.5 py-2.5 has-data-[icon=inline-end]:pr-2.5 has-data-[icon=inline-start]:pl-2.5",
+        lg: "gap-1.5 px-[18px] py-3.5 has-data-[icon=inline-end]:pr-3.5 has-data-[icon=inline-start]:pl-3.5",
+        icon: "h-[46px] w-[46px]",
+        "icon-sm": "h-[38px] w-[38px]",
       },
-      width: {
-        full: "w-full",
-      },
+    },
+    defaultVariants: {
+      variant: "solid",
+      color: "gray",
+      size: "base",
     },
     compoundVariants: [
       {
-        color: "neutral",
+        variant: "link",
+        class: "p-0 border-none",
+      },
+      {
         variant: "solid",
-        class:
-          "bg-gray-9 text-white border-gray-9 hover:bg-gray-10 hover:border-gray-10 active:bg-gray-11 focus-visible:bg-gray-9",
+        color: "gray",
+        class: "bg-gray-9 hover:bg-gray-10",
       },
       {
-        color: "neutral",
-        variant: "outline",
-        class:
-          "bg-white border-gray-7 hover:bg-gray-4 hover:border-gray-8 active:bg-gray-5 focus-visible:bg-white focus-visible:ring-3 focus-visible:ring-purple-5",
-      },
-      {
-        color: "neutral",
-        variant: "ghost",
-        class:
-          "bg-transparent border-transparent hover:bg-gray-4 hover:border-gray-8 active:bg-gray-5 focus-visible:bg-transparent",
-      },
-      {
-        color: "neutral",
-        variant: "inline",
-        class:
-          "text-gray-11 border border-transparent hover:text-gray-12 hover:underline focus:border-gray-7",
-      },
-      {
-        color: "primary",
         variant: "solid",
-        class:
-          "bg-purple-9 text-white border-purple-9 hover:bg-purple-10 hover:border-purple-10 active:bg-purple-11 focus-visible:bg-purple-9 focus-visible:ring-3 focus-visible:ring-purple-5",
+        color: "red",
+        class: "bg-red-9 hover:bg-red-10",
       },
       {
-        color: "primary",
-        variant: "outline",
-        class:
-          "bg-white border-purple-7 text-purple-11 hover:bg-purple-4 hover:border-purple-8 active:bg-purple-5 focus-visible:bg-white focus-visible:ring-3 focus-visible:ring-purple-5",
+        variant: "solid",
+        color: "yellow",
+        class: "bg-yellow-9 hover:bg-yellow-10 text-black",
       },
       {
-        color: "primary",
-        variant: "ghost",
-        class:
-          "text-purple-11 bg-transparent border-transparent hover:bg-purple-4 hover:border-purple-8 active:bg-purple-5 focus-visible:bg-white",
+        variant: "solid",
+        color: "blue",
+        class: "bg-blue-9 hover:bg-blue-10",
       },
       {
-        color: "primary",
-        variant: "inline",
-        class: "text-purple-11 hover:underline",
+        variant: "solid",
+        color: "pink",
+        class: "bg-pink-9 hover:bg-pink-10",
+      },
+      {
+        variant: "solid",
+        color: "purple",
+        class: "bg-purple-9 hover:bg-purple-10",
+      },
+      {
+        variant: "solid",
+        color: "green",
+        class: "bg-green-9 hover:bg-green-10",
       },
     ],
-    defaultVariants: {
-      color: "neutral",
-      variant: "outline",
-      size: "default",
-    },
   },
 );
 
-type ButtonVariants = VariantProps<typeof buttonVariants>;
-type ButtonVariantProps = React.PropsWithChildren<ButtonVariants> &
-  Omit<ButtonProps, "className" | "onPress"> & {
-    className?: string;
-    iconStart?: React.ReactNode;
-    iconEnd?: React.ReactNode;
-    onPress?: () => void;
-  };
-
-export const Button = React.forwardRef<HTMLButtonElement, ButtonVariantProps>(
-  function Button(
-    { className, children, iconStart, iconEnd, onPress, ...props },
-    ref,
-  ) {
-    const localRef = useRef<HTMLButtonElement>(null);
-    return (
-      <AriaButton
-        ref={mergeRefs([localRef, ref])}
-        className={cx(className, buttonVariants(props))}
-        type="button"
-        {...props}
-        {...{
-          onPress: () => {
-            if (onPress) {
-              // workaround for facebook/react#11530
-              // event.prevenDefault()
-              onPress();
-            }
-          },
-        }}
-        style={{ ...props.style, touchAction: "none" }}
-      >
-        {iconStart}
-        <span className="block flex-grow text-left">{children}</span>
-        {iconEnd}
-      </AriaButton>
-    );
-  },
-);
-
-export function LinkButton({
-  children,
-  iconStart,
-  iconEnd,
-  ...props
-}: Omit<React.ComponentProps<typeof Link>, "className"> &
-  ButtonVariants & {
-    iconStart?: React.ReactNode;
-    iconEnd?: React.ReactNode;
-  }) {
+const Button = React.forwardRef<
+  HTMLElement,
+  ButtonPrimitive.Props & VariantProps<typeof buttonVariants>
+>(function Button(
+  { className, variant = "solid", color = "gray", size = "base", ...props },
+  ref,
+) {
   return (
-    <Link
-      className={buttonVariants(props)}
-      type="button"
+    <ButtonPrimitive
+      ref={ref}
+      data-slot="button"
+      className={cn(buttonVariants({ variant, color, size, className }))}
       {...props}
-      style={{ ...props.style, touchAction: "none" }}
-    >
-      {iconStart}
-      <span className="block flex-grow text-left">{children}</span>
-      {iconEnd}
-    </Link>
+    />
   );
-}
+});
+
+Button.displayName = "Button";
+
+export { Button, buttonVariants };

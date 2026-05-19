@@ -60,8 +60,17 @@ export function SchnelltestQuestion({
         )}
       </div>
       <div className="flex flex-row flex-wrap justify-center gap-3 mt-10">
-        {stepper.back && <Button onPress={stepper.back}>{l("Back")}</Button>}
-        <Button color="primary" variant="solid" type="submit">
+        {stepper.back && (
+          <Button
+            variant="outline"
+            color="gray"
+            type="button"
+            onClick={stepper.back}
+          >
+            {l("Back")}
+          </Button>
+        )}
+        <Button variant="solid" type="submit">
           {l("next_question")}
         </Button>
       </div>

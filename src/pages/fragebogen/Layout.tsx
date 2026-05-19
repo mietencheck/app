@@ -1,11 +1,10 @@
 import { pushUnsafe } from "@swan-io/chicane";
 
-import { Button, LinkButton } from "~/components";
-import { Header } from "~/components/Header";
+import { Button, Link } from "~/components";
+import { FragebogenHeader } from "~/components/Header";
 import { useDetailsSteps } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
-import { MobileNavigation } from "./components/MobileNavigation";
 import {
   Navigation,
   NavigationGroup,
@@ -34,11 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <Header>
-        <div className="lg:hidden">
-          <MobileNavigation pages={pages} activeItem={relNav.current?.title} />
-        </div>
-      </Header>
+      <FragebogenHeader />
       <div className="container max-w-screen-lg flex gap-8 large:pl-5 print:p-0 print:max-w-full">
         <aside className="hidden lg:block sm:w-60 py-6 flex-shrink-0 print:hidden">
           <Navigation>
@@ -83,12 +78,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex flex-col gap-8 mb-12">{children}</div>
           <div className="flex justify-end gap-4 print:hidden">
             {relNav.previous && (
-              <LinkButton color="neutral" to={relNav.previous.href}>
+              <Link variant="outline" href={relNav.previous.href}>
                 {l("Back")}
-              </LinkButton>
+              </Link>
             )}
             {relNav.next && (
-              <Button color="primary" variant="solid" type="submit">
+              <Button variant="solid" type="submit">
                 {l("Next step")}
               </Button>
             )}

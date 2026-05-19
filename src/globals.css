@@ -4,94 +4,127 @@
 
 @layer base {
   @font-face {
-    font-family: "Suisse Intl";
+    font-family: "Ronzino";
     font-weight: 400;
-    src: url(/fonts/SuisseIntl-Regular-WebXL.woff2) format("woff2");
-    display: swap;
+    src: url(/fonts/Ronzino-Regular.woff2) format("woff2");
+    font-display: swap;
   }
 
   @font-face {
-    font-family: "Suisse Intl";
-    font-weight: 450;
-    src: url(/fonts/SuisseIntl-Book-WebXL.woff2) format("woff2");
-    display: swap;
-  }
-
-  @font-face {
-    font-family: "Suisse Intl";
+    font-family: "Ronzino";
     font-weight: 500;
-    src: url(/fonts/SuisseIntl-Medium-WebXL.woff2) format("woff2");
-    display: swap;
+    src: url(/fonts/Ronzino-Medium.woff2) format("woff2");
+    font-display: swap;
   }
 
   @font-face {
-    font-family: "Suisse Intl";
+    font-family: "Ronzino";
     font-weight: 600;
-    src: url(/fonts/SuisseIntl-SemiBold-WebXL.woff2) format("woff2");
-    display: swap;
+    src: url(/fonts/Ronzino-Bold.woff2) format("woff2");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Ronzino";
+    font-weight: 700;
+    src: url(/fonts/Ronzino-Bold.woff2) format("woff2");
+    font-display: swap;
   }
 
   :root {
-    /* Base Colors */
     --color-white: #ffffff;
+    --color-black: #000000;
 
-    --color-gray-1: #f7f7f7;
-    --color-gray-2: #f2f2f2;
-    --color-gray-3: #ededed;
+    --color-blue-1: #fafdff;
+    --color-blue-2: #f3fafe;
+    --color-blue-3: #e3f4ff;
+    --color-blue-4: #d1eeff;
+    --color-blue-5: #bee5ff;
+    --color-blue-6: #a8d9f9;
+    --color-blue-7: #8ac8f0;
+    --color-blue-8: #58b2e7;
+    --color-blue-9: #019fe2;
+    --color-blue-10: #0092d1;
+    --color-blue-11: #0079ba;
+    --color-blue-12: #0a3952;
+
+    --color-gray-1: #fcfcfc;
+    --color-gray-2: #f9f9f9;
+    --color-gray-3: #f0f0f0;
     --color-gray-4: #e8e8e8;
-    --color-gray-5: #e3e3e3;
-    --color-gray-6: #e2e2e2;
-    --color-gray-7: #c7c7c7;
-    --color-gray-8: #b2b2b2;
-    --color-gray-9: #8f8f8f;
-    --color-gray-10: #858585;
-    --color-gray-11: #6f6f6f;
-    --color-gray-12: #171717;
+    --color-gray-5: #e1e1e1;
+    --color-gray-6: #d9d9d9;
+    --color-gray-7: #cecece;
+    --color-gray-8: #bbb;
+    --color-gray-9: #000;
+    --color-gray-10: #2e2e2e;
+    --color-gray-11: #636363;
+    --color-gray-12: #1f1f1f;
 
-    --color-purple-1: #fffcfd;
-    --color-purple-2: #fff7f9;
-    --color-purple-3: #ffe8f2;
-    --color-purple-4: #ffdaeb;
-    --color-purple-5: #fbcbe0;
-    --color-purple-6: #f4bdd2;
-    --color-purple-7: #ebaac6;
-    --color-purple-8: #e194b4;
-    --color-purple-9: #811c63;
-    --color-purple-10: #6e0253;
-    --color-purple-11: #811c63;
-    --color-purple-12: #6a004f;
+    --color-green-1: #fbfefa;
+    --color-green-2: #f5fbf4;
+    --color-green-3: #e8f7e6;
+    --color-green-4: #d9f1d6;
+    --color-green-5: #c7eac3;
+    --color-green-6: #b1dfab;
+    --color-green-7: #92d08b;
+    --color-green-8: #64bb5c;
+    --color-green-9: #3ea536;
+    --color-green-10: #34972d;
+    --color-green-11: #26801f;
+    --color-green-12: #203d1d;
 
-    --color-yellow-9: #fdd817;
-    --color-yellow-10: #f0cc0f;
-    --color-yellow-11: #fdd817;
-  }
+    --color-pink-1: #fffbff;
+    --color-pink-2: #fff6ff;
+    --color-pink-3: #ffe7ff;
+    --color-pink-4: #ffd7ff;
+    --color-pink-5: #fec7ff;
+    --color-pink-6: #f9b4ff;
+    --color-pink-7: #f29bfd;
+    --color-pink-8: #e875f7;
+    --color-pink-9: #b82cca;
+    --color-pink-10: #aa15bb;
+    --color-pink-11: #a50ab7;
+    --color-pink-12: #5f006b;
 
-  :root[data-theme="old"] {
-    --color-gray-1: #f7f7f7;
-    --color-gray-2: #f2f2f2;
-    --color-gray-3: #ededed;
-    --color-gray-4: #e8e8e8;
-    --color-gray-5: #e3e3e3;
-    --color-gray-6: #e2e2e2;
-    --color-gray-7: #c7c7c7;
-    --color-gray-8: #b2b2b2;
-    --color-gray-9: #8f8f8f;
-    --color-gray-10: #858585;
-    --color-gray-11: #6f6f6f;
-    --color-gray-12: #171717;
+    --color-purple-1: #fdfcff;
+    --color-purple-2: #faf8ff;
+    --color-purple-3: #f4eeff;
+    --color-purple-4: #ece2ff;
+    --color-purple-5: #e2d5ff;
+    --color-purple-6: #d7c5ff;
+    --color-purple-7: #c7adff;
+    --color-purple-8: #b38cff;
+    --color-purple-9: #8101f8;
+    --color-purple-10: #7100db;
+    --color-purple-11: #7a1ee7;
+    --color-purple-12: #3d0a78;
 
-    --color-purple-1: #fefcfe;
-    --color-purple-2: #fdfaff;
-    --color-purple-3: #f9f1fe;
-    --color-purple-4: #f3e7fc;
-    --color-purple-5: #eddbf9;
-    --color-purple-6: #e3ccf4;
-    --color-purple-7: #c094e5;
-    --color-purple-8: #ac74dc;
-    --color-purple-9: #8e4ec6;
-    --color-purple-10: #8445bc;
-    --color-purple-11: #793aaf;
-    --color-purple-12: #2b0e44;
+    --color-red-1: #fffcfb;
+    --color-red-2: #fff7f6;
+    --color-red-3: #ffe9e5;
+    --color-red-4: #ffd9d0;
+    --color-red-5: #ffc9be;
+    --color-red-6: #ffb6a9;
+    --color-red-7: #ffa090;
+    --color-red-8: #fe8170;
+    --color-red-9: #f00;
+    --color-red-10: #f00000;
+    --color-red-11: #e50000;
+    --color-red-12: #681710;
+
+    --color-yellow-1: #fdfdf9;
+    --color-yellow-2: #fefcea;
+    --color-yellow-3: #fffabb;
+    --color-yellow-4: #fbf39a;
+    --color-yellow-5: #f5eb7a;
+    --color-yellow-6: #e6dc73;
+    --color-yellow-7: #d5cd70;
+    --color-yellow-8: #c1b748;
+    --color-yellow-9: #fcea00;
+    --color-yellow-10: #efe035;
+    --color-yellow-11: #867b00;
+    --color-yellow-12: #403e22;
   }
 }
 
@@ -100,148 +133,132 @@
 }
 
 body {
-  @apply font-body font-400 text-gray-12 antialiased underline-offset-2;
+  @apply font-body text-gray-12 antialiased underline-offset-2;
 }
 
 @layer components {
   .text-sm {
-    @apply text-sm/[20px] font-400;
-  }
-
-  .text-sm-book {
-    @apply text-sm/[20px] font-450;
+    @apply text-sm/[20px];
   }
 
   .text-sm-medium {
-    @apply text-sm/[20px] font-500;
+    @apply text-sm/[20px] font-medium;
   }
 
   .text-base {
-    @apply text-base/[24px] font-400;
-  }
-
-  .text-base-book {
-    @apply text-base/[24px] font-450;
+    @apply text-base/[24px];
   }
 
   .text-base-medium {
-    @apply text-base/[24px] font-500;
+    @apply text-base/[24px] font-medium;
   }
 
   .text-lg {
-    @apply text-lg/[27px] font-400;
-  }
-
-  .text-lg-book {
-    @apply text-lg/[27px] font-450;
+    @apply text-lg/[27px];
   }
 
   .text-lg-medium {
-    @apply text-lg/[27px] font-500;
+    @apply text-lg/[27px] font-medium;
   }
 
   .text-xl {
-    @apply text-xl/[30px] font-400;
-  }
-
-  .text-xl-book {
-    @apply text-xl/[30px] font-450;
+    @apply text-xl/[30px];
   }
 
   .text-xl-medium {
-    @apply text-xl/[30px] font-500;
+    @apply text-xl/[30px] font-medium;
   }
 
   .heading-16 {
-    @apply text-base/[22px] font-500 text-pretty;
+    @apply text-base/[22px] font-medium text-pretty;
   }
 
   .heading-18 {
-    @apply text-lg/[24px] font-500 text-pretty;
+    @apply text-lg/[133%] font-medium text-pretty;
   }
 
   .heading-20 {
-    @apply text-xl/[28px] font-500 text-pretty;
+    @apply text-xl/[133%] font-medium text-pretty;
   }
 
   .heading-22 {
-    @apply text-[22px]/[30px] font-500 text-pretty;
+    @apply text-[22px]/[133%] font-medium text-pretty;
   }
 
   .heading-24 {
-    @apply text-2xl/[32px] font-500 text-pretty;
+    @apply text-2xl/[32px] font-medium text-pretty;
   }
 
   .heading-28 {
-    @apply text-3xl/[34px] font-500 text-pretty;
+    @apply text-3xl/[34px] font-medium text-pretty;
   }
 
   .title-16 {
-    @apply text-base/[132%] font-600 text-pretty;
+    @apply text-base/[132%] font-bold text-pretty;
   }
 
   .title-18 {
-    @apply text-lg/[132%] font-600 text-pretty;
+    @apply text-lg/[132%] font-bold text-pretty;
   }
 
   .title-20 {
-    @apply text-xl/[132%] font-600 text-pretty;
+    @apply text-xl/[132%] font-bold text-pretty;
   }
 
   .title-22 {
-    @apply text-[22px]/[132%] font-600;
+    @apply text-[22px]/[132%] font-bold;
   }
 
   .title-24 {
-    @apply text-2xl/[132%] font-600 text-pretty;
+    @apply text-2xl/[132%] font-bold text-pretty;
   }
 
   .title-28 {
-    @apply text-3xl/[132%] font-600 text-pretty;
+    @apply text-3xl/[132%] font-bold text-pretty;
   }
 
   .title-32 {
-    @apply text-4xl/[120%] font-600 text-pretty;
+    @apply text-4xl/[120%] font-bold text-pretty;
   }
 
   .title-36 {
-    @apply text-5xl/[120%] font-600 text-pretty;
+    @apply text-5xl/[120%] font-bold text-pretty;
   }
 
   .title-40 {
-    @apply text-6xl/[120%] font-600 text-pretty;
+    @apply text-6xl/[120%] font-bold text-pretty;
   }
 
   .title-44 {
-    @apply text-7xl/[120%] font-600 text-pretty;
+    @apply text-7xl/[120%] font-bold text-pretty;
   }
 
   .title-48 {
-    @apply text-8xl/[120%] font-600 text-pretty;
+    @apply text-8xl/[110%] tracking-[-0.48px] font-bold text-pretty;
   }
 
   .title-52 {
-    @apply text-9xl/[110%] font-600 text-pretty;
+    @apply text-9xl/[100%] tracking-[-0.52px] font-bold text-pretty;
   }
 
   .title-56 {
-    @apply text-10xl/[110%] font-600 text-pretty;
+    @apply text-10xl/[100%] tracking-[-0.56px] font-bold text-pretty;
   }
 
   .title-60 {
-    @apply text-11xl/[110%] font-600 text-pretty;
+    @apply text-11xl/[100%] tracking-[-0.60px] font-bold text-pretty;
   }
 
   .title-64 {
-    @apply text-12xl/[110%] font-600 text-pretty;
+    @apply text-12xl/[100%] tracking-[-0.64px] font-bold text-pretty;
   }
 
   .title-68 {
-    @apply text-13xl/[110%] font-600 text-pretty;
+    @apply text-13xl/[100%] tracking-[-0.68px] font-bold text-pretty;
   }
 
   .title-72 {
-    @apply text-14xl/[110%] font-600 text-pretty;
+    @apply text-14xl/[100%] tracking-[-0.72px] font-bold text-pretty;
   }
 
   .typography > h1 {

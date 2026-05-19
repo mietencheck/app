@@ -52,20 +52,15 @@ export function BlogIndexContent() {
 
   return (
     <>
-      {/* Hero Section */}
+      <section className="bg-green-9 py-20 sm:py-24">
+        <div className="container">
+          <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-center text-white">
+            {l("Ratgeber")}
+          </h2>
+        </div>
+      </section>
       <section>
         <div className="container pt-16 pb-20 space-y-20 sm:space-y-24 text-purple-11">
-          <div className="space-y-12">
-            <h2 className="title-40 sm:title-44 md:title-48 lg:title-56 text-purple-11 text-center">
-              <span className="inline-block px-4 py-3 transform -rotate-6 bg-yellow-9 text-purple-11">
-                {l("Ratgeber")}
-              </span>
-            </h2>
-            <p className="text-xl-book text-purple-11 max-w-xl text-center mx-auto">
-              {l("alles was du wissen musst über die Mietpreisbremse")}
-            </p>
-          </div>
-
           {/* Featured Article */}
           <div className="max-w-[960px] mx-auto space-y-16">
             <a
@@ -87,8 +82,8 @@ export function BlogIndexContent() {
                 <h3 className="title-24 mb-3 md:title-28">
                   {l("FAQ 1 Frage")}
                 </h3>
-                <p className="text-lg-book mb-8">FAQ</p>
-                <span className="bg-purple-9 text-base-book rounded-full text-white px-4 py-3 self-start hover:bg-purple-10">
+                <p className="text-lg mb-8">FAQ</p>
+                <span className="bg-purple-9 text-base text-white px-4 py-3 self-start hover:bg-purple-10">
                   {l("Artikel Lesen")}
                 </span>
               </div>
@@ -136,7 +131,7 @@ export function BlogIndexContent() {
                       )}
                       <div className="w-full text-purple-11">
                         <h3 className="title-22 mb-3">{title}</h3>
-                        {subtitle && <p className="text-lg-book">{subtitle}</p>}
+                        {subtitle && <p className="text-lg">{subtitle}</p>}
                       </div>
                     </article>
                   </a>
