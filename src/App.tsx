@@ -1,8 +1,8 @@
 import * as Sentry from "@sentry/react";
 import React, { Suspense, useCallback, useEffect, useMemo } from "react";
-import { Dialog } from "react-aria-components";
 
 import { RequireAuth } from "~/auth/RequireAuth";
+import { Dialog, DialogContent } from "~/components";
 import { BeratungListPage } from "~/pages/beratung";
 import { BeratungDetailPage } from "~/pages/beratung/[id]";
 import { DatenschutzPage } from "~/pages/datenschutz";
@@ -12,8 +12,6 @@ import LandingPage from "~/pages/landing";
 import { LoginPage } from "~/pages/login";
 import { SchnelltestPage } from "~/pages/schnelltest";
 
-// import { BlogIndexContent } from "./pages/blog/BlogIndex.ssg";
-// import { BlogPostContent } from "./pages/blog/BlogPost.ssg";
 import { AppRouter } from "./router";
 import {
   ContinueSessionDialog,
@@ -114,8 +112,10 @@ export function App() {
 
   if (sessionHashInURL) {
     return (
-      <Dialog>
-        <ContinueSessionDialog hash={sessionHashInURL} />
+      <Dialog defaultOpen>
+        <DialogContent className="max-w-xl">
+          <ContinueSessionDialog hash={sessionHashInURL} />
+        </DialogContent>
       </Dialog>
     );
   }
