@@ -27,3 +27,6 @@ dist-ssr
 
 # Sentry Config File
 .env.sentry-build-plugin
+
+# Generated at build time
+public/sitemap.xml

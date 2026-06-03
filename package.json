@@ -21,9 +21,10 @@
     "type-check": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier . --write",
-    "build": "vite-react-ssg build",
+    "generate-sitemap": "tsx scripts/generate-sitemap.ts",
+    "build": "pnpm run generate-sitemap && vite-react-ssg build",
     "preview": "vite preview",
-    "deploy": "vite build && pnpm exec wrangler deploy"
+    "deploy": "pnpm run generate-sitemap && vite build && pnpm exec wrangler deploy"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
