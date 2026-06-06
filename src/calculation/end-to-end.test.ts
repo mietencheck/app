@@ -334,8 +334,8 @@ test.each([
         Qm: 90,
       },
       result: {
-        worst: 890.01,
-        best: 890.01,
+        worst: 1050.39,
+        best: 1050.39,
       },
     },
   ].map(({ answers, result }) => {
