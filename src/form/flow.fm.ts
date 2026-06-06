@@ -423,6 +423,25 @@ export type StepInfoByAlias = {
             Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
             Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | "2024-2026" | ">2026";
             "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
+            Nettokaltmiete?: number;
+            "Vorherige Mieterhöhung"?: "Ja" | "Nein";
+            "Vorherige Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Anderer Grund";
+            "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Anderer Grund";
+            "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Anderer Grund";
+            "Datum Mieterhöhungsschreiben"?: Date;
+        };
+    };
+    "Exit: Keine Wohnlage gefunden": {
+        answer: null;
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
+            Unterschrieben?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | "2024-2026" | ">2026";
+            "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
         };
     };
     Nettokaltmiete: {

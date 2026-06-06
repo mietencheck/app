@@ -220,6 +220,7 @@
                     {
                       "id": "knhg9",
                       "type": "If",
+                      "alternate": [],
                       "cases": [
                         {
                           "id": "0gu8e",
@@ -577,11 +578,44 @@
                                 }
                               ],
                               "alternate": []
+                            },
+                            {
+                              "type": "If",
+                              "id": "ph0pdg",
+                              "alternate": [],
+                              "cases": [
+                                {
+                                  "type": "IfCase",
+                                  "id": "k1qwh",
+                                  "test": {
+                                    "id": "ws2qdl",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Wohnlage"
+                                    },
+                                    "operator": "is",
+                                    "negated": true,
+                                    "type": "AnswerOptionComparison",
+                                    "comparands": [
+                                      "8ktp",
+                                      "pi77s",
+                                      "v4s5m"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "type": "Exit",
+                                      "id": "vslt1",
+                                      "alias": "Exit: Keine Wohnlage gefunden",
+                                      "text": ""
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
-                      ],
-                      "alternate": []
+                      ]
                     },
                     {
                       "id": "swbz3",
@@ -1362,6 +1396,40 @@
                     ]
                   },
                   "required": true
+                },
+                {
+                  "type": "If",
+                  "id": "xiwyi",
+                  "alternate": [],
+                  "cases": [
+                    {
+                      "type": "IfCase",
+                      "id": "zrm1",
+                      "test": {
+                        "id": "bducw",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Wohnlage"
+                        },
+                        "operator": "is",
+                        "negated": true,
+                        "type": "AnswerOptionComparison",
+                        "comparands": [
+                          "pi77s",
+                          "8ktp",
+                          "v4s5m"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "apctg",
+                          "alias": "Exit: Mietvertrag zu alt",
+                          "text": "",
+                          "type": "Exit"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "id": "gbo6w",

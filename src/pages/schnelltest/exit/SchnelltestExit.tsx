@@ -9,6 +9,7 @@ import {
   ExitIndexmietvertragVorherigeMieterhoehungFreiwillig,
   ExitKappungsgrenzeDurchAktuelleMieterhoehungUeberschritten,
   ExitKappungsgrenzeUeberschritten,
+  ExitKeineWohnlageGefunden,
   ExitMieterhoehungBetriebskosten,
   ExitMieterhoehungFreiwillig,
   ExitMieterhoehungIndexmieteAndereBegruendung,
@@ -47,6 +48,7 @@ import { ExitMietvertragVorherigeMieterhoehungFreiwillig } from "./exits/miete/m
 
 const Exits = {
   "Exit: Mietvertrag zu alt": () => <ExitMietvertragZuAlt />,
+  "Exit: Keine Wohnlage gefunden": () => <ExitKeineWohnlageGefunden />,
   "Exit: Mietspiegel Feld Leer": () => <ExitMietspiegelFeldLeer />,
   "Exit: Neubauwohnung": () => <ExitNeubauwohnung />,
   "Exit: Sozialwohnung": () => <ExitSozialwohnung />,

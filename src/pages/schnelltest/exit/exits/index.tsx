@@ -5,6 +5,7 @@ export * from "./WohnungOhneWC";
 export * from "./MietvertragZuAlt";
 export * from "./Neubauwohnung";
 export * from "./MietspiegelFeldLeer";
+export * from "./KeineWohnlageGefunden";
 
 export * from "./miete/mietvertrag/VorherigeMieterhoehungFreiwillig";
 export * from "./miete/mietvertrag/VorherigeMieterhoehungAndererGrund";

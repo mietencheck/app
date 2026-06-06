@@ -35,5 +35,6 @@ describe("strassenDataRawToAdressen", () => {
     expect(adresse?.lage[2019]?.wohnlage).toBe("mittel");
     expect(adresse?.lage[2023]?.wohnlage).toBe("mittel");
     expect(adresse?.lage[2024]?.wohnlage).toBe("mittel");
+    expect(adresse?.lage[2026]?.wohnlage).toBe("mittel");
   });
 });

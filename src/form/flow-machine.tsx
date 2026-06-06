@@ -93,10 +93,9 @@ function buildLageInfo(answers: AnswerMachine) {
 
   if (!mietspieglJahr || !lage) return null;
 
-  const lageJahr: keyof LageInfoByJahr =
-    mietspieglJahr in lage ? (mietspieglJahr as keyof LageInfoByJahr) : "2026";
+  if (!(mietspieglJahr in lage)) return null;
 
-  return lage[lageJahr] ?? null;
+  return lage[mietspieglJahr as keyof LageInfoByJahr] ?? null;
 }
 
 function buildBaujahr(answers: AnswerMachine) {
