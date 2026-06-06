@@ -72,10 +72,18 @@ test.each([
   {
     answers: {
       Unterschrieben: "Ja",
-      Vertragsdatum: ">2024",
+      Vertragsdatum: "2024-2026",
       ...MERKMAL_RESET_ANSWERS,
     } as FinalAnswers,
-    result: MERKMAL_DEFAULT_STATE[">2024"],
+    result: MERKMAL_DEFAULT_STATE["2024-2026"],
+  },
+  {
+    answers: {
+      Unterschrieben: "Ja",
+      Vertragsdatum: ">2026",
+      ...MERKMAL_RESET_ANSWERS,
+    } as FinalAnswers,
+    result: MERKMAL_DEFAULT_STATE[">2026"],
   },
 ])("getMerkmalStates(%o)", ({ answers, result }) => {
   expect(getMerkmalStates(answers, getVisibleQuestionAliases(answers))).toEqual(

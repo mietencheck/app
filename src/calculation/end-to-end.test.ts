@@ -127,7 +127,7 @@ test.each([
     },
     {
       answers: {
-        Vertragsdatum: ">2024",
+        Vertragsdatum: "2024-2026",
         Baujahr: 1972,
         Ost: false,
         Wohnlage: "einfach",
@@ -152,7 +152,7 @@ test.each([
     },
     {
       answers: {
-        Vertragsdatum: ">2024",
+        Vertragsdatum: "2024-2026",
         Baujahr: 1912,
         Ost: false,
         Wohnlage: "einfach",
@@ -175,7 +175,7 @@ test.each([
     },
     {
       answers: {
-        Vertragsdatum: ">2024",
+        Vertragsdatum: "2024-2026",
         Baujahr: 2003,
         Ost: false,
         Wohnlage: "mittel",
@@ -188,7 +188,7 @@ test.each([
     },
     {
       answers: {
-        Vertragsdatum: ">2024",
+        Vertragsdatum: "2024-2026",
         Baujahr: 1984,
         Ost: false,
         Wohnlage: "mittel",
@@ -214,7 +214,7 @@ test.each([
     },
     {
       answers: {
-        Vertragsdatum: ">2024",
+        Vertragsdatum: "2024-2026",
         Baujahr: 1985,
         Ost: true,
         Wohnlage: "gut",

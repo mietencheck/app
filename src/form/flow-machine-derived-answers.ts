@@ -1,5 +1,6 @@
 import type { AnswerData } from "flow-machine";
 
+import type { LageInfoByJahr } from "~/components/AdresseForm/types";
 import { parseAdresse } from "~/utils";
 
 import { AnswerMachine, flowMachine } from "./flow-machine-runtime";
@@ -10,27 +11,29 @@ export function buildVertragsdatum(answers: AnswerMachine) {
   const vertragsdatum = answers.getWithOptionAlias("Vertragsdatum");
 
   if (unterschrieben == "Nein") {
-    return ">2024";
+    return ">2026";
   }
 
   return vertragsdatum;
 }
 
 export function buildLageInfo(answers: AnswerMachine) {
-  const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
   const vertragsdatum = buildVertragsdatum(answers);
 
   const mietspieglJahr =
-    unterschrieben == "Nein"
-      ? "2024"
-      : vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum];
+    vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum];
 
   const addresse = answers.get(["Adresse"]);
   const lage =
     (addresse && typeof addresse == "string" && parseAdresse(addresse).lage) ||
     null;
 
-  return (mietspieglJahr && lage?.[mietspieglJahr]) ?? null;
+  if (!mietspieglJahr || !lage) return null;
+
+  const lageJahr: keyof LageInfoByJahr =
+    mietspieglJahr in lage ? (mietspieglJahr as keyof LageInfoByJahr) : "2026";
+
+  return lage[lageJahr] ?? null;
 }
 
 export function buildBaujahr(answers: AnswerMachine) {

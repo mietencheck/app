@@ -50,7 +50,7 @@ test.each([
     // Check if answer is ignored if Baujahr is > 2015
     {
       answers: {
-        Vertragsdatum: ">2024",
+        Vertragsdatum: "2024-2026",
         Baujahr: 2016,
         "Gebäude ist in gutem Zustand": "Ja",
       },

@@ -4,6 +4,7 @@ import merkmale2019 from "~/mietspiegel/merkmale/2019.json";
 import merkmale2021 from "~/mietspiegel/merkmale/2021.json";
 import merkmale2023 from "~/mietspiegel/merkmale/2023.json";
 import merkmale2024 from "~/mietspiegel/merkmale/2024.json";
+import merkmale2026 from "~/mietspiegel/merkmale/2026.json";
 import { sondermerkmale } from "~/mietspiegel/sondermerkmale";
 
 export const SONDERMERKMAL_DEFAULT_STATE = Object.fromEntries(
@@ -26,8 +27,11 @@ export const MERKMAL_DEFAULT_STATE = {
   "2022-2024": Object.fromEntries(
     Object.keys(merkmale2023).map((key) => [key, "unchecked"]),
   ),
-  ">2024": Object.fromEntries(
+  "2024-2026": Object.fromEntries(
     Object.keys(merkmale2024).map((key) => [key, "unchecked"]),
+  ),
+  ">2026": Object.fromEntries(
+    Object.keys(merkmale2026).map((key) => [key, "unchecked"]),
   ),
 } as const;
 
@@ -37,5 +41,6 @@ export const ALL_VERTRAGSDATUM = [
   "2018-2020",
   "2020-2022",
   "2022-2024",
-  ">2024",
+  "2024-2026",
+  ">2026",
 ];

@@ -41,7 +41,7 @@ export const getMietspiegeljahr = (
 
   // If contract is not signed, use newest Mietspiegel
   if (answers["Unterschrieben"] == "Nein") {
-    return "2024";
+    return "2026";
   }
 
   return answers[alias]

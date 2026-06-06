@@ -5,6 +5,7 @@ import merkmale2019 from "./merkmale/2019.json";
 import merkmale2021 from "./merkmale/2021.json";
 import merkmale2023 from "./merkmale/2023.json";
 import merkmale2024 from "./merkmale/2024.json";
+import merkmale2026 from "./merkmale/2026.json";
 import { sondermerkmale } from "./sondermerkmale";
 
 export type Merkmal =
@@ -13,7 +14,8 @@ export type Merkmal =
   | keyof typeof merkmale2019
   | keyof typeof merkmale2021
   | keyof typeof merkmale2023
-  | keyof typeof merkmale2024;
+  | keyof typeof merkmale2024
+  | keyof typeof merkmale2026;
 export type MerkmalGruppe = "Bad" | "Küche" | "Wohnung" | "Gebäude" | "Umfeld";
 export type MerkmalTyp = "Wohnwerterhoehend" | "Wohnwertmindernd";
 
@@ -30,7 +32,8 @@ export type Mietspiegeljahr =
   | "2019"
   | "2021"
   | "2023"
-  | "2024";
+  | "2024"
+  | "2026";
 
 export type Wohnlage = "einfach" | "mittel" | "gut";
 
@@ -50,7 +53,9 @@ export type Baujahr =
   | "2003-2015"
   | "2003-2017"
   | "2010-2015"
-  | "2016-2022";
+  | "2016-2022"
+  | "2016-2019"
+  | "2020-2024";
 
 export type BaujahrSpanne =
   (typeof baujahrSpannenByMietspiegeljahr)[keyof typeof baujahrSpannenByMietspiegeljahr][number];
@@ -73,8 +78,12 @@ export type Wohnflaeche =
   | "-105"
   | "35-40"
   | "40-45"
+  | "40-50"
+  | "40-55"
   | "40-90"
   | "45-50"
+  | "45-70"
+  | "45-90"
   | "45-55"
   | "45-75"
   | "45-"
@@ -83,7 +92,9 @@ export type Wohnflaeche =
   | "45-60"
   | "45-65"
   | "50-55"
+  | "50-60"
   | "50-65"
+  | "50-85"
   | "55-60"
   | "55-65"
   | "55-75"
@@ -92,35 +103,54 @@ export type Wohnflaeche =
   | "60-70"
   | "60-75"
   | "60-80"
+  | "60-85"
   | "60-90"
+  | "60-100"
   | "60-"
+  | "65-70"
   | "65-75"
   | "65-85"
+  | "65-95"
   | "65-115"
   | "65-"
   | "70-75"
+  | "70-80"
+  | "70-85"
+  | "70-90"
   | "70-95"
+  | "70-105"
   | "70-"
   | "75-80"
   | "75-85"
   | "75-90"
+  | "75-105"
   | "75-"
+  | "80-90"
   | "80-95"
   | "80-120"
   | "80-"
   | "85-90"
+  | "85-95"
   | "85-100"
   | "85-105"
+  | "85-110"
+  | "85-120"
   | "85-"
   | "90-100"
   | "90-105"
+  | "90-110"
   | "90-"
   | "95-"
+  | "100-105"
   | "100-"
   | "105-"
   | "105-120"
+  | "105-125"
+  | "125-"
+  | "110-"
   | "115-"
   | "120-130"
   | "120"
+  | "120-"
   | "130-"
   | "0-";

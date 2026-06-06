@@ -2,7 +2,7 @@ import { BeratungRecord } from "./types";
 
 const DEFAULT_BERATUNG_RECORD: BeratungRecord = {
   typ: "Miete",
-  vertragsdatum: ">2024",
+  vertragsdatum: "2024-2026",
   wohnflaeche: 100,
   baujahrSpanne: "-1918",
   wohnlage: "mittel",

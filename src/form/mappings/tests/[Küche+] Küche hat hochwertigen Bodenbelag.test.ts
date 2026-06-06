@@ -46,7 +46,7 @@ test.each([
     })),
     {
       answers: {
-        Vertragsdatum: ">2024",
+        Vertragsdatum: "2024-2026",
         Baujahr: 2010,
         "Küche hat hochwertigen Fußboden": "Ja",
       },

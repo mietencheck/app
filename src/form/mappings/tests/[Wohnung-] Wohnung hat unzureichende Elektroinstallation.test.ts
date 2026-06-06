@@ -92,40 +92,54 @@ test.each([
       },
     },
 
-    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
-      (vertragsdatum) => ({
-        answers: {
-          Vertragsdatum: vertragsdatum,
-          "Wohnung hat ausreichende Elektroinstallation": "Ja",
-        },
-        expected: {
-          "[Wohnung-] Wohnung hat unzureichende Elektroinstallation":
-            "unchecked",
-        },
-      }),
-    ),
-    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
-      (vertragsdatum) => ({
-        answers: {
-          Vertragsdatum: vertragsdatum,
-          "Wohnung hat ausreichende Elektroinstallation": "Nicht sicher",
-        },
-        expected: {
-          "[Wohnung-] Wohnung hat unzureichende Elektroinstallation": "maybe",
-        },
-      }),
-    ),
-    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
-      (vertragsdatum) => ({
-        answers: {
-          Vertragsdatum: vertragsdatum,
-          "Wohnung hat ausreichende Elektroinstallation": "Nein",
-        },
-        expected: {
-          "[Wohnung-] Wohnung hat unzureichende Elektroinstallation": "checked",
-        },
-      }),
-    ),
+    ...[
+      "2016-2018",
+      "2018-2020",
+      "2020-2022",
+      "2022-2024",
+      "2024-2026",
+      ">2026",
+    ].map((vertragsdatum) => ({
+      answers: {
+        Vertragsdatum: vertragsdatum,
+        "Wohnung hat ausreichende Elektroinstallation": "Ja",
+      },
+      expected: {
+        "[Wohnung-] Wohnung hat unzureichende Elektroinstallation": "unchecked",
+      },
+    })),
+    ...[
+      "2016-2018",
+      "2018-2020",
+      "2020-2022",
+      "2022-2024",
+      "2024-2026",
+      ">2026",
+    ].map((vertragsdatum) => ({
+      answers: {
+        Vertragsdatum: vertragsdatum,
+        "Wohnung hat ausreichende Elektroinstallation": "Nicht sicher",
+      },
+      expected: {
+        "[Wohnung-] Wohnung hat unzureichende Elektroinstallation": "maybe",
+      },
+    })),
+    ...[
+      "2016-2018",
+      "2018-2020",
+      "2020-2022",
+      "2022-2024",
+      "2024-2026",
+      ">2026",
+    ].map((vertragsdatum) => ({
+      answers: {
+        Vertragsdatum: vertragsdatum,
+        "Wohnung hat ausreichende Elektroinstallation": "Nein",
+      },
+      expected: {
+        "[Wohnung-] Wohnung hat unzureichende Elektroinstallation": "checked",
+      },
+    })),
   ].map(({ answers, expected }) => {
     return {
       answers: {

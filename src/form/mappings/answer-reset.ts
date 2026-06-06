@@ -86,6 +86,8 @@ export const MERKMAL_RESET_ANSWERS = {
   "Wohnnung hat sichtbare Bewässerungsleitungen": "Nein",
   "Wohnung hat ausreichende Elektroinstallation": "Ja",
   "Wohnung hat Raum mit <2 Steckdosen": "Nein",
+  "Wohnung im Erdgeschoss": "Ja",
+  "Wohnung hat Einbruchsicherung oder Sichtschutz": "Ja",
 
   // Gebäude+
   "Gebäude hat sichere Haustür": "Nein",

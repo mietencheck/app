@@ -34,18 +34,14 @@ for (const strasse of strassen) {
   strassenIndex.add(strasse, strasse);
 }
 
-export const fetchStrasseData = memoize(0)(async (
+export function strassenDataRawToAdressen(
   strasse: string,
-): Promise<AdresseWithLage[]> => {
-  if (!strassenIndex.contain(strasse)) return [];
-  const rawData = await fetchWithRetryBackOff(
-    "/strassenverzeichnis/" + sanitize(strasse + ".json"),
-  ).then((r) => r.json() as Promise<StrassenDataRaw>);
-
-  const result = [];
+  rawData: StrassenDataRaw,
+): AdresseWithLage[] {
+  const result: AdresseWithLage[] = [];
   for (const [plz, byNummer] of Object.entries(rawData)) {
     for (const [nummer, byJahr] of Object.entries(byNummer)) {
-      const adresse = {
+      result.push({
         strasse,
         nummer,
         plz,
@@ -59,11 +55,21 @@ export const fetchStrasseData = memoize(0)(async (
             } satisfies LageInfo,
           ]),
         ) as LageInfoByJahr,
-      } satisfies AdresseWithLage;
-      result.push(adresse);
+      });
     }
   }
   return result;
+}
+
+export const fetchStrasseData = memoize(0)(async (
+  strasse: string,
+): Promise<AdresseWithLage[]> => {
+  if (!strassenIndex.contain(strasse)) return [];
+  const rawData = await fetchWithRetryBackOff(
+    "/strassenverzeichnis/" + sanitize(strasse + ".json"),
+  ).then((r) => r.json() as Promise<StrassenDataRaw>);
+
+  return strassenDataRawToAdressen(strasse, rawData);
 });
 
 // parseInt is a better choice than Number() here because it e.g.:

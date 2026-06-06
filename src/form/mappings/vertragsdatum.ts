@@ -8,7 +8,8 @@ export const vertragsdatumToMietspiegelJahrMapping = {
   "2018-2020": "2019",
   "2020-2022": "2021",
   "2022-2024": "2023",
-  ">2024": "2024",
+  "2024-2026": "2024",
+  ">2026": "2026",
 } satisfies Record<
   NonNullable<FinalAnswers["Vertragsdatum"]>,
   Mietspiegeljahr | undefined

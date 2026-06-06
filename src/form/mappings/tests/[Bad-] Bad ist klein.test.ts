@@ -54,19 +54,24 @@ test.each([
       },
     },
     // Check if answer is ignored when when BaujahrSpanne is '1973-1990 Ost'
-    ...["2016-2018", "2018-2020", "2020-2022", "2022-2024", ">2024"].map(
-      (vertragsdatum) => ({
-        answers: {
-          Vertragsdatum: vertragsdatum,
-          Baujahr: 1973,
-          Ost: true,
-          "Bad größer als 4qm": "Nein",
-        },
-        expected: {
-          "[Bad-] Bad ist klein": "unchecked",
-        },
-      }),
-    ),
+    ...[
+      "2016-2018",
+      "2018-2020",
+      "2020-2022",
+      "2022-2024",
+      "2024-2026",
+      ">2026",
+    ].map((vertragsdatum) => ({
+      answers: {
+        Vertragsdatum: vertragsdatum,
+        Baujahr: 1973,
+        Ost: true,
+        "Bad größer als 4qm": "Nein",
+      },
+      expected: {
+        "[Bad-] Bad ist klein": "unchecked",
+      },
+    })),
   ].map(({ answers, expected }) => {
     return {
       answers: {

@@ -44,7 +44,7 @@ test.each([
     // Check if answer is ignored when BaujahrSpanne is '1973 bis 1990 Ost'
     {
       answers: {
-        Vertragsdatum: ">2024",
+        Vertragsdatum: "2024-2026",
         Baujahr: 1973,
         Ost: true,
         "Bad mit WC ohne Fenster": "Ja",
