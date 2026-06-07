@@ -10,8 +10,8 @@ import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useInlineLocale } from "~/l10n";
 import { DetailsRouter } from "~/pages/fragebogen/router";
 import {
+  useMieteErgebnis,
   useWorstBestZulaessigeHoechstmiete,
-  useWorstBestZulaessigeHoechstmieteDiff,
 } from "~/pages/fragebogen/utils";
 
 import { StepperType } from "..";
@@ -25,8 +25,8 @@ import { ResultMieterhöhungZulaessig } from "./mieterhoehung/ResultMieterhoehun
 export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
   const answers = useAnswers().getAliasedState();
   const visibleQuestionAliases = useVisibleQuestionAliases();
+  const mieteResult = useMieteErgebnis();
   const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
-  const zulaessigeHoechstmieteDiff = useWorstBestZulaessigeHoechstmieteDiff();
 
   const typ = getTyp(answers, visibleQuestionAliases);
 
@@ -55,18 +55,12 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
   let resultContent: ReactNode = errorState;
 
   if (typ === "Miete") {
-    if (zulaessigeHoechstmieteDiff) {
-      const { best: bestZulaessigeHoechstmieteDiff } =
-        zulaessigeHoechstmieteDiff;
-
-      if (bestZulaessigeHoechstmieteDiff < 0) {
-        // Die aktuelle Miete liegt im (oder unter dem) zulässigen Bereich.
-        resultContent = <ResultMieteZulaessig />;
+    if (mieteResult) {
+      if (mieteResult.kind === "zulaessig") {
+        resultContent = <ResultMieteZulaessig result={mieteResult} />;
       } else {
-        // Die aktuelle Miete liegt über dem zulässigen Bereich;
-        // daher Weiterleitung zum vollständigen Fragebogen anbieten.
         showContinueToDetailsButton = true;
-        resultContent = <ResultMieteNichtZulaessig />;
+        resultContent = <ResultMieteNichtZulaessig result={mieteResult} />;
       }
     }
   } else {
@@ -83,41 +77,14 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
       } = zulaessigeHoechstmiete;
 
       if (geforderteNettokaltmiete < bestZulaessigeHoechstmiete) {
-        /*
-          Fall 1:
-          Die geforderte Nettokaltmiete liegt unter der niedrigsten möglichen
-          zulässigen Höchstmiete.
-          -> Die Mieterhöhung ist voraussichtlich zulässig.
-        */
         resultContent = <ResultMieterhöhungZulaessig />;
       } else if (geforderteNettokaltmiete < worstZulaessigeHoechstmiete) {
-        /*
-          Fall 2:
-          Die geforderte Nettokaltmiete liegt zwischen niedrigster möglicher und
-          höchster möglicher zulässiger Höchstmiete.
-          -> Die Erhöhung könnte unzulässig sein (abhängig von Details).
-          -> Weiter zum vollständigen Fragebogen anbieten.
-        */
         showContinueToDetailsButton = true;
         resultContent = <ResultMieterhoehungPotentiellUnzulaessig />;
       } else if (nettokaltmiete < worstZulaessigeHoechstmiete) {
-        /*
-          Fall 3:
-          Die geforderte Nettokaltmiete liegt über der höchsten möglichen
-          zulässigen Höchstmiete, die aktuelle Nettokaltmiete aber noch darunter.
-          -> Die geforderte Erhöhung könnte zu hoch sein, die exakte rechtliche
-             Bewertung hängt von weiteren Details ab.
-          -> Weiter zum vollständigen Fragebogen anbieten.
-        */
         showContinueToDetailsButton = true;
         resultContent = <ResultMieterhoehungPotentiellUnzulaessig />;
       } else {
-        /*
-          Fall 4:
-          Sowohl aktuelle als auch geforderte Nettokaltmiete liegen über der
-          höchsten möglichen zulässigen Höchstmiete.
-          -> Eine weitere Erhöhung ist voraussichtlich unzulässig.
-        */
         resultContent = <ResultMieterhoehungNichtZulaessig />;
       }
     }
@@ -128,7 +95,7 @@ export function SchnelltestResult({ stepper }: { stepper: StepperType }) {
       <p className="text-base text-gray-11 mb-2">
         {l({ de: "Prognose", en: "Prediction" })}
       </p>
-      {resultContent}
+      <div className="typography">{resultContent}</div>
 
       <div className="flex flex-row flex-wrap justify-center gap-3 mt-10">
         {stepper.back && (
