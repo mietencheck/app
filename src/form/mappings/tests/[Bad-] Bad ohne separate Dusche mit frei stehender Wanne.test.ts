@@ -4,6 +4,7 @@ import { getMerkmalStates } from "~/form/api";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import {
   MERKMAL_RESET_ANSWERS,
+  SCHNELLTEST_RESET_ANSWERS,
   SONDERMERKMAL_RESET_ANSWERS,
 } from "~/form/mappings/answer-reset";
 
@@ -93,10 +94,7 @@ test.each([
   ].map(({ answers, expected }) => {
     return {
       answers: {
-        Unterschrieben: "Ja",
-        Baujahr: 1918,
-        "Wohnung hat Sammelheizung": "Ja",
-        "Badezimmer in Wohnung": "Ja",
+        ...SCHNELLTEST_RESET_ANSWERS,
         ...MERKMAL_RESET_ANSWERS,
         ...SONDERMERKMAL_RESET_ANSWERS,
         ...answers,

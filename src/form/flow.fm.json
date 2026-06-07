@@ -1,7 +1,6 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
-  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -220,7 +219,6 @@
                     {
                       "id": "knhg9",
                       "type": "If",
-                      "alternate": [],
                       "cases": [
                         {
                           "id": "0gu8e",
@@ -580,22 +578,21 @@
                               "alternate": []
                             },
                             {
-                              "type": "If",
                               "id": "ph0pdg",
-                              "alternate": [],
+                              "type": "If",
                               "cases": [
                                 {
-                                  "type": "IfCase",
                                   "id": "k1qwh",
+                                  "type": "IfCase",
                                   "test": {
                                     "id": "ws2qdl",
                                     "questionRef": {
                                       "type": "AliasRef",
                                       "value": "Wohnlage"
                                     },
-                                    "operator": "is",
                                     "negated": true,
                                     "type": "AnswerOptionComparison",
+                                    "operator": "is",
                                     "comparands": [
                                       "8ktp",
                                       "pi77s",
@@ -604,18 +601,20 @@
                                   },
                                   "block": [
                                     {
-                                      "type": "Exit",
                                       "id": "vslt1",
                                       "alias": "Exit: Keine Wohnlage gefunden",
-                                      "text": ""
+                                      "text": "",
+                                      "type": "Exit"
                                     }
                                   ]
                                 }
-                              ]
+                              ],
+                              "alternate": []
                             }
                           ]
                         }
-                      ]
+                      ],
+                      "alternate": []
                     },
                     {
                       "id": "swbz3",
@@ -1398,22 +1397,21 @@
                   "required": true
                 },
                 {
-                  "type": "If",
                   "id": "xiwyi",
-                  "alternate": [],
+                  "type": "If",
                   "cases": [
                     {
-                      "type": "IfCase",
                       "id": "zrm1",
+                      "type": "IfCase",
                       "test": {
                         "id": "bducw",
                         "questionRef": {
                           "type": "AliasRef",
                           "value": "Wohnlage"
                         },
-                        "operator": "is",
                         "negated": true,
                         "type": "AnswerOptionComparison",
+                        "operator": "is",
                         "comparands": [
                           "pi77s",
                           "8ktp",
@@ -1429,7 +1427,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 },
                 {
                   "id": "gbo6w",
@@ -7074,7 +7073,6 @@
                 {
                   "id": "x19izk",
                   "type": "If",
-                  "alternate": [],
                   "cases": [
                     {
                       "id": "jxcsq",
@@ -7752,66 +7750,6 @@
                                 {
                                   "id": "lsepp",
                                   "type": "If",
-                                  "alternate": [
-                                    {
-                                      "id": "rwohg",
-                                      "type": "If",
-                                      "alternate": [],
-                                      "cases": [
-                                        {
-                                          "id": "jers1",
-                                          "type": "IfCase",
-                                          "block": [
-                                            {
-                                              "id": "tdjgf",
-                                              "type": "Question",
-                                              "alias": "Bad Boden und Wand hochwertig",
-                                              "text": "Ist der Bodenbelag und die Wandbekleidung in allen Badezimmern hochwertig? ",
-                                              "info": "Dies gilt, wenn die Fliesen nicht einheitlich sind, sondern durch Akzente und Verzierungen aufgewertet wurden (z.B. Mosaikfliesen). Dazu gelten Natursteine wie Marmor, Schiefer oder Granit ebenfalls als hochwertig.",
-                                              "answer": {
-                                                "type": "ChoiceAnswer",
-                                                "options": [
-                                                  {
-                                                    "id": "uiajj",
-                                                    "alias": "Ja",
-                                                    "text": "Ja"
-                                                  },
-                                                  {
-                                                    "id": "qzhja",
-                                                    "alias": "Nein",
-                                                    "text": "Nein"
-                                                  },
-                                                  {
-                                                    "id": "8i22j",
-                                                    "alias": "Nicht sicher",
-                                                    "text": "Ich bin mir nicht sicher"
-                                                  }
-                                                ]
-                                              },
-                                              "required": false,
-                                              "note": "Merkmal 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig;\ngilt nicht für die Baualtersklasse 2016 bis 2022 [bezieht sich nicht auf Gäste-WCs] [++]\n\nMerkmal >=2026:\nWandverkleidung und Bodenbelag hochwertig (gilt nicht für die Baualtersklassen ab 2010) [bezieht sich nicht auf Gäste-WCs] [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                            }
-                                          ],
-                                          "test": {
-                                            "id": "r6c1h",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Baujahr"
-                                            },
-                                            "negated": false,
-                                            "type": "AnswerNumberComparison",
-                                            "operator": "lt",
-                                            "comparands": [
-                                              {
-                                                "type": "NumberLiteral",
-                                                "value": 2010
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  ],
                                   "cases": [
                                     {
                                       "id": "opf8j",
@@ -7885,42 +7823,10 @@
                                         {
                                           "id": "mq7kv",
                                           "type": "If",
-                                          "alternate": [],
                                           "cases": [
                                             {
                                               "id": "pnw38",
                                               "type": "IfCase",
-                                              "block": [
-                                                {
-                                                  "id": "o182r",
-                                                  "type": "Question",
-                                                  "alias": "Bad Boden und Wand hochwertig",
-                                                  "text": "Ist der Bodenbelag und die Wandbekleidung in allen Badezimmern hochwertig? ",
-                                                  "info": "Dies gilt, wenn die Fliesen nicht einheitlich sind, sondern durch Akzente und Verzierungen aufgewertet wurden (z.B. Mosaikfliesen). Dazu gelten Natursteine wie Marmor, Schiefer oder Granit ebenfalls als hochwertig.",
-                                                  "answer": {
-                                                    "type": "ChoiceAnswer",
-                                                    "options": [
-                                                      {
-                                                        "id": "uiajj",
-                                                        "alias": "Ja",
-                                                        "text": "Ja"
-                                                      },
-                                                      {
-                                                        "id": "qzhja",
-                                                        "alias": "Nein",
-                                                        "text": "Nein"
-                                                      },
-                                                      {
-                                                        "id": "8i22j",
-                                                        "alias": "Nicht sicher",
-                                                        "text": "Ich bin mir nicht sicher"
-                                                      }
-                                                    ]
-                                                  },
-                                                  "required": false,
-                                                  "note": "Merkmal 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig; gilt nicht für die Baualtersklasse 2016 bis 2022 [bezieht sich nicht auf Gäste-WCs] [++]\n\nMerkmal >=2026:\nWandverkleidung und Bodenbelag hochwertig (gilt nicht für die Baualtersklassen ab 2010) [bezieht sich nicht auf Gäste-WCs] [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                                }
-                                              ],
                                               "test": {
                                                 "id": "cncv6",
                                                 "type": "LogicalOperation",
@@ -7960,11 +7866,103 @@
                                                     ]
                                                   }
                                                 ]
+                                              },
+                                              "block": [
+                                                {
+                                                  "id": "o182r",
+                                                  "type": "Question",
+                                                  "alias": "Bad Boden und Wand hochwertig",
+                                                  "text": "Ist der Bodenbelag und die Wandbekleidung in allen Badezimmern hochwertig? ",
+                                                  "info": "Dies gilt, wenn die Fliesen nicht einheitlich sind, sondern durch Akzente und Verzierungen aufgewertet wurden (z.B. Mosaikfliesen). Dazu gelten Natursteine wie Marmor, Schiefer oder Granit ebenfalls als hochwertig.",
+                                                  "answer": {
+                                                    "type": "ChoiceAnswer",
+                                                    "options": [
+                                                      {
+                                                        "id": "uiajj",
+                                                        "alias": "Ja",
+                                                        "text": "Ja"
+                                                      },
+                                                      {
+                                                        "id": "qzhja",
+                                                        "alias": "Nein",
+                                                        "text": "Nein"
+                                                      },
+                                                      {
+                                                        "id": "8i22j",
+                                                        "alias": "Nicht sicher",
+                                                        "text": "Ich bin mir nicht sicher"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "required": false,
+                                                  "note": "Merkmal 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig; gilt nicht für die Baualtersklasse 2016 bis 2022 [bezieht sich nicht auf Gäste-WCs] [++]\n\nMerkmal >=2026:\nWandverkleidung und Bodenbelag hochwertig (gilt nicht für die Baualtersklassen ab 2010) [bezieht sich nicht auf Gäste-WCs] [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "alternate": []
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "alternate": [
+                                    {
+                                      "id": "rwohg",
+                                      "type": "If",
+                                      "cases": [
+                                        {
+                                          "id": "jers1",
+                                          "type": "IfCase",
+                                          "test": {
+                                            "id": "r6c1h",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lt",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2010
                                               }
+                                            ]
+                                          },
+                                          "block": [
+                                            {
+                                              "id": "tdjgf",
+                                              "type": "Question",
+                                              "alias": "Bad Boden und Wand hochwertig",
+                                              "text": "Ist der Bodenbelag und die Wandbekleidung in allen Badezimmern hochwertig? ",
+                                              "info": "Dies gilt, wenn die Fliesen nicht einheitlich sind, sondern durch Akzente und Verzierungen aufgewertet wurden (z.B. Mosaikfliesen). Dazu gelten Natursteine wie Marmor, Schiefer oder Granit ebenfalls als hochwertig.",
+                                              "answer": {
+                                                "type": "ChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "uiajj",
+                                                    "alias": "Ja",
+                                                    "text": "Ja"
+                                                  },
+                                                  {
+                                                    "id": "qzhja",
+                                                    "alias": "Nein",
+                                                    "text": "Nein"
+                                                  },
+                                                  {
+                                                    "id": "8i22j",
+                                                    "alias": "Nicht sicher",
+                                                    "text": "Ich bin mir nicht sicher"
+                                                  }
+                                                ]
+                                              },
+                                              "required": false,
+                                              "note": "Merkmal 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig;\ngilt nicht für die Baualtersklasse 2016 bis 2022 [bezieht sich nicht auf Gäste-WCs] [++]\n\nMerkmal >=2026:\nWandverkleidung und Bodenbelag hochwertig (gilt nicht für die Baualtersklassen ab 2010) [bezieht sich nicht auf Gäste-WCs] [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                             }
                                           ]
                                         }
-                                      ]
+                                      ],
+                                      "alternate": []
                                     }
                                   ]
                                 }
@@ -8155,7 +8153,8 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "alternate": []
                 }
               ]
             },
@@ -10920,10 +10919,10 @@
                       ],
                       "alternate": [
                         {
-                          "type": "Question",
                           "id": "3vb8m",
-                          "text": "Liegt die Wohnung im Ergeschoss?",
+                          "type": "Question",
                           "alias": "Wohnung im Erdgeschoss",
+                          "text": "Liegt die Wohnung im Ergeschoss?",
                           "info": null,
                           "answer": {
                             "type": "ChoiceAnswer",
@@ -10948,13 +10947,26 @@
                           "required": true
                         },
                         {
-                          "type": "If",
                           "id": "gw7yj",
-                          "alternate": [],
+                          "type": "If",
                           "cases": [
                             {
-                              "type": "IfCase",
                               "id": "acxzyl",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "s31pmg",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Wohnung im Erdgeschoss"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "hgtwu",
+                                  "yiqwb"
+                                ]
+                              },
                               "block": [
                                 {
                                   "id": "1g6mr",
@@ -10985,23 +10997,10 @@
                                   "required": true,
                                   "note": "Merkmal >=2026:\nBei Erdgeschosswohnung: Kein Einbruchs- und/oder Sichtschutzsystem an allen Fenstern der Wohnung\n(z. B. Gitter, Rollläden, Fensteralarm) [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                                 }
-                              ],
-                              "test": {
-                                "id": "s31pmg",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Wohnung im Erdgeschoss"
-                                },
-                                "operator": "is",
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "comparands": [
-                                  "hgtwu",
-                                  "yiqwb"
-                                ]
-                              }
+                              ]
                             }
-                          ]
+                          ],
+                          "alternate": []
                         }
                       ]
                     },
@@ -15025,5 +15024,6 @@
         }
       ]
     }
-  ]
+  ],
+  "subs": []
 }

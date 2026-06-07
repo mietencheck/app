@@ -1,5 +1,14 @@
 import { FinalAnswers } from "~/form/flow-machine";
 
+export const SCHNELLTEST_RESET_ANSWERS = {
+  Unterschrieben: "Ja",
+  Baujahr: 1900,
+  Qm: 60,
+  Wohnlage: "einfach",
+  "Wohnung hat Sammelheizung": "Ja",
+  "Badezimmer in Wohnung": "Ja",
+} satisfies FinalAnswers;
+
 export const SONDERMERKMAL_RESET_ANSWERS = {
   "Sondermerkmal Bodenbelag": "Nein",
   "Sondermerkmal Moderne Küche": "Nein",

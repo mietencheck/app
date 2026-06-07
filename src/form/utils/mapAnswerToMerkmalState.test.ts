@@ -1,6 +1,7 @@
 import { expect, test } from "vitest";
 
 import { FinalAnswers, getVisibleQuestionAliases } from "../flow-machine";
+import { SCHNELLTEST_RESET_ANSWERS } from "../mappings/answer-reset";
 import { AnswerMerkmalStateMapping } from "../mappings/merkmale";
 import { mapAnswerToMerkmalState } from "./mapAnswerToMerkmalState";
 import { MerkmalState } from "./mapMerkmalStateToMerkmalGruppen";
@@ -40,7 +41,7 @@ test.each([
     },
   ].map(({ mapping, answers, merkmalState }) => ({
     mapping: Object({ checked_if: mapping }) as AnswerMerkmalStateMapping,
-    answers: answers as FinalAnswers,
+    answers: { ...SCHNELLTEST_RESET_ANSWERS, ...answers } as FinalAnswers,
     merkmalState: merkmalState as MerkmalState,
   })),
 ])("mapAnswerToMerkmalState(%o)", ({ mapping, answers, merkmalState }) => {
@@ -129,7 +130,7 @@ test.each([
         ],
       },
     }) as AnswerMerkmalStateMapping,
-    answers: answers as FinalAnswers,
+    answers: { ...SCHNELLTEST_RESET_ANSWERS, ...answers } as FinalAnswers,
     merkmalState: merkmalState as MerkmalState,
   })),
 ])("mapAnswerToMerkmalState(%o)", ({ mapping, answers, merkmalState }) => {
@@ -218,7 +219,7 @@ test.each([
         ],
       },
     }) as AnswerMerkmalStateMapping,
-    answers: answers as FinalAnswers,
+    answers: { ...SCHNELLTEST_RESET_ANSWERS, ...answers } as FinalAnswers,
     merkmalState: merkmalState as MerkmalState,
   })),
 ])("mapAnswerToMerkmalState(%o)", ({ mapping, answers, merkmalState }) => {
@@ -257,6 +258,7 @@ test.each([
       },
     }) as AnswerMerkmalStateMapping,
     answers: {
+      ...SCHNELLTEST_RESET_ANSWERS,
       "Kennt Energieverbrauch oder Energiebedarf": "Energieverbrauchswert",
       ...answers,
     } as FinalAnswers,

@@ -2,7 +2,10 @@ import { expect, test } from "vitest";
 
 import { getSondermerkmalStates } from "~/form/api";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
-import { SONDERMERKMAL_RESET_ANSWERS } from "~/form/mappings/answer-reset";
+import {
+  SCHNELLTEST_RESET_ANSWERS,
+  SONDERMERKMAL_RESET_ANSWERS,
+} from "~/form/mappings/answer-reset";
 
 import { SONDERMERKMAL_DEFAULT_STATE } from "./merkmal-default-state";
 
@@ -52,7 +55,7 @@ test.each([
   ].map(({ answers, expected }) => {
     return {
       answers: {
-        Unterschrieben: "Ja",
+        ...SCHNELLTEST_RESET_ANSWERS,
         ...SONDERMERKMAL_RESET_ANSWERS,
         ...answers,
       } as FinalAnswers,
