@@ -4,6 +4,7 @@ import { getMerkmalStates } from "~/form/api";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import {
   MERKMAL_RESET_ANSWERS,
+  SCHNELLTEST_RESET_ANSWERS,
   SONDERMERKMAL_RESET_ANSWERS,
 } from "~/form/mappings/answer-reset";
 
@@ -46,7 +47,7 @@ test.each([
     })),
     {
       answers: {
-        Vertragsdatum: ">2024",
+        Vertragsdatum: "2024-2026",
         Baujahr: 2010,
         "Küche hat hochwertigen Fußboden": "Ja",
       },
@@ -57,9 +58,7 @@ test.each([
   ].map(({ answers, expected }) => {
     return {
       answers: {
-        Unterschrieben: "Ja",
-        "Wohnung hat Sammelheizung": "Ja",
-        "Badezimmer in Wohnung": "Ja",
+        ...SCHNELLTEST_RESET_ANSWERS,
         ...MERKMAL_RESET_ANSWERS,
         ...SONDERMERKMAL_RESET_ANSWERS,
         ...answers,

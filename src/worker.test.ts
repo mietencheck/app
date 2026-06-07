@@ -95,11 +95,11 @@ describe("/api/miete", () => {
       issues: Array<{ questionAlias: string }>;
     };
 
-    expect(json.answers.Vertragsdatum).toBe(">2024");
+    expect(json.answers.Vertragsdatum).toBe(">2026");
     expect(json.answers.Qm).toBe(50);
     expect(json.preisspanne).toEqual({
-      best: [8.02, 6.1, 11.19],
-      worst: [8.02, 6.1, 11.19],
+      best: [8.01, 6.13, 11.33],
+      worst: [8.01, 6.13, 11.33],
     });
     expect(json.issues).toEqual([]);
   });

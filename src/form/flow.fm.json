@@ -299,8 +299,13 @@
                                           },
                                           {
                                             "id": "ve0tek",
-                                            "alias": ">2024",
-                                            "text": "Ab 01.09.2023"
+                                            "alias": "2024-2026",
+                                            "text": "Zwischen 01.09.2023 und 31.08.2025"
+                                          },
+                                          {
+                                            "id": "im8h1",
+                                            "alias": ">2026",
+                                            "text": "Ab 01.09.2025"
                                           }
                                         ]
                                       },
@@ -410,8 +415,13 @@
                                                   },
                                                   {
                                                     "id": "ve0tek",
-                                                    "alias": ">2024",
-                                                    "text": "Ab 01.09.2023"
+                                                    "alias": "2024-2026",
+                                                    "text": "Zwischen 01.09.2023 und 31.08.2025"
+                                                  },
+                                                  {
+                                                    "id": "im8h1",
+                                                    "alias": ">2026",
+                                                    "text": "Ab 01.09.2025"
                                                   }
                                                 ]
                                               },
@@ -462,8 +472,13 @@
                                               },
                                               {
                                                 "id": "ve0tek",
-                                                "alias": ">2024",
-                                                "text": "Ab 01.09.2023"
+                                                "alias": "2024-2026",
+                                                "text": "Zwischen 01.09.2023 und 31.08.2025"
+                                              },
+                                              {
+                                                "id": "im8h1",
+                                                "alias": ">2026",
+                                                "text": "Ab 01.09.2025"
                                               }
                                             ]
                                           },
@@ -516,8 +531,13 @@
                                       },
                                       {
                                         "id": "ve0tek",
-                                        "alias": ">2024",
-                                        "text": "Ab 01.09.2023"
+                                        "alias": "2024-2026",
+                                        "text": "Zwischen 01.09.2023 und 31.08.2025"
+                                      },
+                                      {
+                                        "id": "im8h1",
+                                        "alias": ">2026",
+                                        "text": "Ab 01.09.2025"
                                       }
                                     ]
                                   },
@@ -549,6 +569,40 @@
                                     {
                                       "id": "fh0n1",
                                       "alias": "Exit: Mietvertrag zu alt",
+                                      "text": "",
+                                      "type": "Exit"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            },
+                            {
+                              "id": "ph0pdg",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "k1qwh",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "ws2qdl",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Wohnlage"
+                                    },
+                                    "negated": true,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "8ktp",
+                                      "pi77s",
+                                      "v4s5m"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "vslt1",
+                                      "alias": "Exit: Keine Wohnlage gefunden",
                                       "text": "",
                                       "type": "Exit"
                                     }
@@ -1330,12 +1384,51 @@
                       },
                       {
                         "id": "ve0tek",
-                        "alias": ">2024",
-                        "text": "Ab 01.09.2023"
+                        "alias": "2024-2026",
+                        "text": "Zwischen 01.09.2023 und 31.08.2025"
+                      },
+                      {
+                        "id": "im8h1",
+                        "alias": ">2026",
+                        "text": "Ab 01.09.2025"
                       }
                     ]
                   },
                   "required": true
+                },
+                {
+                  "id": "xiwyi",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "zrm1",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "bducw",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Wohnlage"
+                        },
+                        "negated": true,
+                        "type": "AnswerOptionComparison",
+                        "operator": "is",
+                        "comparands": [
+                          "pi77s",
+                          "8ktp",
+                          "v4s5m"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "apctg",
+                          "alias": "Exit: Mietvertrag zu alt",
+                          "text": "",
+                          "type": "Exit"
+                        }
+                      ]
+                    }
+                  ],
+                  "alternate": []
                 },
                 {
                   "id": "gbo6w",
@@ -2387,8 +2480,7 @@
                         "type": "AnswerOptionComparison",
                         "operator": "is",
                         "comparands": [
-                          "ggo2s",
-                          "whpa6"
+                          "ggo2s"
                         ]
                       },
                       "block": [
@@ -7620,7 +7712,7 @@
                                         ]
                                       },
                                       "required": false,
-                                      "note": "Merkma 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal >= 2017:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig;\ngilt nicht für die Baualtersklasse 2016 bis 2022 [bezieht sich nicht auf Gäste-WCs] [++]\n\nMerkmal >=2026:\nWandverkleidung und Bodenbelag hochwertig (gilt nicht für die Baualtersklassen ab 2010) [bezieht sich nicht auf Gäste-WCs] [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     }
                                   ]
                                 }
@@ -7707,93 +7799,170 @@
                                             ]
                                           },
                                           "required": false,
-                                          "note": "Merkma 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig; gilt nicht für die Baualtersklasse 2016 bis 2022 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                          "note": "Merkmal 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig;\ngilt nicht für die Baualtersklasse 2016 bis 2022 [bezieht sich nicht auf Gäste-WCs] [++]\n\nMerkmal >=2026:\nWandverkleidung und Bodenbelag hochwertig (gilt nicht für die Baualtersklassen ab 2010) [bezieht sich nicht auf Gäste-WCs] [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "proski",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "5r4o8",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Vertragsdatum"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "ve0tek"
+                                        ]
+                                      },
+                                      "block": [
+                                        {
+                                          "id": "mq7kv",
+                                          "type": "If",
+                                          "cases": [
+                                            {
+                                              "id": "pnw38",
+                                              "type": "IfCase",
+                                              "test": {
+                                                "id": "cncv6",
+                                                "type": "LogicalOperation",
+                                                "operator": "or",
+                                                "negated": false,
+                                                "conditions": [
+                                                  {
+                                                    "id": "r7h0z",
+                                                    "questionRef": {
+                                                      "type": "AliasRef",
+                                                      "value": "Baujahr"
+                                                    },
+                                                    "negated": false,
+                                                    "type": "AnswerNumberComparison",
+                                                    "operator": "lt",
+                                                    "comparands": [
+                                                      {
+                                                        "type": "NumberLiteral",
+                                                        "value": 2016
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "id": "r7h0z",
+                                                    "questionRef": {
+                                                      "type": "AliasRef",
+                                                      "value": "Baujahr"
+                                                    },
+                                                    "negated": false,
+                                                    "type": "AnswerNumberComparison",
+                                                    "operator": "gt",
+                                                    "comparands": [
+                                                      {
+                                                        "type": "NumberLiteral",
+                                                        "value": 2022
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              "block": [
+                                                {
+                                                  "id": "o182r",
+                                                  "type": "Question",
+                                                  "alias": "Bad Boden und Wand hochwertig",
+                                                  "text": "Ist der Bodenbelag und die Wandbekleidung in allen Badezimmern hochwertig? ",
+                                                  "info": "Dies gilt, wenn die Fliesen nicht einheitlich sind, sondern durch Akzente und Verzierungen aufgewertet wurden (z.B. Mosaikfliesen). Dazu gelten Natursteine wie Marmor, Schiefer oder Granit ebenfalls als hochwertig.",
+                                                  "answer": {
+                                                    "type": "ChoiceAnswer",
+                                                    "options": [
+                                                      {
+                                                        "id": "uiajj",
+                                                        "alias": "Ja",
+                                                        "text": "Ja"
+                                                      },
+                                                      {
+                                                        "id": "qzhja",
+                                                        "alias": "Nein",
+                                                        "text": "Nein"
+                                                      },
+                                                      {
+                                                        "id": "8i22j",
+                                                        "alias": "Nicht sicher",
+                                                        "text": "Ich bin mir nicht sicher"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "required": false,
+                                                  "note": "Merkmal 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig; gilt nicht für die Baualtersklasse 2016 bis 2022 [bezieht sich nicht auf Gäste-WCs] [++]\n\nMerkmal >=2026:\nWandverkleidung und Bodenbelag hochwertig (gilt nicht für die Baualtersklassen ab 2010) [bezieht sich nicht auf Gäste-WCs] [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "alternate": []
                                         }
                                       ]
                                     }
                                   ],
                                   "alternate": [
                                     {
-                                      "id": "mq7kv",
+                                      "id": "rwohg",
                                       "type": "If",
                                       "cases": [
                                         {
-                                          "id": "pnw38",
+                                          "id": "jers1",
                                           "type": "IfCase",
                                           "test": {
-                                            "id": "cncv6",
-                                            "type": "LogicalOperation",
-                                            "operator": "and",
+                                            "id": "r6c1h",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
                                             "negated": false,
-                                            "conditions": [
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lt",
+                                            "comparands": [
                                               {
-                                                "id": "r7h0z",
-                                                "questionRef": {
-                                                  "type": "AliasRef",
-                                                  "value": "Baujahr"
-                                                },
-                                                "negated": false,
-                                                "type": "AnswerNumberComparison",
-                                                "operator": "gte",
-                                                "comparands": [
-                                                  {
-                                                    "type": "NumberLiteral",
-                                                    "value": 2016
-                                                  }
-                                                ]
-                                              },
-                                              {
-                                                "id": "r7h0z",
-                                                "questionRef": {
-                                                  "type": "AliasRef",
-                                                  "value": "Baujahr"
-                                                },
-                                                "negated": false,
-                                                "type": "AnswerNumberComparison",
-                                                "operator": "lte",
-                                                "comparands": [
-                                                  {
-                                                    "type": "NumberLiteral",
-                                                    "value": 2022
-                                                  }
-                                                ]
+                                                "type": "NumberLiteral",
+                                                "value": 2010
                                               }
                                             ]
                                           },
-                                          "block": []
+                                          "block": [
+                                            {
+                                              "id": "tdjgf",
+                                              "type": "Question",
+                                              "alias": "Bad Boden und Wand hochwertig",
+                                              "text": "Ist der Bodenbelag und die Wandbekleidung in allen Badezimmern hochwertig? ",
+                                              "info": "Dies gilt, wenn die Fliesen nicht einheitlich sind, sondern durch Akzente und Verzierungen aufgewertet wurden (z.B. Mosaikfliesen). Dazu gelten Natursteine wie Marmor, Schiefer oder Granit ebenfalls als hochwertig.",
+                                              "answer": {
+                                                "type": "ChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "uiajj",
+                                                    "alias": "Ja",
+                                                    "text": "Ja"
+                                                  },
+                                                  {
+                                                    "id": "qzhja",
+                                                    "alias": "Nein",
+                                                    "text": "Nein"
+                                                  },
+                                                  {
+                                                    "id": "8i22j",
+                                                    "alias": "Nicht sicher",
+                                                    "text": "Ich bin mir nicht sicher"
+                                                  }
+                                                ]
+                                              },
+                                              "required": false,
+                                              "note": "Merkmal 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig;\ngilt nicht für die Baualtersklasse 2016 bis 2022 [bezieht sich nicht auf Gäste-WCs] [++]\n\nMerkmal >=2026:\nWandverkleidung und Bodenbelag hochwertig (gilt nicht für die Baualtersklassen ab 2010) [bezieht sich nicht auf Gäste-WCs] [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                            }
+                                          ]
                                         }
                                       ],
-                                      "alternate": [
-                                        {
-                                          "id": "tdjgf",
-                                          "type": "Question",
-                                          "alias": "Bad Boden und Wand hochwertig",
-                                          "text": "Ist der Bodenbelag und die Wandbekleidung in allen Badezimmern hochwertig? ",
-                                          "info": "Dies gilt, wenn die Fliesen nicht einheitlich sind, sondern durch Akzente und Verzierungen aufgewertet wurden (z.B. Mosaikfliesen). Dazu gelten Natursteine wie Marmor, Schiefer oder Granit ebenfalls als hochwertig.",
-                                          "answer": {
-                                            "type": "ChoiceAnswer",
-                                            "options": [
-                                              {
-                                                "id": "uiajj",
-                                                "alias": "Ja",
-                                                "text": "Ja"
-                                              },
-                                              {
-                                                "id": "qzhja",
-                                                "alias": "Nein",
-                                                "text": "Nein"
-                                              },
-                                              {
-                                                "id": "8i22j",
-                                                "alias": "Nicht sicher",
-                                                "text": "Ich bin mir nicht sicher"
-                                              }
-                                            ]
-                                          },
-                                          "required": false,
-                                          "note": "Merkma 2015:\nHochwertige Boden- oder Wandfliesen [++]\n\nMerkmal 2017-2023:\nWandbekleidung und Bodenbelag hochwertig [++]\n\nMerkmal >=2025:\nWandbekleidung und Bodenbelag hochwertig; gilt nicht für die Baualtersklasse 2016 bis 2022 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                        }
-                                      ]
+                                      "alternate": []
                                     }
                                   ]
                                 }
@@ -9228,33 +9397,94 @@
                       "note": "Merkmal:\nEin Wohnraum größer als 40 m2 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                     },
                     {
-                      "id": "1lued",
-                      "type": "Question",
-                      "alias": "Wohnung hat Abstellraum",
-                      "text": "Gibt es innerhalb der Wohnung einen Abstellraum oder Einbauschrank?",
-                      "info": null,
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "uiajj",
-                            "alias": "Ja",
-                            "text": "Ja"
+                      "id": "22o7p",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "76rjh",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "db3akf",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "wejo0k",
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs",
+                              "ve0tek"
+                            ]
                           },
-                          {
-                            "id": "qzhja",
-                            "alias": "Nein",
-                            "text": "Nein"
+                          "block": [
+                            {
+                              "id": "w12vs",
+                              "type": "Question",
+                              "alias": "Wohnung hat Abstellraum",
+                              "text": "Gibt es innerhalb der Wohnung einen Abstellraum oder Einbauschrank?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Merkmal 2015-2026:\nEinbauschrank oder Abstellraum innerhalb der Wohnung [++]\n\nMerkmal >=2026:\nAbstellraum innerhalb der Wohnung (mind. 1 m² Grundfläche) oder Einbauschrank [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "10u0w",
+                          "type": "Question",
+                          "alias": "Wohnung hat Abstellraum",
+                          "text": "Gibt es innerhalb der Wohnung einen Abstellraum (mind. 1 m² Grundfläche) oder Einbauschrank?",
+                          "info": null,
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "uiajj",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "qzhja",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "8i22j",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
                           },
-                          {
-                            "id": "8i22j",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
-                          }
-                        ]
-                      },
-                      "required": false,
-                      "note": "Merkmal:\nEinbauschrank oder Abstellraum innerhalb der Wohnung [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                          "required": false,
+                          "note": "Merkmal 2015-2026:\nEinbauschrank oder Abstellraum innerhalb der Wohnung [++]\n\nMerkmal >=2026:\nAbstellraum innerhalb der Wohnung (mind. 1 m² Grundfläche) oder Einbauschrank [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ]
                     },
                     {
                       "id": "kf62u",
@@ -9559,7 +9789,7 @@
                                             ]
                                           },
                                           "required": false,
-                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal >=2019:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal 2019-2024:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nMerkmal >=2026:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung oder Schallschutzfenster (jeweils Einbau ab 2002)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                         }
                                       ]
                                     }
@@ -9633,7 +9863,7 @@
                                                 ]
                                               },
                                               "required": false,
-                                              "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal >=2019:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                              "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal 2019-2024:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nMerkmal >=2026:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung oder Schallschutzfenster (jeweils Einbau ab 2002)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                             }
                                           ]
                                         }
@@ -9666,23 +9896,103 @@
                                             ]
                                           },
                                           "required": false,
-                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal >=2019:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal 2019-2024:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nMerkmal >=2026:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung oder Schallschutzfenster (jeweils Einbau ab 2002)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                         }
                                       ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "pnx4t",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "ozknbk",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs",
+                                      "ve0tek"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "bmn2kf",
+                                      "type": "If",
+                                      "cases": [
+                                        {
+                                          "id": "b2zbfj",
+                                          "type": "IfCase",
+                                          "test": {
+                                            "id": "xsbby",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Baujahr"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerNumberComparison",
+                                            "operator": "lt",
+                                            "comparands": [
+                                              {
+                                                "type": "NumberLiteral",
+                                                "value": 2002
+                                              }
+                                            ]
+                                          },
+                                          "block": [
+                                            {
+                                              "id": "opdsj",
+                                              "type": "Question",
+                                              "alias": "Wohnung hat Schallschutzfenster",
+                                              "text": "Sind in der Wohnung überwiegend Fenster mit Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster verbaut?",
+                                              "info": null,
+                                              "answer": {
+                                                "type": "ChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "tcod4",
+                                                    "alias": "Ja",
+                                                    "text": "Ja"
+                                                  },
+                                                  {
+                                                    "id": "43bd3",
+                                                    "alias": "Nein",
+                                                    "text": "Nein"
+                                                  },
+                                                  {
+                                                    "id": "36h0m",
+                                                    "alias": "Nicht sicher",
+                                                    "text": "Ich bin mir nicht sicher"
+                                                  }
+                                                ]
+                                              },
+                                              "required": false,
+                                              "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal 2019-2024:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nMerkmal >=2026:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung oder Schallschutzfenster (jeweils Einbau ab 2002)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "alternate": []
                                     }
                                   ]
                                 }
                               ],
                               "alternate": [
                                 {
-                                  "id": "bmn2kf",
+                                  "id": "uavu7",
                                   "type": "If",
                                   "cases": [
                                     {
-                                      "id": "b2zbfj",
+                                      "id": "r3w29",
                                       "type": "IfCase",
                                       "test": {
-                                        "id": "xsbby",
+                                        "id": "xhijb",
                                         "questionRef": {
                                           "type": "AliasRef",
                                           "value": "Baujahr"
@@ -9699,10 +10009,10 @@
                                       },
                                       "block": [
                                         {
-                                          "id": "opdsj",
+                                          "id": "g2zbei",
                                           "type": "Question",
                                           "alias": "Wohnung hat Schallschutzfenster",
-                                          "text": "Sind in der Wohnung überwiegend Fenster mit Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster verbaut?",
+                                          "text": "Sind in der Wohnung überwiegend Fenster mit Wärmeschutzverglasung oder Schallschutzfenster verbaut (jeweils Einbau ab 2002)?",
                                           "info": null,
                                           "answer": {
                                             "type": "ChoiceAnswer",
@@ -9725,7 +10035,7 @@
                                             ]
                                           },
                                           "required": false,
-                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal >=2019:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal 2019-2024:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nMerkmal >=2026:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung oder Schallschutzfenster (jeweils Einbau ab 2002)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                         }
                                       ]
                                     }
@@ -9984,14 +10294,66 @@
                               ]
                             }
                           ]
+                        },
+                        {
+                          "id": "7o1qx",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "6m0tx",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs",
+                              "ve0tek"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "qim56",
+                              "type": "Question",
+                              "alias": "Wohnung hat hochwertigen Bodenbelag",
+                              "text": "Gibt es in der überwiegenden Anzahl der Wohnräume einen hochwertigen Bodenbelag?",
+                              "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Hochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume“ nicht zutrifft Hochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume [++]\n\nMerkmal 2017-2024:\nHochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume [++]\n\nMerkmal >=2026:\nHochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume (inklusive Flur, ohne Küche, ohne Bad) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher\n\n"
+                            }
+                          ]
                         }
                       ],
                       "alternate": [
                         {
-                          "id": "qim56",
+                          "id": "f36vl",
                           "type": "Question",
                           "alias": "Wohnung hat hochwertigen Bodenbelag",
-                          "text": "Gibt es in der überwiegenden Anzahl der Wohnräume einen hochwertigen Bodenbelag?",
+                          "text": "Gibt es in der überwiegenden Anzahl der Wohnräume (inkl. Flur, ohne Küche, ohne Bad) einen hochwertigen Bodenbelag?",
                           "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
                           "answer": {
                             "type": "ChoiceAnswer",
@@ -10014,7 +10376,7 @@
                             ]
                           },
                           "required": false,
-                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Hochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume“ nicht zutrifft Hochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume [++]\n\nMerkmal >=2017:\nHochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwie- genden Zahl der Wohnräume [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher\n\n"
+                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Hochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume“ nicht zutrifft Hochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume [++]\n\nMerkmal 2017-2024:\nHochwertiges Parkett, Natur- /Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume [++]\n\nMerkmal >=2026:\nHochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Boden/-belag in der überwiegenden Zahl der Wohnräume (inklusive Flur, ohne Küche, ohne Bad) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher\n\n"
                         }
                       ]
                     }
@@ -10524,6 +10886,121 @@
                           },
                           "required": false,
                           "note": "Merkmal >=2019:\nZusätzliche Einbruchssicherung für die Wohnungstür (z.B. hochwertige Sperrbügel und/oder Türschlösser mit Mehrfachverriegelung) bei verstärkten Türen [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0essm",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "re2v2",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "w32o4",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "wejo0k",
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs",
+                              "ve0tek"
+                            ]
+                          },
+                          "block": []
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "3vb8m",
+                          "type": "Question",
+                          "alias": "Wohnung im Erdgeschoss",
+                          "text": "Liegt die Wohnung im Ergeschoss?",
+                          "info": null,
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "hgtwu",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "wf5y3g",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "yiqwb",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
+                          },
+                          "required": true
+                        },
+                        {
+                          "id": "gw7yj",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "acxzyl",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "s31pmg",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Wohnung im Erdgeschoss"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "hgtwu",
+                                  "yiqwb"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "1g6mr",
+                                  "type": "Question",
+                                  "alias": "Wohnung hat Einbruchsicherung oder Sichtschutz",
+                                  "text": "Hat die Wohnung ein Einbruchs- oder Sichtschutzsystem an allen Fenstern der Wohnung (z. B. Gitter, Rollläden, Fensteralarm)?",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "hgtwu",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "wf5y3g",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "yiqwb",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "required": true,
+                                  "note": "Merkmal >=2026:\nBei Erdgeschosswohnung: Kein Einbruchs- und/oder Sichtschutzsystem an allen Fenstern der Wohnung\n(z. B. Gitter, Rollläden, Fensteralarm) [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": []
                         }
                       ]
                     },
@@ -12084,15 +12561,15 @@
                                 ]
                               },
                               "required": false,
-                              "note": "Merkmal 2015:\nKein nur dem Mieter zugänglicher, bestimmungsgemäß nutzbarer Abstellraum im Gebäude außerhalb der Wohnung vorhanden [--]\n\nMerkmal 2017-2023:\nKein Mieterkeller oder Kellerersatzraum zur alleinigen Nutzung des Mieters vorhanden\n\nMerkmal 2024:\nKein Abstellraum außerhalb der Wohnung zur\nalleinigen Nutzung ohne Zusatzkosten [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nKein nur dem Mieter zugänglicher, bestimmungsgemäß nutzbarer Abstellraum im Gebäude außerhalb der Wohnung vorhanden [--]\n\nMerkmal 2017-2023:\nKein Mieterkeller oder Kellerersatzraum zur alleinigen Nutzung des Mieters vorhanden\n\nMerkmal 2024:\nKein Abstellraum außerhalb der Wohnung zur alleinigen Nutzung ohne Zusatzkosten [++]\n\nMerkmal 2026:\nKein Abstellraum außerhalb der Wohnung zur alleinigen Nutzung ohne Zusatzkosten (z. B. kein abschließbarer Keller) [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         },
                         {
-                          "id": "oek8a",
+                          "id": "zm0i9i",
                           "type": "IfCase",
                           "test": {
-                            "id": "ooogi",
+                            "id": "f17wk",
                             "questionRef": {
                               "type": "AliasRef",
                               "value": "Vertragsdatum"
@@ -12101,16 +12578,19 @@
                             "type": "AnswerOptionComparison",
                             "operator": "is",
                             "comparands": [
-                              "ve0tek"
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
                             ]
                           },
                           "block": [
                             {
-                              "id": "nv9h1",
+                              "id": "rsga8",
                               "type": "Question",
                               "alias": "Gebäude hat privaten Keller",
-                              "text": "Hast du einen eigenen Abstellraum außerhalb deiner Wohnung (Keller, Dachboden, Garage, etc.)?",
-                              "info": "Ein solcher Raum zählt nicht, wenn du für diesen eine gesonderte Miete zahlst.",
+                              "text": "Gibt es einen privaten Keller oder Abstellraum, der zu der Wohnung gehört?",
+                              "info": null,
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
@@ -12132,18 +12612,18 @@
                                 ]
                               },
                               "required": false,
-                              "note": "Merkmal 2015:\nKein nur dem Mieter zugänglicher, bestimmungsgemäß nutzbarer Abstellraum im Gebäude außerhalb der Wohnung vorhanden [--]\n\nMerkmal 2017-2023:\nKein Mieterkeller oder Kellerersatzraum zur alleinigen Nutzung des Mieters vorhanden\n\nMerkmal 2024:\nKein Abstellraum außerhalb der Wohnung zur\nalleinigen Nutzung ohne Zusatzkosten [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nKein nur dem Mieter zugänglicher, bestimmungsgemäß nutzbarer Abstellraum im Gebäude außerhalb der Wohnung vorhanden [--]\n\nMerkmal 2017-2023:\nKein Mieterkeller oder Kellerersatzraum zur alleinigen Nutzung des Mieters vorhanden\n\nMerkmal 2024:\nKein Abstellraum außerhalb der Wohnung zur alleinigen Nutzung ohne Zusatzkosten [++]\n\nMerkmal 2026:\nKein Abstellraum außerhalb der Wohnung zur alleinigen Nutzung ohne Zusatzkosten (z. B. kein abschließbarer Keller) [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         }
                       ],
                       "alternate": [
                         {
-                          "id": "rsga8",
+                          "id": "nv9h1",
                           "type": "Question",
                           "alias": "Gebäude hat privaten Keller",
                           "text": "Gibt es einen privaten Keller oder Abstellraum, der zu der Wohnung gehört?",
-                          "info": null,
+                          "info": "Ein solcher Raum zählt nicht, wenn du für diesen eine gesonderte Miete zahlst.",
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -12165,7 +12645,7 @@
                             ]
                           },
                           "required": false,
-                          "note": "Merkmal 2015:\nKein nur dem Mieter zugänglicher, bestimmungsgemäß nutzbarer Abstellraum im Gebäude außerhalb der Wohnung vorhanden [--]\n\nMerkmal 2017-2023:\nKein Mieterkeller oder Kellerersatzraum zur alleinigen Nutzung des Mieters vorhanden\n\nMerkmal 2024:\nKein Abstellraum außerhalb der Wohnung zur\nalleinigen Nutzung ohne Zusatzkosten [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                          "note": "Merkmal 2015:\nKein nur dem Mieter zugänglicher, bestimmungsgemäß nutzbarer Abstellraum im Gebäude außerhalb der Wohnung vorhanden [--]\n\nMerkmal 2017-2023:\nKein Mieterkeller oder Kellerersatzraum zur alleinigen Nutzung des Mieters vorhanden\n\nMerkmal 2024:\nKein Abstellraum außerhalb der Wohnung zur alleinigen Nutzung ohne Zusatzkosten [++]\n\nMerkmal 2026:\nKein Abstellraum außerhalb der Wohnung zur alleinigen Nutzung ohne Zusatzkosten (z. B. kein abschließbarer Keller) [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                         }
                       ]
                     },
@@ -13758,7 +14238,7 @@
                                 ]
                               },
                               "required": false,
-                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2002, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2026:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z. B. Kinderspielplatz - bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         },
@@ -13833,7 +14313,7 @@
                                         ]
                                       },
                                       "required": false,
-                                      "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2002, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2026:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z. B. Kinderspielplatz - bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     }
                                   ]
                                 }
@@ -13866,7 +14346,114 @@
                                     ]
                                   },
                                   "required": false,
-                                  "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2002, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2026:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z. B. Kinderspielplatz - bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "vq99q",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "ea2f5",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "ve0tek"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "71qoy",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "7h71y",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "ruuru",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerNumberComparison",
+                                    "operator": "lt",
+                                    "comparands": [
+                                      {
+                                        "type": "NumberLiteral",
+                                        "value": 2002
+                                      }
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "l6xrn",
+                                      "type": "Question",
+                                      "alias": "Wohnumfeld ist aufwendig gestaltet",
+                                      "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
+                                      "info": "Das ist etwa der Fall, wenn es Grünflächen mit angelegten Wegen gibt, einen Kinderspielplatz oder Sitzbänke und Ruhezonen. Diese dürfen zudem nicht in einem verwahrlosten Zustand sein.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2002, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2026:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z. B. Kinderspielplatz - bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "ff22o",
+                                  "type": "Question",
+                                  "alias": "Wohnumfeld ist aufwendig gestaltet",
+                                  "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
+                                  "info": "Das ist etwa der Fall, wenn es Grünflächen mit angelegten Wegen gibt oder Sitzbänke und Ruhezonen. Diese dürfen zudem nicht in einem verwahrlosten Zustand sein.",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "required": false,
+                                  "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2002, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2026:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z. B. Kinderspielplatz - bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
                               ]
                             }
@@ -13875,14 +14462,14 @@
                       ],
                       "alternate": [
                         {
-                          "id": "71qoy",
+                          "id": "6aly",
                           "type": "If",
                           "cases": [
                             {
-                              "id": "7h71y",
+                              "id": "fei17",
                               "type": "IfCase",
                               "test": {
-                                "id": "ruuru",
+                                "id": "ve2m",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Baujahr"
@@ -13893,13 +14480,13 @@
                                 "comparands": [
                                   {
                                     "type": "NumberLiteral",
-                                    "value": 2002
+                                    "value": 2003
                                   }
                                 ]
                               },
                               "block": [
                                 {
-                                  "id": "l6xrn",
+                                  "id": "1x9nil",
                                   "type": "Question",
                                   "alias": "Wohnumfeld ist aufwendig gestaltet",
                                   "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
@@ -13925,14 +14512,14 @@
                                     ]
                                   },
                                   "required": false,
-                                  "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2002, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2026:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z. B. Kinderspielplatz - bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 }
                               ]
                             }
                           ],
                           "alternate": [
                             {
-                              "id": "ff22o",
+                              "id": "vtq0y",
                               "type": "Question",
                               "alias": "Wohnumfeld ist aufwendig gestaltet",
                               "text": "Ist das Grundstück auf dem sich deine Wohnung befindet einladend gestaltetet?",
@@ -13958,7 +14545,7 @@
                                 ]
                               },
                               "required": false,
-                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück\n(z.B. Kinderspielplatz – bei Bezugsfertigkeit des\nGebäudes vor 2002, Sitzbänke oder Ruhezonen, gute\nGehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                              "note": "Merkmal 2015:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Sitzbänke oder Ruhezonen, neu angelegte Wegebefestigung mit Grünflächen) [++]\n\nMerkmal 2017-2023:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2024:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z.B. Kinderspielplatz – bei Bezugsfertigkeit des Gebäudes vor 2002, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nMerkmal 2026:\nAufwändig gestaltetes Wohnumfeld auf dem Grundstück (z. B. Kinderspielplatz - bei Bezugsfertigkeit des Gebäudes vor 2003, Sitzbänke oder Ruhezonen, gute Gehwegbefestigung mit Grünflächen und Beleuchtung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
                         }
@@ -14224,62 +14811,93 @@
                   "alias": "Umgebung",
                   "block": [
                     {
-                      "id": "87ope",
-                      "type": "Question",
-                      "alias": "Wohnumfeld ist stark vernachlässigt",
-                      "text": "Liegt die Wohnung in einer eher ungepflegten Gegend oder in einem der folgenden sogenannten kriminalitätsbelasteten Ort?",
-                      "info": "Laut Polizei, zählen die folgenden Orte als kriminalitätsbelastet: Wrangelkiez im Umfeld des Görlitzer Parks, Kottbusser Tor, Hermannstraße in direkter Nähe vom S-Bahnhof Neukölln, Donaukiez im Umfeld des Hermannplatzes.",
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "uiajj",
-                            "alias": "Ja",
-                            "text": "Ja"
+                      "id": "21w4f",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "qjkzk",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "a8q0n",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "ve0tek",
+                              "oqyrs",
+                              "4obam",
+                              "m2jo",
+                              "7np1",
+                              "wejo0k"
+                            ]
                           },
-                          {
-                            "id": "qzhja",
-                            "alias": "Nein",
-                            "text": "Nein"
-                          },
-                          {
-                            "id": "8i22j",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
-                          }
-                        ]
-                      },
-                      "required": false,
-                      "note": "Merkmal: \nLage in stark vernachlässigter Umgebung in einfacher Wohnlage [--]\n\nJa -> Check\nNicht sicher -> NIcht sicher"
-                    },
-                    {
-                      "id": "u7n29h",
-                      "type": "Question",
-                      "alias": "Wohnumfeld ist repräsentativ",
-                      "text": "Liegt die Wohnung in der Nähe des Kurfürstendamms oder in Berlin Mitte und in einer repräsentativen und hochwertigen Lage?",
-                      "info": "Beachte: die Einschätzung der Wohnlage als gut nach dem Mietspiegelverzeichnis reicht nicht aus.",
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "uiajj",
-                            "alias": "Ja",
-                            "text": "Ja"
-                          },
-                          {
-                            "id": "qzhja",
-                            "alias": "Nein",
-                            "text": "Nein"
-                          },
-                          {
-                            "id": "8i22j",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
-                          }
-                        ]
-                      },
-                      "required": false,
-                      "note": "Merkmal: \nBevorzugte Citylage (nahe repräsentativen, überregional ausstrahlenden Einkaufs-, Dienstleistungs- und Wohnstandorten) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                          "block": [
+                            {
+                              "id": "87ope",
+                              "type": "Question",
+                              "alias": "Wohnumfeld ist stark vernachlässigt",
+                              "text": "Liegt die Wohnung in einer eher ungepflegten Gegend oder in einem der folgenden sogenannten kriminalitätsbelasteten Ort?",
+                              "info": "Laut Polizei, zählen die folgenden Orte als kriminalitätsbelastet: Wrangelkiez im Umfeld des Görlitzer Parks, Kottbusser Tor, Hermannstraße in direkter Nähe vom S-Bahnhof Neukölln, Donaukiez im Umfeld des Hermannplatzes.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Merkmal 2015-2024:\nLage in stark vernachlässigter Umgebung in einfacher Wohnlage [--]\n\nJa -> Check\nNicht sicher -> NIcht sicher"
+                            },
+                            {
+                              "id": "u7n29h",
+                              "type": "Question",
+                              "alias": "Wohnumfeld ist repräsentativ",
+                              "text": "Liegt die Wohnung in der Nähe des Kurfürstendamms oder in Berlin Mitte und in einer repräsentativen und hochwertigen Lage?",
+                              "info": "Beachte: die Einschätzung der Wohnlage als gut nach dem Mietspiegelverzeichnis reicht nicht aus.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Merkmal 2015-2024: \nBevorzugte Citylage (nahe repräsentativen, überregional ausstrahlenden Einkaufs-, Dienstleistungs- und Wohnstandorten) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": []
                     },
                     {
                       "id": "c4ilu",
@@ -14334,6 +14952,31 @@
                           ]
                         }
                       ],
+                      "alternate": []
+                    },
+                    {
+                      "id": "hy4uk",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "ya3b4",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "h4cor",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "wejo0k"
+                            ]
+                          },
+                          "block": []
+                        }
+                      ],
                       "alternate": [
                         {
                           "id": "3cii1",
@@ -14362,7 +15005,7 @@
                             ]
                           },
                           "required": false,
-                          "note": "Merkmal >=2017:\nVom Vermieter zur Verfügung gestelltes PKW-Parkplatzangebot in der Nähe [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                          "note": "Merkmal 2017-2024:\nVom Vermieter zur Verfügung gestelltes PKW-Parkplatzangebot in der Nähe [++]\n\nMerkmal >=2026:\nVom Vermieter zur Verfügung gestelltes PKW-Parkplatzangebot in der Nähe (ausreichend dimensioniert) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                         }
                       ]
                     }

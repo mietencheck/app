@@ -10,12 +10,9 @@ export function getWorstBestAusstattungsAbzug(
 ): { worst: number; best: number } | undefined {
   const { mietspiegeljahr, baujahrSpanne, ausstattung } = ctx;
 
+  const yearAbzuege = ausstattungsAbzuegeByYear[mietspiegeljahr];
   const ausstattungsAbzuege =
-    ausstattungsAbzuegeByYear[
-      mietspiegeljahr as keyof typeof ausstattungsAbzuegeByYear
-    ][
-      baujahrSpanne as keyof (typeof ausstattungsAbzuegeByYear)[typeof mietspiegeljahr]
-    ];
+    yearAbzuege?.[baujahrSpanne as keyof typeof yearAbzuege];
 
   if (!ausstattungsAbzuege) {
     return {

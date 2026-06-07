@@ -19,7 +19,7 @@ export type LageInfo = {
   ost: boolean;
 };
 export type LageInfoByJahr = Partial<
-  Record<"2015" | "2017" | "2019" | "2021" | "2023" | "2024", LageInfo>
+  Record<"2015" | "2017" | "2019" | "2021" | "2023" | "2024" | "2026", LageInfo>
 >;
 
 export type AdresseWithLage = Adresse & {

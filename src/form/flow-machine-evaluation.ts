@@ -194,7 +194,9 @@ export function evaluateFlowMachine(submittedAnswers: Record<string, unknown>) {
   const { state: normalizedState, issues } =
     normalizeFlowMachineInput(submittedAnswers);
   const derivedState = applyDerivedAnswers(normalizedState);
-  const steps = flowMachine.run(derivedState);
+  const steps = flowMachine.run(
+    flowMachine.answers(normalizedState).state as AnswerData,
+  );
 
   return {
     answers: serializeFlowMachineState(derivedState),

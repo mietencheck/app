@@ -2,6 +2,7 @@ import { AnswerData, FlowMachine, Steps } from "flow-machine";
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
+import type { LageInfoByJahr } from "~/components/AdresseForm/types";
 import { parseAdresse } from "~/utils";
 
 import {
@@ -68,31 +69,33 @@ function buildVertragsdatum(answers: AnswerMachine) {
   const typ = answers.getWithOptionAlias("Typ");
 
   if (typ == "Mieterhöhung") {
-    return ">2024";
+    return answers.getWithOptionAlias("Vertragsdatum");
   } else {
     const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
 
     if (unterschrieben == "Nein") {
-      return ">2024";
+      return ">2026";
     }
     return answers.getWithOptionAlias("Vertragsdatum");
   }
 }
 
 function buildLageInfo(answers: AnswerMachine) {
-  const unterschrieben = answers.getWithOptionAlias("Unterschrieben");
   const vertragsdatum = buildVertragsdatum(answers);
 
   const mietspieglJahr =
-    unterschrieben == "Nein"
-      ? "2024" // If contract is not signed, use newest Mietspiegel
-      : vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum];
+    vertragsdatum && vertragsdatumToMietspiegelJahrMapping[vertragsdatum];
 
   const addresse = answers.get(["Adresse"]);
   const lage =
     (addresse && typeof addresse == "string" && parseAdresse(addresse).lage) ||
     null;
-  return (mietspieglJahr && lage?.[mietspieglJahr]) ?? null;
+
+  if (!mietspieglJahr || !lage) return null;
+
+  if (!(mietspieglJahr in lage)) return null;
+
+  return lage[mietspieglJahr as keyof LageInfoByJahr] ?? null;
 }
 
 function buildBaujahr(answers: AnswerMachine) {

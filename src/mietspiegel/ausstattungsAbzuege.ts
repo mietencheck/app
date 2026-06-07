@@ -85,6 +85,20 @@ export const ausstattungsAbzuegeByYear = {
       "!SH || !Bad": 0.45,
     },
   },
+  "2026": {
+    "-1918": {
+      "!SH && !Bad": 0.33,
+      "!SH || !Bad": 0.33,
+    },
+    "1919-1949": {
+      "!SH && !Bad": 0.33,
+      "!SH || !Bad": 0.33,
+    },
+    "1950-1964": {
+      "!SH && !Bad": 0,
+      "!SH || !Bad": 0,
+    },
+  },
 } satisfies {
   [Jahr in Mietspiegeljahr]: Partial<{
     [Baujahr in BaujahrSpanneInMietspiegeljahr[Jahr]]: {

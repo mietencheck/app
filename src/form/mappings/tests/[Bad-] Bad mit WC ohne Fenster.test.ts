@@ -4,6 +4,7 @@ import { getMerkmalStates } from "~/form/api";
 import { FinalAnswers, getVisibleQuestionAliases } from "~/form/flow-machine";
 import {
   MERKMAL_RESET_ANSWERS,
+  SCHNELLTEST_RESET_ANSWERS,
   SONDERMERKMAL_RESET_ANSWERS,
 } from "~/form/mappings/answer-reset";
 
@@ -44,7 +45,7 @@ test.each([
     // Check if answer is ignored when BaujahrSpanne is '1973 bis 1990 Ost'
     {
       answers: {
-        Vertragsdatum: ">2024",
+        Vertragsdatum: "2024-2026",
         Baujahr: 1973,
         Ost: true,
         "Bad mit WC ohne Fenster": "Ja",
@@ -56,9 +57,7 @@ test.each([
   ].map(({ answers, expected }) => {
     return {
       answers: {
-        Unterschrieben: "Ja",
-        "Wohnung hat Sammelheizung": "Ja",
-        "Badezimmer in Wohnung": "Ja",
+        ...SCHNELLTEST_RESET_ANSWERS,
         ...MERKMAL_RESET_ANSWERS,
         ...SONDERMERKMAL_RESET_ANSWERS,
         ...answers,

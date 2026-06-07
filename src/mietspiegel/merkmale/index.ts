@@ -4,6 +4,7 @@ import merkmale2019 from "./2019.json";
 import merkmale2021 from "./2021.json";
 import merkmale2023 from "./2023.json";
 import merkmale2024 from "./2024.json";
+import merkmale2026 from "./2026.json";
 
 export const merkmaleByYear = {
   "2015": new Set(Object.keys(merkmale2015)),
@@ -12,6 +13,7 @@ export const merkmaleByYear = {
   "2021": new Set(Object.keys(merkmale2021)),
   "2023": new Set(Object.keys(merkmale2023)),
   "2024": new Set(Object.keys(merkmale2024)),
+  "2026": new Set(Object.keys(merkmale2026)),
 };
 
 export const merkmaleDescriptionsByYear: Record<
@@ -24,4 +26,5 @@ export const merkmaleDescriptionsByYear: Record<
   "2021": merkmale2021,
   "2023": merkmale2023,
   "2024": merkmale2024,
+  "2026": merkmale2026,
 };

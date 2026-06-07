@@ -215,6 +215,15 @@ export const answersToMerkmalStateMapping = {
   "[Wohnung-] Wohnung hat sichtbare Bewässerungsleitungen": {
     checked_if: { "Wohnnung hat sichtbare Bewässerungsleitungen": "Ja" },
   },
+  "[Wohnung-] Kein Einbruch- oder Sichtschutz bei Erdgeschosswohnung": {
+    checked_if: {
+      logic: "and",
+      conditions: [
+        { "Wohnung im Erdgeschoss": "Ja" },
+        { "Wohnung hat Einbruchsicherung oder Sichtschutz": "Nein" },
+      ],
+    },
+  },
   "[Wohnung+] Wohnung hat großen Wohnraum": {
     checked_if: { "Wohnung hat großen Wohnraum": "Ja" },
   },
