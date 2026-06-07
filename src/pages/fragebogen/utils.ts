@@ -3,6 +3,11 @@ import { Group, Question, ungroup } from "flow-machine";
 import { useCallback, useEffect, useMemo } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
+import {
+  analyzeMieteErgebnis,
+  getMieteDiff,
+  type MieteErgebnis,
+} from "~/calculation/mieteErgebnis";
 import { getWorstBestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
 import { getNettokaltmiete } from "~/form/api";
 import { answersToCalculationContext } from "~/form/calculation-context";
@@ -110,12 +115,18 @@ export function useWorstBestZulaessigeHoechstmieteDiff():
     return undefined;
   }
 
-  return {
-    worst: Number(
-      (Number(nettokaltmiete) - zulaessigeHoechstmiete.worst).toFixed(2),
-    ),
-    best: Number(
-      (Number(nettokaltmiete) - zulaessigeHoechstmiete.best).toFixed(2),
-    ),
-  };
+  return getMieteDiff(Number(nettokaltmiete), zulaessigeHoechstmiete);
+}
+
+export function useMieteErgebnis(): MieteErgebnis | undefined {
+  const zulaessigeHoechstmiete = useWorstBestZulaessigeHoechstmiete();
+  const diff = useWorstBestZulaessigeHoechstmieteDiff();
+
+  return useMemo(() => {
+    if (!zulaessigeHoechstmiete || !diff) {
+      return undefined;
+    }
+
+    return analyzeMieteErgebnis(zulaessigeHoechstmiete, diff);
+  }, [zulaessigeHoechstmiete, diff]);
 }
