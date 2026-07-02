@@ -12,7 +12,26 @@ import {
 import { answersToCalculationContext } from "~/form/calculation-context";
 import { useAnswers, useVisibleQuestionAliases } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
-import { MerkmalGruppe } from "~/mietspiegel/types";
+import { merkmaleDescriptionsByYear } from "~/mietspiegel/merkmale";
+import { MerkmalGruppe, Mietspiegeljahr } from "~/mietspiegel/types";
+
+function toDisplayMerkmalLabel(
+  merkmal: string,
+  mietspiegeljahr: Mietspiegeljahr,
+): string {
+  if (merkmal.startsWith("Energieverbrauchskennwert größer als")) {
+    const fullMerkmalKey = `[Gebäude-] ${merkmal}`;
+    const yearSpecificDescription =
+      merkmaleDescriptionsByYear[mietspiegeljahr][fullMerkmalKey];
+    const threshold = yearSpecificDescription?.match(/größer als (\d+)/)?.[1];
+
+    if (threshold) {
+      return `Energieverbrauchskennwert größer als ${threshold}`;
+    }
+  }
+
+  return merkmal;
+}
 
 export function MerkmaleTable() {
   const l = useLocalizeField();
@@ -60,7 +79,10 @@ export function MerkmaleTable() {
                     ] as const
                   ).map(([fields, sign]) =>
                     Object.entries(fields).map(([merkmal, state]) => {
-                      const label = merkmal;
+                      const label = toDisplayMerkmalLabel(
+                        merkmal,
+                        ctx.mietspiegeljahr,
+                      );
                       const antwort =
                         state &&
                         {
