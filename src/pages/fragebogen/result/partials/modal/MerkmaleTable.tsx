@@ -135,14 +135,14 @@ export function MerkmaleTable() {
                       {
                         merkmalStateTotalByGruppe[
                           merkmalGruppe as MerkmalGruppe
-                        ].worst
+                        ].best
                       }
                     </TableCell>
                     <TableCell className="w-36 text-right">
                       {
                         merkmalStateTotalByGruppe[
                           merkmalGruppe as MerkmalGruppe
-                        ].best
+                        ].worst
                       }
                     </TableCell>
                   </TableRow>
@@ -159,7 +159,7 @@ export function MerkmaleTable() {
                       {
                         merkmalStateTotalByGruppe[
                           merkmalGruppe as MerkmalGruppe
-                        ].worst
+                        ].best
                       }
                     </TableCell>
                   </TableRow>
@@ -171,7 +171,7 @@ export function MerkmaleTable() {
                       {
                         merkmalStateTotalByGruppe[
                           merkmalGruppe as MerkmalGruppe
-                        ].best
+                        ].worst
                       }
                     </TableCell>
                   </TableRow>
