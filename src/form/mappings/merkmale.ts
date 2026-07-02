@@ -340,7 +340,11 @@ export const answersToMerkmalStateMapping = {
       logic: "or",
       conditions: [
         { Energieverbrauchskennwert: "-" },
+        { Energieverbrauchskennwert: "--" },
+        { Energieverbrauchskennwert: "---" },
         { Energiebedarfskennwert: "-" },
+        { Energiebedarfskennwert: "--" },
+        { Energiebedarfskennwert: "---" },
       ],
     },
   },
@@ -348,10 +352,10 @@ export const answersToMerkmalStateMapping = {
     checked_if: {
       logic: "or",
       conditions: [
-        { Energieverbrauchskennwert: "-" },
         { Energieverbrauchskennwert: "--" },
-        { Energiebedarfskennwert: "-" },
+        { Energieverbrauchskennwert: "---" },
         { Energiebedarfskennwert: "--" },
+        { Energiebedarfskennwert: "---" },
       ],
     },
   },
@@ -359,11 +363,7 @@ export const answersToMerkmalStateMapping = {
     checked_if: {
       logic: "or",
       conditions: [
-        { Energieverbrauchskennwert: "-" },
-        { Energieverbrauchskennwert: "--" },
         { Energieverbrauchskennwert: "---" },
-        { Energiebedarfskennwert: "-" },
-        { Energiebedarfskennwert: "--" },
         { Energiebedarfskennwert: "---" },
       ],
     },

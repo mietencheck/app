@@ -2,7 +2,10 @@ import { expect, test } from "vitest";
 
 import { FinalAnswers, getVisibleQuestionAliases } from "../flow-machine";
 import { SCHNELLTEST_RESET_ANSWERS } from "../mappings/answer-reset";
-import { AnswerMerkmalStateMapping } from "../mappings/merkmale";
+import {
+  AnswerMerkmalStateMapping,
+  answersToMerkmalStateMapping,
+} from "../mappings/merkmale";
 import { mapAnswerToMerkmalState } from "./mapAnswerToMerkmalState";
 import { MerkmalState } from "./mapMerkmalStateToMerkmalGruppen";
 
@@ -53,6 +56,78 @@ test.each([
     ),
   ).toEqual(merkmalState);
 });
+
+test.each([
+  {
+    answers: { Energieverbrauchskennwert: "-" },
+    expected: {
+      "[Gebäude-] Energieverbrauchskennwert größer als 170/155/145": "checked",
+      "[Gebäude-] Energieverbrauchskennwert größer als 210/195": "unchecked",
+      "[Gebäude-] Energieverbrauchskennwert größer als 250/235": "unchecked",
+    },
+  },
+  {
+    answers: { Energieverbrauchskennwert: "--" },
+    expected: {
+      "[Gebäude-] Energieverbrauchskennwert größer als 170/155/145": "checked",
+      "[Gebäude-] Energieverbrauchskennwert größer als 210/195": "checked",
+      "[Gebäude-] Energieverbrauchskennwert größer als 250/235": "unchecked",
+    },
+  },
+  {
+    answers: { Energieverbrauchskennwert: "---" },
+    expected: {
+      "[Gebäude-] Energieverbrauchskennwert größer als 170/155/145": "checked",
+      "[Gebäude-] Energieverbrauchskennwert größer als 210/195": "checked",
+      "[Gebäude-] Energieverbrauchskennwert größer als 250/235": "checked",
+    },
+  },
+])(
+  "maps Energieverbrauchskennwert thresholds correctly (%o)",
+  ({ answers, expected }) => {
+    const completeAnswers = {
+      ...SCHNELLTEST_RESET_ANSWERS,
+      "Kennt Energieverbrauch oder Energiebedarf": "Energieverbrauchswert",
+      ...answers,
+    } as FinalAnswers;
+
+    expect(
+      mapAnswerToMerkmalState(
+        answersToMerkmalStateMapping[
+          "[Gebäude-] Energieverbrauchskennwert größer als 170/155/145"
+        ],
+        completeAnswers,
+        getVisibleQuestionAliases(completeAnswers),
+      ),
+    ).toEqual(
+      expected["[Gebäude-] Energieverbrauchskennwert größer als 170/155/145"],
+    );
+
+    expect(
+      mapAnswerToMerkmalState(
+        answersToMerkmalStateMapping[
+          "[Gebäude-] Energieverbrauchskennwert größer als 210/195"
+        ],
+        completeAnswers,
+        getVisibleQuestionAliases(completeAnswers),
+      ),
+    ).toEqual(
+      expected["[Gebäude-] Energieverbrauchskennwert größer als 210/195"],
+    );
+
+    expect(
+      mapAnswerToMerkmalState(
+        answersToMerkmalStateMapping[
+          "[Gebäude-] Energieverbrauchskennwert größer als 250/235"
+        ],
+        completeAnswers,
+        getVisibleQuestionAliases(completeAnswers),
+      ),
+    ).toEqual(
+      expected["[Gebäude-] Energieverbrauchskennwert größer als 250/235"],
+    );
+  },
+);
 
 // Condition Group: And
 test.each([
