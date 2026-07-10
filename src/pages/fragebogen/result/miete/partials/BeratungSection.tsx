@@ -111,12 +111,7 @@ export function BeratungSection() {
               </div>
               <a
                 className="block text-base underline mt-4 text-gray-12"
-                href={
-                  locale == "de"
-                    ? "https://blog.mietencheck.de/de/2024-05-28-kostenlose-beratung-beim-berliner-mieterverein-oder-einer-anderen-mieterinnenvereinigung/"
-                    : "https://blog.mietencheck.de/en/2024-05-28-kostenlose-beratung-beim-berliner-mieterverein-oder-einer-anderen-mieterinnenvereinigung/"
-                }
-                target="_blank"
+                href={locale === "de" ? "/de/blog" : "/en/blog"}
               >
                 {l({ de: "Mehr Informationen", en: "More information" })}
               </a>
@@ -152,12 +147,7 @@ export function BeratungSection() {
               </div>
               <a
                 className="block text-base underline mt-4 text-gray-12"
-                href={
-                  locale == "de"
-                    ? "https://blog.mietencheck.de/de/2024-05-28-kostenlose-beratung-bei-einem-berliner-bezirke/"
-                    : "https://blog.mietencheck.de/en/2024-05-30-berlin-districts-free-tenant-counselling/"
-                }
-                target="_blank"
+                href={locale === "de" ? "/de/blog" : "/en/blog"}
               >
                 {l({ de: "Mehr Informationen", en: "More information" })}
               </a>
@@ -193,12 +183,7 @@ export function BeratungSection() {
               </div>
               <a
                 className="block text-base underline mt-4 text-gray-12"
-                href={
-                  locale == "de"
-                    ? "https://blog.mietencheck.de/de/2024-05-28-kostenpflichtige-beratung-durch-rechtsanwaltin/"
-                    : "https://blog.mietencheck.de/en/2024-05-30-getting-a-lawyer-on-board/"
-                }
-                target="_blank"
+                href={locale === "de" ? "/de/blog" : "/en/blog"}
               >
                 {l({ de: "Mehr Informationen", en: "More information" })}
               </a>

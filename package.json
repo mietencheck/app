@@ -24,7 +24,8 @@
     "generate-sitemap": "tsx scripts/generate-sitemap.ts",
     "build": "pnpm run generate-sitemap && vite-react-ssg build",
     "preview": "vite preview",
-    "deploy": "pnpm run generate-sitemap && vite build && pnpm exec wrangler deploy"
+    "deploy": "pnpm run generate-sitemap && vite-react-ssg build && pnpm exec wrangler deploy",
+    "sanity:typegen": "cd studio && pnpm exec sanity schema extract && pnpm exec sanity typegen generate"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
@@ -38,6 +39,7 @@
     "@react-stately/data": "^3.15.2",
     "@react-stately/menu": "^3.9.9",
     "@sanity/client": "^7.13.2",
+    "@sanity/image-url": "^2.1.1",
     "@sentry/react": "^10.43.0",
     "@sentry/vite-plugin": "^5.1.1",
     "@storybook/addon-essentials": "^8.6.14",
@@ -85,6 +87,7 @@
     "react-aria": "^3.45.0",
     "react-aria-components": "1.16.0",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^3.0.0",
     "react-merge-refs": "^2.1.1",
     "react-stately": "^3.45.0",
     "remeda": "^1.61.0",

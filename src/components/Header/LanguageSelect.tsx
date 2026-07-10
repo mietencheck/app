@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 
+import { useBlogTranslation } from "~/blog/BlogTranslationContext";
 import {
   Select,
   SelectContent,
@@ -15,6 +16,7 @@ import type { Locale } from "~/L10nContext";
 function switchBlogPath(
   pathname: string,
   nextLocale: "de" | "en",
+  siblingSlug: string | null,
 ): string | null {
   if (
     pathname === "/de/blog" ||
@@ -26,8 +28,6 @@ function switchBlogPath(
 
   const postMatch = pathname.match(/^\/(de|en)\/blog\/(.+)$/);
   if (postMatch) {
-    const siblingSlug = (window as Window & { __BLOG_SIBLING_SLUG__?: string })
-      .__BLOG_SIBLING_SLUG__;
     if (siblingSlug) {
       return `/${nextLocale}/blog/${siblingSlug}`;
     }
@@ -45,6 +45,7 @@ const localeCodes: Locale[] = ["de", "en"];
 
 export function LanguageSelect() {
   const { locale, setLocale } = useLocaleState();
+  const { siblingSlug } = useBlogTranslation();
   const l = useLocalizeField();
 
   const items = useMemo(
@@ -65,6 +66,7 @@ export function LanguageSelect() {
         const nextBlogPath = switchBlogPath(
           window.location.pathname,
           nextLocale,
+          siblingSlug,
         );
         if (nextBlogPath && nextBlogPath !== window.location.pathname) {
           window.location.pathname = nextBlogPath;

@@ -1,6 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 
+import { SITEMAP_POSTS_QUERY } from "../src/sanity/queries";
+import type { SitemapPost } from "../src/sanity/types";
 import client from "../src/sanityClient";
 
 const SITE = "https://mietencheck.de";
@@ -15,19 +17,8 @@ const STATIC_PATHS = [
   "/en/blog",
 ];
 
-interface BlogPost {
-  slug: string;
-  _updatedAt: string;
-}
-
 async function getBlogPosts(lang: "de" | "en") {
-  return client.fetch<BlogPost[]>(
-    `*[_type == "post" && language == $lang && defined(slug.current)]{
-      "slug": slug.current,
-      _updatedAt
-    }`,
-    { lang },
-  );
+  return client.fetch<SitemapPost[]>(SITEMAP_POSTS_QUERY, { lang });
 }
 
 function toLastmod(isoDate: string) {
@@ -60,20 +51,20 @@ async function generateSitemap() {
       ),
     ),
     ...dePosts
-      .filter((post) => post.slug)
+      .filter((post) => post.slug && !post.noIndex)
       .map((post) =>
         urlEntry(
           `${SITE}/de/blog/${post.slug}`,
-          toLastmod(post._updatedAt),
+          toLastmod(post.updatedAt),
           "monthly",
         ),
       ),
     ...enPosts
-      .filter((post) => post.slug)
+      .filter((post) => post.slug && !post.noIndex)
       .map((post) =>
         urlEntry(
           `${SITE}/en/blog/${post.slug}`,
-          toLastmod(post._updatedAt),
+          toLastmod(post.updatedAt),
           "monthly",
         ),
       ),

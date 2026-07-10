@@ -9,25 +9,30 @@
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy"
+    "deploy-graphql": "sanity graphql deploy",
+    "typegen": "sanity schema extract && sanity typegen generate",
+    "migrate:category-i18n": "tsx scripts/migrate-category-i18n.ts"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
     "@sanity/document-internationalization": "^6.0.5",
-    "@sanity/vision": "^5.7.0",
+    "@sanity/icons": "^3.7.4",
+    "@sanity/vision": "^5.31.1",
     "react": "^19.1",
     "react-dom": "^19.1",
-    "sanity": "^5.7.0",
+    "sanity": "^5.31.1",
     "sanity-plugin-internationalized-array": "^5.0.5",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
+    "@sanity/client": "^7.13.2",
     "@sanity/eslint-config-studio": "^6.0.0",
     "@types/react": "^19.1",
     "eslint": "^9.28",
     "prettier": "^3.5",
+    "tsx": "^4.21.0",
     "typescript": "^5.8"
   },
   "prettier": {
