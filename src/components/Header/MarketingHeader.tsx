@@ -25,7 +25,7 @@ export function MarketingHeader() {
         menu ? (
           <nav
             aria-label="Navigation"
-            className="absolute bg-white z-50 container flex flex-col gap-2 pb-6 sm:hidden"
+            className="absolute bg-white z-50 container flex flex-col gap-2 pb-6 md:hidden"
           >
             <Link href={blogHref} variant="ghost" onClick={closeMenu}>
               {l({
@@ -61,7 +61,7 @@ export function MarketingHeader() {
       actions={
         <>
           <div className="flex gap-1">
-            <Link href={blogHref} variant="ghost" className="hidden sm:block">
+            <Link href={blogHref} variant="ghost" className="hidden md:block">
               {l({
                 de: "Ratgeber",
                 en: "Guide",

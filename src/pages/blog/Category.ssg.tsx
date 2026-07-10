@@ -5,7 +5,7 @@ import { loadBlogCategories } from "~/blog/loaders";
 import { BlogMeta } from "~/components/BlogMeta";
 import { useInlineLocale } from "~/l10n";
 import { cn } from "~/lib/utils";
-import { PostCardLink } from "~/pages/blog/PostCardLink";
+import { PostCardLink } from "~/pages/blog/partials/PostCardLink";
 import { CATEGORY_BY_SLUG_QUERY, CATEGORY_POSTS_QUERY } from "~/sanity/queries";
 import type { BlogCategoryData } from "~/sanity/types";
 import client from "~/sanityClient";
