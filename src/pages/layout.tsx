@@ -2,12 +2,19 @@ import { Link } from "~/components";
 import { MarketingHeader } from "~/components/Header";
 import { useLocalizeField } from "~/l10n";
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({
+  children,
+  subheader,
+}: {
+  children: React.ReactNode;
+  subheader?: React.ReactNode;
+}) {
   const l = useLocalizeField();
 
   return (
     <>
       <MarketingHeader />
+      {subheader}
       <main>
         {children}
         <section className="bg-purple-9">

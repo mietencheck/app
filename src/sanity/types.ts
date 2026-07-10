@@ -42,7 +42,7 @@ export interface PostCard {
   featured?: boolean;
   publishedAt?: string;
   mainImage?: SanityImageWithAlt;
-  categories?: PostCategory[];
+  category?: PostCategory;
 }
 
 export interface PostDetail extends PostCard {
@@ -58,7 +58,27 @@ export interface SitemapPost {
   noIndex?: boolean;
 }
 
+export interface BlogCategory {
+  title?: string;
+  slug?: string;
+  description?: string;
+}
+
 export interface BlogIndexData {
   posts: PostCard[];
   featured?: PostCard;
+  navCategories: BlogCategory[];
+  activeCategorySlugs: string[];
+}
+
+export interface BlogCategoryData {
+  category: BlogCategory;
+  posts: PostCard[];
+  navCategories: BlogCategory[];
+  activeCategorySlugs: string[];
+}
+
+export interface BlogPostData extends PostDetail {
+  navCategories: BlogCategory[];
+  activeCategorySlugs: string[];
 }

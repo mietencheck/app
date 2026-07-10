@@ -1,4 +1,7 @@
-import { localizedCategoryProjection } from "./localizedFields";
+import {
+  localizedCategoryProjection,
+  localizedString,
+} from "./localizedFields";
 
 /** GROQ filter for publicly visible blog posts. */
 export const PUBLISHED_POST_FILTER = `_type == "post" &&
@@ -27,7 +30,7 @@ export const postCardProjection = `{
   "featured": featured,
   "publishedAt": publishedAt,
   "mainImage": mainImage,
-  "categories": categories[]->${localizedCategoryProjection}
+  "category": category->${localizedCategoryProjection}
 }`;
 
 export const postDetailProjection = `{
@@ -38,7 +41,7 @@ export const postDetailProjection = `{
   "publishedAt": publishedAt,
   "seo": seo,
   "author": author->{ name, "image": image },
-  "categories": categories[]->${localizedCategoryProjection},
+  "category": category->${localizedCategoryProjection},
   "body": body[]{
     ...,
     markDefs[]{
@@ -55,6 +58,25 @@ export const postDetailProjection = `{
 }`;
 
 export const INDEX_QUERY = `*[${PUBLISHED_POST_FILTER}] | order(publishedAt desc) ${postCardProjection}`;
+
+export const CATEGORIES_QUERY = `*[_type == "category" && defined(${localizedString("slug")})] | order(${localizedString("title")} asc) {
+  "title": ${localizedString("title")},
+  "slug": ${localizedString("slug")}
+}`;
+
+const categorySlugMatchFilter = `references(*[_type == "category" && ${localizedString("slug")} == $categorySlug]._id)`;
+
+export const CATEGORY_BY_SLUG_QUERY = `*[_type == "category" && ${localizedString("slug")} == $categorySlug][0]{
+  "title": ${localizedString("title")},
+  "slug": ${localizedString("slug")},
+  "description": ${localizedString("description")}
+}`;
+
+export const CATEGORY_POSTS_QUERY = `*[${PUBLISHED_POST_FILTER} && ${categorySlugMatchFilter}] | order(publishedAt desc) ${postCardProjection}`;
+
+export const CATEGORY_SLUGS_QUERY = `*[_type == "category" && defined(${localizedString("slug")})]{
+  "slug": ${localizedString("slug")}
+}.slug`;
 
 export const FEATURED_QUERY = `*[${PUBLISHED_POST_FILTER} && featured == true] | order(publishedAt desc)[0] ${postCardProjection}`;
 
