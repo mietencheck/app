@@ -1,14 +1,17 @@
 import {TagIcon} from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
 
-function localizedValue(
-  items: Array<{_key?: string; value?: string}> | undefined,
-  language: string,
-) {
-  return items?.find((item) => item._key === language)?.value
+type LocalizedItem = {
+  _key?: string
+  language?: string
+  value?: string
 }
 
-function requireGermanTitle(items: Array<{_key?: string; value?: string}> | undefined) {
+function localizedValue(items: LocalizedItem[] | undefined, language: string) {
+  return items?.find((item) => item.language === language || item._key === language)?.value
+}
+
+function requireGermanTitle(items: LocalizedItem[] | undefined) {
   const germanTitle = localizedValue(items, 'de')?.trim()
   return germanTitle ? true : 'German title is required'
 }

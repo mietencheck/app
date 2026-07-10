@@ -5,6 +5,7 @@
  * Run: pnpm migrate:category-i18n
  */
 import {createClient} from '@sanity/client'
+import {randomKey} from '@sanity/util/content'
 
 const client = createClient({
   projectId: 'te770b4o',
@@ -35,12 +36,20 @@ function slugify(text: string) {
 }
 
 function toLocalizedArray(
-  value: string | Array<{_key: string; value?: string}> | undefined,
+  value: string | Array<{_key?: string; language?: string; value?: string}> | undefined,
   language = 'de',
+  valueType: 'internationalizedArrayStringValue' | 'internationalizedArrayTextValue',
 ) {
   if (!value) return undefined
   if (Array.isArray(value)) return value
-  return [{_key: language, value}]
+  return [
+    {
+      _type: valueType,
+      _key: randomKey(12),
+      language,
+      value,
+    },
+  ]
 }
 
 async function migrate() {
@@ -61,15 +70,21 @@ async function migrate() {
     }
 
     const germanTitle = typeof category.title === 'string' ? category.title : undefined
-    const nextTitle = toLocalizedArray(category.title)
+    const nextTitle = toLocalizedArray(category.title, 'de', 'internationalizedArrayStringValue')
     const legacySlug =
       typeof category.slug === 'object' && category.slug && 'current' in category.slug
         ? category.slug.current
         : undefined
     const nextSlug = toLocalizedArray(
       legacySlug ?? (germanTitle ? slugify(germanTitle) : undefined),
+      'de',
+      'internationalizedArrayStringValue',
     )
-    const nextDescription = toLocalizedArray(category.description)
+    const nextDescription = toLocalizedArray(
+      category.description,
+      'de',
+      'internationalizedArrayTextValue',
+    )
 
     await client
       .patch(category._id)
