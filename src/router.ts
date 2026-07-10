@@ -18,4 +18,6 @@ export const AppRouter = createRouter({
   BlogEn: "/en/blog",
   BlogPostDe: "/de/blog/:slug",
   BlogPostEn: "/en/blog/:slug",
+  BlogCategoryDe: "/de/blog/kategorie/:categorySlug",
+  BlogCategoryEn: "/en/blog/category/:categorySlug",
 });

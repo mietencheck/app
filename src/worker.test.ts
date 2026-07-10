@@ -104,3 +104,51 @@ describe("/api/miete", () => {
     expect(json.issues).toEqual([]);
   });
 });
+
+describe("SPA asset fallback", () => {
+  test("falls back to index.html for missing HTML routes", async () => {
+    const assetsFetch = vi
+      .fn()
+      .mockResolvedValueOnce(new Response("not found", { status: 404 }))
+      .mockResolvedValueOnce(
+        new Response("<html>index</html>", { status: 200 }),
+      );
+    const assetsEnv = {
+      ASSETS: { fetch: assetsFetch },
+    } as unknown as Parameters<typeof worker.fetch>[1];
+
+    const response = await worker.fetch(
+      new Request("https://mietencheck.de/de/blog", {
+        headers: { accept: "text/html" },
+      }) as never,
+      assetsEnv,
+    );
+
+    expect(response.status).toBe(200);
+    expect(await response.text()).toBe("<html>index</html>");
+    expect(assetsFetch).toHaveBeenCalledTimes(2);
+    expect(new URL(assetsFetch.mock.calls[1][0].url).pathname).toBe("/");
+  });
+
+  test("falls back to index.html when asset fetch throws for HTML routes", async () => {
+    const assetsFetch = vi
+      .fn()
+      .mockRejectedValueOnce(new Error("fetch failed"))
+      .mockResolvedValueOnce(
+        new Response("<html>index</html>", { status: 200 }),
+      );
+    const assetsEnv = {
+      ASSETS: { fetch: assetsFetch },
+    } as unknown as Parameters<typeof worker.fetch>[1];
+
+    const response = await worker.fetch(
+      new Request("https://mietencheck.de/de/blog", {
+        headers: { accept: "text/html" },
+      }) as never,
+      assetsEnv,
+    );
+
+    expect(response.status).toBe(200);
+    expect(await response.text()).toBe("<html>index</html>");
+  });
+});

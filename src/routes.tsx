@@ -2,6 +2,12 @@ import type { RouteRecord } from "vite-react-ssg";
 
 import { App } from "./App";
 import { BlogTranslationProvider } from "./blog/BlogTranslationContext";
+import { BlogCategoryNav } from "./components/Blog/BlogCategoryNav";
+import {
+  BlogCategoryContent,
+  loaderDe as blogCategoryLoaderDe,
+  loaderEn as blogCategoryLoaderEn,
+} from "./pages/blog/BlogCategory.ssg";
 import {
   BlogIndexContent,
   loaderDe as blogIndexLoaderDe,
@@ -14,7 +20,7 @@ import {
 } from "./pages/blog/BlogPost.ssg";
 import { Layout } from "./pages/layout";
 import { Providers } from "./provider";
-import { POST_SLUGS_QUERY } from "./sanity/queries";
+import { CATEGORY_SLUGS_QUERY, POST_SLUGS_QUERY } from "./sanity/queries";
 import client from "./sanityClient";
 
 async function getBlogPostPaths(lang: "de" | "en") {
@@ -26,11 +32,24 @@ async function getBlogPostPaths(lang: "de" | "en") {
     .map((slug) => `/${lang}/blog/${slug}`);
 }
 
+async function getBlogCategoryPaths(lang: "de" | "en") {
+  const slugs = await client.fetch<string[]>(CATEGORY_SLUGS_QUERY, { lang });
+  return slugs
+    .filter(
+      (slug): slug is string => typeof slug === "string" && slug.length > 0,
+    )
+    .map((slug) =>
+      lang === "en"
+        ? `/en/blog/category/${slug}`
+        : `/de/blog/kategorie/${slug}`,
+    );
+}
+
 function BlogLayout({ children }: { children: React.ReactNode }) {
   return (
     <Providers>
       <BlogTranslationProvider>
-        <Layout>{children}</Layout>
+        <Layout subheader={<BlogCategoryNav />}>{children}</Layout>
       </BlogTranslationProvider>
     </Providers>
   );
@@ -70,6 +89,26 @@ export const routes: RouteRecord[] = [
       </BlogLayout>
     ),
     loader: blogIndexLoaderEn,
+  },
+  {
+    path: "/de/blog/kategorie/:categorySlug",
+    element: (
+      <BlogLayout>
+        <BlogCategoryContent />
+      </BlogLayout>
+    ),
+    loader: blogCategoryLoaderDe,
+    getStaticPaths: async () => getBlogCategoryPaths("de"),
+  },
+  {
+    path: "/en/blog/category/:categorySlug",
+    element: (
+      <BlogLayout>
+        <BlogCategoryContent />
+      </BlogLayout>
+    ),
+    loader: blogCategoryLoaderEn,
+    getStaticPaths: async () => getBlogCategoryPaths("en"),
   },
   {
     path: "/de/blog/:slug",

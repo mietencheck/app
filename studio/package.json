@@ -15,7 +15,8 @@
     "deploy-graphql": "sanity graphql deploy",
     "typegen": "sanity schema extract && sanity typegen generate",
     "migrate:category-i18n": "tsx scripts/migrate-category-i18n.ts",
-    "migrate:i18n-v5": "tsx scripts/migrate-i18n-v5.ts"
+    "migrate:i18n-v5": "tsx scripts/migrate-i18n-v5.ts",
+    "migrate:post-category": "tsx scripts/migrate-post-category.ts"
   },
   "keywords": [
     "sanity"

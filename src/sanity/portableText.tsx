@@ -7,19 +7,6 @@ import { imageUrl } from "./image";
 import type { SanityImageWithAlt } from "./types";
 
 export const portableTextComponents: PortableTextComponents = {
-  block: {
-    h1: ({ children }) => <h2 className="title-28 mt-10 mb-4">{children}</h2>,
-    h2: ({ children }) => <h2 className="title-24 mt-8 mb-3">{children}</h2>,
-    h3: ({ children }) => <h3 className="title-20 mt-6 mb-2">{children}</h3>,
-    h4: ({ children }) => (
-      <h4 className="text-lg-medium mt-4 mb-2">{children}</h4>
-    ),
-    blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-purple-9 pl-4 italic my-6">
-        {children}
-      </blockquote>
-    ),
-  },
   marks: {
     link: ({
       value,
@@ -34,7 +21,6 @@ export const portableTextComponents: PortableTextComponents = {
       return (
         <a
           href={href}
-          className="text-blue-600 hover:underline"
           target={value?.blank ? "_blank" : undefined}
           rel={value?.blank ? "noopener noreferrer" : undefined}
         >
@@ -60,7 +46,6 @@ export const portableTextComponents: PortableTextComponents = {
               ? AppRouter.BlogPostEn({ slug })
               : AppRouter.BlogPostDe({ slug })
           }
-          className="text-blue-600 hover:underline"
         >
           {children}
         </a>
@@ -73,18 +58,9 @@ export const portableTextComponents: PortableTextComponents = {
       if (!src) return null;
 
       return (
-        <figure className="my-8">
-          <img
-            src={src}
-            alt={value?.alt ?? ""}
-            className="w-full"
-            loading="lazy"
-          />
-          {value?.caption && (
-            <figcaption className="mt-2 text-sm text-purple-10">
-              {value.caption}
-            </figcaption>
-          )}
+        <figure>
+          <img src={src} alt={value?.alt ?? ""} loading="lazy" />
+          {value?.caption && <figcaption>{value.caption}</figcaption>}
         </figure>
       );
     },

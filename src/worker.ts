@@ -239,21 +239,40 @@ async function handleSentryEnvelope(request: Request) {
   });
 }
 
+function spaIndexRequest(request: Request) {
+  const url = new URL(request.url);
+  url.pathname = "/";
+  url.search = "";
+  return new Request(url, request);
+}
+
+function shouldServeSpaFallback(request: Request, response: Response) {
+  return (
+    isHtmlNavigationRequest(request) &&
+    (response.status === 404 || response.status >= 500)
+  );
+}
+
 async function serveAsset(request: Request, env: Env) {
   if (!env.ASSETS) {
     return fetch(request);
   }
 
-  const response = await env.ASSETS.fetch(request);
-  if (response.status !== 404 || !isHtmlNavigationRequest(request)) {
+  let response: Response;
+  try {
+    response = await env.ASSETS.fetch(request);
+  } catch (error) {
+    if (!isHtmlNavigationRequest(request)) {
+      throw error;
+    }
+    return env.ASSETS.fetch(spaIndexRequest(request));
+  }
+
+  if (!shouldServeSpaFallback(request, response)) {
     return response;
   }
 
-  const url = new URL(request.url);
-  url.pathname = "/";
-  url.search = "";
-
-  return env.ASSETS.fetch(new Request(url, request));
+  return env.ASSETS.fetch(spaIndexRequest(request));
 }
 
 export default {
