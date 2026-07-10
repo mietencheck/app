@@ -6,16 +6,12 @@ export default defineCliConfig({
     dataset: 'production',
   },
   deployment: {
+    appId: 'ohxgi5be2vxmvzi8ysb6mnbf',
     autoUpdates: true,
   },
   typegen: {
     path: '../src/**/*.{ts,tsx}',
     schema: 'schema.json',
     generates: '../src/sanity/sanity.types.ts',
-    overloads: {
-      generation: {
-        mode: 'replace',
-      },
-    },
   },
 })
