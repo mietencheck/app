@@ -13,7 +13,7 @@ export default function LandingPage() {
 
   return (
     <Layout>
-      <section className="bg-purple-9">
+      <section className="bg-purple-9 bg-[url('/images/hero-pattern.svg')] bg-[length:auto_100%] bg-repeat-x bg-center">
         <div className="container sm:grid sm:grid-cols-12 gap-12 py-24 text-center">
           <div className="sm:col-span-12 xl:col-start-3 xl:col-span-8">
             <h1 className="title-48 sm:title-56 md:title-60 lg:title-64 text-white mb-8">

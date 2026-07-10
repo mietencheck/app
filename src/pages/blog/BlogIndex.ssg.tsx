@@ -52,7 +52,7 @@ export function BlogIndexContent() {
 
   return (
     <>
-      <section className="bg-green-9 py-20 sm:py-24">
+      <section className="bg-green-9 bg-[url('/images/hero-pattern.svg')] bg-[length:auto_100%] bg-repeat-x bg-center py-20 sm:py-24">
         <div className="container">
           <h2 className="title-36 sm:title-40 md:title-44 lg:title-48 text-center text-white">
             {l("Ratgeber")}
