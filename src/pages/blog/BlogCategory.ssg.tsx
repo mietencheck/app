@@ -1,8 +1,10 @@
 import { useLoaderData, type LoaderFunctionArgs } from "react-router-dom";
 
+import { getCategoryHeroBackgroundClass } from "~/blog/categorySlugs";
 import { loadBlogCategories } from "~/blog/loaders";
 import { BlogMeta } from "~/components/BlogMeta";
 import { useInlineLocale } from "~/l10n";
+import { cn } from "~/lib/utils";
 import { PostCardLink } from "~/pages/blog/PostCardLink";
 import { CATEGORY_BY_SLUG_QUERY, CATEGORY_POSTS_QUERY } from "~/sanity/queries";
 import type { BlogCategoryData } from "~/sanity/types";
@@ -72,12 +74,21 @@ export function BlogCategoryContent() {
         lang={lang}
       />
 
-      <section>
-        <div className="container py-20 space-y-20">
-          <h1 className="title-36 sm:title-40 md:title-44 lg:title-48 text-gray-12 text-center">
+      <section
+        className={cn(
+          getCategoryHeroBackgroundClass(category.slug),
+          "bg-[url('/images/hero-pattern.svg')] bg-[length:auto_100%] bg-repeat-x bg-center py-20 sm:py-24",
+        )}
+      >
+        <div className="container">
+          <h1 className="title-36 sm:title-40 md:title-44 lg:title-48 text-center text-white">
             {categoryTitle}
           </h1>
+        </div>
+      </section>
 
+      <section>
+        <div className="container py-20 space-y-20">
           {posts.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-16">
               {posts.map((post) => (
