@@ -1,6 +1,7 @@
 import type { RouteRecord } from "vite-react-ssg";
 
 import { App } from "./App";
+import { BlogTranslationProvider } from "./blog/BlogTranslationContext";
 import {
   BlogIndexContent,
   loaderDe as blogIndexLoaderDe,
@@ -13,18 +14,26 @@ import {
 } from "./pages/blog/BlogPost.ssg";
 import { Layout } from "./pages/layout";
 import { Providers } from "./provider";
+import { POST_SLUGS_QUERY } from "./sanity/queries";
 import client from "./sanityClient";
 
 async function getBlogPostPaths(lang: "de" | "en") {
-  const slugs = await client.fetch<string[]>(
-    `*[_type == "post" && language == $lang && defined(slug.current)].slug.current`,
-    { lang },
-  );
+  const slugs = await client.fetch<string[]>(POST_SLUGS_QUERY, { lang });
   return slugs
     .filter(
       (slug): slug is string => typeof slug === "string" && slug.length > 0,
     )
     .map((slug) => `/${lang}/blog/${slug}`);
+}
+
+function BlogLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <Providers>
+      <BlogTranslationProvider>
+        <Layout>{children}</Layout>
+      </BlogTranslationProvider>
+    </Providers>
+  );
 }
 
 export const routes: RouteRecord[] = [
@@ -47,35 +56,27 @@ export const routes: RouteRecord[] = [
   {
     path: "/de/blog",
     element: (
-      <Providers>
-        <Layout>
-          <BlogIndexContent />
-        </Layout>
-      </Providers>
+      <BlogLayout>
+        <BlogIndexContent />
+      </BlogLayout>
     ),
     loader: blogIndexLoaderDe,
   },
   {
     path: "/en/blog",
     element: (
-      <Providers>
-        <Layout>
-          <BlogIndexContent />
-        </Layout>
-      </Providers>
+      <BlogLayout>
+        <BlogIndexContent />
+      </BlogLayout>
     ),
     loader: blogIndexLoaderEn,
   },
-
-  // new localized post routes
   {
     path: "/de/blog/:slug",
     element: (
-      <Providers>
-        <Layout>
-          <BlogPostContent />
-        </Layout>
-      </Providers>
+      <BlogLayout>
+        <BlogPostContent />
+      </BlogLayout>
     ),
     loader: blogPostLoaderDe,
     getStaticPaths: async () => getBlogPostPaths("de"),
@@ -83,16 +84,13 @@ export const routes: RouteRecord[] = [
   {
     path: "/en/blog/:slug",
     element: (
-      <Providers>
-        <Layout>
-          <BlogPostContent />
-        </Layout>
-      </Providers>
+      <BlogLayout>
+        <BlogPostContent />
+      </BlogLayout>
     ),
     loader: blogPostLoaderEn,
     getStaticPaths: async () => getBlogPostPaths("en"),
   },
-
   {
     path: "/*",
     element: (
