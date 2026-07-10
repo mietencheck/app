@@ -5,7 +5,7 @@ import { BlogMeta } from "~/components/BlogMeta";
 import { buttonVariants } from "~/components/Button/Button";
 import { useLocalizeField } from "~/l10n";
 import { cn } from "~/lib/utils";
-import { PostCardLink } from "~/pages/blog/PostCardLink";
+import { PostCardLink } from "~/pages/blog/partials/PostCardLink";
 import { AppRouter } from "~/router";
 import { imageUrl } from "~/sanity/image";
 import { FEATURED_QUERY, INDEX_QUERY } from "~/sanity/queries";

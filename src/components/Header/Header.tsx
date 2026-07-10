@@ -20,7 +20,7 @@ export function Header({
         className,
       )}
     >
-      <div className="container flex justify-between items-center gap-8 py-4">
+      <div className="container flex justify-between items-center gap-4 py-4">
         <a href={logoHref ? logoHref : "/"} className="title-16 text-yellow-11">
           <img src="/images/mietencheck-logo.svg" alt="Mietencheck Logo" />
         </a>

@@ -1,4 +1,4 @@
-import { useMatches } from "react-router-dom";
+import { useLocation, useMatches } from "react-router-dom";
 
 import type { BlogCategory } from "~/sanity/types";
 
@@ -32,8 +32,7 @@ function getCategorySlugFromPath(pathname: string): string | null {
 }
 
 export function useActiveBlogCategorySlugs(): Set<string> {
-  const pathname =
-    typeof window !== "undefined" ? window.location.pathname : "/de/blog";
+  const { pathname } = useLocation();
   const matches = useMatches();
 
   const slugFromPath = getCategorySlugFromPath(pathname);

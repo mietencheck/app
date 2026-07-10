@@ -2,22 +2,22 @@ import type { RouteRecord } from "vite-react-ssg";
 
 import { App } from "./App";
 import { BlogTranslationProvider } from "./blog/BlogTranslationContext";
-import { BlogCategoryNav } from "./components/Blog/BlogCategoryNav";
 import {
   BlogCategoryContent,
   loaderDe as blogCategoryLoaderDe,
   loaderEn as blogCategoryLoaderEn,
-} from "./pages/blog/BlogCategory.ssg";
+} from "./pages/blog/Category.ssg";
 import {
   BlogIndexContent,
   loaderDe as blogIndexLoaderDe,
   loaderEn as blogIndexLoaderEn,
-} from "./pages/blog/BlogIndex.ssg";
+} from "./pages/blog/index.ssg";
+import { BlogCategoryNav } from "./pages/blog/partials/CategoryNav";
 import {
   BlogPostContent,
   loaderDe as blogPostLoaderDe,
   loaderEn as blogPostLoaderEn,
-} from "./pages/blog/BlogPost.ssg";
+} from "./pages/blog/Post.ssg";
 import { Layout } from "./pages/layout";
 import { Providers } from "./provider";
 import { CATEGORY_SLUGS_QUERY, POST_SLUGS_QUERY } from "./sanity/queries";
