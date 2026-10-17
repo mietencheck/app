@@ -34,6 +34,33 @@ to your real Nest URL (Wrangler `--var`, `[env.*.vars]`, or dashboard). The
 to the Nest origin (no trailing slash); Nest must allow CORS for your site’s
 origin. Build-time env: `.env.production` or your CI vars for `VITE_*`.
 
+## Testing
+
+Run the unit and calculation tests once:
+
+```sh
+pnpm run test --run
+```
+
+Install Chromium once, then run the Beratung browser tests:
+
+```sh
+pnpm exec playwright install chromium
+pnpm test:e2e
+```
+
+The browser suite starts its own frontend on port 5174 and mocks the backend.
+It needs no login credentials or running backend and blocks external requests.
+It covers editing Sammelheizung/Bad, known recalculated rent amounts, saving and
+reloading, retrying failed saves, missing records, load errors, and rejected
+sessions. Saved state is simulated by the API mock; database persistence is not
+covered by this suite. The unit tests cover persisted record parsing and the
+Beratung calculation context with fixed expected results.
+
+Both suites run on pushes and pull requests. Browser failure traces are uploaded
+as CI artifacts, or can be opened locally with
+`pnpm exec playwright show-trace test-results/<failed-test>/trace.zip`.
+
 ## API
 
 ### `POST /api/miete`

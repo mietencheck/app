@@ -25,7 +25,8 @@
     "build": "pnpm run generate-sitemap && vite-react-ssg build",
     "preview": "vite preview",
     "deploy": "pnpm run generate-sitemap && vite-react-ssg build && pnpm exec wrangler deploy",
-    "sanity:typegen": "cd studio && pnpm exec sanity schema extract && pnpm exec sanity typegen generate"
+    "sanity:typegen": "cd studio && pnpm exec sanity schema extract && pnpm exec sanity typegen generate",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
@@ -107,6 +108,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260410.1",
+    "@playwright/test": "^1.64.1",
     "dts-dom": "^3.7.0",
     "react-router-dom": "^6.30.0",
     "vite-react-ssg": "^0.9.0",
