@@ -39,7 +39,7 @@ origin. Build-time env: `.env.production` or your CI vars for `VITE_*`.
 Run the unit and calculation tests once:
 
 ```sh
-pnpm test --run
+pnpm run test --run
 ```
 
 Install Chromium once, then run the Beratung browser tests:
