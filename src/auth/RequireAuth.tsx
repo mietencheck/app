@@ -13,7 +13,7 @@ export function RequireAuth({ children }: { children: ReactNode }) {
       );
       window.location.assign(`/login?next=${next}`);
     }
-  }, [getValidToken]);
+  }, [getValidToken, token]);
 
   if (!token) {
     return (

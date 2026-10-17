@@ -100,6 +100,11 @@ const subgroupLabels: Record<SubgroupKey, string> = {
   Wohnwertmindernd: "Wohnwertmindernd",
 };
 const sondermerkmalLabels = sondermerkmale as Record<string, string>;
+const ausstattungFields = [
+  { key: "sammelheizung", label: "Sammelheizung" },
+  { key: "bad", label: "Bad" },
+] as const;
+const ausstattungItems = { Ja: "Ja", Nein: "Nein" };
 
 type ResultRow = { name: string; best: string; worst: string };
 type FlowMeta = {
@@ -338,6 +343,17 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
     setBeratungRecord((prev) => (prev ? { ...prev, wohnflaeche: next } : prev));
   };
 
+  const setAusstattung = (
+    field: keyof BeratungRecord["ausstattung"],
+    next: BeratungRecord["ausstattung"][typeof field],
+  ) => {
+    setBeratungRecord((prev) =>
+      prev
+        ? { ...prev, ausstattung: { ...prev.ausstattung, [field]: next } }
+        : prev,
+    );
+  };
+
   const setSondermerkmal = (merkmal: string, next: MerkmalState) => {
     setBeratungRecord((prev) =>
       prev
@@ -525,9 +541,41 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
             </div>
             <div>
               <dt className="text-gray-11">Ausstattung</dt>
-              <dd>
-                Sammelheizung: {beratungRecord.ausstattung.sammelheizung}, Bad:{" "}
-                {beratungRecord.ausstattung.bad}
+              <dd className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {ausstattungFields.map(({ key, label }) => (
+                  <div key={key}>
+                    <p id={`ausstattung-${key}`} className="mb-1">
+                      {label}
+                    </p>
+                    <Select
+                      value={beratungRecord.ausstattung[key]}
+                      onValueChange={(value) => {
+                        if (value === "Ja" || value === "Nein") {
+                          setAusstattung(key, value);
+                        }
+                      }}
+                      items={ausstattungItems}
+                    >
+                      <SelectTrigger
+                        className="w-full"
+                        aria-labelledby={`ausstattung-${key}`}
+                      >
+                        <SelectValue />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {Object.keys(ausstattungItems).map((option) => (
+                          <SelectItem
+                            key={option}
+                            value={option}
+                            label={option}
+                          >
+                            {option}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                ))}
               </dd>
             </div>
           </div>
