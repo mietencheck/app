@@ -188,7 +188,9 @@ export const answersToMerkmalStateMapping = {
       logic: "and",
       conditions: [
         { "Wohnung hat Balkon": "Nein" },
-        { "Wohnung keinen Balkon weil unmöglich": "Ja" },
+        // The Merkmal does not apply if a balcony is impossible for
+        // structural or legal reasons (Mietspiegel Orientierungshilfe).
+        { "Wohnung keinen Balkon weil unmöglich": "Nein" },
       ],
     },
   },

@@ -110,7 +110,8 @@ test.each([
         "Bad hat wandhängendes WC": "Ja",
         "Küche hat Warmwasser": "Nein",
         "Wohnung hat Balkon": "Nein",
-        "Wohnung keinen Balkon weil unmöglich": "Ja",
+        // A balcony would be possible, so "kein Balkon" lowers the Wohnwert.
+        "Wohnung keinen Balkon weil unmöglich": "Nein",
         "Wohnung hat Durchgangszimmer": "Ja",
         "Wohnung hat hochwertigen Bodenbelag": "Ja",
         "Kennt Energieverbrauch oder Energiebedarf": "Ernergiebedarfswert",

@@ -52,6 +52,8 @@ test.each([
       },
       expected: {
         "[Wohnung+] Wohnung hat großen Balkon": "unchecked",
+        // The reset answers say a balcony would be possible.
+        "[Wohnung-] Wohnung hat kein Balkon": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
@@ -61,6 +63,8 @@ test.each([
       },
       expected: {
         "[Wohnung+] Wohnung hat großen Balkon": "unchecked",
+        // The reset answers say a balcony would be possible.
+        "[Wohnung-] Wohnung hat kein Balkon": "checked",
       },
     })),
   ].map(({ answers, expected }) => {
