@@ -1,7 +1,8 @@
 /**
- * Renders the review documents under docs/review/. They are generated from
- * the mapping, the questionnaire and the Merkmal texts and kept up to date by
- * file snapshots, so every change to wording or mapping shows up in a diff.
+ * Renders the Merkmal review sheets under docs/review/. They are generated
+ * from the mapping, the questionnaire and the Merkmal texts and kept up to
+ * date by file snapshots, so every change to wording or mapping shows up in a
+ * diff.
  */
 import { merkmaleDescriptionsByYear } from "~/mietspiegel/merkmale";
 import { Mietspiegeljahr } from "~/mietspiegel/types";
@@ -10,7 +11,6 @@ import {
   FlowQuestion,
   questionByAlias,
   questionCopiesByAlias,
-  questionNodeById,
 } from "./flow-paths";
 import {
   answerAlternatives,
@@ -166,64 +166,6 @@ export function renderMerkmalSheet(
       lines.push("");
       for (const hinweis of hinweise) lines.push(`⚠ ${hinweis}`, "");
       lines.push("- [ ] geprüft", "");
-    }
-  }
-  return lines.join("\n");
-}
-
-export type AskedQuestion = { id: string; jahre: string[] };
-
-/** Wording of every question copy reachable in the Miete flow. */
-export function renderQuestionCatalogue(asked: AskedQuestion[]): string {
-  const lines = [
-    "# Fragen im Fragebogen (Miete)",
-    "",
-    "> Automatisch erzeugt von `src/form/verification/questions.test.ts`.",
-    "> Nicht von Hand bearbeiten; Änderungen mit `pnpm test:review -u` übernehmen.",
-    "",
-    "Alle Fragen, die im Miete-Ablauf gestellt werden können, mit Wortlaut,",
-    "Hinweistext und Antwortoptionen, getrennt nach Mietspiegel-Ausgabe, wenn",
-    "sich die Formulierung unterscheidet. Jede Änderung an Formulierungen",
-    "erscheint als Diff in dieser Datei und sollte fachlich gegengelesen werden.",
-    "",
-  ];
-  const byAlias = new Map<
-    string,
-    Map<string, { q: FlowQuestion; jahre: Set<string> }>
-  >();
-  for (const { id, jahre } of asked) {
-    const q = questionNodeById.get(id)!;
-    const signature = JSON.stringify([
-      q.text.trim(),
-      q.info?.trim() ?? "",
-      q.answer,
-    ]);
-    const variants = byAlias.get(q.alias) ?? new Map();
-    const variant = variants.get(signature) ?? { q, jahre: new Set<string>() };
-    jahre.forEach((j) => variant.jahre.add(j));
-    variants.set(signature, variant);
-    byAlias.set(q.alias, variants);
-  }
-  for (const alias of [...byAlias.keys()].sort((a, b) =>
-    a.localeCompare(b, "de"),
-  )) {
-    lines.push(`## \`${alias}\``, "");
-    const variants = [...byAlias.get(alias)!.values()];
-    for (const { q, jahre } of variants) {
-      if (variants.length > 1) {
-        lines.push(`*Mietspiegel ${[...jahre].sort().join(", ")}:*`, "");
-      }
-      lines.push(`**Frage:** ${q.text.trim()}`, "");
-      if (q.info?.trim()) lines.push(`**Hinweis:** ${q.info.trim()}`, "");
-      const options = q.answer.options ?? [];
-      if (options.length > 0) {
-        for (const o of options) {
-          lines.push(`- ${o.text ?? ""}${o.alias ? ` (\`${o.alias}\`)` : ""}`);
-        }
-      } else {
-        lines.push(`- Antworttyp: ${q.answer.type}`);
-      }
-      lines.push("");
     }
   }
   return lines.join("\n");

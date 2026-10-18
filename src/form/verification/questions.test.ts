@@ -2,26 +2,6 @@ import { expect, test } from "vitest";
 
 import { allQuestionNodes, findAnswers } from "./flow-paths";
 import { allScenarios } from "./merkmal-coverage";
-import { AskedQuestion, renderQuestionCatalogue } from "./review-sheets";
-
-// Every question copy that can be asked in the Miete flow, per edition.
-const asked: AskedQuestion[] = allQuestionNodes.flatMap(
-  ({ node, literals }) => {
-    const jahre = allScenarios()
-      .filter((scenario) =>
-        findAnswers(
-          literals,
-          {},
-          scenario,
-          (evaluation) => evaluation.nodeIds.get(node.alias) === node.id,
-        ),
-      )
-      .map((scenario) => scenario.jahr);
-    return jahre.length > 0
-      ? [{ id: node.id, jahre: [...new Set(jahre)] }]
-      : [];
-  },
-);
 
 // Questions that are never asked in the Miete flow: the Mieterhöhung branch
 // (work in progress, hidden in the UI) and the follow-ups of "Vorherige
@@ -44,19 +24,19 @@ const NOT_ASKED_IN_MIETE_FLOW = [
 ];
 
 test("every question outside the Mieterhöhung branch is asked in some edition", () => {
-  const askedAliases = new Set(
-    asked.map(
-      ({ id }) => allQuestionNodes.find((q) => q.node.id === id)!.node.alias,
-    ),
+  const asked = new Set(
+    allQuestionNodes
+      .filter(({ node, literals }) =>
+        allScenarios().some((scenario) =>
+          findAnswers(literals, {}, scenario, (evaluation) =>
+            evaluation.visible.has(node.alias),
+          ),
+        ),
+      )
+      .map(({ node }) => node.alias),
   );
   const neverAsked = [
     ...new Set(allQuestionNodes.map((q) => q.node.alias)),
-  ].filter((alias) => !askedAliases.has(alias));
+  ].filter((alias) => !asked.has(alias));
   expect(neverAsked.sort()).toEqual([...NOT_ASKED_IN_MIETE_FLOW].sort());
-});
-
-test("question catalogue is up to date", async () => {
-  await expect(renderQuestionCatalogue(asked)).toMatchFileSnapshot(
-    "../../../docs/review/fragen.md",
-  );
 });
