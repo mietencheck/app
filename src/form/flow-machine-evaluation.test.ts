@@ -10,14 +10,17 @@ import {
 } from "./flow-machine-evaluation";
 import { FinalAnswers } from "./flow-machine-runtime";
 
-const address = (middleIn2026 = true) =>
+const address = (hasMittlereWohnlageIn2026 = true) =>
   JSON.stringify({
     plz: "10115",
     strasse: "Teststraße",
     nummer: "1",
     lage: {
       "2024": { wohnlage: "einfach", ost: false },
-      "2026": { wohnlage: middleIn2026 ? "mittel" : "einfach", ost: false },
+      "2026": {
+        wohnlage: hasMittlereWohnlageIn2026 ? "mittel" : "einfach",
+        ost: false,
+      },
     },
   });
 
@@ -47,7 +50,7 @@ function calculate(answers: Record<string, unknown>) {
   };
 }
 
-test("address and construction-period inputs alone derive the full applicable flow", () => {
+test("address and Baujahrspanne inputs alone derive the full applicable flow", () => {
   const { evaluation, ctx, table } = calculate(input);
   expect(evaluation.answers).toMatchObject({
     Wohnlage: "mittel",
@@ -74,7 +77,7 @@ test("address and construction-period inputs alone derive the full applicable fl
   );
 });
 
-test("changing an address overrides stale location fields before determining visibility", () => {
+test("changing an address overrides stale Wohnlage/Ost fields before determining visibility", () => {
   const { evaluation, table } = calculate({
     ...input,
     Adresse: address(false),
@@ -91,7 +94,7 @@ test("changing an address overrides stale location fields before determining vis
   ]);
 });
 
-test("changing the edition changes the location and corresponding question branches", () => {
+test("changing the Mietspiegeljahr changes the Wohnlage and corresponding question branches", () => {
   const { evaluation, table } = calculate({
     ...input,
     Vertragsdatum: "2024-2026",
@@ -107,7 +110,7 @@ test("changing the edition changes the location and corresponding question branc
   ]);
 });
 
-test("changing the construction period overrides an old concrete construction year", () => {
+test("changing the Baujahrspanne overrides an old concrete Baujahr", () => {
   const { evaluation, ctx } = calculate({
     ...input,
     Baujahr: 1900,
@@ -120,7 +123,7 @@ test("changing the construction period overrides an old concrete construction ye
   ]);
 });
 
-test("an address without data for the selected edition cannot retain stale location fields", () => {
+test("an address without data for the selected Mietspiegeljahr cannot retain stale Wohnlage/Ost fields", () => {
   const { evaluation, ctx, table } = calculate({
     ...input,
     Wohnlage: "mittel",

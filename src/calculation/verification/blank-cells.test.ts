@@ -4,20 +4,23 @@ import { expect, test } from "vitest";
 import { flowMachine } from "~/form/flow-machine";
 import { vertragsdatumToMietspiegelJahrMapping } from "~/form/mappings/vertragsdatum";
 
-import { editions } from "./fixtures";
+import { mietspiegelReferences } from "./fixtures";
 import { ReferenceRow } from "./reference-calculation";
 
-const vertragsdatumByEdition = Object.fromEntries(
+const vertragsdatumByMietspiegeljahr = Object.fromEntries(
   Object.entries(vertragsdatumToMietspiegelJahrMapping)
     .filter(([vertragsdatum]) => vertragsdatum !== ">2026")
-    .map(([vertragsdatum, edition]) => [edition, vertragsdatum]),
+    .map(([vertragsdatum, mietspiegeljahr]) => [
+      mietspiegeljahr,
+      vertragsdatum,
+    ]),
 );
 
 // Flats built after 2014 exit earlier as Neubauwohnung (§ 556f BGB).
 const LAST_BAUJAHR_BEFORE_NEUBAU_EXIT = 2014;
 
-function parsePeriod(period: string) {
-  const [, region, range] = /^(?:([WO]):)?(.*)$/.exec(period)!;
+function parseBaujahrSpanne(baujahrSpanne: string) {
+  const [, region, range] = /^(?:([WO]):)?(.*)$/.exec(baujahrSpanne)!;
   const [from, to] = range.split("-").map(Number);
   return {
     baujahre: [from, Math.min(to, LAST_BAUJAHR_BEFORE_NEUBAU_EXIT)],
@@ -27,28 +30,31 @@ function parsePeriod(period: string) {
 }
 
 // Every cell the source PDF leaves blank (too few data points) must end the
-// questionnaire instead of producing a rent ceiling from a neighbouring cell.
-const cases = editions.flatMap((edition) =>
-  (edition.rows as ReferenceRow[])
-    .filter((row) => row.medianCents === null)
+// questionnaire instead of producing a zulässige Höchstmiete from a neighbouring cell.
+const cases = mietspiegelReferences.flatMap((mietspiegel) =>
+  (mietspiegel.rows as ReferenceRow[])
+    .filter((row) => row.mittelwertInCent === null)
     .flatMap((row) => {
-      const { baujahre, ostValues } = parsePeriod(row.period);
+      const { baujahre, ostValues } = parseBaujahrSpanne(row.baujahrSpanne);
       const qms = [
-        Math.max(row.minArea, 20),
-        row.maxArea === null ? row.minArea + 50 : row.maxArea - 1,
+        Math.max(row.minWohnflaeche, 20),
+        row.maxWohnflaecheExclusive === null
+          ? row.minWohnflaeche + 50
+          : row.maxWohnflaecheExclusive - 1,
       ];
       return baujahre.flatMap((Baujahr) =>
         ostValues.flatMap((Ost) =>
           qms.map((Qm) => ({
-            label: `${edition.edition} ${row.field} ${row.period} ${row.location} Baujahr=${Baujahr} Ost=${Ost} Qm=${Qm}`,
+            label: `${mietspiegel.mietspiegeljahr} ${row.tabellenfeld} ${row.baujahrSpanne} ${row.wohnlage} Baujahr=${Baujahr} Ost=${Ost} Qm=${Qm}`,
             answers: {
               Typ: "Miete",
               Unterschrieben: "Ja",
               Mietart: "Normal",
-              Vertragsdatum: vertragsdatumByEdition[edition.edition],
+              Vertragsdatum:
+                vertragsdatumByMietspiegeljahr[mietspiegel.mietspiegeljahr],
               Baujahr,
               Ost,
-              Wohnlage: row.location,
+              Wohnlage: row.wohnlage,
               Qm,
             },
           })),
@@ -59,9 +65,9 @@ const cases = editions.flatMap((edition) =>
 
 test("the reference data contains the 34 blank cells of the source PDFs", () => {
   expect(
-    editions.flatMap((edition) =>
-      (edition.rows as ReferenceRow[]).filter(
-        (row) => row.medianCents === null,
+    mietspiegelReferences.flatMap((mietspiegel) =>
+      (mietspiegel.rows as ReferenceRow[]).filter(
+        (row) => row.mittelwertInCent === null,
       ),
     ),
   ).toHaveLength(34);

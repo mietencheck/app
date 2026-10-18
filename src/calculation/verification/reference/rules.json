@@ -1,150 +1,150 @@
 {
-  "deductions": [
+  "ausstattungsAbzuege": [
     {
-      "edition": "2015",
+      "mietspiegeljahr": "2015",
       "pdfPage": 14,
-      "period": "-1918",
-      "oneMissingCents": 194,
-      "bothMissingCents": 265
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 194,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 265
     },
     {
-      "edition": "2015",
+      "mietspiegeljahr": "2015",
       "pdfPage": 14,
-      "period": "1919-1949",
-      "oneMissingCents": 167,
-      "bothMissingCents": 265
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 167,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 265
     },
     {
-      "edition": "2015",
+      "mietspiegeljahr": "2015",
       "pdfPage": 14,
-      "period": "1950-1964",
-      "oneMissingCents": 103,
-      "bothMissingCents": null
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 103,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": null
     },
     {
-      "edition": "2017",
+      "mietspiegeljahr": "2017",
       "pdfPage": 13,
-      "period": "-1918",
-      "oneMissingCents": 134,
-      "bothMissingCents": 87
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 134,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 87
     },
     {
-      "edition": "2017",
+      "mietspiegeljahr": "2017",
       "pdfPage": 13,
-      "period": "1919-1949",
-      "oneMissingCents": 35,
-      "bothMissingCents": 87
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 35,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 87
     },
     {
-      "edition": "2017",
+      "mietspiegeljahr": "2017",
       "pdfPage": 13,
-      "period": "1950-1964",
-      "oneMissingCents": 81,
-      "bothMissingCents": null
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 81,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": null
     },
     {
-      "edition": "2019",
+      "mietspiegeljahr": "2019",
       "pdfPage": 17,
-      "period": "-1918",
-      "oneMissingCents": 141,
-      "bothMissingCents": 220
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 141,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 220
     },
     {
-      "edition": "2019",
+      "mietspiegeljahr": "2019",
       "pdfPage": 17,
-      "period": "1919-1949",
-      "oneMissingCents": 43,
-      "bothMissingCents": 220
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 43,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 220
     },
     {
-      "edition": "2019",
+      "mietspiegeljahr": "2019",
       "pdfPage": 17,
-      "period": "1950-1964",
-      "oneMissingCents": 145,
-      "bothMissingCents": null
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 145,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": null
     },
     {
-      "edition": "2021",
+      "mietspiegeljahr": "2021",
       "pdfPage": 17,
-      "period": "-1918",
-      "oneMissingCents": 143,
-      "bothMissingCents": 222
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 143,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 222
     },
     {
-      "edition": "2021",
+      "mietspiegeljahr": "2021",
       "pdfPage": 17,
-      "period": "1919-1949",
-      "oneMissingCents": 43,
-      "bothMissingCents": 222
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 43,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 222
     },
     {
-      "edition": "2021",
+      "mietspiegeljahr": "2021",
       "pdfPage": 17,
-      "period": "1950-1964",
-      "oneMissingCents": 147,
-      "bothMissingCents": null
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 147,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": null
     },
     {
-      "edition": "2023",
+      "mietspiegeljahr": "2023",
       "pdfPage": 17,
-      "period": "-1918",
-      "oneMissingCents": 151,
-      "bothMissingCents": 234
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 151,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 234
     },
     {
-      "edition": "2023",
+      "mietspiegeljahr": "2023",
       "pdfPage": 17,
-      "period": "1919-1949",
-      "oneMissingCents": 45,
-      "bothMissingCents": 234
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 45,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 234
     },
     {
-      "edition": "2023",
+      "mietspiegeljahr": "2023",
       "pdfPage": 17,
-      "period": "1950-1964",
-      "oneMissingCents": 155,
-      "bothMissingCents": null
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 155,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": null
     },
     {
-      "edition": "2024",
+      "mietspiegeljahr": "2024",
       "pdfPage": 21,
-      "period": "-1918",
-      "oneMissingCents": 45,
-      "bothMissingCents": 45
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 45,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 45
     },
     {
-      "edition": "2024",
+      "mietspiegeljahr": "2024",
       "pdfPage": 21,
-      "period": "1919-1949",
-      "oneMissingCents": 45,
-      "bothMissingCents": 45
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 45,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 45
     },
     {
-      "edition": "2024",
+      "mietspiegeljahr": "2024",
       "pdfPage": 21,
-      "period": "1950-1964",
-      "oneMissingCents": 45,
-      "bothMissingCents": 45
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 45,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 45
     },
     {
-      "edition": "2026",
+      "mietspiegeljahr": "2026",
       "pdfPage": 21,
-      "period": "-1918",
-      "oneMissingCents": 33,
-      "bothMissingCents": 33
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 33,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 33
     },
     {
-      "edition": "2026",
+      "mietspiegeljahr": "2026",
       "pdfPage": 21,
-      "period": "1919-1949",
-      "oneMissingCents": 33,
-      "bothMissingCents": 33
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 33,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 33
     }
   ],
-  "specialFeatures2015": {
+  "sondermerkmale2015": {
     "pdfPage": 14,
     "section": "10.1",
-    "periods": [
+    "baujahrSpannen": [
       "-1918",
       "1919-1949",
       "1950-1964",
@@ -154,7 +154,7 @@
       "1991-2002",
       "2003-2013"
     ],
-    "amountsCents": {
+    "zuAbschlaegeInCent": {
       "[Sondermerkmal] Hochwertiger Bodenbelag": [56, 83, 110, 0, 46, 0, 79, 0],
       "[Sondermerkmal] Moderne Küchenausstattung": [
         137, 0, 104, 50, 40, 0, 42, 0
@@ -170,15 +170,15 @@
       "[Sondermerkmal] Aufzug im Haus": [64, 0, 0, 0, 0, 0, 0, 0]
     }
   },
-  "ordinarySpanRule": {
+  "spanneneinordnungsRule": {
     "section": "10.3 (2017-2026), 11.3 (2015)",
-    "groups": 5,
-    "weightNumerator": 1,
-    "weightDenominator": 5
+    "merkmalsgruppen": 5,
+    "merkmalsgruppenWeightNumerator": 1,
+    "merkmalsgruppenWeightDenominator": 5
   },
-  "specialSpanRule2015": {
+  "sondermerkmalSpanneneinordnungsRule2015": {
     "pdfPages": [15, 16],
     "section": "11.3, steps 1-3",
-    "description": "If the median plus special features is outside the span, do not apply the orientation adjustment in either direction. Otherwise bound the combined result by both span endpoints."
+    "description": "If the Mittelwert plus Sondermerkmale is outside the Preisspanne, do not apply the Spanneneinordnung in either direction. Otherwise bound the combined result by both Spannenendwerte."
   }
 }

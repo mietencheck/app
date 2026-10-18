@@ -12,10 +12,10 @@ import { getWorstBestOrtsueblicheVergleichsmiete } from "../ortsueblicheVergleic
 import { getWorstBestPreisspanne } from "../preisspanne";
 import { CalculationContext } from "../types";
 import { getWorstBestZulaessigeHoechstmiete } from "../zulaessigeHoechstmiete";
-import { editions } from "./fixtures";
-import examples from "./reference/published-examples.json";
+import { mietspiegelReferences } from "./fixtures";
+import examples from "./reference/mietspiegel-examples.json";
 
-const contracts = [
+const vertragsdatumSpannen = [
   "2015-2016",
   "2016-2018",
   "2018-2020",
@@ -30,49 +30,55 @@ const env = {} as Parameters<typeof worker.fetch>[1];
 test.each(examples)(
   "published $id through real questionnaire mapping and HTTP endpoints",
   async (example) => {
-    const editionIndex = editions.findIndex(
-      (edition) => edition.edition === example.edition,
+    const mietspiegelIndex = mietspiegelReferences.findIndex(
+      (mietspiegel) => mietspiegel.mietspiegeljahr === example.mietspiegeljahr,
     );
-    const row = editions[editionIndex].rows.find(
-      (row) => row.field === example.field,
+    const row = mietspiegelReferences[mietspiegelIndex].rows.find(
+      (row) => row.tabellenfeld === example.tabellenfeld,
     )!;
     const answers = {
       ...MERKMAL_RESET_ANSWERS,
       ...SONDERMERKMAL_RESET_ANSWERS,
       Typ: "Miete",
       Unterschrieben: "Ja",
-      Vertragsdatum: contracts[editionIndex],
-      Baujahr: Number(row.period.split("-").at(-1)),
-      Wohnlage: row.location,
+      Vertragsdatum: vertragsdatumSpannen[mietspiegelIndex],
+      Baujahr: Number(row.baujahrSpanne.split("-").at(-1)),
+      Wohnlage: row.wohnlage,
       Ost: false,
-      Qm: Number(example.area),
+      Qm: Number(example.wohnflaeche),
       "Wohnung hat Sammelheizung": "Ja",
       "Badezimmer in Wohnung": "Ja",
       "Wohnung hat Balkon": "Ja",
-      ...(example.groups[0] > 0 ? { "Bad mit Fußbodenheizung": "Ja" } : {}),
-      ...(example.groups[1] > 0 ? { "Küche hat Einbauküche": "Ja" } : {}),
-      ...(example.groups[2] > 0 ? { "Wohnung hat Abstellraum": "Ja" } : {}),
-      ...(example.groups[3] > 0
+      ...(example.merkmalsgruppen[0] > 0
+        ? { "Bad mit Fußbodenheizung": "Ja" }
+        : {}),
+      ...(example.merkmalsgruppen[1] > 0
+        ? { "Küche hat Einbauküche": "Ja" }
+        : {}),
+      ...(example.merkmalsgruppen[2] > 0
+        ? { "Wohnung hat Abstellraum": "Ja" }
+        : {}),
+      ...(example.merkmalsgruppen[3] > 0
         ? { "Gebäude hat Treppenhaus in gutem Zustand": "Ja" }
         : {}),
-      ...(example.groups[3] < 0
+      ...(example.merkmalsgruppen[3] < 0
         ? { "Gebäude ist in schlechtem Zustand": "Ja" }
         : {}),
-      ...(example.groups[4] < 0
+      ...(example.merkmalsgruppen[4] < 0
         ? {
             "Wohnumfeld ist besonders laut": "Ja",
             "Wohnumfeld ist geräuschs- oder geruchsbelastet": "Ja",
           }
         : {}),
-      ...(example.specialFeatures.includes(
+      ...(example.sondermerkmale.includes(
         "[Sondermerkmal] Moderne Küchenausstattung",
       )
         ? { "Sondermerkmal Moderne Küche": "Ja" }
         : {}),
-      ...(example.specialFeatures.includes("[Sondermerkmal] Modernes Bad")
+      ...(example.sondermerkmale.includes("[Sondermerkmal] Modernes Bad")
         ? { "Sondermerkmal Modernes Bad": "Ja" }
         : {}),
-      ...(example.specialFeatures.includes(
+      ...(example.sondermerkmale.includes(
         "[Sondermerkmal] Hochwertiger Bodenbelag",
       )
         ? { "Sondermerkmal Bodenbelag": "Ja" }
@@ -80,27 +86,27 @@ test.each(examples)(
     } as FinalAnswers;
     const visible = getVisibleQuestionAliases(answers);
     const ctx = answersToCalculationContext(answers, visible)!;
-    expect(ctx?.mietspiegeljahr).toBe(example.edition);
-    expect(ctx?.baujahrSpanne).toBe(row.period);
+    expect(ctx?.mietspiegeljahr).toBe(example.mietspiegeljahr);
+    expect(ctx?.baujahrSpanne).toBe(row.baujahrSpanne);
     expect(getWorstBestPreisspanne(ctx)).toEqual({
       best: [
-        row.medianCents! / 100,
-        row.lowerCents! / 100,
-        row.upperCents! / 100,
+        row.mittelwertInCent! / 100,
+        row.unterwertInCent! / 100,
+        row.oberwertInCent! / 100,
       ],
       worst: [
-        row.medianCents! / 100,
-        row.lowerCents! / 100,
-        row.upperCents! / 100,
+        row.mittelwertInCent! / 100,
+        row.unterwertInCent! / 100,
+        row.oberwertInCent! / 100,
       ],
     });
     expect(getWorstBestOrtsueblicheVergleichsmiete(ctx)).toEqual({
-      best: example.expectedPerSqmCents / 100,
-      worst: example.expectedPerSqmCents / 100,
+      best: example.expectedVergleichsmietePerQmInCent / 100,
+      worst: example.expectedVergleichsmietePerQmInCent / 100,
     });
     const expected = {
-      best: example.standardNewTenancyMonthlyCents / 100,
-      worst: example.standardNewTenancyMonthlyCents / 100,
+      best: example.expectedMonthlyHoechstmieteInCent / 100,
+      worst: example.expectedMonthlyHoechstmieteInCent / 100,
     };
     expect(getWorstBestZulaessigeHoechstmiete(ctx)).toEqual(expected);
     const response = await worker.fetch(
@@ -126,14 +132,14 @@ test.each(examples)(
 );
 
 test.each([0, -1, NaN, Infinity, -Infinity])(
-  "invalid area %s cannot produce a rent",
-  (area) => {
+  "invalid Wohnfläche %s cannot produce a rent",
+  (wohnflaeche) => {
     const answers = {
       Typ: "Miete",
       Unterschrieben: "Nein",
       Baujahr: 1900,
       Wohnlage: "einfach",
-      Qm: area,
+      Qm: wohnflaeche,
     } as FinalAnswers;
     expect(
       answersToCalculationContext(answers, new Set(Object.keys(answers))),
@@ -142,10 +148,10 @@ test.each([0, -1, NaN, Infinity, -Infinity])(
 );
 
 test.each([
-  "unknown edition",
-  "unknown period",
-  "unknown location",
-  "unknown area band",
+  "unknown Mietspiegeljahr",
+  "unknown Baujahrspanne",
+  "unknown Wohnlage",
+  "unknown Wohnflächenspanne",
 ])("%s cannot throw or fabricate a rent", (invalid) => {
   const ctx = {
     typ: "Miete",
@@ -156,10 +162,16 @@ test.each([
     wohnflaecheSpanne: "50-55",
     ausstattung: { sammelheizung: "Ja", bad: "Ja" },
     merkmale: {},
-    ...(invalid === "unknown edition" ? { mietspiegeljahr: "2099" } : {}),
-    ...(invalid === "unknown period" ? { baujahrSpanne: "2090-2099" } : {}),
-    ...(invalid === "unknown location" ? { wohnlage: "unknown" } : {}),
-    ...(invalid === "unknown area band" ? { wohnflaecheSpanne: "999-" } : {}),
+    ...(invalid === "unknown Mietspiegeljahr"
+      ? { mietspiegeljahr: "2099" }
+      : {}),
+    ...(invalid === "unknown Baujahrspanne"
+      ? { baujahrSpanne: "2090-2099" }
+      : {}),
+    ...(invalid === "unknown Wohnlage" ? { wohnlage: "unknown" } : {}),
+    ...(invalid === "unknown Wohnflächenspanne"
+      ? { wohnflaecheSpanne: "999-" }
+      : {}),
   } as CalculationContext;
   expect(getWorstBestZulaessigeHoechstmiete(ctx)).toBeUndefined();
 });

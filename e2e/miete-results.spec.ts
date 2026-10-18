@@ -140,7 +140,7 @@ test("changing a questionnaire answer updates the result and persists across rel
 });
 
 for (const answer of ["Ja", "Nein"] as const) {
-  test(`inclusive bathroom answer ${answer} updates the result and survives reload`, async ({
+  test(`inclusive Bad answer ${answer} updates the result and survives reload`, async ({
     page,
   }) => {
     await page.addInitScript((answers) => {
@@ -171,7 +171,7 @@ for (const answer of ["Ja", "Nein"] as const) {
   });
 }
 
-test("the English bathroom question includes exactly four square metres", async ({
+test("the English Bad question includes exactly four square metres", async ({
   page,
 }) => {
   await page.addInitScript((answers) => {

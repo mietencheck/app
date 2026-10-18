@@ -1,15 +1,15 @@
 /** Independent test oracle. No imports from production calculation or data. */
 export type ReferenceRow = {
-  field: string;
+  tabellenfeld: string;
   pdfPage: number;
-  period: string;
-  location: string;
-  minArea: number;
-  maxArea: number | null;
-  medianCents: number | null;
-  lowerCents: number | null;
-  upperCents: number | null;
-  qualification: string | null;
+  baujahrSpanne: string;
+  wohnlage: string;
+  minWohnflaeche: number;
+  maxWohnflaecheExclusive: number | null;
+  mittelwertInCent: number | null;
+  unterwertInCent: number | null;
+  oberwertInCent: number | null;
+  tabellenfeldAnnotation: string | null;
 };
 
 export function roundRatio(numerator: bigint, denominator: bigint): number {
@@ -18,44 +18,59 @@ export function roundRatio(numerator: bigint, denominator: bigint): number {
   return sign * Number((absolute * 2n + denominator) / (denominator * 2n));
 }
 
-export function referencePerSqmCents(
+export function referenceVergleichsmietePerQmInCent(
   row: ReferenceRow,
-  groups: readonly number[],
-  deductionCents = 0,
-  specialCents = 0,
+  merkmalsgruppen: readonly number[],
+  ausstattungsAbzugInCent = 0,
+  sondermerkmalZuAbschlagInCent = 0,
 ): number {
   if (
-    row.medianCents === null ||
-    row.lowerCents === null ||
-    row.upperCents === null
+    row.mittelwertInCent === null ||
+    row.unterwertInCent === null ||
+    row.oberwertInCent === null
   ) {
-    throw new Error("No published rent for this field");
+    throw new Error("No published Miete for this Tabellenfeld");
   }
-  const median = row.medianCents - deductionCents;
-  const lower = row.lowerCents - deductionCents;
-  const upper = row.upperCents - deductionCents;
-  const specialBase = median + specialCents;
-  if (specialBase < lower || specialBase > upper) return specialBase;
-  const balance = groups.reduce((sum, group) => sum + Math.sign(group), 0);
-  const distance = balance < 0 ? median - lower : upper - median;
+  const mittelwert = row.mittelwertInCent - ausstattungsAbzugInCent;
+  const unterwert = row.unterwertInCent - ausstattungsAbzugInCent;
+  const oberwert = row.oberwertInCent - ausstattungsAbzugInCent;
+  const mittelwertWithSondermerkmale =
+    mittelwert + sondermerkmalZuAbschlagInCent;
+  if (
+    mittelwertWithSondermerkmale < unterwert ||
+    mittelwertWithSondermerkmale > oberwert
+  )
+    return mittelwertWithSondermerkmale;
+  const merkmalsgruppenSaldo = merkmalsgruppen.reduce(
+    (sum, merkmalsgruppe) => sum + Math.sign(merkmalsgruppe),
+    0,
+  );
+  const distanceToSpannenendwert =
+    merkmalsgruppenSaldo < 0 ? mittelwert - unterwert : oberwert - mittelwert;
   // Work in fifths of a cent until the final half-up rounding.
   const fifths = Math.max(
-    lower * 5,
-    Math.min(upper * 5, specialBase * 5 + balance * distance),
+    unterwert * 5,
+    Math.min(
+      oberwert * 5,
+      mittelwertWithSondermerkmale * 5 +
+        merkmalsgruppenSaldo * distanceToSpannenendwert,
+    ),
   );
   return roundRatio(BigInt(fifths), 5n);
 }
 
-export function referenceMonthlyCents(
-  perSqmCents: number,
-  area: string,
-  newTenancy: boolean,
+export function referenceMonthlyHoechstmieteInCent(
+  vergleichsmietePerQmInCent: number,
+  wohnflaeche: string,
+  withTenPercentAufschlag: boolean,
 ): number {
-  const [whole, fraction = ""] = area.split(".");
-  const areaUnits = BigInt(whole + fraction);
-  const areaScale = 10n ** BigInt(fraction.length);
+  const [whole, fraction = ""] = wohnflaeche.split(".");
+  const wohnflaecheUnits = BigInt(whole + fraction);
+  const wohnflaecheScale = 10n ** BigInt(fraction.length);
   return roundRatio(
-    BigInt(perSqmCents) * areaUnits * (newTenancy ? 11n : 10n),
-    areaScale * 10n,
+    BigInt(vergleichsmietePerQmInCent) *
+      wohnflaecheUnits *
+      (withTenPercentAufschlag ? 11n : 10n),
+    wohnflaecheScale * 10n,
   );
 }

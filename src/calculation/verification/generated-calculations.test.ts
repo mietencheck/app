@@ -2,30 +2,41 @@ import { describe, expect, test } from "vitest";
 
 import { getWorstBestOrtsueblicheVergleichsmiete } from "../ortsueblicheVergleichsmiete";
 import { getWorstBestZulaessigeHoechstmiete } from "../zulaessigeHoechstmiete";
-import { contextFor, editions, groupCombinations } from "./fixtures";
 import {
-  referenceMonthlyCents,
-  referencePerSqmCents,
+  contextFor,
+  merkmalsgruppenCombinations,
+  mietspiegelReferences,
+} from "./fixtures";
+import {
+  referenceMonthlyHoechstmieteInCent,
+  referenceVergleichsmietePerQmInCent,
 } from "./reference-calculation";
 import rules from "./reference/rules.json";
 
-for (const edition of editions) {
-  describe(`${edition.edition}: independent integer oracle`, () => {
-    test.each(edition.rows.filter((row) => row.medianCents !== null))(
-      "field $field: all 243 group outcomes, both calculation types",
+for (const mietspiegel of mietspiegelReferences) {
+  describe(`${mietspiegel.mietspiegeljahr}: independent integer oracle`, () => {
+    test.each(mietspiegel.rows.filter((row) => row.mittelwertInCent !== null))(
+      "Tabellenfeld $tabellenfeld: all 243 Merkmalsgruppe outcomes, both calculation types",
       (row) => {
-        for (const groups of groupCombinations) {
-          const ctx = contextFor(edition.edition, row, groups);
-          const cents = referencePerSqmCents(row, groups);
-          const label = `${edition.edition}/${row.field} groups=${groups}`;
+        for (const merkmalsgruppen of merkmalsgruppenCombinations) {
+          const ctx = contextFor(
+            mietspiegel.mietspiegeljahr,
+            row,
+            merkmalsgruppen,
+          );
+          const cents = referenceVergleichsmietePerQmInCent(
+            row,
+            merkmalsgruppen,
+          );
+          const label = `${mietspiegel.mietspiegeljahr}/${row.tabellenfeld} merkmalsgruppen=${merkmalsgruppen}`;
           expect(getWorstBestOrtsueblicheVergleichsmiete(ctx), label).toEqual({
             best: cents / 100,
             worst: cents / 100,
           });
           for (const typ of ["Miete", "Mieterhöhung"] as const) {
             ctx.typ = typ;
-            const monthly =
-              referenceMonthlyCents(
+            const monthlyHoechstmiete =
+              referenceMonthlyHoechstmieteInCent(
                 cents,
                 String(ctx.wohnflaeche),
                 typ === "Miete",
@@ -33,7 +44,10 @@ for (const edition of editions) {
             expect(
               getWorstBestZulaessigeHoechstmiete(ctx),
               `${label} ${typ}`,
-            ).toEqual({ best: monthly, worst: monthly });
+            ).toEqual({
+              best: monthlyHoechstmiete,
+              worst: monthlyHoechstmiete,
+            });
           }
         }
       },
@@ -41,32 +55,49 @@ for (const edition of editions) {
   });
 }
 
-describe("2015 special-feature interactions: both limits and opposing group directions", () => {
-  const names = Object.keys(rules.specialFeatures2015.amountsCents);
-  test.each(editions[0].rows.filter((row) => row.medianCents !== null))(
-    "field $field: every special-feature subset and group balance",
+describe("2015 Sondermerkmal interactions: both limits and opposing Merkmalsgruppe directions", () => {
+  const names = Object.keys(rules.sondermerkmale2015.zuAbschlaegeInCent);
+  test.each(
+    mietspiegelReferences[0].rows.filter(
+      (row) => row.mittelwertInCent !== null,
+    ),
+  )(
+    "Tabellenfeld $tabellenfeld: every Sondermerkmal subset and Merkmalsgruppensaldo",
     (row) => {
       for (let mask = 0; mask < 2 ** names.length; mask++) {
         const selected = names.filter((_, index) => mask & (1 << index));
-        const specialCents = selected.reduce(
+        const sondermerkmalZuAbschlagInCent = selected.reduce(
           (sum, name) =>
             sum +
-            rules.specialFeatures2015.amountsCents[
-              name as keyof typeof rules.specialFeatures2015.amountsCents
-            ][rules.specialFeatures2015.periods.indexOf(row.period)],
+            rules.sondermerkmale2015.zuAbschlaegeInCent[
+              name as keyof typeof rules.sondermerkmale2015.zuAbschlaegeInCent
+            ][
+              rules.sondermerkmale2015.baujahrSpannen.indexOf(row.baujahrSpanne)
+            ],
           0,
         );
-        for (let balance = -5; balance <= 5; balance++) {
-          const groups = Array.from({ length: 5 }, (_, index) =>
-            index < Math.abs(balance) ? Math.sign(balance) : 0,
+        for (
+          let merkmalsgruppenSaldo = -5;
+          merkmalsgruppenSaldo <= 5;
+          merkmalsgruppenSaldo++
+        ) {
+          const merkmalsgruppen = Array.from({ length: 5 }, (_, index) =>
+            index < Math.abs(merkmalsgruppenSaldo)
+              ? Math.sign(merkmalsgruppenSaldo)
+              : 0,
           );
           const expected =
-            referencePerSqmCents(row, groups, 0, specialCents) / 100;
+            referenceVergleichsmietePerQmInCent(
+              row,
+              merkmalsgruppen,
+              0,
+              sondermerkmalZuAbschlagInCent,
+            ) / 100;
           expect(
             getWorstBestOrtsueblicheVergleichsmiete(
-              contextFor("2015", row, groups, selected),
+              contextFor("2015", row, merkmalsgruppen, selected),
             ),
-            `${row.field} specials=${selected} balance=${balance}`,
+            `${row.tabellenfeld} sondermerkmale=${selected} merkmalsgruppenSaldo=${merkmalsgruppenSaldo}`,
           ).toEqual({ best: expected, worst: expected });
         }
       }
@@ -74,24 +105,28 @@ describe("2015 special-feature interactions: both limits and opposing group dire
   );
 });
 
-describe("fractional areas and decimal half-cent rounding", () => {
-  for (const edition of editions) {
-    test(`${edition.edition}: every populated field`, () => {
-      for (const row of edition.rows.filter(
-        (row) => row.medianCents !== null,
+describe("fractional Wohnflächen and decimal half-cent rounding", () => {
+  for (const mietspiegel of mietspiegelReferences) {
+    test(`${mietspiegel.mietspiegeljahr}: every populated Tabellenfeld`, () => {
+      for (const row of mietspiegel.rows.filter(
+        (row) => row.mittelwertInCent !== null,
       )) {
-        for (const area of [
-          String(Math.max(20, row.minArea)),
-          String(Math.max(20, row.minArea) + 0.5),
-          String(Math.max(20, row.minArea) + 0.01),
+        for (const wohnflaeche of [
+          String(Math.max(20, row.minWohnflaeche)),
+          String(Math.max(20, row.minWohnflaeche) + 0.5),
+          String(Math.max(20, row.minWohnflaeche) + 0.01),
         ]) {
-          const ctx = contextFor(edition.edition, row);
-          ctx.wohnflaeche = Number(area);
+          const ctx = contextFor(mietspiegel.mietspiegeljahr, row);
+          ctx.wohnflaeche = Number(wohnflaeche);
           const expected =
-            referenceMonthlyCents(row.medianCents!, area, true) / 100;
+            referenceMonthlyHoechstmieteInCent(
+              row.mittelwertInCent!,
+              wohnflaeche,
+              true,
+            ) / 100;
           expect(
             getWorstBestZulaessigeHoechstmiete(ctx),
-            `${row.field} ${area}m²`,
+            `${row.tabellenfeld} ${wohnflaeche}m²`,
           ).toEqual({ best: expected, worst: expected });
         }
       }

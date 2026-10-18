@@ -3,7 +3,7 @@ import { ausstattungsAbzuegeByYear } from "~/mietspiegel/ausstattungsAbzuege";
 import { AusstattungState, CalculationContext } from "./types";
 
 /**
- * Calculates the worst and best possible Ausstattungsabzug ('facility discount') for the given calculation context.
+ * Calculates the worst and best possible Ausstattungsabzug for the given calculation context.
  */
 export function getWorstBestAusstattungsAbzug(
   ctx: CalculationContext,
@@ -23,16 +23,20 @@ export function getWorstBestAusstattungsAbzug(
 
   const possibilities = (state: AusstattungState): boolean[] =>
     state === "Nicht sicher" ? [true, false] : [state === "Ja"];
-  const deductions = possibilities(ausstattung.sammelheizung).flatMap(
-    (hasHeating) =>
-      possibilities(ausstattung.bad).map((hasBathroom) =>
-        !hasHeating && !hasBathroom
-          ? ausstattungsAbzuege["!SH && !Bad"]
-          : !hasHeating || !hasBathroom
-            ? ausstattungsAbzuege["!SH || !Bad"]
-            : 0,
-      ),
+  const possibleAusstattungsAbzuege = possibilities(
+    ausstattung.sammelheizung,
+  ).flatMap((hasSammelheizung) =>
+    possibilities(ausstattung.bad).map((hasBad) =>
+      !hasSammelheizung && !hasBad
+        ? ausstattungsAbzuege["!SH && !Bad"]
+        : !hasSammelheizung || !hasBad
+          ? ausstattungsAbzuege["!SH || !Bad"]
+          : 0,
+    ),
   );
-  // Deductions are not necessarily monotonic: see the 2017 pre-1919 footnote.
-  return { best: Math.max(...deductions), worst: Math.min(...deductions) };
+  // Ausstattungsabzüge are not necessarily monotonic: see the 2017 pre-1919 footnote.
+  return {
+    best: Math.max(...possibleAusstattungsAbzuege),
+    worst: Math.min(...possibleAusstattungsAbzuege),
+  };
 }

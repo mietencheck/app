@@ -63,7 +63,7 @@ function rows(html: string): string[][] {
 }
 
 test.each(["de", "en"] as const)(
-  "%s: monthly ceiling has the correct unit",
+  "%s: monthly Höchstmiete has the correct unit",
   (locale) => {
     const result = rows(render(<ZulaessigeHoechstmieteTable />, locale));
     const last = result.at(-1)!;
@@ -75,7 +75,7 @@ test.each(["de", "en"] as const)(
   },
 );
 
-test("rent-increase breakdown does not add or display a 10% surcharge", () => {
+test("Mieterhöhung breakdown does not add or display a 10% Aufschlag", () => {
   state.answers.Typ = "Mieterhöhung";
   const html = render(<ZulaessigeHoechstmieteTable />);
   expect(rows(html).at(-1)![1]).toContain("438 €");
@@ -85,7 +85,7 @@ test("rent-increase breakdown does not add or display a 10% surcharge", () => {
 test("uncertain results put lower and upper totals in the correct desktop and mobile columns", () => {
   state.answers["Bad mit Fußbodenheizung"] = "Nicht sicher";
   const result = rows(render(<ZulaessigeHoechstmieteTable />));
-  // One uncertain positive group: source row 81 gives 7.30..7.75 EUR/m².
+  // One uncertain wohnwerterhöhende Merkmalsgruppe: source row 81 gives 7.30..7.75 EUR/m².
   const desktop = result.find(
     (row) => row[0] === "Zulässige Höchstmiete" && row.length === 3,
   )!;
@@ -99,7 +99,7 @@ test("uncertain results put lower and upper totals in the correct desktop and mo
   ).toContain("511,50");
 });
 
-test("2015 uncertain special-feature amount is shown even when its lower bound is zero", () => {
+test("2015 uncertain Sondermerkmal amount is shown even when its lower bound is zero", () => {
   Object.assign(state.answers, {
     Vertragsdatum: "2015-2016",
     Baujahr: 1900,
@@ -108,11 +108,11 @@ test("2015 uncertain special-feature amount is shown even when its lower bound i
     "Sondermerkmal Bodenbelag": "Nicht sicher",
   });
   const result = rows(render(<OrtsüblicheVergleichsmieteTable />));
-  const special = result.find(
+  const sondermerkmalRow = result.find(
     (row) => row[0] === "Sondermerkmal Aufschlag" && row.length === 3,
   )!;
-  expect(special[1]).toBe("0 €");
-  expect(special[2]).toContain("0,56");
+  expect(sondermerkmalRow[1]).toBe("0 €");
+  expect(sondermerkmalRow[2]).toContain("0,56");
 });
 
 test("unavailable table values do not render fabricated zero-euro breakdowns", () => {

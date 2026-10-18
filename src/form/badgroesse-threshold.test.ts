@@ -45,33 +45,34 @@ const base = {
 } as FinalAnswers;
 
 test.each([3.99, 4, 4.01])(
-  "bathroom %s m² maps through the inclusive question",
-  (area) => {
+  "Bad %s m² maps through the inclusive question",
+  (grundflaeche) => {
     const answers = {
       ...base,
-      "Bad mindestens 4qm": area >= 4 ? "Ja" : "Nein",
+      "Bad mindestens 4qm": grundflaeche >= 4 ? "Ja" : "Nein",
     } as FinalAnswers;
     expect(
       getMerkmalStates(answers, getVisibleQuestionAliases(answers))[
         "[Bad-] Bad ist klein"
       ],
-    ).toBe(area < 4 ? "checked" : "unchecked");
+    ).toBe(grundflaeche < 4 ? "checked" : "unchecked");
   },
 );
 
 test.each([3.99, 4, 4.01])(
-  "2015 special feature: bathroom %s m² uses the same threshold",
-  (area) => {
+  "2015 Sondermerkmal: Bad %s m² uses the same threshold",
+  (grundflaeche) => {
     const answers = {
       ...base,
       Vertragsdatum: "2015-2016",
       Baujahr: 2000,
-      "Sondermerkmal Badezimmer mindestens 4qm": area >= 4 ? "Ja" : "Nein",
+      "Sondermerkmal Badezimmer mindestens 4qm":
+        grundflaeche >= 4 ? "Ja" : "Nein",
     } as FinalAnswers;
     expect(
       getSondermerkmalStates(answers, getVisibleQuestionAliases(answers))![
         "[Sondermerkmal] Kleines Bad"
       ],
-    ).toBe(area < 4 ? "checked" : "unchecked");
+    ).toBe(grundflaeche < 4 ? "checked" : "unchecked");
   },
 );

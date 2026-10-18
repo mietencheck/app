@@ -27,6 +27,11 @@ The PDFs themselves are not required in CI and are not committed.
 | Integration        | Worked examples through real question visibility/mapping and both HTTP handlers; cumulative energy weights and exclusion of stale alternative energy answers; existing housing exits.                                |
 | Display            | Actual breakdown components in DE/EN, units, conditional surcharge, lower/upper columns and 2015 special-feature ranges. Browser checks cover real saved sessions, reloads, uncertainty and changing an answer.      |
 
+Use German for domain concepts and English for operations, structure and units
+in code identifiers, for example `referenceVergleichsmietePerQmInCent`,
+`expectedMonthlyHoechstmieteInCent` and `hasSammelheizung`. Reference JSON keys
+and the PDF extractor follow the same domain vocabulary.
+
 The integer/BigInt reference calculator imports no production data or helpers.
 Its arithmetic is anchored to the published examples before it is used for
 generated comparisons. Tests use synthetic group representatives to exercise

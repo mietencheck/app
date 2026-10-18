@@ -15,7 +15,7 @@ import {
 
 import { getWorstBestMerkmalStateByMerkmalGruppe } from "../spanneneinordnung";
 
-const contracts = [
+const vertragsdatumSpannen = [
   "2015-2016",
   "2016-2018",
   "2018-2020",
@@ -28,20 +28,20 @@ const contracts = [
 // Energy examples and the exclusive alternatives are specified in section
 // 11.4 A (2015), 10.4 A (2017-2026). Symbols are UI answer aliases for the
 // cumulative thresholds; these tests do not certify the displayed thresholds.
-for (const contract of contracts) {
+for (const vertragsdatumSpanne of vertragsdatumSpannen) {
   for (const input of [
     "Energieverbrauchskennwert",
     "Energiebedarfskennwert",
   ] as const) {
     test.each(["---", "--", "-", "0", "+", "++", "+++"])(
-      `${contract}/${input}/%s: cumulative weight and exclusive alternatives`,
+      `${vertragsdatumSpanne}/${input}/%s: cumulative weight and exclusive alternatives`,
       (symbol) => {
         const answers = {
           ...MERKMAL_RESET_ANSWERS,
           ...SONDERMERKMAL_RESET_ANSWERS,
           Typ: "Miete",
           Unterschrieben: "Ja",
-          Vertragsdatum: contract,
+          Vertragsdatum: vertragsdatumSpanne,
           Baujahr: 1900,
           Wohnlage: "einfach",
           Ost: false,
@@ -78,21 +78,21 @@ for (const contract of contracts) {
 }
 
 test.each([
-  { exception: "Sozialwohnung", exit: "Exit: Sozialwohnung" },
+  { ausnahme: "Sozialwohnung", exit: "Exit: Sozialwohnung" },
   {
-    exception: "Reihenhaus",
+    ausnahme: "Reihenhaus",
     exit: "Exit: Ein-/Zweifamilienhäuser oder Reihenhäuser",
   },
-  { exception: "Wohnung ohne WC ", exit: "Exit: Wohnung ohne WC" },
+  { ausnahme: "Wohnung ohne WC ", exit: "Exit: Wohnung ohne WC" },
 ])(
-  "unsupported housing: $exception exits the questionnaire",
-  ({ exception, exit }) => {
+  "unsupported housing: $ausnahme exits the questionnaire",
+  ({ ausnahme, exit }) => {
     const answers = {
       Typ: "Miete",
       Unterschrieben: "Ja",
       Mietart: "Normal",
       Vertragsdatum: ">2026",
-      Ausnahmen: [exception],
+      Ausnahmen: [ausnahme],
       Baujahr: 1900,
       Wohnlage: "einfach",
       Qm: 60,
@@ -104,7 +104,7 @@ test.each([
   },
 );
 
-test("a newly constructed flat follows the new-build exit after deriving the construction year", () => {
+test("a Neubauwohnung follows the Neubauwohnung exit after deriving the Baujahr", () => {
   const state = applyDerivedAnswers({
     Typ: "Miete",
     Unterschrieben: "Ja",

@@ -8,52 +8,68 @@ import { Mietspiegeljahr, Sondermerkmal } from "~/mietspiegel/types";
 import { getWorstBestAusstattungsAbzug } from "../ausstattungsAbzug";
 import { getWorstBestPreisspanne } from "../preisspanne";
 import { getWorstBestSondermerkmalModifier } from "../sondermerkmale";
-import { areaKey, contextFor, editions } from "./fixtures";
+import {
+  contextFor,
+  mietspiegelReferences,
+  wohnflaechenSpannenKey,
+} from "./fixtures";
 import rules from "./reference/rules.json";
 
-for (const edition of editions) {
-  describe(`PDF ${edition.edition}: complete table`, () => {
+for (const mietspiegel of mietspiegelReferences) {
+  describe(`PDF ${mietspiegel.mietspiegeljahr}: complete table`, () => {
     test("contains exactly the published populated fields", () => {
       const actual = preisspannenByMietspiegeljahr[
-        edition.edition as Mietspiegeljahr
+        mietspiegel.mietspiegeljahr as Mietspiegeljahr
       ] as Record<string, Record<string, Record<string, unknown>>>;
-      const keys = Object.entries(actual).flatMap(([period, locations]) =>
-        Object.entries(locations).flatMap(([location, areas]) =>
-          Object.entries(areas)
-            .filter(([, values]) => Boolean(values))
-            .map(([area]) => `${period}/${location}/${area}`),
-        ),
+      const keys = Object.entries(actual).flatMap(
+        ([baujahrSpanne, wohnlagen]) =>
+          Object.entries(wohnlagen).flatMap(([wohnlage, wohnflaechenSpannen]) =>
+            Object.entries(wohnflaechenSpannen)
+              .filter(([, values]) => Boolean(values))
+              .map(
+                ([wohnflaeche]) =>
+                  `${baujahrSpanne}/${wohnlage}/${wohnflaeche}`,
+              ),
+          ),
       );
       expect(keys.sort()).toEqual(
-        edition.rows
-          .filter((row) => row.medianCents !== null)
-          .map((row) => `${row.period}/${row.location}/${areaKey(row)}`)
+        mietspiegel.rows
+          .filter((row) => row.mittelwertInCent !== null)
+          .map(
+            (row) =>
+              `${row.baujahrSpanne}/${row.wohnlage}/${wohnflaechenSpannenKey(row)}`,
+          )
           .sort(),
       );
     });
 
-    test.each(edition.rows)("field $field, PDF page $pdfPage", (row) => {
-      const actual = getWorstBestPreisspanne(contextFor(edition.edition, row));
-      if (row.medianCents === null) {
-        expect(actual).toBeUndefined();
-      } else {
-        const expected = [
-          row.medianCents,
-          row.lowerCents!,
-          row.upperCents!,
-        ].map((value) => value / 100);
-        expect(actual).toEqual({ best: expected, worst: expected });
-      }
-    });
-
-    test.each(edition.rows)(
-      "field $field: area and construction boundaries",
+    test.each(mietspiegel.rows)(
+      "Tabellenfeld $tabellenfeld, PDF page $pdfPage",
       (row) => {
-        const [start, end] = row.period
+        const actual = getWorstBestPreisspanne(
+          contextFor(mietspiegel.mietspiegeljahr, row),
+        );
+        if (row.mittelwertInCent === null) {
+          expect(actual).toBeUndefined();
+        } else {
+          const expected = [
+            row.mittelwertInCent,
+            row.unterwertInCent!,
+            row.oberwertInCent!,
+          ].map((value) => value / 100);
+          expect(actual).toEqual({ best: expected, worst: expected });
+        }
+      },
+    );
+
+    test.each(mietspiegel.rows)(
+      "Tabellenfeld $tabellenfeld: Wohnfläche and Baujahrspanne boundaries",
+      (row) => {
+        const [start, end] = row.baujahrSpanne
           .replace(/^[WO]:/, "")
           .split("-")
           .map(Number);
-        const year = end;
+        const baujahr = end;
         const base = {
           Unterschrieben: "Ja",
           Vertragsdatum: (
@@ -66,37 +82,47 @@ for (const edition of editions) {
               "2024": "2024-2026",
               "2026": ">2026",
             } as const
-          )[edition.edition as Mietspiegeljahr],
-          Baujahr: year,
-          Ost: row.period.startsWith("O:"),
-          Wohnlage: row.location,
+          )[mietspiegel.mietspiegeljahr as Mietspiegeljahr],
+          Baujahr: baujahr,
+          Ost: row.baujahrSpanne.startsWith("O:"),
+          Wohnlage: row.wohnlage,
         } as FinalAnswers;
         const visible = new Set(["Baujahr", "Ost", "Wohnlage", "Qm"]);
         for (const baujahr of [start || 1800, end]) {
           expect(getBaujahrSpanne({ ...base, Baujahr: baujahr }, visible)).toBe(
-            row.period,
+            row.baujahrSpanne,
           );
         }
-        const siblings = edition.rows.filter(
+        const siblings = mietspiegel.rows.filter(
           (candidate) =>
-            candidate.period === row.period &&
-            candidate.location === row.location,
+            candidate.baujahrSpanne === row.baujahrSpanne &&
+            candidate.wohnlage === row.wohnlage,
         );
-        const boundaries = [Math.max(row.minArea, 0.01), row.minArea + 0.01];
-        if (row.minArea > 0) boundaries.push(row.minArea - 0.01);
-        if (row.maxArea !== null)
-          boundaries.push(row.maxArea - 0.01, row.maxArea, row.maxArea + 0.01);
-        for (const area of boundaries) {
+        const boundaries = [
+          Math.max(row.minWohnflaeche, 0.01),
+          row.minWohnflaeche + 0.01,
+        ];
+        if (row.minWohnflaeche > 0) boundaries.push(row.minWohnflaeche - 0.01);
+        if (row.maxWohnflaecheExclusive !== null)
+          boundaries.push(
+            row.maxWohnflaecheExclusive - 0.01,
+            row.maxWohnflaecheExclusive,
+            row.maxWohnflaecheExclusive + 0.01,
+          );
+        for (const wohnflaeche of boundaries) {
           const sourceRow = siblings.find(
             (candidate) =>
-              area >= candidate.minArea &&
-              (candidate.maxArea === null || area < candidate.maxArea),
+              wohnflaeche >= candidate.minWohnflaeche &&
+              (candidate.maxWohnflaecheExclusive === null ||
+                wohnflaeche < candidate.maxWohnflaecheExclusive),
           );
           const expected =
-            sourceRow?.medianCents == null ? undefined : areaKey(sourceRow);
+            sourceRow?.mittelwertInCent == null
+              ? undefined
+              : wohnflaechenSpannenKey(sourceRow);
           expect(
-            getWohnflaecheSpanne({ ...base, Qm: area }, visible),
-            `area ${area}`,
+            getWohnflaecheSpanne({ ...base, Qm: wohnflaeche }, visible),
+            `wohnflaeche ${wohnflaeche}`,
           ).toBe(expected);
         }
       },
@@ -104,47 +130,57 @@ for (const edition of editions) {
   });
 }
 
-describe("source footnotes: low-standard deductions", () => {
-  test.each(rules.deductions)("$edition $period (PDF p. $pdfPage)", (rule) => {
-    const row = editions
-      .find((data) => data.edition === rule.edition)!
-      .rows.find(
-        (candidate) =>
-          candidate.period === rule.period && candidate.medianCents !== null,
-      )!;
-    for (const [heating, bathroom, deduction] of [
-      ["Ja", "Ja", 0],
-      ["Nein", "Ja", rule.oneMissingCents],
-      ["Ja", "Nein", rule.oneMissingCents],
-      ...(rule.bothMissingCents === null
-        ? []
-        : [["Nein", "Nein", rule.bothMissingCents]]),
-    ] as const) {
-      const ctx = contextFor(rule.edition, row);
-      ctx.ausstattung = {
-        sammelheizung: heating as "Ja" | "Nein",
-        bad: bathroom as "Ja" | "Nein",
-      };
-      expect(getWorstBestAusstattungsAbzug(ctx)).toEqual({
-        best: Number(deduction) / 100,
-        worst: Number(deduction) / 100,
-      });
-    }
-  });
+describe("source footnotes: Ausstattungsabzüge", () => {
+  test.each(rules.ausstattungsAbzuege)(
+    "$mietspiegeljahr $baujahrSpanne (PDF p. $pdfPage)",
+    (rule) => {
+      const row = mietspiegelReferences
+        .find((data) => data.mietspiegeljahr === rule.mietspiegeljahr)!
+        .rows.find(
+          (candidate) =>
+            candidate.baujahrSpanne === rule.baujahrSpanne &&
+            candidate.mittelwertInCent !== null,
+        )!;
+      for (const [sammelheizung, bad, ausstattungsAbzug] of [
+        ["Ja", "Ja", 0],
+        ["Nein", "Ja", rule.ausstattungsAbzugForOneMissingMerkmalInCent],
+        ["Ja", "Nein", rule.ausstattungsAbzugForOneMissingMerkmalInCent],
+        ...(rule.ausstattungsAbzugWithoutSammelheizungAndBadInCent === null
+          ? []
+          : [
+              [
+                "Nein",
+                "Nein",
+                rule.ausstattungsAbzugWithoutSammelheizungAndBadInCent,
+              ],
+            ]),
+      ] as const) {
+        const ctx = contextFor(rule.mietspiegeljahr, row);
+        ctx.ausstattung = {
+          sammelheizung: sammelheizung as "Ja" | "Nein",
+          bad: bad as "Ja" | "Nein",
+        };
+        expect(getWorstBestAusstattungsAbzug(ctx)).toEqual({
+          best: Number(ausstattungsAbzug) / 100,
+          worst: Number(ausstattungsAbzug) / 100,
+        });
+      }
+    },
+  );
 });
 
-describe("2015 section 10.1: every special-feature cell", () => {
+describe("2015 section 10.1: every Sondermerkmal cell", () => {
   for (const [name, amounts] of Object.entries(
-    rules.specialFeatures2015.amountsCents,
+    rules.sondermerkmale2015.zuAbschlaegeInCent,
   )) {
     test.each(
-      rules.specialFeatures2015.periods.map((period, index) => ({
-        period,
+      rules.sondermerkmale2015.baujahrSpannen.map((baujahrSpanne, index) => ({
+        baujahrSpanne,
         amount: amounts[index],
       })),
-    )(`${name}: $period`, ({ period, amount }) => {
-      const row = editions[0].rows.find(
-        (candidate) => candidate.period === period,
+    )(`${name}: $baujahrSpanne`, ({ baujahrSpanne, amount }) => {
+      const row = mietspiegelReferences[0].rows.find(
+        (candidate) => candidate.baujahrSpanne === baujahrSpanne,
       )!;
       const ctx = contextFor("2015", row, undefined, [name]);
       expect(getWorstBestSondermerkmalModifier(ctx)).toEqual({
