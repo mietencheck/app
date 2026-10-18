@@ -18,7 +18,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest",
-    "type-check": "tsc --noEmit",
+    "test:mietspiegel": "vitest run src/calculation/verification",
+    "test:e2e": "playwright test",
+    "type-check": "tsc --noEmit && tsc --noEmit --project tsconfig.node.json",
     "lint": "eslint .",
     "format": "prettier . --write",
     "generate-sitemap": "tsx scripts/generate-sitemap.ts",
@@ -107,6 +109,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260410.1",
+    "@playwright/test": "^1.64.1",
     "dts-dom": "^3.7.0",
     "react-router-dom": "^6.30.0",
     "vite-react-ssg": "^0.9.0",

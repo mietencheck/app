@@ -21,27 +21,18 @@ export function getWorstBestAusstattungsAbzug(
     };
   }
 
-  const isChecked = (m: AusstattungState) => m == "Nein";
-  const isMaybeOrChecked = (m: AusstattungState) =>
-    m == "Nein" || m == "Nicht sicher";
-
-  const best =
-    isMaybeOrChecked(ausstattung.sammelheizung) &&
-    isMaybeOrChecked(ausstattung.bad)
-      ? ausstattungsAbzuege["!SH && !Bad"]
-      : isMaybeOrChecked(ausstattung.sammelheizung) ||
-          isMaybeOrChecked(ausstattung.bad)
-        ? ausstattungsAbzuege["!SH || !Bad"]
-        : 0;
-  const worst =
-    isChecked(ausstattung.sammelheizung) && isChecked(ausstattung.bad)
-      ? ausstattungsAbzuege["!SH && !Bad"]
-      : isChecked(ausstattung.sammelheizung) || isChecked(ausstattung.bad)
-        ? ausstattungsAbzuege["!SH || !Bad"]
-        : 0;
-
-  return {
-    best: best,
-    worst: worst,
-  };
+  const possibilities = (state: AusstattungState): boolean[] =>
+    state === "Nicht sicher" ? [true, false] : [state === "Ja"];
+  const deductions = possibilities(ausstattung.sammelheizung).flatMap(
+    (hasHeating) =>
+      possibilities(ausstattung.bad).map((hasBathroom) =>
+        !hasHeating && !hasBathroom
+          ? ausstattungsAbzuege["!SH && !Bad"]
+          : !hasHeating || !hasBathroom
+            ? ausstattungsAbzuege["!SH || !Bad"]
+            : 0,
+      ),
+  );
+  // Deductions are not necessarily monotonic: see the 2017 pre-1919 footnote.
+  return { best: Math.max(...deductions), worst: Math.min(...deductions) };
 }

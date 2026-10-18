@@ -30,3 +30,8 @@ dist-ssr
 
 # Generated at build time
 public/sitemap.xml
+
+# Browser verification artifacts
+test-results/
+playwright-report/
+*.tsbuildinfo

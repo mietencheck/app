@@ -74,6 +74,7 @@
     "Ergebnis speichern": "Save result",
     "Auswertung": "Evaluation",
     "pro-qm": "$VALUE per m²",
+    "pro-monat": "$VALUE per month",
     "Details": "Details",
     "Merkmale": "Features",
     "Deine Daten": "Your results",
@@ -292,7 +293,6 @@
     "79aff0": "Feature groups",
     "06d6c4": "Special features",
     "fff0b4": "Bathroom",
-    "2f7e5e": "Is there a bathroom that is larger than 4 square metres?",
     "d4a8a1": "Is there a shower and a bathtub in the flat?",
     "e609d5": "Are the bathrooms modern?",
     "dc75da": "A bathroom is considered to be modern if the walls next to the washbasin, bathtub and shower are tiled and if there are floor tiles, a single-lever mixer tap, a structural radiator as towel warmer and a bathtub or a shower. ",
@@ -538,6 +538,7 @@
     "8fdfdf": "Are there villa-type apartment blocks in the vicinity of the house?",
     "e32dbb": "Is there a parking space for the car provided by the landlord near the flat?",
     "a9ab62": "Please note: The car park may also be subject to a charge",
-    "b794c8": "Result"
+    "b794c8": "Result",
+    "002286": "Is there a bathroom with at least 4 m² of floor area?"
   }
 }

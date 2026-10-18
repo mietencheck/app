@@ -17,8 +17,8 @@ export const ausstattungsAbzuegeByYear = {
   },
   "2017": {
     "-1918": {
-      "!SH && !Bad": 1.34,
-      "!SH || !Bad": 0.87,
+      "!SH && !Bad": 0.87,
+      "!SH || !Bad": 1.34,
     },
     "1919-1949": {
       "!SH && !Bad": 0.87,

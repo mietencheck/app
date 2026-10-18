@@ -1,0 +1,116 @@
+[
+  {
+    "id": "2015-B",
+    "edition": "2015",
+    "pdfPage": 17,
+    "section": "11.4 B",
+    "field": "H2",
+    "area": "80",
+    "groups": [1, 1, 1, -1, -1],
+    "specialFeatures": [],
+    "expectedPerSqmCents": 583,
+    "standardNewTenancyMonthlyCents": 51304
+  },
+  {
+    "id": "2015-C",
+    "edition": "2015",
+    "pdfPage": 17,
+    "section": "11.4 C",
+    "field": "G3",
+    "area": "65",
+    "groups": [0, 0, 0, 0, 0],
+    "specialFeatures": [
+      "[Sondermerkmal] Moderne Küchenausstattung",
+      "[Sondermerkmal] Modernes Bad"
+    ],
+    "expectedPerSqmCents": 641,
+    "standardNewTenancyMonthlyCents": 45832
+  },
+  {
+    "id": "2015-D",
+    "edition": "2015",
+    "pdfPage": 18,
+    "section": "11.4 D",
+    "field": "I1",
+    "area": "85",
+    "groups": [1, 1, 1, 1, 0],
+    "specialFeatures": [
+      "[Sondermerkmal] Hochwertiger Bodenbelag",
+      "[Sondermerkmal] Modernes Bad"
+    ],
+    "expectedPerSqmCents": 749,
+    "standardNewTenancyMonthlyCents": 70032
+  },
+  {
+    "id": "2017-B",
+    "edition": "2017",
+    "pdfPage": 16,
+    "section": "10.4 B",
+    "field": "H2",
+    "area": "80",
+    "groups": [1, 1, 1, -1, -1],
+    "specialFeatures": [],
+    "expectedPerSqmCents": 640,
+    "standardNewTenancyMonthlyCents": 56320
+  },
+  {
+    "id": "2019-B",
+    "edition": "2019",
+    "pdfPage": 20,
+    "section": "10.4 B",
+    "field": "D2",
+    "area": "50",
+    "groups": [1, 1, 1, -1, -1],
+    "specialFeatures": [],
+    "expectedPerSqmCents": 676,
+    "standardNewTenancyMonthlyCents": 37180
+  },
+  {
+    "id": "2021-B",
+    "edition": "2021",
+    "pdfPage": 19,
+    "section": "10.4 B",
+    "field": "D2",
+    "area": "50",
+    "groups": [1, 1, 1, -1, -1],
+    "specialFeatures": [],
+    "expectedPerSqmCents": 683,
+    "standardNewTenancyMonthlyCents": 37565
+  },
+  {
+    "id": "2023-B",
+    "edition": "2023",
+    "pdfPage": 19,
+    "section": "10.4 B",
+    "field": "D2",
+    "area": "50",
+    "groups": [1, 1, 1, -1, -1],
+    "specialFeatures": [],
+    "expectedPerSqmCents": 720,
+    "standardNewTenancyMonthlyCents": 39600
+  },
+  {
+    "id": "2024-B",
+    "edition": "2024",
+    "pdfPage": 23,
+    "section": "10.4 B",
+    "field": "63",
+    "area": "60",
+    "groups": [1, 1, 1, -1, -1],
+    "specialFeatures": [],
+    "expectedPerSqmCents": 753,
+    "standardNewTenancyMonthlyCents": 49698
+  },
+  {
+    "id": "2026-B",
+    "edition": "2026",
+    "pdfPage": 23,
+    "section": "10.4 B",
+    "field": "81",
+    "area": "60",
+    "groups": [1, 1, 1, -1, -1],
+    "specialFeatures": [],
+    "expectedPerSqmCents": 775,
+    "standardNewTenancyMonthlyCents": 51150
+  }
+]

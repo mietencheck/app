@@ -44,7 +44,7 @@ test.each([
       description:
         "Case where Sondermerkmal is 'checked' for a wohnwertminderendes Sondermerkmal",
       answers: {
-        "Sondermerkmal Badezimmer Klein": "Nein",
+        "Sondermerkmal Badezimmer mindestens 4qm": "Nein",
         Baujahr: 1991,
       },
       result: {
@@ -56,7 +56,7 @@ test.each([
       description:
         "Case where Sondermerkmal is 'maybe' for a wohnwertminderendes Sondermerkmal",
       answers: {
-        "Sondermerkmal Badezimmer Klein": "Nicht sicher",
+        "Sondermerkmal Badezimmer mindestens 4qm": "Nicht sicher",
         Baujahr: 1991,
       },
       result: {
@@ -69,7 +69,7 @@ test.each([
         "Case where Sondermerkmal is 'checked' for a wohnwertminderendes and a wohnwertsteigerndes Sondermerkmal",
       answers: {
         "Sondermerkmal Bodenbelag": "Ja",
-        "Sondermerkmal Badezimmer Klein": "Nein",
+        "Sondermerkmal Badezimmer mindestens 4qm": "Nein",
         Baujahr: 1991,
       },
       result: {
@@ -82,7 +82,7 @@ test.each([
         "Case where Sondermerkmal is 'maybe' for a wohnwertminderendes and a wohnwertsteigerndes Sondermerkmal",
       answers: {
         "Sondermerkmal Bodenbelag": "Nicht sicher",
-        "Sondermerkmal Badezimmer Klein": "Nicht sicher",
+        "Sondermerkmal Badezimmer mindestens 4qm": "Nicht sicher",
         Baujahr: 1991,
       },
       result: {

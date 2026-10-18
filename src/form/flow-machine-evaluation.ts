@@ -194,15 +194,13 @@ export function evaluateFlowMachine(submittedAnswers: Record<string, unknown>) {
   const { state: normalizedState, issues } =
     normalizeFlowMachineInput(submittedAnswers);
   const derivedState = applyDerivedAnswers(normalizedState);
-  const steps = flowMachine.run(
-    flowMachine.answers(normalizedState).state as AnswerData,
-  );
+  const evaluatedState = flowMachine.answers(derivedState).state;
+  const steps = flowMachine.run(evaluatedState);
+  const visibleQuestionAliases = getVisibleQuestionAliasesFromSteps(steps);
 
   return {
-    answers: serializeFlowMachineState(derivedState),
-    visibleQuestionAliases: Array.from(
-      getVisibleQuestionAliasesFromSteps(steps),
-    ),
+    answers: serializeFlowMachineState(evaluatedState),
+    visibleQuestionAliases: Array.from(visibleQuestionAliases),
     steps,
     issues,
   };

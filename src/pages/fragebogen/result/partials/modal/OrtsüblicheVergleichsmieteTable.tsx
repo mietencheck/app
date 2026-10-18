@@ -30,10 +30,8 @@ export function OrtsüblicheVergleichsmieteTable() {
     return null;
   }
 
-  const preisspanne = getWorstBestPreisspanne(ctx) || {
-    best: [0, 0, 0],
-    worst: [0, 0, 0],
-  };
+  const preisspanne = getWorstBestPreisspanne(ctx);
+  if (!preisspanne) return null;
 
   const spanneneinordung = getWorstBestSpanneneinordnungInPercent(ctx);
 
@@ -52,14 +50,11 @@ export function OrtsüblicheVergleichsmieteTable() {
     ),
   };
 
-  const ortsueblicheVergleichsmiete = getWorstBestOrtsueblicheVergleichsmiete(
-    ctx,
-  ) || {
-    best: 0,
-    worst: 0,
-  };
+  const ortsueblicheVergleichsmiete =
+    getWorstBestOrtsueblicheVergleichsmiete(ctx);
+  if (!ortsueblicheVergleichsmiete) return null;
 
-  const [avg, _, upper] = preisspanne.worst;
+  const [avg, , upper] = preisspanne.worst;
   const merkmalsgruppenValueIsLimited =
     ortsueblicheVergleichsmiete.worst >= upper &&
     merkmalsgruppenInEuro.worst !== upper - avg;
@@ -78,14 +73,8 @@ export function OrtsüblicheVergleichsmieteTable() {
       ? [
           {
             name: l("Sondermerkmal Aufschlag"),
-            worst:
-              sondermerkmalAufschlag.best == 0
-                ? formatEuro(0)
-                : formatEuro(sondermerkmalAufschlag.worst),
-            best:
-              sondermerkmalAufschlag.worst == 0
-                ? formatEuro(0)
-                : formatEuro(sondermerkmalAufschlag.best),
+            worst: formatEuro(sondermerkmalAufschlag.worst),
+            best: formatEuro(sondermerkmalAufschlag.best),
           },
         ]
       : []),

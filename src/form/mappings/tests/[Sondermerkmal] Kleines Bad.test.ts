@@ -15,7 +15,7 @@ test.each([
       answers: {
         Vertragsdatum: "2015-2016",
         Baujahr: 1991,
-        "Sondermerkmal Badezimmer Klein": "Nein",
+        "Sondermerkmal Badezimmer mindestens 4qm": "Nein",
       },
       expected: {
         "[Sondermerkmal] Kleines Bad": "checked",
@@ -25,7 +25,7 @@ test.each([
       answers: {
         Vertragsdatum: "2015-2016",
         Baujahr: 1991,
-        "Sondermerkmal Badezimmer Klein": "Nicht sicher",
+        "Sondermerkmal Badezimmer mindestens 4qm": "Nicht sicher",
       },
       expected: {
         "[Sondermerkmal] Kleines Bad": "maybe",
@@ -35,7 +35,7 @@ test.each([
       answers: {
         Vertragsdatum: "2015-2016",
         Baujahr: 1991,
-        "Sondermerkmal Badezimmer Klein": "Nein",
+        "Sondermerkmal Badezimmer mindestens 4qm": "Nein",
       },
       expected: {
         "[Sondermerkmal] Kleines Bad": "checked",
@@ -46,7 +46,7 @@ test.each([
       answers: {
         Vertragsdatum: "2015-2016",
         Baujahr: 1918,
-        "Sondermerkmal Badezimmer Klein": "Nein",
+        "Sondermerkmal Badezimmer mindestens 4qm": "Nein",
       },
       expected: {
         "[Sondermerkmal] Kleines Bad": "unchecked",

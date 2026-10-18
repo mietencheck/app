@@ -13,7 +13,7 @@ export const SONDERMERKMAL_RESET_ANSWERS = {
   "Sondermerkmal Bodenbelag": "Nein",
   "Sondermerkmal Moderne Küche": "Nein",
   "Sondermerkmal Dusche Und Badewanne": "Nein",
-  "Sondermerkmal Badezimmer Klein": "Ja",
+  "Sondermerkmal Badezimmer mindestens 4qm": "Ja",
   "Sondermerkmal Modernes Bad": "Nein",
   "Sondermerkmal Schallschutzfenster": "Nein",
   "Sondermerkmal Aufzug": "Nein",
@@ -37,7 +37,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Bad hat bodengleiche Dusche": "Nein",
 
   // Bad-
-  "Bad größer als 4qm": "Ja",
+  "Bad mindestens 4qm": "Ja",
   "Bad hat Duschmöglichkeit": "Ja",
   "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad": "Nein",
   "Bad & WC ohne Waschbecken": "Nein",
@@ -150,7 +150,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Sondermerkmal Modernes Bad": "Nein",
   "Sondermerkmal Moderne Küche": "Nein",
   "Sondermerkmal Dusche Und Badewanne": "Nein",
-  "Sondermerkmal Badezimmer Klein": "Nein",
+  "Sondermerkmal Badezimmer mindestens 4qm": "Nein",
   "Sondermerkmal Schallschutzfenster": "Nein",
   "Sondermerkmal Aufzug": "Nein",
 } satisfies FinalAnswers;

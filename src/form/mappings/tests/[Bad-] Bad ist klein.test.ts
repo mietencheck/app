@@ -18,7 +18,7 @@ test.each([
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Bad größer als 4qm": "Ja",
+        "Bad mindestens 4qm": "Ja",
       },
       expected: {
         "[Bad-] Bad ist klein": "unchecked",
@@ -27,7 +27,7 @@ test.each([
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Bad größer als 4qm": "Nicht sicher",
+        "Bad mindestens 4qm": "Nicht sicher",
       },
       expected: {
         "[Bad-] Bad ist klein": "maybe",
@@ -36,19 +36,19 @@ test.each([
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        "Bad größer als 4qm": "Nein",
+        "Bad mindestens 4qm": "Nein",
       },
       expected: {
         "[Bad-] Bad ist klein": "checked",
       },
     })),
-    // Check if answer is ignored when Sondermerkmal Badezimmer Klein is checked
+    // Check if answer is ignored when Sondermerkmal Badezimmer mindestens 4qm is checked
     {
       answers: {
         Vertragsdatum: "2015-2016",
         Baujahr: 1991,
-        "Sondermerkmal Badezimmer Klein": "Nein",
-        "Bad größer als 4qm": "Nein",
+        "Sondermerkmal Badezimmer mindestens 4qm": "Nein",
+        "Bad mindestens 4qm": "Nein",
       },
       expected: {
         "[Bad-] Bad ist klein": "unchecked",
@@ -67,7 +67,7 @@ test.each([
         Vertragsdatum: vertragsdatum,
         Baujahr: 1973,
         Ost: true,
-        "Bad größer als 4qm": "Nein",
+        "Bad mindestens 4qm": "Nein",
       },
       expected: {
         "[Bad-] Bad ist klein": "unchecked",

@@ -4751,8 +4751,8 @@
                                     {
                                       "id": "beiwa",
                                       "type": "Question",
-                                      "alias": "Sondermerkmal Badezimmer Klein",
-                                      "text": "Gibt es ein Badezimmer, das größer als 4 qm ist?",
+                                      "alias": "Sondermerkmal Badezimmer mindestens 4qm",
+                                      "text": "Gibt es ein Badezimmer mit mindestens 4 m² Grundfläche?",
                                       "info": null,
                                       "answer": {
                                         "type": "ChoiceAnswer",
@@ -5535,7 +5535,7 @@
                                             "id": "0wbce",
                                             "questionRef": {
                                               "type": "AliasRef",
-                                              "value": "Sondermerkmal Badezimmer Klein"
+                                              "value": "Sondermerkmal Badezimmer mindestens 4qm"
                                             },
                                             "negated": false,
                                             "type": "AnswerOptionComparison",
@@ -5551,8 +5551,8 @@
                                         {
                                           "id": "uyizu",
                                           "type": "Question",
-                                          "alias": "Bad größer als 4qm",
-                                          "text": "Gibt es ein Badezimmer, das größer als 4 qm ist?",
+                                          "alias": "Bad mindestens 4qm",
+                                          "text": "Gibt es ein Badezimmer mit mindestens 4 m² Grundfläche?",
                                           "info": null,
                                           "answer": {
                                             "type": "ChoiceAnswer",
@@ -5648,8 +5648,8 @@
                                     {
                                       "id": "jxswc",
                                       "type": "Question",
-                                      "alias": "Bad größer als 4qm",
-                                      "text": "Gibt es ein Badezimmer, das größer als 4 qm ist?",
+                                      "alias": "Bad mindestens 4qm",
+                                      "text": "Gibt es ein Badezimmer mit mindestens 4 m² Grundfläche?",
                                       "info": null,
                                       "answer": {
                                         "type": "ChoiceAnswer",
@@ -5689,7 +5689,7 @@
                                     "id": "oxt1s",
                                     "questionRef": {
                                       "type": "AliasRef",
-                                      "value": "Bad größer als 4qm"
+                                      "value": "Bad mindestens 4qm"
                                     },
                                     "negated": false,
                                     "type": "AnswerOptionComparison",

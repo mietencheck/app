@@ -25,17 +25,12 @@ export function ZulaessigeHoechstmieteTable() {
     return null;
   }
 
+  const vergleichsmiete = getWorstBestOrtsueblicheVergleichsmiete(ctx);
+  const hoechstmiete = getWorstBestZulaessigeHoechstmiete(ctx);
+  if (!vergleichsmiete || !hoechstmiete) return null;
   const { worst: worstVergleichsmietePerQm, best: bestVergleichsmietePerQm } =
-    getWorstBestOrtsueblicheVergleichsmiete(ctx) ?? {
-      worst: 0,
-      best: 0,
-    };
-
-  const { best: bestHöchstmiete, worst: worstHöchstmiete } =
-    getWorstBestZulaessigeHoechstmiete(ctx) ?? {
-      best: 0,
-      worst: 0,
-    };
+    vergleichsmiete;
+  const { best: bestHöchstmiete, worst: worstHöchstmiete } = hoechstmiete;
 
   const wohnflaeche = ctx.wohnflaeche;
 
@@ -45,15 +40,19 @@ export function ZulaessigeHoechstmieteTable() {
       worst: l("pro-qm", { VALUE: formatEuro(worstVergleichsmietePerQm) }),
       best: l("pro-qm", { VALUE: formatEuro(bestVergleichsmietePerQm) }),
     },
-    {
-      name: l("10% Aufschlag"),
-      worst: l("pro-qm", {
-        VALUE: formatEuro(worstVergleichsmietePerQm * 0.1),
-      }),
-      best: l("pro-qm", {
-        VALUE: formatEuro(bestVergleichsmietePerQm * 0.1),
-      }),
-    },
+    ...(ctx.typ === "Miete"
+      ? [
+          {
+            name: l("10% Aufschlag"),
+            worst: l("pro-qm", {
+              VALUE: formatEuro(worstVergleichsmietePerQm * 0.1),
+            }),
+            best: l("pro-qm", {
+              VALUE: formatEuro(bestVergleichsmietePerQm * 0.1),
+            }),
+          },
+        ]
+      : []),
     {
       name: l("Wohnfläche"),
       worst: `${wohnflaeche}m²`,
@@ -61,8 +60,8 @@ export function ZulaessigeHoechstmieteTable() {
     },
     {
       name: l("Zulässige Höchstmiete"),
-      worst: l("pro-qm", { VALUE: formatEuro(worstHöchstmiete) }),
-      best: l("pro-qm", { VALUE: formatEuro(bestHöchstmiete) }),
+      worst: l("pro-monat", { VALUE: formatEuro(worstHöchstmiete) }),
+      best: l("pro-monat", { VALUE: formatEuro(bestHöchstmiete) }),
     },
   ];
 

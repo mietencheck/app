@@ -68,7 +68,7 @@ export const answersToMerkmalStateMapping = {
     checked_if: { "Bad hat Duschmöglichkeit": "Nein" },
   },
   "[Bad-] Bad ist klein": {
-    checked_if: { "Bad größer als 4qm": "Nein" },
+    checked_if: { "Bad mindestens 4qm": "Nein" },
   },
   "[Bad+] Bad hat großes Waschbecken": {
     checked_if: { "Bad großes Waschbecken": "Ja" },
