@@ -2,7 +2,7 @@ import { MerkmalGruppenStateList } from "~/form/utils/mapMerkmalStateToMerkmalGr
 import { Mietspiegeljahr, Sondermerkmal, Wohnlage } from "~/mietspiegel/types";
 
 import { CalculationContext } from "../types";
-import { ReferenceRow } from "./reference-calculation";
+import { ReferenceRow } from "./reference-miete-calculation";
 import data2015 from "./reference/2015.json";
 import data2017 from "./reference/2017.json";
 import data2019 from "./reference/2019.json";

@@ -4,8 +4,8 @@ import { expect, test } from "vitest";
 import { flowMachine } from "~/form/flow-machine";
 import { vertragsdatumToMietspiegelJahrMapping } from "~/form/mappings/vertragsdatum";
 
-import { mietspiegelReferences } from "./fixtures";
-import { ReferenceRow } from "./reference-calculation";
+import { mietspiegelReferences } from "./mietspiegel-fixtures";
+import { ReferenceRow } from "./reference-miete-calculation";
 
 const vertragsdatumByMietspiegeljahr = Object.fromEntries(
   Object.entries(vertragsdatumToMietspiegelJahrMapping)

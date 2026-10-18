@@ -54,7 +54,7 @@ dimensions and row sequences, preserves blank fields and qualification markers,
 and stores monetary values as integer cents. Visually compare changes with rendered
 PDF pages before accepting new reference data. A green comparison alone cannot
 prove extraction correctness. The deduction and special-feature matrices in
-`rules.json` and the fixed examples are separately transcribed source evidence.
+`mietspiegel-rules.json` and the fixed examples are separately transcribed source evidence.
 
 ### Findings corrected in the initial audit
 

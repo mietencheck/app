@@ -7,9 +7,9 @@ import {
   contextFor,
   merkmalsgruppenNames,
   mietspiegelReferences,
-} from "./fixtures";
-import { referenceVergleichsmietePerQmInCent } from "./reference-calculation";
-import rules from "./reference/rules.json";
+} from "./mietspiegel-fixtures";
+import { referenceVergleichsmietePerQmInCent } from "./reference-miete-calculation";
+import rules from "./reference/mietspiegel-rules.json";
 
 const ausstattungsStates: AusstattungState[] = ["Ja", "Nein", "Nicht sicher"];
 

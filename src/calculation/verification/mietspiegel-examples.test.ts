@@ -2,13 +2,13 @@ import { expect, test } from "vitest";
 
 import { getWorstBestOrtsueblicheVergleichsmiete } from "../ortsueblicheVergleichsmiete";
 import { getWorstBestZulaessigeHoechstmiete } from "../zulaessigeHoechstmiete";
-import { contextFor, mietspiegelReferences } from "./fixtures";
+import { contextFor, mietspiegelReferences } from "./mietspiegel-fixtures";
 import {
   referenceMonthlyHoechstmieteInCent,
   referenceVergleichsmietePerQmInCent,
-} from "./reference-calculation";
+} from "./reference-miete-calculation";
 import examples from "./reference/mietspiegel-examples.json";
-import rules from "./reference/rules.json";
+import rules from "./reference/mietspiegel-rules.json";
 
 test.each(examples)(
   "published $id, PDF p. $pdfPage section $section",

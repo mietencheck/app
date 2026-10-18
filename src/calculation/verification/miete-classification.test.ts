@@ -1,8 +1,8 @@
 import { expect, test } from "vitest";
 
 import { analyzeMieteErgebnis, getMieteDiff } from "../mieteErgebnis";
-import { mietspiegelReferences } from "./fixtures";
-import { referenceMonthlyHoechstmieteInCent } from "./reference-calculation";
+import { mietspiegelReferences } from "./mietspiegel-fixtures";
+import { referenceMonthlyHoechstmieteInCent } from "./reference-miete-calculation";
 
 for (const mietspiegel of mietspiegelReferences) {
   test(`${mietspiegel.mietspiegeljahr}: cent boundaries at both range endpoints`, () => {

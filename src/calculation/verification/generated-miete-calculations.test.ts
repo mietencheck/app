@@ -6,12 +6,12 @@ import {
   contextFor,
   merkmalsgruppenCombinations,
   mietspiegelReferences,
-} from "./fixtures";
+} from "./mietspiegel-fixtures";
 import {
   referenceMonthlyHoechstmieteInCent,
   referenceVergleichsmietePerQmInCent,
-} from "./reference-calculation";
-import rules from "./reference/rules.json";
+} from "./reference-miete-calculation";
+import rules from "./reference/mietspiegel-rules.json";
 
 for (const mietspiegel of mietspiegelReferences) {
   describe(`${mietspiegel.mietspiegeljahr}: independent integer oracle`, () => {

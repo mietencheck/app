@@ -12,8 +12,8 @@ import {
   contextFor,
   mietspiegelReferences,
   wohnflaechenSpannenKey,
-} from "./fixtures";
-import rules from "./reference/rules.json";
+} from "./mietspiegel-fixtures";
+import rules from "./reference/mietspiegel-rules.json";
 
 for (const mietspiegel of mietspiegelReferences) {
   describe(`PDF ${mietspiegel.mietspiegeljahr}: complete table`, () => {

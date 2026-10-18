@@ -12,7 +12,7 @@ import { getWorstBestOrtsueblicheVergleichsmiete } from "../ortsueblicheVergleic
 import { getWorstBestPreisspanne } from "../preisspanne";
 import { CalculationContext } from "../types";
 import { getWorstBestZulaessigeHoechstmiete } from "../zulaessigeHoechstmiete";
-import { mietspiegelReferences } from "./fixtures";
+import { mietspiegelReferences } from "./mietspiegel-fixtures";
 import examples from "./reference/mietspiegel-examples.json";
 
 const vertragsdatumSpannen = [
