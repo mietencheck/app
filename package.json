@@ -19,6 +19,7 @@
     "build-storybook": "storybook build",
     "test": "vitest",
     "test:mietspiegel": "vitest run src/calculation/verification",
+    "test:review": "vitest run src/form/verification",
     "test:e2e": "playwright test",
     "type-check": "tsc --noEmit && tsc --noEmit --project tsconfig.node.json",
     "lint": "eslint .",

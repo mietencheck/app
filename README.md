@@ -114,6 +114,48 @@ When adding an edition, first add and review source evidence, then update produc
 data. Keep expected results independent: never regenerate reference expectations
 from the implementation or replace a failing expectation merely to make a test pass.
 
+### Questionnaire review (Miete flow)
+
+```sh
+pnpm test:review            # Reachability, exits, energy bands, review documents
+pnpm test:review -u         # Regenerate docs/review/* after an intended change
+```
+
+`src/form/verification/flow-paths.ts` searches for answers that lead the real
+questionnaire to a given question or exit. It collects the branch conditions on
+the path, solves them, and confirms every candidate by running `flowMachine`, so
+a reported path is never a false positive. Answers the UI forces (`Typ` =
+Miete, `Vorherige Mieterhöhung` = Nein) are fixed. The Mieterhöhung branch is
+out of scope.
+
+| Test                     | What it checks                                                                                                                                                       |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `merkmal-review.test.ts` | Every mapping refers to real questions/options; every Merkmal can be marked as present per edition; neutral answers mark none; deviations from the text are decided. |
+| `questions.test.ts`      | Every question outside the Mieterhöhung branch is asked in some edition; wording snapshot in `docs/review/fragen.md`.                                                |
+| `exits.test.ts`          | The exact set of exits reachable in the UI, the exits made unreachable by forced answers, and an exit page for each.                                                 |
+| `energy-bands.test.ts`   | kWh bands of the energy questions match the thresholds of each edition (+20 % for Energiebedarf).                                                                    |
+
+The review documents in `docs/review/` are generated and checked as file
+snapshots, so every change to wording, mapping or reachability shows up in a
+diff:
+
+- `merkmale-<jahr>.md`: per Merkmal the Mietspiegel text, the answers that
+  count as present, and in which construction periods the questionnaire can mark
+  it, next to the restrictions stated in the text. A domain expert signs these
+  off (checkbox per Merkmal).
+- `fragen.md`: wording, hints and options of every question, per edition where
+  they differ.
+
+Where the questionnaire deviates from a restriction in the Merkmal text (e.g.
+"gilt nicht für die Baualtersklassen ab 2010"), the test requires an entry in
+`merkmal-review-decisions.ts`. Reviewers set it to `bestätigt` with a reason, or
+fix the flow/data and remove it. Known flow gaps are listed explicitly in the
+tests and fail once fixed, so the lists stay current.
+
+The text comparison reads restrictions from `src/mietspiegel/merkmale/*.json`.
+Those texts are not yet verified against the PDFs; some are known to omit
+restrictions (see the decisions file).
+
 To run the project, first [install PNPM](https://pnpm.io/installation), open a
 terminal and run:
 
