@@ -1,7 +1,7 @@
 /**
  * Test support: for every Mietspiegel edition, contract situation and
  * construction period, determines which Merkmale the questionnaire can mark
- * as present ("checked"). Used by the reachability test and the review sheet.
+ * as present ("checked"). Used by the Merkmal reachability test.
  */
 import { getMerkmalStates } from "~/form/api";
 import { FinalAnswers } from "~/form/flow-machine-runtime";
@@ -63,8 +63,6 @@ export type CoverageRow = {
   merkmal: string;
   /** Period label → whether the Merkmal can be marked as present. */
   checkable: Record<string, boolean>;
-  /** Ids of the question copies that can be asked in this scenario. */
-  questionIds: string[];
 };
 
 export type ScenarioCoverage = {
@@ -81,21 +79,15 @@ export function coverageFor(scenario: Scenario): ScenarioCoverage {
     (period) => period.from <= LAST_BAUJAHR_IN_SCOPE,
   );
   const merkmale = [...merkmaleByYear[scenario.jahr]];
-  const rows = merkmale.map((merkmal) => {
-    const aliases = new Set(
-      answerAlternatives(mappingFor(merkmal)).flatMap(Object.keys),
-    );
-    const checkable = Object.fromEntries(
+  const rows = merkmale.map((merkmal) => ({
+    merkmal,
+    checkable: Object.fromEntries(
       periods.map((period) => [
         period.label,
         Boolean(reachMerkmal(merkmal, { ...scenario, period })),
       ]),
-    );
-    const questionIds = [...aliases]
-      .flatMap((alias) => askedCopyIds(alias, scenario))
-      .sort();
-    return { merkmal, checkable, questionIds };
-  });
+    ),
+  }));
   return { scenario, periods, rows };
 }
 

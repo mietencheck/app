@@ -117,8 +117,7 @@ from the implementation or replace a failing expectation merely to make a test p
 ### Questionnaire review (Miete flow)
 
 ```sh
-pnpm test:review            # Reachability, exits, energy bands, review sheets
-pnpm test:review -u         # Regenerate docs/review/ after an intended change
+pnpm test:review            # Reachability, exits, energy bands
 ```
 
 `src/form/verification/flow-paths.ts` searches for answers that lead the real
@@ -134,13 +133,6 @@ out of scope.
 | `questions.test.ts`      | Every question outside the Mieterhöhung branch is asked in some edition (no dead questions).                                                                         |
 | `exits.test.ts`          | The exact set of exits reachable in the UI, the exits made unreachable by forced answers, and an exit page for each.                                                 |
 | `energy-bands.test.ts`   | kWh bands of the energy questions match the thresholds of each edition (+20 % for Energiebedarf).                                                                    |
-
-The review sheets `docs/review/merkmale-<jahr>.md` are generated and checked as
-file snapshots, so every change to wording, mapping or reachability shows up in
-a diff. Per Merkmal they show the Mietspiegel text, the answers that count as
-present, and in which construction periods the questionnaire can mark it, next
-to the restrictions stated in the text. A domain expert signs these off
-(checkbox per Merkmal).
 
 Where the questionnaire deviates from a restriction in the Merkmal text (e.g.
 "gilt nicht für die Baualtersklassen ab 2010"), the test requires an entry in

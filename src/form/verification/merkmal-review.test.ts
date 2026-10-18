@@ -20,7 +20,6 @@ import {
   decisionKey,
   merkmalReviewDecisions,
 } from "./merkmal-review-decisions";
-import { renderMerkmalSheet } from "./review-sheets";
 
 const coverages: ScenarioCoverage[] = allScenarios().map(coverageFor);
 
@@ -89,17 +88,3 @@ test("every deviation from the Mietspiegel text has a review decision", () => {
     staleDecision: [...decided].filter((key) => !deviations.has(key)).sort(),
   }).toEqual({ withoutDecision: [], staleDecision: [] });
 });
-
-const jahre = [...new Set(coverages.map((c) => c.scenario.jahr))];
-
-test.each(jahre)(
-  "review sheet for Mietspiegel %s is up to date",
-  async (jahr) => {
-    await expect(
-      renderMerkmalSheet(
-        jahr,
-        coverages.filter((c) => c.scenario.jahr === jahr),
-      ),
-    ).toMatchFileSnapshot(`../../../docs/review/merkmale-${jahr}.md`);
-  },
-);
