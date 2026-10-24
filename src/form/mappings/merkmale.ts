@@ -16,6 +16,7 @@ export type AnswerMerkmalStateMappings = {
 
 export type AnswerMerkmalStateMapping = {
   checked_if: ConditionGroup | Condition;
+  denkmalschutzAusnahme?: boolean;
 };
 
 export const answersToMerkmalStateMapping = {
@@ -329,6 +330,7 @@ export const answersToMerkmalStateMapping = {
       checked_if: { "Gebäude ist dicht bebaut": "Ja" },
     },
   "[Gebäude-] Gebäude hat unzureichende Wärmedämmung": {
+    denkmalschutzAusnahme: true,
     checked_if: {
       logic: "or",
       conditions: [
@@ -338,6 +340,7 @@ export const answersToMerkmalStateMapping = {
     },
   },
   "[Gebäude-] Energieverbrauchskennwert größer als 170/155/145": {
+    denkmalschutzAusnahme: true,
     checked_if: {
       logic: "or",
       conditions: [
@@ -351,6 +354,7 @@ export const answersToMerkmalStateMapping = {
     },
   },
   "[Gebäude-] Energieverbrauchskennwert größer als 210/195": {
+    denkmalschutzAusnahme: true,
     checked_if: {
       logic: "or",
       conditions: [
@@ -362,6 +366,7 @@ export const answersToMerkmalStateMapping = {
     },
   },
   "[Gebäude-] Energieverbrauchskennwert größer als 250/235": {
+    denkmalschutzAusnahme: true,
     checked_if: {
       logic: "or",
       conditions: [

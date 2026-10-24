@@ -125,6 +125,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Gebäude hat privaten Keller": "Ja",
   "Gebäude ist dicht bebaut": "Nein",
   "Gebäude hat schlechte Wärmedämmung": "Nein",
+  "Denkmalschutz verhindert energetische Sanierung": "Nein",
   "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad": "Nein",
 
   // Umfeld+

@@ -140,6 +140,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -328,6 +329,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -775,6 +777,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -1599,6 +1602,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -1894,6 +1898,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -2789,6 +2794,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -2952,6 +2958,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -3115,6 +3122,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -3478,6 +3486,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -3953,6 +3962,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -4116,6 +4126,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -4279,6 +4290,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -4583,6 +4595,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -4795,6 +4808,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -5111,6 +5125,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -5382,6 +5397,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -5832,6 +5848,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -6179,6 +6196,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -6601,6 +6619,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -6970,6 +6989,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -7421,6 +7441,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -7813,6 +7834,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -8538,6 +8560,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -8957,6 +8980,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -9384,6 +9408,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -9914,6 +9939,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -10171,6 +10197,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -10430,6 +10457,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -10593,6 +10621,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -11048,6 +11077,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -11511,6 +11541,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -11984,6 +12015,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -12359,6 +12391,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -12957,6 +12990,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -13458,6 +13492,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -13850,6 +13885,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -14725,6 +14761,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -14888,6 +14925,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -15545,6 +15583,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -15961,6 +16000,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -16512,6 +16552,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -17077,6 +17118,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -17647,6 +17689,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -18506,6 +18549,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -18669,6 +18713,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -18690,6 +18735,148 @@ export type StepInfoByAlias = {
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat villenartige Mehrfamilienhäuser"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
+        };
+    };
+    "Denkmalschutz verhindert energetische Sanierung": {
+        answer: "Ja" | "Nein" | "Nicht sicher";
+        state: {
+            Typ?: "Miete" | "Mieterhöhung";
+            Adresse?: string;
+            Wohnlage?: "einfach" | "mittel" | "gut";
+            Ost?: boolean;
+            Unterschrieben?: "Ja" | "Nein";
+            Mietart?: "Staffelmiete" | "Indexmiete" | "Normal";
+            Vertragsdatum?: "<2015" | "2015-2016" | "2016-2018" | "2018-2020" | "2020-2022" | "2022-2024" | "2024-2026" | ">2026";
+            "Neue Mietstaffel seit Vertragsabschluss"?: "Ja" | "Nein";
+            Nettokaltmiete?: number;
+            "Vorherige Mieterhöhung"?: "Ja" | "Nein";
+            "Vorherige Mieterhöhung Grund (Indexmiete)"?: "Indexmiete" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Anderer Grund";
+            "Vorherige Mieterhöhung Grund (Staffelmiete)"?: "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Anderer Grund";
+            "Vorherige Mieterhöhung Grund"?: "Mietspiegel" | "Modernisierung" | "Betriebskostenerhöhung" | "Freiwillig" | "Anderer Grund";
+            "Datum Mieterhöhungsschreiben"?: Date;
+            "Mieterhöhung Grund"?: "Mietspiegel" | "Staffelmiete" | "Indexmiete" | "Modernisierung" | "Betriebskosten" | "Freiwillig" | "Anderer Grund";
+            "Mieterhöhung zugestimmt"?: "Ja" | "Nein";
+            "Staffelmietvertrag aktiv"?: "Ja" | "Nein";
+            "Mieterhöhung wegen  Indexmiete maximal bis zu Inflationsrate"?: "Ja" | "Nein";
+            "Mieterhöhung wegen  Staffelmiete maximal bis zu Staffel"?: "Ja" | "Nein";
+            "Geforderte Nettokaltmiete"?: number;
+            "Kappungsgrenze durch aktuelle Mieterhöhung überschritten"?: boolean;
+            "Mieterhöhung in letzten 33 Monaten"?: "Ja" | "Nein";
+            "Kappungsgrenze überschritten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieterhöhung innerhalb der letzten 15 Monaten"?: "Ja" | "Nein" | "Nicht sicher";
+            Qm?: number;
+            Dachgeschoss?: "Nicht sicher";
+            "Baujahr vor 1991"?: "-1918" | "1919-1949" | "1950-1964" | "1965-1972" | "1973-1985" | "1986-1990" | "1991-";
+            "Baujahr ab 1991"?: number;
+            Baujahr?: number;
+            "Baujahr vor 1.10.2014"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Sammelheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Badezimmer in Wohnung"?: "Ja" | "Nein" | "Nicht sicher";
+            Ausnahmen?: "Sozialwohnung" | "Reihenhaus" | "Wohnung ohne WC " | "Möbliert" | "Keine";
+            "Vermieter hat über Vormiete informiert"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermiete hat Vormiete mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Vormiete schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            Vormiete?: number;
+            "Vermieter hat über umfassende Sanierung informiert"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Renovierungskosten mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Vermieter hat Renovierungskosten schriftlich mitgeteilt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Renovierungskosten ein Drittel des Neubaupreises"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Badezimmer mindestens 4qm"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Dusche Und Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Modernes Bad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Moderne Küche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Schallschutzfenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Aufzug"?: "Ja" | "Nein" | "Nicht sicher";
+            "Sondermerkmal Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mindestens 4qm"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad größer als 8qm"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Duschmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Dusche und Wanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat bodengleiche Dusche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Duschen nur in freistehender Badewanne"?: "Ja" | "Nein" | "Nicht sicher";
+            "Duschen nur in freistehender Badewanne in nicht modernisiertem Bad"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad & WC ohne Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad nur kleines Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad großes Waschbecken"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mehrere WCs"?: "Ja" | "Nein" | "Nicht sicher";
+            "Getrenntes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat wandhängendes WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat hochwertiges Stand-WC"?: "Ja" | "Nein" | "Nicht sicher";
+            "WC ohne Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit WC ohne Fenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit moderner Entlüftung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad ohne Heizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit alter Heizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit Strukturheizkörper"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit Dielenfußboden"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad Wände ausreichend gefließt"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad Boden und Wand hochwertig"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad mit hochwertiger Ausstattung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Einhebelmischbatterie"?: "Ja" | "Nein" | "Nicht sicher";
+            "Bad hat Warmwasser"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Spüle"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche kann Spülmaschine"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Warmwasser"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Kühlschrank"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Heizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Lüftung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche hat Dunstabzug"?: "Ja" | "Nein" | "Nicht sicher";
+            "Küche ist gefliest"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat hochwertigen Fußboden"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat großen Wohnraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Abstellraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Durchgangszimmer"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Balkon"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat großen Balkon"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung keinen Balkon weil unmöglich"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat einfach verglaste Fenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Schallschutzfenster"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Rollläden"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat nicht sichtbare Elektroinstallation"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat ausreichende Elektroinstallation"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Raum mit <2 Steckdosen"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Kabelanschluss"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Internetanschluss"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung ist barrierearm"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat verstärkte Tür"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung im Erdgeschoss"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Einbruchsicherung oder Sichtschutz"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
+            "Mieter zahlt für Kaltwasserzähler"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude Hauseingangstür ist nicht abschließbar"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat sichere Haustür"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Gegensprechanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Gegensprechanlage mit Kamera"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Treppenhaus in schlechtem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Treppenhaus in gutem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat schwellenarmen Zugang"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude ist in schlechtem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude ist in gutem Zustand"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat <5 Stockwerke und Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat >=5 Stockwerke und kein Fahrstuhl"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrradabstellmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrradstellplätze mit Anschließmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Fahrradabstellraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat privaten Abstellraum"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat privaten Keller"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Kennt Energieverbrauch oder Energiebedarf": {
@@ -18974,6 +19161,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
         };
@@ -19118,6 +19306,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -19263,6 +19452,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -19426,6 +19616,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -19573,6 +19764,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -19720,6 +19912,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -19867,6 +20060,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -20016,6 +20210,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -20179,6 +20374,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -20342,6 +20538,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -20491,6 +20688,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -20641,6 +20839,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -20792,6 +20991,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -20944,6 +21144,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -21107,6 +21308,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -21261,6 +21463,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -21415,6 +21618,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -21570,6 +21774,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -21726,6 +21931,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -21883,6 +22089,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -22041,6 +22248,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -22204,6 +22412,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -22363,6 +22572,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -22523,6 +22733,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -22684,6 +22895,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
@@ -22846,6 +23058,7 @@ export type StepInfoByAlias = {
             "Gebäude hat zusätzliche Räume"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
+            "Denkmalschutz verhindert energetische Sanierung"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
