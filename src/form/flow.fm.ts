@@ -81,7 +81,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -269,7 +269,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -716,7 +716,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1540,7 +1540,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1835,7 +1835,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2730,7 +2730,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2893,7 +2893,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3056,7 +3056,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3419,7 +3419,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3894,7 +3894,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4057,7 +4057,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4220,7 +4220,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4524,7 +4524,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4736,7 +4736,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5052,7 +5052,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5323,7 +5323,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5773,7 +5773,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6120,7 +6120,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6542,7 +6542,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6911,7 +6911,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7362,7 +7362,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7754,7 +7754,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8316,7 +8316,7 @@ export type StepInfoByAlias = {
         };
     };
     "Küche hat Kücheninsel": {
-        answer: "Ja" | "Nein" | "nicht sicher";
+        answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
             Typ?: "Miete" | "Mieterhöhung";
             Adresse?: string;
@@ -8479,7 +8479,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8642,7 +8642,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Küche hat Gas/Elektroherd ohne Backofen": {
@@ -8726,7 +8726,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -8811,7 +8811,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8898,7 +8898,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9061,7 +9061,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9148,7 +9148,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9236,7 +9236,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9325,7 +9325,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9488,7 +9488,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9579,7 +9579,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9670,7 +9670,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9762,7 +9762,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9855,7 +9855,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10018,7 +10018,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10112,7 +10112,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10275,7 +10275,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10371,7 +10371,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10534,7 +10534,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10697,7 +10697,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10793,7 +10793,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10891,7 +10891,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10989,7 +10989,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11152,7 +11152,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11251,7 +11251,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11351,7 +11351,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11452,7 +11452,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11615,7 +11615,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11717,7 +11717,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11821,7 +11821,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11925,7 +11925,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12088,7 +12088,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12193,7 +12193,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12300,7 +12300,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12463,7 +12463,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12570,7 +12570,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12679,7 +12679,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12788,7 +12788,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12898,7 +12898,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13061,7 +13061,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13172,7 +13172,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13286,7 +13286,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13399,7 +13399,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13562,7 +13562,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13676,7 +13676,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13791,7 +13791,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13954,7 +13954,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14070,7 +14070,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14187,7 +14187,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14305,7 +14305,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14424,7 +14424,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14545,7 +14545,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14666,7 +14666,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14829,7 +14829,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14992,7 +14992,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15114,7 +15114,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15237,7 +15237,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15361,7 +15361,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15486,7 +15486,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15649,7 +15649,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15775,7 +15775,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15902,7 +15902,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16065,7 +16065,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16193,7 +16193,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16322,7 +16322,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16453,7 +16453,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16616,7 +16616,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16750,7 +16750,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16884,7 +16884,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17018,7 +17018,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17181,7 +17181,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17315,7 +17315,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17452,7 +17452,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17588,7 +17588,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17751,7 +17751,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17888,7 +17888,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18027,7 +18027,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18166,7 +18166,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18306,7 +18306,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18447,7 +18447,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18610,7 +18610,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18773,7 +18773,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18915,7 +18915,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19059,7 +19059,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19204,7 +19204,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19367,7 +19367,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19514,7 +19514,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19661,7 +19661,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19808,7 +19808,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19957,7 +19957,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20120,7 +20120,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20283,7 +20283,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20432,7 +20432,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20582,7 +20582,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20733,7 +20733,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20885,7 +20885,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21048,7 +21048,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21202,7 +21202,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21356,7 +21356,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21511,7 +21511,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21667,7 +21667,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21824,7 +21824,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21982,7 +21982,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22145,7 +22145,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22304,7 +22304,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22464,7 +22464,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22625,7 +22625,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22787,7 +22787,7 @@ export type StepInfoByAlias = {
             "Küche ist groß"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche ist separater Raum"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Einbauküche"?: "Ja" | "Nein" | "Nicht sicher";
-            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "nicht sicher";
+            "Küche hat Kücheninsel"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Kochmöglichkeit"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Gas/Elektroherd ohne Backofen"?: "Ja" | "Nein" | "Nicht sicher";
             "Küche hat Ceran-/Induktionsherd"?: "Ja" | "Nein" | "Nicht sicher";

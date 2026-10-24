@@ -8491,8 +8491,8 @@
                           "id": "x94sm",
                           "type": "Question",
                           "alias": "Küche hat Kücheninsel",
-                          "text": "Ist die Küche von der Vermieterin mit einer freistehenden Kücheninsel mit Kochmöglichkeit oder Spüle ausgestattet worden? ",
-                          "info": "Freistehend heißt, dass diese nicht mit einer Wand oder einer anderen Arbeitsfläche verbunden ist. L-förmige Küchentheken sind daher nicht freistehend.",
+                          "text": "Ist die Küche von der Vermieterin mit einer freistehenden Kücheninsel mit Arbeitsfläche und zusätzlich einer Kochmöglichkeit oder einer Spüle ausgestattet worden?",
+                          "info": "Die Kücheninsel muss eine Arbeitsfläche haben. Zusätzlich muss sie eine Kochmöglichkeit, eine Spüle oder beides haben. Eine Kücheninsel ohne Arbeitsfläche zählt nicht. Freistehend heißt, dass diese nicht mit einer Wand oder einer anderen Arbeitsfläche verbunden ist. L-förmige Küchentheken sind daher nicht freistehend.",
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -8508,7 +8508,7 @@
                               },
                               {
                                 "id": "k0ogk",
-                                "alias": "nicht sicher",
+                                "alias": "Nicht sicher",
                                 "text": "Ich bin mir nicht sicher"
                               }
                             ]
