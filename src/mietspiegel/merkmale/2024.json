@@ -17,7 +17,7 @@
   "[Bad+] Bad hat hochwertige Ausstattung": "Besondere und hochwertige Ausstattung (z.B. hochwertige Sanitärausstattung, hochwertige Badmöbel, Eckwanne, Rundwanne) [bezieht sich nicht auf Gäste-WCs]",
   "[Bad+] Bad hat hochwertige Boden- oder Wandfliesen": "Wandbekleidung und Bodenbelag hochwertig; gilt nicht für die Baualtersklasse 2016 bis 2022 [bezieht sich nicht auf Gäste-WCs]",
   "[Bad+] Bad hat wandhängendes WC": "Wandhängendes WC mit in der Wand eingelassenem Spülkasten (gilt nicht für die Baualtersklassen ab 2002) oder hochwertiges Stand-WC [bezieht sich nicht auf Gäste-WCs]",
-  "[Bad+] Bad hat Strukturheizkörper": "Strukturheizkörper als Handtuchwärmer im Bad (gilt für Baualtersklassen bis einschließlich 2001); sofern zusätzlich elektrisch betreibbar: alle Baujahre [bezieht sich nicht auf Gäste-WCs]",
+  "[Bad+] Bad hat Strukturheizkörper": "Strukturheizkörper als Handtuchwärmer im Bad (gilt für Baualtersklassen bis einschließlich 2001); falls elektrisch betreibbar: alle Baujahre [bezieht sich nicht auf Gäste-WCs]",
   "[Bad+] Bad hat von Badewanne getrennte Dusche": "Von der Badewanne getrennte zusätzliche Duschtasse oder -kabine",
   "[Bad+] Bad hat bodengleiche Dusche": "Bodengleiche Dusche (auch flache Duschtasse mit einer Tiefe von bis zu 3 cm)",
   "[Küche-] Küche ohne Kochmöglichkeit": "Keine Kochmöglichkeit oder Gas-/ Elektroherd ohne Backofen",
