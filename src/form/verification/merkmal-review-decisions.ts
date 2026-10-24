@@ -26,6 +26,12 @@ const FUENFTES_OG_2024 =
   "Fragebogen ist vermutlich korrekt. Der Merkmaltext in src/mietspiegel/merkmale/2024.json ist unvollständig: Das PDF enthält „gilt nicht für die Baualtersklassen bis 1949“.";
 
 export const merkmalReviewDecisions: Record<string, ReviewDecision> = {
+  "2015 | [Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen | -1918":
+    {
+      status: "bestätigt",
+      hinweis:
+        "Mietspiegel 2015, S. 15/21: Bis 1918 wird der Aufzug ausschließlich als Sondermerkmal erfasst, um eine Doppelzählung zu vermeiden. Die Textprüfung löst diese Sondermerkmal-Bedingung nicht auf.",
+    },
   "2024 | [Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen | 2010-2015":
     {
       status: "offen",
