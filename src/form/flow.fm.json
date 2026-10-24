@@ -9009,7 +9009,7 @@
                               "type": "Question",
                               "alias": "Küche hat Kühlschrank",
                               "text": "Ist die Küche von der Vermieterin mit einem Kühlschrank ausgestattet worden?",
-                              "info": "Der Kühlschrank zählt nur wenn er bei der Überlassung in einem annähernd neuwertigen Zustand war und der Vermieter keine extra Miete für diesen verlangt.",
+                              "info": "Berücksichtige nur einen Kühlschrank, den deine Vermieterin gestellt hat. Ein selbst angeschaffter Kühlschrank zählt nicht, wenn deine Vermieterin die Kosten nicht erstattet hat.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
@@ -9042,7 +9042,7 @@
                           "type": "Question",
                           "alias": "Küche hat Kühlschrank",
                           "text": "Ist die Küche von deiner Vermieterin mit mindestens einem der folgenden Geräte ausgestattet: Kühlschrank, Tiefkühlschrank, Geschirrspüler.",
-                          "info": "Diese Geräte zählen nur wenn sie bei der Überlassung in einem annähernd neuwertigen Zustand waren und der Vermieter keine extra Miete für sie verlangt.",
+                          "info": "Berücksichtige nur Geräte, die deine Vermieterin gestellt hat. Selbst angeschaffte Geräte zählen nicht, wenn deine Vermieterin die Kosten nicht erstattet hat.",
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -9580,33 +9580,89 @@
                       ]
                     },
                     {
-                      "id": "kf62u",
-                      "type": "Question",
-                      "alias": "Wohnung hat Durchgangszimmer",
-                      "text": "Gibt es in der Wohnung ein gefangenes Zimmer oder Durchgangszimmer?",
-                      "info": "Ein Durchgangszimmer ist ein Zimmer, durch welches man durchgehen muss um in ein weiteres Zimmer zu kommen. In das dahinterliegende Zimmer darf man also nicht vom Flur aus kommen. Dieses Merkmal ist auch bei einer Einzimmerwohnung gegeben, bei welcher man die Küche nur durch das Wohn- /Schlafzimmer betreten kann.",
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "uiajj",
-                            "alias": "Ja",
-                            "text": "Ja"
+                      "id": "schnitt2015",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "schnitt2015fall",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "schnitt2015datum",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "wejo0k"
+                            ]
                           },
-                          {
-                            "id": "qzhja",
-                            "alias": "Nein",
-                            "text": "Nein"
+                          "block": [
+                            {
+                              "id": "schnitt2015frage",
+                              "type": "Question",
+                              "alias": "Wohnung hat Durchgangszimmer",
+                              "text": "Hat die Wohnung einen schlechten Schnitt?",
+                              "info": "Der Mietspiegel 2015 nennt als Beispiel für einen schlechten Schnitt mehr als ein gefangenes Zimmer. Ein gefangenes Zimmer ist nur durch einen anderen Raum erreichbar. Das ist ein Beispiel, keine feste Mindestzahl für jeden schlechten Schnitt. Beurteile den Grundriss insgesamt; ein einzelnes gefangenes Zimmer oder Durchgangszimmer führt nicht automatisch zu „Ja“. Wenn du dir nicht sicher bist, wähle „Ich bin mir nicht sicher“.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Merkmal 2015:\nSchlechter Schnitt (z.B. mehr als ein gefangenes Zimmer) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "kf62u",
+                          "type": "Question",
+                          "alias": "Wohnung hat Durchgangszimmer",
+                          "text": "Hat die Wohnung einen schlechten Schnitt?",
+                          "info": "Der Mietspiegel nennt als Beispiele ein gefangenes Zimmer oder ein Durchgangszimmer. Ein gefangenes Zimmer ist nur durch einen anderen Raum erreichbar; ein Durchgangszimmer muss durchquert werden, um in einen anderen Raum zu gelangen. Das sind Beispiele für einen schlechten Schnitt, keine abschließende Liste. Beurteile den Grundriss insgesamt. Wenn du dir nicht sicher bist, wähle „Ich bin mir nicht sicher“.",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "uiajj",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "qzhja",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "8i22j",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
                           },
-                          {
-                            "id": "8i22j",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
-                          }
-                        ]
-                      },
-                      "required": false,
-                      "note": "Merkmal:\nSchlechter Schnitt (z.B. gefangener Raum und/oder Durchgangsraum) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                          "required": false,
+                          "note": "Merkmal:\nSchlechter Schnitt (z.B. gefangener Raum und/oder Durchgangsraum) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -13219,8 +13275,8 @@
                       "id": "7t7r5",
                       "type": "Question",
                       "alias": "Gebäude ist dicht bebaut",
-                      "text": "Befindet sich die Wohnung im Seitenflügel mit sehr dichter Bebauung?",
-                      "info": "Dies ist der Fall, wenn alle Fenster zu einem geschlossenen Hinterhof hinausgehen, bei dem die anderen Häuser nur wenige Meter entfernt stehen.",
+                      "text": "Befindet sich die Wohnung im Seitenflügel oder Quergebäude bei verdichteter Bebauung?",
+                      "info": "Ein Beispiel für verdichtete Bebauung sind eng beieinanderstehende Gebäude um einen kleinen Hinterhof. Beurteile die Bebauung insgesamt. Wenn du dir nicht sicher bist, wähle „Ich bin mir nicht sicher“.",
                       "answer": {
                         "type": "ChoiceAnswer",
                         "options": [
@@ -14404,7 +14460,7 @@
                       "type": "Question",
                       "alias": "Wohnumfeld ist besonders leise",
                       "text": "Liegt die Wohnung in einer besonders ruhigen Lage?",
-                      "info": "Beachte: eine einfache, ruhige Wohnstraße etwa in einer 30er-Zone reicht nicht aus. Nur die Lage an einem ruhigen Park oder in einer Straße mit besonderen (baulichen) Maßnahmen zur Verkehrsberuhigung kommen in Frage. Es darf neben dem Straßenverkehr auch keine anderen Lärmquellen geben, wie etwa Gastronomie.",
+                      "info": "Entscheidend ist, ob die Wohnung besonders ruhig liegt. Auch eine besonders ruhige Innenlage kommt in Betracht. Beispiele sind eine verkehrsberuhigte Straße oder eine parkähnliche Anlage; diese Beispiele sind nicht abschließend. Eine Tempo-30-Zone allein genügt nicht. Berücksichtige auch andere Lärmquellen, etwa Gastronomie. Wenn du die Lage nicht sicher einschätzen kannst, wähle „Ich bin mir nicht sicher“.",
                       "answer": {
                         "type": "ChoiceAnswer",
                         "options": [
@@ -15256,8 +15312,8 @@
                               "id": "u7n29h",
                               "type": "Question",
                               "alias": "Wohnumfeld ist repräsentativ",
-                              "text": "Liegt die Wohnung in der Nähe des Kurfürstendamms oder in Berlin Mitte und in einer repräsentativen und hochwertigen Lage?",
-                              "info": "Beachte: die Einschätzung der Wohnlage als gut nach dem Mietspiegelverzeichnis reicht nicht aus.",
+                              "text": "Liegt die Wohnung in einer bevorzugten Citylage?",
+                              "info": "Gemeint ist die Nähe zu repräsentativen, überregional ausstrahlenden Einkaufs-, Dienstleistungs- und Wohnstandorten. Die Einstufung als gute Wohnlage im Mietspiegel reicht allein nicht aus. Entscheidend ist die konkrete Lage, nicht nur der Name eines Bezirks oder einer Straße. Wenn du die Lage nicht sicher einschätzen kannst, wähle „Ich bin mir nicht sicher“.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
