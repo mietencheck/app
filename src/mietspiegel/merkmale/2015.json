@@ -1,6 +1,6 @@
 {
   "[Bad-] Bad ohne Handwaschbecken": "Kein Handwaschbecken in Bad oder WC oder im Bad nur ein kleines Handwaschbecken (Außenmaß 50 x 25 cm oder kleiner)",
-  "[Bad-] WC ohne Entlüftung": "WC ohne Lüftungsmöglichkeit und Entlüftung",
+  "[Bad-] WC ohne Entlüftung": "WC ohne Lüftungsmöglichkeit oder Entlüftung",
   "[Bad-] Bad mit Dielenfußboden": "Dielenfußboden im Bad",
   "[Bad-] Bad ohne Heizung": "Bad oder WC nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler",
   "[Bad-] Bad ohne ausreichende Warmwasserversorgung": "Keine ausreichende Warmwasserversorgung (keine zentrale Warm- wasserversorgung, kein Durchlauferhitzer, kein Boiler > 60 Liter)",
@@ -18,7 +18,7 @@
   "[Bad+] Bad hat hochwertige Ausstattung": "Besondere und hochwertige Ausstattung (z.B. hochwertige Sanitärausstattung, hochwertige Badmöbel, Eckwanne, Rundwanne)",
   "[Bad+] Bad hat wandhängendes WC": "Nur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Wandhängendes WC mit in der Wand eingelassenem Spülkasten",
   "[Bad+] Bad hat Strukturheizkörper": "Nur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Strukturheizkörper als Handtuchwärmer",
-  "[Bad+] Bad hat Einhebelmischbatterie": "Einhebelmischbatterien",
+  "[Bad+] Bad hat Einhebelmischbatterie": "Nur wenn Sondermerkmal „Modernes Bad“ nicht zutrifft: Einhebelmischbatterien",
   "[Bad+] Bad hat von Badewanne getrennte Dusche": "Nur wenn Sondermerkmal „Von der Badewanne getrennte Dusche“ nicht zutrifft: Von der Badewanne getrennte Dusche",
   "[Küche-] Küche ohne Fenster/Entlüftung": "Küche ohne Fenster und ohne ausreichende Entlüftung",
   "[Küche-] Küche ohne Kochmöglichkeit": "Keine Kochmöglichkeit oder Gas-/ Elektroherd ohne Backofen",

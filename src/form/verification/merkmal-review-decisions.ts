@@ -20,18 +20,7 @@ const WC_ODER =
   "Text: „Wandhängendes WC … (gilt nicht für die Baualtersklassen ab 2002) oder hochwertiges Stand-WC“. Die Einschränkung betrifft nur das wandhängende WC. Zu prüfen: Fragt der Fragebogen ab 2002 nur noch nach dem Stand-WC?";
 const STRUKTURHEIZKOERPER =
   "Text: „gilt für Baualtersklassen bis einschließlich 2001; sofern zusätzlich elektrisch betreibbar: alle Baujahre“. Zu prüfen: Fragt der Fragebogen ab 2002 nach der elektrischen Betreibbarkeit?";
-const HEIZUNGSROHRE_2024 =
-  "Fragebogen ist vermutlich korrekt. Der Merkmaltext in src/mietspiegel/merkmale/2024.json ist unvollständig: Das PDF 2024 enthält „(gilt für Baualtersklassen bis einschließlich 1990)“.";
-const FUENFTES_OG_2024 =
-  "Fragebogen ist vermutlich korrekt. Der Merkmaltext in src/mietspiegel/merkmale/2024.json ist unvollständig: Das PDF enthält „gilt nicht für die Baualtersklassen bis 1949“.";
-
 export const merkmalReviewDecisions: Record<string, ReviewDecision> = {
-  "2024 | [Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen | 2010-2015":
-    {
-      status: "offen",
-      hinweis:
-        "Der Fragebogen schließt Baujahre ab 2010 jetzt korrekt aus. Im Merkmaltext 2024 fehlt diese Einschränkung des PDFs noch.",
-    },
   "2024 | [Gebäude+] Gebäude hat zusätzliche Wärmedämmung | 2010-2015": {
     status: "offen",
     hinweis: WAERMEDAEMMUNG,
@@ -77,23 +66,6 @@ export const merkmalReviewDecisions: Record<string, ReviewDecision> = {
     status: "offen",
     hinweis: STRUKTURHEIZKOERPER,
   },
-  "2024 | [Wohnung+] Wohnung hat nicht sichtbare Heizungsrohre | 1991-2001": {
-    status: "offen",
-    hinweis: HEIZUNGSROHRE_2024,
-  },
-  "2024 | [Wohnung+] Wohnung hat nicht sichtbare Heizungsrohre | 2002-2009": {
-    status: "offen",
-    hinweis: HEIZUNGSROHRE_2024,
-  },
-  "2024 | [Wohnung+] Wohnung hat nicht sichtbare Heizungsrohre | 2010-2015": {
-    status: "offen",
-    hinweis: HEIZUNGSROHRE_2024,
-  },
-  "2024 | [Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug | -1918":
-    { status: "offen", hinweis: FUENFTES_OG_2024 },
-  "2024 | [Gebäude-] Wohnung ab fünftem Obergeschoss ohne Personenaufzug | 1919-1949":
-    { status: "offen", hinweis: FUENFTES_OG_2024 },
-
   "2026 | [Bad+] Bad hat wandhängendes WC | 2002-2009": {
     status: "offen",
     hinweis: WC_ODER,
