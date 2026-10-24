@@ -9859,7 +9859,7 @@
                                           "id": "g6atu",
                                           "type": "Question",
                                           "alias": "Wohnung hat Schallschutzfenster",
-                                          "text": "Sind in der Wohnung überwiegend Fenster mit Wärmeschutzverglasung (Einbau ab 1987) oder Schallschutzfenster verbaut?",
+                                          "text": "Sind in der Wohnung überwiegend Fenster mit Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster verbaut?",
                                           "info": null,
                                           "answer": {
                                             "type": "ChoiceAnswer",
