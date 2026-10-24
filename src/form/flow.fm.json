@@ -11442,8 +11442,8 @@
                               "id": "t608xk",
                               "type": "Question",
                               "alias": "Gebäude hat sichere Haustür",
-                              "text": "Hat das Gebäude eine einbruchssichere Haustür?",
-                              "info": "Hierzu zählt z.B. mehrere Schließbolzen, automatische Alarmanlage oder Aufbohrschutz",
+                              "text": "Sind sowohl deine Wohnungstür als auch die Haustür des Gebäudes einbruchhemmend?",
+                              "info": "Beide Türen müssen zusätzliche moderne Einbruchsicherungsmaßnahmen haben. Wähle „Ja“ nur, wenn dies für beide Türen zutrifft. Wähle „Nein“, wenn mindestens eine der beiden Türen diese Voraussetzung nicht erfüllt. Wähle „Ich bin mir nicht sicher“, wenn keine Tür sicher ausgeschlossen ist, du die Voraussetzung aber nicht für beide Türen bestätigen kannst.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
