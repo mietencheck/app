@@ -462,8 +462,6 @@
     "ddc793": "Is there a private cellar, attic or storage room belonging to the flat?",
     "5da206": "Is there a private cellar or storage room belonging to the flat?",
     "d3c046": "This storage room does not count, if you pay an extra rent for it.",
-    "c99b9e": "Does the landlord offer additional rooms?",
-    "2a29aa": "This includes, for example, communal rooms, a communal kitchen or a fitness room.",
     "c5e954": "Is there a free garage or parking space that comes with the flat at no extra cost?",
     "72caa0": "Is the flat in a side wing of a densely built estate?",
     "14d429": "This is the case if all the windows look out onto a closed backyard where the other houses are only a few metres away.",
@@ -538,7 +536,10 @@
     "ccf64c": "Please note: the assessment of the residential area as good according to the rent index is not sufficient.",
     "8fdfdf": "Are there villa-type apartment blocks in the vicinity of the house?",
     "e32dbb": "Is there a parking space for the car provided by the landlord near the flat?",
-    "a9ab62": "Please note: The car park may also be subject to a charge",
-    "b794c8": "Result"
+    "b794c8": "Result",
+    "c7d9f6": "Does the landlord offer additional rooms outside the flat, within walking distance, that you can use to a reasonable extent?",
+    "252bcf": "Examples include shared rooms, shared kitchens or fitness rooms. Only answer Yes if the rooms are both within walking distance and usable to a reasonable extent.",
+    "2fd3e2": "Does the landlord provide car parking near the flat with sufficient capacity?",
+    "a9ab62": "Please note: The car park may also be subject to a charge"
   }
 }

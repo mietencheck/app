@@ -13127,8 +13127,8 @@
                       "id": "fdcm2",
                       "type": "Question",
                       "alias": "Gebäude hat zusätzliche Räume",
-                      "text": "Werden von der Vermieterin noch zusätzliche Räume angeboten?",
-                      "info": "Hierzu zählt z.B. Gemeinschaftsräume, Gemeinschaftsküche oder ein Fitnessraum.",
+                      "text": "Werden von der Vermieterin zusätzliche Räume außerhalb der Wohnung in fußläufiger Entfernung angeboten, die du in angemessenem Umfang nutzen kannst?",
+                      "info": "Hierzu zählen z.B. Gemeinschaftsräume, Gemeinschaftsküchen oder Fitnessräume. Antworte nur mit Ja, wenn die Räume sowohl in fußläufiger Entfernung liegen als auch in angemessenem Umfang nutzbar sind.",
                       "answer": {
                         "type": "ChoiceAnswer",
                         "options": [
@@ -15362,6 +15362,54 @@
                             ]
                           },
                           "block": []
+                        },
+                        {
+                          "id": "parkplatz2017case",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "parkplatz2017test",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "7np1"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "parkplatz2017",
+                              "type": "Question",
+                              "alias": "Wohnumfeld hat Parkplatz",
+                              "text": "Gibt es ein von der Vermieterin zur Verfügung gestelltes PKW-Parkplatzangebot in der Nähe der Wohnung?",
+                              "info": "Beachte: Das Parkplatzangebot darf auch kostenpflichtig sein",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Merkmal 2017:\nVom Vermieter zur Verfügung gestelltes PKW-Parkplatzangebot in der Nähe [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ]
                         }
                       ],
                       "alternate": [
@@ -15369,7 +15417,7 @@
                           "id": "3cii1",
                           "type": "Question",
                           "alias": "Wohnumfeld hat Parkplatz",
-                          "text": "Gibt es ein von der Vermieterin zur Verfügung gestelltes PKW-Parkplatzangebot in der Nähe der Wohnung?",
+                          "text": "Gibt es ein ausreichend dimensioniertes, von der Vermieterin zur Verfügung gestelltes PKW-Parkplatzangebot in der Nähe der Wohnung?",
                           "info": "Beachte: Das Parkplatzangebot darf auch kostenpflichtig sein",
                           "answer": {
                             "type": "ChoiceAnswer",
@@ -15392,7 +15440,7 @@
                             ]
                           },
                           "required": false,
-                          "note": "Merkmal 2017-2024:\nVom Vermieter zur Verfügung gestelltes PKW-Parkplatzangebot in der Nähe [++]\n\nMerkmal >=2026:\nVom Vermieter zur Verfügung gestelltes PKW-Parkplatzangebot in der Nähe (ausreichend dimensioniert) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                          "note": "Merkmal 2019-2026:\nVom Vermieter zur Verfügung gestelltes PKW-Parkplatzangebot in der Nähe (ausreichend dimensioniert) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                         }
                       ]
                     }
