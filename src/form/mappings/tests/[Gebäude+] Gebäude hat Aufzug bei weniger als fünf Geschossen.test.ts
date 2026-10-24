@@ -73,6 +73,7 @@ test.each([
     {
       answers: {
         Vertragsdatum: "2015-2016",
+        Baujahr: 1918,
         "Sondermerkmal Aufzug": "Ja",
         "Gebäude hat Fahrstuhl": "Nein",
       },
@@ -85,7 +86,7 @@ test.each([
     return {
       answers: {
         ...SCHNELLTEST_RESET_ANSWERS,
-        Baujahr: 1918,
+        Baujahr: 1919,
         ...MERKMAL_RESET_ANSWERS,
         ...SONDERMERKMAL_RESET_ANSWERS,
         ...answers,
