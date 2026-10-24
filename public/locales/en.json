@@ -168,6 +168,7 @@
     "550286": "Modernization or structural measures (Section 559 BGB)",
     "644179": "Electronics",
     "680400": "Does the intercom system have a camera?",
+    "859688": "All three conditions must be met: the apartment has no thresholds, the transition to the balcony or terrace has a low threshold, and there is sufficient space to move around in the apartment.",
     "877530": "This includes stucco or panelling, for example",
     "884564": "Between 253 und 299 kWH/(m2*a)",
     "909215": "Is there a storage room (at least 1 m² of floor area) or a built-in cupboard inside the flat?",
@@ -539,6 +540,7 @@
     "8fdfdf": "Are there villa-type apartment blocks in the vicinity of the house?",
     "e32dbb": "Is there a parking space for the car provided by the landlord near the flat?",
     "a9ab62": "Please note: The car park may also be subject to a charge",
-    "b794c8": "Result"
+    "b794c8": "Result",
+    "6da6cf": "The apartment must have no thresholds, and the transition to the balcony or terrace must have a low threshold. In addition, at least one of these two conditions must be met: sufficient freedom of movement in the apartment or a bathroom designed to reduce barriers. Meeting both conditions also qualifies."
   }
 }
