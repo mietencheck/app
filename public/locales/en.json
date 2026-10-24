@@ -155,7 +155,6 @@
     "145605": "Was the heating system in the flat renewed after 1 July 1994?",
     "169562": "Cellars & storage rooms",
     "187144": "An electrical installation is considered inadequate if, for example, there is no RCD, no potential equalisation, no sufficient electrical riser or if there are regular power failures.",
-    "201273": "Is there a garden for private use or a garden that can be accessed directly from the flat?",
     "219523": "If a graduated rent or index-linked rent has been agreed, this must be explicitly stated in your rental agreement.",
     "236037": "Neither of them",
     "241110": "Rooms",
@@ -527,7 +526,6 @@
     "80f073": "Is there an unkempt, open rubbish storage area on the property?",
     "7a78b0": "Is there a well-maintained rubbish storage area on the property of the house with a design that obstructs the view?",
     "be0a5a": "Please note: This applies even if this comes with costs that have to be paid in addition to the rent.",
-    "db8d77": "Is there a communal garden that can be used together with other tenants?",
     "3c9fb8": "Please note: This only applies if no additional payment is required for the garden.",
     "6e9a4f": "Is it possible to park bikes on the property?",
     "cdd30a": "Please note: It is sufficient that it is generally possible to park bikes somewhere on the property, e.g. in the backyard or a bike cellar. There does not have to be an extra bike stand or anything similar.",
@@ -539,6 +537,10 @@
     "8fdfdf": "Are there villa-type apartment blocks in the vicinity of the house?",
     "e32dbb": "Is there a parking space for the car provided by the landlord near the flat?",
     "a9ab62": "Please note: The car park may also be subject to a charge",
-    "b794c8": "Result"
+    "b794c8": "Result",
+    "cce79e": "All conditions must be met: you are allowed to use the garden, the general public is excluded, and no separate garden usage fee is charged. It may be shared with other tenants of the property. If it is unclear whether a shared green space is provided as a tenant garden, for example where use of a lawn or play area is merely tolerated, choose “I am not sure”. A communal garden alone is not sufficient.",
+    "2f59ea": "Do you have a garden for your exclusive use, or does your apartment include a garden with direct access from the apartment?",
+    "d09c8b": "This question concerns a garden assigned to you for exclusive use or a garden belonging to your apartment with direct access. An additional usage fee does not rule out these alternatives. Access to a shared green space alone is not enough for this question.",
+    "1814e9": "Do you have access to a tenant garden without an additional usage fee, reserved exclusively for the tenants of the property?"
   }
 }

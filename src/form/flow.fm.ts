@@ -155,7 +155,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -343,7 +343,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -790,7 +790,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1614,7 +1614,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1909,7 +1909,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2804,7 +2804,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2967,7 +2967,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3130,7 +3130,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3493,7 +3493,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3968,7 +3968,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4131,7 +4131,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4294,7 +4294,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4598,7 +4598,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4810,7 +4810,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5126,7 +5126,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5397,7 +5397,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5847,7 +5847,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6194,7 +6194,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6616,7 +6616,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6985,7 +6985,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7436,7 +7436,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7828,7 +7828,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8553,7 +8553,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8972,7 +8972,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9399,7 +9399,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9929,7 +9929,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10186,7 +10186,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10445,7 +10445,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10608,7 +10608,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11063,7 +11063,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11526,7 +11526,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11999,7 +11999,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12374,7 +12374,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12972,7 +12972,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13473,7 +13473,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13865,7 +13865,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14740,7 +14740,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14903,7 +14903,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15560,7 +15560,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15976,7 +15976,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16527,7 +16527,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17092,7 +17092,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17662,7 +17662,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18521,7 +18521,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18684,7 +18684,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19278,7 +19278,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20031,7 +20031,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20194,7 +20194,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20959,7 +20959,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21586,7 +21586,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
-    "Wohnumfeld hat Gemeinschaftsgarten": {
+    "Wohnumfeld hat kostenfreien Mietergarten": {
         answer: "Ja" | "Nein" | "Nicht sicher";
         state: {
             Typ?: "Miete" | "Mieterhöhung";
@@ -21898,7 +21898,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     Umgebung: {
@@ -22056,7 +22056,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22219,7 +22219,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -22378,7 +22378,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -22538,7 +22538,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22699,7 +22699,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22861,7 +22861,7 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat ungepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat gepflegte Müllstandsfläche"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat eigenen Garten"?: "Ja" | "Nein" | "Nicht sicher";
-            "Wohnumfeld hat Gemeinschaftsgarten"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnumfeld hat kostenfreien Mietergarten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Fahrradabstellmöglichkeiten"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist stark vernachlässigt"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist repräsentativ"?: "Ja" | "Nein" | "Nicht sicher";
