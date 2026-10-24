@@ -11565,33 +11565,93 @@
                   "alias": "Treppenhaus & Eingangsbereich",
                   "block": [
                     {
-                      "id": "waxnyf",
-                      "type": "Question",
-                      "alias": "Gebäude hat Treppenhaus in schlechtem Zustand",
-                      "text": "Sind das Treppenhaus oder der Eingangsbereich stark abgenutzt und renovierungsbedürftig?",
-                      "info": null,
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "uiajj",
-                            "alias": "Ja",
-                            "text": "Ja"
+                      "id": "te71poorif",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "te71poorcase",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "te71poortest",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "wejo0k",
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
+                            ]
                           },
-                          {
-                            "id": "qzhja",
-                            "alias": "Nein",
-                            "text": "Nein"
+                          "block": [
+                            {
+                              "id": "waxnyf",
+                              "type": "Question",
+                              "alias": "Gebäude hat Treppenhaus in schlechtem Zustand",
+                              "text": "Ist Treppenhaus/Eingangsbereich überwiegend in schlechtem Zustand?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Merkmal:\nTreppenhaus/Eingangsbereich überwiegend in schlechtem Zustand [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "te71poor",
+                          "type": "Question",
+                          "alias": "Gebäude hat Treppenhaus in schlechtem Zustand",
+                          "text": "Sind sowohl das Treppenhaus als auch der Eingangsbereich jeweils überwiegend in schlechtem Zustand?",
+                          "info": "Antworte nur mit „Ja“, wenn beide Bereiche jeweils überwiegend in schlechtem Zustand sind, etwa stark abgenutzt und renovierungsbedürftig. Ist nur einer der beiden Bereiche überwiegend in schlechtem Zustand, antworte mit „Nein“. Kannst du das nicht beurteilen, wähle „Ich bin mir nicht sicher“.",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "uiajj",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "qzhja",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "8i22j",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
                           },
-                          {
-                            "id": "8i22j",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
-                          }
-                        ]
-                      },
-                      "required": false,
-                      "note": "Merkmal:\nTreppenhaus/Eingangsbereich überwiegend in schlechtem Zustand [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                          "required": false,
+                          "note": "Merkmal 2024/2026:\nTreppenhaus und Eingangsbereich überwiegend in schlechtem Zustand [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ]
                     },
                     {
                       "id": "wjiesi",
@@ -11616,33 +11676,93 @@
                           },
                           "block": [
                             {
-                              "id": "s3up4",
-                              "type": "Question",
-                              "alias": "Gebäude hat Treppenhaus in gutem Zustand",
-                              "text": "Sind das Treppenhaus und der Eingangsbereich hochwertig saniert oder repräsentativ?",
-                              "info": "Beachte: Nur ein guter Zustand reicht nicht aus. Anzeichen für repräsentatives Treppenhaus oder Eingangsbereich sind z.B.: Läufer im gesamten Bereich, Marmor, Spiegel, aufwändige Wand- und Deckengestaltung.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
+                              "id": "te71goodif",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "te71goodcase",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "te71goodtest",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "wejo0k",
+                                      "7np1",
+                                      "m2jo",
+                                      "4obam",
+                                      "oqyrs"
+                                    ]
                                   },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
+                                  "block": [
+                                    {
+                                      "id": "s3up4",
+                                      "type": "Question",
+                                      "alias": "Gebäude hat Treppenhaus in gutem Zustand",
+                                      "text": "Ist Eingangsbereich/Treppenhaus hochwertig saniert oder repräsentativ?",
+                                      "info": "Beachte: Nur ein guter Zustand reicht nicht aus. Anzeichen für repräsentatives Treppenhaus oder Eingangsbereich sind z.B.: Läufer im gesamten Bereich, Marmor, Spiegel, aufwändige Wand- und Deckengestaltung.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal:\nRepräsentativer/s oder hochwertig sanierter/s Eingangsbereich/Treppenhaus (z.B. Spiegel, Marmor, exklusive Beleuchtung, hochwertiger Anstrich / Wandbelag, Läufer im gesamten Flur- und Treppenbereich) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "te71good",
+                                  "type": "Question",
+                                  "alias": "Gebäude hat Treppenhaus in gutem Zustand",
+                                  "text": "Sind das Treppenhaus und der Eingangsbereich hochwertig saniert oder repräsentativ?",
+                                  "info": "Beide Bereiche müssen hochwertig saniert oder repräsentativ sein. Nur ein guter Zustand reicht nicht aus. Beispiele sind Spiegel, Marmor, exklusive Beleuchtung, hochwertiger Anstrich oder Wandbelag und Läufer im gesamten Flur- und Treppenbereich. Erfüllt nur einer der beiden Bereiche diese Anforderungen, antworte mit „Nein“. Kannst du das nicht beurteilen, wähle „Ich bin mir nicht sicher“.",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
                                   },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": false,
-                              "note": "Merkmal:\nRepräsentativer/s oder hochwertig sanierter/s Eingangsbereich/Treppenhaus (z.B. Spiegel, Marmor, exklusive Beleuchtung, hochwertiger Anstrich / Wandbelag, Läufer im gesamten Flur- und Treppenbereich) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  "required": false,
+                                  "note": "Merkmal 2024/2026:\nRepräsentativer/s oder hochwertig sanierter/s Eingangsbereich und Treppenhaus (z.B. Spiegel, Marmor, exklusive Beleuchtung, hochwertiger Anstrich / Wandbelag, Läufer im gesamten Flur- und Treppenbereich) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ]
                             }
                           ]
                         }
