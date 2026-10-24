@@ -8,6 +8,31 @@ export const mapAnswerToMerkmalState = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ) => {
+  const state = mapAnswerWithoutDenkmalschutzAusnahme(
+    merkmalStateMapping,
+    answers,
+    visibleQuestionAliases,
+  );
+  const alias = "Denkmalschutz verhindert energetische Sanierung";
+  // Only a confirmed exception removes a disadvantage. Uncertainty can make
+  // an existing disadvantage possible, but cannot create a new one.
+  if (
+    merkmalStateMapping.denkmalschutzAusnahme &&
+    answers.Typ === "Miete" &&
+    visibleQuestionAliases.has(alias)
+  ) {
+    if (answers[alias] === "Ja") return "unchecked";
+    if (answers[alias] === "Nicht sicher" && state === "checked")
+      return "maybe";
+  }
+  return state;
+};
+
+const mapAnswerWithoutDenkmalschutzAusnahme = (
+  merkmalStateMapping: AnswerMerkmalStateMapping,
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+) => {
   const { checked_if } = merkmalStateMapping;
 
   // Condition Groups

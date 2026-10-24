@@ -13255,6 +13255,60 @@
               "alias": "Wärmedämmung",
               "block": [
                 {
+                  "id": "denk63if",
+                  "type": "If",
+                  "cases": [
+                    {
+                      "id": "denk63case",
+                      "type": "IfCase",
+                      "test": {
+                        "id": "denk63test",
+                        "type": "AnswerOptionComparison",
+                        "questionRef": {
+                          "type": "AliasRef",
+                          "value": "Typ"
+                        },
+                        "operator": "is",
+                        "negated": false,
+                        "comparands": [
+                          "wb3w3"
+                        ]
+                      },
+                      "block": [
+                        {
+                          "id": "denk63q",
+                          "type": "Question",
+                          "alias": "Denkmalschutz verhindert energetische Sanierung",
+                          "text": "Liegt deine Wohnung in einem denkmalgeschützten Gebäude und würde eine energetische Sanierung gegen Denkmalschutzbelange verstoßen oder durch Denkmalschutzauflagen unverhältnismäßig teuer werden?",
+                          "info": "Wähle nur dann Ja, wenn beides feststeht: Das Gebäude ist denkmalgeschützt und die energetische Sanierung würde gegen denkmalschutzrechtliche Belange verstoßen oder durch entsprechende Auflagen unverhältnismäßig teuer werden. Denkmalschutz allein reicht nicht aus. Wenn du die Voraussetzungen nicht feststellen kannst, wähle Nicht sicher.",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "denk63j",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "denk63n",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "denk63u",
+                                "alias": "Nicht sicher",
+                                "text": "Nicht sicher"
+                              }
+                            ]
+                          },
+                          "required": true
+                        }
+                      ]
+                    }
+                  ],
+                  "alternate": []
+                },
+                {
                   "id": "rzjc",
                   "type": "Group",
                   "category": "Section",
