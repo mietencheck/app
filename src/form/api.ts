@@ -16,6 +16,7 @@ import {
 } from "./mappings/merkmale";
 import { answersToSondermerkmalStateMapping } from "./mappings/sondermerkmale";
 import { vertragsdatumToMietspiegelJahrMapping } from "./mappings/vertragsdatum";
+import { getEnergiekennwertStates } from "./utils/energiekennwert";
 import { mapAnswerToMerkmalState } from "./utils/mapAnswerToMerkmalState";
 import {
   mapMerkmalStateToMerkmalGruppen,
@@ -214,6 +215,11 @@ export const getMerkmalStates = (
 
   if (mietspiegelJahr) {
     const merkmale = merkmaleByYear[mietspiegelJahr];
+    const energiekennwertStates = getEnergiekennwertStates(
+      answers,
+      visibleQuestionAliases,
+      mietspiegelJahr,
+    );
 
     return fromEntries(
       entries(answersToMerkmalStateMapping)
@@ -225,11 +231,12 @@ export const getMerkmalStates = (
           ]) => {
             return [
               key,
-              mapAnswerToMerkmalState(
-                answerMerkmalMapping,
-                answers,
-                visibleQuestionAliases,
-              ),
+              energiekennwertStates[key as keyof MerkmalStateList] ??
+                mapAnswerToMerkmalState(
+                  answerMerkmalMapping,
+                  answers,
+                  visibleQuestionAliases,
+                ),
             ];
           },
         ),

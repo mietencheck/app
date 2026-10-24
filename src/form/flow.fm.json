@@ -13295,6 +13295,141 @@
                       "note": "Die Energieverbrauchskennwerte beziehen sich auf Energie für Heizung und Warmwasser. Für die Einordnung eines Endenergiebedarfskennwertes sind die oben angegebenen Verbrauchsenergiekennwert-Grenzen um 20 Prozent zu erhöhen. Für dezentrale Warmwasserversorgung sind vor der Eingruppierung 20 kWh/(m²a) auf den ausgewiesenen Energiekennwert aufzuschlagen.",
                       "cases": [
                         {
+                          "id": "energie-miete-numerisch",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "energie-miete-test",
+                            "type": "LogicalOperation",
+                            "operator": "and",
+                            "negated": false,
+                            "conditions": [
+                              {
+                                "id": "energie-typ",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Typ"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "wb3w3"
+                                ]
+                              },
+                              {
+                                "id": "energie-bekannt",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Kennt Energieverbrauch oder Energiebedarf"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "uiajj",
+                                  "qzhja"
+                                ]
+                              }
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "energiekennwert-zahl",
+                              "type": "Question",
+                              "alias": "Energiekennwert laut Energieausweis",
+                              "text": "Wie hoch ist der Endenergiekennwert auf dem Energieausweis in kWh/(m²a)?",
+                              "info": "Trage den genauen Endenergieverbrauch oder Endenergiebedarf für das Gebäude ein, auch mit Nachkommastellen. Verwende nicht den Primärenergiebedarf. Übernimm den ausgewiesenen Wert unverändert; einen nötigen Warmwasserzuschlag berechnen wir für dich.",
+                              "answer": {
+                                "type": "NumberAnswer"
+                              },
+                              "required": false
+                            },
+                            {
+                              "id": "energie-warmwasser-dezentral",
+                              "type": "Question",
+                              "alias": "Warmwasserversorgung ist dezentral",
+                              "text": "Wird das Warmwasser dezentral erzeugt?",
+                              "info": "Gemeint sind zum Beispiel elektrische Durchlauferhitzer oder Boiler in der Wohnung, deren Energie getrennt von der Heizenergie erfasst wird. Eine eigene Heizung in der Wohnung allein bedeutet noch keine dezentrale Warmwasserversorgung.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false
+                            },
+                            {
+                              "id": "energie-warmwasser-if",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "energie-warmwasser-fall",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "energie-dezentral-test",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Warmwasserversorgung ist dezentral"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "uiajj",
+                                      "8i22j"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "energie-warmwasser-enthalten",
+                                      "type": "Question",
+                                      "alias": "Dezentrales Warmwasser im Energiekennwert enthalten",
+                                      "text": "Ist die Energie für das dezentrale Warmwasser im angegebenen Kennwert bereits enthalten?",
+                                      "info": "Prüfe die Angaben auf dem Energieausweis. Bei einem Bedarfsausweis ist die Warmwasserbereitung üblicherweise bereits berücksichtigt. Fehlt sie im Kennwert, rechnen wir vor der Einordnung 20 kWh/(m²a) hinzu. Ist sie schon enthalten, rechnen wir nichts hinzu. Wenn du es nicht feststellen kannst, wähle „Ich bin mir nicht sicher“.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            }
+                          ]
+                        },
+                        {
                           "id": "1g99h",
                           "type": "IfCase",
                           "test": {
