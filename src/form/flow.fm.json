@@ -6768,8 +6768,8 @@
                                   "id": "xihum",
                                   "type": "Question",
                                   "alias": "Bad hat wandhängendes WC",
-                                  "text": "Sind alle Toiletten wandhängend mit Spülkasten in der Wand (wie z.B. auf diesem Bild)?",
-                                  "info": null,
+                                  "text": "Sind alle Toiletten außer Gäste-WCs wandhängend mit Spülkasten in der Wand (wie z.B. auf diesem Bild)?",
+                                  "info": "Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs.",
                                   "answer": {
                                     "type": "ChoiceAnswer",
                                     "options": [
@@ -6826,8 +6826,8 @@
                               "id": "vy8d5",
                               "type": "Question",
                               "alias": "Bad hat hochwertiges Stand-WC",
-                              "text": "Sind alle Toiletten hochwertige Stand-WCs?",
-                              "info": null,
+                              "text": "Sind alle Toiletten außer Gäste-WCs hochwertige Stand-WCs?",
+                              "info": "Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
@@ -7304,33 +7304,93 @@
                               ],
                               "alternate": [
                                 {
-                                  "id": "6w0nq",
-                                  "type": "Question",
-                                  "alias": "Bad mit alter Heizung",
-                                  "text": "Gibt es ein Badezimmer oder WC, welches nur mit einer Holz-/Kohleheizung oder einem Elektroheizstrahler beheizbar ist?",
-                                  "info": null,
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "uiajj",
-                                        "alias": "Ja",
-                                        "text": "Ja"
+                                  "id": "gaest68jahr",
+                                  "type": "If",
+                                  "cases": [
+                                    {
+                                      "id": "gaest68alt",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "gaest68datum",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Vertragsdatum"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "wejo0k",
+                                          "7np1",
+                                          "m2jo",
+                                          "4obam",
+                                          "oqyrs"
+                                        ]
                                       },
-                                      {
-                                        "id": "qzhja",
-                                        "alias": "Nein",
-                                        "text": "Nein"
+                                      "block": [
+                                        {
+                                          "id": "6w0nq",
+                                          "type": "Question",
+                                          "alias": "Bad mit alter Heizung",
+                                          "text": "Gibt es ein Badezimmer oder WC, welches nur mit einer Holz-/Kohleheizung oder einem Elektroheizstrahler beheizbar ist?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal:\nBad oder WC nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "alternate": [
+                                    {
+                                      "id": "gaest68heiz",
+                                      "type": "Question",
+                                      "alias": "Bad mit alter Heizung",
+                                      "text": "Gibt es ein Badezimmer oder WC (außer Gäste-WCs), welches nur mit einer Holz-/Kohleheizung oder einem Elektroheizstrahler beheizbar ist?",
+                                      "info": "Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
                                       },
-                                      {
-                                        "id": "8i22j",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
-                                      }
-                                    ]
-                                  },
-                                  "required": false,
-                                  "note": "Merkmal:\nBad oder WC nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                      "required": false,
+                                      "note": "Merkmal 2024/2026:\nBad nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler [bezieht sich nicht auf Gäste-WCs] [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
                                 }
                               ]
                             },
