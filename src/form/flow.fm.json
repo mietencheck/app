@@ -10113,33 +10113,131 @@
                       "alternate": []
                     },
                     {
-                      "id": "5ympj",
-                      "type": "Question",
-                      "alias": "Wohnung hat Rollläden",
-                      "text": "Sind die Fenster überwiegend mit Rollläden ausgestattet?",
-                      "info": null,
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "tcod4",
-                            "alias": "Ja",
-                            "text": "Ja"
+                      "id": "verschattungVariante",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "verschattungFall2026",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "verschattungMiete2026",
+                            "type": "LogicalOperation",
+                            "operator": "and",
+                            "negated": false,
+                            "conditions": [
+                              {
+                                "id": "verschattungKeineMieterhoehung",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Typ"
+                                },
+                                "negated": true,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "4uoj6"
+                                ]
+                              },
+                              {
+                                "id": "verschattungAktuell",
+                                "type": "LogicalOperation",
+                                "operator": "or",
+                                "negated": false,
+                                "conditions": [
+                                  {
+                                    "id": "verschattungVertragsdatum",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Vertragsdatum"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "im8h1"
+                                    ]
+                                  },
+                                  {
+                                    "id": "verschattungNichtUnterschrieben",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Unterschrieben"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "128cg"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "id": "43bd3",
-                            "alias": "Nein",
-                            "text": "Nein"
+                          "block": [
+                            {
+                              "id": "verschattung2026",
+                              "type": "Question",
+                              "alias": "Wohnung hat Rollläden",
+                              "text": "Sind die Fenster in den Wohnräumen überwiegend mit außen angebrachten Verschattungssystemen (z. B. Rollläden oder Außenjalousien) ausgestattet?",
+                              "info": "Die Systeme müssen außen an mehr als der Hälfte der Fenster in den Wohnräumen angebracht sein. Innenliegende Jalousien oder Rollos zählen nicht.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "tcod4",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "43bd3",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "36h0m",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Merkmal 2026:\nAußen angebrachte Verschattungssysteme an überwiegender Anzahl der Fenster in den Wohnräumen (z. B. Rollläden) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "5ympj",
+                          "type": "Question",
+                          "alias": "Wohnung hat Rollläden",
+                          "text": "Sind die Fenster überwiegend mit Rollläden ausgestattet?",
+                          "info": null,
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "tcod4",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "43bd3",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "36h0m",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
                           },
-                          {
-                            "id": "36h0m",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
-                          }
-                        ]
-                      },
-                      "required": false,
-                      "note": "Merkmal:\nRollläden [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                          "required": false,
+                          "note": "Merkmal:\nRollläden [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ]
                     }
                   ]
                 },

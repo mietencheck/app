@@ -539,6 +539,8 @@
     "8fdfdf": "Are there villa-type apartment blocks in the vicinity of the house?",
     "e32dbb": "Is there a parking space for the car provided by the landlord near the flat?",
     "a9ab62": "Please note: The car park may also be subject to a charge",
-    "b794c8": "Result"
+    "b794c8": "Result",
+    "b8fb01": "Are most windows in the habitable rooms fitted with exterior shading systems (e.g. roller shutters or exterior blinds)?",
+    "eec91e": "The systems must be fitted outside more than half of the windows in the habitable rooms. Interior blinds or roller blinds do not count."
   }
 }
