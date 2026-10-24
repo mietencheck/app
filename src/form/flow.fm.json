@@ -15224,33 +15224,83 @@
                           },
                           "block": [
                             {
-                              "id": "87ope",
-                              "type": "Question",
-                              "alias": "Wohnumfeld ist stark vernachlässigt",
-                              "text": "Liegt die Wohnung in einer eher ungepflegten Gegend oder in einem der folgenden sogenannten kriminalitätsbelasteten Ort?",
-                              "info": "Laut Polizei, zählen die folgenden Orte als kriminalitätsbelastet: Wrangelkiez im Umfeld des Görlitzer Parks, Kottbusser Tor, Hermannstraße in direkter Nähe vom S-Bahnhof Neukölln, Donaukiez im Umfeld des Hermannplatzes.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
+                              "id": "vernachlaessigte-umgebung",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "vernachlaessigte-umgebung-fall",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "vernachlaessigte-umgebung-bedingung",
+                                    "type": "LogicalOperation",
+                                    "operator": "or",
+                                    "negated": false,
+                                    "conditions": [
+                                      {
+                                        "id": "vernachlaessigte-umgebung-ab-2019",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Vertragsdatum"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "ve0tek",
+                                          "oqyrs",
+                                          "4obam",
+                                          "m2jo"
+                                        ]
+                                      },
+                                      {
+                                        "id": "vernachlaessigte-umgebung-einfach",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Wohnlage"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "8ktp"
+                                        ]
+                                      }
+                                    ]
                                   },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": false,
-                              "note": "Merkmal 2015-2024:\nLage in stark vernachlässigter Umgebung in einfacher Wohnlage [--]\n\nJa -> Check\nNicht sicher -> NIcht sicher"
+                                  "block": [
+                                    {
+                                      "id": "87ope",
+                                      "type": "Question",
+                                      "alias": "Wohnumfeld ist stark vernachlässigt",
+                                      "text": "Liegt die Wohnung in einer stark vernachlässigten Umgebung?",
+                                      "info": "Entscheidend ist eine stark vernachlässigte Umgebung. Die Einstufung als kriminalitätsbelasteter Ort allein reicht dafür nicht aus.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015/2017:\nLage in stark vernachlässigter Umgebung in einfacher Wohnlage [--]\n\nMerkmal 2019-2024:\nLage in stark vernachlässigter Umgebung [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
                             },
                             {
                               "id": "u7n29h",
