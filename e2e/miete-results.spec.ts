@@ -138,3 +138,76 @@ test("changing a questionnaire answer updates the result and persists across rel
     .click();
   await expect(page.getByRole("dialog")).toContainText("481,80");
 });
+
+for (const locale of ["de", "en"] as const) {
+  test(`${locale}: energy input preserves decimals and zero and shows conditional warm-water questions`, async ({
+    page,
+  }) => {
+    const answers = flowMachine.answers({
+      ...savedAnswers(),
+      "Kennt Energieverbrauch oder Energiebedarf": "Energieverbrauchswert",
+      "Warmwasserversorgung ist dezentral": "Nein",
+    }).state;
+    await page.addInitScript(
+      ({ answers, locale }) => {
+        if (!localStorage.getItem("mb-flow"))
+          localStorage.setItem("mb-flow", JSON.stringify(answers));
+        localStorage.setItem("locale", JSON.stringify(locale));
+      },
+      { answers, locale },
+    );
+    await page.goto("/fragebogen/w%C3%A4rmed%C3%A4mmung");
+    const input = page.getByRole("spinbutton", {
+      name:
+        locale === "de"
+          ? "Wie hoch ist der Endenergiekennwert auf dem Energieausweis in kWh/(m²a)?"
+          : "What is the final energy value on the energy certificate in kWh/(m²a)?",
+    });
+    await expect(input).toBeVisible();
+    await input.fill("140.5");
+    expect(
+      await input.evaluate((element: HTMLInputElement) =>
+        element.checkValidity(),
+      ),
+    ).toBe(true);
+    await expect(input).toHaveValue("140.5");
+    await page.reload();
+    await expect(input).toHaveValue("140.5");
+    await input.fill("0");
+    await page.reload();
+    await expect(input).toHaveValue("0");
+    await input.fill("-1");
+    expect(
+      await input.evaluate((element: HTMLInputElement) =>
+        element.checkValidity(),
+      ),
+    ).toBe(false);
+    await input.fill("140.5");
+
+    const supply = page.getByRole("radiogroup", {
+      name:
+        locale === "de"
+          ? "Wird das Warmwasser dezentral erzeugt?"
+          : "Is hot water heated locally in the apartment?",
+    });
+    const inclusion = page.getByRole("radiogroup", {
+      name:
+        locale === "de"
+          ? "Ist die Energie für das dezentrale Warmwasser im angegebenen Kennwert bereits enthalten?"
+          : "Does the stated energy value already include energy for decentralized hot water?",
+    });
+    await expect(inclusion).toHaveCount(0);
+    await supply
+      .getByText(locale === "de" ? "Ja" : "Yes", { exact: true })
+      .click();
+    await expect(inclusion).toBeVisible();
+    await inclusion
+      .getByText(locale === "de" ? "Nein" : "No", { exact: true })
+      .click();
+    await supply
+      .getByText(locale === "de" ? "Nein" : "No", { exact: true })
+      .click();
+    await expect(inclusion).toHaveCount(0);
+    await expect(page.locator("body")).not.toContainText("[DE]");
+  });
+}

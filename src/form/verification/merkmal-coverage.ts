@@ -52,6 +52,19 @@ function isChecked(merkmal: string) {
 
 /** Answers marking `merkmal` as present in the scenario, or undefined. */
 export function reachMerkmal(merkmal: string, scenario: Scenario) {
+  if (merkmal.includes("Energieverbrauchskennwert")) {
+    return reachQuestions(
+      {
+        "Kennt Energieverbrauch oder Energiebedarf": "Energieverbrauchswert",
+        "Energiekennwert laut Energieausweis": merkmal.startsWith("[Gebäude-]")
+          ? 1000
+          : 0,
+        "Warmwasserversorgung ist dezentral": "Nein",
+      },
+      scenario,
+      isChecked(merkmal),
+    );
+  }
   for (const required of answerAlternatives(mappingFor(merkmal))) {
     const found = reachQuestions(required, scenario, isChecked(merkmal));
     if (found) return found;

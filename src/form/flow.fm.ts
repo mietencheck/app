@@ -141,6 +141,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -329,6 +332,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -776,6 +782,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1600,6 +1609,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1895,6 +1907,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2790,6 +2805,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2953,6 +2971,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3116,6 +3137,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3479,6 +3503,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3954,6 +3981,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4117,6 +4147,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4280,6 +4313,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4584,6 +4620,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4796,6 +4835,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5112,6 +5154,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5383,6 +5428,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5833,6 +5881,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6180,6 +6231,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6602,6 +6656,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6971,6 +7028,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7422,6 +7482,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7814,6 +7877,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8539,6 +8605,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8958,6 +9027,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9385,6 +9457,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9915,6 +9990,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10172,6 +10250,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10431,6 +10512,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10594,6 +10678,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11049,6 +11136,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11512,6 +11602,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11985,6 +12078,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12360,6 +12456,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12958,6 +13057,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13459,6 +13561,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13851,6 +13956,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14726,6 +14834,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14889,6 +15000,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15546,6 +15660,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15962,6 +16079,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16513,6 +16633,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17078,6 +17201,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17648,6 +17774,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18507,6 +18636,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18670,6 +18802,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18834,6 +18969,18 @@ export type StepInfoByAlias = {
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
+    "Energiekennwert laut Energieausweis": {
+        answer: number;
+        state: StepInfoByAlias["Auswertung"]["state"];
+    };
+    "Warmwasserversorgung ist dezentral": {
+        answer: "Ja" | "Nein" | "Nicht sicher";
+        state: StepInfoByAlias["Auswertung"]["state"];
+    };
+    "Dezentrales Warmwasser im Energiekennwert enthalten": {
+        answer: "Ja" | "Nein" | "Nicht sicher";
+        state: StepInfoByAlias["Auswertung"]["state"];
+    };
     Energieverbrauchskennwert: {
         answer: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
         state: {
@@ -18975,6 +19122,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
         };
     };
@@ -19119,6 +19269,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
         };
@@ -19264,6 +19417,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19427,6 +19583,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19574,6 +19733,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19721,6 +19883,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19868,6 +20033,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20017,6 +20185,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20180,6 +20351,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20343,6 +20517,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20492,6 +20669,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20642,6 +20822,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20793,6 +20976,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20945,6 +21131,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21108,6 +21297,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21262,6 +21454,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21416,6 +21611,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21571,6 +21769,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21727,6 +21928,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21884,6 +22088,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22042,6 +22249,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22205,6 +22415,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22364,6 +22577,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22524,6 +22740,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22685,6 +22904,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22847,6 +23069,9 @@ export type StepInfoByAlias = {
             "Gebäude hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude ist dicht bebaut"?: "Ja" | "Nein" | "Nicht sicher";
             "Kennt Energieverbrauch oder Energiebedarf"?: "Energieverbrauchswert" | "Ernergiebedarfswert" | "Nein";
+            "Energiekennwert laut Energieausweis"?: number;
+            "Warmwasserversorgung ist dezentral"?: "Ja" | "Nein" | "Nicht sicher";
+            "Dezentrales Warmwasser im Energiekennwert enthalten"?: "Ja" | "Nein" | "Nicht sicher";
             Energieverbrauchskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
