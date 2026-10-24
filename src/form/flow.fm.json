@@ -5937,7 +5937,8 @@
                                     "type": "AnswerOptionComparison",
                                     "operator": "is",
                                     "comparands": [
-                                      "vove8"
+                                      "vove8",
+                                      "ubu0t"
                                     ]
                                   },
                                   "block": []
@@ -9662,7 +9663,8 @@
                             "type": "AnswerOptionComparison",
                             "operator": "is",
                             "comparands": [
-                              "tcod4"
+                              "tcod4",
+                              "36h0m"
                             ]
                           },
                           "block": [
@@ -9696,7 +9698,14 @@
                               "note": "Merkmal:\nGroßer, geräumiger Balkon, (Dach-) Terrasse, Loggia oder Wintergarten (ab 4 m2) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                             }
                           ]
-                        },
+                        }
+                      ],
+                      "alternate": []
+                    },
+                    {
+                      "id": "balcony-absence-followup",
+                      "type": "If",
+                      "cases": [
                         {
                           "id": "x814c",
                           "type": "IfCase",
