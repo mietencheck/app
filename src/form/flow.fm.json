@@ -13559,37 +13559,37 @@
                                           {
                                             "id": "zqjx6j",
                                             "alias": "---",
-                                            "text": "Größer als 300 kWH/(m2*a)"
+                                            "text": "Größer als 300 kWh/(m²a)"
                                           },
                                           {
                                             "id": "mcjdh",
                                             "alias": "--",
-                                            "text": "Zwischen 253 und 299 kWH/(m2*a)"
+                                            "text": "Größer als 252 bis einschließlich 300 kWh/(m²a)"
                                           },
                                           {
                                             "id": "42xcz",
                                             "alias": "-",
-                                            "text": "Zwischen 205 und 252 kWH/(m2*a)"
+                                            "text": "Größer als 204 bis einschließlich 252 kWh/(m²a)"
                                           },
                                           {
                                             "id": "baalbg",
                                             "alias": "0",
-                                            "text": "Zwischen 144 und 204 kWH/(m2*a)"
+                                            "text": "144 bis einschließlich 204 kWh/(m²a)"
                                           },
                                           {
                                             "id": "4w17nh",
                                             "alias": "+",
-                                            "text": "Zwischen 120 und 143 kWH/(m2*a)"
+                                            "text": "120 bis kleiner als 144 kWh/(m²a)"
                                           },
                                           {
                                             "id": "tygpg",
                                             "alias": "++",
-                                            "text": "Zwischen 96 und 119 kWH/(m2*a)"
+                                            "text": "96 bis kleiner als 120 kWh/(m²a)"
                                           },
                                           {
                                             "id": "z4xhx",
                                             "alias": "+++",
-                                            "text": "Kleiner als 96 kWH/(m2*a)"
+                                            "text": "Kleiner als 96 kWh/(m²a)"
                                           }
                                         ]
                                       },
@@ -13630,37 +13630,37 @@
                                           {
                                             "id": "zqjx6j",
                                             "alias": "---",
-                                            "text": "Größer als 282 kWH/(m2*a)"
+                                            "text": "Größer als 282 kWh/(m²a)"
                                           },
                                           {
                                             "id": "mcjdh",
                                             "alias": "--",
-                                            "text": "Zwischen 235 und 282 kWH/(m2*a)"
+                                            "text": "Größer als 234 bis einschließlich 282 kWh/(m²a)"
                                           },
                                           {
                                             "id": "42xcz",
                                             "alias": "-",
-                                            "text": "Zwischen 187 und 234 kWH/(m2*a)"
+                                            "text": "Größer als 186 bis einschließlich 234 kWh/(m²a)"
                                           },
                                           {
                                             "id": "baalbg",
                                             "alias": "0",
-                                            "text": "Zwischen 144 und 186 kWH/(m2*a)"
+                                            "text": "144 bis einschließlich 186 kWh/(m²a)"
                                           },
                                           {
                                             "id": "4w17nh",
                                             "alias": "+",
-                                            "text": "Zwischen 120 und 143 kWH/(m2*a)"
+                                            "text": "120 bis kleiner als 144 kWh/(m²a)"
                                           },
                                           {
                                             "id": "tygpg",
                                             "alias": "++",
-                                            "text": "Zwischen 96 und 119 kWH/(m2*a)"
+                                            "text": "96 bis kleiner als 120 kWh/(m²a)"
                                           },
                                           {
                                             "id": "z4xhx",
                                             "alias": "+++",
-                                            "text": "Kleiner als 96 kWH/(m2*a)"
+                                            "text": "Kleiner als 96 kWh/(m²a)"
                                           }
                                         ]
                                       },
@@ -13683,37 +13683,37 @@
                                       {
                                         "id": "zqjx6j",
                                         "alias": "---",
-                                        "text": "Größer als 282 kWH/(m2*a)"
+                                        "text": "Größer als 282 kWh/(m²a)"
                                       },
                                       {
                                         "id": "mcjdh",
                                         "alias": "--",
-                                        "text": "Zwischen 235 und 282 kWH/(m2*a)"
+                                        "text": "Größer als 234 bis einschließlich 282 kWh/(m²a)"
                                       },
                                       {
                                         "id": "42xcz",
                                         "alias": "-",
-                                        "text": "Zwischen 176 und 234 kWH/(m2*a)"
+                                        "text": "Größer als 174 bis einschließlich 234 kWh/(m²a)"
                                       },
                                       {
                                         "id": "baalbg",
                                         "alias": "0",
-                                        "text": "Zwischen 144 und 175 kWH/(m2*a)"
+                                        "text": "144 bis einschließlich 174 kWh/(m²a)"
                                       },
                                       {
                                         "id": "4w17nh",
                                         "alias": "+",
-                                        "text": "Zwischen 120 und 143 kWH/(m2*a)"
+                                        "text": "120 bis kleiner als 144 kWh/(m²a)"
                                       },
                                       {
                                         "id": "tygpg",
                                         "alias": "++",
-                                        "text": "Zwischen 96 und 119 kWH/(m2*a)"
+                                        "text": "96 bis kleiner als 120 kWh/(m²a)"
                                       },
                                       {
                                         "id": "z4xhx",
                                         "alias": "+++",
-                                        "text": "Kleiner als 96 kWH/(m2*a)"
+                                        "text": "Kleiner als 96 kWh/(m²a)"
                                       }
                                     ]
                                   },
