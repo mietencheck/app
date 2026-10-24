@@ -1,7 +1,7 @@
 {
   "[Bad-] Bad ohne Handwaschbecken": "Kein Handwaschbecken in Bad oder WC oder im Bad nur ein kleines Handwaschbecken (Außenmaß 50 x 25 cm oder kleiner)",
   "[Bad-] WC ohne Entlüftung": "WC ohne Lüftungsmöglichkeit und Entlüftung",
-  "[Bad-] Bad mit Dielenfußboden": "Dielenfußboden im Bad (wenn nicht feuchtraumgeeignet)",
+  "[Bad-] Bad mit Dielenfußboden": "Dielenfußboden im Bad",
   "[Bad-] Bad ohne Heizung": "Bad oder WC nicht beheizbar oder Holz-/Kohleheizung oder Elektroheizstrahler",
   "[Bad-] Bad ohne ausreichende Warmwasserversorgung": "Keine ausreichende Warmwasserversorgung (keine zentrale Warm- wasserversorgung, kein Durchlauferhitzer, kein Boiler > 60 Liter)",
   "[Bad-] Bad ohne separate Dusche mit frei stehender Wanne": "Bad ohne separate Dusche mit frei stehender Badewanne mit oder ohne Verblendung in nicht modernisiertem Bad",
@@ -67,7 +67,7 @@
   "[Gebäude+] Gebäude ist in überdurchschnittlich gutem Instandhaltungszustand": "Überdurchschnittlich guter Instandhaltungszustand des Gebäude(-teil)s, indem sich die Wohnung befindet (z.B. erneuerte Fassade, Dach)",
   "[Gebäude+] Gebäude hat Gegensprechanlage mit Video": "Gegen-/Wechselsprechanlage mit Videokontakt und elektrischem Türöffner",
   "[Gebäude+] Gebäude hat Aufzug bei weniger als fünf Geschossen": "Personenaufzug bei weniger als fünf Obergeschossen",
-  "[Gebäude+] Gebäude hat zusätzliche Wärmedämmung": "Wärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt)",
+  "[Gebäude+] Gebäude hat zusätzliche Wärmedämmung": "Wärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage ab dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt)",
   "[Gebäude+] Energieverbrauchskennwert kleiner als 80": "Energieverbrauchskennwert kleiner als 80 kWh/(m²a)",
   "[Gebäude+] Energieverbrauchskennwert kleiner als 120": "Energieverbrauchskennwert kleiner als 120 kWh/(m²a)",
   "[Gebäude+] Energieverbrauchskennwert kleiner als 100": "Energieverbrauchskennwert kleiner als 100 kWh/(m²a)",
