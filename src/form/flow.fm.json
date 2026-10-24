@@ -15014,8 +15014,8 @@
                                       "id": "vjawm",
                                       "type": "Question",
                                       "alias": "Wohnumfeld hat gepflegte Müllstandsfläche",
-                                      "text": "Gibt es auf dem Grundstück des Hauses eine gepflegte Müllstandsfläche mit sichtbegrenzender Gestaltung?",
-                                      "info": null,
+                                      "text": "Gibt es auf dem Grundstück des Hauses eine gepflegte Müllstandsfläche mit sichtbegrenzender Gestaltung, die nur den Mietern zugänglich ist?",
+                                      "info": "Antworte nur mit „Ja“, wenn alle drei Bedingungen erfüllt sind: Die Müllstandsfläche ist gepflegt, sichtbegrenzend gestaltet und nur den Mietern zugänglich. Ist sie öffentlich zugänglich, antworte mit „Nein“. Wenn du nicht sicher weißt, ob nur Mieter Zugang haben, wähle „Ich bin mir nicht sicher“.",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
