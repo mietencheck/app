@@ -4927,7 +4927,7 @@
                                       "type": "Question",
                                       "alias": "Sondermerkmal Modernes Bad",
                                       "text": "Sind die Badezimmer modern ausgestattet?",
-                                      "info": "Ein Badezimmer gilt als modern ausgestattet, wenn die Wände neben Waschbecken, Badewanne und Dusche gefliest sind. Bodenfliesen, Einhebelmischbatterie, Strukturheizkörper als Handtuchwärmer und Badewanne oder Dusche vorhanden sind.",
+                                      "info": "Für dieses Sondermerkmal müssen alle folgenden Ausstattungen vorhanden sein: ausreichend geflieste Wände im Spritzwasserbereich von Waschbecken, Badewanne und/oder Dusche, Bodenfliesen, Einbauwanne und/oder -dusche, Einhebelmischbatterie und Strukturheizkörper als Handtuchwärmer. Eine freistehende Badewanne ohne Einbauwanne oder Einbaudusche genügt nicht.",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
