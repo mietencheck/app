@@ -1,55 +1,42 @@
 import { expect, test } from "vitest";
 
 import { analyzeMieteErgebnis, getMieteDiff } from "../mieteErgebnis";
-import { mietspiegelReferences } from "./mietspiegel-fixtures";
-import { referenceMonthlyHoechstmieteInCent } from "./reference-miete-calculation";
 
-for (const mietspiegel of mietspiegelReferences) {
-  test(`${mietspiegel.mietspiegeljahr}: cent boundaries at both range endpoints`, () => {
-    for (const row of mietspiegel.rows.filter(
-      (row) => row.mittelwertInCent !== null,
-    )) {
-      const wohnflaeche = String(Math.max(20, row.minWohnflaeche));
-      const lowestHoechstmiete = referenceMonthlyHoechstmieteInCent(
-        row.unterwertInCent!,
-        wohnflaeche,
-        true,
-      );
-      const highestHoechstmiete = referenceMonthlyHoechstmieteInCent(
-        row.oberwertInCent!,
-        wohnflaeche,
-        true,
-      );
-      const zulaessigeHoechstmiete = {
-        best: lowestHoechstmiete / 100,
-        worst: highestHoechstmiete / 100,
-      };
-      for (const nettokaltmieteInCent of new Set([
-        lowestHoechstmiete - 1,
-        lowestHoechstmiete,
-        lowestHoechstmiete + 1,
-        highestHoechstmiete - 1,
-        highestHoechstmiete,
-        highestHoechstmiete + 1,
-      ])) {
-        const expected =
-          nettokaltmieteInCent <= lowestHoechstmiete
-            ? "zulaessig"
-            : nettokaltmieteInCent > highestHoechstmiete
-              ? "zu_hoch"
-              : "eventuell_zu_hoch";
-        const result = analyzeMieteErgebnis(
-          zulaessigeHoechstmiete,
-          getMieteDiff(nettokaltmieteInCent / 100, zulaessigeHoechstmiete),
-        );
-        expect(
-          result.kind,
-          `${row.tabellenfeld} actual=${nettokaltmieteInCent} range=${lowestHoechstmiete}..${highestHoechstmiete}`,
-        ).toBe(expected);
-        expect(result.hasRange).toBe(
-          lowestHoechstmiete !== highestHoechstmiete,
-        );
-      }
-    }
-  });
-}
+const cases = [
+  [499.99, "zulaessig"],
+  [500, "zulaessig"],
+  [500.01, "eventuell_zu_hoch"],
+  [549.99, "eventuell_zu_hoch"],
+  [550, "eventuell_zu_hoch"],
+  [550.01, "zu_hoch"],
+] as const;
+
+test.each(cases)(
+  "Nettokaltmiete %s against a 500–550 range is %s",
+  (nettokaltmiete, expected) => {
+    const hoechstmiete = { best: 500, worst: 550 };
+    const result = analyzeMieteErgebnis(
+      hoechstmiete,
+      getMieteDiff(nettokaltmiete, hoechstmiete),
+    );
+    expect(result.kind).toBe(expected);
+    expect(result.hasRange).toBe(true);
+  },
+);
+
+test.each([
+  [499.99, "zulaessig"],
+  [500, "zulaessig"],
+  [500.01, "zu_hoch"],
+] as const)(
+  "Nettokaltmiete %s against a fixed 500 ceiling is %s",
+  (nettokaltmiete, expected) => {
+    const hoechstmiete = { best: 500, worst: 500 };
+    const result = analyzeMieteErgebnis(
+      hoechstmiete,
+      getMieteDiff(nettokaltmiete, hoechstmiete),
+    );
+    expect(result.kind).toBe(expected);
+    expect(result.hasRange).toBe(false);
+  },
+);

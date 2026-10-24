@@ -1,6 +1,7 @@
 {
   "type": "FlowRoot",
   "version": "1.0",
+  "subs": [],
   "main": [
     {
       "id": "ybyse",
@@ -5686,17 +5687,105 @@
                                   "id": "yc1a3",
                                   "type": "IfCase",
                                   "test": {
-                                    "id": "oxt1s",
-                                    "questionRef": {
-                                      "type": "AliasRef",
-                                      "value": "Bad mindestens 4qm"
-                                    },
+                                    "id": "9b8zy",
+                                    "type": "LogicalOperation",
+                                    "operator": "or",
                                     "negated": false,
-                                    "type": "AnswerOptionComparison",
-                                    "operator": "is",
-                                    "comparands": [
-                                      "8i22j",
-                                      "uiajj"
+                                    "conditions": [
+                                      {
+                                        "id": "oxt1s",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Bad mindestens 4qm"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "8i22j",
+                                          "uiajj"
+                                        ]
+                                      },
+                                      {
+                                        "id": "0u2wm",
+                                        "type": "LogicalOperation",
+                                        "operator": "and",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "yvv9u",
+                                            "type": "LogicalOperation",
+                                            "operator": "and",
+                                            "negated": false,
+                                            "conditions": [
+                                              {
+                                                "id": "oxt1s",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Vertragsdatum"
+                                                },
+                                                "negated": true,
+                                                "type": "AnswerOptionComparison",
+                                                "operator": "is",
+                                                "comparands": [
+                                                  "wejo0k"
+                                                ]
+                                              },
+                                              {
+                                                "id": "oxt1s",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Ost"
+                                                },
+                                                "negated": false,
+                                                "type": "AnswerBooleanComparison",
+                                                "operator": "is",
+                                                "value": true
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "id": "yvv9u",
+                                            "type": "LogicalOperation",
+                                            "operator": "and",
+                                            "negated": false,
+                                            "conditions": [
+                                              {
+                                                "id": "oxt1s",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Baujahr"
+                                                },
+                                                "negated": false,
+                                                "type": "AnswerNumberComparison",
+                                                "operator": "gte",
+                                                "comparands": [
+                                                  {
+                                                    "type": "NumberLiteral",
+                                                    "value": 1973
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "id": "oxt1s",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Baujahr"
+                                                },
+                                                "negated": false,
+                                                "type": "AnswerNumberComparison",
+                                                "operator": "lte",
+                                                "comparands": [
+                                                  {
+                                                    "type": "NumberLiteral",
+                                                    "value": 1990
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
                                     ]
                                   },
                                   "block": [
@@ -5983,43 +6072,47 @@
                                         "type": "AnswerOptionComparison",
                                         "operator": "is",
                                         "comparands": [
-                                          "ve0tek"
+                                          "wejo0k",
+                                          "7np1",
+                                          "m2jo",
+                                          "4obam",
+                                          "oqyrs"
                                         ]
                                       },
-                                      "block": [
-                                        {
-                                          "id": "6w6r6",
-                                          "type": "Question",
-                                          "alias": "Bad hat bodengleiche Dusche",
-                                          "text": "Falls die Wohnung eine Dusche hat, ist diese ebenerdig zum Badezimmer oder maximal 3cm tief?",
-                                          "info": null,
-                                          "answer": {
-                                            "type": "ChoiceAnswer",
-                                            "options": [
-                                              {
-                                                "id": "uiajj",
-                                                "alias": "Ja",
-                                                "text": "Ja"
-                                              },
-                                              {
-                                                "id": "qzhja",
-                                                "alias": "Nein",
-                                                "text": "Nein"
-                                              },
-                                              {
-                                                "id": "8i22j",
-                                                "alias": "Nicht sicher",
-                                                "text": "Ich bin mir nicht sicher"
-                                              }
-                                            ]
-                                          },
-                                          "required": false,
-                                          "note": "Bodengleiche Dusche (auch flache Duschtasse mit\neiner Tiefe von bis zu 3 cm)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                        }
-                                      ]
+                                      "block": []
                                     }
                                   ],
-                                  "alternate": []
+                                  "alternate": [
+                                    {
+                                      "id": "6w6r6",
+                                      "type": "Question",
+                                      "alias": "Bad hat bodengleiche Dusche",
+                                      "text": "Falls die Wohnung eine Dusche hat, ist diese ebenerdig zum Badezimmer oder maximal 3cm tief?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Bodengleiche Dusche (auch flache Duschtasse mit\neiner Tiefe von bis zu 3 cm)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
                                 },
                                 {
                                   "id": "aebtq",
@@ -9868,37 +9961,7 @@
                                           ]
                                         }
                                       ],
-                                      "alternate": [
-                                        {
-                                          "id": "klx35",
-                                          "type": "Question",
-                                          "alias": "Wohnung hat Schallschutzfenster",
-                                          "text": "Sind in der Wohnung überwiegend Fenster mit Wärmeschutzverglasung verbaut?",
-                                          "info": null,
-                                          "answer": {
-                                            "type": "ChoiceAnswer",
-                                            "options": [
-                                              {
-                                                "id": "tcod4",
-                                                "alias": "Ja",
-                                                "text": "Ja"
-                                              },
-                                              {
-                                                "id": "43bd3",
-                                                "alias": "Nein",
-                                                "text": "Nein"
-                                              },
-                                              {
-                                                "id": "36h0m",
-                                                "alias": "Nicht sicher",
-                                                "text": "Ich bin mir nicht sicher"
-                                              }
-                                            ]
-                                          },
-                                          "required": false,
-                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Überwiegend Isolierverglasung (ab 1987) oder Schallschutzfenster“ nicht zutrifft\nÜberwiegend Isolierverglasung (Einbau ab 1987) oder Schallschutzfenster [++]\n\nMerkmal 2017:\nÜberwiegend Wärmeschutzverglasung (Einbau ab 1995) oder Schallschutzfenster für Wohngebäude/Wohnungen, die vor 1995 bezugsfertig geworden sind [++]\n\nMerkmal 2019-2024:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung (Einbau ab 2002) oder Schallschutzfenster [++]\n\nMerkmal >=2026:\nWohngebäude/Wohnungen die vor 2002 bezugsfertig geworden sind: überwiegend Wärmeschutzverglasung oder Schallschutzfenster (jeweils Einbau ab 2002)\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                        }
-                                      ]
+                                      "alternate": []
                                     }
                                   ]
                                 },
@@ -10425,74 +10488,113 @@
                           "id": "zenu1",
                           "type": "IfCase",
                           "test": {
-                            "id": "vqidy",
-                            "type": "LogicalOperation",
-                            "operator": "and",
+                            "id": "gr18z",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Vertragsdatum"
+                            },
                             "negated": false,
-                            "conditions": [
-                              {
-                                "id": "gr18z",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Vertragsdatum"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "ve0tek"
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "wejo0k",
+                              "7np1",
+                              "m2jo",
+                              "4obam",
+                              "oqyrs"
+                            ]
+                          },
+                          "block": [
+                            {
+                              "id": "zuq80j",
+                              "type": "Question",
+                              "alias": "Wohnung hat sichtbare Heizungsrohe",
+                              "text": "Sind die Heizungsrohre überwiegend sichtbar verlegt?",
+                              "info": null,
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
                                 ]
                               },
-                              {
-                                "id": "gr18z",
+                              "required": false,
+                              "note": "Merkmal 2015:\nHeizungsrohre überwiegend unter Putz [++]\n\nMerkmal 2017-2023:\nHeizungsrohre überwiegend nicht sichtbar [++]\n\nMerkmal 2024:\nHeizungsrohre überwiegend nicht sichtbar (gilt für\nBaualtersklassen bis einschließlich 1990) [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "a62l4",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "ok8gf",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "bh3fof",
                                 "questionRef": {
                                   "type": "AliasRef",
                                   "value": "Baujahr"
                                 },
                                 "negated": false,
                                 "type": "AnswerNumberComparison",
-                                "operator": "gt",
+                                "operator": "lte",
                                 "comparands": [
                                   {
                                     "type": "NumberLiteral",
                                     "value": 1990
                                   }
                                 ]
-                              }
-                            ]
-                          },
-                          "block": []
-                        }
-                      ],
-                      "alternate": [
-                        {
-                          "id": "zuq80j",
-                          "type": "Question",
-                          "alias": "Wohnung hat sichtbare Heizungsrohe",
-                          "text": "Sind die Heizungsrohre überwiegend sichtbar verlegt?",
-                          "info": null,
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "uiajj",
-                                "alias": "Ja",
-                                "text": "Ja"
                               },
-                              {
-                                "id": "qzhja",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              },
-                              {
-                                "id": "8i22j",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
-                              }
-                            ]
-                          },
-                          "required": false,
-                          "note": "Merkmal 2015:\nHeizungsrohre überwiegend unter Putz [++]\n\nMerkmal 2017-2023:\nHeizungsrohre überwiegend nicht sichtbar [++]\n\nMerkmal 2024:\nHeizungsrohre überwiegend nicht sichtbar (gilt für\nBaualtersklassen bis einschließlich 1990) [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                              "block": [
+                                {
+                                  "id": "dmazi",
+                                  "type": "Question",
+                                  "alias": "Wohnung hat sichtbare Heizungsrohe",
+                                  "text": "Sind die Heizungsrohre überwiegend sichtbar verlegt?",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "required": false,
+                                  "note": "Merkmal 2015:\nHeizungsrohre überwiegend unter Putz [++]\n\nMerkmal 2017-2023:\nHeizungsrohre überwiegend nicht sichtbar [++]\n\nMerkmal 2024:\nHeizungsrohre überwiegend nicht sichtbar (gilt für\nBaualtersklassen bis einschließlich 1990) [++]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": []
                         }
                       ]
                     },
@@ -11807,6 +11909,315 @@
                     {
                       "id": "3dng9",
                       "type": "If",
+                      "alternate": [
+                        {
+                          "id": "6zl04j",
+                          "type": "Question",
+                          "alias": "Gebäude hat Fahrstuhl",
+                          "text": "Gibt es einen Fahrstuhl, mit dem deine Wohnung erreichbar ist?",
+                          "info": null,
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "uiajj",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "qzhja",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "8i22j",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
+                          },
+                          "required": false,
+                          "note": ""
+                        },
+                        {
+                          "id": "yrqu4",
+                          "type": "If",
+                          "cases": [
+                            {
+                              "id": "8h8t5",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "jouct",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Gebäude hat Fahrstuhl"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "uiajj"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "z4edm",
+                                  "type": "If",
+                                  "cases": [
+                                    {
+                                      "id": "7wr6c",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "np07e",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerNumberComparison",
+                                        "operator": "lt",
+                                        "comparands": [
+                                          {
+                                            "type": "NumberLiteral",
+                                            "value": 2010
+                                          }
+                                        ]
+                                      },
+                                      "block": [
+                                        {
+                                          "id": "hdpeq",
+                                          "type": "Question",
+                                          "alias": "Gebäude hat <5 Stockwerke und Fahrstuhl",
+                                          "text": "Hat das Gebäude höchstens vier Obergeschosse?",
+                                          "info": "Zähle die Obergeschosse des gesamten Gebäudes, nicht nur bis zu deiner Wohnung. Das Erdgeschoss zählt nicht mit.",
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2024:\nPersonenaufzug bei weniger als fünf Obergeschossen; gilt nicht für die Baualtersklassen ab 2010 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "alternate": []
+                                }
+                              ]
+                            },
+                            {
+                              "id": "yankg",
+                              "type": "IfCase",
+                              "test": {
+                                "id": "zqjfy",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Gebäude hat Fahrstuhl"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "qzhja"
+                                ]
+                              },
+                              "block": [
+                                {
+                                  "id": "h4cq7",
+                                  "type": "If",
+                                  "cases": [
+                                    {
+                                      "id": "3g7wn",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "ztsa3",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Baujahr"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerNumberComparison",
+                                        "operator": "gt",
+                                        "comparands": [
+                                          {
+                                            "type": "NumberLiteral",
+                                            "value": 1949
+                                          }
+                                        ]
+                                      },
+                                      "block": [
+                                        {
+                                          "id": "s5vfsj",
+                                          "type": "Question",
+                                          "alias": "Gebäude hat >=5 Stockwerke und kein Fahrstuhl",
+                                          "text": "Liegt deine Wohnung im fünften Obergeschoss oder höher?",
+                                          "info": "Das Erdgeschoss zählt nicht als Obergeschoss.",
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal 2017-2023:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nMerkmal >=2024:\nWohnung ab fünftem Obergeschoss ohne Personenaufzug (gilt nicht für die Baualtersklassen bis 1949) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "alternate": []
+                                }
+                              ]
+                            }
+                          ],
+                          "alternate": [
+                            {
+                              "type": "If",
+                              "id": "rm458",
+                              "alternate": [],
+                              "cases": [
+                                {
+                                  "type": "IfCase",
+                                  "id": "jxd9ql",
+                                  "block": [
+                                    {
+                                      "id": "f9f1q",
+                                      "type": "Question",
+                                      "alias": "Gebäude hat <5 Stockwerke und Fahrstuhl",
+                                      "text": "Hat das Gebäude höchstens vier Obergeschosse?",
+                                      "info": "Zähle die Obergeschosse des gesamten Gebäudes, nicht nur bis zu deiner Wohnung. Das Erdgeschoss zählt nicht mit.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2024:\nPersonenaufzug bei weniger als fünf Obergeschossen; gilt nicht für die Baualtersklassen ab 2010 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ],
+                                  "test": {
+                                    "id": "fyhsv",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr"
+                                    },
+                                    "operator": "lt",
+                                    "negated": false,
+                                    "type": "AnswerNumberComparison",
+                                    "comparands": [
+                                      {
+                                        "type": "NumberLiteral",
+                                        "value": 2010
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "If",
+                              "id": "du5c",
+                              "alternate": [],
+                              "cases": [
+                                {
+                                  "type": "IfCase",
+                                  "id": "f5ij4",
+                                  "test": {
+                                    "id": "s8kax",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Baujahr"
+                                    },
+                                    "operator": "gt",
+                                    "negated": false,
+                                    "type": "AnswerNumberComparison",
+                                    "comparands": [
+                                      {
+                                        "type": "NumberLiteral",
+                                        "value": 1949
+                                      }
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "5r0gc",
+                                      "type": "Question",
+                                      "alias": "Gebäude hat >=5 Stockwerke und kein Fahrstuhl",
+                                      "text": "Liegt deine Wohnung im fünften Obergeschoss oder höher?",
+                                      "info": "Das Erdgeschoss zählt nicht als Obergeschoss.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2017-2023:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nMerkmal >=2024:\nWohnung ab fünftem Obergeschoss ohne Personenaufzug (gilt nicht für die Baualtersklassen bis 1949) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
                       "cases": [
                         {
                           "id": "j8o8a",
@@ -11839,20 +12250,154 @@
                                       "type": "AliasRef",
                                       "value": "Sondermerkmal Aufzug"
                                     },
-                                    "negated": true,
+                                    "negated": false,
                                     "type": "AnswerOptionComparison",
                                     "operator": "is",
                                     "comparands": [
                                       "uiajj"
                                     ]
                                   },
-                                  "block": [
+                                  "block": []
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "pft7r",
+                                  "type": "Question",
+                                  "alias": "Gebäude hat Fahrstuhl",
+                                  "text": "Gibt es einen Fahrstuhl, mit dem deine Wohnung erreichbar ist?",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
+                                  },
+                                  "required": false,
+                                  "note": ""
+                                },
+                                {
+                                  "id": "x7m57",
+                                  "type": "If",
+                                  "cases": [
                                     {
-                                      "id": "pft7r",
+                                      "id": "8dfum",
+                                      "type": "IfCase",
+                                      "block": [
+                                        {
+                                          "id": "fp2vg",
+                                          "type": "Question",
+                                          "alias": "Gebäude hat <5 Stockwerke und Fahrstuhl",
+                                          "text": "Hat das Gebäude höchstens vier Obergeschosse?",
+                                          "info": "Zähle die Obergeschosse des gesamten Gebäudes, nicht nur bis zu deiner Wohnung. Das Erdgeschoss zählt nicht mit.",
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2024:\nPersonenaufzug bei weniger als fünf Obergeschossen; gilt nicht für die Baualtersklassen ab 2010 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ],
+                                      "test": {
+                                        "id": "w5m5d",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Gebäude hat Fahrstuhl"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "uiajj"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "type": "IfCase",
+                                      "id": "t935h",
+                                      "block": [
+                                        {
+                                          "id": "9fpe4i",
+                                          "type": "Question",
+                                          "alias": "Gebäude hat >=5 Stockwerke und kein Fahrstuhl",
+                                          "text": "Liegt deine Wohnung im fünften Obergeschoss oder höher?",
+                                          "info": "Das Erdgeschoss zählt nicht als Obergeschoss.",
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal 2017-2023:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nMerkmal >=2024:\nWohnung ab fünftem Obergeschoss ohne Personenaufzug (gilt nicht für die Baualtersklassen bis 1949) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ],
+                                      "test": {
+                                        "id": "sadxy",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Gebäude hat Fahrstuhl"
+                                        },
+                                        "operator": "is",
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "comparands": [
+                                          "qzhja"
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "alternate": [
+                                    {
+                                      "id": "hzu1yi",
                                       "type": "Question",
-                                      "alias": "Gebäude hat Fahrstuhl",
-                                      "text": "Gibt es einen Fahrstuhl, mit dem die Wohnung erreicht werden kann?",
-                                      "info": null,
+                                      "alias": "Gebäude hat <5 Stockwerke und Fahrstuhl",
+                                      "text": "Hat das Gebäude höchstens vier Obergeschosse?",
+                                      "info": "Zähle die Obergeschosse des gesamten Gebäudes, nicht nur bis zu deiner Wohnung. Das Erdgeschoss zählt nicht mit.",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -11874,68 +12419,40 @@
                                         ]
                                       },
                                       "required": false,
-                                      "note": ""
+                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2024:\nPersonenaufzug bei weniger als fünf Obergeschossen; gilt nicht für die Baualtersklassen ab 2010 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     },
                                     {
-                                      "id": "x7m57",
-                                      "type": "If",
-                                      "cases": [
-                                        {
-                                          "id": "8dfum",
-                                          "type": "IfCase",
-                                          "test": {
-                                            "id": "w5m5d",
-                                            "questionRef": {
-                                              "type": "AliasRef",
-                                              "value": "Gebäude hat Fahrstuhl"
-                                            },
-                                            "negated": false,
-                                            "type": "AnswerOptionComparison",
-                                            "operator": "is",
-                                            "comparands": [
-                                              "uiajj",
-                                              "8i22j"
-                                            ]
+                                      "id": "zlk42",
+                                      "type": "Question",
+                                      "alias": "Gebäude hat >=5 Stockwerke und kein Fahrstuhl",
+                                      "text": "Liegt deine Wohnung im fünften Obergeschoss oder höher?",
+                                      "info": "Das Erdgeschoss zählt nicht als Obergeschoss.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
                                           },
-                                          "block": [
-                                            {
-                                              "id": "fp2vg",
-                                              "type": "Question",
-                                              "alias": "Gebäude hat <5 Stockwerke und Fahrstuhl",
-                                              "text": "Liegt in die Wohnung im vierten Stockwerk oder niedriger?",
-                                              "info": "Beachte: Das Erdgeschoss zählt nicht als Stockwerk.",
-                                              "answer": {
-                                                "type": "ChoiceAnswer",
-                                                "options": [
-                                                  {
-                                                    "id": "uiajj",
-                                                    "alias": "Ja",
-                                                    "text": "Ja"
-                                                  },
-                                                  {
-                                                    "id": "qzhja",
-                                                    "alias": "Nein",
-                                                    "text": "Nein"
-                                                  },
-                                                  {
-                                                    "id": "8i22j",
-                                                    "alias": "Nicht sicher",
-                                                    "text": "Ich bin mir nicht sicher"
-                                                  }
-                                                ]
-                                              },
-                                              "required": false,
-                                              "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2024:\nPersonenaufzug bei weniger als fünf Obergeschossen; gilt nicht für die Baualtersklassen ab 2010 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "alternate": []
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2017-2023:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nMerkmal >=2024:\nWohnung ab fünftem Obergeschoss ohne Personenaufzug (gilt nicht für die Baualtersklassen bis 1949) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                     }
                                   ]
                                 }
-                              ],
-                              "alternate": []
+                              ]
                             }
                           ]
                         },
@@ -11963,7 +12480,7 @@
                               "id": "udfm5",
                               "type": "Question",
                               "alias": "Gebäude hat Fahrstuhl",
-                              "text": "Gibt es einen Fahrstuhl, mit dem die Wohnung erreicht werden kann?",
+                              "text": "Gibt es einen Fahrstuhl, mit dem deine Wohnung erreichbar ist?",
                               "info": null,
                               "answer": {
                                 "type": "ChoiceAnswer",
@@ -11989,209 +12506,166 @@
                               "note": ""
                             },
                             {
-                              "id": "9j8in",
-                              "type": "Question",
-                              "alias": "Gebäude hat <5 Stockwerke und Fahrstuhl",
-                              "text": "Liegt in die Wohnung im vierten Stockwerk oder niedriger?",
-                              "info": "Beachte: Das Erdgeschoss zählt nicht als Stockwerk.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
+                              "id": "w44o",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "rxv2l",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "yfm5b",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Gebäude hat Fahrstuhl"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "uiajj"
+                                    ]
                                   },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": false,
-                              "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2024:\nPersonenaufzug bei weniger als fünf Obergeschossen; gilt nicht für die Baualtersklassen ab 2010 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                            },
-                            {
-                              "id": "dx4kf",
-                              "type": "Question",
-                              "alias": "Gebäude hat >=5 Stockwerke und kein Fahrstuhl",
-                              "text": "Liegt in die Wohnung im fünften Stockwerk oder höher?",
-                              "info": "Beachte: Das Erdgeschoss zählt nicht als Stockwerk.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
-                                  },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": false,
-                              "note": "Merkmal 2017-2023:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nMerkmal >=2024:\nWohnung ab fünftem Obergeschoss ohne Personenaufzug (gilt nicht für die Baualtersklassen bis 1949) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                            }
-                          ]
-                        }
-                      ],
-                      "alternate": [
-                        {
-                          "id": "6zl04j",
-                          "type": "Question",
-                          "alias": "Gebäude hat Fahrstuhl",
-                          "text": "Gibt es einen Fahrstuhl, mit dem die Wohnung erreicht werden kann?",
-                          "info": null,
-                          "answer": {
-                            "type": "ChoiceAnswer",
-                            "options": [
-                              {
-                                "id": "uiajj",
-                                "alias": "Ja",
-                                "text": "Ja"
-                              },
-                              {
-                                "id": "qzhja",
-                                "alias": "Nein",
-                                "text": "Nein"
-                              },
-                              {
-                                "id": "8i22j",
-                                "alias": "Nicht sicher",
-                                "text": "Ich bin mir nicht sicher"
-                              }
-                            ]
-                          },
-                          "required": false,
-                          "note": ""
-                        },
-                        {
-                          "id": "z4edm",
-                          "type": "If",
-                          "cases": [
-                            {
-                              "id": "7wr6c",
-                              "type": "IfCase",
-                              "test": {
-                                "id": "np07e",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
+                                  "block": [
+                                    {
+                                      "id": "9j8in",
+                                      "type": "Question",
+                                      "alias": "Gebäude hat <5 Stockwerke und Fahrstuhl",
+                                      "text": "Hat das Gebäude höchstens vier Obergeschosse?",
+                                      "info": "Zähle die Obergeschosse des gesamten Gebäudes, nicht nur bis zu deiner Wohnung. Das Erdgeschoss zählt nicht mit.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2024:\nPersonenaufzug bei weniger als fünf Obergeschossen; gilt nicht für die Baualtersklassen ab 2010 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
                                 },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "gt",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 2010
-                                  }
-                                ]
-                              },
-                              "block": []
-                            }
-                          ],
-                          "alternate": [
-                            {
-                              "id": "hdpeq",
-                              "type": "Question",
-                              "alias": "Gebäude hat <5 Stockwerke und Fahrstuhl",
-                              "text": "Liegt in die Wohnung im vierten Stockwerk oder niedriger?",
-                              "info": "Beachte: Das Erdgeschoss zählt nicht als Stockwerk.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
+                                {
+                                  "id": "z1a0v",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "ev4dt",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Gebäude hat Fahrstuhl"
+                                    },
+                                    "negated": false,
+                                    "type": "AnswerOptionComparison",
+                                    "operator": "is",
+                                    "comparands": [
+                                      "qzhja"
+                                    ]
                                   },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
+                                  "block": [
+                                    {
+                                      "id": "dx4kf",
+                                      "type": "Question",
+                                      "alias": "Gebäude hat >=5 Stockwerke und kein Fahrstuhl",
+                                      "text": "Liegt deine Wohnung im fünften Obergeschoss oder höher?",
+                                      "info": "Das Erdgeschoss zählt nicht als Obergeschoss.",
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2017-2023:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nMerkmal >=2024:\nWohnung ab fünftem Obergeschoss ohne Personenaufzug (gilt nicht für die Baualtersklassen bis 1949) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "a2byu",
+                                  "type": "Question",
+                                  "alias": "Gebäude hat <5 Stockwerke und Fahrstuhl",
+                                  "text": "Hat das Gebäude höchstens vier Obergeschosse?",
+                                  "info": "Zähle die Obergeschosse des gesamten Gebäudes, nicht nur bis zu deiner Wohnung. Das Erdgeschoss zählt nicht mit.",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
                                   },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": false,
-                              "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2024:\nPersonenaufzug bei weniger als fünf Obergeschossen; gilt nicht für die Baualtersklassen ab 2010 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                            }
-                          ]
-                        },
-                        {
-                          "id": "h4cq7",
-                          "type": "If",
-                          "cases": [
-                            {
-                              "id": "3g7wn",
-                              "type": "IfCase",
-                              "test": {
-                                "id": "ztsa3",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Baujahr"
+                                  "required": false,
+                                  "note": "Merkmal 2015:\nNur wenn Sondermerkmal „Aufzug im Haus“ nicht zutrifft Personenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2017:\nPersonenaufzug bei weniger als fünf Obergeschossen [++]\n\nMerkmal >=2024:\nPersonenaufzug bei weniger als fünf Obergeschossen; gilt nicht für die Baualtersklassen ab 2010 [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                 },
-                                "negated": false,
-                                "type": "AnswerNumberComparison",
-                                "operator": "lt",
-                                "comparands": [
-                                  {
-                                    "type": "NumberLiteral",
-                                    "value": 1949
-                                  }
-                                ]
-                              },
-                              "block": []
-                            }
-                          ],
-                          "alternate": [
-                            {
-                              "id": "s5vfsj",
-                              "type": "Question",
-                              "alias": "Gebäude hat >=5 Stockwerke und kein Fahrstuhl",
-                              "text": "Liegt in die Wohnung im fünften Stockwerk oder höher?",
-                              "info": "Beachte: Das Erdgeschoss zählt nicht als Stockwerk.",
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
+                                {
+                                  "id": "y8mhv",
+                                  "type": "Question",
+                                  "alias": "Gebäude hat >=5 Stockwerke und kein Fahrstuhl",
+                                  "text": "Liegt deine Wohnung im fünften Obergeschoss oder höher?",
+                                  "info": "Das Erdgeschoss zählt nicht als Obergeschoss.",
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
                                   },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": false,
-                              "note": "Merkmal 2017-2023:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nMerkmal >=2024:\nWohnung ab fünftem Obergeschoss ohne Personenaufzug (gilt nicht für die Baualtersklassen bis 1949) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  "required": false,
+                                  "note": "Merkmal 2017-2023:\nWohnung ab fünftem Obergeschoss  ohne Personenaufzug [--]\n\nMerkmal >=2024:\nWohnung ab fünftem Obergeschoss ohne Personenaufzug (gilt nicht für die Baualtersklassen bis 1949) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -13512,7 +13986,7 @@
                                               "id": "lae8ri",
                                               "type": "Question",
                                               "alias": "Gebäude hat moderne Heizanlage",
-                                              "text": "Wurde die Heizanlage der Wohnung nach dem 1.1.2003 eingebaut?",
+                                              "text": "Wurde die Heizanlage der Wohnung ab dem 1.1.2003 eingebaut?",
                                               "info": null,
                                               "answer": {
                                                 "type": "ChoiceAnswer",
@@ -13625,7 +14099,7 @@
                                           "id": "lrsyb",
                                           "type": "Question",
                                           "alias": "Gebäude hat moderne Heizanlage",
-                                          "text": "Wurde die Heizanlage der Wohnung nach dem 1.1.2009 erneuert?",
+                                          "text": "Wurde die Heizanlage der Wohnung ab dem 1.1.2009 erneuert?",
                                           "info": null,
                                           "answer": {
                                             "type": "ChoiceAnswer",
@@ -13785,62 +14259,33 @@
                                           },
                                           "block": [
                                             {
-                                              "id": "6ozop",
-                                              "type": "If",
-                                              "cases": [
-                                                {
-                                                  "id": "93u96",
-                                                  "type": "IfCase",
-                                                  "test": {
-                                                    "id": "i63j9",
-                                                    "questionRef": {
-                                                      "type": "AliasRef",
-                                                      "value": "Baujahr"
-                                                    },
-                                                    "negated": false,
-                                                    "type": "AnswerNumberComparison",
-                                                    "operator": "lt",
-                                                    "comparands": [
-                                                      {
-                                                        "type": "NumberLiteral",
-                                                        "value": 1994
-                                                      }
-                                                    ]
+                                              "id": "2rns5",
+                                              "type": "Question",
+                                              "alias": "Gebäude hat gute Wärmedämmung",
+                                              "text": "Gibt es eine Wärmedämmung zusätzlich zur vorhandenen Bausubstanz?",
+                                              "info": null,
+                                              "answer": {
+                                                "type": "ChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "uiajj",
+                                                    "alias": "Ja",
+                                                    "text": "Ja"
                                                   },
-                                                  "block": [
-                                                    {
-                                                      "id": "2rns5",
-                                                      "type": "Question",
-                                                      "alias": "Gebäude hat gute Wärmedämmung",
-                                                      "text": "Gibt es eine Wärmedämmung zusätzlich zur vorhandenen Bausubstanz?",
-                                                      "info": null,
-                                                      "answer": {
-                                                        "type": "ChoiceAnswer",
-                                                        "options": [
-                                                          {
-                                                            "id": "uiajj",
-                                                            "alias": "Ja",
-                                                            "text": "Ja"
-                                                          },
-                                                          {
-                                                            "id": "qzhja",
-                                                            "alias": "Nein",
-                                                            "text": "Nein"
-                                                          },
-                                                          {
-                                                            "id": "8i22j",
-                                                            "alias": "Nicht sicher",
-                                                            "text": "Ich bin mir nicht sicher"
-                                                          }
-                                                        ]
-                                                      },
-                                                      "required": false,
-                                                      "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                                    }
-                                                  ]
-                                                }
-                                              ],
-                                              "alternate": []
+                                                  {
+                                                    "id": "qzhja",
+                                                    "alias": "Nein",
+                                                    "text": "Nein"
+                                                  },
+                                                  {
+                                                    "id": "8i22j",
+                                                    "alias": "Nicht sicher",
+                                                    "text": "Ich bin mir nicht sicher"
+                                                  }
+                                                ]
+                                              },
+                                              "required": false,
+                                              "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                             }
                                           ]
                                         },
@@ -13865,124 +14310,66 @@
                                           },
                                           "block": [
                                             {
-                                              "id": "8fr",
-                                              "type": "If",
-                                              "cases": [
-                                                {
-                                                  "id": "39q4x",
-                                                  "type": "IfCase",
-                                                  "test": {
-                                                    "id": "f5eez",
-                                                    "questionRef": {
-                                                      "type": "AliasRef",
-                                                      "value": "Baujahr"
-                                                    },
-                                                    "negated": false,
-                                                    "type": "AnswerNumberComparison",
-                                                    "operator": "lt",
-                                                    "comparands": [
-                                                      {
-                                                        "type": "NumberLiteral",
-                                                        "value": 2003
-                                                      }
-                                                    ]
+                                              "id": "mrid8",
+                                              "type": "Question",
+                                              "alias": "Gebäude hat gute Wärmedämmung",
+                                              "text": "Gibt es eine Wärmedämmung zusätzlich zur vorhandenen Bausubstanz?",
+                                              "info": null,
+                                              "answer": {
+                                                "type": "ChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "uiajj",
+                                                    "alias": "Ja",
+                                                    "text": "Ja"
                                                   },
-                                                  "block": [
-                                                    {
-                                                      "id": "mrid8",
-                                                      "type": "Question",
-                                                      "alias": "Gebäude hat gute Wärmedämmung",
-                                                      "text": "Gibt es eine Wärmedämmung zusätzlich zur vorhandenen Bausubstanz?",
-                                                      "info": null,
-                                                      "answer": {
-                                                        "type": "ChoiceAnswer",
-                                                        "options": [
-                                                          {
-                                                            "id": "uiajj",
-                                                            "alias": "Ja",
-                                                            "text": "Ja"
-                                                          },
-                                                          {
-                                                            "id": "qzhja",
-                                                            "alias": "Nein",
-                                                            "text": "Nein"
-                                                          },
-                                                          {
-                                                            "id": "8i22j",
-                                                            "alias": "Nicht sicher",
-                                                            "text": "Ich bin mir nicht sicher"
-                                                          }
-                                                        ]
-                                                      },
-                                                      "required": false,
-                                                      "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                                    }
-                                                  ]
-                                                }
-                                              ],
-                                              "alternate": []
+                                                  {
+                                                    "id": "qzhja",
+                                                    "alias": "Nein",
+                                                    "text": "Nein"
+                                                  },
+                                                  {
+                                                    "id": "8i22j",
+                                                    "alias": "Nicht sicher",
+                                                    "text": "Ich bin mir nicht sicher"
+                                                  }
+                                                ]
+                                              },
+                                              "required": false,
+                                              "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                             }
                                           ]
                                         }
                                       ],
                                       "alternate": [
                                         {
-                                          "id": "o4de3",
-                                          "type": "If",
-                                          "cases": [
-                                            {
-                                              "id": "ga4km",
-                                              "type": "IfCase",
-                                              "test": {
-                                                "id": "nxtxs",
-                                                "questionRef": {
-                                                  "type": "AliasRef",
-                                                  "value": "Baujahr"
-                                                },
-                                                "negated": false,
-                                                "type": "AnswerNumberComparison",
-                                                "operator": "lt",
-                                                "comparands": [
-                                                  {
-                                                    "type": "NumberLiteral",
-                                                    "value": 2009
-                                                  }
-                                                ]
+                                          "id": "rtu76j",
+                                          "type": "Question",
+                                          "alias": "Gebäude hat gute Wärmedämmung",
+                                          "text": "Gibt es eine Wärmedämmung zusätzlich zur vorhandenen Bausubstanz?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
                                               },
-                                              "block": [
-                                                {
-                                                  "id": "rtu76j",
-                                                  "type": "Question",
-                                                  "alias": "Gebäude hat gute Wärmedämmung",
-                                                  "text": "Gibt es eine Wärmedämmung zusätzlich zur vorhandenen Bausubstanz?",
-                                                  "info": null,
-                                                  "answer": {
-                                                    "type": "ChoiceAnswer",
-                                                    "options": [
-                                                      {
-                                                        "id": "uiajj",
-                                                        "alias": "Ja",
-                                                        "text": "Ja"
-                                                      },
-                                                      {
-                                                        "id": "qzhja",
-                                                        "alias": "Nein",
-                                                        "text": "Nein"
-                                                      },
-                                                      {
-                                                        "id": "8i22j",
-                                                        "alias": "Nicht sicher",
-                                                        "text": "Ich bin mir nicht sicher"
-                                                      }
-                                                    ]
-                                                  },
-                                                  "required": false,
-                                                  "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "alternate": []
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal 2015:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.7.1994 (wenn Baujahr vor diesem Zeitpunkt) [++]\n\nMerkmal 2017-2023:\nWärmedämmung zusätzlich zur vorhandenen Bausubstanz oder Einbau/Installation einer modernen Heizanlage nach dem 1.1.2003 (wenn Bezugsfertigkeit des Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nMerkmal 2024:\n\"Wärmedämmung zusätzlich zur vorhandenen Bau-\nsubstanz oder Einbau/Installation einer modernen\nHeizanlage ab 2009 (wenn Bezugsfertigkeit\ndes Gebäudes/der Wohnung vor diesem Zeitpunkt) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
                                         }
                                       ]
                                     }
@@ -15024,6 +15411,5 @@
         }
       ]
     }
-  ],
-  "subs": []
+  ]
 }

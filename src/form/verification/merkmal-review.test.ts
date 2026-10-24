@@ -5,7 +5,6 @@ import { FinalAnswers } from "~/form/flow-machine-runtime";
 import { MERKMAL_RESET_ANSWERS } from "~/form/mappings/answer-reset";
 import { answersToMerkmalStateMapping } from "~/form/mappings/merkmale";
 import { merkmaleDescriptionsByYear } from "~/mietspiegel/merkmale";
-import { Mietspiegeljahr } from "~/mietspiegel/types";
 
 import { BASE_ANSWERS, evaluateAnswers, isValidAnswer } from "./flow-paths";
 import {
@@ -34,13 +33,6 @@ test("every mapping condition refers to an existing question and answer option",
   expect(invalid).toEqual([]);
 });
 
-// Merkmale the questionnaire cannot mark as present in any construction
-// period. Each entry is a known flow gap; remove it once the flow is fixed.
-const KNOWN_NEVER_CHECKABLE: Partial<Record<Mietspiegeljahr, string[]>> = {
-  // Question is only asked for Vertragsdatum 2024-2026 (fix in floma.io).
-  "2026": ["[Bad+] Bad hat bodengleiche Dusche"],
-};
-
 describe.each(coverages)("$scenario.jahr, $scenario.label", (coverage) => {
   const { scenario, periods } = coverage;
 
@@ -48,7 +40,7 @@ describe.each(coverages)("$scenario.jahr, $scenario.label", (coverage) => {
     const never = coverage.rows
       .filter((row) => !Object.values(row.checkable).some(Boolean))
       .map((row) => row.merkmal);
-    expect(never).toEqual(KNOWN_NEVER_CHECKABLE[scenario.jahr] ?? []);
+    expect(never).toEqual([]);
   });
 
   test.each(periods)(

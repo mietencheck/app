@@ -108,10 +108,7 @@ describe("Bad hat bodengleiche Dusche", () => {
     expect(isAsked({ Vertragsdatum: "2024-2026" })).toBe(true);
   });
 
-  // Known flow gap: the Merkmal is in Mietspiegel 2026 too, but flow.fm.json
-  // only asks the question for Vertragsdatum 2024-2026. Fix it in the floma.io
-  // editor, then turn these into regular tests.
-  test.fails.each([
+  test.each([
     { Unterschrieben: "Ja", Vertragsdatum: ">2026" },
     { Unterschrieben: "Nein" },
   ])("is asked for Mietspiegel 2026 contracts (%o)", (answers) => {

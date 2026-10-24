@@ -67,11 +67,3 @@ export function contextFor(
     ) as Record<Sondermerkmal, "checked">,
   };
 }
-
-export const merkmalsgruppenCombinations = Array.from(
-  { length: 243 },
-  (_, index) =>
-    merkmalsgruppenNames.map(
-      (_, position) => (Math.floor(index / 3 ** position) % 3) - 1,
-    ),
-);

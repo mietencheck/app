@@ -12595,6 +12595,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Wohnnung hat sichtbare Bewässerungsleitungen": {
