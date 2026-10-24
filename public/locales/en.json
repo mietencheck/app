@@ -170,6 +170,7 @@
     "680400": "Does the intercom system have a camera?",
     "877530": "This includes stucco or panelling, for example",
     "884564": "Between 253 und 299 kWH/(m2*a)",
+    "895455": "Is there a bathroom with a towel radiator that can additionally be operated electrically (such as in this picture)?",
     "909215": "Is there a storage room (at least 1 m² of floor area) or a built-in cupboard inside the flat?",
     "911214": "In which year was the house, in which the apartment is located, built?",
     "954871": "These include, for example: permanent dampness in the brickwork/walls (including in the cellar), major plaster damage or considerable damage to the roof.",
@@ -338,7 +339,6 @@
     "2406be": "Is there a bathroom that cannot be heated?",
     "bf8fcf": "Is there a bathroom or WC that can only be heated with a wood/coal heater or an electric radiant heater?",
     "552a37": "Is there a bathroom with a textured radiator as a towel warmer (such as in this picture)?",
-    "1628d9": "Is there a bathroom with a textured electrical radiator as a towel warmer (such as in this picture)?",
     "fe71b3": "Is there a bathroom with underfloor heating?",
     "a801e5": "Walls & floor",
     "c7cb12": "Is there a bathroom with plank flooring?",
@@ -539,6 +539,10 @@
     "8fdfdf": "Are there villa-type apartment blocks in the vicinity of the house?",
     "e32dbb": "Is there a parking space for the car provided by the landlord near the flat?",
     "a9ab62": "Please note: The car park may also be subject to a charge",
-    "b794c8": "Result"
+    "b794c8": "Result",
+    "19ec89": "Guest toilets do not count. For buildings constructed from 2002 onwards, the 2026 rent index specifies “can additionally be operated electrically”. It is unclear whether this includes a towel radiator that runs exclusively on electricity. In this case, select “I am not sure”.",
+    "9fa883": "Guest toilets do not count. For buildings constructed up to and including 2001, electric operation is not required.",
+    "07ffba": "Is there a bathroom with a towel radiator that can be operated electrically (such as in this picture)?",
+    "7941d1": "Guest toilets do not count. For buildings constructed from 2002 onwards, the 2024 rent index includes this feature if the towel radiator can be operated electrically."
   }
 }
