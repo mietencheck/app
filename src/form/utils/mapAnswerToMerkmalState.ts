@@ -25,7 +25,7 @@ export const mapAnswerToMerkmalState = (
       );
       if (isChecked) return "checked";
 
-      // Merkmal is 'maybe' if all answers match value or are "Nicht sicher"
+      // Dependent follow-ups can opt into preserving visible unanswered inputs.
       const isMaybe = (checked_if.conditions as Condition[]).every(
         (condition: Condition) =>
           entries
@@ -33,7 +33,10 @@ export const mapAnswerToMerkmalState = (
             .every(
               ([alias, value]) =>
                 visibleQuestionAliases.has(alias) &&
-                (answers[alias] == value || answers[alias] == "Nicht sicher"),
+                (answers[alias] == value ||
+                  answers[alias] == "Nicht sicher" ||
+                  (merkmalStateMapping.unanswered_is_maybe &&
+                    answers[alias] == undefined)),
             ),
       );
       if (isMaybe) return "maybe";

@@ -16,6 +16,7 @@ export type AnswerMerkmalStateMappings = {
 
 export type AnswerMerkmalStateMapping = {
   checked_if: ConditionGroup | Condition;
+  unanswered_is_maybe?: boolean;
 };
 
 export const answersToMerkmalStateMapping = {
@@ -233,6 +234,7 @@ export const answersToMerkmalStateMapping = {
     checked_if: { "Wohnung hat Abstellraum": "Ja" },
   },
   "[Wohnung+] Wohnung hat großen Balkon": {
+    unanswered_is_maybe: true,
     checked_if: {
       logic: "and",
       conditions: [
