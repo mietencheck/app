@@ -106,6 +106,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -294,6 +295,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -741,6 +743,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1565,6 +1568,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1860,6 +1864,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2755,6 +2760,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2918,6 +2924,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3081,6 +3088,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3444,6 +3452,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3919,6 +3928,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4082,6 +4092,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4245,6 +4256,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4549,6 +4561,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4761,6 +4774,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5077,6 +5091,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5348,6 +5363,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5798,6 +5814,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6145,6 +6162,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6567,6 +6585,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6936,6 +6955,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7387,6 +7407,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7779,6 +7800,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8504,6 +8526,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8923,6 +8946,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9350,6 +9374,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9880,6 +9905,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10137,6 +10163,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10396,6 +10423,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10559,6 +10587,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11014,6 +11043,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11477,6 +11507,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11950,6 +11981,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12325,6 +12357,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12595,6 +12628,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -12704,6 +12738,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
@@ -12813,6 +12848,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -12923,6 +12959,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13086,6 +13123,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13197,6 +13235,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13311,6 +13350,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13424,6 +13464,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13587,6 +13628,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13701,6 +13743,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13816,6 +13859,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13979,6 +14023,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14095,6 +14140,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14212,6 +14258,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14330,6 +14377,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14449,6 +14497,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14570,6 +14619,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14691,6 +14741,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14854,6 +14905,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15017,6 +15069,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15139,6 +15192,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15262,6 +15316,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15386,6 +15441,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15511,6 +15567,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15674,6 +15731,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15800,6 +15858,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15927,6 +15986,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16090,6 +16150,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16218,6 +16279,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16347,6 +16409,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16478,6 +16541,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16641,6 +16705,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16775,6 +16840,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16909,6 +16975,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17043,6 +17110,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17206,6 +17274,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17340,6 +17409,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17477,6 +17547,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17613,6 +17684,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17776,6 +17848,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17913,6 +17986,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18052,6 +18126,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18191,6 +18266,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18331,6 +18407,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18472,6 +18549,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18635,6 +18713,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18798,6 +18877,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18940,6 +19020,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19084,6 +19165,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19229,6 +19311,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19392,6 +19475,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19539,6 +19623,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19686,6 +19771,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19833,6 +19919,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19982,6 +20069,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20145,6 +20233,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20308,6 +20397,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20457,6 +20547,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20607,6 +20698,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20758,6 +20850,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20910,6 +21003,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21073,6 +21167,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21227,6 +21322,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21381,6 +21477,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21536,6 +21633,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21692,6 +21790,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21849,6 +21948,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22007,6 +22107,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22170,6 +22271,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22329,6 +22431,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22489,6 +22592,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22650,6 +22754,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22812,6 +22917,7 @@ export type StepInfoByAlias = {
             "Wohnung hat aufwendige Wand- und Deckenverkleidung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat hochwertigen Bodenbelag"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat Fußbodenheizung"?: "Ja" | "Nein" | "Nicht sicher";
+            "Wohnung hat Heizungsrohre unter Putz"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung hat sichtbare Heizungsrohe"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnnung hat sichtbare Bewässerungsleitungen"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnung kann Waschmaschiene"?: "Ja" | "Nein" | "Nicht sicher";

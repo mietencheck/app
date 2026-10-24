@@ -268,7 +268,13 @@ export const answersToMerkmalStateMapping = {
     checked_if: { "Wohnung hat Fußbodenheizung": "Ja" },
   },
   "[Wohnung+] Wohnung hat nicht sichtbare Heizungsrohre": {
-    checked_if: { "Wohnung hat sichtbare Heizungsrohe": "Nein" },
+    checked_if: {
+      logic: "or",
+      conditions: [
+        { "Wohnung hat Heizungsrohre unter Putz": "Ja" },
+        { "Wohnung hat sichtbare Heizungsrohe": "Nein" },
+      ],
+    },
   },
   "[Wohnung+] Wohnung hat hochwertigen Boden": {
     checked_if: { "Wohnung hat hochwertigen Bodenbelag": "Ja" },

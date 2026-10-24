@@ -80,6 +80,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Wohnung hat verstärkte Tür": "Nein",
   "Wohnung hat Kaltwasserzähler": "Nein",
   "Wohnung hat Fußbodenheizung": "Nein",
+  "Wohnung hat Heizungsrohre unter Putz": "Nein",
   "Wohnung hat sichtbare Heizungsrohe": "Ja",
   "Wohnung hat hochwertigen Bodenbelag": "Nein",
   "Wohnung hat Internetanschluss": "Nein",

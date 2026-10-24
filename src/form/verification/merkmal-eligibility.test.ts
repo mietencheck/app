@@ -70,27 +70,62 @@ test.each(editions)(
   },
 );
 
+const unterPutzQuestion = "Wohnung hat Heizungsrohre unter Putz";
+const sichtbareRohreQuestion = "Wohnung hat sichtbare Heizungsrohe";
+const heizungsrohreMerkmal =
+  "[Wohnung+] Wohnung hat nicht sichtbare Heizungsrohre";
+
+// 2015 requires under-plaster installation; later editions ask about visibility.
+// Answer the hidden variant positively as well to detect cross-edition leakage.
 test.each(
   editions.flatMap((edition) =>
-    [1990, 1991].map((baujahr) => ({ ...edition, baujahr })),
+    [1990, 1991].flatMap((baujahr) =>
+      ["Ja", "Nein", "Nicht sicher"].map((answer) => ({
+        ...edition,
+        baujahr,
+        answer,
+      })),
+    ),
   ),
 )(
-  "$jahr, Baujahr $baujahr: Heizungsrohre eligibility",
-  ({ jahr, pinned, baujahr }) => {
+  "$jahr, Baujahr $baujahr, Heizungsrohre $answer",
+  ({ jahr, pinned, baujahr, answer }) => {
+    const is2015 = jahr === "2015";
+    const question = is2015 ? unterPutzQuestion : sichtbareRohreQuestion;
     const result = evaluate({
       ...pinned,
       Baujahr: baujahr,
-      "Wohnung hat sichtbare Heizungsrohe": "Nein",
+      [unterPutzQuestion]: "Ja",
+      [sichtbareRohreQuestion]: "Nein",
+      [question]: answer,
     });
     const eligible = Number(jahr) < 2024 || baujahr <= 1990;
-    expect(result.visible.has("Wohnung hat sichtbare Heizungsrohe")).toBe(
-      eligible,
+    expect(result.visible.has(unterPutzQuestion)).toBe(is2015);
+    expect(result.visible.has(sichtbareRohreQuestion)).toBe(
+      !is2015 && eligible,
     );
-    expect(
-      result.states["[Wohnung+] Wohnung hat nicht sichtbare Heizungsrohre"],
-    ).toBe(eligible ? "checked" : "unchecked");
+    const positiveAnswer = is2015 ? "Ja" : "Nein";
+    expect(result.states[heizungsrohreMerkmal]).toBe(
+      !eligible
+        ? "unchecked"
+        : answer === "Nicht sicher"
+          ? "maybe"
+          : answer === positiveAnswer
+            ? "checked"
+            : "unchecked",
+    );
   },
 );
+
+test("2015: a cover hiding the pipes alone does not establish under-plaster installation", () => {
+  const result = evaluate({
+    Vertragsdatum: "2015-2016",
+    Baujahr: 1900,
+    [unterPutzQuestion]: "Nein",
+    [sichtbareRohreQuestion]: "Nein",
+  });
+  expect(result.states[heizungsrohreMerkmal]).toBe("unchecked");
+});
 
 const recentEditions = editions.filter(({ jahr }) => Number(jahr) >= 2024);
 
