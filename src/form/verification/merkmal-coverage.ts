@@ -129,6 +129,27 @@ export function excludedPeriodsFromText(
   text: string,
   periods: Period[],
 ): string[] {
+  // These source clauses restrict only one alternative. A Merkmal is excluded
+  // only when *all* alternatives are excluded. Do not split arbitrary "oder":
+  // e.g. the windows clause puts a shared Baujahr restriction before both.
+  const alternatives = text.split(
+    / oder (?=hochwertiges Stand-WC|Einbau\/Installation einer modernen Heizanlage)/i,
+  );
+  if (alternatives.length > 1) {
+    const excluded = alternatives.map(
+      (alternative) => new Set(excludedPeriodsFromText(alternative, periods)),
+    );
+    return periods
+      .filter((period) => excluded.every((set) => set.has(period.label)))
+      .map((period) => period.label);
+  }
+  if (
+    /(?:falls|sofern)(?: zusätzlich)? elektrisch betreibbar: alle Baujahre/i.test(
+      text,
+    )
+  )
+    return [];
+
   const excluded = new Set<string>();
   const exclude = (hit: (p: Period) => boolean) =>
     periods.filter(hit).forEach((p) => excluded.add(p.label));
