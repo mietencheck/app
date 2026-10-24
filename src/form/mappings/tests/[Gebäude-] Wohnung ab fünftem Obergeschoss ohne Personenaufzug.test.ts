@@ -22,7 +22,7 @@ test.each([
     ].map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        Baujahr: 1949,
+        Baujahr: 1950,
         "Gebäude hat Fahrstuhl": "Ja",
         "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
       },
@@ -41,7 +41,7 @@ test.each([
     ].map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        Baujahr: 1949,
+        Baujahr: 1950,
         "Gebäude hat Fahrstuhl": "Ja",
         "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nicht sicher",
       },
@@ -60,7 +60,7 @@ test.each([
     ].map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        Baujahr: 1949,
+        Baujahr: 1950,
         "Gebäude hat Fahrstuhl": "Ja",
         "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nein",
       },
@@ -79,7 +79,7 @@ test.each([
     ].map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        Baujahr: 1949,
+        Baujahr: 1950,
         "Gebäude hat Fahrstuhl": "Nicht sicher",
         "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
       },
@@ -98,7 +98,7 @@ test.each([
     ].map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        Baujahr: 1949,
+        Baujahr: 1950,
         "Gebäude hat Fahrstuhl": "Nicht sicher",
         "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nicht sicher",
       },
@@ -117,7 +117,7 @@ test.each([
     ].map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        Baujahr: 1949,
+        Baujahr: 1950,
         "Gebäude hat Fahrstuhl": "Nicht sicher",
         "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nein",
       },
@@ -136,7 +136,7 @@ test.each([
     ].map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        Baujahr: 1949,
+        Baujahr: 1950,
         "Gebäude hat Fahrstuhl": "Nein",
         "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Ja",
       },
@@ -155,7 +155,7 @@ test.each([
     ].map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        Baujahr: 1949,
+        Baujahr: 1950,
         "Gebäude hat Fahrstuhl": "Nein",
         "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nicht sicher",
       },
@@ -174,7 +174,7 @@ test.each([
     ].map((vertragsdatum) => ({
       answers: {
         Vertragsdatum: vertragsdatum,
-        Baujahr: 1949,
+        Baujahr: 1950,
         "Gebäude hat Fahrstuhl": "Nein",
         "Gebäude hat >=5 Stockwerke und kein Fahrstuhl": "Nein",
       },

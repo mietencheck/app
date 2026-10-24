@@ -1,5 +1,42 @@
 # Mietenbremse
 
+## Tests
+
+```sh
+pnpm exec vitest run        # All unit/integration tests
+pnpm test:mietspiegel       # Mietspiegel calculation tests
+pnpm test:review            # Questionnaire tests
+pnpm type-check
+pnpm exec playwright install chromium
+pnpm test:e2e               # Desktop/mobile Miete and Beratung browser tests
+```
+
+The browser suites start their own frontend on port 5174. The Beratung suite mocks
+the backend.
+It needs no login credentials or running backend and blocks external requests.
+It covers editing Sammelheizung/Bad, known recalculated rent amounts, saving and
+reloading, retrying failed saves, missing records, load errors, and rejected
+sessions. Saved state is simulated by the API mock; database persistence is not
+covered by this suite. The unit tests cover persisted record parsing and the
+Beratung calculation context with fixed expected results.
+
+Both suites run on pushes and pull requests. Browser failure traces are uploaded
+as CI artifacts, or can be opened locally with
+`pnpm exec playwright show-trace test-results/<failed-test>/trace.zip`.
+
+To re-extract reference tables, install Python packages `pdfplumber` and `pypdf`,
+then run:
+
+```sh
+python scripts/extract-mietspiegel-reference.py /path/to/Mietspiegel
+pnpm exec prettier --write src/calculation/verification/reference
+pnpm test:mietspiegel
+```
+
+Use German for domain concepts and English for operations, structure and units
+in code identifiers, for example `referenceVergleichsmietePerQmInCent`,
+`expectedMonthlyHoechstmieteInCent` and `hasSammelheizung`.
+
 To run the project, first [install PNPM](https://pnpm.io/installation), open a
 terminal and run:
 
@@ -33,33 +70,6 @@ to your real Nest URL (Wrangler `--var`, `[env.*.vars]`, or dashboard). The
 **Direct API from the browser:** only then set **`VITE_MIETENCHECK_API_BASE_URL`**
 to the Nest origin (no trailing slash); Nest must allow CORS for your site’s
 origin. Build-time env: `.env.production` or your CI vars for `VITE_*`.
-
-## Testing
-
-Run the unit and calculation tests once:
-
-```sh
-pnpm run test --run
-```
-
-Install Chromium once, then run the Beratung browser tests:
-
-```sh
-pnpm exec playwright install chromium
-pnpm test:e2e
-```
-
-The browser suite starts its own frontend on port 5174 and mocks the backend.
-It needs no login credentials or running backend and blocks external requests.
-It covers editing Sammelheizung/Bad, known recalculated rent amounts, saving and
-reloading, retrying failed saves, missing records, load errors, and rejected
-sessions. Saved state is simulated by the API mock; database persistence is not
-covered by this suite. The unit tests cover persisted record parsing and the
-Beratung calculation context with fixed expected results.
-
-Both suites run on pushes and pull requests. Browser failure traces are uploaded
-as CI artifacts, or can be opened locally with
-`pnpm exec playwright show-trace test-results/<failed-test>/trace.zip`.
 
 ## API
 
@@ -217,7 +227,9 @@ For older Cloudflare Pages projects still on build image v2, also set
 `NODE_VERSION=24.14.0` in the Pages dashboard or upgrade the project to build
 image v3.
 
-To edit the flow, open `src/form` at [floma.vercel.app](https://floma.vercel.app)
+To edit the flow, open [Floma](https://app.floma.io/) and use **Sync with directory**
+to select `src/form` from the current checkout. Commit `flow.fm.json` and its
+generated `flow.fm.ts` together.
 
 ## Updating Strassenverzeichnis
 

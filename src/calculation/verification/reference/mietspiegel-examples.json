@@ -1,0 +1,116 @@
+[
+  {
+    "id": "2015-B",
+    "mietspiegeljahr": "2015",
+    "pdfPage": 17,
+    "section": "11.4 B",
+    "tabellenfeld": "H2",
+    "wohnflaeche": "80",
+    "merkmalsgruppen": [1, 1, 1, -1, -1],
+    "sondermerkmale": [],
+    "expectedVergleichsmietePerQmInCent": 583,
+    "expectedMonthlyHoechstmieteInCent": 51304
+  },
+  {
+    "id": "2015-C",
+    "mietspiegeljahr": "2015",
+    "pdfPage": 17,
+    "section": "11.4 C",
+    "tabellenfeld": "G3",
+    "wohnflaeche": "65",
+    "merkmalsgruppen": [0, 0, 0, 0, 0],
+    "sondermerkmale": [
+      "[Sondermerkmal] Moderne Küchenausstattung",
+      "[Sondermerkmal] Modernes Bad"
+    ],
+    "expectedVergleichsmietePerQmInCent": 641,
+    "expectedMonthlyHoechstmieteInCent": 45832
+  },
+  {
+    "id": "2015-D",
+    "mietspiegeljahr": "2015",
+    "pdfPage": 18,
+    "section": "11.4 D",
+    "tabellenfeld": "I1",
+    "wohnflaeche": "85",
+    "merkmalsgruppen": [1, 1, 1, 1, 0],
+    "sondermerkmale": [
+      "[Sondermerkmal] Hochwertiger Bodenbelag",
+      "[Sondermerkmal] Modernes Bad"
+    ],
+    "expectedVergleichsmietePerQmInCent": 749,
+    "expectedMonthlyHoechstmieteInCent": 70032
+  },
+  {
+    "id": "2017-B",
+    "mietspiegeljahr": "2017",
+    "pdfPage": 16,
+    "section": "10.4 B",
+    "tabellenfeld": "H2",
+    "wohnflaeche": "80",
+    "merkmalsgruppen": [1, 1, 1, -1, -1],
+    "sondermerkmale": [],
+    "expectedVergleichsmietePerQmInCent": 640,
+    "expectedMonthlyHoechstmieteInCent": 56320
+  },
+  {
+    "id": "2019-B",
+    "mietspiegeljahr": "2019",
+    "pdfPage": 20,
+    "section": "10.4 B",
+    "tabellenfeld": "D2",
+    "wohnflaeche": "50",
+    "merkmalsgruppen": [1, 1, 1, -1, -1],
+    "sondermerkmale": [],
+    "expectedVergleichsmietePerQmInCent": 676,
+    "expectedMonthlyHoechstmieteInCent": 37180
+  },
+  {
+    "id": "2021-B",
+    "mietspiegeljahr": "2021",
+    "pdfPage": 19,
+    "section": "10.4 B",
+    "tabellenfeld": "D2",
+    "wohnflaeche": "50",
+    "merkmalsgruppen": [1, 1, 1, -1, -1],
+    "sondermerkmale": [],
+    "expectedVergleichsmietePerQmInCent": 683,
+    "expectedMonthlyHoechstmieteInCent": 37565
+  },
+  {
+    "id": "2023-B",
+    "mietspiegeljahr": "2023",
+    "pdfPage": 19,
+    "section": "10.4 B",
+    "tabellenfeld": "D2",
+    "wohnflaeche": "50",
+    "merkmalsgruppen": [1, 1, 1, -1, -1],
+    "sondermerkmale": [],
+    "expectedVergleichsmietePerQmInCent": 720,
+    "expectedMonthlyHoechstmieteInCent": 39600
+  },
+  {
+    "id": "2024-B",
+    "mietspiegeljahr": "2024",
+    "pdfPage": 23,
+    "section": "10.4 B",
+    "tabellenfeld": "63",
+    "wohnflaeche": "60",
+    "merkmalsgruppen": [1, 1, 1, -1, -1],
+    "sondermerkmale": [],
+    "expectedVergleichsmietePerQmInCent": 753,
+    "expectedMonthlyHoechstmieteInCent": 49698
+  },
+  {
+    "id": "2026-B",
+    "mietspiegeljahr": "2026",
+    "pdfPage": 23,
+    "section": "10.4 B",
+    "tabellenfeld": "81",
+    "wohnflaeche": "60",
+    "merkmalsgruppen": [1, 1, 1, -1, -1],
+    "sondermerkmale": [],
+    "expectedVergleichsmietePerQmInCent": 775,
+    "expectedMonthlyHoechstmieteInCent": 51150
+  }
+]

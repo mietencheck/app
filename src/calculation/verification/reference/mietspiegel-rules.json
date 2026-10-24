@@ -1,0 +1,184 @@
+{
+  "ausstattungsAbzuege": [
+    {
+      "mietspiegeljahr": "2015",
+      "pdfPage": 14,
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 194,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 265
+    },
+    {
+      "mietspiegeljahr": "2015",
+      "pdfPage": 14,
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 167,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 265
+    },
+    {
+      "mietspiegeljahr": "2015",
+      "pdfPage": 14,
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 103,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": null
+    },
+    {
+      "mietspiegeljahr": "2017",
+      "pdfPage": 13,
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 134,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 87
+    },
+    {
+      "mietspiegeljahr": "2017",
+      "pdfPage": 13,
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 35,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 87
+    },
+    {
+      "mietspiegeljahr": "2017",
+      "pdfPage": 13,
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 81,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": null
+    },
+    {
+      "mietspiegeljahr": "2019",
+      "pdfPage": 17,
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 141,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 220
+    },
+    {
+      "mietspiegeljahr": "2019",
+      "pdfPage": 17,
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 43,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 220
+    },
+    {
+      "mietspiegeljahr": "2019",
+      "pdfPage": 17,
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 145,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": null
+    },
+    {
+      "mietspiegeljahr": "2021",
+      "pdfPage": 17,
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 143,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 222
+    },
+    {
+      "mietspiegeljahr": "2021",
+      "pdfPage": 17,
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 43,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 222
+    },
+    {
+      "mietspiegeljahr": "2021",
+      "pdfPage": 17,
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 147,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": null
+    },
+    {
+      "mietspiegeljahr": "2023",
+      "pdfPage": 17,
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 151,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 234
+    },
+    {
+      "mietspiegeljahr": "2023",
+      "pdfPage": 17,
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 45,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 234
+    },
+    {
+      "mietspiegeljahr": "2023",
+      "pdfPage": 17,
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 155,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": null
+    },
+    {
+      "mietspiegeljahr": "2024",
+      "pdfPage": 21,
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 45,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 45
+    },
+    {
+      "mietspiegeljahr": "2024",
+      "pdfPage": 21,
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 45,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 45
+    },
+    {
+      "mietspiegeljahr": "2024",
+      "pdfPage": 21,
+      "baujahrSpanne": "1950-1964",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 45,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 45
+    },
+    {
+      "mietspiegeljahr": "2026",
+      "pdfPage": 21,
+      "baujahrSpanne": "-1918",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 33,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 33
+    },
+    {
+      "mietspiegeljahr": "2026",
+      "pdfPage": 21,
+      "baujahrSpanne": "1919-1949",
+      "ausstattungsAbzugForOneMissingMerkmalInCent": 33,
+      "ausstattungsAbzugWithoutSammelheizungAndBadInCent": 33
+    }
+  ],
+  "sondermerkmale2015": {
+    "pdfPage": 14,
+    "section": "10.1",
+    "baujahrSpannen": [
+      "-1918",
+      "1919-1949",
+      "1950-1964",
+      "1965-1972",
+      "W:1973-1990",
+      "O:1973-1990",
+      "1991-2002",
+      "2003-2013"
+    ],
+    "zuAbschlaegeInCent": {
+      "[Sondermerkmal] Hochwertiger Bodenbelag": [56, 83, 110, 0, 46, 0, 79, 0],
+      "[Sondermerkmal] Moderne Küchenausstattung": [
+        137, 0, 104, 50, 40, 0, 42, 0
+      ],
+      "[Sondermerkmal] Von der Badewanne getrennte Dusche": [
+        63, 0, 0, 0, 0, 0, 0, 0
+      ],
+      "[Sondermerkmal] Kleines Bad": [0, 0, 0, 0, 0, 0, -32, 0],
+      "[Sondermerkmal] Modernes Bad": [34, 40, 28, 12, 0, 16, 0, 0],
+      "[Sondermerkmal] Isolierverglasung/Schallschutzfenster": [
+        28, 0, 0, 0, 0, 0, 0, 0
+      ],
+      "[Sondermerkmal] Aufzug im Haus": [64, 0, 0, 0, 0, 0, 0, 0]
+    }
+  },
+  "spanneneinordnungsRule": {
+    "section": "10.3 (2017-2026), 11.3 (2015)",
+    "merkmalsgruppen": 5,
+    "merkmalsgruppenWeightNumerator": 1,
+    "merkmalsgruppenWeightDenominator": 5
+  },
+  "sondermerkmalSpanneneinordnungsRule2015": {
+    "pdfPages": [15, 16],
+    "section": "11.3, steps 1-3",
+    "description": "If the Mittelwert plus Sondermerkmale is outside the Preisspanne, do not apply the Spanneneinordnung in either direction. Otherwise bound the combined result by both Spannenendwerte."
+  }
+}

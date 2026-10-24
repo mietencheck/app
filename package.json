@@ -18,15 +18,17 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest",
-    "type-check": "tsc --noEmit",
+    "test:mietspiegel": "vitest run src/calculation/verification",
+    "test:review": "vitest run src/form/verification",
+    "test:e2e": "playwright test",
+    "type-check": "tsc --noEmit && tsc --noEmit --project tsconfig.node.json",
     "lint": "eslint .",
     "format": "prettier . --write",
     "generate-sitemap": "tsx scripts/generate-sitemap.ts",
     "build": "pnpm run generate-sitemap && vite-react-ssg build",
     "preview": "vite preview",
     "deploy": "pnpm run generate-sitemap && vite-react-ssg build && pnpm exec wrangler deploy",
-    "sanity:typegen": "cd studio && pnpm exec sanity schema extract && pnpm exec sanity typegen generate",
-    "test:e2e": "playwright test"
+    "sanity:typegen": "cd studio && pnpm exec sanity schema extract && pnpm exec sanity typegen generate"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",

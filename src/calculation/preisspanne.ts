@@ -23,12 +23,12 @@ export function getWorstBestPreisspanne(
       mietspiegeljahr as keyof typeof preisspannenByMietspiegeljahr
     ];
   const preisspannenForBaujahrSpanne =
-    preisspannen[
+    preisspannen?.[
       baujahrSpanne as keyof (typeof preisspannenByMietspiegeljahr)[typeof mietspiegeljahr]
     ];
-  const preisspannenForWohnlage = preisspannenForBaujahrSpanne[wohnlage];
+  const preisspannenForWohnlage = preisspannenForBaujahrSpanne?.[wohnlage];
   const preisspannenForWohnflaeche =
-    preisspannenForWohnlage[
+    preisspannenForWohnlage?.[
       wohnflaecheSpanne as keyof typeof preisspannenForWohnlage
     ];
 

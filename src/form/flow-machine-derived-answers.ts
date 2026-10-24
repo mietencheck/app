@@ -54,13 +54,21 @@ export function applyDerivedAnswers(state: AnswerData): AnswerData {
   const vertragsdatum = buildVertragsdatum(bareAnswers);
   const lageInfo = buildLageInfo(bareAnswers);
   const baujahr = buildBaujahr(bareAnswers);
+  const hasAddress = Boolean(bareAnswers.get(["Adresse"]));
 
   const baujahrFromState = bareAnswers.get(["Baujahr"]);
   return {
     ...bareAnswers.state,
-    Ost: lageInfo?.ost ?? bareAnswers.get(["Ost"]) ?? null,
+    // An address with no classification for the selected edition must not
+    // retain derived location fields from an earlier address/edition. Explicit
+    // fields remain supported for API clients that submit no address at all.
+    Ost:
+      lageInfo?.ost ?? (hasAddress ? null : (bareAnswers.get(["Ost"]) ?? null)),
     Wohnlage:
-      lageInfo?.wohnlage ?? bareAnswers.getWithOptionAlias("Wohnlage") ?? null,
+      lageInfo?.wohnlage ??
+      (hasAddress
+        ? null
+        : (bareAnswers.getWithOptionAlias("Wohnlage") ?? null)),
     Baujahr:
       (baujahr ? Number(baujahr) : null) ??
       (typeof baujahrFromState === "number" ? baujahrFromState : null),

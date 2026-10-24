@@ -10,12 +10,15 @@ export const calcMerkmalsgruppenValueInEuro = (
   sondermerkmalAufschlag: number,
 ): number => {
   const [average, lowerLimit, upperLimit] = preisspanne;
+  const mittelwertWithSondermerkmale = average + sondermerkmalAufschlag;
+  // 2015 section 11.3, step 3: once Sondermerkmale alone exceed either
+  // endpoint, no Spanneneinordnung may be applied in either direction.
+  if (
+    mittelwertWithSondermerkmale < lowerLimit ||
+    mittelwertWithSondermerkmale > upperLimit
+  )
+    return 0;
   if (spanneneinordnung >= 0) {
-    // sondermerkmalAufschlag exceeds the upper limit of the Preisspanne, merkmalgruppeAufschlag must be ignored.
-    if (average + sondermerkmalAufschlag > upperLimit) {
-      return 0;
-    }
-
     const spanneneinordnungAufschlag =
       (upperLimit - average) * spanneneinordnung;
     const maxAllowedSpanneneinordnungAufschlag =
@@ -26,7 +29,10 @@ export const calcMerkmalsgruppenValueInEuro = (
       maxAllowedSpanneneinordnungAufschlag,
     );
   } else {
-    return (average - lowerLimit) * spanneneinordnung;
+    return Math.max(
+      (average - lowerLimit) * spanneneinordnung,
+      lowerLimit - mittelwertWithSondermerkmale,
+    );
   }
 };
 
@@ -39,7 +45,7 @@ const calcOrtsueblicheVergleichsmiete = (
   spanneneinordnung: number,
   sondermerkmalAufschlag: number,
 ): number => {
-  const [average, _] = preisspanne;
+  const [average] = preisspanne;
   const merkmalsgruppenValue = calcMerkmalsgruppenValueInEuro(
     preisspanne,
     spanneneinordnung,

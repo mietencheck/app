@@ -13,7 +13,7 @@ export const answersToSondermerkmalStateMapping = {
     checked_if: { "Sondermerkmal Dusche Und Badewanne": "Ja" },
   },
   "[Sondermerkmal] Kleines Bad": {
-    checked_if: { "Sondermerkmal Badezimmer Klein": "Nein" },
+    checked_if: { "Sondermerkmal Badezimmer mindestens 4qm": "Nein" },
   },
   "[Sondermerkmal] Modernes Bad": {
     checked_if: { "Sondermerkmal Modernes Bad": "Ja" },

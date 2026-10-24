@@ -46,7 +46,7 @@ import {
 import { StepperType } from "..";
 import { ExitMietvertragVorherigeMieterhoehungFreiwillig } from "./exits/miete/mietvertrag/VorherigeMieterhoehungFreiwillig";
 
-const Exits = {
+export const Exits = {
   "Exit: Mietvertrag zu alt": () => <ExitMietvertragZuAlt />,
   "Exit: Keine Wohnlage gefunden": () => <ExitKeineWohnlageGefunden />,
   "Exit: Mietspiegel Feld Leer": () => <ExitMietspiegelFeldLeer />,

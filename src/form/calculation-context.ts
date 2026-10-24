@@ -46,7 +46,8 @@ export function answersToCalculationContext(
     !baujahrSpanne ||
     !wohnlage ||
     wohnflaeche === undefined ||
-    Number.isNaN(wohnflaeche) ||
+    !Number.isFinite(wohnflaeche) ||
+    wohnflaeche <= 0 ||
     !wohnflaecheSpanne
   ) {
     return undefined;

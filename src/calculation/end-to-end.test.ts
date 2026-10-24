@@ -106,11 +106,12 @@ test.each([
         Wohnlage: "einfach",
         Qm: 140,
         "Bad Wände ausreichend gefließt": "Nein",
-        "Bad größer als 4qm": "Nein",
+        "Bad mindestens 4qm": "Nein",
         "Bad hat wandhängendes WC": "Ja",
         "Küche hat Warmwasser": "Nein",
         "Wohnung hat Balkon": "Nein",
-        "Wohnung keinen Balkon weil unmöglich": "Ja",
+        // A balcony would be possible, so "kein Balkon" lowers the Wohnwert.
+        "Wohnung keinen Balkon weil unmöglich": "Nein",
         "Wohnung hat Durchgangszimmer": "Ja",
         "Wohnung hat hochwertigen Bodenbelag": "Ja",
         "Kennt Energieverbrauch oder Energiebedarf": "Ernergiebedarfswert",
@@ -158,7 +159,7 @@ test.each([
         Wohnlage: "einfach",
         Qm: 60,
         "Bad mit WC ohne Fenster": "Ja",
-        "Bad größer als 4qm": "Nein",
+        "Bad mindestens 4qm": "Nein",
         "Bad mit Strukturheizkörper": "Ja",
         "Bad mit hochwertiger Ausstattung": "Ja",
         "Bad Wände ausreichend gefließt": "Nein",
@@ -321,8 +322,10 @@ test.each([
         "Wohnumfeld hat eigenen Garten": "Ja",
       },
       result: {
-        worst: 393.36,
-        best: 393.36,
+        // 2015 section 11.3 step 3: 5.09 + 1.10 exceeds the 6.07
+        // upper endpoint, so the negative group adjustment is not applied.
+        worst: 408.54,
+        best: 408.54,
       },
     },
     {

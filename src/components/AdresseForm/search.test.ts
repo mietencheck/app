@@ -37,4 +37,25 @@ describe("strassenDataRawToAdressen", () => {
     expect(adresse?.lage[2024]?.wohnlage).toBe("mittel");
     expect(adresse?.lage[2026]?.wohnlage).toBe("mittel");
   });
+
+  test('decodes Wohnlage code 3 ("ohne", Straßenverzeichnis 2017) as no Wohnlage', () => {
+    // Abram-Joffe-Straße 2, 12489 has code 3 in 2017, "einfach" in 2019 and "mittel" in 2026.
+    const adresse = strassenDataRawToAdressen(
+      "Abram-Joffe-Straße",
+      loadStrassenData("Abram-Joffe-Straße"),
+    ).find((a) => a.plz === "12489" && a.nummer === "2");
+
+    expect(adresse).toBeDefined();
+    expect(adresse?.lage[2017]).toBeUndefined();
+    expect(adresse?.lage[2019]).toEqual({ wohnlage: "einfach", ost: true });
+    expect(adresse?.lage[2026]).toEqual({ wohnlage: "mittel", ost: true });
+  });
+
+  test("never decodes an unknown Wohnlage code as a Wohnlage", () => {
+    const [adresse] = strassenDataRawToAdressen("Teststraße", {
+      "10115": { "1": { "2": [3, 0], "11": [7, 0] } },
+    });
+
+    expect(adresse.lage).toEqual({});
+  });
 });

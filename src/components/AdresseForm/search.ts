@@ -34,6 +34,12 @@ for (const strasse of strassen) {
   strassenIndex.add(strasse, strasse);
 }
 
+const WOHNLAGE_BY_CODE: Partial<Record<number, LageInfo["wohnlage"]>> = {
+  0: "einfach",
+  1: "mittel",
+  2: "gut",
+};
+
 export function strassenDataRawToAdressen(
   strasse: string,
   rawData: StrassenDataRaw,
@@ -46,14 +52,19 @@ export function strassenDataRawToAdressen(
         nummer,
         plz,
         lage: Object.fromEntries(
-          Object.entries(byJahr).map(([jahr, [wohnlage, ost]]) => [
-            Number(jahr) + 2015,
-            {
-              wohnlage:
-                (["einfach", "mittel", "gut"] as const)[wohnlage] ?? "gut",
-              ost: Boolean(ost),
-            } satisfies LageInfo,
-          ]),
+          Object.entries(byJahr).flatMap(([jahr, [wohnlage, ost]]) => {
+            const decoded = WOHNLAGE_BY_CODE[wohnlage];
+            // Code 3 ("ohne", Straßenverzeichnis 2017) means the address has
+            // no Wohnlage in that edition. Omitting the edition makes the flow
+            // exit with "Keine Wohnlage gefunden" instead of guessing one.
+            if (!decoded) return [];
+            return [
+              [
+                Number(jahr) + 2015,
+                { wohnlage: decoded, ost: Boolean(ost) } satisfies LageInfo,
+              ],
+            ];
+          }),
         ) as LageInfoByJahr,
       });
     }

@@ -14,7 +14,6 @@ export function Result() {
   const isCompleted = useIsCompleted();
 
   const l = useLocalizeField();
-
   if (!isCompleted && location.hash !== "#debug") {
     return (
       <>

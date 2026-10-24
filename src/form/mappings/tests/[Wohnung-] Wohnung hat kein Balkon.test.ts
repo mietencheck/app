@@ -31,7 +31,7 @@ test.each([
         "Wohnung keinen Balkon weil unmöglich": "Ja",
       },
       expected: {
-        "[Wohnung-] Wohnung hat kein Balkon": "maybe",
+        "[Wohnung-] Wohnung hat kein Balkon": "unchecked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
@@ -51,7 +51,7 @@ test.each([
         "Wohnung keinen Balkon weil unmöglich": "Nein",
       },
       expected: {
-        "[Wohnung-] Wohnung hat kein Balkon": "unchecked",
+        "[Wohnung-] Wohnung hat kein Balkon": "maybe",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
@@ -61,7 +61,7 @@ test.each([
         "Wohnung keinen Balkon weil unmöglich": "Ja",
       },
       expected: {
-        "[Wohnung-] Wohnung hat kein Balkon": "checked",
+        "[Wohnung-] Wohnung hat kein Balkon": "unchecked",
       },
     })),
     ...ALL_VERTRAGSDATUM.map((vertragsdatum) => ({
@@ -81,7 +81,7 @@ test.each([
         "Wohnung keinen Balkon weil unmöglich": "Nein",
       },
       expected: {
-        "[Wohnung-] Wohnung hat kein Balkon": "unchecked",
+        "[Wohnung-] Wohnung hat kein Balkon": "checked",
       },
     })),
   ].map(({ answers, expected }) => {

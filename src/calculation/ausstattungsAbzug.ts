@@ -3,7 +3,7 @@ import { ausstattungsAbzuegeByYear } from "~/mietspiegel/ausstattungsAbzuege";
 import { AusstattungState, CalculationContext } from "./types";
 
 /**
- * Calculates the worst and best possible Ausstattungsabzug ('facility discount') for the given calculation context.
+ * Calculates the worst and best possible Ausstattungsabzug for the given calculation context.
  */
 export function getWorstBestAusstattungsAbzug(
   ctx: CalculationContext,
@@ -21,27 +21,22 @@ export function getWorstBestAusstattungsAbzug(
     };
   }
 
-  const isChecked = (m: AusstattungState) => m == "Nein";
-  const isMaybeOrChecked = (m: AusstattungState) =>
-    m == "Nein" || m == "Nicht sicher";
-
-  const best =
-    isMaybeOrChecked(ausstattung.sammelheizung) &&
-    isMaybeOrChecked(ausstattung.bad)
-      ? ausstattungsAbzuege["!SH && !Bad"]
-      : isMaybeOrChecked(ausstattung.sammelheizung) ||
-          isMaybeOrChecked(ausstattung.bad)
-        ? ausstattungsAbzuege["!SH || !Bad"]
-        : 0;
-  const worst =
-    isChecked(ausstattung.sammelheizung) && isChecked(ausstattung.bad)
-      ? ausstattungsAbzuege["!SH && !Bad"]
-      : isChecked(ausstattung.sammelheizung) || isChecked(ausstattung.bad)
-        ? ausstattungsAbzuege["!SH || !Bad"]
-        : 0;
-
+  const possibilities = (state: AusstattungState): boolean[] =>
+    state === "Nicht sicher" ? [true, false] : [state === "Ja"];
+  const possibleAusstattungsAbzuege = possibilities(
+    ausstattung.sammelheizung,
+  ).flatMap((hasSammelheizung) =>
+    possibilities(ausstattung.bad).map((hasBad) =>
+      !hasSammelheizung && !hasBad
+        ? ausstattungsAbzuege["!SH && !Bad"]
+        : !hasSammelheizung || !hasBad
+          ? ausstattungsAbzuege["!SH || !Bad"]
+          : 0,
+    ),
+  );
+  // Ausstattungsabzüge are not necessarily monotonic: see the 2017 pre-1919 footnote.
   return {
-    best: best,
-    worst: worst,
+    best: Math.max(...possibleAusstattungsAbzuege),
+    worst: Math.min(...possibleAusstattungsAbzuege),
   };
 }

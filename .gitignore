@@ -33,3 +33,6 @@ test-results/
 
 # Generated at build time
 public/sitemap.xml
+
+# TypeScript build cache
+*.tsbuildinfo
