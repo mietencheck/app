@@ -8,8 +8,21 @@ pnpm test:mietspiegel       # Mietspiegel calculation tests
 pnpm test:review            # Questionnaire tests
 pnpm type-check
 pnpm exec playwright install chromium
-pnpm test:e2e               # Desktop/mobile browser tests
+pnpm test:e2e               # Desktop/mobile Miete and Beratung browser tests
 ```
+
+The browser suites start their own frontend on port 5174. The Beratung suite mocks
+the backend.
+It needs no login credentials or running backend and blocks external requests.
+It covers editing Sammelheizung/Bad, known recalculated rent amounts, saving and
+reloading, retrying failed saves, missing records, load errors, and rejected
+sessions. Saved state is simulated by the API mock; database persistence is not
+covered by this suite. The unit tests cover persisted record parsing and the
+Beratung calculation context with fixed expected results.
+
+Both suites run on pushes and pull requests. Browser failure traces are uploaded
+as CI artifacts, or can be opened locally with
+`pnpm exec playwright show-trace test-results/<failed-test>/trace.zip`.
 
 To re-extract reference tables, install Python packages `pdfplumber` and `pypdf`,
 then run:

@@ -11,6 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
+.dev.vars*
+playwright-report/
+test-results/
 .wrangler
 .pnpm-store
 
@@ -31,7 +34,5 @@ dist-ssr
 # Generated at build time
 public/sitemap.xml
 
-# Browser verification artifacts
-test-results/
-playwright-report/
+# TypeScript build cache
 *.tsbuildinfo

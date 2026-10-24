@@ -47,10 +47,10 @@ jobs:
       - name: Check types
         run: pnpm type-check
 
-      - name: Install browser
+      - name: Install Chromium
         run: pnpm exec playwright install --with-deps chromium
 
-      - name: Verify desktop and mobile results
+      - name: Run Miete and Beratung browser tests
         run: pnpm test:e2e
 
       - name: Upload browser failure traces
@@ -60,3 +60,4 @@ jobs:
           name: browser-test-results
           path: test-results/
           if-no-files-found: ignore
+          retention-days: 7

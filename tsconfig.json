@@ -20,7 +20,7 @@
       "~/*": ["./src/*"]
     }
   },
-  "include": ["src", "scripts", "e2e"],
+  "include": ["src", "scripts", "e2e", "tests/e2e"],
   "references": [
     {
       "path": "./tsconfig.node.json"

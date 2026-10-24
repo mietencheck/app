@@ -7,18 +7,27 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   workers: 2,
   reporter: process.env.CI ? "github" : "list",
-  use: { baseURL: "http://127.0.0.1:4173", trace: "retain-on-failure" },
+  use: { baseURL: "http://127.0.0.1:5174", trace: "retain-on-failure" },
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"] } },
     { name: "mobile", use: { ...devices["Pixel 7"] } },
+    {
+      name: "beratung",
+      testDir: "./tests/e2e",
+      testMatch: "**/*.pw.ts",
+      use: { ...devices["Desktop Chrome"] },
+    },
   ],
   webServer: {
-    command: "pnpm exec vite --host 127.0.0.1 --port 4173 --strictPort",
-    url: "http://127.0.0.1:4173",
-    // UI-only browser checks: disable Worker/Sentry plugins. HTTP handlers are
-    // covered separately by Vitest using source-backed request fixtures.
-    env: { VITEST: "true" },
-    reuseExistingServer: !process.env.CI,
+    command: "pnpm exec vite --host 127.0.0.1 --port 5174 --strictPort",
+    url: "http://127.0.0.1:5174/login",
+    // Run only the frontend. Beratung requests are mocked; Worker handlers
+    // are covered separately by the source-backed API tests.
+    env: {
+      VITEST: "true",
+      VITE_MIETENCHECK_API_BASE_URL: "/api-mietencheck",
+    },
+    reuseExistingServer: false,
     timeout: 60_000,
   },
 });
