@@ -8530,7 +8530,7 @@
                       "id": "1fj01",
                       "type": "Question",
                       "alias": "Küche hat Kochmöglichkeit",
-                      "text": "Ist die Küche von der Vermieterin mit einem Herd ausgestattet worden?",
+                      "text": "Ist die Küche von der Vermieterin mit einem Herd oder Kochfeld ausgestattet worden?",
                       "info": null,
                       "answer": {
                         "type": "ChoiceAnswer",
@@ -8636,20 +8636,6 @@
                                   "8i22j",
                                   "uiajj"
                                 ]
-                              },
-                              {
-                                "id": "j5c3p",
-                                "questionRef": {
-                                  "type": "AliasRef",
-                                  "value": "Küche hat Gas/Elektroherd ohne Backofen"
-                                },
-                                "negated": false,
-                                "type": "AnswerOptionComparison",
-                                "operator": "is",
-                                "comparands": [
-                                  "qzhja",
-                                  "8i22j"
-                                ]
                               }
                             ]
                           },
@@ -8703,7 +8689,7 @@
                                           "id": "qmwfnk",
                                           "type": "Question",
                                           "alias": "Küche hat Ceran-/Induktionsherd",
-                                          "text": "Handelt es sich bei dem Herd um ein Ceran- oder Induktions-Kochfeld?",
+                                          "text": "Hat die Küche ein Ceran- oder Induktionskochfeld (auch ohne Backofen)?",
                                           "info": null,
                                           "answer": {
                                             "type": "ChoiceAnswer",
@@ -8756,7 +8742,7 @@
                                       "id": "plpr5",
                                       "type": "Question",
                                       "alias": "Küche hat Ceran-/Induktionsherd",
-                                      "text": "Handelt es sich bei dem Herd um ein Ceran- oder Induktions-Kochfeld?",
+                                      "text": "Hat die Küche ein Ceran- oder Induktionskochfeld (auch ohne Backofen)?",
                                       "info": null,
                                       "answer": {
                                         "type": "ChoiceAnswer",
@@ -8813,7 +8799,7 @@
                                           "id": "b8ez6",
                                           "type": "Question",
                                           "alias": "Küche hat Ceran-/Induktionsherd",
-                                          "text": "Handelt es sich bei dem Herd um ein Ceran- oder Induktions-Kochfeld?",
+                                          "text": "Hat die Küche ein Ceran- oder Induktionskochfeld (auch ohne Backofen)?",
                                           "info": null,
                                           "answer": {
                                             "type": "ChoiceAnswer",
