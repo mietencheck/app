@@ -1,6 +1,7 @@
 import { Button, FormDescription, FormField, FormLabel } from "~/components";
 import { AdresseForm } from "~/components/AdresseForm/AdresseForm";
 import { InputControl } from "~/components/Input/InputControl";
+import { AusstattungHinweis } from "~/form/AusstattungHinweis";
 import { postMessageToFloma, useAnswers } from "~/form/flow-machine";
 import { useLocalizeField } from "~/l10n";
 
@@ -22,6 +23,12 @@ export function SchnelltestQuestion({
       <h2 className="text-base text-gray-11 mb-2">
         {l("question")} {stepper.index + 1}
       </h2>
+      {(step.alias === "Wohnung hat Sammelheizung" ||
+        step.alias === "Badezimmer in Wohnung") && (
+        <div className="mb-6">
+          <AusstattungHinweis />
+        </div>
+      )}
       <FormLabel
         htmlFor={step.id}
         alias={step.alias}

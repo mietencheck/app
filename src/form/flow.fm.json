@@ -3705,7 +3705,7 @@
                   "type": "Question",
                   "alias": "Wohnung hat Sammelheizung",
                   "text": "Hat die Wohnung eine Zentralheizung, Etagenheizung, oder Wohnungsheizung (Gas, Öl, Elektro)?",
-                  "info": "Beachte: Dies trifft auf fast alle Wohnungen in Berlin zu.",
+                  "info": "Beachte: Dies trifft auf fast alle Wohnungen in Berlin zu. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
@@ -3733,7 +3733,7 @@
                   "type": "Question",
                   "alias": "Badezimmer in Wohnung",
                   "text": "Hat die Wohnung ein Badezimmer?",
-                  "info": "Beachte: Dies trifft auf fast alle Wohnungen in Berlin zu.",
+                  "info": "Beachte: Dies trifft auf fast alle Wohnungen in Berlin zu. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                   "answer": {
                     "type": "ChoiceAnswer",
                     "options": [
@@ -4811,7 +4811,7 @@
                                       "type": "Question",
                                       "alias": "Sondermerkmal Dusche Und Badewanne",
                                       "text": "Gibt es in der Wohnung eine Dusche sowie eine Badewanne?",
-                                      "info": null,
+                                      "info": "Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -4927,7 +4927,7 @@
                                       "type": "Question",
                                       "alias": "Sondermerkmal Modernes Bad",
                                       "text": "Sind die Badezimmer modern ausgestattet?",
-                                      "info": "Ein Badezimmer gilt als modern ausgestattet, wenn die Wände neben Waschbecken, Badewanne und Dusche gefliest sind. Bodenfliesen, Einhebelmischbatterie, Strukturheizkörper als Handtuchwärmer und Badewanne oder Dusche vorhanden sind.",
+                                      "info": "Ein Badezimmer gilt als modern ausgestattet, wenn die Wände neben Waschbecken, Badewanne und Dusche gefliest sind. Bodenfliesen, Einhebelmischbatterie, Strukturheizkörper als Handtuchwärmer und Badewanne oder Dusche vorhanden sind. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -5131,7 +5131,7 @@
                                       "type": "Question",
                                       "alias": "Sondermerkmal Moderne Küche",
                                       "text": "Ist die Küche modern ausgestattet?",
-                                      "info": "Dafür sind notwendig: Küchenschränke, Einbauspüle, Dunstabzugshaube, Herd mit Ceran- oder Induktionskochfeld, Backofen, Wandfliesen im Arbeitsbereich, Kühlschrank.",
+                                      "info": "Dafür sind notwendig: Küchenschränke, Einbauspüle, Dunstabzugshaube, Herd mit Ceran- oder Induktionskochfeld, Backofen, Wandfliesen im Arbeitsbereich, Kühlschrank. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -5431,7 +5431,7 @@
                                           "type": "Question",
                                           "alias": "Sondermerkmal Bodenbelag",
                                           "text": "Ist in der Mehrheit der Wohnräume einen hochwertiger Bodenbelag verlegt?",
-                                          "info": "Hierzu zählt z.B. hochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
+                                          "info": "Hierzu zählt z.B. hochwertiges Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                                           "answer": {
                                             "type": "ChoiceAnswer",
                                             "options": [
@@ -7560,7 +7560,7 @@
                               "type": "Question",
                               "alias": "Bad mit Fußbodenheizung",
                               "text": "Gibt es ein Badezimmer mit Fußbodenheizung?",
-                              "info": null,
+                              "info": "Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
@@ -8397,8 +8397,8 @@
                                   "id": "wlhgh",
                                   "type": "Question",
                                   "alias": "Küche hat Einbauküche",
-                                  "text": "Ist die Küche von der Vermieterin mit einer Einbauküche mit Ober- und Unterschränken, Herd und Spüle ausgestattet worden?",
-                                  "info": null,
+                                  "text": "Ist die Küche mit einer Einbauküche mit Ober- und Unterschränken, Herd und Spüle ausgestattet worden?",
+                                  "info": "Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                                   "answer": {
                                     "type": "ChoiceAnswer",
                                     "options": [
@@ -8432,8 +8432,8 @@
                           "id": "m0lvg",
                           "type": "Question",
                           "alias": "Küche hat Einbauküche",
-                          "text": "Ist die Küche von der Vermieterin mit einer Einbauküche mit Ober- und Unterschränken, Herd und Spüle ausgestattet worden?",
-                          "info": null,
+                          "text": "Ist die Küche mit einer Einbauküche mit Ober- und Unterschränken, Herd und Spüle ausgestattet worden?",
+                          "info": "Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -8491,8 +8491,8 @@
                           "id": "x94sm",
                           "type": "Question",
                           "alias": "Küche hat Kücheninsel",
-                          "text": "Ist die Küche von der Vermieterin mit einer freistehenden Kücheninsel mit Kochmöglichkeit oder Spüle ausgestattet worden? ",
-                          "info": "Freistehend heißt, dass diese nicht mit einer Wand oder einer anderen Arbeitsfläche verbunden ist. L-förmige Küchentheken sind daher nicht freistehend.",
+                          "text": "Ist die Küche mit einer freistehenden Kücheninsel mit Kochmöglichkeit oder Spüle ausgestattet worden? ",
+                          "info": "Freistehend heißt, dass diese nicht mit einer Wand oder einer anderen Arbeitsfläche verbunden ist. L-förmige Küchentheken sind daher nicht freistehend. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -8530,8 +8530,8 @@
                       "id": "1fj01",
                       "type": "Question",
                       "alias": "Küche hat Kochmöglichkeit",
-                      "text": "Ist die Küche von der Vermieterin mit einem Herd ausgestattet worden?",
-                      "info": null,
+                      "text": "Ist die Küche mit einem Herd ausgestattet worden?",
+                      "info": "Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                       "answer": {
                         "type": "ChoiceAnswer",
                         "options": [
@@ -8886,8 +8886,8 @@
                           "id": "h7wij",
                           "type": "Question",
                           "alias": "Küche hat Spüle",
-                          "text": "Ist die Küche von der Vermieterin mit einem Spülbecken ausgestattet worden?",
-                          "info": null,
+                          "text": "Ist die Küche mit einem Spülbecken ausgestattet worden?",
+                          "info": "Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -9008,8 +9008,8 @@
                               "id": "qmoiq",
                               "type": "Question",
                               "alias": "Küche hat Kühlschrank",
-                              "text": "Ist die Küche von der Vermieterin mit einem Kühlschrank ausgestattet worden?",
-                              "info": "Der Kühlschrank zählt nur wenn er bei der Überlassung in einem annähernd neuwertigen Zustand war und der Vermieter keine extra Miete für diesen verlangt.",
+                              "text": "Ist die Küche mit einem Kühlschrank ausgestattet worden?",
+                              "info": "Der Kühlschrank zählt nur wenn er bei der Überlassung in einem annähernd neuwertigen Zustand war und der Vermieter keine extra Miete für diesen verlangt. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
@@ -9041,8 +9041,8 @@
                           "id": "tte6r",
                           "type": "Question",
                           "alias": "Küche hat Kühlschrank",
-                          "text": "Ist die Küche von deiner Vermieterin mit mindestens einem der folgenden Geräte ausgestattet: Kühlschrank, Tiefkühlschrank, Geschirrspüler.",
-                          "info": "Diese Geräte zählen nur wenn sie bei der Überlassung in einem annähernd neuwertigen Zustand waren und der Vermieter keine extra Miete für sie verlangt.",
+                          "text": "Ist die Küche mit mindestens einem der folgenden Geräte ausgestattet: Kühlschrank, Tiefkühlschrank, Geschirrspüler.",
+                          "info": "Diese Geräte zählen nur wenn sie bei der Überlassung in einem annähernd neuwertigen Zustand waren und der Vermieter keine extra Miete für sie verlangt. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [
@@ -9212,8 +9212,8 @@
                                   "id": "u62on",
                                   "type": "Question",
                                   "alias": "Küche hat Dunstabzug",
-                                  "text": "Ist die Küche von der Vermieterin mit einer Dunstabzugshaube ausgestattet worden?",
-                                  "info": null,
+                                  "text": "Ist die Küche mit einer Dunstabzugshaube ausgestattet worden?",
+                                  "info": "Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                                   "answer": {
                                     "type": "ChoiceAnswer",
                                     "options": [
@@ -9347,8 +9347,8 @@
                               "id": "vgdl4",
                               "type": "Question",
                               "alias": "Küche hat hochwertigen Fußboden",
-                              "text": "Ist in der Küche von der Vermieterin ein hochwertiger Fußboden verlegt worden?",
-                              "info": "Hierzu zählen z.B. hochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraumlaminat, Parkett oder Terrazzo. Gilt nur, wenn diese auch in einem guten Zustand sind.",
+                              "text": "Ist in der Küche ein hochwertiger Fußboden verlegt worden?",
+                              "info": "Hierzu zählen z.B. hochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraumlaminat, Parkett oder Terrazzo. Gilt nur, wenn diese auch in einem guten Zustand sind. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
@@ -9412,8 +9412,8 @@
                                   "id": "q1w2wg",
                                   "type": "Question",
                                   "alias": "Küche hat hochwertigen Fußboden",
-                                  "text": "Ist in der Küche von der Vermieterin ein hochwertiger Fußboden verlegt worden?",
-                                  "info": "Hierzu zählen z.B. hochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraumlaminat, Parkett oder Terrazzo. Gilt nur, wenn diese auch in einem guten Zustand sind.",
+                                  "text": "Ist in der Küche ein hochwertiger Fußboden verlegt worden?",
+                                  "info": "Hierzu zählen z.B. hochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraumlaminat, Parkett oder Terrazzo. Gilt nur, wenn diese auch in einem guten Zustand sind. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                                   "answer": {
                                     "type": "ChoiceAnswer",
                                     "options": [
@@ -10330,7 +10330,7 @@
                                   "type": "Question",
                                   "alias": "Wohnung hat hochwertigen Bodenbelag",
                                   "text": "Gibt es in der überwiegenden Anzahl der Wohnräume einen hochwertigen Bodenbelag?",
-                                  "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
+                                  "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                                   "answer": {
                                     "type": "ChoiceAnswer",
                                     "options": [
@@ -10384,7 +10384,7 @@
                               "type": "Question",
                               "alias": "Wohnung hat hochwertigen Bodenbelag",
                               "text": "Gibt es in der überwiegenden Anzahl der Wohnräume einen hochwertigen Bodenbelag?",
-                              "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
+                              "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [
@@ -10417,7 +10417,7 @@
                           "type": "Question",
                           "alias": "Wohnung hat hochwertigen Bodenbelag",
                           "text": "Gibt es in der überwiegenden Anzahl der Wohnräume (inkl. Flur, ohne Küche, ohne Bad) einen hochwertigen Bodenbelag?",
-                          "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag",
+                          "info": "Hierzu zählt z.B. Parkett, Natur-/Kunststein, Fliesen oder gleichwertiger Bodenbelag. Berücksichtige nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Beurteile den Zustand ohne selbst bezahlte Einbauten, deren Kosten nicht erstattet wurden. Bei unklarer oder teilweiser Kostenerstattung wähle „Ich bin mir nicht sicher“.",
                           "answer": {
                             "type": "ChoiceAnswer",
                             "options": [

@@ -8,6 +8,7 @@ import {
   FormLabel,
   InputControl,
 } from "~/components";
+import { AusstattungHinweis } from "~/form/AusstattungHinweis";
 import {
   postMessageToFloma,
   useAnswers,
@@ -105,6 +106,7 @@ export function Questions() {
   return (
     <div className="flex flex-col gap-12">
       {group.alias && <p className="heading-28">{l(group.alias)}</p>}
+      <AusstattungHinweis />
       {group.steps.map((step) => (
         <Node key={step.id} step={step} />
       ))}
