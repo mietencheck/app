@@ -15053,8 +15053,8 @@
                       "id": "q96ddg",
                       "type": "Question",
                       "alias": "Wohnumfeld hat eigenen Garten",
-                      "text": "Gibt einen Garten zur alleinigen Nutzung oder einen Garten, welcher direkt von der Wohnung aus betreten werden kann?",
-                      "info": "Beachte: Dieser zählt auch, wenn er zur Miete zusätzlich bezahlt werden muss.",
+                      "text": "Steht dir ein Garten zur alleinigen Nutzung zur Verfügung oder gehört zu deiner Wohnung ein Garten mit direktem Zugang aus der Wohnung?",
+                      "info": "Hier geht es um einen dir allein überlassenen Garten oder einen zur Wohnung gehörenden Garten mit direktem Zugang. Bei diesen Alternativen ist ein zusätzliches Nutzungsentgelt kein Ausschlussgrund. Ein bloßer Zugang zu einer gemeinschaftlichen Grünfläche reicht für diese Frage nicht aus.",
                       "answer": {
                         "type": "ChoiceAnswer",
                         "options": [
@@ -15101,11 +15101,11 @@
                           },
                           "block": [
                             {
-                              "id": "a2n7v",
+                              "id": "gart60a",
                               "type": "Question",
-                              "alias": "Wohnumfeld hat Gemeinschaftsgarten",
-                              "text": "Gibt es einen Gemeinschaftsgarten mit anderen Mieterinnen?",
-                              "info": "Beachte: Dieser gilt nur, wenn für den Garten nicht zusätzlich gezahlt werden muss.",
+                              "alias": "Wohnumfeld hat kostenfreien Mietergarten",
+                              "text": "Steht dir ein Mietergarten ohne zusätzliches Nutzungsentgelt zur Verfügung, der ausschließlich von den Mieterinnen und Mietern des Grundstücks genutzt werden darf?",
+                              "info": "Alle Bedingungen müssen erfüllt sein: Die Gartennutzung ist dir erlaubt, die Allgemeinheit ist von der Nutzung ausgeschlossen und es wird kein gesondertes Entgelt für die Gartennutzung verlangt. Eine gemeinsame Nutzung mit anderen Hausmietern ist möglich. Ist unklar, ob eine gemeinschaftliche Grünfläche als Mietergarten zur Verfügung steht, etwa bei nur geduldeter Rasen- oder Spielflächennutzung, wähle „Ich bin mir nicht sicher“. Ein Gemeinschaftsgarten allein genügt nicht.",
                               "answer": {
                                 "type": "ChoiceAnswer",
                                 "options": [

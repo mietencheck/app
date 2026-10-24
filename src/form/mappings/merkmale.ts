@@ -507,7 +507,7 @@ export const answersToMerkmalStateMapping = {
       logic: "or",
       conditions: [
         { "Wohnumfeld hat eigenen Garten": "Ja" },
-        { "Wohnumfeld hat Gemeinschaftsgarten": "Ja" },
+        { "Wohnumfeld hat kostenfreien Mietergarten": "Ja" },
       ],
     },
   },
