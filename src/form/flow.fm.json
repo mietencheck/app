@@ -6374,11 +6374,164 @@
                                   },
                                   "block": [
                                     {
-                                      "id": "eat3b",
+                                      "id": "eat3bjahr",
+                                      "type": "If",
+                                      "cases": [
+                                        {
+                                          "id": "eat3bfall",
+                                          "type": "IfCase",
+                                          "test": {
+                                            "id": "eat3btestoder",
+                                            "type": "LogicalOperation",
+                                            "operator": "or",
+                                            "negated": false,
+                                            "conditions": [
+                                              {
+                                                "id": "eat3btest",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Vertragsdatum"
+                                                },
+                                                "negated": false,
+                                                "type": "AnswerOptionComparison",
+                                                "operator": "is",
+                                                "comparands": [
+                                                  "im8h1"
+                                                ]
+                                              },
+                                              {
+                                                "id": "eat3btestneu",
+                                                "type": "AnswerOptionComparison",
+                                                "questionRef": {
+                                                  "type": "AliasRef",
+                                                  "value": "Unterschrieben"
+                                                },
+                                                "negated": false,
+                                                "operator": "is",
+                                                "comparands": [
+                                                  "128cg"
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          "block": [
+                                            {
+                                              "id": "eat3b2026",
+                                              "type": "Question",
+                                              "alias": "Bad nur kleines Waschbecken",
+                                              "text": "Gibt es ein Badezimmer, welches lediglich ein kleines Handwaschbecken (Außenmaß 50 cm breit oder weniger) hat?",
+                                              "info": "Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs",
+                                              "answer": {
+                                                "type": "ChoiceAnswer",
+                                                "options": [
+                                                  {
+                                                    "id": "uiajj",
+                                                    "alias": "Ja",
+                                                    "text": "Ja"
+                                                  },
+                                                  {
+                                                    "id": "qzhja",
+                                                    "alias": "Nein",
+                                                    "text": "Nein"
+                                                  },
+                                                  {
+                                                    "id": "8i22j",
+                                                    "alias": "Nicht sicher",
+                                                    "text": "Ich bin mir nicht sicher"
+                                                  }
+                                                ]
+                                              },
+                                              "required": false,
+                                              "note": "Merkmal 2026: Im Bad nur ein kleines Handwaschbecken (Außenmaß 50 cm breit oder weniger); bezieht sich nicht auf Gäste-WCs. Ja -> Check; Nicht sicher -> Nicht sicher"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "alternate": [
+                                        {
+                                          "id": "eat3b",
+                                          "type": "Question",
+                                          "alias": "Bad nur kleines Waschbecken",
+                                          "text": "Gibt es ein Badezimmer, welches lediglich ein kleines Handwaschbecken (Außenmaß 50x25cm oder kleiner) hat?",
+                                          "info": null,
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal:\nKein Handwaschbecken in Bad oder WC oder im Bad nur ein kleines Handwaschbecken (Außenmaß 50 x 25 cm oder kleiner) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": []
+                            },
+                            {
+                              "id": "efhlljahr",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "efhllfall",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "efhlltestoder",
+                                    "type": "LogicalOperation",
+                                    "operator": "or",
+                                    "negated": false,
+                                    "conditions": [
+                                      {
+                                        "id": "efhlltest",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Vertragsdatum"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "im8h1"
+                                        ]
+                                      },
+                                      {
+                                        "id": "efhlltestneu",
+                                        "type": "AnswerOptionComparison",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Unterschrieben"
+                                        },
+                                        "negated": false,
+                                        "operator": "is",
+                                        "comparands": [
+                                          "128cg"
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "efhll2026",
                                       "type": "Question",
-                                      "alias": "Bad nur kleines Waschbecken",
-                                      "text": "Gibt es ein Badezimmer, welches lediglich ein kleines Handwaschbecken (Außenmaß 50x25cm oder kleiner) hat?",
-                                      "info": null,
+                                      "alias": "Bad großes Waschbecken",
+                                      "text": "Gibt es ein Badezimmer, welches entweder ein sehr großes Waschbecken (Außenmaß mindestens 80 cm breit), ein Doppelhandwaschbecken, oder zwei getrennte Waschbecken nebeneinander hat?",
+                                      "info": "Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -6400,41 +6553,42 @@
                                         ]
                                       },
                                       "required": false,
-                                      "note": "Merkmal:\nKein Handwaschbecken in Bad oder WC oder im Bad nur ein kleines Handwaschbecken (Außenmaß 50 x 25 cm oder kleiner) [--]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal 2026: Sehr großes Waschbecken (Außenmaß mindestens 80 cm breit) oder Doppelhandwaschbecken oder zwei getrennte Waschbecken nebeneinander; bezieht sich nicht auf Gäste-WCs. Ja -> Check; Nicht sicher -> Nicht sicher"
                                     }
                                   ]
                                 }
                               ],
-                              "alternate": []
-                            },
-                            {
-                              "id": "efhll",
-                              "type": "Question",
-                              "alias": "Bad großes Waschbecken",
-                              "text": "Gibt es ein Badezimmer, welches entweder ein sehr großes Waschbecken (Außenmaß mindestens 80 cm breit), ein Doppelhandwaschbecken, oder zwei getrennte Waschbecken hat?",
-                              "info": null,
-                              "answer": {
-                                "type": "ChoiceAnswer",
-                                "options": [
-                                  {
-                                    "id": "uiajj",
-                                    "alias": "Ja",
-                                    "text": "Ja"
+                              "alternate": [
+                                {
+                                  "id": "efhll",
+                                  "type": "Question",
+                                  "alias": "Bad großes Waschbecken",
+                                  "text": "Gibt es ein Badezimmer, welches entweder ein sehr großes Waschbecken (Außenmaß mindestens 80 cm breit), ein Doppelhandwaschbecken, oder zwei getrennte Waschbecken hat?",
+                                  "info": null,
+                                  "answer": {
+                                    "type": "ChoiceAnswer",
+                                    "options": [
+                                      {
+                                        "id": "uiajj",
+                                        "alias": "Ja",
+                                        "text": "Ja"
+                                      },
+                                      {
+                                        "id": "qzhja",
+                                        "alias": "Nein",
+                                        "text": "Nein"
+                                      },
+                                      {
+                                        "id": "8i22j",
+                                        "alias": "Nicht sicher",
+                                        "text": "Ich bin mir nicht sicher"
+                                      }
+                                    ]
                                   },
-                                  {
-                                    "id": "qzhja",
-                                    "alias": "Nein",
-                                    "text": "Nein"
-                                  },
-                                  {
-                                    "id": "8i22j",
-                                    "alias": "Nicht sicher",
-                                    "text": "Ich bin mir nicht sicher"
-                                  }
-                                ]
-                              },
-                              "required": false,
-                              "note": "Merkmal:\nSehr großes Waschbecken (Außenmaß mindestens 80 cm breit) oder Doppelhandwaschbecken oder zwei getrennte Waschbecken [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                  "required": false,
+                                  "note": "Merkmal:\nSehr großes Waschbecken (Außenmaß mindestens 80 cm breit) oder Doppelhandwaschbecken oder zwei getrennte Waschbecken [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                                }
+                              ]
                             }
                           ]
                         }
