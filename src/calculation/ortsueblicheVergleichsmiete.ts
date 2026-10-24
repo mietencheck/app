@@ -59,6 +59,45 @@ const calcOrtsueblicheVergleichsmiete = (
 export function getWorstBestOrtsueblicheVergleichsmiete(
   ctx: CalculationContext,
 ): { worst: number; best: number } | undefined {
+  // In 2015 these ordinary components and their Sondermerkmal are mutually
+  // exclusive. Resolve an uncertain Sondermerkmal in separate scenarios before
+  // combining rent bounds, so neither bound can contain both advantages.
+  if (ctx.typ === "Miete" && ctx.mietspiegeljahr === "2015") {
+    const exclusions = [
+      ["[Sondermerkmal] Modernes Bad", "Bad", "Bad hat Einhebelmischbatterie"],
+      [
+        "[Sondermerkmal] Moderne Küchenausstattung",
+        "Küche",
+        "Küche hat Kühlschrank",
+      ],
+    ] as const;
+    for (const [sondermerkmal, gruppe, merkmal] of exclusions) {
+      if (ctx.sondermerkmale?.[sondermerkmal] !== "maybe") continue;
+      const withSondermerkmal = getWorstBestOrtsueblicheVergleichsmiete({
+        ...ctx,
+        sondermerkmale: { ...ctx.sondermerkmale, [sondermerkmal]: "checked" },
+        merkmale: {
+          ...ctx.merkmale,
+          [gruppe]: {
+            ...ctx.merkmale[gruppe],
+            Wohnwerterhoehend: {
+              ...ctx.merkmale[gruppe].Wohnwerterhoehend,
+              [merkmal]: "unchecked",
+            },
+          },
+        },
+      });
+      const withoutSondermerkmal = getWorstBestOrtsueblicheVergleichsmiete({
+        ...ctx,
+        sondermerkmale: { ...ctx.sondermerkmale, [sondermerkmal]: "unchecked" },
+      });
+      if (!withSondermerkmal || !withoutSondermerkmal) return undefined;
+      return {
+        best: Math.min(withSondermerkmal.best, withoutSondermerkmal.best),
+        worst: Math.max(withSondermerkmal.worst, withoutSondermerkmal.worst),
+      };
+    }
+  }
   const preisspanne = getWorstBestPreisspanne(ctx);
   const spanneneinordnung = getWorstBestSpanneneinordnungInPercent(ctx);
   const sondermerkmalModifier = getWorstBestSondermerkmalModifier(ctx);
