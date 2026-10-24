@@ -539,6 +539,8 @@
     "8fdfdf": "Are there villa-type apartment blocks in the vicinity of the house?",
     "e32dbb": "Is there a parking space for the car provided by the landlord near the flat?",
     "a9ab62": "Please note: The car park may also be subject to a charge",
-    "b794c8": "Result"
+    "b794c8": "Result",
+    "377ed0": "Was the building constructed before 1 July 1994?",
+    "2d3551": "For buildings constructed in 1994, the exact date matters. If the building was constructed on or after 1 July 1994, answer “No”. If you do not know the exact date, select “I am not sure”."
   }
 }
