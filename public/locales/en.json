@@ -387,6 +387,8 @@
     "c1f522": "Apartment",
     "f63ce4": "Is there a living space in the flat that is larger than 40 square metres?",
     "bafab8": "Note: A kitchen-cum-living room does not count as living space.",
+    "b3e3e0": "Is there a built-in cupboard or a storage room with privacy screening inside the flat?",
+    "bbfcb1": "A storage room without privacy screening does not count here. A built-in cupboard inside the flat also counts.",
     "0b75b7": "Is there a storage room or built-in wardrobe in the flat?",
     "ca815e": "Is there a walk-through room in the flat or any room that has no direct access to a corridor and is only accessible through another room?",
     "9f1aa0": "A walk-through room is a room through which you have to pass to get to another room. This means that you cannot enter the next room from the corridor. This characteristic is also present in a one-room flat, where the kitchen can only be entered through the living room/bedroom.",
