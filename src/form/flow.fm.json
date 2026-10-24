@@ -12807,7 +12807,7 @@
                             {
                               "id": "lgcxi",
                               "type": "Question",
-                              "alias": "Gebäude hat Fahrradstellplätze mit Anschließmöglichkeit",
+                              "alias": "Gebäude hat Fahrradabstellraum",
                               "text": "Gibt es einen leicht zugänglichen, abschließbaren Raum zum Abstellen von Fahrrädern?",
                               "info": "Beachte: dieser Raum muss groß genug sein, dass er genug Platz für alle ihn nutzenden Bewohner*innen bietet.",
                               "answer": {
