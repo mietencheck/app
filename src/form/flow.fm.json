@@ -7753,8 +7753,8 @@
                                       "id": "eytoo",
                                       "type": "Question",
                                       "alias": "Bad Wände ausreichend gefließt",
-                                      "text": "Sind die Wände in den Badezimmern um Dusche, Badewanne und Waschbecken so gefließt, dass die ungeschützte Wand normalerweise nicht nass wird?",
-                                      "info": null,
+                                      "text": "Sind die Wände in den Badezimmern überwiegend gefliest?",
+                                      "info": "Fliesen nur im Spritzwasserbereich von Waschbecken, Badewanne oder Dusche reichen dafür nicht automatisch aus.",
                                       "answer": {
                                         "type": "ChoiceAnswer",
                                         "options": [
@@ -7776,7 +7776,7 @@
                                         ]
                                       },
                                       "required": false,
-                                      "note": "Merkmal 2015:\nWände nicht überwiegend gefliest [--]\n\nMerkmal >= 2017:\nWände nicht ausreichend im Spritzwasserbereich von Waschbecken, Badewanne und/oder Dusche gefliest [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                      "note": "Merkmal 2015:\nWände nicht überwiegend gefliest [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
                                     },
                                     {
                                       "id": "h5xafh",
@@ -7812,33 +7812,158 @@
                               ],
                               "alternate": [
                                 {
-                                  "id": "ph4yq",
-                                  "type": "Question",
-                                  "alias": "Bad Wände ausreichend gefließt",
-                                  "text": "Sind die Wände in den Badezimmern um Dusche, Badewanne und Waschbecken so gefließt, dass die ungeschützte Wand normalerweise nicht nass wird?",
-                                  "info": null,
-                                  "answer": {
-                                    "type": "ChoiceAnswer",
-                                    "options": [
-                                      {
-                                        "id": "uiajj",
-                                        "alias": "Ja",
-                                        "text": "Ja"
+                                  "id": "badwandjahr",
+                                  "type": "If",
+                                  "cases": [
+                                    {
+                                      "id": "badwandfall2026",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "badwand2026oder",
+                                        "type": "LogicalOperation",
+                                        "operator": "or",
+                                        "negated": false,
+                                        "conditions": [
+                                          {
+                                            "id": "badwandtest2026",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Vertragsdatum"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "im8h1"
+                                            ]
+                                          },
+                                          {
+                                            "id": "badwandnichtsigniert",
+                                            "questionRef": {
+                                              "type": "AliasRef",
+                                              "value": "Unterschrieben"
+                                            },
+                                            "negated": false,
+                                            "type": "AnswerOptionComparison",
+                                            "operator": "is",
+                                            "comparands": [
+                                              "128cg"
+                                            ]
+                                          }
+                                        ]
                                       },
-                                      {
-                                        "id": "qzhja",
-                                        "alias": "Nein",
-                                        "text": "Nein"
+                                      "block": [
+                                        {
+                                          "id": "badwand2026",
+                                          "type": "Question",
+                                          "alias": "Bad Wände ausreichend gefließt",
+                                          "text": "Sind die Wände in den Badezimmern im Spritzwasserbereich von Waschbecken, Badewanne und/oder Dusche ausreichend gefliest oder anderweitig geschützt?",
+                                          "info": "Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs",
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal 2026:\nWände nicht ausreichend im Spritzwasserbereich von Waschbecken, Badewanne und/oder Dusche gefliest/geschützt [bezieht sich nicht auf Gäste-WCs] [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "badwandfall2024",
+                                      "type": "IfCase",
+                                      "test": {
+                                        "id": "badwandtest2024",
+                                        "questionRef": {
+                                          "type": "AliasRef",
+                                          "value": "Vertragsdatum"
+                                        },
+                                        "negated": false,
+                                        "type": "AnswerOptionComparison",
+                                        "operator": "is",
+                                        "comparands": [
+                                          "ve0tek"
+                                        ]
                                       },
-                                      {
-                                        "id": "8i22j",
-                                        "alias": "Nicht sicher",
-                                        "text": "Ich bin mir nicht sicher"
-                                      }
-                                    ]
-                                  },
-                                  "required": false,
-                                  "note": "Merkmal 2015:\nWände nicht überwiegend gefliest [--]\n\nMerkmal >= 2017:\nWände nicht ausreichend im Spritzwasserbereich von Waschbecken, Badewanne und/oder Dusche gefliest [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                      "block": [
+                                        {
+                                          "id": "badwand2024",
+                                          "type": "Question",
+                                          "alias": "Bad Wände ausreichend gefließt",
+                                          "text": "Sind die Wände in den Badezimmern um Dusche, Badewanne und Waschbecken so gefließt, dass die ungeschützte Wand normalerweise nicht nass wird?",
+                                          "info": "Beachte: Diese Frage bezieht sich nicht auf Gäste-WCs",
+                                          "answer": {
+                                            "type": "ChoiceAnswer",
+                                            "options": [
+                                              {
+                                                "id": "uiajj",
+                                                "alias": "Ja",
+                                                "text": "Ja"
+                                              },
+                                              {
+                                                "id": "qzhja",
+                                                "alias": "Nein",
+                                                "text": "Nein"
+                                              },
+                                              {
+                                                "id": "8i22j",
+                                                "alias": "Nicht sicher",
+                                                "text": "Ich bin mir nicht sicher"
+                                              }
+                                            ]
+                                          },
+                                          "required": false,
+                                          "note": "Merkmal 2024:\nWände nicht ausreichend im Spritzwasserbereich von Waschbecken, Badewanne und/oder Dusche gefliest [bezieht sich nicht auf Gäste-WCs] [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "alternate": [
+                                    {
+                                      "id": "ph4yq",
+                                      "type": "Question",
+                                      "alias": "Bad Wände ausreichend gefließt",
+                                      "text": "Sind die Wände in den Badezimmern um Dusche, Badewanne und Waschbecken so gefließt, dass die ungeschützte Wand normalerweise nicht nass wird?",
+                                      "info": null,
+                                      "answer": {
+                                        "type": "ChoiceAnswer",
+                                        "options": [
+                                          {
+                                            "id": "uiajj",
+                                            "alias": "Ja",
+                                            "text": "Ja"
+                                          },
+                                          {
+                                            "id": "qzhja",
+                                            "alias": "Nein",
+                                            "text": "Nein"
+                                          },
+                                          {
+                                            "id": "8i22j",
+                                            "alias": "Nicht sicher",
+                                            "text": "Ich bin mir nicht sicher"
+                                          }
+                                        ]
+                                      },
+                                      "required": false,
+                                      "note": "Merkmal 2017-2023:\nWände nicht ausreichend im Spritzwasserbereich von Waschbecken, Badewanne und/oder Dusche gefliest [--]\n\nNein -> Check\nNicht sicher -> Nicht sicher"
+                                    }
+                                  ]
                                 },
                                 {
                                   "id": "lsepp",
