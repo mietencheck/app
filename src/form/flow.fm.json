@@ -10908,33 +10908,158 @@
                   "alias": "Weitere Fragen",
                   "block": [
                     {
-                      "id": "2hckt",
-                      "type": "Question",
-                      "alias": "Wohnung ist barrierearm",
-                      "text": "Ist die Wohnung barrierearm?",
-                      "info": "Dies ist erfüllt, wenn Wohnung schwellenfrei ist, der Übergang zu Balkon oder Dachterasse schwellenarm ist, ausreichende Bewegungsfreiheit in Wohnung gegeben ist, und das Bad barreierearm gestaltet ist.",
-                      "answer": {
-                        "type": "ChoiceAnswer",
-                        "options": [
-                          {
-                            "id": "uiajj",
-                            "alias": "Ja",
-                            "text": "Ja"
+                      "id": "barrierearm-miete",
+                      "type": "If",
+                      "cases": [
+                        {
+                          "id": "barrierearm-miete-2026",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "barrierearm-miete-2026-test",
+                            "type": "LogicalOperation",
+                            "operator": "and",
+                            "negated": false,
+                            "conditions": [
+                              {
+                                "id": "barrierearm-typ-test",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Typ"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "wb3w3"
+                                ]
+                              },
+                              {
+                                "id": "barrierearm-jahr-test",
+                                "questionRef": {
+                                  "type": "AliasRef",
+                                  "value": "Vertragsdatum"
+                                },
+                                "negated": false,
+                                "type": "AnswerOptionComparison",
+                                "operator": "is",
+                                "comparands": [
+                                  "im8h1"
+                                ]
+                              }
+                            ]
                           },
-                          {
-                            "id": "qzhja",
-                            "alias": "Nein",
-                            "text": "Nein"
+                          "block": [
+                            {
+                              "id": "barrierearm-2026",
+                              "type": "Question",
+                              "alias": "Wohnung ist barrierearm",
+                              "text": "Ist die Wohnung barrierearm?",
+                              "info": "Alle drei Bedingungen müssen erfüllt sein: Die Wohnung ist schwellenfrei, der Übergang zu Balkon oder Terrasse ist schwellenarm und in der Wohnung ist ausreichend Bewegungsfläche vorhanden.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Mietspiegel 2026, S. 23: Schwellenfreiheit in der Wohnung, schwellenarmer Übergang zu Balkon/Terrasse sowie ausreichende Bewegungsfläche in der Wohnung. Keine zusätzliche Bedingung zur Badgestaltung. Ja -> Check; Nicht sicher -> Nicht sicher."
+                            }
+                          ]
+                        },
+                        {
+                          "id": "barrierearm-miete-bis2024",
+                          "type": "IfCase",
+                          "test": {
+                            "id": "barrierearm-miete-test",
+                            "questionRef": {
+                              "type": "AliasRef",
+                              "value": "Typ"
+                            },
+                            "negated": false,
+                            "type": "AnswerOptionComparison",
+                            "operator": "is",
+                            "comparands": [
+                              "wb3w3"
+                            ]
                           },
-                          {
-                            "id": "8i22j",
-                            "alias": "Nicht sicher",
-                            "text": "Ich bin mir nicht sicher"
-                          }
-                        ]
-                      },
-                      "required": false,
-                      "note": "Merkmal:\nBarrierearme Wohnungsgestaltung (Schwellenfreiheit in der Wohnung, schwellenarmer Übergang zu Balkon/Terrasse, ausreichende Bewegungsfreiheit in der Wohnung und/oder barrierearme Badgestaltung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                          "block": [
+                            {
+                              "id": "barrierearm-bis2024",
+                              "type": "Question",
+                              "alias": "Wohnung ist barrierearm",
+                              "text": "Ist die Wohnung barrierearm?",
+                              "info": "Die Wohnung muss schwellenfrei sein und der Übergang zu Balkon oder Terrasse muss schwellenarm sein. Zusätzlich muss mindestens eine der beiden Bedingungen erfüllt sein: ausreichende Bewegungsfreiheit in der Wohnung oder barrierearme Badgestaltung. Beide zusammen erfüllen die Bedingung ebenfalls.",
+                              "answer": {
+                                "type": "ChoiceAnswer",
+                                "options": [
+                                  {
+                                    "id": "uiajj",
+                                    "alias": "Ja",
+                                    "text": "Ja"
+                                  },
+                                  {
+                                    "id": "qzhja",
+                                    "alias": "Nein",
+                                    "text": "Nein"
+                                  },
+                                  {
+                                    "id": "8i22j",
+                                    "alias": "Nicht sicher",
+                                    "text": "Ich bin mir nicht sicher"
+                                  }
+                                ]
+                              },
+                              "required": false,
+                              "note": "Mietspiegel 2015–2024: Schwellenfreiheit UND schwellenarmer Übergang UND (ausreichende Bewegungsfreiheit ODER barrierearme Badgestaltung). Zur Gruppierung: AG Mitte, 07.10.2025, 8 C 166/24, Rn. 34. Ja -> Check; Nicht sicher -> Nicht sicher."
+                            }
+                          ]
+                        }
+                      ],
+                      "alternate": [
+                        {
+                          "id": "2hckt",
+                          "type": "Question",
+                          "alias": "Wohnung ist barrierearm",
+                          "text": "Ist die Wohnung barrierearm?",
+                          "info": "Dies ist erfüllt, wenn Wohnung schwellenfrei ist, der Übergang zu Balkon oder Dachterasse schwellenarm ist, ausreichende Bewegungsfreiheit in Wohnung gegeben ist, und das Bad barreierearm gestaltet ist.",
+                          "answer": {
+                            "type": "ChoiceAnswer",
+                            "options": [
+                              {
+                                "id": "uiajj",
+                                "alias": "Ja",
+                                "text": "Ja"
+                              },
+                              {
+                                "id": "qzhja",
+                                "alias": "Nein",
+                                "text": "Nein"
+                              },
+                              {
+                                "id": "8i22j",
+                                "alias": "Nicht sicher",
+                                "text": "Ich bin mir nicht sicher"
+                              }
+                            ]
+                          },
+                          "required": false,
+                          "note": "Merkmal:\nBarrierearme Wohnungsgestaltung (Schwellenfreiheit in der Wohnung, schwellenarmer Übergang zu Balkon/Terrasse, ausreichende Bewegungsfreiheit in der Wohnung und/oder barrierearme Badgestaltung) [++]\n\nJa -> Check\nNicht sicher -> Nicht sicher"
+                        }
+                      ]
                     },
                     {
                       "id": "7k2hi",
