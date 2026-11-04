@@ -212,6 +212,27 @@ export const getMerkmalStates = (
 ): MerkmalStateList => {
   const mietspiegelJahr = getMietspiegeljahr(answers);
 
+  // The 2015 cutoff falls inside Baujahr 1994. An unknown building date
+  // cannot establish the heating alternative, even if installation is known.
+  if (
+    answers.Typ === "Miete" &&
+    mietspiegelJahr === "2015" &&
+    answers.Baujahr === 1994 &&
+    visibleQuestionAliases.has("Gebäude vor 1.7.1994 errichtet")
+  ) {
+    const vorStichtag = answers["Gebäude vor 1.7.1994 errichtet"];
+    const moderneHeizanlage = answers["Gebäude hat moderne Heizanlage"];
+    answers = {
+      ...answers,
+      "Gebäude hat moderne Heizanlage":
+        vorStichtag === "Nein"
+          ? "Nein"
+          : vorStichtag === "Ja" || moderneHeizanlage === "Nein"
+            ? moderneHeizanlage
+            : "Nicht sicher",
+    };
+  }
+
   if (mietspiegelJahr) {
     const merkmale = merkmaleByYear[mietspiegelJahr];
 

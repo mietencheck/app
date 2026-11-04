@@ -145,6 +145,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -333,6 +334,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -780,6 +782,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1604,6 +1607,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -1899,6 +1903,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2794,6 +2799,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -2957,6 +2963,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3120,6 +3127,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3483,6 +3491,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -3958,6 +3967,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4121,6 +4131,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4284,6 +4295,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4588,6 +4600,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -4800,6 +4813,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5116,6 +5130,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5387,6 +5402,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -5837,6 +5853,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6184,6 +6201,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6606,6 +6624,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -6975,6 +6994,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7426,6 +7446,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -7818,6 +7839,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8543,6 +8565,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -8962,6 +8985,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9389,6 +9413,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -9919,6 +9944,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10176,6 +10202,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10435,6 +10462,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -10598,6 +10626,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11053,6 +11082,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11516,6 +11546,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -11989,6 +12020,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12364,6 +12396,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -12962,6 +12995,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13463,6 +13497,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -13855,6 +13890,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14730,6 +14766,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -14893,6 +14930,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15550,6 +15588,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -15966,6 +16005,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -16517,6 +16557,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17082,6 +17123,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -17652,6 +17694,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18511,6 +18554,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -18674,6 +18718,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19268,6 +19313,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -19431,6 +19477,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Gebäude hat moderne Heizanlage": {
@@ -19578,6 +19625,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Gebäude hat schlechte Wärmedämmung": {
@@ -19725,6 +19773,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
         };
     };
     "Gebäude hat gute Wärmedämmung": {
@@ -19872,6 +19921,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -20021,6 +20071,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20184,6 +20235,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20347,6 +20399,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
         };
@@ -20496,6 +20549,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20646,6 +20700,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20797,6 +20852,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -20949,6 +21005,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21112,6 +21169,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21266,6 +21324,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21420,6 +21479,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21575,6 +21635,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21731,6 +21792,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -21888,6 +21950,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22046,6 +22109,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22209,6 +22273,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22368,6 +22433,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22528,6 +22594,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22689,6 +22756,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22851,6 +22919,7 @@ export type StepInfoByAlias = {
             Energiebedarfskennwert?: "---" | "--" | "-" | "0" | "+" | "++" | "+++";
             "Gebäude hat Heizanlage mit ungünstigem Wirkungsgrad"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat moderne Heizanlage"?: "Ja" | "Nein" | "Nicht sicher";
+            "Gebäude vor 1.7.1994 errichtet"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat schlechte Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Gebäude hat gute Wärmedämmung"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld ist besonders leise"?: "Ja" | "Nein" | "Nicht sicher";
@@ -22868,6 +22937,10 @@ export type StepInfoByAlias = {
             "Wohnumfeld hat villenartige Mehrfamilienhäuser"?: "Ja" | "Nein" | "Nicht sicher";
             "Wohnumfeld hat Parkplatz"?: "Ja" | "Nein" | "Nicht sicher";
         };
+    };
+    "Gebäude vor 1.7.1994 errichtet": {
+        answer: "Ja" | "Nein" | "Nicht sicher";
+        state: StepInfoByAlias["Gebäude hat moderne Heizanlage"]["state"];
     };
 };
 
