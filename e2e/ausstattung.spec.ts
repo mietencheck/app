@@ -88,7 +88,7 @@ for (const locale of ["de", "en"] as const) {
         locale === "de" ? "dein eigener Kühlschrank" : "your own refrigerator",
       );
       await expect(instruction).toContainText(
-        locale === "de" ? "teilweiser Erstattung" : "only partial",
+        locale === "de" ? "nur teilweise erstattet" : "only partly reimbursed",
       );
       await expect(instruction).not.toContainText("Vermieterin");
       await page.screenshot({ path: testInfo.outputPath("ausstattung.png") });

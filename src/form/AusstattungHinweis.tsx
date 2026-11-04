@@ -20,8 +20,8 @@ export function AusstattungHinweis() {
       </p>
       <p>
         {l({
-          de: "Bei unklarer oder nur teilweiser Erstattung wähle „Ich bin mir nicht sicher“.",
-          en: "If reimbursement is unclear or only partial, choose “I am not sure”.",
+          de: "Ist unklar, wer die Ausstattung bezahlt hat, oder wurden die Kosten nur teilweise erstattet? Wähle bei der betroffenen Frage „Ich bin mir nicht sicher“ aus.",
+          en: "Unsure who paid for the fittings, or were the costs only partly reimbursed? Choose “I am not sure” for the affected question.",
         })}
       </p>
     </aside>
