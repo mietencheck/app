@@ -132,7 +132,7 @@ export const MERKMAL_RESET_ANSWERS = {
   "Wohnumfeld ist aufwendig gestaltet": "Nein",
   "Wohnumfeld hat gepflegte Müllstandsfläche": "Nein",
   "Wohnumfeld hat eigenen Garten": "Nein",
-  "Wohnumfeld hat Gemeinschaftsgarten": "Nein",
+  "Wohnumfeld hat kostenfreien Mietergarten": "Nein",
   "Wohnumfeld ist repräsentativ": "Nein",
   "Wohnumfeld hat villenartige Mehrfamilienhäuser": "Nein",
   "Wohnumfeld hat Parkplatz": "Nein",
