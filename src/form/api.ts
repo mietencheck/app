@@ -4,6 +4,10 @@ import { FinalAnswers } from "~/form/flow-machine";
 import { merkmaleByYear } from "~/mietspiegel/merkmale";
 import { parseAdresse } from "~/utils";
 import {
+  getEnergiekennwertBewertung,
+  getEnergiekennwertOptions,
+} from "~/utils/energiekennwert";
+import {
   getSelectedWohnflaecheSpanne,
   getWohnflaecheSpanneOptions,
 } from "~/utils/wohnflaecheSpanne";
@@ -20,7 +24,6 @@ import { mapAnswerToMerkmalState } from "./utils/mapAnswerToMerkmalState";
 import {
   mapMerkmalStateToMerkmalGruppen,
   MerkmalGruppenStateList,
-  MerkmalState,
   MerkmalStateList,
   SondermerkmalStateList,
 } from "./utils/mapMerkmalStateToMerkmalGruppen";
@@ -207,11 +210,6 @@ export const getMerkmalStatesByGruppe = (
   return mapMerkmalStateToMerkmalGruppen(merkmale);
 };
 
-/** Orientierungshilfe, Gebäude energy box (2015–2026).
- * The 20 kWh adjustment precedes comparison with the Bedarf limits (+20%).
- * Do not add it twice: Berlin's official Urteilssammlung also records this
- * for Bedarf certificates (LG Berlin, 08.07.2020, 64 S 194/19).
- */
 export function getEnergiekennwertStates(
   answers: FinalAnswers,
   visible: Set<string>,
@@ -241,12 +239,6 @@ export function getEnergiekennwertStates(
         ]),
     );
   }
-  // The browser number control stores strings until API normalization.
-  const kennwert =
-    typeof raw === "number" ||
-    (typeof raw === "string" && String(raw).trim() !== "")
-      ? Number(raw)
-      : NaN;
   // TODO(#62): Explain where users can find warm-water inclusion on their certificate.
   const dezentral = visible.has("Warmwasserversorgung ist dezentral")
     ? answers["Warmwasserversorgung ist dezentral"]
@@ -256,68 +248,21 @@ export function getEnergiekennwertStates(
   )
     ? answers["Dezentrales Warmwasser im Energiekennwert enthalten"]
     : undefined;
-
   const zuschlaege =
     dezentral === "Nein" || enthalten === "Ja"
       ? [0]
       : dezentral === "Ja" && enthalten === "Nein"
         ? [20]
         : [0, 20];
-  const faktor = kennwertTyp === "Ernergiebedarfswert" ? 1.2 : 1;
-  const valid =
-    Number.isFinite(kennwert) &&
-    kennwert >= 0 &&
-    (kennwertTyp === "Energieverbrauchswert" ||
-      kennwertTyp === "Ernergiebedarfswert");
-
-  function state(
-    grenze: number,
-    richtung: "groesser" | "kleiner",
-  ): MerkmalState {
-    if (!valid) return "maybe";
-    const results = zuschlaege.map((zuschlag) =>
-      richtung === "groesser"
-        ? kennwert + zuschlag > grenze * faktor
-        : kennwert + zuschlag < grenze * faktor,
-    );
-    if (results.every(Boolean)) return "checked";
-    if (results.some(Boolean)) return "maybe";
-    return "unchecked";
-  }
-
-  const [ersteGrenze, zweiteGrenze, dritteGrenze] = {
-    "2015": [170, 210, 250],
-    "2017": [155, 195, 235],
-    "2019": [155, 195, 235],
-    "2021": [155, 195, 235],
-    "2023": [155, 195, 235],
-    "2024": [145, 195, 235],
-    "2026": [145, 195, 235],
-  }[jahr];
-
-  return {
-    "[Gebäude-] Energieverbrauchskennwert größer als 170/155/145": state(
-      ersteGrenze,
-      "groesser",
-    ),
-    "[Gebäude-] Energieverbrauchskennwert größer als 210/195": state(
-      zweiteGrenze,
-      "groesser",
-    ),
-    "[Gebäude-] Energieverbrauchskennwert größer als 250/235": state(
-      dritteGrenze,
-      "groesser",
-    ),
-    "[Gebäude+] Energieverbrauchskennwert kleiner als 120": state(
-      120,
-      "kleiner",
-    ),
-    "[Gebäude+] Energieverbrauchskennwert kleiner als 100": state(
-      100,
-      "kleiner",
-    ),
-    "[Gebäude+] Energieverbrauchskennwert kleiner als 80": state(80, "kleiner"),
-  };
+  const options = getEnergiekennwertOptions(
+    jahr,
+    kennwertTyp === "Ernergiebedarfswert" ? "bedarf" : "verbrauch",
+  );
+  return getEnergiekennwertBewertung(
+    legacyAlias ? raw : undefined,
+    zuschlaege,
+    options,
+  );
 }
 
 export const getMerkmalStates = (
