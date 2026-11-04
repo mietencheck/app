@@ -8397,7 +8397,7 @@
                                   "id": "wlhgh",
                                   "type": "Question",
                                   "alias": "Küche hat Einbauküche",
-                                  "text": "Ist die Küche von der Vermieterin mit einer Einbauküche mit Ober- und Unterschränken, Herd und Spüle ausgestattet worden?",
+                                  "text": "Ist die Küche mit einer Einbauküche mit Ober- und Unterschränken, Herd und Spüle ausgestattet worden?",
                                   "info": null,
                                   "answer": {
                                     "type": "ChoiceAnswer",
@@ -8432,7 +8432,7 @@
                           "id": "m0lvg",
                           "type": "Question",
                           "alias": "Küche hat Einbauküche",
-                          "text": "Ist die Küche von der Vermieterin mit einer Einbauküche mit Ober- und Unterschränken, Herd und Spüle ausgestattet worden?",
+                          "text": "Ist die Küche mit einer Einbauküche mit Ober- und Unterschränken, Herd und Spüle ausgestattet worden?",
                           "info": null,
                           "answer": {
                             "type": "ChoiceAnswer",
@@ -8491,7 +8491,7 @@
                           "id": "x94sm",
                           "type": "Question",
                           "alias": "Küche hat Kücheninsel",
-                          "text": "Ist die Küche von der Vermieterin mit einer freistehenden Kücheninsel mit Kochmöglichkeit oder Spüle ausgestattet worden? ",
+                          "text": "Ist die Küche mit einer freistehenden Kücheninsel mit Kochmöglichkeit oder Spüle ausgestattet worden? ",
                           "info": "Freistehend heißt, dass diese nicht mit einer Wand oder einer anderen Arbeitsfläche verbunden ist. L-förmige Küchentheken sind daher nicht freistehend.",
                           "answer": {
                             "type": "ChoiceAnswer",
@@ -8530,7 +8530,7 @@
                       "id": "1fj01",
                       "type": "Question",
                       "alias": "Küche hat Kochmöglichkeit",
-                      "text": "Ist die Küche von der Vermieterin mit einem Herd ausgestattet worden?",
+                      "text": "Ist die Küche mit einem Herd ausgestattet worden?",
                       "info": null,
                       "answer": {
                         "type": "ChoiceAnswer",
@@ -8886,7 +8886,7 @@
                           "id": "h7wij",
                           "type": "Question",
                           "alias": "Küche hat Spüle",
-                          "text": "Ist die Küche von der Vermieterin mit einem Spülbecken ausgestattet worden?",
+                          "text": "Ist die Küche mit einem Spülbecken ausgestattet worden?",
                           "info": null,
                           "answer": {
                             "type": "ChoiceAnswer",
@@ -9008,7 +9008,7 @@
                               "id": "qmoiq",
                               "type": "Question",
                               "alias": "Küche hat Kühlschrank",
-                              "text": "Ist die Küche von der Vermieterin mit einem Kühlschrank ausgestattet worden?",
+                              "text": "Ist die Küche mit einem Kühlschrank ausgestattet worden?",
                               "info": "Der Kühlschrank zählt nur wenn er bei der Überlassung in einem annähernd neuwertigen Zustand war und der Vermieter keine extra Miete für diesen verlangt.",
                               "answer": {
                                 "type": "ChoiceAnswer",
@@ -9041,7 +9041,7 @@
                           "id": "tte6r",
                           "type": "Question",
                           "alias": "Küche hat Kühlschrank",
-                          "text": "Ist die Küche von deiner Vermieterin mit mindestens einem der folgenden Geräte ausgestattet: Kühlschrank, Tiefkühlschrank, Geschirrspüler.",
+                          "text": "Ist die Küche mit mindestens einem der folgenden Geräte ausgestattet: Kühlschrank, Tiefkühlschrank, Geschirrspüler.",
                           "info": "Diese Geräte zählen nur wenn sie bei der Überlassung in einem annähernd neuwertigen Zustand waren und der Vermieter keine extra Miete für sie verlangt.",
                           "answer": {
                             "type": "ChoiceAnswer",
@@ -9212,7 +9212,7 @@
                                   "id": "u62on",
                                   "type": "Question",
                                   "alias": "Küche hat Dunstabzug",
-                                  "text": "Ist die Küche von der Vermieterin mit einer Dunstabzugshaube ausgestattet worden?",
+                                  "text": "Ist die Küche mit einer Dunstabzugshaube ausgestattet worden?",
                                   "info": null,
                                   "answer": {
                                     "type": "ChoiceAnswer",
@@ -9347,7 +9347,7 @@
                               "id": "vgdl4",
                               "type": "Question",
                               "alias": "Küche hat hochwertigen Fußboden",
-                              "text": "Ist in der Küche von der Vermieterin ein hochwertiger Fußboden verlegt worden?",
+                              "text": "Ist in der Küche ein hochwertiger Fußboden verlegt worden?",
                               "info": "Hierzu zählen z.B. hochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraumlaminat, Parkett oder Terrazzo. Gilt nur, wenn diese auch in einem guten Zustand sind.",
                               "answer": {
                                 "type": "ChoiceAnswer",
@@ -9412,7 +9412,7 @@
                                   "id": "q1w2wg",
                                   "type": "Question",
                                   "alias": "Küche hat hochwertigen Fußboden",
-                                  "text": "Ist in der Küche von der Vermieterin ein hochwertiger Fußboden verlegt worden?",
+                                  "text": "Ist in der Küche ein hochwertiger Fußboden verlegt worden?",
                                   "info": "Hierzu zählen z.B. hochwertige Fliesen, hochwertiges Linoleum, hochwertiges Feuchtraumlaminat, Parkett oder Terrazzo. Gilt nur, wenn diese auch in einem guten Zustand sind.",
                                   "answer": {
                                     "type": "ChoiceAnswer",

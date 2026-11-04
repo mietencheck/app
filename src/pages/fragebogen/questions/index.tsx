@@ -8,6 +8,7 @@ import {
   FormLabel,
   InputControl,
 } from "~/components";
+import { AusstattungHinweis } from "~/form/AusstattungHinweis";
 import {
   postMessageToFloma,
   useAnswers,
@@ -102,9 +103,23 @@ export function Questions() {
 
   if (!group) return null;
 
+  const firstAusstattungPage = mainSteps
+    .filter(
+      (step): step is Group =>
+        step.type === "Group" && step.category === "Page",
+    )
+    .flatMap((page) => [page, ...(page.steps ?? [])])
+    .find(
+      (step) =>
+        step.type === "Group" &&
+        step.category === "Page" &&
+        (step.alias === "Sondermerkmale" || step.alias === "Bad & WC"),
+    );
+
   return (
     <div className="flex flex-col gap-12">
       {group.alias && <p className="heading-28">{l(group.alias)}</p>}
+      {group.id === firstAusstattungPage?.id && <AusstattungHinweis />}
       {group.steps.map((step) => (
         <Node key={step.id} step={step} />
       ))}
