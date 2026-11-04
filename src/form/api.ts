@@ -218,27 +218,12 @@ export function getEnergiekennwertStates(
   const alias = "Energiekennwert laut Energieausweis";
   if (answers.Typ !== "Miete" || !visible.has(alias)) return {};
 
-  const raw = answers[alias];
   const kennwertTyp = answers["Kennt Energieverbrauch oder Energiebedarf"];
-  const legacyAlias =
-    kennwertTyp === "Energieverbrauchswert"
-      ? "Energieverbrauchskennwert"
-      : kennwertTyp === "Ernergiebedarfswert"
-        ? "Energiebedarfskennwert"
-        : undefined;
-  // Saved band answers predate the numeric questionnaire. Keep their existing
-  // result until a numeric value is supplied; never infer a raw value or backfill.
-  if (raw == null && legacyAlias && answers[legacyAlias] !== undefined) {
-    const legacyVisible = new Set([legacyAlias]);
-    return Object.fromEntries(
-      Object.entries(answersToMerkmalStateMapping)
-        .filter(([merkmal]) => merkmal.includes("Energieverbrauchskennwert"))
-        .map(([merkmal, mapping]) => [
-          merkmal,
-          mapAnswerToMerkmalState(mapping, answers, legacyVisible),
-        ]),
-    );
-  }
+  const kennwert =
+    kennwertTyp === "Energieverbrauchswert" ||
+    kennwertTyp === "Ernergiebedarfswert"
+      ? answers[alias]
+      : undefined;
   // TODO(#62): Explain where users can find warm-water inclusion on their certificate.
   const dezentral = visible.has("Warmwasserversorgung ist dezentral")
     ? answers["Warmwasserversorgung ist dezentral"]
@@ -258,11 +243,7 @@ export function getEnergiekennwertStates(
     jahr,
     kennwertTyp === "Ernergiebedarfswert" ? "bedarf" : "verbrauch",
   );
-  return getEnergiekennwertBewertung(
-    legacyAlias ? raw : undefined,
-    zuschlaege,
-    options,
-  );
+  return getEnergiekennwertBewertung(kennwert, zuschlaege, options);
 }
 
 export const getMerkmalStates = (

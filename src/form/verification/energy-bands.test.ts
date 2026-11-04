@@ -240,7 +240,7 @@ test("unknown certificate type hides numeric and hot-water questions and stale a
   );
 });
 
-test("does not alter the Mieterhöhung or legacy answer path", () => {
+test("does not alter Mieterhöhung or evaluate hidden numeric questions", () => {
   expect(
     getEnergiekennwertStates(answers({ Typ: "Mieterhöhung" }), visible, "2026"),
   ).toEqual({});
@@ -248,27 +248,20 @@ test("does not alter the Mieterhöhung or legacy answer path", () => {
 });
 
 test.each(typen)(
-  "saved %s band answers keep their result until a numeric value is supplied",
+  "stored %s bands cannot replace the required numeric answer",
   (typ) => {
-    const legacyAlias =
+    const storedAlias =
       typ === "Energieverbrauchswert"
         ? "Energieverbrauchskennwert"
         : "Energiebedarfskennwert";
     const saved = answers({
       "Kennt Energieverbrauch oder Energiebedarf": typ,
       [numericAlias]: undefined,
-      [legacyAlias]: "--",
+      [storedAlias]: "--",
     });
     expect(
       Object.values(getEnergiekennwertStates(saved, visible, "2026")),
-    ).toEqual([
-      "checked",
-      "checked",
-      "unchecked",
-      "unchecked",
-      "unchecked",
-      "unchecked",
-    ]);
+    ).toEqual(Array(6).fill("maybe"));
     expect(
       getEnergiekennwertStates(
         { ...saved, [numericAlias]: 100 },
