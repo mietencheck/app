@@ -4,11 +4,7 @@ import { expect, test } from "vitest";
 import { hash } from "~/l10n";
 
 import EN from "../../../public/locales/en.json";
-import {
-  getAusstattung,
-  getMerkmalStates,
-  getSondermerkmalStates,
-} from "../api";
+import { getMerkmalStates, getSondermerkmalStates } from "../api";
 import { FinalAnswers } from "../flow-machine-runtime";
 import flow from "../flow.fm.json";
 import {
@@ -63,12 +59,12 @@ function evaluate(
 
 test.each(
   editions.flatMap((edition) => cases.map((c) => ({ ...edition, ...c }))),
-)("$jahr: same underfloor heating, $funding", ({ pinned, answer, state }) => {
-  const result = evaluate(pinned, { "Bad mit Fußbodenheizung": answer });
-  expect(result.visible.has("Bad mit Fußbodenheizung")).toBe(true);
+)("$jahr: same refrigerator, $funding", ({ pinned, answer, state }) => {
+  const result = evaluate(pinned, { "Küche hat Kühlschrank": answer });
+  expect(result.visible.has("Küche hat Kühlschrank")).toBe(true);
   expect(
     getMerkmalStates(result.answers, result.visible)[
-      "[Bad+] Bad hat Fußbodenheizung"
+      "[Küche+] Küche hat Kühlschrank"
     ],
   ).toBe(state);
 });
@@ -115,36 +111,9 @@ test.each(
   },
 );
 
-test.each(
-  editions.flatMap((edition) =>
-    [1964, 1965].flatMap((baujahr) =>
-      cases.map((c) => ({ ...edition, baujahr, ...c })),
-    ),
-  ),
-)(
-  "$jahr, Baujahr $baujahr: base heating/bath Ausstattung, $funding",
-  ({ pinned, baujahr, answer }) => {
-    const result = evaluate(pinned, {
-      Baujahr: baujahr,
-      "Wohnung hat Sammelheizung": answer,
-      "Badezimmer in Wohnung": answer,
-    });
-    expect(result.visible.has("Wohnung hat Sammelheizung")).toBe(
-      baujahr <= 1964,
-    );
-    expect(result.visible.has("Badezimmer in Wohnung")).toBe(baujahr <= 1964);
-    expect(getAusstattung(result.answers, result.visible)).toEqual({
-      sammelheizung: baujahr <= 1964 ? answer : "Nein",
-      bad: baujahr <= 1964 ? answer : "Nein",
-    });
-  },
-);
-
 test("source flow remains valid and qualifying copy is translated for every edited edition copy", () => {
   expect(() => flowRoot.parse(flow)).not.toThrow();
   for (const alias of [
-    "Wohnung hat Sammelheizung",
-    "Badezimmer in Wohnung",
     "Sondermerkmal Dusche Und Badewanne",
     "Sondermerkmal Modernes Bad",
     "Sondermerkmal Moderne Küche",
@@ -162,13 +131,27 @@ test("source flow remains valid and qualifying copy is translated for every edit
     const copies = questionCopiesByAlias.get(alias)!;
     expect(copies.length).toBeGreaterThan(0);
     for (const { node } of copies) {
-      expect(node.info).toContain("deren Kosten sie oder er dir erstattet hat");
+      expect(node.info).toContain("deren Kosten er dir erstattet hat");
       const strings: Record<string, string> = EN.strings;
       expect(strings[hash(node.info!)]).toContain(
         "landlord reimbursed you for",
       );
       expect(strings[hash(node.info!)]).not.toContain("[DE]");
       expect(strings[hash(node.text)]).toBeTruthy();
+    }
+  }
+});
+
+test("Schnelltest bathroom and heating help has no funding reminder", () => {
+  for (const alias of ["Wohnung hat Sammelheizung", "Badezimmer in Wohnung"]) {
+    for (const { node } of questionCopiesByAlias.get(alias)!) {
+      expect(node.info).toBe(
+        "Beachte: Dies trifft auf fast alle Wohnungen in Berlin zu.",
+      );
+      const strings: Record<string, string> = EN.strings;
+      expect(strings[hash(node.info!)]).toBe(
+        "Note: This applies to almost all apartments in Berlin.",
+      );
     }
   }
 });

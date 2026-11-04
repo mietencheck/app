@@ -14,20 +14,14 @@ export function AusstattungHinweis() {
       </h2>
       <p>
         {l({
-          de: "Für alle Ausstattungsfragen zählt nur Ausstattung, die die Vermieterin oder der Vermieter bereitgestellt oder deren Kosten sie oder er dir erstattet hat. Das gilt auch für Bad, Heizung, Böden, Küche und Sondermerkmale.",
-          en: "For every question about fittings in this questionnaire, count what the landlord provided or reimbursed you for. This also applies to bathrooms, heating, flooring, kitchens and special features.",
+          de: "Berücksichtige nur Ausstattung, die der Vermieter gestellt oder deren Kosten er dir erstattet hat. Selbst bezahlte Ausstattung ohne Erstattung zählt nicht, zum Beispiel dein eigener Kühlschrank. Beantworte die Fragen so, als wäre diese Ausstattung nicht vorhanden.",
+          en: "Count only fittings provided by the landlord or whose costs the landlord reimbursed you for. Fittings you paid for without reimbursement do not count, for example your own refrigerator. Answer the questions as if those fittings were not there.",
         })}
       </p>
       <p>
         {l({
-          de: "Selbst eingebaute und bezahlte Ausstattung ohne Kostenerstattung bleibt unberücksichtigt. Beurteile die Ausstattung ohne diese eigenen Einbauten, auch bei Fragen nach fehlender Ausstattung. Beispiel: Eine selbst bezahlte Fußbodenheizung ohne Kostenerstattung zählt nicht als vorhandene Fußbodenheizung.",
-          en: "Disregard fittings you installed and paid for without reimbursement. Assess the fittings without those additions, including questions about missing fittings. For example, underfloor heating you paid for without reimbursement does not count as existing underfloor heating.",
-        })}
-      </p>
-      <p>
-        {l({
-          de: "Ist unklar, wer die Ausstattung bezahlt hat, oder wurden die Kosten nur teilweise erstattet? Wähle bei der betroffenen Frage „Ich bin mir nicht sicher“ und kläre den Fall in einer Mietberatung.",
-          en: "Unsure who paid, or were the costs only partly reimbursed? Choose “I am not sure” for the affected question and clarify the situation with a tenancy adviser.",
+          de: "Bei unklarer oder nur teilweiser Erstattung wähle „Ich bin mir nicht sicher“.",
+          en: "If reimbursement is unclear or only partial, choose “I am not sure”.",
         })}
       </p>
     </aside>
