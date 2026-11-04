@@ -105,6 +105,15 @@ for (const locale of ["de", "en"] as const) {
       ]) {
         await page.goto(`/fragebogen/${route}`);
         await expect(instruction).toHaveCount(0);
+        await expect(
+          page.getByText(
+            /Beurteile den Zustand ohne selbst bezahlte|Assess the condition without fittings/,
+          ),
+        ).toHaveCount(0);
+        if (locale === "de" && edition.year === "2026" && route === "küche") {
+          await page.evaluate(() => window.scrollTo(0, 0));
+          await page.screenshot({ path: testInfo.outputPath("kueche.png") });
+        }
       }
       for (const id of ["icpny", "hzqza"]) {
         await page.goto(`/schnelltest#${id}`);

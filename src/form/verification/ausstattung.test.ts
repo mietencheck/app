@@ -111,7 +111,7 @@ test.each(
   },
 );
 
-test("source flow remains valid and qualifying copy is translated for every edited edition copy", () => {
+test("source flow remains valid and original question help stays translated without repeated funding guidance", () => {
   expect(() => flowRoot.parse(flow)).not.toThrow();
   for (const alias of [
     "Sondermerkmal Dusche Und Badewanne",
@@ -131,12 +131,16 @@ test("source flow remains valid and qualifying copy is translated for every edit
     const copies = questionCopiesByAlias.get(alias)!;
     expect(copies.length).toBeGreaterThan(0);
     for (const { node } of copies) {
-      expect(node.info).toContain("deren Kosten er dir erstattet hat");
-      const strings: Record<string, string> = EN.strings;
-      expect(strings[hash(node.info!)]).toContain(
-        "landlord reimbursed you for",
+      expect(node.info ?? "").not.toMatch(
+        /Berücksichtige nur Ausstattung|Beurteile den Zustand ohne selbst bezahlte|Bei unklarer oder teilweiser Kostenerstattung/,
       );
-      expect(strings[hash(node.info!)]).not.toContain("[DE]");
+      const strings: Record<string, string> = EN.strings;
+      if (node.info) {
+        expect(strings[hash(node.info)]).toBeTruthy();
+        expect(strings[hash(node.info)]).not.toMatch(
+          /\[DE\]|Count only fittings|Assess the condition without fittings/,
+        );
+      }
       expect(strings[hash(node.text)]).toBeTruthy();
     }
   }
