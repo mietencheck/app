@@ -17,6 +17,7 @@ export function InputControl({
   id,
   autoFocus,
   answer,
+  alias,
   value,
   onChange,
 }: {
@@ -94,16 +95,20 @@ export function InputControl({
         />
       );
 
-    case "NumberAnswer":
+    case "NumberAnswer": {
+      const isEnergiekennwert = alias === "Energiekennwert laut Energieausweis";
       return (
         <NumberInput
           autoFocus={autoFocus}
           id={id}
-          value={value || ""}
+          value={value ?? ""}
+          min={isEnergiekennwert ? 0 : undefined}
+          step={isEnergiekennwert ? "any" : undefined}
           onChange={onChange as never}
           required
         />
       );
+    }
 
     case "DateAnswer":
       return (

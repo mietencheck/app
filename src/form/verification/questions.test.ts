@@ -6,8 +6,12 @@ import { allScenarios } from "./merkmal-coverage";
 // Questions that are never asked in the Miete flow: the Mieterhöhung branch
 // (work in progress, hidden in the UI) and the follow-ups of "Vorherige
 // Mieterhöhung", which the UI always answers with "Nein".
+// Legacy energy bands are retained for old saved answers; new Miete inputs
+// use the numeric certificate value and the Warmwasser questions.
 const NOT_ASKED_IN_MIETE_FLOW = [
   "Datum Mieterhöhungsschreiben",
+  "Energieverbrauchskennwert",
+  "Energiebedarfskennwert",
   "Geforderte Nettokaltmiete",
   "Kappungsgrenze durch aktuelle Mieterhöhung überschritten",
   "Kappungsgrenze überschritten",

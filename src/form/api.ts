@@ -4,6 +4,10 @@ import { FinalAnswers } from "~/form/flow-machine";
 import { merkmaleByYear } from "~/mietspiegel/merkmale";
 import { parseAdresse } from "~/utils";
 import {
+  getEnergiekennwertBewertung,
+  getEnergiekennwertOptions,
+} from "~/utils/energiekennwert";
+import {
   getSelectedWohnflaecheSpanne,
   getWohnflaecheSpanneOptions,
 } from "~/utils/wohnflaecheSpanne";
@@ -206,6 +210,42 @@ export const getMerkmalStatesByGruppe = (
   return mapMerkmalStateToMerkmalGruppen(merkmale);
 };
 
+export function getEnergiekennwertStates(
+  answers: FinalAnswers,
+  visible: Set<string>,
+): MerkmalStateList {
+  const jahr = getMietspiegeljahr(answers);
+  const alias = "Energiekennwert laut Energieausweis";
+  if (!jahr || answers.Typ !== "Miete" || !visible.has(alias)) return {};
+
+  const kennwertTyp = answers["Kennt Energieverbrauch oder Energiebedarf"];
+  const kennwert =
+    kennwertTyp === "Energieverbrauchswert" ||
+    kennwertTyp === "Ernergiebedarfswert"
+      ? answers[alias]
+      : undefined;
+  // TODO(#62): Explain where users can find warm-water inclusion on their certificate.
+  const dezentral = visible.has("Warmwasserversorgung ist dezentral")
+    ? answers["Warmwasserversorgung ist dezentral"]
+    : undefined;
+  const enthalten = visible.has(
+    "Dezentrales Warmwasser im Energiekennwert enthalten",
+  )
+    ? answers["Dezentrales Warmwasser im Energiekennwert enthalten"]
+    : undefined;
+  const zuschlaege =
+    dezentral === "Nein" || enthalten === "Ja"
+      ? [0]
+      : dezentral === "Ja" && enthalten === "Nein"
+        ? [20]
+        : [0, 20];
+  const options = getEnergiekennwertOptions(
+    jahr,
+    kennwertTyp === "Ernergiebedarfswert" ? "bedarf" : "verbrauch",
+  );
+  return getEnergiekennwertBewertung(kennwert, zuschlaege, options);
+}
+
 export const getMerkmalStates = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
@@ -214,6 +254,10 @@ export const getMerkmalStates = (
 
   if (mietspiegelJahr) {
     const merkmale = merkmaleByYear[mietspiegelJahr];
+    const energiekennwertStates = getEnergiekennwertStates(
+      answers,
+      visibleQuestionAliases,
+    );
 
     return fromEntries(
       entries(answersToMerkmalStateMapping)
@@ -225,11 +269,12 @@ export const getMerkmalStates = (
           ]) => {
             return [
               key,
-              mapAnswerToMerkmalState(
-                answerMerkmalMapping,
-                answers,
-                visibleQuestionAliases,
-              ),
+              energiekennwertStates[key as keyof MerkmalStateList] ??
+                mapAnswerToMerkmalState(
+                  answerMerkmalMapping,
+                  answers,
+                  visibleQuestionAliases,
+                ),
             ];
           },
         ),

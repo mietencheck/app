@@ -26,16 +26,29 @@ const vertragsdatumSpannen = [
 ] as const;
 
 // Energy examples and the exclusive alternatives are specified in section
-// 11.4 A (2015), 10.4 A (2017-2026). Symbols are UI answer aliases for the
-// cumulative thresholds; these tests do not certify the displayed thresholds.
+// 11.4 A (2015), 10.4 A (2017-2026). Numeric samples represent each cumulative
+// energy tier; exact boundaries are covered by the energy-band tests.
 for (const vertragsdatumSpanne of vertragsdatumSpannen) {
   for (const input of [
     "Energieverbrauchskennwert",
     "Energiebedarfskennwert",
   ] as const) {
-    test.each(["---", "--", "-", "0", "+", "++", "+++"])(
+    test.each(["---", "--", "-", "0", "+", "++", "+++"] as const)(
       `${vertragsdatumSpanne}/${input}/%s: cumulative weight and exclusive alternatives`,
       (symbol) => {
+        const ist2015 = vertragsdatumSpanne === "2015-2016";
+        const istAb2024 =
+          vertragsdatumSpanne === "2024-2026" ||
+          vertragsdatumSpanne === ">2026";
+        const kennwert = {
+          "---": (ist2015 ? 250 : 235) + 10,
+          "--": (ist2015 ? 210 : 195) + 10,
+          "-": (ist2015 ? 170 : istAb2024 ? 145 : 155) + 10,
+          "0": 130,
+          "+": 110,
+          "++": 90,
+          "+++": 70,
+        }[symbol];
         const answers = {
           ...MERKMAL_RESET_ANSWERS,
           ...SONDERMERKMAL_RESET_ANSWERS,
@@ -53,7 +66,9 @@ for (const vertragsdatumSpanne of vertragsdatumSpannen) {
             input === "Energieverbrauchskennwert"
               ? "Energieverbrauchswert"
               : "Ernergiebedarfswert",
-          [input]: symbol,
+          "Energiekennwert laut Energieausweis":
+            kennwert * (input === "Energiebedarfskennwert" ? 1.2 : 1),
+          "Warmwasserversorgung ist dezentral": "Nein",
           // Stale answers for the alternative estimation method must be hidden.
           "Gebäude hat gute Wärmedämmung": "Ja",
           "Gebäude hat moderne Heizanlage": "Ja",
