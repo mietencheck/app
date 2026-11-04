@@ -334,14 +334,6 @@ export const getMerkmalStates = (
       mietspiegelJahr,
     );
 
-    // Apply the #63 exception after either energy path, including numeric values.
-    // Its question is supplied by the separate Denkmalschutz questionnaire change.
-    const ausnahmeAlias = "Denkmalschutz verhindert energetische Sanierung";
-    const denkmalschutz =
-      answers.Typ === "Miete" && visibleQuestionAliases.has(ausnahmeAlias)
-        ? (answers as Record<string, unknown>)[ausnahmeAlias]
-        : undefined;
-
     return fromEntries(
       entries(answersToMerkmalStateMapping)
         .filter(([merkmal]) => merkmale.has(merkmal))
@@ -350,22 +342,15 @@ export const getMerkmalStates = (
             string,
             AnswerMerkmalStateMapping,
           ]) => {
-            const state =
+            return [
+              key,
               energiekennwertStates[key as keyof MerkmalStateList] ??
-              mapAnswerToMerkmalState(
-                answerMerkmalMapping,
-                answers,
-                visibleQuestionAliases,
-              );
-            const istNegativesEnergiemerkmal =
-              key === "[Gebäude-] Gebäude hat unzureichende Wärmedämmung" ||
-              key.startsWith("[Gebäude-] Energieverbrauchskennwert");
-            if (istNegativesEnergiemerkmal) {
-              if (denkmalschutz === "Ja") return [key, "unchecked"];
-              if (denkmalschutz === "Nicht sicher" && state === "checked")
-                return [key, "maybe"];
-            }
-            return [key, state];
+                mapAnswerToMerkmalState(
+                  answerMerkmalMapping,
+                  answers,
+                  visibleQuestionAliases,
+                ),
+            ];
           },
         ),
     );
