@@ -41,8 +41,8 @@ test.each(contractScenarios())(
     for (const typ of typen) {
       const result = evaluateAnswers({
         ...BASE_ANSWERS,
-        ...pinned,
         ...answers({ "Kennt Energieverbrauch oder Energiebedarf": typ }),
+        ...pinned,
       });
       const question = questionNodeById.get(result.nodeIds.get(numericAlias)!);
       const bedarf = typ === "Ernergiebedarfswert";
@@ -68,6 +68,7 @@ test.each(contractScenarios())(
 function answers(overrides: Record<string, unknown> = {}): FinalAnswers {
   return {
     Typ: "Miete",
+    Vertragsdatum: ">2026",
     "Kennt Energieverbrauch oder Energiebedarf": "Energieverbrauchswert",
     [numericAlias]: 140,
     [supplyAlias]: "Ja",
@@ -77,6 +78,9 @@ function answers(overrides: Record<string, unknown> = {}): FinalAnswers {
 }
 
 describe.each(jahrGrenzen)("Mietspiegel %s", (jahr, grenzen) => {
+  const scenario = contractScenarios().find(
+    (s) => s.jahr === jahr && s.label.startsWith("unterschrieben"),
+  )!;
   test.each(typen)(
     "%s: adjust before all strict threshold comparisons",
     (typ) => {
@@ -91,13 +95,13 @@ describe.each(jahrGrenzen)("Mietspiegel %s", (jahr, grenzen) => {
             const raw = grenze * factor - zuschlag + difference;
             const result = getEnergiekennwertStates(
               answers({
+                ...scenario.pinned,
                 "Kennt Energieverbrauch oder Energiebedarf": typ,
                 [numericAlias]: raw,
                 [supplyAlias]: dezentral,
                 [includedAlias]: enthalten,
               }),
               visible,
-              jahr,
             );
             expect(result[merkmale[i]], `${typ}, ${raw}, +${zuschlag}`).toBe(
               (i < 3 ? difference > 0 : difference < 0)
@@ -123,12 +127,12 @@ test.each(
       const evaluate = (enthalten: "Ja" | "Nein") => {
         const result = evaluateAnswers({
           ...BASE_ANSWERS,
-          ...scenario.pinned,
           ...answers({
             "Kennt Energieverbrauch oder Energiebedarf": typ,
             [numericAlias]: grenze - 10,
             [includedAlias]: enthalten,
           }),
+          ...scenario.pinned,
         });
         expect(result.visible.has(numericAlias)).toBe(true);
         expect(result.visible.has(includedAlias)).toBe(true);
@@ -170,7 +174,6 @@ test.each([
     const result = getEnergiekennwertStates(
       answers({ [supplyAlias]: supply, [includedAlias]: included }),
       visible,
-      "2026",
     );
     expect(Object.values(result)).toEqual([
       "maybe",
@@ -188,7 +191,6 @@ test("included warm water needs no addition even when the supply type is uncerta
     getEnergiekennwertStates(
       answers({ [supplyAlias]: "Nicht sicher", [includedAlias]: "Ja" }),
       visible,
-      "2026",
     )[merkmale[0]],
   ).toBe("unchecked");
 });
@@ -198,11 +200,7 @@ test.each([undefined, null, "", " ", -1, NaN, Infinity, "bad"])(
   (value) => {
     expect(
       Object.values(
-        getEnergiekennwertStates(
-          answers({ [numericAlias]: value }),
-          visible,
-          "2026",
-        ),
+        getEnergiekennwertStates(answers({ [numericAlias]: value }), visible),
       ),
     ).toEqual(Array(6).fill("maybe"));
   },
@@ -212,11 +210,9 @@ test.each([0, "0", "140.5"])(
   "browser numeric value %s is accepted",
   (value) => {
     expect(
-      getEnergiekennwertStates(
-        answers({ [numericAlias]: value }),
-        visible,
-        "2026",
-      )[merkmale[0]],
+      getEnergiekennwertStates(answers({ [numericAlias]: value }), visible)[
+        merkmale[0]
+      ],
     ).toBe(value === "140.5" ? "checked" : "unchecked");
   },
 );
@@ -242,9 +238,9 @@ test("unknown certificate type hides numeric and hot-water questions and stale a
 
 test("does not alter Mieterhöhung or evaluate hidden numeric questions", () => {
   expect(
-    getEnergiekennwertStates(answers({ Typ: "Mieterhöhung" }), visible, "2026"),
+    getEnergiekennwertStates(answers({ Typ: "Mieterhöhung" }), visible),
   ).toEqual({});
-  expect(getEnergiekennwertStates(answers(), new Set(), "2026")).toEqual({});
+  expect(getEnergiekennwertStates(answers(), new Set())).toEqual({});
 });
 
 test.each(typen)(
@@ -259,15 +255,13 @@ test.each(typen)(
       [numericAlias]: undefined,
       [storedAlias]: "--",
     });
+    expect(Object.values(getEnergiekennwertStates(saved, visible))).toEqual(
+      Array(6).fill("maybe"),
+    );
     expect(
-      Object.values(getEnergiekennwertStates(saved, visible, "2026")),
-    ).toEqual(Array(6).fill("maybe"));
-    expect(
-      getEnergiekennwertStates(
-        { ...saved, [numericAlias]: 100 },
-        visible,
-        "2026",
-      )[merkmale[0]],
+      getEnergiekennwertStates({ ...saved, [numericAlias]: 100 }, visible)[
+        merkmale[0]
+      ],
     ).toBe("unchecked");
   },
 );
@@ -277,7 +271,6 @@ test("uncertain inclusion also makes a positive Merkmal uncertain when the addit
     getEnergiekennwertStates(
       answers({ [numericAlias]: 110, [includedAlias]: "Nicht sicher" }),
       visible,
-      "2026",
     )[merkmale[3]],
   ).toBe("maybe");
 });
@@ -299,3 +292,17 @@ test.each([1918, 1990, 1991, 2009, 2010, 2014])(
     ).toBe("checked");
   },
 );
+
+test("missing contract date cannot establish an energy classification", () => {
+  expect(
+    getEnergiekennwertStates(answers({ Vertragsdatum: undefined }), visible),
+  ).toEqual({});
+});
+
+test("unsigned contracts use the newest Mietspiegel without a contract date", () => {
+  const result = getEnergiekennwertStates(
+    answers({ Unterschrieben: "Nein", Vertragsdatum: undefined }),
+    visible,
+  );
+  expect(result[merkmale[0]]).toBe("checked");
+});

@@ -213,10 +213,10 @@ export const getMerkmalStatesByGruppe = (
 export function getEnergiekennwertStates(
   answers: FinalAnswers,
   visible: Set<string>,
-  jahr: Mietspiegeljahr,
 ): MerkmalStateList {
+  const jahr = getMietspiegeljahr(answers);
   const alias = "Energiekennwert laut Energieausweis";
-  if (answers.Typ !== "Miete" || !visible.has(alias)) return {};
+  if (!jahr || answers.Typ !== "Miete" || !visible.has(alias)) return {};
 
   const kennwertTyp = answers["Kennt Energieverbrauch oder Energiebedarf"];
   const kennwert =
@@ -257,7 +257,6 @@ export const getMerkmalStates = (
     const energiekennwertStates = getEnergiekennwertStates(
       answers,
       visibleQuestionAliases,
-      mietspiegelJahr,
     );
 
     return fromEntries(
