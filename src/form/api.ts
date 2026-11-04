@@ -16,11 +16,11 @@ import {
 } from "./mappings/merkmale";
 import { answersToSondermerkmalStateMapping } from "./mappings/sondermerkmale";
 import { vertragsdatumToMietspiegelJahrMapping } from "./mappings/vertragsdatum";
-import { getEnergiekennwertStates } from "./utils/energiekennwert";
 import { mapAnswerToMerkmalState } from "./utils/mapAnswerToMerkmalState";
 import {
   mapMerkmalStateToMerkmalGruppen,
   MerkmalGruppenStateList,
+  MerkmalState,
   MerkmalStateList,
   SondermerkmalStateList,
 } from "./utils/mapMerkmalStateToMerkmalGruppen";
@@ -207,6 +207,119 @@ export const getMerkmalStatesByGruppe = (
   return mapMerkmalStateToMerkmalGruppen(merkmale);
 };
 
+/** Orientierungshilfe, Gebäude energy box (2015–2026).
+ * The 20 kWh adjustment precedes comparison with the Bedarf limits (+20%).
+ * Do not add it twice: Berlin's official Urteilssammlung also records this
+ * for Bedarf certificates (LG Berlin, 08.07.2020, 64 S 194/19).
+ */
+export function getEnergiekennwertStates(
+  answers: FinalAnswers,
+  visible: Set<string>,
+  jahr: Mietspiegeljahr,
+): MerkmalStateList {
+  const alias = "Energiekennwert laut Energieausweis";
+  if (answers.Typ !== "Miete" || !visible.has(alias)) return {};
+
+  const raw = answers[alias];
+  const kennwertTyp = answers["Kennt Energieverbrauch oder Energiebedarf"];
+  const legacyAlias =
+    kennwertTyp === "Energieverbrauchswert"
+      ? "Energieverbrauchskennwert"
+      : kennwertTyp === "Ernergiebedarfswert"
+        ? "Energiebedarfskennwert"
+        : undefined;
+  // Saved band answers predate the numeric questionnaire. Keep their existing
+  // result until a numeric value is supplied; never infer a raw value or backfill.
+  if (raw == null && legacyAlias && answers[legacyAlias] !== undefined) {
+    const legacyVisible = new Set([legacyAlias]);
+    return Object.fromEntries(
+      Object.entries(answersToMerkmalStateMapping)
+        .filter(([merkmal]) => merkmal.includes("Energieverbrauchskennwert"))
+        .map(([merkmal, mapping]) => [
+          merkmal,
+          mapAnswerToMerkmalState(mapping, answers, legacyVisible),
+        ]),
+    );
+  }
+  // The browser number control stores strings until API normalization.
+  const kennwert =
+    typeof raw === "number" ||
+    (typeof raw === "string" && String(raw).trim() !== "")
+      ? Number(raw)
+      : NaN;
+  // TODO(#62): Explain where users can find warm-water inclusion on their certificate.
+  const dezentral = visible.has("Warmwasserversorgung ist dezentral")
+    ? answers["Warmwasserversorgung ist dezentral"]
+    : undefined;
+  const enthalten = visible.has(
+    "Dezentrales Warmwasser im Energiekennwert enthalten",
+  )
+    ? answers["Dezentrales Warmwasser im Energiekennwert enthalten"]
+    : undefined;
+
+  const zuschlaege =
+    dezentral === "Nein" || enthalten === "Ja"
+      ? [0]
+      : dezentral === "Ja" && enthalten === "Nein"
+        ? [20]
+        : [0, 20];
+  const faktor = kennwertTyp === "Ernergiebedarfswert" ? 1.2 : 1;
+  const valid =
+    Number.isFinite(kennwert) &&
+    kennwert >= 0 &&
+    (kennwertTyp === "Energieverbrauchswert" ||
+      kennwertTyp === "Ernergiebedarfswert");
+
+  function state(
+    grenze: number,
+    richtung: "groesser" | "kleiner",
+  ): MerkmalState {
+    if (!valid) return "maybe";
+    const results = zuschlaege.map((zuschlag) =>
+      richtung === "groesser"
+        ? kennwert + zuschlag > grenze * faktor
+        : kennwert + zuschlag < grenze * faktor,
+    );
+    if (results.every(Boolean)) return "checked";
+    if (results.some(Boolean)) return "maybe";
+    return "unchecked";
+  }
+
+  const [ersteGrenze, zweiteGrenze, dritteGrenze] = {
+    "2015": [170, 210, 250],
+    "2017": [155, 195, 235],
+    "2019": [155, 195, 235],
+    "2021": [155, 195, 235],
+    "2023": [155, 195, 235],
+    "2024": [145, 195, 235],
+    "2026": [145, 195, 235],
+  }[jahr];
+
+  return {
+    "[Gebäude-] Energieverbrauchskennwert größer als 170/155/145": state(
+      ersteGrenze,
+      "groesser",
+    ),
+    "[Gebäude-] Energieverbrauchskennwert größer als 210/195": state(
+      zweiteGrenze,
+      "groesser",
+    ),
+    "[Gebäude-] Energieverbrauchskennwert größer als 250/235": state(
+      dritteGrenze,
+      "groesser",
+    ),
+    "[Gebäude+] Energieverbrauchskennwert kleiner als 120": state(
+      120,
+      "kleiner",
+    ),
+    "[Gebäude+] Energieverbrauchskennwert kleiner als 100": state(
+      100,
+      "kleiner",
+    ),
+    "[Gebäude+] Energieverbrauchskennwert kleiner als 80": state(80, "kleiner"),
+  };
+}
+
 export const getMerkmalStates = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
@@ -221,6 +334,14 @@ export const getMerkmalStates = (
       mietspiegelJahr,
     );
 
+    // Apply the #63 exception after either energy path, including numeric values.
+    // Its question is supplied by the separate Denkmalschutz questionnaire change.
+    const ausnahmeAlias = "Denkmalschutz verhindert energetische Sanierung";
+    const denkmalschutz =
+      answers.Typ === "Miete" && visibleQuestionAliases.has(ausnahmeAlias)
+        ? (answers as Record<string, unknown>)[ausnahmeAlias]
+        : undefined;
+
     return fromEntries(
       entries(answersToMerkmalStateMapping)
         .filter(([merkmal]) => merkmale.has(merkmal))
@@ -229,15 +350,22 @@ export const getMerkmalStates = (
             string,
             AnswerMerkmalStateMapping,
           ]) => {
-            return [
-              key,
+            const state =
               energiekennwertStates[key as keyof MerkmalStateList] ??
-                mapAnswerToMerkmalState(
-                  answerMerkmalMapping,
-                  answers,
-                  visibleQuestionAliases,
-                ),
-            ];
+              mapAnswerToMerkmalState(
+                answerMerkmalMapping,
+                answers,
+                visibleQuestionAliases,
+              );
+            const istNegativesEnergiemerkmal =
+              key === "[Gebäude-] Gebäude hat unzureichende Wärmedämmung" ||
+              key.startsWith("[Gebäude-] Energieverbrauchskennwert");
+            if (istNegativesEnergiemerkmal) {
+              if (denkmalschutz === "Ja") return [key, "unchecked"];
+              if (denkmalschutz === "Nicht sicher" && state === "checked")
+                return [key, "maybe"];
+            }
+            return [key, state];
           },
         ),
     );

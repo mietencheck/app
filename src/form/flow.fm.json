@@ -13334,15 +13334,53 @@
                           },
                           "block": [
                             {
-                              "id": "energiekennwert-zahl",
-                              "type": "Question",
-                              "alias": "Energiekennwert laut Energieausweis",
-                              "text": "Wie hoch ist der Endenergiekennwert auf dem Energieausweis in kWh/(m²a)?",
-                              "info": "Trage den genauen Endenergieverbrauch oder Endenergiebedarf für das Gebäude ein, auch mit Nachkommastellen. Verwende nicht den Primärenergiebedarf. Übernimm den ausgewiesenen Wert unverändert; einen nötigen Warmwasserzuschlag berechnen wir für dich.",
-                              "answer": {
-                                "type": "NumberAnswer"
-                              },
-                              "required": false
+                              "id": "energiekennwert-ausweisart",
+                              "type": "If",
+                              "cases": [
+                                {
+                                  "id": "energiekennwert-verbrauch",
+                                  "type": "IfCase",
+                                  "test": {
+                                    "id": "energiekennwert-verbrauch-test",
+                                    "type": "AnswerOptionComparison",
+                                    "questionRef": {
+                                      "type": "AliasRef",
+                                      "value": "Kennt Energieverbrauch oder Energiebedarf"
+                                    },
+                                    "operator": "is",
+                                    "negated": false,
+                                    "comparands": [
+                                      "uiajj"
+                                    ]
+                                  },
+                                  "block": [
+                                    {
+                                      "id": "energiekennwert-zahl",
+                                      "type": "Question",
+                                      "alias": "Energiekennwert laut Energieausweis",
+                                      "text": "Wie hoch ist der Endenergieverbrauch auf deinem Energieausweis in kWh/(m²a)?",
+                                      "info": "Trage den genauen Endenergieverbrauch für das Gebäude ein, auch mit Nachkommastellen. Verwende nicht den Primärenergieverbrauch. Übernimm den ausgewiesenen Wert unverändert; einen nötigen Warmwasserzuschlag berechnen wir für dich.",
+                                      "answer": {
+                                        "type": "NumberAnswer"
+                                      },
+                                      "required": false
+                                    }
+                                  ]
+                                }
+                              ],
+                              "alternate": [
+                                {
+                                  "id": "energiebedarf-zahl",
+                                  "type": "Question",
+                                  "alias": "Energiekennwert laut Energieausweis",
+                                  "text": "Wie hoch ist der Endenergiebedarf auf deinem Energieausweis in kWh/(m²a)?",
+                                  "info": "Trage den genauen Endenergiebedarf für das Gebäude ein, auch mit Nachkommastellen. Verwende nicht den Primärenergiebedarf. Übernimm den ausgewiesenen Wert unverändert; einen nötigen Warmwasserzuschlag berechnen wir für dich.",
+                                  "answer": {
+                                    "type": "NumberAnswer"
+                                  },
+                                  "required": false
+                                }
+                              ]
                             },
                             {
                               "id": "energie-warmwasser-dezentral",

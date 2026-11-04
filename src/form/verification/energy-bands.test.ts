@@ -1,10 +1,16 @@
 import { describe, expect, test } from "vitest";
 
-import { getMerkmalStates } from "~/form/api";
+import { getEnergiekennwertStates, getMerkmalStates } from "~/form/api";
 import type { FinalAnswers } from "~/form/flow-machine-runtime";
-import { getEnergiekennwertStates } from "~/form/utils/energiekennwert";
+import { hash } from "~/l10n";
 
-import { BASE_ANSWERS, contractScenarios, evaluateAnswers } from "./flow-paths";
+import EN from "../../../public/locales/en.json";
+import {
+  BASE_ANSWERS,
+  contractScenarios,
+  evaluateAnswers,
+  questionNodeById,
+} from "./flow-paths";
 
 const merkmale = [
   "[Gebäude-] Energieverbrauchskennwert größer als 170/155/145",
@@ -28,6 +34,36 @@ const jahrGrenzen = [
   ["2026", [145, 195, 235, 120, 100, 80]],
 ] as const;
 const typen = ["Energieverbrauchswert", "Ernergiebedarfswert"] as const;
+
+test.each(contractScenarios())(
+  "$label: the numeric question names the selected certificate type",
+  ({ pinned }) => {
+    for (const typ of typen) {
+      const result = evaluateAnswers({
+        ...BASE_ANSWERS,
+        ...pinned,
+        ...answers({ "Kennt Energieverbrauch oder Energiebedarf": typ }),
+      });
+      const question = questionNodeById.get(result.nodeIds.get(numericAlias)!);
+      const bedarf = typ === "Ernergiebedarfswert";
+      expect(question?.text).toBe(
+        `Wie hoch ist der ${bedarf ? "Endenergiebedarf" : "Endenergieverbrauch"} auf deinem Energieausweis in kWh/(m²a)?`,
+      );
+      expect(question?.info).toContain(
+        bedarf
+          ? "nicht den Primärenergiebedarf"
+          : "nicht den Primärenergieverbrauch",
+      );
+      expect(EN.strings[hash(question!.text) as keyof typeof EN.strings]).toBe(
+        `What is the final energy ${bedarf ? "demand" : "consumption"} on your energy certificate in kWh/(m²a)?`,
+      );
+      expect(
+        EN.strings[hash(question!.info!) as keyof typeof EN.strings],
+      ).not.toContain("[DE]");
+      expect(result.answers[numericAlias]).toBe(140);
+    }
+  },
+);
 
 function answers(overrides: Record<string, unknown> = {}): FinalAnswers {
   return {
@@ -267,6 +303,83 @@ test.each([1918, 1990, 1991, 2009, 2010, 2014])(
       getMerkmalStates(result.answers as FinalAnswers, result.visible)[
         merkmale[0]
       ],
+    ).toBe("checked");
+  },
+);
+
+const ausnahmeAlias = "Denkmalschutz verhindert energetische Sanierung";
+
+// #91 supplies the question. Model its visible answer at the API boundary so
+// these cases also cover numeric energy values, which bypass legacy mappings.
+test.each(jahrGrenzen)(
+  "%s: Denkmalschutz is applied after numeric and saved-band classification",
+  (jahr) => {
+    const scenario = contractScenarios().find(
+      (s) => s.jahr === jahr && s.label.startsWith("unterschrieben"),
+    )!;
+    for (const typ of typen) {
+      for (const savedBand of [false, true]) {
+        const legacyAlias =
+          typ === "Energieverbrauchswert"
+            ? "Energieverbrauchskennwert"
+            : "Energiebedarfskennwert";
+        for (const [ausnahme, expected] of [
+          ["Ja", "unchecked"],
+          ["Nein", "checked"],
+          ["Nicht sicher", "maybe"],
+          [undefined, "checked"],
+        ] as const) {
+          const input = {
+            ...scenario.pinned,
+            ...answers({
+              "Kennt Energieverbrauch oder Energiebedarf": typ,
+              [numericAlias]: savedBand ? undefined : 1000,
+              [legacyAlias]: savedBand ? "---" : undefined,
+              [ausnahmeAlias]: ausnahme,
+            }),
+          } as FinalAnswers;
+          const states = getMerkmalStates(
+            input,
+            new Set([...visible, ausnahmeAlias]),
+          );
+          expect(merkmale.slice(0, 3).map((m) => states[m])).toEqual(
+            Array(3).fill(expected),
+          );
+          // A stale answer to a hidden question cannot activate the exception.
+          const withoutException = getMerkmalStates(input, visible);
+          expect(merkmale.slice(0, 3).map((m) => withoutException[m])).toEqual(
+            Array(3).fill("checked"),
+          );
+        }
+      }
+    }
+  },
+);
+
+test.each(["Ja", "Nicht sicher"])(
+  "Denkmalschutz %s preserves positive energy features and unrelated disadvantages",
+  (ausnahme) => {
+    const states = getMerkmalStates(
+      {
+        ...answers({ [numericAlias]: 30 }),
+        Vertragsdatum: ">2026",
+        [ausnahmeAlias]: ausnahme,
+        "Gebäude Hauseingangstür ist nicht abschließbar": "Ja",
+      } as FinalAnswers,
+      new Set([
+        ...visible,
+        ausnahmeAlias,
+        "Gebäude Hauseingangstür ist nicht abschließbar",
+      ]),
+    );
+    expect(merkmale.slice(0, 3).map((m) => states[m])).toEqual(
+      Array(3).fill("unchecked"),
+    );
+    expect(merkmale.slice(3).map((m) => states[m])).toEqual(
+      Array(3).fill("checked"),
+    );
+    expect(
+      states["[Gebäude-] Gebäude Hauseingangstür ist nicht abschließbar"],
     ).toBe("checked");
   },
 );

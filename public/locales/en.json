@@ -543,8 +543,10 @@
     "edea0c": "Is hot water heated locally in the apartment?",
     "a91892": "Check the information on the energy certificate. A demand certificate usually already includes hot-water heating. If it is excluded from the value, we add 20 kWh/(m²a) before classification. If it is already included, we add nothing. If you cannot determine this, select “I’m not sure”.",
     "eb2868": "This means, for example, electric instantaneous water heaters or boilers in the apartment whose energy is recorded separately from heating energy. Having an individual heating system in the apartment alone does not mean the hot-water supply is decentralized.",
-    "f14836": "What is the final energy value on the energy certificate in kWh/(m²a)?",
-    "a7d10c": "Enter the exact final energy consumption or demand for the building, including decimal places. Do not use the primary energy demand. Copy the stated value unchanged; we will calculate any necessary hot-water adjustment for you.",
-    "e033b0": "Does the stated energy value already include energy for decentralized hot water?"
+    "e033b0": "Does the stated energy value already include energy for decentralized hot water?",
+    "b123c5": "What is the final energy consumption on your energy certificate in kWh/(m²a)?",
+    "a6dee4": "Enter the exact final energy consumption for the building, including decimal places. Do not use the primary energy consumption. Copy the stated value unchanged; we will calculate any necessary hot-water addition for you.",
+    "0d4801": "What is the final energy demand on your energy certificate in kWh/(m²a)?",
+    "0747dd": "Enter the exact final energy demand for the building, including decimal places. Do not use the primary energy demand. Copy the stated value unchanged; we will calculate any necessary hot-water addition for you."
   }
 }

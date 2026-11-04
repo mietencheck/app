@@ -160,8 +160,8 @@ for (const locale of ["de", "en"] as const) {
     const input = page.getByRole("spinbutton", {
       name:
         locale === "de"
-          ? "Wie hoch ist der Endenergiekennwert auf dem Energieausweis in kWh/(m²a)?"
-          : "What is the final energy value on the energy certificate in kWh/(m²a)?",
+          ? "Wie hoch ist der Endenergieverbrauch auf deinem Energieausweis in kWh/(m²a)?"
+          : "What is the final energy consumption on your energy certificate in kWh/(m²a)?",
     });
     await expect(input).toBeVisible();
     await input.fill("140.5");
@@ -208,6 +208,27 @@ for (const locale of ["de", "en"] as const) {
       .getByText(locale === "de" ? "Nein" : "No", { exact: true })
       .click();
     await expect(inclusion).toHaveCount(0);
+
+    // Changing certificate type changes the label, while preserving the entered value.
+    await page
+      .getByText(
+        locale === "de"
+          ? "Ja, aber nur den Ernergiebedarfswert"
+          : "Yes, but only the energy requirement value",
+        { exact: true },
+      )
+      .click();
+    const demandInput = page.getByRole("spinbutton", {
+      name:
+        locale === "de"
+          ? "Wie hoch ist der Endenergiebedarf auf deinem Energieausweis in kWh/(m²a)?"
+          : "What is the final energy demand on your energy certificate in kWh/(m²a)?",
+    });
+    await expect(demandInput).toBeVisible();
+    await expect(demandInput).toHaveValue("140.5");
+    await expect(input).toHaveCount(0);
+    await page.reload();
+    await expect(demandInput).toHaveValue("140.5");
     await expect(page.locator("body")).not.toContainText("[DE]");
   });
 }
