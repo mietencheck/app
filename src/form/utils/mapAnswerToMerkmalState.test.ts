@@ -218,6 +218,48 @@ test.each([
   ).toEqual(merkmalState);
 });
 
+test.each([
+  { parent: "Ja", child: undefined, visible: true, expected: "maybe" },
+  {
+    parent: "Nicht sicher",
+    child: undefined,
+    visible: true,
+    expected: "maybe",
+  },
+  {
+    parent: "Nicht sicher",
+    child: "Nein",
+    visible: true,
+    expected: "unchecked",
+  },
+  { parent: "Nein", child: undefined, visible: true, expected: "unchecked" },
+  {
+    parent: "Nicht sicher",
+    child: "Ja",
+    visible: false,
+    expected: "unchecked",
+  },
+])(
+  "AND preserves only possible visible follow-ups: %o",
+  ({ parent, child, visible, expected }) => {
+    const mapping =
+      answersToMerkmalStateMapping["[Wohnung+] Wohnung hat großen Balkon"];
+    expect(
+      mapAnswerToMerkmalState(
+        mapping,
+        {
+          "Wohnung hat Balkon": parent,
+          "Wohnung hat großen Balkon": child,
+        } as FinalAnswers,
+        new Set([
+          "Wohnung hat Balkon",
+          ...(visible ? ["Wohnung hat großen Balkon"] : []),
+        ]),
+      ),
+    ).toBe(expected);
+  },
+);
+
 // Condition Group: Or
 test.each([
   ...[
