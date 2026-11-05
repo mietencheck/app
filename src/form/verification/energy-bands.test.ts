@@ -1,8 +1,17 @@
 import { expect, test } from "vitest";
 
+import { getMerkmalStates } from "~/form/api";
+import { FinalAnswers } from "~/form/flow-machine-runtime";
+import { hash } from "~/l10n";
 import { merkmaleDescriptionsByYear } from "~/mietspiegel/merkmale";
 
-import { contractScenarios, questionNodeById } from "./flow-paths";
+import en from "../../../public/locales/en.json";
+import {
+  contractScenarios,
+  evaluateAnswers,
+  questionNodeById,
+  reachQuestions,
+} from "./flow-paths";
 import { askedCopyIds } from "./merkmal-coverage";
 
 /**
@@ -58,44 +67,152 @@ function bandProblems(labels: string[], above: number[], below: number[]) {
   return problems;
 }
 
-const cases = contractScenarios()
-  .filter((s) => s.label.startsWith("unterschrieben"))
-  .flatMap((scenario) =>
-    (["Energieverbrauchskennwert", "Energiebedarfskennwert"] as const).map(
-      (alias) => ({ jahr: scenario.jahr, alias, scenario }),
-    ),
-  );
+const verbrauchScenarios = contractScenarios().filter((s) =>
+  s.label.startsWith("unterschrieben"),
+);
 
-// Known deviations, to be fixed in the floma.io editor.
-const KNOWN_PROBLEMS: Record<string, string[]> = {
-  // 250 kWh * 1.2 = 300: a value of exactly 300 falls between the bands.
-  "2015 Energiebedarfskennwert": [
-    'gap/overlap between "Zwischen 253 und 299 kWH/(m2*a)" and "Größer als 300 kWH/(m2*a)"',
-  ],
-  // 145 kWh * 1.2 = 174: values of 175 must already count as worse.
-  "2024 Energiebedarfskennwert": ["no band starts at 175 (größer als 174)"],
-  "2026 Energiebedarfskennwert": ["no band starts at 175 (größer als 174)"],
-};
-
-test.each(cases)(
-  "$jahr: $alias bands match the thresholds",
-  ({ jahr, alias, scenario }) => {
-    const factor = alias === "Energiebedarfskennwert" ? 1.2 : 1;
+test.each(verbrauchScenarios)(
+  "$jahr: existing Verbrauch bands match integer thresholds",
+  (scenario) => {
+    const { jahr } = scenario;
     const { above, below } = thresholds(jahr);
     expect(above.length + below.length).toBeGreaterThan(0);
-    const ids = askedCopyIds(alias, scenario);
+    const ids = askedCopyIds("Energieverbrauchskennwert", scenario);
     expect(ids.length).toBeGreaterThan(0);
     for (const id of ids) {
       const labels = (questionNodeById.get(id)!.answer.options ?? []).map(
         (o) => o.text ?? "",
       );
-      expect(
-        bandProblems(
-          labels,
-          above.map((t) => Math.round(t * factor * 100) / 100),
-          below.map((t) => Math.round(t * factor * 100) / 100),
-        ),
-      ).toEqual(KNOWN_PROBLEMS[`${jahr} ${alias}`] ?? []);
+      expect(bandProblems(labels, above, below)).toEqual([]);
     }
+  },
+);
+
+// Independently transcribed from the Gebäude energy boxes: printed p.21 (2015),
+// p.17 (2017), p.21 (2019), p.19 (2021/2023), p.24 (2024/2026).
+// Bedarf thresholds are Verbrauch thresholds increased by 20 percent.
+const bedarfGrenzen = (jahr: string) => ({
+  above:
+    jahr === "2015"
+      ? [204, 252, 300]
+      : jahr === "2024" || jahr === "2026"
+        ? [174, 234, 282]
+        : [186, 234, 282],
+  below: [96, 120, 144],
+});
+
+// Interpret the actual displayed intervals over real numbers, without rounding
+// to integers. The inclusive and exclusive ends are deliberately explicit.
+function containsBedarf(label: string, value: number): boolean {
+  const above = /^Größer als (\d+)(?: bis einschließlich (\d+))? kWh/.exec(
+    label,
+  );
+  if (above) return value > +above[1] && (!above[2] || value <= +above[2]);
+  const interval = /^(\d+) bis (einschließlich|kleiner als) (\d+) kWh/.exec(
+    label,
+  );
+  if (interval)
+    return (
+      value >= +interval[1] &&
+      (interval[2] === "einschließlich"
+        ? value <= +interval[3]
+        : value < +interval[3])
+    );
+  const below = /^Kleiner als (\d+) kWh/.exec(label);
+  if (below) return value >= 0 && value < +below[1];
+  throw new Error(`Unknown Bedarf interval: ${label}`);
+}
+
+const bedarfScenarios = contractScenarios();
+
+test.each(bedarfScenarios)(
+  "$jahr ($label): fractional Bedarf bands and cumulative weighting",
+  (scenario) => {
+    const { above, below } = bedarfGrenzen(scenario.jahr);
+    const values = [
+      0,
+      175,
+      1000,
+      ...[...above, ...below].flatMap((t) => [t - 0.1, t, t + 0.1]),
+    ];
+    const ids = askedCopyIds("Energiebedarfskennwert", scenario);
+    expect(ids.length).toBeGreaterThan(0);
+    for (const id of ids) {
+      const options = questionNodeById.get(id)!.answer.options!;
+      for (const value of values) {
+        const matching = options.filter((o) => containsBedarf(o.text!, value));
+        expect(matching, `${scenario.jahr}: ${value}`).toHaveLength(1);
+        const negative = above.filter((t) => value > t).length;
+        const positive = below.filter((t) => value < t).length;
+        const alias = negative
+          ? "-".repeat(negative)
+          : positive
+            ? "+".repeat(positive)
+            : "0";
+        expect(matching[0].alias, `${scenario.jahr}: ${value}`).toBe(alias);
+      }
+      // Follow each displayed choice through the real questionnaire and mapping.
+      for (const option of options) {
+        const reached = reachQuestions(
+          { Energiebedarfskennwert: option.alias },
+          scenario,
+          (e) => e.nodeIds.get("Energiebedarfskennwert") === id,
+        );
+        expect(reached).toBeDefined();
+        const states = getMerkmalStates(
+          reached!.answers as FinalAnswers,
+          reached!.visible,
+        );
+        const checked = Object.entries(states)
+          .filter(
+            ([key, state]) =>
+              key.includes("Energieverbrauchskennwert") && state === "checked",
+          )
+          .map(([key]) => key);
+        expect(
+          checked.filter((key) => key.startsWith("[Gebäude-]")),
+        ).toHaveLength(
+          option.alias!.startsWith("-") ? option.alias!.length : 0,
+        );
+        expect(
+          checked.filter((key) => key.startsWith("[Gebäude+]")),
+        ).toHaveLength(
+          option.alias!.startsWith("+") ? option.alias!.length : 0,
+        );
+        const translated = (en.strings as Record<string, string>)[
+          hash(option.text!)
+        ];
+        expect(translated).toBeTruthy();
+        expect(translated).not.toContain("[DE]");
+        expect(translated.match(/\d+/g)).toEqual(option.text!.match(/\d+/g));
+      }
+    }
+  },
+);
+
+test.each(bedarfScenarios)(
+  "$jahr ($label): unknown certificate does not apply stale Bedarf bands",
+  (scenario) => {
+    const reached = reachQuestions(
+      { Energiebedarfskennwert: "---" },
+      scenario,
+      () => true,
+    )!;
+    expect(reached).toBeDefined();
+    const unknown = evaluateAnswers({
+      ...reached.answers,
+      "Kennt Energieverbrauch oder Energiebedarf": "Nein",
+    });
+    expect(unknown.visible.has("Energiebedarfskennwert")).toBe(false);
+    const states = getMerkmalStates(
+      unknown.answers as FinalAnswers,
+      unknown.visible,
+    );
+    expect(
+      Object.entries(states).filter(
+        ([key, state]) =>
+          key.includes("Energieverbrauchskennwert") && state === "checked",
+      ),
+    ).toEqual([]);
   },
 );
