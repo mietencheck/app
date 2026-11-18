@@ -104,7 +104,11 @@ const ausstattungFields = [
   { key: "sammelheizung", label: "Sammelheizung" },
   { key: "bad", label: "Bad" },
 ] as const;
-const ausstattungItems = { Ja: "Ja", Nein: "Nein" };
+const ausstattungItems = [
+  { value: "Ja", label: "Ja" },
+  { value: "Nein", label: "Nein" },
+  { value: "Nicht sicher", label: "Nicht sicher" },
+] as const;
 
 type ResultRow = { name: string; best: string; worst: string };
 type FlowMeta = {
@@ -549,27 +553,19 @@ export function BeratungDetailPage({ mietenFlowId }: { mietenFlowId: string }) {
                     </p>
                     <Select
                       value={beratungRecord.ausstattung[key]}
-                      onValueChange={(value) => {
-                        if (value === "Ja" || value === "Nein") {
-                          setAusstattung(key, value);
-                        }
-                      }}
+                      onValueChange={(value) => setAusstattung(key, value)}
                       items={ausstattungItems}
                     >
                       <SelectTrigger
                         className="w-full"
                         aria-labelledby={`ausstattung-${key}`}
                       >
-                        <SelectValue />
+                        <SelectValue placeholder="Keine Angabe" />
                       </SelectTrigger>
                       <SelectContent>
-                        {Object.keys(ausstattungItems).map((option) => (
-                          <SelectItem
-                            key={option}
-                            value={option}
-                            label={option}
-                          >
-                            {option}
+                        {ausstattungItems.map(({ value, label }) => (
+                          <SelectItem key={value} value={value} label={label}>
+                            {label}
                           </SelectItem>
                         ))}
                       </SelectContent>

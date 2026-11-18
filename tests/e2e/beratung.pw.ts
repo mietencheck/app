@@ -12,6 +12,7 @@ async function mockBeratung(
     failFirstSave?: boolean;
     loadStatus?: number;
     missing?: boolean;
+    ausstattung?: MietenFlowDocument["flowData"]["ausstattung"];
   } = {},
 ) {
   let stored: MietenFlowDocument = {
@@ -19,7 +20,11 @@ async function mockBeratung(
     folder_uuid: "test-folder",
     datasheet_uuid: "test-datasheet",
     lawAndOrgaURL: "https://example.invalid/test-record",
-    flowData: { ...getDefaultBeratungRecord(), vertragsdatum: "2018-2020" },
+    flowData: {
+      ...getDefaultBeratungRecord(),
+      vertragsdatum: "2018-2020",
+      ...(options.ausstattung && { ausstattung: options.ausstattung }),
+    },
   };
   const saves: unknown[] = [];
   await page.addInitScript(() => {
@@ -72,7 +77,7 @@ async function mockBeratung(
 async function selectAusstattung(
   page: Page,
   name: "Sammelheizung" | "Bad",
-  value: "Ja" | "Nein",
+  value: "Ja" | "Nein" | "Nicht sicher",
 ) {
   await page.getByRole("combobox", { name, exact: true }).click();
   await page.getByRole("option", { name: value, exact: true }).click();
@@ -126,6 +131,32 @@ test("edits Ausstattung, recalculates, saves the complete record, and reloads", 
     ).toContainText("Nein");
   }
   await expectRent(page, "502,70");
+});
+
+test("displays absent and uncertain Schnelltest answers and saves an edit", async ({
+  page,
+}) => {
+  const saves = await mockBeratung(page, {
+    ausstattung: { sammelheizung: null, bad: "Nicht sicher" },
+  });
+  const heating = page.getByRole("combobox", {
+    name: "Sammelheizung",
+    exact: true,
+  });
+  const bathroom = page.getByRole("combobox", { name: "Bad", exact: true });
+  await expect(heating).toHaveText("Keine Angabe");
+  await expect(bathroom).toHaveText("Nicht sicher");
+  await selectAusstattung(page, "Sammelheizung", "Ja");
+  await page.getByRole("button", { name: "Speichern", exact: true }).click();
+  await expect(page.getByRole("status")).toHaveText(
+    "Änderungen wurden gespeichert.",
+  );
+  expect(saves).toMatchObject([
+    { flowData: { ausstattung: { sammelheizung: "Ja", bad: "Nicht sicher" } } },
+  ]);
+  await page.reload();
+  await expect(heating).toHaveText("Ja");
+  await expect(bathroom).toHaveText("Nicht sicher");
 });
 
 test("retains edits after a failed save and allows retry", async ({ page }) => {
