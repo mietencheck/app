@@ -8,8 +8,7 @@ import { AppRouter } from "~/router";
 import { Header } from "./Header";
 import { LanguageSelect } from "./LanguageSelect";
 
-const aboutHref =
-  "https://www.jura.fu-berlin.de/fachbereich/einrichtungen/zivilrecht/lehrende/roedlf/Mieten-Law-Clinic/index.html";
+const aboutHref = "https://mietenlawclinic.de";
 
 export function MarketingHeader() {
   const [menu, setMenu] = useState(false);
