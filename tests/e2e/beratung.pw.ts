@@ -139,11 +139,12 @@ test("displays absent and uncertain Schnelltest answers and saves an edit", asyn
   const saves = await mockBeratung(page, {
     ausstattung: { sammelheizung: null, bad: "Nicht sicher" },
   });
-  const heating = page.getByRole("combobox", {
-    name: "Sammelheizung",
-    exact: true,
-  });
-  const bathroom = page.getByRole("combobox", { name: "Bad", exact: true });
+  const heating = page
+    .getByRole("combobox", { name: "Sammelheizung", exact: true })
+    .locator('[data-slot="select-value"]');
+  const bathroom = page
+    .getByRole("combobox", { name: "Bad", exact: true })
+    .locator('[data-slot="select-value"]');
   await expect(heating).toHaveText("Keine Angabe");
   await expect(bathroom).toHaveText("Nicht sicher");
   await selectAusstattung(page, "Sammelheizung", "Ja");
