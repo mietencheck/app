@@ -1,6 +1,9 @@
 import { describe, expect, test } from "vitest";
 
 import { getWorstBestZulaessigeHoechstmiete } from "~/calculation/zulaessigeHoechstmiete";
+import { flowMachine } from "~/form/flow-machine-runtime";
+import { BASE_ANSWERS } from "~/form/verification/flow-paths";
+import { answersToBeratungRecord } from "~/pages/eintragen/flow-data";
 
 import { recordToCalculationContext } from "./logic";
 import { getDefaultBeratungRecord } from "./mock-data";
@@ -32,7 +35,7 @@ describe("saved Beratung records", () => {
     { baujahrSpanne: "" },
     { wohnlage: "invalid" },
     { ausstattung: null },
-    { ausstattung: { sammelheizung: "Nicht sicher", bad: "Ja" } },
+    { ausstattung: { bad: "Ja" } },
     { ausstattung: { sammelheizung: "Ja", bad: "invalid" } },
     { merkmale: null },
     { sondermerkmale: "invalid" },
@@ -41,6 +44,36 @@ describe("saved Beratung records", () => {
       parseStoredFlowDataAsBeratungRecord({ ...savedRecord(), ...invalid }),
     ).toBeNull();
   });
+});
+
+describe("Schnelltest answers in Beratung", () => {
+  test.each([
+    ["1919-1949", "Ja", "Ja", { sammelheizung: "Ja", bad: "Ja" }],
+    ["1919-1949", "Nein", "Ja", { sammelheizung: "Nein", bad: "Ja" }],
+    [
+      "1919-1949",
+      "Ja",
+      "Nicht sicher",
+      { sammelheizung: "Ja", bad: "Nicht sicher" },
+    ],
+    ["1965-1972", "Nein", "Ja", { sammelheizung: null, bad: null }],
+  ] as const)(
+    "round-trips answers for Baujahr %s with heating=%s and bathroom=%s",
+    (baujahrSpanne, sammelheizung, bad, expected) => {
+      const storedAnswers = flowMachine.answers({
+        ...BASE_ANSWERS,
+        Vertragsdatum: "2018-2020",
+        "Baujahr vor 1991": baujahrSpanne,
+        "Wohnung hat Sammelheizung": sammelheizung,
+        "Badezimmer in Wohnung": bad,
+      }).state;
+      const record = answersToBeratungRecord(storedAnswers);
+      expect(record?.ausstattung).toEqual(expected);
+      expect(
+        parseStoredFlowDataAsBeratungRecord(JSON.parse(JSON.stringify(record))),
+      ).toEqual(record);
+    },
+  );
 });
 
 describe("Beratung calculation", () => {
@@ -69,6 +102,21 @@ describe("Beratung calculation", () => {
       expect(getWorstBestZulaessigeHoechstmiete(ctx!)).toEqual({
         best: expected,
         worst: expected,
+      });
+    },
+  );
+
+  test.each(["Nicht sicher", null] as const)(
+    "calculates a rent range when the heating answer is %s",
+    (sammelheizung) => {
+      const record = {
+        ...savedRecord(),
+        ausstattung: { sammelheizung, bad: "Ja" as const },
+      };
+      const ctx = recordToCalculationContext(record, record.merkmale);
+      expect(getWorstBestZulaessigeHoechstmiete(ctx!)).toEqual({
+        best: 589.6,
+        worst: 744.7,
       });
     },
   );

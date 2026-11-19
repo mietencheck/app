@@ -83,8 +83,8 @@ export function recordToCalculationContext(
     wohnflaeche: record.wohnflaeche,
     wohnflaecheSpanne,
     ausstattung: {
-      sammelheizung: record.ausstattung.sammelheizung,
-      bad: record.ausstattung.bad,
+      sammelheizung: record.ausstattung.sammelheizung ?? "Nicht sicher",
+      bad: record.ausstattung.bad ?? "Nicht sicher",
     },
     merkmale: merkmale as unknown as MerkmalGruppenStateList,
     sondermerkmale: record.sondermerkmale as unknown as SondermerkmalStateList,

@@ -1,5 +1,6 @@
 import { entries, fromEntries } from "remeda";
 
+import { isAusstattungState } from "~/calculation/types";
 import { FinalAnswers } from "~/form/flow-machine";
 import { merkmaleByYear } from "~/mietspiegel/merkmale";
 import { parseAdresse } from "~/utils";
@@ -179,22 +180,36 @@ export const getGeforderteNettokaltmiete = (
     : undefined;
 };
 
+export const getAusstattungAnswers = (
+  answers: FinalAnswers,
+  visibleQuestionAliases: Set<string>,
+) => {
+  const getAnswer = (
+    alias: "Wohnung hat Sammelheizung" | "Badezimmer in Wohnung",
+  ) => {
+    const answer = answers[alias];
+    return visibleQuestionAliases.has(alias) && isAusstattungState(answer)
+      ? answer
+      : null;
+  };
+
+  return {
+    sammelheizung: getAnswer("Wohnung hat Sammelheizung"),
+    bad: getAnswer("Badezimmer in Wohnung"),
+  };
+};
+
 export const getAusstattung = (
   answers: FinalAnswers,
   visibleQuestionAliases: Set<string>,
 ) => {
-  const alias_sh = "Wohnung hat Sammelheizung";
-  const alias_bad = "Badezimmer in Wohnung";
-
+  const { sammelheizung, bad } = getAusstattungAnswers(
+    answers,
+    visibleQuestionAliases,
+  );
   return {
-    sammelheizung:
-      answers[alias_sh] && visibleQuestionAliases?.has(alias_sh)
-        ? answers[alias_sh]
-        : "Nein",
-    bad:
-      answers[alias_bad] && visibleQuestionAliases?.has(alias_bad)
-        ? answers[alias_bad]
-        : "Nein",
+    sammelheizung: sammelheizung ?? "Nein",
+    bad: bad ?? "Nein",
   };
 };
 

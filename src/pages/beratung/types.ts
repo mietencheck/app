@@ -1,3 +1,4 @@
+import type { AusstattungState } from "~/calculation/types";
 import { vertragsdatumToMietspiegelJahrMapping } from "~/form/mappings/vertragsdatum";
 import { Wohnlage } from "~/mietspiegel/types";
 
@@ -19,8 +20,8 @@ export type BeratungRecord = {
   baujahrSpanne: string;
   wohnlage: Wohnlage;
   ausstattung: {
-    sammelheizung: "Ja" | "Nein";
-    bad: "Ja" | "Nein";
+    sammelheizung: AusstattungState | null;
+    bad: AusstattungState | null;
   };
   merkmale: MerkmaleByGruppe;
   sondermerkmale: Record<string, MerkmalState>;

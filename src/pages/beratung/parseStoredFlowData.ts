@@ -1,8 +1,15 @@
+import { isAusstattungState } from "~/calculation/types";
 import { VERTRAGSDATUM_KEYS } from "~/form/mappings/vertragsdatum";
 
 import type { BeratungRecord, MerkmaleByGruppe } from "./types";
 
 const WOHNLAGE_VALUES = new Set(["einfach", "mittel", "gut"]);
+
+function isAusstattungAnswer(
+  value: unknown,
+): value is BeratungRecord["ausstattung"]["bad"] {
+  return value === null || isAusstattungState(value);
+}
 
 /**
  * Parses API `flowData` when it is a persisted {@link BeratungRecord} (JSON).
@@ -38,10 +45,9 @@ export function parseStoredFlowDataAsBeratungRecord(
   const aus = flowData.ausstattung;
   if (!aus || typeof aus !== "object") return null;
   const ac = aus as Record<string, unknown>;
-  if (ac.sammelheizung !== "Ja" && ac.sammelheizung !== "Nein") {
+  if (!isAusstattungAnswer(ac.sammelheizung) || !isAusstattungAnswer(ac.bad)) {
     return null;
   }
-  if (ac.bad !== "Ja" && ac.bad !== "Nein") return null;
   if (!flowData.merkmale || typeof flowData.merkmale !== "object") {
     return null;
   }
@@ -55,8 +61,8 @@ export function parseStoredFlowDataAsBeratungRecord(
     baujahrSpanne: flowData.baujahrSpanne,
     wohnlage: flowData.wohnlage as BeratungRecord["wohnlage"],
     ausstattung: {
-      sammelheizung: ac.sammelheizung as "Ja" | "Nein",
-      bad: ac.bad as "Ja" | "Nein",
+      sammelheizung: ac.sammelheizung,
+      bad: ac.bad,
     },
     merkmale: flowData.merkmale as MerkmaleByGruppe,
     sondermerkmale: (sonder ?? {}) as BeratungRecord["sondermerkmale"],

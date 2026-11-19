@@ -17,11 +17,10 @@ import {
   TextField,
 } from "~/components";
 import { useStoredAnswers } from "~/form/flow-machine";
-import { evaluateFlowMachine } from "~/form/flow-machine-evaluation";
 import { useInlineLocale } from "~/l10n";
 import { AppRouter } from "~/router";
 
-import { evaluationAnswersToBeratungRecord } from "./flow-data";
+import { answersToBeratungRecord } from "./flow-data";
 
 const FOLDER_FRAGEBOGEN = "/fragebogen";
 
@@ -82,20 +81,12 @@ export function EintragenForm({ layout = "page" }: EintragenFormProps) {
   const [successId, setSuccessId] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
 
-  const evaluation = useMemo(
-    () => evaluateFlowMachine(storedAnswers),
+  const beratungRecord = useMemo(
+    () => answersToBeratungRecord(storedAnswers),
     [storedAnswers],
   );
-  const evaluationAnswers = evaluation.answers as Record<string, unknown>;
-
-  const hasAnswers =
-    Object.keys(storedAnswers).length > 0 &&
-    Object.keys(evaluationAnswers).length > 0;
-
-  const beratungReady = useMemo(
-    () => evaluationAnswersToBeratungRecord(evaluationAnswers) !== null,
-    [evaluationAnswers],
-  );
+  const hasAnswers = Object.keys(storedAnswers).length > 0;
+  const beratungReady = beratungRecord !== null;
 
   const canSubmit = hasAnswers && beratungReady && dataProcessingConsent;
 
@@ -120,8 +111,7 @@ export function EintragenForm({ layout = "page" }: EintragenFormProps) {
       );
       return;
     }
-    const converted = evaluationAnswersToBeratungRecord(evaluationAnswers);
-    if (!converted) {
+    if (!beratungRecord) {
       setError(
         l({
           de: "Der Fragebogen ist noch nicht vollständig genug. Bitte alle Angaben bis zur Auswertung ausfüllen, damit die Beratung die Daten laden kann.",
@@ -143,7 +133,7 @@ export function EintragenForm({ layout = "page" }: EintragenFormProps) {
           folder_uuid: lo.folder_uuid,
           datasheet_uuid: lo.datasheet_uuid,
           lawAndOrgaURL: lo.lawAndOrgaURL,
-          flowData: converted.record,
+          flowData: beratungRecord,
         });
         setSuccessId(id);
       } catch (inner) {
