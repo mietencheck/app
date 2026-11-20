@@ -17,13 +17,11 @@ export function ImpressumPage() {
             <p>
               Mieten Law Clinic Berlin e.V.
               <br />
-              c/o Fachbereich Rechtswissenschaften
+              c/o Rechtsanwältin Bartels
               <br />
-              Sekretariat Univ-Prof. Dr. Rödl
+              Gneisenaustr. 2a
               <br />
-              Van&apos;t-Hoff-Str. 8
-              <br />
-              14195 Berlin
+              10961 Berlin
             </p>
 
             <h2>Kontakt</h2>
